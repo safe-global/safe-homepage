@@ -43,7 +43,7 @@ export const theme = createTheme({
   },
   shadows: ['none', `0 0 2px ${palette.primary.light}`, ...Array(23).fill('none')] as Shadows,
   typography: {
-    fontFamily: 'DM Sans, sans-serif',
+    fontFamily: 'Citerne, sans-serif',
     h1: {
       fontSize: '32px',
       lineHeight: '36px',
