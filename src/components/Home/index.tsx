@@ -3,6 +3,7 @@ import css from './styles.module.css'
 import { Button, Typography } from '@mui/material'
 import Community from '@/components/Home/Community'
 import Protocol from '@/components/Home/Protocol'
+import Contracts from '@/components/Home/Contracts'
 
 export const Home = () => {
   return (
@@ -31,6 +32,7 @@ export const Home = () => {
       </div>
       <Community />
       <Protocol />
+      <Contracts />
     </>
   )
 }

@@ -1,0 +1,13 @@
+.buttonLink {
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.46px;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+}
+
+.buttonLink:hover {
+    color: var(--mui-palette-primary-main);
+    border-color: var(--mui-palette-primary-main);
+}
