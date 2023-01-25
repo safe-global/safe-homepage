@@ -11,8 +11,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
+    permissions: write-all
 
     name: Deploy to dev/staging
 
