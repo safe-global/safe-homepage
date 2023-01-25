@@ -51,14 +51,13 @@ export const theme = createTheme({
   typography: {
     fontFamily: 'Citerne, sans-serif',
     h1: {
-      fontSize: '32px',
-      lineHeight: '36px',
-      fontWeight: 700,
+      fontSize: '60px',
+      lineHeight: '64px',
+      fontWeight: 400,
     },
     h2: {
       fontSize: '27px',
       lineHeight: '34px',
-      fontWeight: 700,
     },
     h3: {
       fontSize: '24px',
@@ -70,7 +69,6 @@ export const theme = createTheme({
     },
     h5: {
       fontSize: '16px',
-      fontWeight: 700,
     },
     body1: {
       fontSize: '16px',
@@ -78,12 +76,15 @@ export const theme = createTheme({
     },
     body2: {
       fontSize: '14px',
-      lineHeight: '20px',
+      lineHeight: '24px',
     },
     caption: {
       fontSize: '12px',
-      lineHeight: '16px',
-      letterSpacing: '0.4px',
+      lineHeight: '24px',
+      letterSpacing: '0.1em',
+      fontWeight: 500,
+      textTransform: 'uppercase',
+      color: palette.primary.light,
     },
     overline: {
       fontSize: '11px',
