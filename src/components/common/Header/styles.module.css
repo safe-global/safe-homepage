@@ -1,6 +1,12 @@
 .header {
     display: flex;
     justify-content: space-between;
+    padding: 0 30px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.005);
+    backdrop-filter: blur(8px);
 }
 
 .logo {

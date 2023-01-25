@@ -10,7 +10,7 @@ export const palette = {
     light: '#A1A3A7',
   },
   secondary: {
-    dark: '#636669',
+    dark: '#DCDEE0',
     main: '#FFFFFF',
     light: '#12FF80',
     background: '#303033',
@@ -46,6 +46,7 @@ export const palette = {
   },
   background: {
     default: '#121312',
+    dark: '#1C1C1C',
     main: '#121312',
     paper: '#1C1C1C',
     light: '#1B2A22',

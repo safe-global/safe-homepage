@@ -32,6 +32,12 @@ declare module '@mui/material/styles' {
   }
 }
 
+declare module '@mui/material/Button' {
+  interface ButtonPropsColorOverrides {
+    background: true
+  }
+}
+
 export const theme = createTheme({
   palette: {
     mode: 'dark',
@@ -97,6 +103,11 @@ export const theme = createTheme({
     },
     MuiButton: {
       styleOverrides: {
+        sizeLarge: {
+          fontSize: '18px',
+          lineHeight: '26px',
+          padding: '15px 22px',
+        },
         root: {
           textTransform: 'inherit',
         },
