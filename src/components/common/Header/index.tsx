@@ -1,4 +1,5 @@
 import { Button } from '@mui/material'
+import Link from 'next/link'
 import Logo from '@/public/images/logo.svg'
 import css from './styles.module.css'
 import { AppRoutes } from '@/config/routes'
@@ -28,13 +29,15 @@ const Header = () => {
         <ul className={css.navigation}>
           {navItems.map((item) => (
             <li key={item.href}>
-              <a className={css.link} href={item.href}>
+              <Link className={css.link} href={item.href}>
                 {item.label}
-              </a>
+              </Link>
             </li>
           ))}
           <li>
-            <Button variant="contained">Launch Wallet</Button>
+            <Button href="https://app.safe.global" target="_blank" variant="contained">
+              Launch Wallet
+            </Button>
           </li>
         </ul>
       </nav>

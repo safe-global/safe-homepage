@@ -5,8 +5,9 @@ import { Button, Container, Grid, Typography } from '@mui/material'
 const CommunityBlock = () => {
   return (
     <Container>
-      <Grid container py="235px" spacing="130px">
-        <Grid item md={6}>
+      <Grid container py="235px" spacing="30px">
+        <Grid item md={1} />
+        <Grid item md={5}>
           <Typography variant="caption" mb="20px">
             Join the community
           </Typography>
@@ -21,7 +22,8 @@ const CommunityBlock = () => {
             bytecodes to contracts.
           </Typography>
         </Grid>
-        <Grid item md={6}>
+        <Grid item md={1} />
+        <Grid item md={5}>
           <div className={css.metricWrapper}>
             <div>
               <p className={css.metric}>14M+</p>
@@ -61,7 +63,7 @@ export const Home = () => {
             <Button variant="contained" color="background" size="large">
               Build
             </Button>
-            <Button variant="contained" color="secondary" size="large">
+            <Button href="https://app.safe.global" target="_blank" variant="contained" color="secondary" size="large">
               Launch Wallet
             </Button>
           </div>

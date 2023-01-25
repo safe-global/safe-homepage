@@ -145,7 +145,7 @@ const Footer = () => {
         </Grid>
       </Grid>
       <Divider sx={{ marginTop: '26px' }} />
-      <Grid container mb={4} alignItems="center" justifyContent="space-between">
+      <Grid container mb={3} alignItems="center" justifyContent="space-between">
         <Grid item>
           <ul className={css.subList}>
             {subFooterItems.map((item) => (
