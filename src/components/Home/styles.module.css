@@ -31,25 +31,3 @@
     display: flex;
     gap: 16px;
 }
-
-.metricWrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.metric {
-    margin: 0;
-    font-size: 80px;
-    line-height: 100px;
-    font-weight: 500;
-    color: var(--mui-palette-primary-main);
-}
-
-.metricLabel {
-    font-size: 12px;
-    line-height: 24px;
-    margin: 0;
-    color: var(--mui-palette-primary-light);
-    text-transform: uppercase;
-}

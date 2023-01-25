@@ -71,8 +71,8 @@ export const theme = createTheme({
       fontSize: '16px',
     },
     body1: {
-      fontSize: '16px',
-      lineHeight: '22px',
+      fontSize: '18px',
+      lineHeight: '28px',
     },
     body2: {
       fontSize: '14px',
@@ -118,6 +118,14 @@ export const theme = createTheme({
       styleOverrides: {
         notchedOutline: {
           borderColor: 'inherit',
+        },
+      },
+    },
+    MuiContainer: {
+      styleOverrides: {
+        root: {
+          paddingLeft: '15px',
+          paddingRight: '15px',
         },
       },
     },
