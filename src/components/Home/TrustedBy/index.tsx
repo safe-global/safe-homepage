@@ -52,7 +52,7 @@ const TrustedBy = () => {
               <KPMGLogo />
             </Grid>
             <Grid item>
-              <AdidasLogo />
+              <StripeLogo />
             </Grid>
           </Grid>
         </Grid>
