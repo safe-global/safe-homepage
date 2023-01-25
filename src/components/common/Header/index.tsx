@@ -1,8 +1,11 @@
 import { Button } from '@mui/material'
 import Link from 'next/link'
-import Logo from '@/public/images/logo.svg'
-import css from './styles.module.css'
+
 import { AppRoutes } from '@/config/routes'
+import Logo from '@/public/images/logo.svg'
+import { WALLET_LINK } from '@/config/constants'
+
+import css from './styles.module.css'
 
 const navItems = [
   {
@@ -35,7 +38,7 @@ const Header = () => {
             </li>
           ))}
           <li>
-            <Button href="https://app.safe.global" target="_blank" variant="contained">
+            <Button href={WALLET_LINK} target="_blank" rel="noopener noreferrer" variant="contained">
               Launch Wallet
             </Button>
           </li>

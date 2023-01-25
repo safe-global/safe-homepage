@@ -1,8 +1,9 @@
-import React from 'react'
 import { Grid, Typography, Button, Container } from '@mui/material'
+import type { ReactElement } from 'react'
+
 import css from './styles.module.css'
 
-const Ecosystem = () => {
+const Ecosystem = (): ReactElement => {
   return (
     <div className={css.bg}>
       <Container sx={{ textAlign: 'center' }}>
@@ -13,7 +14,7 @@ const Ecosystem = () => {
             </Typography>
             <Typography variant="h1" mb={4}>
               Safe{' '}
-              <Typography variant="h1" component="span" color="primary">
+              <Typography variant="inherit" component="span" color="primary">
                 powers projects
               </Typography>{' '}
               in every corner of web3

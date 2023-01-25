@@ -1,10 +1,12 @@
-import React from 'react'
 import Image from 'next/image'
 import { Box, Button, ButtonBase, Container, Grid, Typography } from '@mui/material'
+import type { ReactElement } from 'react'
+
 import ContractsImage from '@/public/images/contract.png'
+
 import css from './styles.module.css'
 
-const Contracts = () => {
+const Contracts = (): ReactElement => {
   return (
     <Container disableGutters>
       <Grid container my="235px" spacing="30px">
@@ -14,7 +16,7 @@ const Contracts = () => {
         <Grid item md={6}>
           <Typography variant="h1" mb={5}>
             Safe {'{CORE}'} contracts are{' '}
-            <Typography variant="h1" component="span" color="primary">
+            <Typography variant="inherit" component="span" color="primary">
               the most battle-tested
             </Typography>
           </Typography>

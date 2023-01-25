@@ -1,8 +1,9 @@
-import React from 'react'
 import { Container, Grid, Typography } from '@mui/material'
+import type { ReactElement } from 'react'
+
 import css from './styles.module.css'
 
-const Community = () => {
+const Community = (): ReactElement => {
   return (
     <Container>
       <Grid container my="235px" spacing="30px">
@@ -13,7 +14,7 @@ const Community = () => {
           </Typography>
           <Typography variant="h1" mb={4}>
             Unlock ownership of your assets on any{' '}
-            <Typography variant="h1" component="span" color="primary">
+            <Typography variant="inherit" component="span" color="primary">
               Ethereum chain
             </Typography>
           </Typography>

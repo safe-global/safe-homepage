@@ -1,10 +1,12 @@
-import { ButtonBase, Container, Divider, Grid, IconButton, TextField, Typography } from '@mui/material'
+import { ButtonBase, Container, Divider, Grid, TextField, Typography } from '@mui/material'
+
 import { AppRoutes } from '@/config/routes'
-import css from './styles.module.css'
 import FooterBG from '@/public/images/footer-bg.svg'
 import DiscordIcon from '@/public/images/discord-icon.svg'
 import GithubIcon from '@/public/images/github-icon.svg'
 import TwitterIcon from '@/public/images/twitter-icon.svg'
+
+import css from './styles.module.css'
 
 const safeProtocolItems = [
   {
@@ -126,7 +128,7 @@ const Footer = () => {
             ))}
           </ul>
         </Grid>
-        <Grid item md={4} marginLeft="auto">
+        <Grid item md={4} ml="auto">
           <Typography variant="caption" component="div" color="text.primary" mb={2}>
             Subscribe to our newsletter
           </Typography>
@@ -144,7 +146,7 @@ const Footer = () => {
           </div>
         </Grid>
       </Grid>
-      <Divider sx={{ marginTop: '26px' }} />
+      <Divider sx={{ mt: '26px' }} />
       <Grid container mb={3} alignItems="center" justifyContent="space-between">
         <Grid item>
           <ul className={css.subList}>

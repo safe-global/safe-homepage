@@ -1,9 +1,10 @@
-import React from 'react'
-import { Box, Button, Container, Grid, Typography } from '@mui/material'
-import ProtocolImage from '@/public/images/protocol.png'
 import Image from 'next/image'
+import { Box, Button, Container, Grid, Typography } from '@mui/material'
+import type { ReactElement } from 'react'
 
-const Protocol = () => {
+import ProtocolImage from '@/public/images/protocol.png'
+
+const Protocol = (): ReactElement => {
   return (
     <Container disableGutters>
       <Grid container my="235px" spacing="30px">
@@ -12,7 +13,7 @@ const Protocol = () => {
             More than a protocol
           </Typography>
           <Typography variant="h1" mb={4}>
-            <Typography variant="h1" component="span" color="primary">
+            <Typography variant="inherit" component="span" color="primary">
               Secure assets
             </Typography>{' '}
             with the most trusted multi-signature wallet

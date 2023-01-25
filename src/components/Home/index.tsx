@@ -1,13 +1,16 @@
-import React from 'react'
-import css from './styles.module.css'
 import { Button, Typography } from '@mui/material'
+import type { ReactElement } from 'react'
+
 import Community from '@/components/Home/Community'
 import Protocol from '@/components/Home/Protocol'
 import Contracts from '@/components/Home/Contracts'
 import TrustedBy from '@/components/Home/TrustedBy'
 import Ecosystem from '@/components/Home/Ecosystem'
+import { WALLET_LINK } from '@/config/constants'
 
-export const Home = () => {
+import css from './styles.module.css'
+
+export const Home = (): ReactElement => {
   return (
     <>
       <div className={css.container}>
@@ -26,7 +29,14 @@ export const Home = () => {
             <Button variant="contained" color="background" size="large">
               Build
             </Button>
-            <Button href="https://app.safe.global" target="_blank" variant="contained" color="secondary" size="large">
+            <Button
+              href={WALLET_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="contained"
+              color="secondary"
+              size="large"
+            >
               Launch Wallet
             </Button>
           </div>
