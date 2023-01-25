@@ -12,6 +12,7 @@ import { createEmotionCache } from '@/styles/emotion'
 import { theme } from '@/styles/theme'
 
 import '@/styles/globals.css'
+import PageLayout from '@/components/common/PageLayout'
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache()
@@ -31,7 +32,9 @@ const App = ({
       <CssVarsProvider theme={cssVarsTheme}>
         <CssBaseline />
 
-        <Component {...pageProps} />
+        <PageLayout>
+          <Component {...pageProps} />
+        </PageLayout>
       </CssVarsProvider>
     </CacheProvider>
   )
