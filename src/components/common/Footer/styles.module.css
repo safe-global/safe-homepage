@@ -1,0 +1,29 @@
+.list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.listItem {
+    color: var(--mui-palette-primary-light);
+}
+
+.subList {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 32px;
+}
+
+.subListItem {
+    line-height: 56px;
+    color: var(--mui-palette-primary-light);
+}
+
+.socials {
+    margin-top: 24px;
+    display: flex;
+    gap: 8px;
+}

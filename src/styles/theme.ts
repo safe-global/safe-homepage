@@ -114,5 +114,12 @@ export const theme = createTheme({
         },
       },
     },
+    MuiOutlinedInput: {
+      styleOverrides: {
+        notchedOutline: {
+          borderColor: 'inherit',
+        },
+      },
+    },
   },
 })
