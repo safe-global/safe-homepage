@@ -4,6 +4,7 @@ import { Button, Typography } from '@mui/material'
 import Community from '@/components/Home/Community'
 import Protocol from '@/components/Home/Protocol'
 import Contracts from '@/components/Home/Contracts'
+import TrustedBy from '@/components/Home/TrustedBy'
 
 export const Home = () => {
   return (
@@ -31,6 +32,7 @@ export const Home = () => {
         </div>
       </div>
       <Community />
+      <TrustedBy />
       <Protocol />
       <Contracts />
     </>
