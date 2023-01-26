@@ -9,6 +9,7 @@ import Ecosystem from '@/components/Home/Ecosystem'
 import { WALLET_LINK } from '@/config/constants'
 
 import css from './styles.module.css'
+import WalletDownload from '@/components/common/WalletDownload'
 
 export const Home = (): ReactElement => {
   return (
@@ -47,6 +48,7 @@ export const Home = (): ReactElement => {
       <Protocol />
       <Contracts />
       <Ecosystem />
+      <WalletDownload />
     </>
   )
 }
