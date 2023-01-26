@@ -60,8 +60,8 @@ export const theme = createTheme({
       lineHeight: '34px',
     },
     h3: {
-      fontSize: '24px',
-      lineHeight: '30px',
+      fontSize: '32px',
+      lineHeight: '39px',
     },
     h4: {
       fontSize: '20px',

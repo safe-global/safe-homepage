@@ -1,4 +1,4 @@
-.buttonLink {
+.linkButton {
     font-size: 18px;
     line-height: 26px;
     letter-spacing: 0.46px;
@@ -7,7 +7,7 @@
     transition: 0.3s;
 }
 
-.buttonLink:hover {
+.linkButton:hover {
     color: var(--mui-palette-primary-main);
     border-color: var(--mui-palette-primary-main);
 }

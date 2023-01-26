@@ -10,6 +10,7 @@ import { WALLET_LINK } from '@/config/constants'
 
 import css from './styles.module.css'
 import WalletDownload from '@/components/common/WalletDownload'
+import Governance from '@/components/Home/Governance'
 
 export const Home = (): ReactElement => {
   return (
@@ -47,6 +48,7 @@ export const Home = (): ReactElement => {
       <TrustedBy />
       <Protocol />
       <Contracts />
+      <Governance />
       <Ecosystem />
       <WalletDownload />
     </>

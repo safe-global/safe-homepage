@@ -1,10 +1,9 @@
-import Image from 'next/image'
-import { Box, Button, ButtonBase, Container, Grid, Typography } from '@mui/material'
 import type { ReactElement } from 'react'
+import Image from 'next/image'
+import { Box, Button, Container, Grid, Typography } from '@mui/material'
 
+import LinkButton from '@/components/common/LinkButton'
 import ContractsImage from '@/public/images/contract.png'
-
-import css from './styles.module.css'
 
 const Contracts = (): ReactElement => {
   return (
@@ -24,9 +23,7 @@ const Contracts = (): ReactElement => {
             <Button variant="contained" size="large">
               Learn more
             </Button>
-            <ButtonBase disableRipple className={css.buttonLink}>
-              Start Bug hunting
-            </ButtonBase>
+            <LinkButton disableRipple>Start Bug hunting</LinkButton>
           </Box>
         </Grid>
       </Grid>
