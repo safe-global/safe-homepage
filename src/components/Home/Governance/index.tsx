@@ -10,7 +10,7 @@ const Governance = (): ReactElement => {
   return (
     <Container disableGutters>
       <Typography variant="caption" component="div" mt={{ xs: 8, md: '235px' }} mb={3}>
-        Governance protocol
+        Protocol governance
       </Typography>
       <Grid container mb="135px" spacing="30px">
         <Grid item md={6}>
@@ -23,12 +23,9 @@ const Governance = (): ReactElement => {
         </Grid>
         <Grid item md={1} display={{ xs: 'none', md: 'block' }} />
         <Grid item md={5} mt={1}>
-          <Typography mb={2}>
-            Safe is governed by <strong>SafeDAO</strong>, a decentralized governance.
-          </Typography>
           <Typography mb={3}>
-            It is a collective of core contributors, backers, GnosisDAO, users and Safe Guardians committed to making
-            web3 more secure, collaborative and accessible.
+            Safe is governed by SafeDAO, a dva collective of core contributors, backers, GnosisDAO, users and Safe
+            Guardians committed to making web3 more secure, collaborative and accessible.
           </Typography>
           <LinkButton disableRipple>Learn about governance</LinkButton>
         </Grid>

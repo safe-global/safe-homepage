@@ -162,7 +162,7 @@ const Footer = () => {
         </Grid>
       </Grid>
       <Grid container display={{ xs: 'none', md: 'block' }}>
-        <FooterBG />
+        <FooterBG style={{ display: 'block' }} />
       </Grid>
     </Container>
   )

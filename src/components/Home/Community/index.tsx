@@ -9,18 +9,15 @@ const Community = (): ReactElement => {
       <Grid container my={{ xs: 8, md: '235px' }} spacing="30px">
         <Grid item md={1} />
         <Grid item md={5}>
-          <Typography variant="caption" component="div" mb="20px">
-            Join the community
+          <Typography variant="caption" component="div" mb={2}>
+            Safe at Scale
           </Typography>
           <Typography variant="h1" mb={4}>
-            Unlock ownership of your assets on any{' '}
-            <Typography variant="inherit" component="span" color="primary">
-              Ethereum chain
-            </Typography>
+            <i>Safe</i> secures one of the largest $ values in web3. Since 2018.
           </Typography>
           <Typography variant="body2" color="primary.light">
-            EVM is a software that executes smart contracts and computes the state of the Ethereum and executes
-            bytecodes to contracts.
+            Previously called Gnosis Safe, Safe spun out of GnosisDAO with a mission to build a better standard for
+            ownership with smart contract account based account abstraction.
           </Typography>
         </Grid>
         <Grid item md={1} display={{ xs: 'none', md: 'block' }} />
