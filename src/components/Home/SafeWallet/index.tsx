@@ -4,13 +4,13 @@ import type { ReactElement } from 'react'
 
 import ProtocolImage from '@/public/images/protocol.png'
 
-const Protocol = (): ReactElement => {
+const SafeWallet = (): ReactElement => {
   return (
     <Container disableGutters>
       <Grid container my={{ xs: 8, md: '235px' }} spacing="30px">
         <Grid item md={6}>
           <Typography variant="caption" component="div" mb="20px">
-            More than a protocol
+            Safe Wallet
           </Typography>
           <Typography variant="h1" mb={4}>
             <Typography variant="inherit" component="span" color="primary">
@@ -36,4 +36,4 @@ const Protocol = (): ReactElement => {
   )
 }
 
-export default Protocol
+export default SafeWallet

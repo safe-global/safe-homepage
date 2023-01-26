@@ -2,15 +2,16 @@ import { Button, Typography } from '@mui/material'
 import type { ReactElement } from 'react'
 
 import Community from '@/components/Home/Community'
-import Protocol from '@/components/Home/Protocol'
 import Contracts from '@/components/Home/Contracts'
 import TrustedBy from '@/components/Home/TrustedBy'
 import Ecosystem from '@/components/Home/Ecosystem'
+import WalletDownload from '@/components/common/WalletDownload'
+import Governance from '@/components/Home/Governance'
+import SafeWallet from '@/components/Home/SafeWallet'
 import { WALLET_LINK } from '@/config/constants'
 
 import css from './styles.module.css'
-import WalletDownload from '@/components/common/WalletDownload'
-import Governance from '@/components/Home/Governance'
+import SafeCore from '@/components/Home/SafeCore'
 
 export const Home = (): ReactElement => {
   return (
@@ -46,10 +47,11 @@ export const Home = (): ReactElement => {
       </div>
       <Community />
       <TrustedBy />
-      <Protocol />
+      <SafeCore />
+      <Ecosystem />
+      <SafeWallet />
       <Contracts />
       <Governance />
-      <Ecosystem />
       <WalletDownload />
     </>
   )
