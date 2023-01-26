@@ -19,7 +19,7 @@ const WalletDownload = () => {
             </Typography>
           </Grid>
           <Grid item md={8}>
-            <Grid container gap={2}>
+            <Grid container gap={2} justifyContent="center">
               <Grid item>
                 <a href={IOS_LINK} target="_blank" rel="noreferrer">
                   <IOSDownload />

@@ -6,7 +6,7 @@ import css from './styles.module.css'
 const Community = (): ReactElement => {
   return (
     <Container>
-      <Grid container my="235px" spacing="30px">
+      <Grid container my={{ xs: 8, md: '235px' }} spacing="30px">
         <Grid item md={1} />
         <Grid item md={5}>
           <Typography variant="caption" component="div" mb="20px">
@@ -23,7 +23,7 @@ const Community = (): ReactElement => {
             bytecodes to contracts.
           </Typography>
         </Grid>
-        <Grid item md={1} />
+        <Grid item md={1} display={{ xs: 'none', md: 'block' }} />
         <Grid item md={5}>
           <div className={css.metricWrapper}>
             <div>

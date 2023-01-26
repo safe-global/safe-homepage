@@ -7,7 +7,7 @@ import ProtocolImage from '@/public/images/protocol.png'
 const Protocol = (): ReactElement => {
   return (
     <Container disableGutters>
-      <Grid container my="235px" spacing="30px">
+      <Grid container my={{ xs: 8, md: '235px' }} spacing="30px">
         <Grid item md={6}>
           <Typography variant="caption" component="div" mb="20px">
             More than a protocol

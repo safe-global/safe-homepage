@@ -51,9 +51,14 @@ export const theme = createTheme({
   typography: {
     fontFamily: 'Citerne, sans-serif',
     h1: {
-      fontSize: '60px',
-      lineHeight: '64px',
+      fontSize: '32px',
+      lineHeight: '38px',
       fontWeight: 400,
+
+      '@media (min-width:600px)': {
+        fontSize: '60px',
+        lineHeight: '64px',
+      },
     },
     h2: {
       fontSize: '27px',

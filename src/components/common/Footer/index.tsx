@@ -91,7 +91,7 @@ const subFooterItems = [
 const Footer = () => {
   return (
     <Container>
-      <Grid container>
+      <Grid container flexDirection={{ xs: 'column', md: 'row' }}>
         <Grid item md={2}>
           <Typography variant="caption" color="text.primary">
             Safe Protocol
@@ -128,7 +128,7 @@ const Footer = () => {
             ))}
           </ul>
         </Grid>
-        <Grid item md={4} ml="auto">
+        <Grid item md={4} ml={{ xs: 0, md: 'auto' }}>
           <Typography variant="caption" component="div" color="text.primary" mb={2}>
             Subscribe to our newsletter
           </Typography>
@@ -161,7 +161,7 @@ const Footer = () => {
           <Typography color="primary.light">©2023 Safe Ecosystem Foundation</Typography>
         </Grid>
       </Grid>
-      <Grid container>
+      <Grid container display={{ xs: 'none', md: 'block' }}>
         <FooterBG />
       </Grid>
     </Container>

@@ -8,7 +8,7 @@ import ContractsImage from '@/public/images/contract.png'
 const Contracts = (): ReactElement => {
   return (
     <Container disableGutters>
-      <Grid container my="235px" spacing="30px">
+      <Grid container my={{ xs: 8, md: '235px' }} spacing="30px">
         <Grid item md={6}>
           <Image src={ContractsImage} alt="Metrics about bug bounty" />
         </Grid>

@@ -9,19 +9,19 @@ import clsx from 'clsx'
 const Governance = (): ReactElement => {
   return (
     <Container disableGutters>
-      <Typography variant="caption" component="div" mt="235px" mb={3}>
+      <Typography variant="caption" component="div" mt={{ xs: 8, md: '235px' }} mb={3}>
         Governance protocol
       </Typography>
       <Grid container mb="135px" spacing="30px">
         <Grid item md={6}>
-          <Typography variant="h1" mb={5}>
+          <Typography variant="h1">
             Abstraction protocol that is{' '}
             <Typography variant="inherit" component="span" color="primary">
               governed by community
             </Typography>
           </Typography>
         </Grid>
-        <Grid item md={1} />
+        <Grid item md={1} display={{ xs: 'none', md: 'block' }} />
         <Grid item md={5} mt={1}>
           <Typography mb={2}>
             Safe is governed by <strong>SafeDAO</strong>, a decentralized governance.
@@ -34,7 +34,7 @@ const Governance = (): ReactElement => {
         </Grid>
       </Grid>
 
-      <Grid container spacing={4} mb="235px">
+      <Grid container spacing={4} mb={{ xs: 8, md: '235px' }}>
         <Grid item xs={12} md={4}>
           <div className={clsx(css.card, css.gradient)}>
             <a href="#" className={css.cardLink}>

@@ -7,7 +7,13 @@ const Ecosystem = (): ReactElement => {
   return (
     <div className={css.bg}>
       <Container sx={{ textAlign: 'center' }}>
-        <Grid container my="235px" alignItems="center" justifyContent="center" height="1090px">
+        <Grid
+          container
+          my={{ xs: 8, md: '235px' }}
+          alignItems="center"
+          justifyContent="center"
+          height={{ xs: '700px', md: '1090px' }}
+        >
           <Grid item md={8}>
             <Typography variant="caption" component="div">
               Safe Ecosystem
