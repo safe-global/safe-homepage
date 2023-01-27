@@ -124,6 +124,9 @@ export const theme = createTheme({
         notchedOutline: {
           borderColor: 'inherit',
         },
+        root: {
+          color: palette.border.main,
+        },
       },
     },
     MuiContainer: {

@@ -7,6 +7,7 @@
 }
 
 .listItem {
+    font-size: 16px;
     color: var(--mui-palette-primary-light);
 }
 
@@ -19,6 +20,7 @@
 }
 
 .subListItem {
+    font-size: 16px;
     line-height: 56px;
     color: var(--mui-palette-primary-light);
 }

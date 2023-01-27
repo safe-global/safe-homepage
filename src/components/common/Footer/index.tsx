@@ -1,28 +1,18 @@
 import { ButtonBase, Container, Divider, Grid, TextField, Typography } from '@mui/material'
 
 import { AppRoutes } from '@/config/routes'
-import FooterBG from '@/public/images/footer-bg.svg'
 import DiscordIcon from '@/public/images/discord-icon.svg'
-import GithubIcon from '@/public/images/github-icon.svg'
 import TwitterIcon from '@/public/images/twitter-icon.svg'
 
 import css from './styles.module.css'
 
 const safeProtocolItems = [
   {
-    label: 'Enterprise',
-    href: AppRoutes.index,
-  },
-  {
     label: 'Core',
-    href: AppRoutes.core,
+    href: AppRoutes.index,
   },
   {
     label: 'Developers Gitbook',
-    href: AppRoutes.index,
-  },
-  {
-    label: 'Safe Ecosystem Foundation',
     href: AppRoutes.index,
   },
 ]
@@ -53,10 +43,6 @@ const resourcesItems = [
   },
   {
     label: 'Brand Kit',
-    href: AppRoutes.index,
-  },
-  {
-    label: 'Enterprise',
     href: AppRoutes.index,
   },
 ]
@@ -138,16 +124,13 @@ const Footer = () => {
               <DiscordIcon />
             </ButtonBase>
             <ButtonBase disableRipple>
-              <GithubIcon />
-            </ButtonBase>
-            <ButtonBase disableRipple>
               <TwitterIcon />
             </ButtonBase>
           </div>
         </Grid>
       </Grid>
       <Divider sx={{ mt: '26px' }} />
-      <Grid container mb={3} alignItems="center" justifyContent="space-between">
+      <Grid container alignItems="center" justifyContent="space-between">
         <Grid item>
           <ul className={css.subList}>
             {subFooterItems.map((item) => (
@@ -158,11 +141,10 @@ const Footer = () => {
           </ul>
         </Grid>
         <Grid item>
-          <Typography color="primary.light">©2023 Safe Ecosystem Foundation</Typography>
+          <Typography color="primary.light" fontSize="16px">
+            ©2023 Safe Ecosystem Foundation
+          </Typography>
         </Grid>
-      </Grid>
-      <Grid container display={{ xs: 'none', md: 'block' }}>
-        <FooterBG style={{ display: 'block' }} />
       </Grid>
     </Container>
   )
