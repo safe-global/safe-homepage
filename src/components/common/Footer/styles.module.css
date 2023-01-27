@@ -16,12 +16,12 @@
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 32px;
+    gap: 16px;
 }
 
 .subListItem {
     font-size: 16px;
-    line-height: 56px;
+    line-height: 24px;
     color: var(--mui-palette-primary-light);
 }
 
@@ -29,4 +29,14 @@
     margin-top: 24px;
     display: flex;
     gap: 8px;
+}
+
+@media (min-width: 600px) {
+    .subList {
+        gap: 32px;
+    }
+
+    .subListItem {
+        line-height: 56px;
+    }
 }

@@ -130,7 +130,7 @@ const Footer = () => {
         </Grid>
       </Grid>
       <Divider sx={{ mt: '26px' }} />
-      <Grid container alignItems="center" justifyContent="space-between">
+      <Grid container alignItems="center" justifyContent="space-between" mb={2}>
         <Grid item>
           <ul className={css.subList}>
             {subFooterItems.map((item) => (
@@ -140,7 +140,7 @@ const Footer = () => {
             ))}
           </ul>
         </Grid>
-        <Grid item>
+        <Grid item my={2}>
           <Typography color="primary.light" fontSize="16px">
             ©2023 Safe Ecosystem Foundation
           </Typography>

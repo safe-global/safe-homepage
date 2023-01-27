@@ -19,11 +19,11 @@ const TrustedBy = (): ReactElement => {
   return (
     <Container>
       <div className={layoutCss.container}>
-        <Typography variant="caption" component="div" textAlign="center" mb={8}>
+        <Typography variant="caption" component="div" textAlign="center" mb={{ xs: 4, md: 8 }}>
           Trusted by the empowering organisations and individuals
         </Typography>
         <Grid container justifyContent="center">
-          <Grid item container md={10} spacing="40px" justifyContent="center" alignItems="center">
+          <Grid item container md={10} gap={{ xs: 3, md: 5 }} justifyContent="center" alignItems="center">
             <Grid item>
               <OneInchLogo />
             </Grid>

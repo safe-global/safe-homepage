@@ -10,12 +10,12 @@ const Governance = (): ReactElement => {
   return (
     <Container>
       <div className={layoutCss.container}>
-        <Typography variant="caption" component="div" mb={3}>
+        <Typography variant="caption" component="div" mb={{ xs: 2, md: 3 }}>
           Protocol governance
         </Typography>
-        <Grid container mb="135px" spacing="30px">
+        <Grid container mb="135px" columnSpacing="30px">
           <Grid item md={6}>
-            <Typography variant="h2">
+            <Typography variant="h2" mb={4}>
               Safe DAO{' '}
               <Typography variant="inherit" component="span" color="primary">
                 community-governed
@@ -24,7 +24,7 @@ const Governance = (): ReactElement => {
             </Typography>
           </Grid>
           <Grid item md={1} display={{ xs: 'none', md: 'block' }} />
-          <Grid item md={5} mt={1}>
+          <Grid item md={5} mt={{ xs: 0, md: 1 }}>
             <Typography mb={2}>Safe is governed by SafeDAO, a decentralized collective.</Typography>
             <Typography>
               The collective entails core contributors, backers, GnosisDAO, users and Safe Guardians committed to making
@@ -33,7 +33,7 @@ const Governance = (): ReactElement => {
           </Grid>
         </Grid>
 
-        <Grid container spacing={4} mb={{ xs: 8, md: '235px' }}>
+        <Grid container spacing="30px">
           <Grid item xs={12} md={4}>
             <div className={css.card}>
               <a href="#" className={css.cardLink}>

@@ -1,13 +1,13 @@
 .metricWrapper {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 24px;
 }
 
 .metric {
     margin: 0;
-    font-size: 40px;
-    line-height: 50px;
+    font-size: 64px;
+    line-height: 64px;
     color: var(--mui-palette-primary-main);
     background: linear-gradient(90deg, rgba(15,255,128,1) 0%, rgba(94,221,255,1) 60%);
     -webkit-background-clip: text;
@@ -27,5 +27,9 @@
     .metric {
         font-size: 80px;
         line-height: 100px;
+    }
+
+    .metricWrapper {
+        gap: 40px;
     }
 }
