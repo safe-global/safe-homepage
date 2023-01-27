@@ -7,6 +7,7 @@ import AnimationPlaceholderImage from '@/public/images/anim2-placeholder.png'
 import SafeCoreImage from '@/public/images/safe-core-type.svg'
 import SafeWalletImage from '@/public/images/safe-wallet-type.svg'
 import css from './styles.module.css'
+import ArrowIcon from '@/public/images/arrow-out-icon.svg'
 
 const SafeCoreWallet = (): ReactElement => {
   return (
@@ -27,6 +28,7 @@ const SafeCoreWallet = (): ReactElement => {
                 web3 project.
               </Typography>
               <LinkButton sx={{ mt: 'auto' }}>Learn more</LinkButton>
+              <ArrowIcon className={css.icon} />
             </div>
           </Grid>
           <Grid item md={6}>
@@ -44,6 +46,7 @@ const SafeCoreWallet = (): ReactElement => {
                 based security as groups or as an individual.
               </Typography>
               <LinkButton sx={{ mt: 'auto' }}>Learn more</LinkButton>
+              <ArrowIcon className={css.icon} />
             </div>
           </Grid>
         </Grid>

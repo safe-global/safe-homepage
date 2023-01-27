@@ -10,7 +10,7 @@ const Governance = (): ReactElement => {
   return (
     <Container>
       <div className={layoutCss.container}>
-        <Typography variant="caption" component="div" mt={{ xs: 8, md: '235px' }} mb={3}>
+        <Typography variant="caption" component="div" mb={3}>
           Protocol governance
         </Typography>
         <Grid container mb="135px" spacing="30px">

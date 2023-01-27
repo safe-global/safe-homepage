@@ -1,6 +1,6 @@
 .card {
     background: var(--mui-palette-border-background);
-    border: 1px solid var(--mui-palette-border-light);
+    outline: 1px solid var(--mui-palette-border-light);
     border-radius: 16px;
     padding: 32px;
     display: flex;
@@ -9,6 +9,21 @@
     justify-content: center;
     text-align: center;
     height: 100%;
+    position: relative;
+    transition: 0.3s;
+}
+
+.card:hover {
+    outline-color: var(--mui-palette-primary-main);
+    outline-width: 2px;
+}
+
+.card:hover .icon {
+    transform: rotate(45deg);
+}
+
+.card:hover .icon path {
+    fill: var(--mui-palette-primary-main);
 }
 
 .tag {
@@ -25,4 +40,11 @@
     background-size: auto;
     background-position: center 100px;
     padding-bottom: 350px;
+}
+
+.icon {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    transition: transform 0.3s;
 }

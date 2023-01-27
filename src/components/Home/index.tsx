@@ -1,4 +1,4 @@
-import { Button, Grid, Typography } from '@mui/material'
+import { Button, Divider, Grid, Typography } from '@mui/material'
 import type { ReactElement } from 'react'
 
 import Community from '@/components/Home/Community'
@@ -11,6 +11,7 @@ import Governance from '@/components/Home/Governance'
 import { WALLET_LINK } from '@/config/constants'
 
 import css from './styles.module.css'
+import Contact from '@/components/Home/Contact'
 
 export const Home = (): ReactElement => {
   return (
@@ -57,6 +58,7 @@ export const Home = (): ReactElement => {
       <Ecosystem />
       <Contracts />
       <Governance />
+      <Contact />
       <WalletDownload />
     </>
   )
