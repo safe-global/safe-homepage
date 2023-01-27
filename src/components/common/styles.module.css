@@ -1,0 +1,11 @@
+.container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+@media (min-width: 600px) {
+    .container {
+        margin-top: 350px;
+        margin-bottom: 350px;
+    }
+}

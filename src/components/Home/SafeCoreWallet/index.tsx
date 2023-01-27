@@ -1,12 +1,14 @@
 import type { ReactElement } from 'react'
 import Image from 'next/image'
-import { Box, Button, Container, Grid, Typography } from '@mui/material'
+import { Container, Grid, Typography } from '@mui/material'
 
 import LinkButton from '@/components/common/LinkButton'
 import AnimationPlaceholderImage from '@/public/images/anim2-placeholder.png'
+import SafeCoreImage from '@/public/images/safe-core-type.svg'
+import SafeWalletImage from '@/public/images/safe-wallet-type.svg'
 import css from './styles.module.css'
 
-const SafeCore = (): ReactElement => {
+const SafeCoreWallet = (): ReactElement => {
   return (
     <div className={css.bg}>
       <Container disableGutters>
@@ -14,7 +16,9 @@ const SafeCore = (): ReactElement => {
           <Grid item md={6}>
             <div className={css.card}>
               <Image src={AnimationPlaceholderImage} alt="Just a placeholder" />
-              <div className={css.tag}>Safe {'{CORE}'}</div>
+              <div className={css.tag}>
+                <SafeCoreImage />
+              </div>
               <Typography variant="h3" mb={3} mt={2}>
                 Build on the <i>Safest</i> account abstraction protocol
               </Typography>
@@ -28,7 +32,9 @@ const SafeCore = (): ReactElement => {
           <Grid item md={6}>
             <div className={css.card}>
               <Image src={AnimationPlaceholderImage} alt="Just a placeholder" />
-              <div className={css.tag}>Safe {'{WALLET}'}</div>
+              <div className={css.tag}>
+                <SafeWalletImage />
+              </div>
               <Typography variant="h3" mb={3} mt={2}>
                 Use the most secure
                 <br /> wallet in web3
@@ -46,4 +52,4 @@ const SafeCore = (): ReactElement => {
   )
 }
 
-export default SafeCore
+export default SafeCoreWallet

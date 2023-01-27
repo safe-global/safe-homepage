@@ -4,13 +4,13 @@ import type { ReactElement } from 'react'
 import Community from '@/components/Home/Community'
 import Contracts from '@/components/Home/Contracts'
 import TrustedBy from '@/components/Home/TrustedBy'
+import SafeCoreWallet from '@/components/Home/SafeCoreWallet'
 import Ecosystem from '@/components/Home/Ecosystem'
 import WalletDownload from '@/components/common/WalletDownload'
 import Governance from '@/components/Home/Governance'
 import { WALLET_LINK } from '@/config/constants'
 
 import css from './styles.module.css'
-import SafeCore from '@/components/Home/SafeCore'
 
 export const Home = (): ReactElement => {
   return (
@@ -53,7 +53,7 @@ export const Home = (): ReactElement => {
       </div>
       <Community />
       <TrustedBy />
-      <SafeCore />
+      <SafeCoreWallet />
       <Ecosystem />
       <Contracts />
       <Governance />

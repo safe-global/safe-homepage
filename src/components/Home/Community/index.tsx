@@ -2,11 +2,12 @@ import { Container, Grid, Typography } from '@mui/material'
 import type { ReactElement } from 'react'
 
 import css from './styles.module.css'
+import layoutCss from '@/components/common/styles.module.css'
 
 const Community = (): ReactElement => {
   return (
     <Container>
-      <Grid container my={{ xs: 8, md: '235px' }} spacing="30px">
+      <Grid container className={layoutCss.container} spacing="30px">
         <Grid item md={1} />
         <Grid item md={5}>
           <Typography variant="caption" component="div" mb={2}>
