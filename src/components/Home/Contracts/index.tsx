@@ -13,17 +13,20 @@ const Contracts = (): ReactElement => {
           <Image src={ContractsImage} alt="Metrics about bug bounty" />
         </Grid>
         <Grid item md={6}>
-          <Typography variant="h1" mb={5}>
-            Safe {'{CORE}'} contracts are{' '}
+          <Typography variant="h1" mb={4}>
+            Safe {'{CORE}'} smart contracts are{' '}
             <Typography variant="inherit" component="span" color="primary">
               the most battle-tested
             </Typography>
           </Typography>
+          <Typography mb={5}>
+            The Safe core smart contracts have passed the highest possible security standard in the industry: Formal
+            Verification.
+          </Typography>
           <Box display="flex" gap={3}>
             <Button variant="contained" size="large">
-              Learn more
+              Read report
             </Button>
-            <LinkButton disableRipple>Start Bug hunting</LinkButton>
           </Box>
         </Grid>
       </Grid>

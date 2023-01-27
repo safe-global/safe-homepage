@@ -61,16 +61,21 @@ export const theme = createTheme({
       },
     },
     h2: {
-      fontSize: '27px',
-      lineHeight: '34px',
+      fontSize: '40px',
+      lineHeight: '44px',
+
+      '@media (min-width:600px)': {
+        fontSize: '60px',
+        lineHeight: '64px',
+      },
     },
     h3: {
       fontSize: '32px',
-      lineHeight: '39px',
+      lineHeight: '36px',
     },
     h4: {
-      fontSize: '20px',
-      lineHeight: '26px',
+      fontSize: '24px',
+      lineHeight: '32px',
     },
     h5: {
       fontSize: '16px',

@@ -15,38 +15,38 @@ const Governance = (): ReactElement => {
       <Grid container mb="135px" spacing="30px">
         <Grid item md={6}>
           <Typography variant="h1">
-            Abstraction protocol that is{' '}
+            Safe DAO{' '}
             <Typography variant="inherit" component="span" color="primary">
-              governed by community
-            </Typography>
+              community-governed
+            </Typography>{' '}
+            account abstraction ecosystem
           </Typography>
         </Grid>
         <Grid item md={1} display={{ xs: 'none', md: 'block' }} />
         <Grid item md={5} mt={1}>
-          <Typography mb={3}>
-            Safe is governed by SafeDAO, a dva collective of core contributors, backers, GnosisDAO, users and Safe
-            Guardians committed to making web3 more secure, collaborative and accessible.
+          <Typography mb={2}>Safe is governed by SafeDAO, a decentralized collective.</Typography>
+          <Typography>
+            The collective entails core contributors, backers, GnosisDAO, users and Safe Guardians committed to making
+            web3 more secure, collaborative and accessible.
           </Typography>
-          <LinkButton disableRipple>Learn about governance</LinkButton>
         </Grid>
       </Grid>
 
       <Grid container spacing={4} mb={{ xs: 8, md: '235px' }}>
         <Grid item xs={12} md={4}>
-          <div className={clsx(css.card, css.gradient)}>
+          <div className={css.card}>
             <a href="#" className={css.cardLink}>
-              <Typography variant="caption" component="div" pb="77px" color="text.primary">
-                Shape our future
+              <Typography variant="caption" component="div" pb="77px">
+                Be part of a community
               </Typography>
               <Typography variant="h3" color="text.primary">
-                Safe
-                <br />
-                Guardians
+                Forum
               </Typography>
               <ArrowIcon className={css.icon} />
             </a>
           </div>
         </Grid>
+
         <Grid item xs={12} md={4}>
           <div className={css.card}>
             <a href="#" className={css.cardLink}>
@@ -62,14 +62,17 @@ const Governance = (): ReactElement => {
             </a>
           </div>
         </Grid>
+
         <Grid item xs={12} md={4}>
-          <div className={css.card}>
+          <div className={clsx(css.card, css.gradient)}>
             <a href="#" className={css.cardLink}>
-              <Typography variant="caption" component="div" pb="77px">
-                Be part of a community
+              <Typography variant="caption" component="div" pb="77px" color="text.primary">
+                Shape our future
               </Typography>
               <Typography variant="h3" color="text.primary">
-                Forum
+                Safe
+                <br />
+                Guardians
               </Typography>
               <ArrowIcon className={css.icon} />
             </a>

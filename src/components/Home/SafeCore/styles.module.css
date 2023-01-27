@@ -1,0 +1,28 @@
+.card {
+    background: var(--mui-palette-border-background);
+    border: 1px solid var(--mui-palette-border-light);
+    border-radius: 16px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.tag {
+    background: var(--mui-palette-primary-main);
+    padding: 4px 8px;
+    border-radius: 6px;
+    color: var(--mui-palette-border-background);
+    font-weight: 500;
+    line-height: 1;
+}
+
+.bg {
+    background: url('/images/unlock-bg.svg') no-repeat;
+    background-size: auto;
+    background-position: center 100px;
+    padding-bottom: 350px;
+}

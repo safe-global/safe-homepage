@@ -12,7 +12,7 @@ const Community = (): ReactElement => {
           <Typography variant="caption" component="div" mb={2}>
             Safe at Scale
           </Typography>
-          <Typography variant="h1" mb={4}>
+          <Typography variant="h2" mb={4}>
             <i>Safe</i> secures one of the largest $ values in web3. Since 2018.
           </Typography>
           <Typography variant="body2" color="primary.light">

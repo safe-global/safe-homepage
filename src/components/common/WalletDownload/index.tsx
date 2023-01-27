@@ -12,10 +12,11 @@ const WalletDownload = () => {
         <Grid container flexDirection="column" alignItems="center" justifyContent="center">
           <Grid item md={6} sx={{ textAlign: 'center' }} pt={12}>
             <Typography variant="h1" color="static.main" mb={3}>
-              Access your Safe Wallet anywhere
+              Download Safe {'{WALLET}'} with you
             </Typography>
             <Typography color="static.main" mb={5}>
-              Access the best of Safe Protocol on Web, Mobile and Desktop.
+              Access your assets anywhere without compromising on security on our flagship interfaces built on Safe{' '}
+              {'{Core}'}.
             </Typography>
           </Grid>
           <Grid item md={8}>
@@ -32,7 +33,7 @@ const WalletDownload = () => {
               </Grid>
               <Grid item>
                 <Button variant="contained" color="secondary" size="large" disableRipple startIcon={<DownloadIcon />}>
-                  Download app
+                  Download desktop
                 </Button>
               </Grid>
             </Grid>

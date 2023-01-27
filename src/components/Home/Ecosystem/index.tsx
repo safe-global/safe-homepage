@@ -7,7 +7,7 @@ const Ecosystem = (): ReactElement => {
   return (
     <div className={css.bg}>
       <Container sx={{ textAlign: 'center' }}>
-        <Box height={{ xs: '700px', md: '1090px' }} my={{ xs: 8, md: '235px' }} display="flex" alignItems="center">
+        <Box height={{ xs: '700px', md: '1090px' }} mb={{ xs: 8, md: '235px' }} display="flex" alignItems="center">
           <Grid container justifyContent="center">
             <Grid item md={8}>
               <Typography variant="caption" component="div" mb={3}>

@@ -4,6 +4,7 @@ import type { ReactElement } from 'react'
 
 import ProtocolImage from '@/public/images/protocol.png'
 
+// TODO: Currently not used, might be deleted later
 const SafeWallet = (): ReactElement => {
   return (
     <Container disableGutters>
