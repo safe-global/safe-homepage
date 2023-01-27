@@ -11,7 +11,7 @@ const WalletDownload = () => {
       <Container>
         <Grid container flexDirection="column" alignItems="center" justifyContent="center">
           <Grid item md={6} sx={{ textAlign: 'center' }} pt={12}>
-            <Typography variant="h1" color="static.main" mb={3}>
+            <Typography variant="h2" color="static.main" mb={3}>
               Download Safe {'{WALLET}'} with you
             </Typography>
             <Typography color="static.main" mb={5}>
@@ -22,12 +22,12 @@ const WalletDownload = () => {
           <Grid item md={8}>
             <Grid container gap={2} justifyContent="center">
               <Grid item>
-                <a href={IOS_LINK} target="_blank" rel="noreferrer">
+                <a href={IOS_LINK} target="_blank" rel="noreferrer" aria-label="AppStore download">
                   <IOSDownload />
                 </a>
               </Grid>
               <Grid item>
-                <a href={GPLAY_LINK} target="_blank" rel="noreferrer">
+                <a href={GPLAY_LINK} target="_blank" rel="noreferrer" aria-label="Google Play download">
                   <GPlayDownload />
                 </a>
               </Grid>

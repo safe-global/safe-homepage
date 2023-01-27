@@ -15,7 +15,7 @@ const Governance = (): ReactElement => {
         </Typography>
         <Grid container mb="135px" spacing="30px">
           <Grid item md={6}>
-            <Typography variant="h1">
+            <Typography variant="h2">
               Safe DAO{' '}
               <Typography variant="inherit" component="span" color="primary">
                 community-governed

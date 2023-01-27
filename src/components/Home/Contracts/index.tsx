@@ -13,7 +13,7 @@ const Contracts = (): ReactElement => {
           <Image src={ContractsImage} alt="Metrics about bug bounty" />
         </Grid>
         <Grid item md={6}>
-          <Typography variant="h1" mb={4}>
+          <Typography variant="h2" mb={4}>
             Safe {'{CORE}'} smart contracts are{' '}
             <Typography variant="inherit" component="span" color="primary">
               the most battle-tested

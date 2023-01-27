@@ -13,7 +13,7 @@ const Ecosystem = (): ReactElement => {
               <Typography variant="caption" component="div" mb={3}>
                 Ecosystem
               </Typography>
-              <Typography variant="h1" mb={4}>
+              <Typography variant="h2" mb={4}>
                 Safe{' '}
                 <Typography variant="inherit" component="span" color="primary">
                   powers projects

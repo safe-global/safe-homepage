@@ -120,10 +120,10 @@ const Footer = () => {
           </Typography>
           <TextField fullWidth placeholder="Your email address" />
           <div className={css.socials}>
-            <ButtonBase disableRipple>
+            <ButtonBase disableRipple aria-label="Discord">
               <DiscordIcon />
             </ButtonBase>
-            <ButtonBase disableRipple>
+            <ButtonBase disableRipple aria-label="Twitter">
               <TwitterIcon />
             </ButtonBase>
           </div>
