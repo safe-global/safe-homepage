@@ -3,6 +3,10 @@
   padding: 24px;
 }
 
+.gridItems:not(:first-of-type) {
+  border-left: none;
+}
+
 .gridItems:first-of-type {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
