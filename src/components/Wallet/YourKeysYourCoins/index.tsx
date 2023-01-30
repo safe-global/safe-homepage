@@ -10,7 +10,7 @@ const GridItem = ({ icon: Icon, title, children }: { icon: FC; title: string; ch
   return (
     <Grid item xs={12} md={4} className={css.gridItems}>
       <Icon />
-      <Typography variant="h4" mt="24px" mb="8px">
+      <Typography variant="h4" mt={3} mb={1}>
         {title}
       </Typography>
       <Typography color="primary.light">{children}</Typography>
