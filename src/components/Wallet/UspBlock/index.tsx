@@ -18,7 +18,7 @@ const GridItem = ({ icon: Icon, title, children }: { icon: FC; title: string; ch
   )
 }
 
-const YourKeysYourCoins = () => {
+const UspBlock = () => {
   return (
     <Container>
       <Divider />
@@ -42,4 +42,4 @@ const YourKeysYourCoins = () => {
   )
 }
 
-export default YourKeysYourCoins
+export default UspBlock

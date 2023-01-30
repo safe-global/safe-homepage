@@ -1,10 +1,9 @@
-import YourKeysYourCoins from '@/components/Wallet/YourKeysYourCoins'
-import React from 'react'
+import UspBlock from '@/components/Wallet/UspBlock'
 
 export const Wallet = () => {
   return (
     <>
-      <YourKeysYourCoins />
+      <UspBlock />
     </>
   )
 }
