@@ -22,25 +22,26 @@ const GridItem = ({ icon: Icon, title, text }: GridItemProps) => {
 }
 
 export type UspBlockProps = {
-  content: GridItemProps[]
+  content: {
+    title: string
+    gridItems: GridItemProps[]
+  }
 }
 
-const UspBlock = ({ content }: UspBlockProps) => {
-  return (
-    <Container>
-      <Divider />
-      <Grid container className={layoutCss.container} justifyContent="center">
-        <Typography variant="h2" mb={5}>
-          Your keys. Your coins.
-        </Typography>
-        <Grid container>
-          {content.map((item) => (
-            <GridItem key={item.title.toLowerCase()} {...item} />
-          ))}
-        </Grid>
+const UspBlock = ({ content: { title, gridItems } }: UspBlockProps) => (
+  <Container>
+    <Divider />
+    <Grid container className={layoutCss.container} justifyContent="center">
+      <Typography variant="h2" mb={5}>
+        {title}
+      </Typography>
+      <Grid container>
+        {gridItems.map((item) => (
+          <GridItem key={item.title.toLowerCase()} {...item} />
+        ))}
       </Grid>
-    </Container>
-  )
-}
+    </Grid>
+  </Container>
+)
 
 export default UspBlock
