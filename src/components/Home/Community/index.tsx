@@ -25,8 +25,8 @@ const Community = ({ caption, title, text, items }: BaseBlock): ReactElement => 
         <Grid item md={5}>
           <div className={css.metricWrapper}>
             {items &&
-              items.map((item) => (
-                <div key={item.text}>
+              items.map((item, index) => (
+                <div key={'metric-' + index}>
                   <p className={css.metric}>{item.title}</p>
                   <Typography variant="caption">{item.text}</Typography>
                 </div>
