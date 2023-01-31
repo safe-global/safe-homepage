@@ -1,4 +1,3 @@
-import { Typography } from '@mui/material'
 import OneInchLogo from '@/public/images/1inch.svg'
 import MakerLogo from '@/public/images/maker.svg'
 import ENSLogo from '@/public/images/ens.svg'
@@ -15,6 +14,8 @@ import LockIcon from '@/public/images/lock.svg'
 import Image from 'next/image'
 import SafeCoreImage from '@/public/images/safe-core-type.svg'
 import SafeWalletImage from '@/public/images/safe-wallet-type.svg'
+
+import css from '@/components/common/styles.module.css'
 
 export const IntroContent = {
   title: 'Unlock Digital Asset Ownership.',
@@ -48,10 +49,7 @@ export const ScaleContent = {
 export const TrustedByContent = {
   title: (
     <>
-      Trusted by the best in{' '}
-      <Typography variant="inherit" component="span" color="primary">
-        Web3
-      </Typography>
+      Trusted by the best in <span className={css.primaryColor}>Web3</span>
     </>
   ),
   text: '',
@@ -133,9 +131,7 @@ export const EcosystemContent = {
   title: (
     <>
       Safe {'{CORE} '}
-      <Typography variant="inherit" component="span" color="primary">
-        powers ecosystem projects
-      </Typography>
+      <span className={css.primaryColor}>powers ecosystem projects</span>
       <br />
       in every corner of web3
     </>
@@ -149,11 +145,11 @@ export const SecurityContent = {
     <>
       Our contracts are
       <br />
-      <Typography variant="inherit" component="span" color="primary">
+      <span className={css.primaryColor}>
         the most
         <br />
         battle-tested
-      </Typography>
+      </span>
     </>
   ),
   text: 'The SafeCORE smart contracts have passed the highest possible security standard in the industry: Formal Verification.',
@@ -167,11 +163,7 @@ export const GovernanceContent = {
   caption: 'Governance',
   title: (
     <>
-      SafeDAO{' '}
-      <Typography variant="inherit" component="span" color="primary">
-        governs
-      </Typography>{' '}
-      the future of <i>Safe</i>
+      SafeDAO <span className={css.primaryColor}>governs</span> the future of <i>Safe</i>
     </>
   ),
   text: 'The Safe is governed by SafeDAO, a decentralized  collective of core contributors, backers, GnosisDAO, users and ecosystem contributors i.e. Safe Guardians.',
