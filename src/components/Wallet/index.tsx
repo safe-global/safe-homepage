@@ -3,7 +3,7 @@ import { YourKeysContent } from '@/components/Wallet/content'
 
 export const Wallet = () => (
   <>
-    <UspBlock content={YourKeysContent} />
+    <UspBlock {...YourKeysContent} />
   </>
 )
 

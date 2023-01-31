@@ -9,26 +9,22 @@ type GridItemProps = {
   text: ReactNode
 }
 
-const GridItem = ({ icon: Icon, title, text }: GridItemProps) => {
-  return (
-    <Grid item xs={12} md={4} className={css.gridItems}>
-      <Icon />
-      <Typography variant="h4" mt={3} mb={1}>
-        {title}
-      </Typography>
-      <Typography color="primary.light">{text}</Typography>
-    </Grid>
-  )
-}
+const GridItem = ({ icon: Icon, title, text }: GridItemProps) => (
+  <Grid item xs={12} md={4} className={css.gridItems}>
+    <Icon />
+    <Typography variant="h4" mt={3} mb={1}>
+      {title}
+    </Typography>
+    <Typography color="primary.light">{text}</Typography>
+  </Grid>
+)
 
 export type UspBlockProps = {
-  content: {
-    title: string
-    gridItems: GridItemProps[]
-  }
+  title: string
+  items: GridItemProps[]
 }
 
-const UspBlock = ({ content: { title, gridItems } }: UspBlockProps) => (
+const UspBlock = ({ title, items }: UspBlockProps) => (
   <Container>
     <Divider />
     <Grid container className={layoutCss.container} justifyContent="center">
@@ -36,7 +32,7 @@ const UspBlock = ({ content: { title, gridItems } }: UspBlockProps) => (
         {title}
       </Typography>
       <Grid container>
-        {gridItems.map((item) => (
+        {items.map((item) => (
           <GridItem key={item.title.toLowerCase()} {...item} />
         ))}
       </Grid>
