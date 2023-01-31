@@ -27,7 +27,7 @@ export type UspBlockProps = {
 const UspBlock = ({ title, items }: UspBlockProps) => (
   <Container>
     <Divider />
-    <Grid container className={layoutCss.container} justifyContent="center">
+    <Grid container className={layoutCss.containerShort} justifyContent="center">
       <Typography variant="h2" mb={5}>
         {title}
       </Typography>
