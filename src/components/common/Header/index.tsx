@@ -28,10 +28,12 @@ const Header = () => {
 
   const toggleNavigation = () => {
     setIsOpen((prev) => !prev)
+    document.body.classList.toggle('navOpen')
   }
 
   const closeNavigation = () => {
     setIsOpen(false)
+    document.body.classList.remove('navOpen')
   }
 
   return (

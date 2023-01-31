@@ -27,3 +27,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+@media (max-width: 599px) {
+  .navOpen {
+    overflow-y: hidden;
+  }
+}
