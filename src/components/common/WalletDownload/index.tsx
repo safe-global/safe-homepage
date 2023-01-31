@@ -4,19 +4,19 @@ import GPlayDownload from '@/public/images/google-play-download.svg'
 import DownloadIcon from '@/public/images/download-icon.svg'
 import css from './styles.module.css'
 import { IOS_LINK, GPLAY_LINK } from '@/config/constants'
+import { BaseBlock } from '@/components/Home/types'
 
-const WalletDownload = () => {
+const WalletDownload = ({ title, text }: BaseBlock) => {
   return (
     <div className={css.bg}>
       <Container>
         <Grid container flexDirection="column" alignItems="center" justifyContent="center">
           <Grid item md={6} sx={{ textAlign: 'center' }} pt={12}>
             <Typography variant="h2" color="static.main" mb={3}>
-              Download Safe {'{WALLET}'} with you
+              {title}
             </Typography>
             <Typography color="static.main" mb={5}>
-              Access your assets anywhere without compromising on security on our flagship interfaces built on Safe{' '}
-              {'{Core}'}.
+              {text}
             </Typography>
           </Grid>
           <Grid item md={8}>

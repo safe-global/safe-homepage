@@ -5,80 +5,48 @@ import ArrowIcon from '@/public/images/arrow-out-icon.svg'
 import css from './styles.module.css'
 import clsx from 'clsx'
 import layoutCss from '@/components/common/styles.module.css'
+import { BaseBlock } from '@/components/Home/types'
 
-const Governance = (): ReactElement => {
+const Governance = ({ title, text, caption, items }: BaseBlock): ReactElement => {
   return (
     <Container>
       <div className={layoutCss.container}>
         <Typography variant="caption" component="div" mb={{ xs: 2, md: 3 }}>
-          Protocol governance
+          {caption}
         </Typography>
         <Grid container mb="135px" columnSpacing="30px">
           <Grid item md={6}>
             <Typography variant="h2" mb={4}>
-              Safe DAO{' '}
-              <Typography variant="inherit" component="span" color="primary">
-                community-governed
-              </Typography>{' '}
-              account abstraction ecosystem
+              {title}
             </Typography>
           </Grid>
           <Grid item md={1} display={{ xs: 'none', md: 'block' }} />
           <Grid item md={5} mt={{ xs: 0, md: 1 }}>
-            <Typography mb={2}>Safe is governed by SafeDAO, a decentralized collective.</Typography>
-            <Typography>
-              The collective entails core contributors, backers, GnosisDAO, users and Safe Guardians committed to making
-              web3 more secure, collaborative and accessible.
-            </Typography>
+            <Typography>{text}</Typography>
           </Grid>
         </Grid>
 
         <Grid container spacing="30px">
-          <Grid item xs={12} md={4}>
-            <div className={css.card}>
-              <a href="#" className={css.cardLink}>
-                <Typography variant="caption" component="div" pb="77px">
-                  Be part of a community
-                </Typography>
-                <Typography variant="h3" color="text.primary">
-                  Forum
-                </Typography>
-                <ArrowIcon className={css.icon} />
-              </a>
-            </div>
-          </Grid>
+          {items &&
+            items.map((item, index) => {
+              const isLastItem = index === items.length - 1
 
-          <Grid item xs={12} md={4}>
-            <div className={css.card}>
-              <a href="#" className={css.cardLink}>
-                <Typography variant="caption" component="div" pb="77px">
-                  Follow DAO decisions
-                </Typography>
-                <Typography variant="h3" color="text.primary">
-                  Latest
-                  <br />
-                  Proposals
-                </Typography>
-                <ArrowIcon className={css.icon} />
-              </a>
-            </div>
-          </Grid>
-
-          <Grid item xs={12} md={4}>
-            <div className={clsx(css.card, css.gradient)}>
-              <a href="#" className={css.cardLink}>
-                <Typography variant="caption" component="div" pb="77px" color="text.primary">
-                  Shape our future
-                </Typography>
-                <Typography variant="h3" color="text.primary">
-                  Safe
-                  <br />
-                  Guardians
-                </Typography>
-                <ArrowIcon className={css.icon} />
-              </a>
-            </div>
-          </Grid>
+              return (
+                <Grid key={item.caption} item xs={12} md={4}>
+                  <div className={clsx(css.card, isLastItem && css.gradient)}>
+                    <a href={item.link?.href} className={css.cardLink}>
+                      <Typography variant="caption" component="div" pb="77px">
+                        {item.caption}
+                      </Typography>
+                      <Typography variant="h3" color="text.primary">
+                        {item.title}
+                      </Typography>
+                      <ArrowIcon className={css.icon} />
+                    </a>
+                  </div>
+                </Grid>
+              )
+            })}
         </Grid>
       </div>
     </Container>
