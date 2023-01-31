@@ -76,7 +76,7 @@
   left: 0;
   right: 0;
   text-align: center;
-  bottom: 114px;
+  bottom: 64px;
   font-size: 12px;
   color: #fff;
 }
@@ -122,10 +122,6 @@
     line-height: 36px;
   }
 
-  .content {
-    padding-left: 105px;
-  }
-
   .container {
     margin: 0 30px;
   }
@@ -138,5 +134,13 @@
 @media (min-width: 900px) {
   .frame {
     height: 130px;
+  }
+
+  .content {
+    padding-left: 105px;
+  }
+
+  .scroll {
+    bottom: 114px;
   }
 }
