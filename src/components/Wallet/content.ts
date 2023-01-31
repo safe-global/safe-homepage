@@ -1,10 +1,11 @@
 import ShieldIcon from '@/public/images/Wallet/shield.svg'
 import CheckIcon from '@/public/images/Wallet/check.svg'
 import SettingsIcon from '@/public/images/Wallet/settings.svg'
+import type { UspBlockProps } from '@/components/Wallet/UspBlock'
 
-export const YourKeysContent = {
+export const YourKeysContent: UspBlockProps = {
   title: 'Your keys. Your coins.',
-  gridItems: [
+  items: [
     {
       icon: ShieldIcon,
       title: 'Battle Tested Security',
