@@ -3,6 +3,10 @@
     margin-bottom: 150px;
 }
 
+.primaryColor {
+    color: var(--mui-palette-primary-main);
+}
+
 @media (min-width: 600px) {
     .container {
         margin-top: 350px;

@@ -2,30 +2,21 @@ import { Grid, Typography, Button, Container, Box } from '@mui/material'
 import type { ReactElement } from 'react'
 
 import css from './styles.module.css'
+import { BaseBlock } from '@/components/Home/types'
 
-const Ecosystem = (): ReactElement => {
+const Ecosystem = ({ title, text }: BaseBlock): ReactElement => {
   return (
     <div className={css.bg}>
       <Container sx={{ textAlign: 'center' }}>
         <Box height={{ xs: '700px', md: '1090px' }} display="flex" alignItems="center">
           <Grid container justifyContent="center">
             <Grid item md={8}>
-              <Typography variant="caption" component="div" mb={3}>
-                Ecosystem
-              </Typography>
-              <Typography variant="h2" mb={4}>
-                Safe{' '}
-                <Typography variant="inherit" component="span" color="primary">
-                  powers projects
-                </Typography>{' '}
-                in every corner of web3
+              <Typography variant="h2" mb={4} textAlign="center">
+                {title}
               </Typography>
             </Grid>
             <Grid item md={6}>
-              <Typography>
-                130+ projects from DAO tools to NFT collectives are building on Safe Core protocol. Do almost anything
-                in web3 while enjoying Safe’s battle-tested security and co-ownership capabilities.
-              </Typography>
+              <Typography>{text}</Typography>
             </Grid>
           </Grid>
         </Box>

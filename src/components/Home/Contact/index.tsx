@@ -1,17 +1,18 @@
 import { Button, Container, Divider, Grid, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
+import { BaseBlock } from '@/components/Home/types'
 
-const Contact = () => {
+const Contact = ({ title, link }: BaseBlock) => {
   return (
     <Container>
       <Divider />
       <Grid container className={layoutCss.container} justifyContent="center">
         <Grid item md={6} textAlign="center">
           <Typography variant="h2" mb={5}>
-            Want to build on Safe? Get in touch
+            {title}
           </Typography>
-          <Button variant="contained" size="large">
-            Contact us
+          <Button href={link?.href} variant="contained" size="large">
+            {link?.title}
           </Button>
         </Grid>
       </Grid>
