@@ -3,7 +3,6 @@
   border-radius: 30px;
   display: flex;
   align-items: center;
-  padding: 40px 0px;
   position: relative;
 }
 
@@ -17,13 +16,13 @@
 }
 
 .content {
+  position: absolute;
   padding: 40px 16px;
 }
 
 .wrapper {
   align-self: flex-start;
   min-width: 100%;
-  position: absolute;
   z-index: -1;
 }
 
@@ -124,18 +123,20 @@
   }
 
   .content {
-    position: absolute;
     padding-left: 105px;
   }
 
   .container {
-    height: 800px;
-    padding: 0;
     margin: 0 30px;
   }
 
   .frame {
     width: clamp(45%, 10vw, 600px);
+  }
+}
+
+@media (min-width: 900px) {
+  .frame {
     height: 130px;
   }
 }
