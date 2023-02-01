@@ -138,3 +138,8 @@ export const SelfCustodyContent: UspBlockProps = {
     },
   ],
 }
+
+export const WalletDownloadContent = {
+  title: 'Use Safe {WALLET} anywhere',
+  text: 'Access your assets anywhere without compromising on security on our flagship interfaces built on Safe {Core}.',
+}

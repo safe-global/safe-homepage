@@ -6,10 +6,12 @@ import {
   OwnershipContent,
   SelfCustodyContent,
   SignerTypesContent,
+  WalletDownloadContent,
   YourKeysContent,
 } from '@/components/Wallet/content'
 import ImageText from '@/components/Wallet/ImageText'
 import HeroSection from '@/components/Wallet/Hero'
+import WalletDownload from '@/components/common/WalletDownload'
 
 export const Wallet = () => (
   <>
@@ -20,6 +22,7 @@ export const Wallet = () => (
     <ImageText {...BatchTransactionsContent} />
     <ImageText {...SignerTypesContent} />
     <UspBlock {...SelfCustodyContent} />
+    <WalletDownload {...WalletDownloadContent} />
   </>
 )
 
