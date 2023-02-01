@@ -33,14 +33,14 @@ const HeroSection = ({ image, textBlock }: HeroSectionProps): ReactElement => {
           <Typography className={css.title} variant="h1" mb={5}>
             {title}
           </Typography>
-          <Grid container gap={4} justifyContent="flex-start">
+          <Grid container gap={4} flexDirection="column" justifyContent="flex-start">
             <Grid item>
               <Button key={buttonText} href={href} variant="contained" size="large">
                 {buttonText}
               </Button>
             </Grid>
             <Grid item>
-              <Grid container gap="10px" justifyContent="center" className={css.links}>
+              <Grid container gap="10px" className={css.links}>
                 <Grid item>
                   <a href={IOS_LINK} target="_blank" rel="noreferrer" aria-label="AppStore download">
                     <IOSDownload />
