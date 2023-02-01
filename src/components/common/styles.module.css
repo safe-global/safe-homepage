@@ -3,6 +3,11 @@
     margin-bottom: 150px;
 }
 
+.containerShort {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
 .primaryColor {
     color: var(--mui-palette-primary-main);
 }
@@ -11,5 +16,10 @@
     .container {
         margin-top: 350px;
         margin-bottom: 350px;
+    }
+
+    .containerShort {
+        margin-top: 250px;
+        margin-bottom: 250px;
     }
 }
