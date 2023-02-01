@@ -30,11 +30,9 @@ const ImageText = ({ image, textBlock, variant }: ImageTextProps): ReactElement 
         spacing={{ xs: 6, md: '30px' }}
         justifyContent="space-between"
       >
-        <Grid item md={5}>
-          <Typography variant="h2" mb={4}>
-            {title}
-          </Typography>
-          <Typography mb={5}>{text}</Typography>
+        <Grid item md={5} display="flex" flexDirection="column" justifyContent="center" gap={{ xs: 3, md: 4 }}>
+          <Typography variant="h2">{title}</Typography>
+          <Typography>{text}</Typography>
           <Box display="flex" gap={3}>
             {buttons.map((button) => {
               const { text, variant, href } = button
