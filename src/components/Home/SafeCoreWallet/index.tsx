@@ -1,14 +1,10 @@
 import type { ReactElement } from 'react'
-import Image from 'next/image'
 import { Container, Grid, Typography } from '@mui/material'
 
 import LinkButton from '@/components/common/LinkButton'
-import AnimationPlaceholderImage from '@/public/images/anim2-placeholder.png'
-import SafeCoreImage from '@/public/images/safe-core-type.svg'
-import SafeWalletImage from '@/public/images/safe-wallet-type.svg'
 import css from './styles.module.css'
 import ArrowIcon from '@/public/images/arrow-out-icon.svg'
-import { BaseBlock } from '@/components/Home/types'
+import type { BaseBlock } from '@/components/Home/types'
 
 const SafeCoreWallet = ({ items }: BaseBlock): ReactElement => {
   return (

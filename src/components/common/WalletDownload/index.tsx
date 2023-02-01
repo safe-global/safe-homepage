@@ -4,7 +4,7 @@ import GPlayDownload from '@/public/images/google-play-download.svg'
 import DownloadIcon from '@/public/images/download-icon.svg'
 import css from './styles.module.css'
 import { IOS_LINK, GPLAY_LINK } from '@/config/constants'
-import { BaseBlock } from '@/components/Home/types'
+import type { BaseBlock } from '@/components/Home/types'
 
 const WalletDownload = ({ title, text }: BaseBlock) => {
   return (

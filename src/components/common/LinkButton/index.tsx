@@ -1,4 +1,5 @@
-import { ButtonBase, ButtonProps } from '@mui/material'
+import type { ButtonProps } from '@mui/material'
+import { ButtonBase } from '@mui/material'
 import css from './styles.module.css'
 import AngleIcon from '@/public/images/angle-icon.svg'
 

@@ -1,4 +1,4 @@
-import { BaseBlock } from '@/components/Home/types'
+import type { BaseBlock } from '@/components/Home/types'
 import { Grid, Typography } from '@mui/material'
 
 import css from './styles.module.css'
