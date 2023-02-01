@@ -13,6 +13,7 @@ import ClientAppsImage from '@/public/images/Wallet/clients.png'
 import css from '@/components/common/styles.module.css'
 
 export const YourKeysContent: UspBlockProps = {
+  width: 4,
   title: 'Your keys. Your coins.',
   items: [
     {
@@ -95,4 +96,45 @@ export const HeroContent: HeroSectionProps = {
     title: 'The most secure way to own assets',
     button: { text: 'Launch wallet', href: '#' },
   },
+}
+
+export const SelfCustodyContent: UspBlockProps = {
+  width: 3,
+  title: 'Empowering self-custody',
+  items: [
+    {
+      title: 'Hardware support',
+      text: 'Our personal education and conference budgets will help you grow professionally!',
+    },
+    {
+      title: 'Top notch security',
+      text: 'You can use your Friday afternoons for research or a side project in our ecosystem!',
+    },
+    {
+      title: 'Dapp support',
+      text: 'Build your team spirit on cool trips and retreats.',
+    },
+    {
+      title: 'Permissions',
+      text: 'Flexible working schedules and hybrid working policies have been a part of our culture for a long time.',
+    },
+    {
+      title: 'Build with SDK',
+      text: 'Our personal education and conference budgets will help you grow professionally!',
+      comingSoon: true,
+    },
+    {
+      title: 'Relay easily',
+      text: 'You can use your Friday afternoons for research or a side project in our ecosystem!',
+      comingSoon: true,
+    },
+    {
+      title: 'Dapp support',
+      text: 'Build your team spirit on cool trips and retreats.',
+    },
+    {
+      title: 'Permissions',
+      text: 'Flexible working schedules and hybrid working policies have been a part of our culture for a long time.',
+    },
+  ],
 }

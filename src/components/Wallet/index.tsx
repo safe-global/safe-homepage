@@ -4,6 +4,7 @@ import {
   CoManageContent,
   HeroContent,
   OwnershipContent,
+  SelfCustodyContent,
   SignerTypesContent,
   YourKeysContent,
 } from '@/components/Wallet/content'
@@ -18,6 +19,7 @@ export const Wallet = () => (
     <ImageText {...OwnershipContent} />
     <ImageText {...BatchTransactionsContent} />
     <ImageText {...SignerTypesContent} />
+    <UspBlock {...SelfCustodyContent} />
   </>
 )
 
