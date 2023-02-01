@@ -1,7 +1,7 @@
 import { Button, Container, Grid, Typography } from '@mui/material'
 import { WALLET_LINK } from '@/config/constants'
 import css from '@/components/Home/Intro/styles.module.css'
-import { BaseBlock } from '@/components/Home/types'
+import type { BaseBlock } from '@/components/Home/types'
 
 const Intro = ({ title, text }: BaseBlock) => {
   return (

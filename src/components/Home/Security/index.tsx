@@ -4,7 +4,7 @@ import { Box, Button, Container, Grid, Typography } from '@mui/material'
 
 import ContractsImage from '@/public/images/contract.png'
 import layoutCss from '@/components/common/styles.module.css'
-import { BaseBlock } from '@/components/Home/types'
+import type { BaseBlock } from '@/components/Home/types'
 import LinkButton from '@/components/common/LinkButton'
 
 const Security = ({ title, text, caption, link }: BaseBlock): ReactElement => {
