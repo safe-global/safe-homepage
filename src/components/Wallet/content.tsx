@@ -66,7 +66,6 @@ export const BatchTransactionsContent: ImageTextProps = {
     title: (
       <>
         Save of gas fees by batching <span className={css.primaryColor}>multiple transactions</span> in a few clicks
-        Control and change account{' '}
       </>
     ),
     text: 'Easily batch transactions you want to make together to save on gas.',

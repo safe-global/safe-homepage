@@ -3,6 +3,7 @@ import { Box, Button, Container, Grid, Typography } from '@mui/material'
 import LinkButton from '@/components/common/LinkButton'
 
 import layoutCss from '@/components/common/styles.module.css'
+import css from './styles.module.css'
 
 export type ImageTextProps = {
   variant: 'image-text' | 'text-image'
@@ -25,8 +26,7 @@ const ImageText = ({ image, textBlock, variant }: ImageTextProps): ReactElement 
     <Container>
       <Grid
         container
-        className={layoutCss.containerShort}
-        direction={`${variant === 'image-text' ? 'row' : 'row-reverse'}`}
+        className={`${layoutCss.containerShort} ${variant === 'image-text' ? css.imageFirst : css.textFirst}`}
         spacing="130px"
       >
         <Grid item md={6}>
