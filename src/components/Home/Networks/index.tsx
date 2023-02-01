@@ -3,7 +3,7 @@ import { Grid, Typography } from '@mui/material'
 
 import css from './styles.module.css'
 
-const Networks = ({ title, text, icon, items }: BaseBlock) => {
+const Networks = ({ title, text, items }: BaseBlock) => {
   return (
     <div>
       <Typography variant="h2" textAlign="center" mb={{ xs: 5, md: 8 }}>
