@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import OneInchLogo from '@/public/images/1inch.svg'
 import MakerLogo from '@/public/images/maker.svg'
 import ENSLogo from '@/public/images/ens.svg'
@@ -11,9 +12,16 @@ import KPMGLogo from '@/public/images/kpmg.svg'
 import StripeLogo from '@/public/images/stripe.svg'
 import CodeIcon from '@/public/images/code.svg'
 import LockIcon from '@/public/images/lock.svg'
-import Image from 'next/image'
 import SafeCoreImage from '@/public/images/safe-core-type.svg'
 import SafeWalletImage from '@/public/images/safe-wallet-type.svg'
+import MainnetIcon from '@/public/images/networks/mainnet.svg'
+import BNBIcon from '@/public/images/networks/bnb.svg'
+import OptimismIcon from '@/public/images/networks/optimism.svg'
+import ArbitrumIcon from '@/public/images/networks/arbitrum.svg'
+import PolygonIcon from '@/public/images/networks/polygon.svg'
+import AvalancheIcon from '@/public/images/networks/avalanche.svg'
+import GnosisChainIcon from '@/public/images/networks/gnosischain.svg'
+import AuroraIcon from '@/public/images/networks/aurora.svg'
 
 import css from '@/components/common/styles.module.css'
 
@@ -216,4 +224,35 @@ export const ContactContent = {
 export const WalletDownloadContent = {
   title: 'Use Safe {WALLET} anywhere',
   text: 'Access your assets anywhere without compromising on security on our flagship interfaces built on Safe {Core}.',
+}
+
+export const NetworksContent = {
+  title: 'Supported Networks',
+  text: 'And more networks, including testnets.',
+  items: [
+    {
+      icon: <MainnetIcon />,
+    },
+    {
+      icon: <BNBIcon />,
+    },
+    {
+      icon: <OptimismIcon />,
+    },
+    {
+      icon: <ArbitrumIcon />,
+    },
+    {
+      icon: <PolygonIcon />,
+    },
+    {
+      icon: <AvalancheIcon />,
+    },
+    {
+      icon: <GnosisChainIcon />,
+    },
+    {
+      icon: <AuroraIcon />,
+    },
+  ],
 }

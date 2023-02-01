@@ -19,13 +19,16 @@ import {
   GovernanceContent,
   ContactContent,
   WalletDownloadContent,
+  NetworksContent,
 } from '@/components/Home/content'
+import Networks from '@/components/Home/Networks'
 
 export const Home = (): ReactElement => {
   return (
     <>
       <Intro {...IntroContent} />
       <Community {...ScaleContent} />
+      <Networks {...NetworksContent} />
       <TrustedBy {...TrustedByContent} />
       <SafeCoreWallet {...SafeCoreWalletContent} />
       <Ecosystem {...EcosystemContent} />
