@@ -14,6 +14,7 @@ import LockIcon from '@/public/images/lock.svg'
 import Image from 'next/image'
 import SafeCoreImage from '@/public/images/safe-core-type.svg'
 import SafeWalletImage from '@/public/images/safe-wallet-type.svg'
+import NetworksImage from '@/public/images/networks.png'
 
 import css from '@/components/common/styles.module.css'
 
@@ -216,4 +217,10 @@ export const ContactContent = {
 export const WalletDownloadContent = {
   title: 'Use Safe {WALLET} anywhere',
   text: 'Access your assets anywhere without compromising on security on our flagship interfaces built on Safe {Core}.',
+}
+
+export const NetworksContent = {
+  title: 'Supported Networks',
+  text: 'And more networks, including testnets.',
+  icon: <Image src={NetworksImage} alt="Logos of supported networks" layout="responsive" />,
 }

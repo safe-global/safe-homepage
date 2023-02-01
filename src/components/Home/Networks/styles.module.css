@@ -1,0 +1,22 @@
+.gradient {
+    position: relative;
+}
+
+.gradient:before, .gradient:after {
+    content: "";
+    top: 0;
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 30%;
+}
+
+.gradient:before {
+    background: linear-gradient(90deg, #121312 0%, rgba(18, 19, 18, 0) 100%);
+    left: 0;
+}
+
+.gradient:after {
+    background: linear-gradient(270deg, #121312 0%, rgba(18, 19, 18, 0) 100%);
+    right: 0;
+}

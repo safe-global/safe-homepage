@@ -22,7 +22,6 @@
 .wrapper {
   align-self: flex-start;
   min-width: 100%;
-  z-index: -1;
   height: 720px;
   display: flex;
   align-items: center;
