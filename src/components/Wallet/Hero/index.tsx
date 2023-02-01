@@ -29,8 +29,8 @@ const HeroSection = ({ image, textBlock }: HeroSectionProps): ReactElement => {
         <Grid item md={6}>
           {image}
         </Grid>
-        <Grid item md={5}>
-          <Typography className={css.title} mb={5}>
+        <Grid item md={6}>
+          <Typography className={css.title} variant="h1" mb={5}>
             {title}
           </Typography>
           <Grid container gap={4} justifyContent="flex-start">
