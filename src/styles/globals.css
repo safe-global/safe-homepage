@@ -28,6 +28,10 @@ img {
   height: auto;
 }
 
+svg {
+  display: inline-block;
+}
+
 @media (max-width: 599px) {
   .navOpen {
     overflow-y: hidden;

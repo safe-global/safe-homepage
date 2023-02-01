@@ -8,47 +8,32 @@ import SafeCoreImage from '@/public/images/safe-core-type.svg'
 import SafeWalletImage from '@/public/images/safe-wallet-type.svg'
 import css from './styles.module.css'
 import ArrowIcon from '@/public/images/arrow-out-icon.svg'
+import { BaseBlock } from '@/components/Home/types'
 
-const SafeCoreWallet = (): ReactElement => {
+const SafeCoreWallet = ({ items }: BaseBlock): ReactElement => {
   return (
     <div className={css.bg}>
       <Container disableGutters>
         <Grid container mt={{ xs: 8, md: '235px' }} spacing="30px">
-          <Grid item md={6}>
-            <div className={css.card}>
-              <Image src={AnimationPlaceholderImage} alt="Just a placeholder" />
-              <div className={css.tag}>
-                <SafeCoreImage />
-              </div>
-              <Typography variant="h3" mb={3} mt={2}>
-                Build on the <i>Safest</i> account abstraction protocol
-              </Typography>
-              <Typography color="primary.light" mb={4}>
-                Use our Safe Core protocol, SDKs and APIs to add account abstraction and secure self-custody into any
-                web3 project.
-              </Typography>
-              <LinkButton sx={{ mt: 'auto' }}>Learn more</LinkButton>
-              <ArrowIcon className={css.icon} />
-            </div>
-          </Grid>
-          <Grid item md={6}>
-            <div className={css.card}>
-              <Image src={AnimationPlaceholderImage} alt="Just a placeholder" />
-              <div className={css.tag}>
-                <SafeWalletImage />
-              </div>
-              <Typography variant="h3" mb={3} mt={2}>
-                Use the most secure
-                <br /> wallet in web3
-              </Typography>
-              <Typography color="primary.light" mb={4}>
-                Use our flagship web, mobile and desktop apps to secure and control your assets with multi-signature
-                based security as groups or as an individual.
-              </Typography>
-              <LinkButton sx={{ mt: 'auto' }}>Learn more</LinkButton>
-              <ArrowIcon className={css.icon} />
-            </div>
-          </Grid>
+          {items &&
+            items.map((item) => (
+              <Grid key={item.caption} item md={6}>
+                <div className={css.card}>
+                  <Typography variant="caption" mb={3}>
+                    {item.caption}
+                  </Typography>
+                  {item.icon}
+                  <div className={css.tag}>{item.text}</div>
+                  <Typography variant="h3" mb={5} mt={2}>
+                    {item.title}
+                  </Typography>
+                  <LinkButton href={item.link?.href} sx={{ mt: 'auto' }}>
+                    {item.link?.title}
+                  </LinkButton>
+                  <ArrowIcon className={css.icon} />
+                </div>
+              </Grid>
+            ))}
         </Grid>
       </Container>
     </div>
