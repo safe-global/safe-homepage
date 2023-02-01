@@ -28,7 +28,7 @@ const UspBlock = ({ title, items }: UspBlockProps) => (
   <Container>
     <Divider />
     <Grid container className={layoutCss.containerShort} justifyContent="center">
-      <Typography variant="h2" mb={5}>
+      <Typography variant="h2" mb={5} align="center">
         {title}
       </Typography>
       <Grid container>

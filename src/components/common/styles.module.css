@@ -1,7 +1,11 @@
-.container,
-.containerShort {
+.container {
     margin-top: 150px;
     margin-bottom: 150px;
+}
+
+.containerShort {
+    margin-top: 80px;
+    margin-bottom: 80px;
 }
 
 .primaryColor {

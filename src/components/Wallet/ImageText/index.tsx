@@ -27,9 +27,10 @@ const ImageText = ({ image, textBlock, variant }: ImageTextProps): ReactElement 
       <Grid
         container
         className={`${layoutCss.containerShort} ${variant === 'image-text' ? css.imageFirst : css.textFirst}`}
-        spacing="130px"
+        spacing={{ xs: 6, md: '30px' }}
+        justifyContent="space-between"
       >
-        <Grid item md={6}>
+        <Grid item md={5}>
           <Typography variant="h2" mb={4}>
             {title}
           </Typography>
