@@ -1,13 +1,15 @@
+import Image from 'next/image'
 import ShieldIcon from '@/public/images/Wallet/shield.svg'
 import CheckIcon from '@/public/images/Wallet/check.svg'
 import SettingsIcon from '@/public/images/Wallet/settings.svg'
 import type { UspBlockProps } from '@/components/Wallet/UspBlock'
-import { ImageTextProps } from '@/components/Wallet/ImageText'
+import type { ImageTextProps } from '@/components/Wallet/ImageText'
+import type { HeroSectionProps } from '@/components/Wallet/Hero'
 import CoManageImage from '@/public/images/Wallet/co-manage.png'
 import OwnershipImage from '@/public/images/Wallet/ownership.png'
 import BatchTransactionsImage from '@/public/images/Wallet/batch-transactions.png'
 import SignerTypesImage from '@/public/images/Wallet/signer-types.png'
-import Image from 'next/image'
+import ClientAppsImage from '@/public/images/Wallet/clients.png'
 import css from '@/components/common/styles.module.css'
 
 export const YourKeysContent: UspBlockProps = {
@@ -84,5 +86,13 @@ export const SignerTypesContent: ImageTextProps = {
     ),
     text: 'From hardware wallets like ledger, tresor, to metamask type externally owned accounts, use all of these as signers on your Safe WALLET.',
     buttons: [{ text: 'Get started', href: '#', variant: 'link' }],
+  },
+}
+
+export const HeroContent: HeroSectionProps = {
+  image: <Image src={ClientAppsImage} alt="Web and mobile clients" />,
+  textBlock: {
+    title: 'The most secure way to own assets',
+    button: { text: 'Launch wallet', href: '#' },
   },
 }
