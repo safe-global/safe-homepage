@@ -15,6 +15,14 @@ import Image from 'next/image'
 import SafeCoreImage from '@/public/images/safe-core-type.svg'
 import SafeWalletImage from '@/public/images/safe-wallet-type.svg'
 import NetworksImage from '@/public/images/networks.png'
+import MainnetIcon from '@/public/images/networks/mainnet.svg'
+import BNBIcon from '@/public/images/networks/bnb.svg'
+import OptimismIcon from '@/public/images/networks/optimism.svg'
+import ArbitrumIcon from '@/public/images/networks/arbitrum.svg'
+import PolygonIcon from '@/public/images/networks/polygon.svg'
+import AvalancheIcon from '@/public/images/networks/avalanche.svg'
+import GnosisChainIcon from '@/public/images/networks/gnosischain.svg'
+import AuroraIcon from '@/public/images/networks/aurora.svg'
 
 import css from '@/components/common/styles.module.css'
 
@@ -223,4 +231,30 @@ export const NetworksContent = {
   title: 'Supported Networks',
   text: 'And more networks, including testnets.',
   icon: <Image src={NetworksImage} alt="Logos of supported networks" layout="responsive" />,
+  items: [
+    {
+      icon: <MainnetIcon />,
+    },
+    {
+      icon: <BNBIcon />,
+    },
+    {
+      icon: <OptimismIcon />,
+    },
+    {
+      icon: <ArbitrumIcon />,
+    },
+    {
+      icon: <PolygonIcon />,
+    },
+    {
+      icon: <AvalancheIcon />,
+    },
+    {
+      icon: <GnosisChainIcon />,
+    },
+    {
+      icon: <AuroraIcon />,
+    },
+  ],
 }
