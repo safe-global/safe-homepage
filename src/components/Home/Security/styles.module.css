@@ -44,5 +44,5 @@
   justify-content: center;
   width: 246px;
   height: 188px;
-  background-color: #ffffff;
+  background-color: var(--mui-palette-secondary-main);
 }
