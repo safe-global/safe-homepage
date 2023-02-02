@@ -24,235 +24,248 @@ import GnosisChainIcon from '@/public/images/networks/gnosischain.svg'
 import AuroraIcon from '@/public/images/networks/aurora.svg'
 
 import css from '@/components/common/styles.module.css'
+import Intro from '@/components/Home/Intro'
+import Community from '@/components/Home/Community'
+import TrustedBy from '@/components/Home/TrustedBy'
+import SafeCoreWallet from '@/components/Home/SafeCoreWallet'
+import Networks from '@/components/Home/Networks'
+import Ecosystem from '@/components/Home/Ecosystem'
+import Security from '@/components/Home/Security'
+import Governance from '@/components/Home/Governance'
+import Contact from '@/components/Home/Contact'
+import WalletDownload from '@/components/common/WalletDownload'
 
-export const IntroContent = {
-  title: 'Unlock Digital Asset Ownership.',
-  text: 'Safe is the most trusted decentralized custody protocol and collective asset management platform on Ethereum.',
-}
-
-export const ScaleContent = {
-  caption: 'Safe at scale',
-  title: (
-    <>
-      <i>Safe</i> accounts hold and protect billions of $$$ in assets on EVM.
-    </>
-  ),
-  text: 'Previously called Gnosis Safe, Safe spun out with a mission to build a better standard for ownership with smart contract accounts. Since 2018, Safe has grown to several EVM chains.',
-  items: [
-    {
-      title: '14M+',
-      text: 'Total transactions',
-    },
-    {
-      title: '$36B+',
-      text: 'Total assets stored',
-    },
-    {
-      title: '1M',
-      text: 'Safe accounts deployed',
-    },
-  ],
-}
-
-export const TrustedByContent = {
-  title: (
-    <>
-      Trusted by the best in <span className={css.primaryColor}>Web3</span>
-    </>
-  ),
-  text: '',
-  items: [
-    {
-      icon: <OneInchLogo />,
-    },
-    {
-      icon: <MakerLogo />,
-    },
-    {
-      icon: <ENSLogo />,
-    },
-    {
-      icon: <ZapperLogo />,
-    },
-    {
-      icon: <AaveLogo />,
-    },
-    {
-      icon: <BalancerLogo />,
-    },
-    {
-      icon: <Image src={VitalikImage} alt="Image of Vitalik" />,
-    },
-    {
-      icon: <Image src={PunkImage} alt="Image of Punk" />,
-    },
-    {
-      icon: <AdidasLogo />,
-    },
-    {
-      icon: <KPMGLogo />,
-    },
-    {
-      icon: <StripeLogo />,
-    },
-  ],
-}
-
-export const SafeCoreWalletContent = {
-  title: '',
-  text: '',
-  items: [
-    {
-      caption: 'Developers',
-      title: (
-        <>
-          Build on the <i>Safest</i> account abstraction stack
-        </>
-      ),
-      text: <SafeCoreImage />,
-      icon: <CodeIcon />,
-      link: {
-        title: 'Learn more',
-        href: '#',
+export const homeContent = [
+  {
+    title: 'Unlock Digital Asset Ownership.',
+    text: 'Safe is the most trusted decentralized custody protocol and collective asset management platform on Ethereum.',
+    component: Intro,
+  },
+  {
+    caption: 'Safe at scale',
+    title: (
+      <>
+        <i>Safe</i> accounts hold and protect billions of $$$ in assets on EVM.
+      </>
+    ),
+    text: 'Previously called Gnosis Safe, Safe spun out with a mission to build a better standard for ownership with smart contract accounts. Since 2018, Safe has grown to several EVM chains.',
+    items: [
+      {
+        title: '14M+',
+        text: 'Total transactions',
       },
-    },
-    {
-      caption: 'Users',
-      title: (
-        <>
-          Use the most secure
-          <br />
-          multi-sig wallet in web3
-        </>
-      ),
-      text: <SafeWalletImage />,
-      icon: <LockIcon />,
-      link: {
-        title: 'Learn more',
-        href: '#',
+      {
+        title: '$36B+',
+        text: 'Total assets stored',
       },
-    },
-  ],
-}
-
-export const EcosystemContent = {
-  title: (
-    <>
-      Safe {'{CORE} '}
-      <span className={css.primaryColor}>powers ecosystem projects</span>
-      <br />
-      in every corner of web3
-    </>
-  ),
-  text: '130+ projects including DAO tools, DeFi, NFT collectives are building on Safe Core.',
-}
-
-export const SecurityContent = {
-  caption: 'Security',
-  title: (
-    <>
-      Our contracts are
-      <br />
-      <span className={css.primaryColor}>
-        the most
+      {
+        title: '1M',
+        text: 'Safe accounts deployed',
+      },
+    ],
+    component: Community,
+  },
+  {
+    title: (
+      <>
+        Trusted by the best in <span className={css.primaryColor}>Web3</span>
+      </>
+    ),
+    text: '',
+    items: [
+      {
+        icon: <OneInchLogo />,
+      },
+      {
+        icon: <MakerLogo />,
+      },
+      {
+        icon: <ENSLogo />,
+      },
+      {
+        icon: <ZapperLogo />,
+      },
+      {
+        icon: <AaveLogo />,
+      },
+      {
+        icon: <BalancerLogo />,
+      },
+      {
+        icon: <Image src={VitalikImage} alt="Image of Vitalik" />,
+      },
+      {
+        icon: <Image src={PunkImage} alt="Image of Punk" />,
+      },
+      {
+        icon: <AdidasLogo />,
+      },
+      {
+        icon: <KPMGLogo />,
+      },
+      {
+        icon: <StripeLogo />,
+      },
+    ],
+    component: TrustedBy,
+  },
+  {
+    title: 'Supported Networks',
+    text: 'And more networks, including testnets.',
+    items: [
+      {
+        icon: <MainnetIcon />,
+      },
+      {
+        icon: <BNBIcon />,
+      },
+      {
+        icon: <OptimismIcon />,
+      },
+      {
+        icon: <ArbitrumIcon />,
+      },
+      {
+        icon: <PolygonIcon />,
+      },
+      {
+        icon: <AvalancheIcon />,
+      },
+      {
+        icon: <GnosisChainIcon />,
+      },
+      {
+        icon: <AuroraIcon />,
+      },
+    ],
+    component: Networks,
+  },
+  {
+    title: '',
+    text: '',
+    items: [
+      {
+        caption: 'Developers',
+        title: (
+          <>
+            Build on the <i>Safest</i> account abstraction stack
+          </>
+        ),
+        text: <SafeCoreImage />,
+        icon: <CodeIcon />,
+        link: {
+          title: 'Learn more',
+          href: '#',
+        },
+      },
+      {
+        caption: 'Users',
+        title: (
+          <>
+            Use the most secure
+            <br />
+            multi-sig wallet in web3
+          </>
+        ),
+        text: <SafeWalletImage />,
+        icon: <LockIcon />,
+        link: {
+          title: 'Learn more',
+          href: '#',
+        },
+      },
+    ],
+    component: SafeCoreWallet,
+  },
+  {
+    title: (
+      <>
+        Safe {'{CORE} '}
+        <span className={css.primaryColor}>powers ecosystem projects</span>
         <br />
-        battle-tested
-      </span>
-    </>
-  ),
-  text: 'The SafeCORE smart contracts have passed the highest possible security standard in the industry: Formal Verification.',
-  link: {
-    title: 'Read report',
-    href: '#',
+        in every corner of web3
+      </>
+    ),
+    text: '130+ projects including DAO tools, DeFi, NFT collectives are building on Safe Core.',
+    component: Ecosystem,
   },
-}
-
-export const GovernanceContent = {
-  caption: 'Governance',
-  title: (
-    <>
-      SafeDAO <span className={css.primaryColor}>governs</span> the future of <i>Safe</i>
-    </>
-  ),
-  text: 'The Safe is governed by SafeDAO, a decentralized  collective of core contributors, backers, GnosisDAO, users and ecosystem contributors i.e. Safe Guardians.',
-  items: [
-    {
-      title: 'Forum',
-      caption: 'Be a part of community',
-      link: {
-        href: '#',
-      },
-    },
-    {
-      title: (
-        <>
-          Latest
+  {
+    caption: 'Security',
+    title: (
+      <>
+        Our contracts are
+        <br />
+        <span className={css.primaryColor}>
+          the most
           <br />
-          Proposals
-        </>
-      ),
-      caption: 'Follow DAO decisions',
-      link: {
-        href: '#',
-      },
+          battle-tested
+        </span>
+      </>
+    ),
+    text: 'The SafeCORE smart contracts have passed the highest possible security standard in the industry: Formal Verification.',
+    link: {
+      title: 'Read report',
+      href: '#',
     },
-    {
-      title: (
-        <>
-          Safe
-          <br />
-          Guardians
-        </>
-      ),
-      caption: 'Shape our future',
-      link: {
-        href: '#',
-      },
-    },
-  ],
-}
-
-export const ContactContent = {
-  title: 'Want ot reach the core team members?',
-  text: '',
-  link: {
-    title: 'Contact us',
-    href: '#',
+    component: Security,
   },
-}
-
-export const WalletDownloadContent = {
-  title: 'Use Safe {WALLET} anywhere',
-  text: 'Access your assets anywhere without compromising on security on our flagship interfaces built on Safe {Core}.',
-}
-
-export const NetworksContent = {
-  title: 'Supported Networks',
-  text: 'And more networks, including testnets.',
-  items: [
-    {
-      icon: <MainnetIcon />,
+  {
+    caption: 'Governance',
+    title: (
+      <>
+        SafeDAO <span className={css.primaryColor}>governs</span> the future of <i>Safe</i>
+      </>
+    ),
+    text: 'The Safe is governed by SafeDAO, a decentralized  collective of core contributors, backers, GnosisDAO, users and ecosystem contributors i.e. Safe Guardians.',
+    items: [
+      {
+        title: 'Forum',
+        caption: 'Be a part of community',
+        link: {
+          href: '#',
+        },
+      },
+      {
+        title: (
+          <>
+            Latest
+            <br />
+            Proposals
+          </>
+        ),
+        caption: 'Follow DAO decisions',
+        link: {
+          href: '#',
+        },
+      },
+      {
+        title: (
+          <>
+            Safe
+            <br />
+            Guardians
+          </>
+        ),
+        caption: 'Shape our future',
+        link: {
+          href: '#',
+        },
+      },
+    ],
+    component: Governance,
+  },
+  {
+    title: 'Want ot reach the core team members?',
+    text: '',
+    link: {
+      title: 'Contact us',
+      href: '#',
     },
-    {
-      icon: <BNBIcon />,
-    },
-    {
-      icon: <OptimismIcon />,
-    },
-    {
-      icon: <ArbitrumIcon />,
-    },
-    {
-      icon: <PolygonIcon />,
-    },
-    {
-      icon: <AvalancheIcon />,
-    },
-    {
-      icon: <GnosisChainIcon />,
-    },
-    {
-      icon: <AuroraIcon />,
-    },
-  ],
-}
+    component: Contact,
+  },
+  {
+    title: 'Use Safe {WALLET} anywhere',
+    text: 'Access your assets anywhere without compromising on security on our flagship interfaces built on Safe {Core}.',
+    component: WalletDownload,
+  },
+]
