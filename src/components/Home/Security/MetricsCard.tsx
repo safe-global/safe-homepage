@@ -1,5 +1,5 @@
 import { Box } from '@mui/material'
-import { createRef, useCallback, useEffect } from 'react'
+import { createRef, useCallback, useEffect, useRef } from 'react'
 import css from './styles.module.css'
 
 const MAX_DISTANCE = 600
@@ -17,7 +17,7 @@ export const MetricsCard = ({
   translateY: string
   className: string
 }) => {
-  const boxRef = createRef<HTMLDivElement>()
+  const boxRef = useRef<HTMLDivElement>()
 
   const tiltBox = useCallback(
     (event: MouseEvent) => {
@@ -25,7 +25,7 @@ export const MetricsCard = ({
         return
       }
 
-      const { top, bottom, left, right } = boxRef.current?.getBoundingClientRect()
+      const { top, bottom, left, right } = boxRef.current.getBoundingClientRect()
 
       const middleX = right - left / 2
       const middleY = bottom - top / 2
