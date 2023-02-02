@@ -1,5 +1,5 @@
 import { Box } from '@mui/material'
-import { createRef, useCallback, useEffect, useRef } from 'react'
+import { useCallback, useEffect, useRef } from 'react'
 import css from './styles.module.css'
 
 const MAX_DISTANCE = 600
