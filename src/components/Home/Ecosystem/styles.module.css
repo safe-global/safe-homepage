@@ -1,4 +1,22 @@
 .bg {
-    background: url("/images/ecosystem-bg.png") no-repeat top center;
+    background-image: url("/images/eco-layer-1.svg"),
+    url("/images/eco-layer-2.svg"),
+    url("/images/eco-layer-3.svg");
+    background-repeat: no-repeat;
     background-size: cover;
+    background-position: top center, center 50%, center center;
+}
+
+.bg:hover .layer1 {
+    transform: translateX(-50px);
+}
+
+.bg:hover .layer2 {
+    transform: translateX(50px);
+}
+
+@media (min-width: 600px) {
+    .bg {
+        background-size: auto;
+    }
 }
