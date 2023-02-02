@@ -2,50 +2,49 @@ import { Box } from '@mui/material'
 import { useCallback, useEffect, useRef } from 'react'
 import css from './styles.module.css'
 
-const MAX_DISTANCE = 600
-
-const DAMP_FACTOR = 200
+const DEPTH_PARAMS = {
+  0: { factor: 0.05, zIndex: 10 },
+  1: { factor: 0.04, zIndex: 9 },
+  2: { factor: 0.03, zIndex: 8 },
+  3: { factor: 0.02, zIndex: 7 },
+  4: { factor: 0.01, zIndex: 6 },
+}
 
 export const MetricsCard = ({
   children,
   translateX,
   translateY,
+  depth,
   className,
 }: {
   children: JSX.Element
   translateX: string
-  translateY: string
+  translateY: number
   className: string
+  depth: 0 | 1 | 2 | 3 | 4
 }) => {
   const boxRef = useRef<HTMLDivElement>()
 
-  const tiltBox = useCallback(
+  const parallax = useCallback(
     (event: MouseEvent) => {
       if (!boxRef.current) {
         return
       }
+      const centerY = window.innerHeight / 2
+      const mouseY = event.clientY
 
-      const { top, bottom, left, right } = boxRef.current.getBoundingClientRect()
+      const diffY = (mouseY - centerY) * DEPTH_PARAMS[depth].factor
 
-      const middleX = right - left / 2
-      const middleY = bottom - top / 2
+      console.log(diffY)
 
-      const clientX = event.clientX
-      const clientY = event.clientY
-
-      const offsetX = Math.min(MAX_DISTANCE, Math.max(-MAX_DISTANCE, clientX - middleX)) / DAMP_FACTOR
-      const offsetY = Math.min(MAX_DISTANCE, Math.max(-MAX_DISTANCE, middleY - clientY)) / DAMP_FACTOR
-
-      boxRef.current.style.transform = `translateX(${translateX}) translateY(${translateY})perspective(1000px) rotateY(${
-        offsetX * 5
-      }deg) rotateX(${offsetY * 5}deg) scale3d(1, 1, 1)`
+      boxRef.current.style.transform = `translateX(${translateX}) translateY(${translateY + diffY}px)`
     },
-    [boxRef, translateX, translateY],
+    [depth, translateX, translateY],
   )
 
   useEffect(() => {
-    window.addEventListener('mousemove', tiltBox)
-  }, [tiltBox])
+    window.addEventListener('mousemove', parallax)
+  }, [parallax])
 
   return (
     <Box ref={boxRef} className={css.metricsCard + ' ' + className}>
