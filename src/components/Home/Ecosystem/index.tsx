@@ -1,4 +1,4 @@
-import { Grid, Typography, Button, Container, Box } from '@mui/material'
+import { Grid, Typography, Container, Box } from '@mui/material'
 import type { ReactElement } from 'react'
 
 import css from './styles.module.css'
