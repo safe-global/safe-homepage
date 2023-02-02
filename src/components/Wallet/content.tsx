@@ -17,17 +17,17 @@ export const YourKeysContent: UspBlockProps = {
   title: 'Your keys. Your coins.',
   items: [
     {
-      icon: ShieldIcon,
+      icon: <ShieldIcon />,
       title: 'Battle Tested Security',
       text: 'Top notch security and custom access control for you and for your users.',
     },
     {
-      icon: CheckIcon,
+      icon: <CheckIcon />,
       title: 'Co-ownership',
       text: 'Multi-sig based trustless group ownership ownership and asset co-ordination.',
     },
     {
-      icon: SettingsIcon,
+      icon: <SettingsIcon />,
       title: 'Self-custody',
       text: 'We never own any of the assets stored in user accounts. We never will.',
     },
@@ -98,9 +98,12 @@ export const HeroContent: HeroSectionProps = {
   },
 }
 
-export const SelfCustodyContent: UspBlockProps = {
-  width: 3,
+export type ColumnWidths = 3 | 4
+
+export const SelfCustodyContent = {
+  width: 3 as ColumnWidths,
   title: 'Empowering self-custody',
+  text: '',
   items: [
     {
       title: 'Hardware support',
@@ -121,12 +124,12 @@ export const SelfCustodyContent: UspBlockProps = {
     {
       title: 'Build with SDK',
       text: 'Our personal education and conference budgets will help you grow professionally!',
-      comingSoon: true,
+      caption: 'Coming soon',
     },
     {
       title: 'Relay easily',
       text: 'You can use your Friday afternoons for research or a side project in our ecosystem!',
-      comingSoon: true,
+      caption: 'Coming soon',
     },
     {
       title: 'Dapp support',

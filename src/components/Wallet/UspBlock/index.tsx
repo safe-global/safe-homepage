@@ -1,37 +1,32 @@
-import React, { FC, ReactNode } from 'react'
+import React from 'react'
 import { Chip, Container, Divider, Grid, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
+import { BaseBlock } from '@/components/Home/types'
+import { ColumnWidths } from '@/components/Wallet/content'
 
-type GridItemProps = {
-  icon?: FC
-  title: string
-  text: ReactNode
-  comingSoon?: boolean
-}
-
-const GridItem = ({ icon: Icon, title, text, comingSoon, width = 4 }: GridItemProps & { width: 3 | 4 }) => (
+const GridItem = ({ icon, title, text, caption, width = 4 }: BaseBlock & { width: ColumnWidths }) => (
   <Grid
     item
     xs={12}
     md={width}
-    className={`${css.gridItems} ${width === 3 ? css.fourCols : css.threeCols}`}
+    className={css.gridItems}
     display="flex"
     flexDirection="column"
     justifyContent="space-between"
   >
     <div>
-      {Icon ? <Icon /> : null}
+      {icon}
       <Typography variant="h4" mt={3} mb={1}>
         {title}
       </Typography>
       <Typography color="primary.light">{text}</Typography>
     </div>
-    {comingSoon ? (
+    {caption ? (
       <Chip
         label={
           <Typography variant="caption" color="primary.main">
-            Coming soon
+            {caption}
           </Typography>
         }
         className={css.comingSoonChip}
@@ -42,9 +37,9 @@ const GridItem = ({ icon: Icon, title, text, comingSoon, width = 4 }: GridItemPr
 )
 
 export type UspBlockProps = {
-  width: 3 | 4
+  width: ColumnWidths
   title: string
-  items: GridItemProps[]
+  items: BaseBlock[]
 }
 
 const UspBlock = ({ width, title, items }: UspBlockProps) => (
@@ -55,8 +50,8 @@ const UspBlock = ({ width, title, items }: UspBlockProps) => (
         {title}
       </Typography>
       <Grid container className={css.roundCorners}>
-        {items.map((item) => (
-          <GridItem key={item.title.toLowerCase()} width={width} {...item} />
+        {items.map((item, index) => (
+          <GridItem key={index} width={width} {...item} />
         ))}
       </Grid>
     </Grid>
