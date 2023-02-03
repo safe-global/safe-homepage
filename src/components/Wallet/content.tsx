@@ -156,7 +156,6 @@ const convenienceContentSteps: StepsType = [
   },
   {
     label: 'Hardware wallet support',
-    state: 'disabled',
   },
 ]
 

@@ -1,13 +1,10 @@
 .icon {
   height: 16px;
   width: 16px;
+  color: var(--mui-palette-primary-light);
 }
 
-.stepper :global .Mui-disabled {
-  color: #A1A3A7;
-}
-
-.active {
+.iconActive {
   color: var(--mui-palette-primary-main);
 }
 
@@ -24,16 +21,12 @@
   border-left: 2px solid var(--mui-palette-primary-main);
 }
 
-.description {
-  margin-top: 18px;
-}
-
 .activeBorder {
-  border-left: 2px dashed #A1A3A7;
+  border-left: 2px dashed var(--mui-palette-primary-light);
 }
 
 .stepper :global .Mui-disabled .MuiStepConnector-line {
   margin-top: 2px;
-  border-left: 2px dashed #A1A3A7;
+  border-left: 2px dashed var(--mui-palette-primary-light);
   height: 24px;
 }
