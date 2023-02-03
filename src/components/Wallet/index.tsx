@@ -2,6 +2,7 @@ import UspBlock from '@/components/Wallet/UspBlock'
 import {
   BatchTransactionsContent,
   CoManageContent,
+  ConvenienceContent,
   HeroContent,
   OwnershipContent,
   SelfCustodyContent,
@@ -22,6 +23,7 @@ export const Wallet = () => (
     <ImageText {...BatchTransactionsContent} />
     <ImageText {...SignerTypesContent} />
     <UspBlock {...SelfCustodyContent} />
+    <ImageText {...ConvenienceContent} />
     <WalletDownload {...WalletDownloadContent} />
   </>
 )

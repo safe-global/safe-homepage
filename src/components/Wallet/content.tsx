@@ -9,7 +9,9 @@ import CoManageImage from '@/public/images/Wallet/co-manage.png'
 import OwnershipImage from '@/public/images/Wallet/ownership.png'
 import BatchTransactionsImage from '@/public/images/Wallet/batch-transactions.png'
 import SignerTypesImage from '@/public/images/Wallet/signer-types.png'
+import PocketMultisigImage from '@/public/images/Wallet/pocket-multisig.png'
 import ClientAppsImage from '@/public/images/Wallet/clients.png'
+import Stepper, { StepsType } from '@/components/Wallet/Stepper'
 import css from '@/components/common/styles.module.css'
 
 export const YourKeysContent: UspBlockProps = {
@@ -140,6 +142,32 @@ export const SelfCustodyContent = {
       text: 'Flexible working schedules and hybrid working policies have been a part of our culture for a long time.',
     },
   ],
+}
+
+const convenienceContentSteps: StepsType = [
+  {
+    label: 'Create a new signer account',
+    state: 'completed',
+  },
+  {
+    label: 'Allow push notifications',
+    description: 'Track your assets and transactions on mobile. Stay informed on-the-go.',
+    state: 'active',
+  },
+  {
+    label: 'Hardware wallet support',
+    state: 'disabled',
+  },
+]
+
+export const ConvenienceContent: ImageTextProps = {
+  variant: 'text-image',
+  image: <Image src={PocketMultisigImage} alt="Safe mobile app" />,
+  textBlock: {
+    title: <span>Convenience of multisig in your pocket</span>,
+    text: 'Track your assets and transactions on mobile. Stay informed on-the-go.',
+    subBlock: <Stepper steps={convenienceContentSteps} />,
+  },
 }
 
 export const WalletDownloadContent = {
