@@ -34,7 +34,7 @@ const ImageText = ({ image, textBlock, variant }: ImageTextProps): ReactElement 
         <Grid item md={5} display="flex" flexDirection="column" justifyContent="center" gap={{ xs: 3, md: 4 }}>
           <Typography variant="h2">{title}</Typography>
           <Typography>{text}</Typography>
-          {subBlock ? subBlock : null}
+          {subBlock}
           {buttons ? (
             <Box display="flex" gap={3}>
               {buttons.map((button) => {

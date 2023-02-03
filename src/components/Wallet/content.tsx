@@ -11,7 +11,7 @@ import BatchTransactionsImage from '@/public/images/Wallet/batch-transactions.pn
 import SignerTypesImage from '@/public/images/Wallet/signer-types.png'
 import PocketMultisigImage from '@/public/images/Wallet/pocket-multisig.png'
 import ClientAppsImage from '@/public/images/Wallet/clients.png'
-import Stepper, { StepsType } from '@/components/Wallet/Stepper'
+import Stepper, { StepState, StepsType } from '@/components/Wallet/Stepper'
 import css from '@/components/common/styles.module.css'
 
 export const YourKeysContent: UspBlockProps = {
@@ -147,12 +147,12 @@ export const SelfCustodyContent = {
 const convenienceContentSteps: StepsType = [
   {
     label: 'Create a new signer account',
-    state: 'completed',
+    state: StepState.COMPLETED,
   },
   {
     label: 'Allow push notifications',
     description: 'Track your assets and transactions on mobile. Stay informed on-the-go.',
-    state: 'active',
+    state: StepState.ACTIVE,
   },
   {
     label: 'Hardware wallet support',
