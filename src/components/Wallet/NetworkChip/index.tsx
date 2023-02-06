@@ -2,8 +2,8 @@ import { Box, Typography } from '@mui/material'
 import css from './styles.module.css'
 
 export enum TextColor {
-  LIGHT = 'white',
-  DARK = 'black',
+  LIGHT,
+  DARK,
 }
 
 export type NetworkChipProps = {

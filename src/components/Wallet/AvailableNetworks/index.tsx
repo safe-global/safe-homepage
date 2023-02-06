@@ -13,7 +13,7 @@ const AvailableNetworks = ({ networks }: AvailableNetworksProps) => (
     <Typography variant="h2" mb={5} align="center">
       Available on 10+ networks
     </Typography>
-    <Box className={css.networksWrapper}>
+    <div className={css.networksWrapper}>
       <div className={css.gradientBase} />
       {networks.map((networksRow, index) => (
         <Box key={index} display="flex" gap="8px" overflow="hidden">
@@ -23,7 +23,7 @@ const AvailableNetworks = ({ networks }: AvailableNetworksProps) => (
         </Box>
       ))}
       <div className={clsx(css.gradientBase, css.gradientFlipped)} />
-    </Box>
+    </div>
     <Typography className={css.secondaryText} variant="body1">
       And more networks, including testnets.
     </Typography>
