@@ -1,5 +1,6 @@
 import UspBlock from '@/components/Wallet/UspBlock'
 import {
+  AvailableNetworksContent,
   BatchTransactionsContent,
   CoManageContent,
   ConvenienceContent,
@@ -13,6 +14,7 @@ import {
 import ImageText from '@/components/Wallet/ImageText'
 import HeroSection from '@/components/Wallet/Hero'
 import WalletDownload from '@/components/common/WalletDownload'
+import AvailableNetworks from '@/components/Wallet/AvailableNetworks'
 
 export const Wallet = () => (
   <>
@@ -22,6 +24,7 @@ export const Wallet = () => (
     <ImageText {...OwnershipContent} />
     <ImageText {...BatchTransactionsContent} />
     <ImageText {...SignerTypesContent} />
+    <AvailableNetworks {...AvailableNetworksContent} />
     <UspBlock {...SelfCustodyContent} />
     <ImageText {...ConvenienceContent} />
     <WalletDownload {...WalletDownloadContent} />

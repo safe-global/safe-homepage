@@ -2,6 +2,14 @@ import Image from 'next/image'
 import ShieldIcon from '@/public/images/Wallet/shield.svg'
 import CheckIcon from '@/public/images/Wallet/check.svg'
 import SettingsIcon from '@/public/images/Wallet/settings.svg'
+import ArbitrumIcon from '@/public/images/chainsLogos/ArbitrumLogo.png'
+import AuroraIcon from '@/public/images/chainsLogos/AuroraLogo.png'
+import AvalancheIcon from '@/public/images/chainsLogos/AvalancheLogo.png'
+import BNBIcon from '@/public/images/chainsLogos/BNBLogo.png'
+import EthereumIcon from '@/public/images/chainsLogos/EthereumLogo.png'
+import GnosisChainIcon from '@/public/images/chainsLogos/GnosisChainLogo.png'
+import OptimismIcon from '@/public/images/chainsLogos/OptimismLogo.png'
+import PolygonIcon from '@/public/images/chainsLogos/PolygonLogo.png'
 import type { UspBlockProps } from '@/components/Wallet/UspBlock'
 import type { ImageTextProps } from '@/components/Wallet/ImageText'
 import type { HeroSectionProps } from '@/components/Wallet/Hero'
@@ -13,6 +21,8 @@ import PocketMultisigImage from '@/public/images/Wallet/pocket-multisig.png'
 import ClientAppsImage from '@/public/images/Wallet/clients.png'
 import Stepper, { StepState, StepsType } from '@/components/Wallet/Stepper'
 import css from '@/components/common/styles.module.css'
+import { AvailableNetworksProps } from '@/components/Wallet/AvailableNetworks'
+import { TextColor } from '@/components/Wallet/NetworkChip'
 
 export const YourKeysContent: UspBlockProps = {
   width: 4,
@@ -98,6 +108,90 @@ export const HeroContent: HeroSectionProps = {
     title: 'The most secure way to own assets',
     button: { text: 'Launch wallet', href: '#' },
   },
+}
+
+export const AvailableNetworksContent: AvailableNetworksProps = {
+  networks: [
+    [
+      {
+        name: 'Ethereum Mainnet',
+        textColor: TextColor.DARK,
+        icon: <Image src={EthereumIcon} alt="Ethereum logo" />,
+        chainColor: '#E8E7E6',
+      },
+      {
+        name: 'BNB Smart Chain',
+        textColor: TextColor.DARK,
+        icon: <Image src={BNBIcon} alt="BNB Chain logo" />,
+        chainColor: '#F8D12F',
+      },
+      {
+        name: 'Optimism',
+        icon: <Image src={OptimismIcon} alt="Optimism logo" />,
+        chainColor: '#F01A37',
+      },
+      {
+        name: 'Arbitrum',
+        icon: <Image src={ArbitrumIcon} alt="Arbitrum logo" />,
+        chainColor: '#28A0F0',
+      },
+      {
+        name: 'Polygon',
+        icon: <Image src={PolygonIcon} alt="Polygon logo" />,
+        chainColor: '#8B50ED',
+      },
+      {
+        name: 'Avalanche',
+        icon: <Image src={AvalancheIcon} alt="Avalanche logo" />,
+        chainColor: '#000000',
+      },
+      {
+        name: 'Gnosis Chain',
+        icon: <Image src={GnosisChainIcon} alt="Gnosis Chain logo" />,
+        chainColor: '#48A8A6',
+      },
+    ],
+    [
+      {
+        name: 'Avalanche',
+        icon: <Image src={AvalancheIcon} alt="Avalanche logo" />,
+        chainColor: '#000000',
+      },
+      {
+        name: 'Polygon',
+        icon: <Image src={PolygonIcon} alt="Polygon logo" />,
+        chainColor: '#8B50ED',
+      },
+      {
+        name: 'Gnosis Chain',
+        icon: <Image src={GnosisChainIcon} alt="Gnosis Chain logo" />,
+        chainColor: '#48A8A6',
+      },
+      {
+        name: 'Aurora',
+        textColor: TextColor.DARK,
+        icon: <Image src={AuroraIcon} alt="Aurora logo" />,
+        chainColor: '#48A8A6',
+      },
+      {
+        name: 'Ethereum Mainnet',
+        textColor: TextColor.DARK,
+        icon: <Image src={EthereumIcon} alt="Ethereum logo" />,
+        chainColor: '#E8E7E6',
+      },
+      {
+        name: 'Optimism',
+        icon: <Image src={OptimismIcon} alt="Optimism logo" />,
+        chainColor: '#F01A37',
+      },
+      {
+        name: 'BNB Smart Chain',
+        textColor: TextColor.DARK,
+        icon: <Image src={BNBIcon} alt="BNB Chain logo" />,
+        chainColor: '#F8D12F',
+      },
+    ],
+  ],
 }
 
 export type ColumnWidths = 3 | 4

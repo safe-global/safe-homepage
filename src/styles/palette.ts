@@ -3,6 +3,7 @@ export const palette = {
     primary: '#FFFFFF',
     secondary: '#636669',
     disabled: '#636669',
+    dark: '#121312',
   },
   primary: {
     dark: '#0cb259',
