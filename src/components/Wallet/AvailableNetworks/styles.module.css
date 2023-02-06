@@ -11,7 +11,7 @@
   top: 0;
   bottom: 0;
   left: 0;
-  background: linear-gradient(270deg, rgba(18, 19, 18, 0) 0%, #121312 100%);
+  background: linear-gradient(270deg, rgba(18, 19, 18, 0) 0%, var(--mui-palette-background-default) 100%);
 }
 
 .gradientFlipped {
