@@ -1,5 +1,7 @@
 import NetworkChip, { NetworkChipProps } from '@/components/Wallet/NetworkChip'
 import { Box, Container, Typography } from '@mui/material'
+import clsx from 'clsx'
+import css from './styles.module.css'
 import layoutCss from '@/components/common/styles.module.css'
 
 export type AvailableNetworksProps = {
@@ -9,9 +11,10 @@ export type AvailableNetworksProps = {
 const AvailableNetworks = ({ networks }: AvailableNetworksProps) => (
   <Container className={layoutCss.container}>
     <Typography variant="h2" mb={5} align="center">
-      AvailableNetworks
+      Available on 10+ networks
     </Typography>
-    <Box display="flex" flexDirection="column" gap="24px">
+    <Box className={css.networksWrapper}>
+      <div className={css.gradientBase} />
       {networks.map((networksRow, index) => (
         <Box key={index} display="flex" gap="8px" overflow="hidden">
           {networksRow.map(({ name, textColor, icon, chainColor }) => (
@@ -19,8 +22,9 @@ const AvailableNetworks = ({ networks }: AvailableNetworksProps) => (
           ))}
         </Box>
       ))}
+      <div className={clsx(css.gradientBase, css.gradientFlipped)} />
     </Box>
-    <Typography mt="40px" variant="body1" color="primary.light" align="center">
+    <Typography className={css.secondaryText} variant="body1">
       And more networks, including testnets.
     </Typography>
   </Container>

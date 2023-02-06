@@ -1,15 +1,37 @@
-.icon img {
-  display: flex;
-  align-items: center;
-  height: 40px;
-  width: 40px;
-}
-
 .wrapper {
-  padding: 8px 12px 8px 8px;
+  padding: 4px 6px 4px 4px;
   border-radius: 100px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   flex-shrink: 0;
+}
+
+.icon img {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+}
+
+.name {
+  font-size: 9px;
+  line-height: 12px;
+}
+
+@media (min-width: 600px) {
+  .icon img {
+    height: 40px;
+    width: 40px;
+  }
+
+  .wrapper {
+    padding: 8px 12px 8px 8px;
+    gap: 8px;
+  }
+  
+  .name {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }

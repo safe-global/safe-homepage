@@ -16,7 +16,11 @@ export type NetworkChipProps = {
 const NetworkChip = ({ name, icon, textColor = TextColor.LIGHT, chainColor }: NetworkChipProps) => (
   <Box className={css.wrapper} sx={{ backgroundColor: chainColor }}>
     <div className={css.icon}>{icon}</div>
-    <Typography variant="body1" color={`${textColor === TextColor.LIGHT ? 'text.primary' : 'text.dark'}`}>
+    <Typography
+      className={css.name}
+      variant="body1"
+      color={`${textColor === TextColor.LIGHT ? 'text.primary' : 'text.dark'}`}
+    >
       {name}
     </Typography>
   </Box>
