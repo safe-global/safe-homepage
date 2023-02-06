@@ -1,0 +1,42 @@
+.bg {
+  background: url('/images/careers-bg.svg') no-repeat center -90px;
+}
+
+.container {
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 82px 0 202px;
+  margin-bottom: 250px;
+}
+
+/* TODO: Use h1 from theme when implemented
+https://github.com/safe-global/safe-homepage/issues/11 */
+.title {
+  font-size: 64px;
+  line-height: 64px;
+  text-align: center;
+  padding: 0;
+}
+
+.subtitle {
+  text-align: center;
+  padding: 0 24px;
+}
+
+@media (min-width: 600px) {
+  .container {
+    gap: 32px;
+    margin-bottom: 200px;
+  }
+
+  .title {
+    font-size: 80px;
+    line-height: 88px;
+    padding: 0 42px;
+  }
+
+  .subtitle {
+    padding: 0 292px;
+  }
+}
