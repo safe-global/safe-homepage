@@ -15,10 +15,12 @@
   padding: 24px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   align-items: flex-start;
   height: 100%;
   position: relative;
   transition: 0.3s;
+  min-height: 272px;
 }
 
 .card:hover {
@@ -37,7 +39,7 @@
 
 .location {
   display: flex;
-  margin-bottom: 102px;
+  margin-bottom: auto;
 }
 
 .position {
@@ -65,10 +67,6 @@
 }
 
 @media (min-width: 600px) {
-  .location {
-    margin-bottom: 57px;
-  }
-
   .position {
     margin-bottom: 23px;
   }
