@@ -7,3 +7,4 @@ import type { getStaticProps } from '@/pages'
 export const Home = (props: InferGetStaticPropsType<typeof getStaticProps>): ReactElement => {
   return <PageContent content={homeContent} {...props} />
 }
+
