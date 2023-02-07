@@ -1,11 +1,10 @@
 import React from 'react'
-import { Chip, Container, Divider, Grid, Typography } from '@mui/material'
+import { Chip, Container, Divider, Grid, type GridProps, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
-import type { ColumnWidths } from '@/components/Wallet/content'
 
-const GridItem = ({ icon, title, text, caption, width = 4 }: BaseBlock & { width: ColumnWidths }) => (
+const GridItem = ({ icon, title, text, caption, width = 4 }: BaseBlock & { width: GridProps['md'] }) => (
   <Grid
     item
     xs={12}
@@ -37,12 +36,12 @@ const GridItem = ({ icon, title, text, caption, width = 4 }: BaseBlock & { width
 )
 
 export type UspBlockProps = {
-  width: ColumnWidths
+  variant: '3-columns' | '4-columns'
   title: string
   items: BaseBlock[]
 }
 
-const UspBlock = ({ width, title, items }: UspBlockProps) => (
+const UspBlock = ({ variant, title, items }: UspBlockProps) => (
   <Container>
     <Divider />
     <Grid container className={layoutCss.containerShort} justifyContent="center">
@@ -51,7 +50,7 @@ const UspBlock = ({ width, title, items }: UspBlockProps) => (
       </Typography>
       <Grid container className={css.roundCorners}>
         {items.map((item, index) => (
-          <GridItem key={index} width={width} {...item} />
+          <GridItem key={index} width={variant === '3-columns' ? 4 : 3} {...item} />
         ))}
       </Grid>
     </Grid>
