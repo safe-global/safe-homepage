@@ -17,8 +17,8 @@ import BatchTransactionsImage from '@/public/images/Wallet/batch-transactions.pn
 import SignerTypesImage from '@/public/images/Wallet/signer-types.png'
 import PocketMultisigImage from '@/public/images/Wallet/pocket-multisig.png'
 import ClientAppsImage from '@/public/images/Wallet/clients.png'
+import SimulateTransactionsImage from '@/public/images/Wallet/simulate-transactions.png'
 import Stepper from '@/components/Wallet/Stepper'
-import css from '@/components/common/styles.module.css'
 import HeroSection from '@/components/Wallet/Hero'
 import UspBlock from '@/components/Wallet/UspBlock'
 import ImageText from '@/components/Wallet/ImageText'
@@ -79,7 +79,7 @@ export const walletContent = [
     textBlock: {
       title: (
         <>
-          <span className={css.primaryColor}>Co-manage</span> your assets
+          <b>Co-manage</b> your assets
         </>
       ),
       text: 'With multiple private keys, the same account can be jointly managed by several users enabling co-ownership that powers DAOs, groups and enterprises.',
@@ -93,7 +93,7 @@ export const walletContent = [
     textBlock: {
       title: (
         <>
-          Control and change account <span className={css.primaryColor}>ownership</span>
+          <b>Control and change account</b> ownership
         </>
       ),
       text: 'Add new signers, remove signers and replace ownership by simply changing the private key(s) that control the account.',
@@ -103,11 +103,22 @@ export const walletContent = [
   },
   {
     variant: 'text-image',
+    // TODO: image to be replaced when available from design
+    image: <Image src={OwnershipImage} alt="Transactions require confirmations from owners" />,
+    textBlock: {
+      title: 'Built-in App Store',
+      text: 'Use the best dapps in web3 right from inside your Safe WALLET.',
+      buttons: [{ text: 'Get started', href: '#', variant: 'link' }],
+    },
+    component: ImageText,
+  },
+  {
+    variant: 'image-text',
     image: <Image src={BatchTransactionsImage} alt="Batching transactions" />,
     textBlock: {
       title: (
         <>
-          Save on gas by batching <span className={css.primaryColor}>multiple transactions</span> in a few clicks
+          Save on gas by batching <b>multiple transactions</b> in a few clicks
         </>
       ),
       text: 'Easily batch transactions you want to make together to save on gas.',
@@ -116,15 +127,29 @@ export const walletContent = [
     component: ImageText,
   },
   {
-    variant: 'image-text',
+    variant: 'text-image',
     image: <Image src={SignerTypesImage} alt="Different wallet types" />,
     textBlock: {
       title: (
         <>
-          Use <span className={css.primaryColor}>any type of signer</span> to control your account
+          Use <b>any type of signer</b> to control your account
         </>
       ),
       text: 'From hardware wallets like ledger, tresor, to metamask type externally owned accounts, use all of these as signers on your Safe WALLET.',
+      buttons: [{ text: 'Get started', href: '#', variant: 'link' }],
+    },
+    component: ImageText,
+  },
+  {
+    variant: 'image-text',
+    image: <Image src={SimulateTransactionsImage} alt="Simulate transactions" />,
+    textBlock: {
+      title: (
+        <>
+          <b>Simulate transactions</b> before they happen
+        </>
+      ),
+      text: 'Simulate your transactions before sending them through, right from the Safe&apos;s UI. Get instant prompts and full analysis of your transaction&apos;s success or failure with a simulation report on Tenderly.',
       buttons: [{ text: 'Get started', href: '#', variant: 'link' }],
     },
     component: ImageText,
