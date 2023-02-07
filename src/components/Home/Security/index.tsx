@@ -13,7 +13,13 @@ const Security = ({ title, text, caption, link }: BaseBlock): ReactElement => {
   return (
     <Container disableGutters>
       <Grid container className={layoutCss.container} spacing="30px">
-        <Grid item md={6}>
+        <Grid
+          item
+          sx={{
+            minHeight: '420px',
+          }}
+          md={6}
+        >
           <MetricsCard className={css.card0} translateY={280} translateX={94} depth={1}>
             <>
               <Typography className={css.cardHeader} color="primary.light">
@@ -34,7 +40,7 @@ const Security = ({ title, text, caption, link }: BaseBlock): ReactElement => {
               </Typography>
             </>
           </MetricsCard>
-          <MetricsCard className={css.card2} translateY={216} translateX={340} depth={0}>
+          <MetricsCard className={css.card2} translateY={232} translateX={340} depth={0}>
             <Typography mt={2} variant="h4" fontWeight={500}>
               G0 Group
             </Typography>

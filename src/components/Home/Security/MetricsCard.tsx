@@ -30,8 +30,11 @@ export const MetricsCard = ({
       if (!boxRef.current) {
         return
       }
-      const centerY = window.innerHeight / 2
-      const centerX = window.innerWidth / 2
+
+      const { top, bottom, left, right } = boxRef.current.getBoundingClientRect()
+
+      const centerY = top + (bottom - top) / 2
+      const centerX = left + (right - left) / 2
       const mouseY = event.clientY
       const mouseX = event.clientX
 
