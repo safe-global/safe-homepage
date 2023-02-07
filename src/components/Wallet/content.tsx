@@ -10,19 +10,14 @@ import EthereumIcon from '@/public/images/chainsLogos/EthereumLogo.png'
 import GnosisChainIcon from '@/public/images/chainsLogos/GnosisChainLogo.png'
 import OptimismIcon from '@/public/images/chainsLogos/OptimismLogo.png'
 import PolygonIcon from '@/public/images/chainsLogos/PolygonLogo.png'
-import type { UspBlockProps } from '@/components/Wallet/UspBlock'
-import type { ImageTextProps } from '@/components/Wallet/ImageText'
-import type { HeroSectionProps } from '@/components/Wallet/Hero'
-import type { BaseBlock } from '@/components/Home/types'
 import type { StepsType } from '@/components/Wallet/Stepper'
-import type { AvailableNetworksProps } from '@/components/Wallet/AvailableNetworks'
 import CoManageImage from '@/public/images/Wallet/co-manage.png'
 import OwnershipImage from '@/public/images/Wallet/ownership.png'
 import BatchTransactionsImage from '@/public/images/Wallet/batch-transactions.png'
 import SignerTypesImage from '@/public/images/Wallet/signer-types.png'
 import PocketMultisigImage from '@/public/images/Wallet/pocket-multisig.png'
 import ClientAppsImage from '@/public/images/Wallet/clients.png'
-import Stepper, { StepState } from '@/components/Wallet/Stepper'
+import Stepper from '@/components/Wallet/Stepper'
 import css from '@/components/common/styles.module.css'
 import HeroSection from '@/components/Wallet/Hero'
 import UspBlock from '@/components/Wallet/UspBlock'
@@ -35,30 +30,19 @@ export type ColumnWidths = 3 | 4
 const convenienceContentSteps: StepsType = [
   {
     label: 'Create a new signer account',
-    state: StepState.COMPLETED,
+    state: 'completed',
   },
   {
     label: 'Allow push notifications',
     description: 'Track your assets and transactions on mobile. Stay informed on-the-go.',
-    state: StepState.ACTIVE,
+    state: 'active',
   },
   {
     label: 'Hardware wallet support',
   },
 ]
 
-type WalletContentType = ((
-  | HeroSectionProps
-  | UspBlockProps
-  | ImageTextProps
-  | AvailableNetworksProps
-  | UspBlockProps
-  | BaseBlock
-) & {
-  component: any
-})[]
-
-export const walletContent: WalletContentType = [
+export const walletContent = [
   {
     image: <Image src={ClientAppsImage} alt="Web and mobile clients" />,
     textBlock: {
@@ -214,7 +198,7 @@ export const walletContent: WalletContentType = [
     variant: 'text-image',
     image: <Image src={PocketMultisigImage} alt="Safe mobile app" />,
     textBlock: {
-      title: <span>Convenience of multisig in your pocket</span>,
+      title: 'Convenience of multisig in your pocket',
       text: 'Track your assets and transactions on mobile. Stay informed on-the-go.',
       subBlock: <Stepper steps={convenienceContentSteps} />,
     },
