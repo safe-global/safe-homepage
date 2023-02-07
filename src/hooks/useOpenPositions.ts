@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+import useAsync from '@/hooks/useAsync'
+import type { AsyncResult } from '@/hooks/useAsync'
 
 const BREEZY_API_URL = 'https://safe-global.breezy.hr/json'
 
@@ -29,31 +30,10 @@ export type Position = {
   }
 }
 
-export const useOpenPositions = (): Position[] => {
-  const [positions, setPositions] = useState<Position[]>([])
-
-  useEffect(() => {
-    let isCurrent = true
-
-    const getOpenPositions = async () => {
-      try {
-        const data = await fetch(BREEZY_API_URL)
-        const jobs: Position[] = await data.json()
-
-        if (isCurrent) {
-          setPositions(jobs)
-        }
-      } catch (e) {
-        console.error(e)
-      }
-    }
-
-    getOpenPositions()
-
-    return () => {
-      isCurrent = false
-    }
+export const useOpenPositions = (): AsyncResult<Position[]> => {
+  return useAsync<Position[]>(() => {
+    return fetch(BREEZY_API_URL).then((res) => {
+      return res.json()
+    })
   }, [])
-
-  return positions
 }
