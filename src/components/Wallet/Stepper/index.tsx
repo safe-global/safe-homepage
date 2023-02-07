@@ -3,7 +3,7 @@ import CircleIcon from '@/public/images/Wallet/circle.svg'
 import css from './styles.module.css'
 import clsx from 'clsx'
 
-export enum StepState {
+enum StepState {
   ACTIVE = 'active',
   COMPLETED = 'completed',
 }
@@ -11,7 +11,7 @@ export enum StepState {
 export type StepsType = {
   label: string
   description?: string
-  state?: StepState
+  state?: 'active' | 'completed'
 }[]
 
 const CustomStepper = ({ steps }: { steps: StepsType }) => (
