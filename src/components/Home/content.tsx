@@ -23,7 +23,6 @@ import AvalancheIcon from '@/public/images/networks/avalanche.svg'
 import GnosisChainIcon from '@/public/images/networks/gnosischain.svg'
 import AuroraIcon from '@/public/images/networks/aurora.svg'
 
-import css from '@/components/common/styles.module.css'
 import Intro from '@/components/Home/Intro'
 import Community from '@/components/Home/Community'
 import TrustedBy from '@/components/Home/TrustedBy'
@@ -68,7 +67,7 @@ export const homeContent = [
   {
     title: (
       <>
-        Trusted by the best in <span className={css.primaryColor}>Web3</span>
+        Trusted by the best in <b>Web3</b>
       </>
     ),
     text: '',
@@ -181,7 +180,7 @@ export const homeContent = [
     title: (
       <>
         Safe {'{CORE} '}
-        <span className={css.primaryColor}>powers ecosystem projects</span>
+        <b>powers ecosystem projects</b>
         <br />
         in every corner of web3
       </>
@@ -195,11 +194,11 @@ export const homeContent = [
       <>
         Our contracts are
         <br />
-        <span className={css.primaryColor}>
+        <b>
           the most
           <br />
           battle-tested
-        </span>
+        </b>
       </>
     ),
     text: 'The SafeCORE smart contracts have passed the highest possible security standard in the industry: Formal Verification.',
@@ -213,7 +212,7 @@ export const homeContent = [
     caption: 'Governance',
     title: (
       <>
-        SafeDAO <span className={css.primaryColor}>governs</span> the future of <i>Safe</i>
+        SafeDAO <b>governs</b> the future of <i>Safe</i>
       </>
     ),
     text: 'The Safe is governed by SafeDAO, a decentralized  collective of core contributors, backers, GnosisDAO, users and ecosystem contributors i.e. Safe Guardians.',

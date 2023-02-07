@@ -1,0 +1,46 @@
+.networksWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gradientBase {
+  position: absolute;
+  width: 94px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(270deg, rgba(18, 19, 18, 0) 0%, var(--mui-palette-background-default) 100%);
+}
+
+.gradientFlipped {
+  left: auto;
+  right: 0;
+  width: 138px;
+  transform: scaleX(-1);
+}
+
+.secondaryText {
+  margin-top: 32px;
+  text-align: center;
+  color: var(--mui-palette-primary-light)
+}
+
+@media (min-width: 600px) {
+  .networksWrapper {
+    gap: 24px;
+  }
+
+  .gradientBase {
+    width: 337px;
+  }
+
+  .gradientFlipped {
+    width: 351px;
+  }
+
+  .secondaryText {
+    margin-top: 40px;
+  }
+}
