@@ -1,5 +1,15 @@
-import React from 'react'
+import type { ReactElement } from 'react'
 
-export const Careers = () => {
-  return <div>Careers</div>
+import { careersContent } from '@/components/Careers/content'
+import { useOpenPositions } from '@/hooks/useOpenPositions'
+
+export const Careers = (): ReactElement => {
+  const [positions = []] = useOpenPositions()
+  return (
+    <>
+      {careersContent.map(({ component: Component, ...rest }, index) => {
+        return <Component key={index} positions={positions} {...rest} />
+      })}
+    </>
+  )
 }
