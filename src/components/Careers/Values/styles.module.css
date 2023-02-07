@@ -43,7 +43,7 @@
   left: 100%;
 }
 
-.title span {
+.title b {
   color: var(--mui-palette-primary-main);
 }
 

@@ -14,7 +14,7 @@ export const careersContent = [
   {
     title: (
       <>
-        <span>Our</span> values
+        <b>Our</b> values
       </>
     ),
     items: [
