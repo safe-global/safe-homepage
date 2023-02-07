@@ -22,7 +22,6 @@ import ClientAppsImage from '@/public/images/Wallet/clients.png'
 import Stepper, { StepState, StepsType } from '@/components/Wallet/Stepper'
 import css from '@/components/common/styles.module.css'
 import { AvailableNetworksProps } from '@/components/Wallet/AvailableNetworks'
-import { TextColor } from '@/components/Wallet/NetworkChip'
 
 export const YourKeysContent: UspBlockProps = {
   width: 4,
@@ -110,96 +109,66 @@ export const HeroContent: HeroSectionProps = {
   },
 }
 
-enum ChainColor {
-  ARBITRUM = '#28A0F0',
-  AURORA = '#12FF80',
-  AVALANCHE = '#000000',
-  BNB_SMART_CHAIN = '#F8D12F',
-  ETHEREUM = '#E8E7E6',
-  GNOSIS_CHAIN = '#48A8A6',
-  OPTIMISM = '#F01A37',
-  POLYGON = '#8B50ED',
-}
-
-export const AvailableNetworksContent: AvailableNetworksProps = {
+export const AvailableNetworksContent: Omit<AvailableNetworksProps, 'chainsData'> = {
   networks: [
     [
       {
         name: 'Ethereum Mainnet',
-        textColor: TextColor.DARK,
         icon: <Image src={EthereumIcon} alt="Ethereum logo" />,
-        chainColor: ChainColor.ETHEREUM,
       },
       {
         name: 'BNB Smart Chain',
-        textColor: TextColor.DARK,
         icon: <Image src={BNBIcon} alt="BNB Chain logo" />,
-        chainColor: ChainColor.BNB_SMART_CHAIN,
       },
       {
         name: 'Optimism',
         icon: <Image src={OptimismIcon} alt="Optimism logo" />,
-        chainColor: ChainColor.OPTIMISM,
       },
       {
         name: 'Arbitrum',
         icon: <Image src={ArbitrumIcon} alt="Arbitrum logo" />,
-        chainColor: ChainColor.ARBITRUM,
       },
       {
         name: 'Polygon',
         icon: <Image src={PolygonIcon} alt="Polygon logo" />,
-        chainColor: ChainColor.POLYGON,
       },
       {
         name: 'Avalanche',
         icon: <Image src={AvalancheIcon} alt="Avalanche logo" />,
-        chainColor: ChainColor.AVALANCHE,
       },
       {
         name: 'Gnosis Chain',
         icon: <Image src={GnosisChainIcon} alt="Gnosis Chain logo" />,
-        chainColor: ChainColor.GNOSIS_CHAIN,
       },
     ],
     [
       {
         name: 'Avalanche',
         icon: <Image src={AvalancheIcon} alt="Avalanche logo" />,
-        chainColor: ChainColor.AVALANCHE,
       },
       {
         name: 'Polygon',
         icon: <Image src={PolygonIcon} alt="Polygon logo" />,
-        chainColor: ChainColor.POLYGON,
       },
       {
         name: 'Gnosis Chain',
         icon: <Image src={GnosisChainIcon} alt="Gnosis Chain logo" />,
-        chainColor: ChainColor.GNOSIS_CHAIN,
       },
       {
         name: 'Aurora',
-        textColor: TextColor.DARK,
         icon: <Image src={AuroraIcon} alt="Aurora logo" />,
-        chainColor: ChainColor.AURORA,
       },
       {
         name: 'Ethereum Mainnet',
-        textColor: TextColor.DARK,
         icon: <Image src={EthereumIcon} alt="Ethereum logo" />,
-        chainColor: ChainColor.ETHEREUM,
       },
       {
         name: 'Optimism',
         icon: <Image src={OptimismIcon} alt="Optimism logo" />,
-        chainColor: ChainColor.OPTIMISM,
       },
       {
         name: 'BNB Smart Chain',
-        textColor: TextColor.DARK,
         icon: <Image src={BNBIcon} alt="BNB Chain logo" />,
-        chainColor: ChainColor.BNB_SMART_CHAIN,
       },
     ],
   ],

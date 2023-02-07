@@ -30,4 +30,3 @@ export const Wallet = () => (
     <WalletDownload {...WalletDownloadContent} />
   </>
 )
-

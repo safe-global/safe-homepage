@@ -1,26 +1,16 @@
+import { ChainProps } from '@/hooks/useChainsData'
 import { Box, Typography } from '@mui/material'
 import css from './styles.module.css'
 
-export enum TextColor {
-  LIGHT,
-  DARK,
-}
-
 export type NetworkChipProps = {
   name: string
-  textColor?: TextColor
   icon: JSX.Element
-  chainColor: string
 }
 
-const NetworkChip = ({ name, icon, textColor = TextColor.LIGHT, chainColor }: NetworkChipProps) => (
-  <Box className={css.wrapper} sx={{ backgroundColor: chainColor }}>
+const NetworkChip = ({ name, icon, textColor, backgroundColor }: NetworkChipProps & Omit<ChainProps, 'chainName'>) => (
+  <Box className={css.wrapper} sx={{ backgroundColor }}>
     <div className={css.icon}>{icon}</div>
-    <Typography
-      className={css.name}
-      variant="body1"
-      color={`${textColor === TextColor.LIGHT ? 'text.primary' : 'text.dark'}`}
-    >
+    <Typography className={css.name} variant="body1" color={textColor}>
       {name}
     </Typography>
   </Box>
