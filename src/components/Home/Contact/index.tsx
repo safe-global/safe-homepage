@@ -1,6 +1,6 @@
 import { Button, Container, Divider, Grid, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
-import { BaseBlock } from '@/components/Home/types'
+import type { BaseBlock } from '@/components/Home/types'
 
 const Contact = ({ title, link }: BaseBlock) => {
   return (

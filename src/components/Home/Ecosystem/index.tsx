@@ -2,7 +2,7 @@ import { Grid, Typography, Container, Box } from '@mui/material'
 import type { ReactElement } from 'react'
 
 import css from './styles.module.css'
-import { BaseBlock } from '@/components/Home/types'
+import type { BaseBlock } from '@/components/Home/types'
 
 const Ecosystem = ({ title, text }: BaseBlock): ReactElement => {
   return (

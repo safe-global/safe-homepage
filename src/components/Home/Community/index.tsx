@@ -3,7 +3,7 @@ import type { ReactElement } from 'react'
 
 import css from './styles.module.css'
 import layoutCss from '@/components/common/styles.module.css'
-import { BaseBlock } from '@/components/Home/types'
+import type { BaseBlock } from '@/components/Home/types'
 
 const Community = ({ caption, title, text, items }: BaseBlock): ReactElement => {
   return (
