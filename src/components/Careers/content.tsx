@@ -1,4 +1,5 @@
 import { Intro } from './Intro'
+import { Positions } from './Positions'
 
 export const careersContent = [
   {
@@ -9,5 +10,9 @@ export const careersContent = [
       href: '#positions',
     },
     component: Intro,
+  },
+  {
+    title: 'Open positions',
+    component: Positions,
   },
 ]
