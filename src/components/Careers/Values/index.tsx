@@ -26,14 +26,14 @@ export const Values = ({
         </Grid>
         <Grid container item xs={12} gap={{ xs: '48px', md: 0 }}>
           {items.map(({ title, text, items }, _, arr) => (
-            <Grid item xs={12} md={12 / arr.length} className={css.card}>
+            <Grid item xs={12} md={12 / arr.length} className={css.card} key={title}>
               <Typography className={css.value}>{title}</Typography>
               <Typography variant="caption" className={css.desc}>
                 {text}
               </Typography>
               <List className={css.list}>
                 {items.map((text) => (
-                  <ListItem>
+                  <ListItem key={text}>
                     <ListItemIcon>
                       <ArrowIcon className={css.icon} />
                     </ListItemIcon>
