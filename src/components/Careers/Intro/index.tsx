@@ -30,7 +30,7 @@ export const Intro = ({
           {title}
         </Typography>
 
-        <Typography className={css.subtitle}>{text}</Typography>
+        <Typography className={css.text}>{text}</Typography>
 
         <Button variant="contained" size="large" LinkComponent={Link} href="#positions">
           View positions
