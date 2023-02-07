@@ -19,9 +19,10 @@ import BatchTransactionsImage from '@/public/images/Wallet/batch-transactions.pn
 import SignerTypesImage from '@/public/images/Wallet/signer-types.png'
 import PocketMultisigImage from '@/public/images/Wallet/pocket-multisig.png'
 import ClientAppsImage from '@/public/images/Wallet/clients.png'
-import Stepper, { StepState, StepsType } from '@/components/Wallet/Stepper'
+import type { StepsType } from '@/components/Wallet/Stepper'
+import Stepper, { StepState } from '@/components/Wallet/Stepper'
 import css from '@/components/common/styles.module.css'
-import { AvailableNetworksProps } from '@/components/Wallet/AvailableNetworks'
+import type { AvailableNetworksProps } from '@/components/Wallet/AvailableNetworks'
 
 export const YourKeysContent: UspBlockProps = {
   width: 4,

@@ -1,4 +1,4 @@
-import { ChainProps } from '@/hooks/useChainsData'
+import type { ChainProps } from '@/hooks/useChainsData'
 import { Box, Typography } from '@mui/material'
 import css from './styles.module.css'
 

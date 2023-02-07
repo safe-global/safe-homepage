@@ -1,4 +1,4 @@
-import { ReactElement } from 'react'
+import type { ReactElement } from 'react'
 import Image from 'next/image'
 import { Button, Container, Grid, Typography } from '@mui/material'
 import { IOS_LINK, GPLAY_LINK } from '@/config/constants'

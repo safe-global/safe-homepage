@@ -2,8 +2,8 @@ import React from 'react'
 import { Chip, Container, Divider, Grid, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
-import { BaseBlock } from '@/components/Home/types'
-import { ColumnWidths } from '@/components/Wallet/content'
+import type { BaseBlock } from '@/components/Home/types'
+import type { ColumnWidths } from '@/components/Wallet/content'
 
 const GridItem = ({ icon, title, text, caption, width = 4 }: BaseBlock & { width: ColumnWidths }) => (
   <Grid
