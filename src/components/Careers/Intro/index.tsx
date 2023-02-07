@@ -11,20 +11,28 @@ export const Intro = ({
   positions,
   title,
   text,
+  link,
 }: {
   positions: Position[]
   title: string
   text: string
+  link: {
+    title: string
+    href: string
+  }
 }): ReactElement => {
   return (
     <Container className={css.bg}>
       <Grid container className={css.container}>
-        <Chip
-          label={`${positions.length} open position${positions.length === 1 ? '' : 's'}`}
-          variant="outlined"
-          color="primary"
-          sx={({ typography }) => ({ ...typography.caption, color: 'primary' })}
-        />
+        <Grid item>
+          <Chip
+            label={`${positions.length} open position${positions.length === 1 ? '' : 's'}`}
+            variant="outlined"
+            color="primary"
+            className={css.chip}
+            sx={({ typography }) => typography.caption}
+          />
+        </Grid>
 
         <Typography variant="h1" className={css.title}>
           {title}
@@ -32,8 +40,8 @@ export const Intro = ({
 
         <Typography className={css.text}>{text}</Typography>
 
-        <Button variant="contained" size="large" LinkComponent={Link} href="#positions">
-          View positions
+        <Button variant="contained" size="large" LinkComponent={Link} href={link.href}>
+          {link.title}
         </Button>
       </Grid>
     </Container>
