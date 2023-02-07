@@ -19,14 +19,12 @@ export const Values = ({
         <Typography variant="h2" className={css.title}>
           {title}
         </Typography>
-        <Grid item>
-          <div className={css.tree}>
-            <hr className={css.rule} />
-          </div>
-        </Grid>
+        <div className={css.tree}>
+          <hr className={css.rule} />
+        </div>
         <Grid container item xs={12} gap={{ xs: '48px', md: 0 }}>
           {items.map(({ title, text, items }, _, arr) => (
-            <Grid item xs={12} md={12 / arr.length} className={css.card} key={title}>
+            <Grid item xs={12} md={Math.floor(12 / arr.length)} className={css.card} key={title}>
               <Typography className={css.value}>{title}</Typography>
               <Typography variant="caption" className={css.desc}>
                 {text}
