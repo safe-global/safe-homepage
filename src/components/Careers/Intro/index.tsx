@@ -3,27 +3,34 @@ import { Container } from '@mui/system'
 import Link from 'next/link'
 import type { ReactElement } from 'react'
 
+import type { Position } from '@/hooks/useOpenPositions'
+
 import css from './styles.module.css'
 
-export const Intro = ({ positions }: { positions: number }): ReactElement => {
+export const Intro = ({
+  positions,
+  title,
+  text,
+}: {
+  positions: Position[]
+  title: string
+  text: string
+}): ReactElement => {
   return (
     <Container className={css.bg}>
       <Grid container className={css.container}>
         <Chip
-          label={`${positions} open position${positions === 1 ? '' : 's'}`}
+          label={`${positions.length} open position${positions.length === 1 ? '' : 's'}`}
           variant="outlined"
           color="primary"
           sx={({ typography }) => ({ ...typography.caption, color: 'primary' })}
         />
 
         <Typography variant="h1" className={css.title}>
-          Impact the future of ownership
+          {title}
         </Typography>
 
-        <Typography className={css.subtitle}>
-          Our team is focused on a mission of unlocking ownership for the world. By building infrastructure that is
-          robust and usable, we aim to fix some of web3’s biggest challenges.
-        </Typography>
+        <Typography className={css.subtitle}>{text}</Typography>
 
         <Button variant="contained" size="large" LinkComponent={Link} href="#positions">
           View positions
