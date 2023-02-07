@@ -5,7 +5,7 @@ import ArrowIcon from '@/public/images/arrow-out-icon.svg'
 import css from './styles.module.css'
 import clsx from 'clsx'
 import layoutCss from '@/components/common/styles.module.css'
-import { BaseBlock } from '@/components/Home/types'
+import type { BaseBlock } from '@/components/Home/types'
 
 const Governance = ({ title, text, caption, items }: BaseBlock): ReactElement => {
   return (
