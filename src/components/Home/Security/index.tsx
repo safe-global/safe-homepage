@@ -14,7 +14,7 @@ const Security = ({ title, text, caption, link }: BaseBlock): ReactElement => {
     <Container disableGutters>
       <Grid container className={layoutCss.container} spacing="30px">
         <Grid item md={6}>
-          <MetricsCard className={css.card0} translateY={280} translateX="94px" depth={1}>
+          <MetricsCard className={css.card0} translateY={280} translateX={94} depth={1}>
             <>
               <Typography className={css.cardHeader} color="primary.light">
                 Total audits
@@ -24,7 +24,7 @@ const Security = ({ title, text, caption, link }: BaseBlock): ReactElement => {
               </Typography>
             </>
           </MetricsCard>
-          <MetricsCard className={css.card1} translateY={0} translateX="0px" depth={2}>
+          <MetricsCard className={css.card1} translateY={0} translateX={0} depth={2}>
             <>
               <Typography className={css.cardHeader} color="primary.light">
                 Avg. reward per bug in bug bounty
@@ -34,15 +34,15 @@ const Security = ({ title, text, caption, link }: BaseBlock): ReactElement => {
               </Typography>
             </>
           </MetricsCard>
-          <MetricsCard className={css.card2} translateY={216} translateX="340px" depth={0}>
+          <MetricsCard className={css.card2} translateY={216} translateX={340} depth={0}>
             <Typography mt={2} variant="h4" fontWeight={500}>
               G0 Group
             </Typography>
           </MetricsCard>
-          <MetricsCard className={css.card3} translateY={0} translateX="300px" depth={3}>
+          <MetricsCard className={css.card3} translateY={0} translateX={300} depth={3}>
             <GreenCheck />
           </MetricsCard>
-          <MetricsCard className={css.card4} translateY={56} translateX="156px" depth={4}>
+          <MetricsCard className={css.card4} translateY={56} translateX={156} depth={4}>
             <Image src={RuntimeVerificationImage} alt="Runtime verification" />
           </MetricsCard>
         </Grid>

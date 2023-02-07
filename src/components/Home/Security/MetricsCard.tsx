@@ -3,11 +3,11 @@ import { useCallback, useEffect, useRef } from 'react'
 import css from './styles.module.css'
 
 const DEPTH_PARAMS = {
-  0: { factor: 0.05, zIndex: 10 },
-  1: { factor: 0.04, zIndex: 9 },
-  2: { factor: 0.03, zIndex: 8 },
-  3: { factor: 0.02, zIndex: 7 },
-  4: { factor: 0.01, zIndex: 6 },
+  0: { factor: -0.05, zIndex: 10 },
+  1: { factor: -0.04, zIndex: 9 },
+  2: { factor: -0.03, zIndex: 8 },
+  3: { factor: -0.02, zIndex: 7 },
+  4: { factor: -0.01, zIndex: 6 },
 }
 
 export const MetricsCard = ({
@@ -18,7 +18,7 @@ export const MetricsCard = ({
   className,
 }: {
   children: JSX.Element
-  translateX: string
+  translateX: number
   translateY: number
   className: string
   depth: 0 | 1 | 2 | 3 | 4
@@ -31,13 +31,14 @@ export const MetricsCard = ({
         return
       }
       const centerY = window.innerHeight / 2
+      const centerX = window.innerWidth / 2
       const mouseY = event.clientY
+      const mouseX = event.clientX
 
       const diffY = (mouseY - centerY) * DEPTH_PARAMS[depth].factor
+      const diffX = (mouseX - centerX) * DEPTH_PARAMS[depth].factor
 
-      console.log(diffY)
-
-      boxRef.current.style.transform = `translateX(${translateX}) translateY(${translateY + diffY}px)`
+      boxRef.current.style.transform = `translateX(${translateX + diffX}px) translateY(${translateY + diffY}px)`
     },
     [depth, translateX, translateY],
   )
