@@ -68,7 +68,7 @@ export const walletContent: WalletContentType = [
     component: HeroSection,
   },
   {
-    width: 4,
+    variant: '3-columns',
     title: 'Your keys. Your coins.',
     items: [
       {
