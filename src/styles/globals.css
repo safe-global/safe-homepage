@@ -37,3 +37,8 @@ svg {
     overflow-y: hidden;
   }
 }
+
+b {
+  font-weight: normal;
+  color: var(--mui-palette-primary-main);
+}
