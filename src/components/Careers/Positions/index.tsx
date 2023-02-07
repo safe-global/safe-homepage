@@ -1,10 +1,10 @@
 import { ButtonBase, Grid, Typography } from '@mui/material'
 import { Container } from '@mui/system'
 
-import { Position } from '@/hooks/useOpenPositions'
 import PinIcon from '@/public/images/pin.svg'
 import ArrowIcon from '@/public/images/arrow-out-icon.svg'
 import AngleIcon from '@/public/images/angle-icon.svg'
+import type { Position } from '@/hooks/useOpenPositions'
 
 import css from './styles.module.css'
 
