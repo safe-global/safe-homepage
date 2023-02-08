@@ -31,7 +31,6 @@
 
 .title {
   margin-bottom: 10.5px;
-  text-align: center;
 }
 
 .link *::after {
@@ -51,6 +50,6 @@
 
 @media (min-width: 600px) {
   .title {
-    margin-bottom: 23px;
+    margin-bottom: 24px;
   }
 }
