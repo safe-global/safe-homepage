@@ -18,7 +18,7 @@ const SafeCoreWallet = ({ items }: BaseBlock): ReactElement => {
                   <Typography variant="caption" mb={3}>
                     {item.caption}
                   </Typography>
-                  {item.icon}
+                  <img {...item.image} />
                   <div className={css.tag}>{item.text}</div>
                   <Typography variant="h3" mb={5} mt={2}>
                     {item.title}
