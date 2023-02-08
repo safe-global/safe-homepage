@@ -17,7 +17,7 @@ export const ImageText = ({
   caption?: string
   title: string
   text?: string
-  image: DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>
+  image: DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement> & { alt: string }
 }): ReactElement => {
   return (
     <Container>
