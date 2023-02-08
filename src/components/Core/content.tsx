@@ -1,4 +1,5 @@
 import LinkedCardGrid from '@/components/Core/LinkedCardGrid'
+import TextGrid from '@/components/Core/TextGrid'
 
 export const coreContent = [
   {
@@ -30,5 +31,32 @@ export const coreContent = [
       },
     ],
     component: LinkedCardGrid,
+  },
+  {
+    textBlock: {
+      caption: 'Safe core protocol',
+      title: 'Unlock more from Safe with the Safe {Core} Protocol',
+      text: 'Tap into the ecosystem’s cutting-edge plug-ins or write your own custom logic to plug into the Safe core contracts.',
+      link: { text: 'Get started', href: '#' },
+    },
+    image: <img src="/images/Core/safe-core-protocol.png" alt="Safe core protocol" />,
+    grid: {
+      title: 'Benefits',
+      items: [
+        {
+          text: 'Improve UX of your product with account abstraction',
+        },
+        {
+          text: 'Customize access control to Safe accounts',
+        },
+        {
+          text: 'Build on battle tested  security',
+        },
+        {
+          text: 'Build any use case by extending the on-chain logic of core contracts',
+        },
+      ],
+    },
+    component: TextGrid,
   },
 ]
