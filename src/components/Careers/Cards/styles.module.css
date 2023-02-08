@@ -31,6 +31,7 @@
 
 .title {
   margin-bottom: 10.5px;
+  text-align: center;
 }
 
 .link *::after {

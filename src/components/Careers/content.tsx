@@ -1,5 +1,6 @@
 import { Intro } from './Intro'
 import { Values } from './Values'
+import { ImageText } from './ImageText'
 import { Cards } from './Cards'
 import { Positions } from './Positions'
 
@@ -78,6 +79,25 @@ export const careersContent = [
       },
     ],
     component: Cards,
+  },
+  {
+    caption: 'With contributors across the world, we have our main hubs in Europe and are expanding.',
+    title: 'Our locations',
+    image: {
+      src: '/images/hub-locations.png',
+      alt: 'International office locations',
+    },
+    component: ImageText,
+  },
+  {
+    variant: 'reverse',
+    title: 'Interview process',
+    text: 'We have a transparent and fast interview process.',
+    image: {
+      src: '/images/interview-process.svg',
+      alt: 'Interview process timeline',
+    },
+    component: ImageText,
   },
   {
     title: 'Open positions',
