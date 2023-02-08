@@ -67,6 +67,5 @@ export const careersContent = [
   {
     title: 'Open positions',
     component: Positions,
-    variant: 'image-text',
   },
 ]
