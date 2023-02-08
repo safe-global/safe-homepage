@@ -3,7 +3,7 @@ import { Container } from '@mui/system'
 
 import PinIcon from '@/public/images/pin.svg'
 import ArrowIcon from '@/public/images/arrow-out-icon.svg'
-import AngleIcon from '@/public/images/angle-icon.svg'
+import LinkButton from '@/components/common/LinkButton'
 import type { Position } from '@/hooks/useOpenPositions'
 
 import css from './styles.module.css'
@@ -33,9 +33,9 @@ export const Positions = ({ positions, title }: { positions: Position[]; title: 
               <Typography variant="h3" className={css.position}>
                 {position.name}
               </Typography>
-              <Typography className={css.link}>
-                See position <AngleIcon className={css.icon} />
-              </Typography>
+              <LinkButton underline={false} className={css.link}>
+                See position
+              </LinkButton>
               <ArrowIcon className={css.arrow} />
             </ButtonBase>
           </Grid>
