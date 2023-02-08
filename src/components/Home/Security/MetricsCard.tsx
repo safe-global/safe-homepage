@@ -1,14 +1,15 @@
 import { Box } from '@mui/material'
 import { useCallback, useEffect, useRef } from 'react'
+import classNames from 'classnames'
 import css from './styles.module.css'
 
-const DEPTH_PARAMS = {
-  0: { factor: -0.05, zIndex: 10 },
-  1: { factor: -0.04, zIndex: 9 },
-  2: { factor: -0.03, zIndex: 8 },
-  3: { factor: -0.02, zIndex: 7 },
-  4: { factor: -0.01, zIndex: 6 },
-}
+const DEPTH_PARAMS = [
+  { factor: -0.05, zIndex: 10 },
+  { factor: -0.04, zIndex: 9 },
+  { factor: -0.03, zIndex: 8 },
+  { factor: -0.02, zIndex: 7 },
+  { factor: -0.01, zIndex: 6 },
+]
 
 export const MetricsCard = ({
   children,
@@ -48,10 +49,12 @@ export const MetricsCard = ({
 
   useEffect(() => {
     window.addEventListener('mousemove', parallax)
+
+    return () => window.removeEventListener('mousemove', parallax)
   }, [parallax])
 
   return (
-    <Box ref={boxRef} className={css.metricsCard + ' ' + className}>
+    <Box ref={boxRef} sx={{ zIndex: DEPTH_PARAMS[depth].zIndex }} className={classNames(css.metricsCard, className)}>
       {children}
     </Box>
   )
