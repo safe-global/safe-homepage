@@ -14,6 +14,7 @@
   align-items: center;
   gap: 32px;
   padding: 82px 0 202px;
+  margin-top: 0px;
 }
 
 /* TODO: Use h1 from theme when implemented
