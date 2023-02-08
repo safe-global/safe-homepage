@@ -4,18 +4,16 @@ import Link from 'next/link'
 import clsx from 'clsx'
 import type { ReactElement } from 'react'
 
-import type { Position } from '@/hooks/useOpenPositions'
+import { useOpenPositions } from '@/hooks/useOpenPositions'
 
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 
 export const Intro = ({
-  positions,
   title,
   text,
   link,
 }: {
-  positions: Position[]
   title: string
   text: string
   link: {
@@ -23,6 +21,8 @@ export const Intro = ({
     href: string
   }
 }): ReactElement => {
+  const { data: positions = [] } = useOpenPositions()
+
   return (
     <Container className={css.bg}>
       <Grid container className={clsx(layoutCss.container, css.container)}>

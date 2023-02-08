@@ -1,5 +1,4 @@
-import useAsync from '@/hooks/useAsync'
-import type { AsyncResult } from '@/hooks/useAsync'
+import useSWR from 'swr'
 
 const BREEZY_API_URL = 'https://safe-global.breezy.hr/json'
 
@@ -30,10 +29,8 @@ export type Position = {
   }
 }
 
-export const useOpenPositions = (): AsyncResult<Position[]> => {
-  return useAsync<Position[]>(() => {
-    return fetch(BREEZY_API_URL).then((res) => {
-      return res.json()
-    })
-  }, [])
+export const useOpenPositions = () => {
+  const KEY = 'open-positions'
+
+  return useSWR<Position[]>(KEY, () => fetch(BREEZY_API_URL).then((res) => res.json()))
 }

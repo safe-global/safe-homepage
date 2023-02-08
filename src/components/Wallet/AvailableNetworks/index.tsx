@@ -16,7 +16,7 @@ export type AvailableNetworksProps = {
 }
 
 const AvailableNetworks = ({ networks }: AvailableNetworksProps) => {
-  const chainsData = useChainsData()
+  const { data: chainsData = [] } = useChainsData()
 
   return (
     <Container className={layoutCss.container}>

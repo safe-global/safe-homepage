@@ -4,8 +4,9 @@ import type { ComponentProps, ReactElement } from 'react'
 
 import PinIcon from '@/public/images/pin.svg'
 import { Cards } from '@/components/Careers/Cards'
-import type { CardProps } from '@/components/Careers/Cards'
+import { useOpenPositions } from '@/hooks/useOpenPositions'
 import type { Position } from '@/hooks/useOpenPositions'
+import type { CardProps } from '@/components/Careers/Cards'
 
 import css from './styles.module.css'
 
@@ -22,11 +23,9 @@ const parsePosition = ({ url, location, name }: Position): CardProps => {
   }
 }
 
-export const Positions = ({
-  positions,
-  items: _items,
-  ...rest
-}: ComponentProps<typeof Cards> & { positions: Position[] }): ReactElement => {
+export const Positions = ({ items: _items, ...rest }: ComponentProps<typeof Cards>): ReactElement => {
+  const { data: positions = [] } = useOpenPositions()
+
   const items = useMemo(() => {
     if (positions.length === 0) {
       return []
