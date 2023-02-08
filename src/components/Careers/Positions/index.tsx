@@ -1,47 +1,39 @@
-import { ButtonBase, Grid, Typography } from '@mui/material'
-import { Container } from '@mui/system'
+import { Typography } from '@mui/material'
+import { useMemo } from 'react'
+import type { ComponentProps, ReactElement } from 'react'
 
 import PinIcon from '@/public/images/pin.svg'
-import ArrowIcon from '@/public/images/arrow-out-icon.svg'
-import LinkButton from '@/components/common/LinkButton'
+import { Cards } from '@/components/Careers/Cards'
+import type { CardItem } from '@/components/Careers/Cards'
 import type { Position } from '@/hooks/useOpenPositions'
 
-import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 
-export const Positions = ({ positions, title }: { positions: Position[]; title: string }) => {
-  return (
-    <Container>
-      <Grid container spacing="30px" className={layoutCss.container}>
-        <Grid item xs={12}>
-          <Typography variant="h1" className={css.title}>
-            {title}
-          </Typography>
-        </Grid>
-        {positions.map((position) => (
-          <Grid key={position.id} item xs={12} md={4}>
-            <ButtonBase
-              href={position.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={`${position.name} listing`}
-              className={css.card}
-            >
-              <Typography variant="caption" className={css.location}>
-                <PinIcon className={css.icon} />
-                {position.location.name}
-              </Typography>
-              <Typography variant="h3" className={css.position}>
-                {position.name}
-              </Typography>
-              <LinkButton underline={false} className={css.link}>
-                See position
-              </LinkButton>
-              <ArrowIcon className={css.arrow} />
-            </ButtonBase>
-          </Grid>
-        ))}
-      </Grid>
-    </Container>
-  )
+const parsePosition = ({ url, location, name }: Position): CardItem => {
+  return {
+    title: name,
+    link: { href: url, title: 'See position' },
+    header: (
+      <Typography variant="caption" className={css.header}>
+        <PinIcon className={css.icon} />
+        {location.name}
+      </Typography>
+    ),
+  }
+}
+
+export const Positions = ({
+  positions,
+  items: _items,
+  ...rest
+}: ComponentProps<typeof Cards> & { positions: Position[] }): ReactElement => {
+  const items = useMemo(() => {
+    if (positions.length === 0) {
+      return []
+    }
+
+    return positions.map(parsePosition)
+  }, [positions])
+
+  return <Cards items={items} {...rest} />
 }
