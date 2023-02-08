@@ -6,7 +6,7 @@ import type { BaseBlock } from '@/components/Home/types'
 
 const Ecosystem = ({ title, text }: BaseBlock): ReactElement => {
   return (
-    <div className={css.bg}>
+    <div className={css.gradient}>
       <Container sx={{ textAlign: 'center' }}>
         <Box height={{ xs: '700px', md: '1090px' }} display="flex" alignItems="center">
           <Grid container justifyContent="center">
