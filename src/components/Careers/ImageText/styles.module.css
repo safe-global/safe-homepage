@@ -1,0 +1,26 @@
+.container {
+  align-items: center;
+  justify-content: center;
+}
+
+.caption {
+  color: var(--mui-palette-primary-light);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 900px) {
+  .text {
+    text-align: left;
+  }
+}

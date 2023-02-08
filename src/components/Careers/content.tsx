@@ -1,5 +1,6 @@
 import { Intro } from './Intro'
 import { Values } from './Values'
+import { ImageText } from './ImageText'
 import { Positions } from './Positions'
 
 export const careersContent = [
@@ -45,7 +46,28 @@ export const careersContent = [
     component: Values,
   },
   {
+    variant: 'image-text',
+    caption: 'With contributors across the world, we have our main hubs in Europe and are expanding.',
+    title: 'Our locations',
+    image: {
+      src: '/images/hub-locations.svg',
+      alt: 'Image of the international office locations',
+    },
+    component: ImageText,
+  },
+  {
+    variant: 'text-image',
+    title: 'Interview process',
+    text: 'We have a transparent and fast interview process.',
+    image: {
+      src: '/images/interview-process.svg',
+      alt: 'Image of the interview process timeline',
+    },
+    component: ImageText,
+  },
+  {
     title: 'Open positions',
     component: Positions,
+    variant: 'image-text',
   },
 ]
