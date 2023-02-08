@@ -36,7 +36,7 @@ export type AaStackProps = {
 const AaStack = ({ title, items }: AaStackProps) => (
   <Container className={layoutCss.containerShort}>
     <Grid container className={layoutCss.containerShort} justifyContent="center">
-      <Typography variant="caption" component="div" mt="100px" mb={3}>
+      <Typography variant="caption" textAlign="center" component="div" mt="100px" mb={3}>
         {title}
       </Typography>
       <Grid container>
