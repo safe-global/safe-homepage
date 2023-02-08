@@ -37,6 +37,9 @@ export const ImageText = ({
           {text ? <Typography>{text}</Typography> : null}
         </Grid>
         <Grid item xs={12} md={6} className={css.image}>
+          {/* 
+          // ESlint doesn't detect the spread `alt` attribute
+          // eslint-disable-next-line jsx-a11y/alt-text */}
           <img {...image} />
         </Grid>
       </Grid>
