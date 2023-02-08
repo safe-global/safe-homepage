@@ -39,6 +39,6 @@ svg {
 }
 
 b {
-  font-weight: normal;
+  all: unset;
   color: var(--mui-palette-primary-main);
 }
