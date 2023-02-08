@@ -17,8 +17,11 @@ export const ImageText = ({
   caption?: string
   title: string
   text?: string
-  image: DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement> & { alt: string }
+  image: DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>
 }): ReactElement => {
+  // Appease ESLint
+  const { alt = '', ...rest } = image
+
   return (
     <Container>
       <Grid
@@ -37,10 +40,7 @@ export const ImageText = ({
           {text ? <Typography>{text}</Typography> : null}
         </Grid>
         <Grid item xs={12} md={6} className={css.image}>
-          {/* 
-          // ESlint doesn't detect the spread `alt` attribute
-          // eslint-disable-next-line jsx-a11y/alt-text */}
-          <img {...image} />
+          <img alt={alt} {...rest} />
         </Grid>
       </Grid>
     </Container>
