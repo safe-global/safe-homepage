@@ -4,12 +4,12 @@ import type { ComponentProps, ReactElement } from 'react'
 
 import PinIcon from '@/public/images/pin.svg'
 import { Cards } from '@/components/Careers/Cards'
-import type { CardItem } from '@/components/Careers/Cards'
+import type { CardProps } from '@/components/Careers/Cards'
 import type { Position } from '@/hooks/useOpenPositions'
 
 import css from './styles.module.css'
 
-const parsePosition = ({ url, location, name }: Position): CardItem => {
+const parsePosition = ({ url, location, name }: Position): CardProps => {
   return {
     title: name,
     link: { href: url, title: 'See position' },

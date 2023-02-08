@@ -65,7 +65,7 @@ export const careersContent = [
         title: 'Gnosis Safe rebrands to Safe, Raises $100M',
         link: {
           title: 'Read more',
-          href: '#',
+          href: 'https://finance.yahoo.com/news/gnosis-safe-rebrands-safe-raises-130000225.html',
         },
       },
       {
@@ -73,7 +73,7 @@ export const careersContent = [
         title: 'Gnosis Safe launches SafeDAO and Safe Token',
         link: {
           title: 'Read more',
-          href: '#',
+          href: 'https://decrypt.co/110781/gnosis-safe-launches-safedao-safe-token',
         },
       },
     ],
