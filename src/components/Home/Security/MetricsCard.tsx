@@ -1,6 +1,6 @@
 import { Box } from '@mui/material'
 import { useCallback, useEffect, useRef } from 'react'
-import classNames from 'classnames'
+import clsx from 'clsx'
 import css from './styles.module.css'
 
 const DEPTH_PARAMS = [
@@ -54,7 +54,7 @@ export const MetricsCard = ({
   }, [parallax])
 
   return (
-    <Box ref={boxRef} sx={{ zIndex: DEPTH_PARAMS[depth].zIndex }} className={classNames(css.metricsCard, className)}>
+    <Box ref={boxRef} sx={{ zIndex: DEPTH_PARAMS[depth].zIndex }} className={clsx(css.metricsCard, className)}>
       {children}
     </Box>
   )
