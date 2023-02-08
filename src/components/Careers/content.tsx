@@ -46,22 +46,21 @@ export const careersContent = [
     component: Values,
   },
   {
-    variant: 'image-text',
     caption: 'With contributors across the world, we have our main hubs in Europe and are expanding.',
     title: 'Our locations',
     image: {
-      src: '/images/hub-locations.svg',
-      alt: 'Image of the international office locations',
+      src: '/images/hub-locations.png',
+      alt: 'International office locations',
     },
     component: ImageText,
   },
   {
-    variant: 'text-image',
+    variant: 'reverse',
     title: 'Interview process',
     text: 'We have a transparent and fast interview process.',
     image: {
       src: '/images/interview-process.svg',
-      alt: 'Image of the interview process timeline',
+      alt: 'Interview process timeline',
     },
     component: ImageText,
   },

@@ -13,7 +13,7 @@ export const ImageText = ({
   text,
   caption,
 }: {
-  variant: 'image-text' | 'text-image'
+  variant?: 'reverse'
   caption?: string
   title: string
   text?: string
@@ -23,7 +23,7 @@ export const ImageText = ({
     <Container>
       <Grid
         container
-        direction={variant === 'image-text' ? 'row-reverse' : 'row'}
+        direction={variant === 'reverse' ? 'row' : 'row-reverse'}
         spacing={{ xs: '48px', md: '24px' }}
         className={clsx(layoutCss.container, css.container)}
       >
