@@ -3,6 +3,8 @@ import { Container } from '@mui/system'
 import clsx from 'clsx'
 import type { DetailedHTMLProps, ImgHTMLAttributes, ReactElement } from 'react'
 
+import { Image } from '@/components/common/Image'
+
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 
@@ -19,10 +21,6 @@ export const ImageText = ({
   text?: string
   image: DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>
 }): ReactElement => {
-  // Required by linter
-  // @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/alt-text.md#good
-  const { alt = '', ...rest } = image
-
   return (
     <Container>
       <Grid
@@ -41,7 +39,7 @@ export const ImageText = ({
           {text ? <Typography>{text}</Typography> : null}
         </Grid>
         <Grid item xs={12} md={6} className={css.image}>
-          <img alt={alt} {...rest} />
+          <Image {...image} />
         </Grid>
       </Grid>
     </Container>

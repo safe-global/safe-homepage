@@ -4,6 +4,7 @@ import { Container, Grid, Typography } from '@mui/material'
 import LinkButton from '@/components/common/LinkButton'
 import css from './styles.module.css'
 import ArrowIcon from '@/public/images/arrow-out-icon.svg'
+import { Image } from '@/components/common/Image'
 import type { BaseBlock } from '@/components/Home/types'
 
 const SafeCoreWallet = ({ items }: BaseBlock): ReactElement => {
@@ -11,18 +12,14 @@ const SafeCoreWallet = ({ items }: BaseBlock): ReactElement => {
     <div className={css.bg}>
       <Container disableGutters>
         <Grid container mt={{ xs: 8, md: '235px' }} spacing="30px">
-          {items?.map((item) => {
-            // Required by linter
-            // @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/alt-text.md#good
-            const { alt = '', ...image } = item.image || {}
-
-            return (
+          {items &&
+            items.map((item) => (
               <Grid key={item.caption} item xs={12} md={6}>
                 <div className={css.card}>
                   <Typography variant="caption" mb={3}>
                     {item.caption}
                   </Typography>
-                  <img alt={alt} {...image} />
+                  <Image {...item.image} />
                   <div className={css.tag}>{item.text}</div>
                   <Typography variant="h3" mb={5} mt={2}>
                     {item.title}
@@ -33,8 +30,7 @@ const SafeCoreWallet = ({ items }: BaseBlock): ReactElement => {
                   <ArrowIcon className={css.icon} />
                 </div>
               </Grid>
-            )
-          })}
+            ))}
         </Grid>
       </Container>
     </div>

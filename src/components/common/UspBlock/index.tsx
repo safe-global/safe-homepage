@@ -3,16 +3,13 @@ import { Chip, Container, Divider, Grid, Typography } from '@mui/material'
 import type { GridProps } from '@mui/material'
 import type { ReactElement } from 'react'
 
+import { Image } from '@/components/common/Image'
 import type { BaseBlock } from '@/components/Home/types'
 
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 
 const GridItem = ({ image, title, text, caption, width = 4 }: BaseBlock & { width: GridProps['md'] }): ReactElement => {
-  // Required by linter
-  // @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/alt-text.md#good
-  const { alt = '', ...rest } = image || {}
-
   return (
     <Grid
       item
@@ -24,7 +21,7 @@ const GridItem = ({ image, title, text, caption, width = 4 }: BaseBlock & { widt
       justifyContent="space-between"
     >
       <div>
-        {image ? <img alt={alt} {...rest} /> : null}
+        {image ? <Image {...image} /> : null}
         <Typography variant="h4" className={css.title}>
           {title}
         </Typography>
