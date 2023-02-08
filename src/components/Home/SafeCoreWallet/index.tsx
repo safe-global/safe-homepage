@@ -11,14 +11,18 @@ const SafeCoreWallet = ({ items }: BaseBlock): ReactElement => {
     <div className={css.bg}>
       <Container disableGutters>
         <Grid container mt={{ xs: 8, md: '235px' }} spacing="30px">
-          {items &&
-            items.map((item) => (
+          {items?.map((item) => {
+            // Required by linter
+            // @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/alt-text.md#good
+            const { alt = '', ...image } = item.image || {}
+
+            return (
               <Grid key={item.caption} item xs={12} md={6}>
                 <div className={css.card}>
                   <Typography variant="caption" mb={3}>
                     {item.caption}
                   </Typography>
-                  <img {...item.image} />
+                  <img alt={alt} {...image} />
                   <div className={css.tag}>{item.text}</div>
                   <Typography variant="h3" mb={5} mt={2}>
                     {item.title}
@@ -29,7 +33,8 @@ const SafeCoreWallet = ({ items }: BaseBlock): ReactElement => {
                   <ArrowIcon className={css.icon} />
                 </div>
               </Grid>
-            ))}
+            )
+          })}
         </Grid>
       </Container>
     </div>

@@ -13,12 +13,17 @@ const TrustedBy = ({ title, items }: BaseBlock): ReactElement => {
         </Typography>
         <Grid container justifyContent="center">
           <Grid item container md={10} gap={{ xs: 3, md: 5 }} justifyContent="center" alignItems="center">
-            {items &&
-              items.map((item, index) => (
+            {items?.map((item, index) => {
+              // Required by linter
+              // @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/alt-text.md#good
+              const { alt = '', ...image } = item.image || {}
+
+              return (
                 <Grid key={index} item>
-                  <img {...item.image} />
+                  <img alt={alt} {...image} />
                 </Grid>
-              ))}
+              )
+            })}
           </Grid>
         </Grid>
       </div>

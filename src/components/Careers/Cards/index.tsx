@@ -47,7 +47,7 @@ export const Cards = ({ items, title }: { items: CardProps[]; title: string }): 
           </Typography>
         </Grid>
         {items.map((props) => (
-          <Card {...props} />
+          <Card key={props.title} {...props} />
         ))}
       </Grid>
     </Container>
