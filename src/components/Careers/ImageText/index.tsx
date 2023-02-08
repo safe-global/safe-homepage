@@ -19,9 +19,6 @@ export const ImageText = ({
   text?: string
   image: DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>
 }): ReactElement => {
-  // Appease ESLint
-  const { alt = '', ...rest } = image
-
   return (
     <Container>
       <Grid
@@ -40,7 +37,7 @@ export const ImageText = ({
           {text ? <Typography>{text}</Typography> : null}
         </Grid>
         <Grid item xs={12} md={6} className={css.image}>
-          <img alt={alt} {...rest} />
+          <img {...image} />
         </Grid>
       </Grid>
     </Container>
