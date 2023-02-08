@@ -1,6 +1,7 @@
 import { Intro } from './Intro'
 import { Values } from './Values'
 import { ImageText } from './ImageText'
+import { Cards } from './Cards'
 import { Positions } from './Positions'
 
 export const careersContent = [
@@ -44,6 +45,40 @@ export const careersContent = [
       },
     ],
     component: Values,
+  },
+  {
+    title: (
+      <>
+        <i>Safe</i> in the news
+      </>
+    ),
+    items: [
+      {
+        header: <img src="/images/mirror.svg" alt="Mirror logo" />,
+        title: 'A Call to Build Better Self-Custody',
+        link: {
+          title: 'Read more',
+          href: '#',
+        },
+      },
+      {
+        header: <img src="/images/yahoo-finance.svg" alt="Yahoo Finance logo" />,
+        title: 'Gnosis Safe rebrands to Safe, Raises $100M',
+        link: {
+          title: 'Read more',
+          href: 'https://finance.yahoo.com/news/gnosis-safe-rebrands-safe-raises-130000225.html',
+        },
+      },
+      {
+        header: <img src="/images/decrypt.svg" alt="Decrypt logo" />,
+        title: 'Gnosis Safe launches SafeDAO and Safe Token',
+        link: {
+          title: 'Read more',
+          href: 'https://decrypt.co/110781/gnosis-safe-launches-safedao-safe-token',
+        },
+      },
+    ],
+    component: Cards,
   },
   {
     caption: 'With contributors across the world, we have our main hubs in Europe and are expanding.',
