@@ -6,12 +6,13 @@ import ArrowIcon from '@/public/images/arrow-out-icon.svg'
 import LinkButton from '@/components/common/LinkButton'
 import type { Position } from '@/hooks/useOpenPositions'
 
+import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 
 export const Positions = ({ positions, title }: { positions: Position[]; title: string }) => {
   return (
-    <Container className={css.container}>
-      <Grid container spacing="30px">
+    <Container>
+      <Grid container spacing="30px" className={layoutCss.container}>
         <Grid item xs={12}>
           <Typography variant="h1" className={css.title}>
             {title}

@@ -14,7 +14,6 @@
   align-items: center;
   gap: 32px;
   padding: 82px 0 202px;
-  margin-bottom: 250px;
 }
 
 /* TODO: Use h1 from theme when implemented
@@ -34,7 +33,6 @@ https://github.com/safe-global/safe-homepage/issues/11 */
 @media (min-width: 600px) {
   .container {
     gap: 24px;
-    margin-bottom: 200px;
   }
 
   .title {
