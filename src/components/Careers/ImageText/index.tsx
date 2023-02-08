@@ -19,7 +19,8 @@ export const ImageText = ({
   text?: string
   image: DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>
 }): ReactElement => {
-  // Appease ESLint
+  // Required by linter
+  // @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/alt-text.md#good
   const { alt = '', ...rest } = image
 
   return (

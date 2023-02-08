@@ -30,8 +30,12 @@
 }
 
 .title {
-  margin-bottom: 10.5px;
+  margin-bottom: 80px;
   text-align: center;
+}
+
+.cardTitle {
+  margin-bottom: 10.5px;
 }
 
 .link *::after {
@@ -50,7 +54,7 @@
 }
 
 @media (min-width: 600px) {
-  .title {
+  .cardTitle {
     margin-bottom: 24px;
   }
 }

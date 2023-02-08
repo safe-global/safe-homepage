@@ -25,7 +25,7 @@ const Card = ({ header, title, link }: CardProps): ReactElement => {
         className={css.card}
       >
         <div className={css.header}>{header}</div>
-        <Typography variant="h3" className={css.title}>
+        <Typography variant="h3" className={css.cardTitle}>
           {title}
         </Typography>
         <LinkButton underline={false} className={css.link}>
@@ -47,7 +47,7 @@ export const Cards = ({ items, title }: { items: CardProps[]; title: string }): 
           </Typography>
         </Grid>
         {items.map((props) => (
-          <Card {...props} />
+          <Card key={props.title} {...props} />
         ))}
       </Grid>
     </Container>

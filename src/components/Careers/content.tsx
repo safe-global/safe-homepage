@@ -2,6 +2,7 @@ import { Intro } from './Intro'
 import { Values } from './Values'
 import { ImageText } from './ImageText'
 import { Cards } from './Cards'
+import UspBlock from '@/components/common/UspBlock'
 import { Positions } from './Positions'
 
 export const careersContent = [
@@ -79,6 +80,86 @@ export const careersContent = [
       },
     ],
     component: Cards,
+  },
+  {
+    variant: '4-columns',
+    title: 'Our benefits',
+    text: 'Besides working on the bleeding edge of web3, we provide the best benefits to employees',
+    items: [
+      {
+        image: {
+          src: '/images/benefits/book-open.png',
+          alt: 'Open book',
+          width: '50px',
+        },
+        title: 'Learning & conferences',
+        text: 'Personal education (1k€) and conference budgets (2k€) to help you grow.',
+      },
+      {
+        image: {
+          src: '/images/benefits/human-handsup.png',
+          alt: 'Human with their hands up',
+          width: '50px',
+        },
+        title: 'Dedicated hacking time ',
+        text: 'Use your Friday afternoons for research or a side project in our ecosystem!',
+      },
+      {
+        image: {
+          src: '/images/benefits/coffee.png',
+          alt: 'Coffee mug',
+          width: '50px',
+        },
+        title: 'Company & team retreats',
+        text: 'Connect with team mates outside of the office with cool trips and retreats.',
+      },
+      {
+        image: {
+          src: '/images/benefits/calendar.png',
+          alt: 'Calendar',
+          width: '50px',
+        },
+        title: 'Flexibility',
+        text: 'Manage your own work schedules with hybrid working policies. ',
+      },
+      {
+        image: {
+          src: '/images/benefits/more-horizontal.png',
+          alt: 'Three horizontal dots',
+          width: '50px',
+        },
+        title: 'Flat hierarchies',
+        text: 'Uncomplicated team structures and no barriers to  communication.',
+      },
+      {
+        image: {
+          src: '/images/benefits/device-laptop.png',
+          alt: 'Laptop',
+          width: '50px',
+        },
+        title: 'Newest technology',
+        text: 'Work on the latest technology, equipment and web3 stack with dedicated budgets.',
+      },
+      {
+        image: {
+          src: '/images/benefits/gift.png',
+          alt: 'Wrapped gift',
+          width: '50px',
+        },
+        title: 'Token plan',
+        text: 'Have a stake in our mission and shape the future of Safe  with a bonus token plan.',
+      },
+      {
+        image: {
+          src: '/images/benefits/map.png',
+          alt: 'Map',
+          width: '50px',
+        },
+        title: 'Relocation support',
+        text: 'Join us in one of our offices with relocation help, visa support and allowances.',
+      },
+    ],
+    component: UspBlock,
   },
   {
     caption: 'With contributors across the world, we have our main hubs in Europe and are expanding.',

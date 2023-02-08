@@ -11,12 +11,17 @@ const Networks = ({ title, text, items }: BaseBlock) => {
       </Typography>
       <div className={css.gradient}>
         <Grid container gap={3} alignItems="center" justifyContent="center">
-          {items &&
-            items.map((item, index) => (
+          {items?.map((item, index) => {
+            // Required by linter
+            // @see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/alt-text.md#good
+            const { alt = '', ...image } = item.image || {}
+
+            return (
               <Grid key={index} item>
-                {item.icon}
+                <img alt={alt} {...image} />
               </Grid>
-            ))}
+            )
+          })}
         </Grid>
       </div>
       <Typography color="border.main" textAlign="center" mt={{ xs: 4, md: 5 }}>
