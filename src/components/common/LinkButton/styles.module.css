@@ -1,51 +1,54 @@
 .linkButton {
-    font-size: 18px;
-    line-height: 26px;
-    letter-spacing: 0.46px;
-    font-weight: 500;
-    border-bottom: 2px solid transparent;
-    transition: 0.3s;
-    padding: 15px 0;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.46px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.underline {
+  border-bottom: 2px solid transparent;
+  padding: 15px 0;
 }
 
 .linkButton:hover {
-    color: var(--mui-palette-primary-main);
-    border-color: var(--mui-palette-primary-main);
-    padding-right: 5px;
+  color: var(--mui-palette-primary-main);
+  border-color: var(--mui-palette-primary-main);
+  padding-right: 5px;
 }
 
 .linkButton:hover .arrow {
-    transform: translateX(10px);
+  transform: translateX(10px);
 }
 
 .linkButton:hover .arrow:after {
-    opacity: 1;
-    transform: translateX(-5px) translateY(-50%);
-    background: var(--mui-palette-primary-main);
+  opacity: 1;
+  transform: translateX(-5px) translateY(-50%);
+  background: var(--mui-palette-primary-main);
 }
 
 .linkButton:hover .arrow svg path {
-    fill: var(--mui-palette-primary-main);
+  fill: var(--mui-palette-primary-main);
 }
 
 .arrow {
-    margin-left: 4px;
-    transition: 0.3s;
+  margin-left: 4px;
+  transition: 0.3s;
 }
 
 .arrow:after {
-    content: "";
-    height: 2px;
-    width: 100%;
-    background: white;
-    position: absolute;
-    top: 50%;
-    transform: translateX(-2px) translateY(-50%);
-    right: 0;
-    opacity: 0;
-    transition: 0.3s;
+  content: '';
+  height: 2px;
+  width: 100%;
+  background: white;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-2px) translateY(-50%);
+  right: 0;
+  opacity: 0;
+  transition: 0.3s;
 }
 
 .arrow svg {
-    display: block;
+  display: block;
 }

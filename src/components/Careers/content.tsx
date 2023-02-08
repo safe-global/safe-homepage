@@ -1,5 +1,6 @@
 import { Intro } from './Intro'
 import { Values } from './Values'
+import { Positions } from './Positions'
 
 export const careersContent = [
   {
@@ -42,5 +43,9 @@ export const careersContent = [
       },
     ],
     component: Values,
+  },
+  {
+    title: 'Open positions',
+    component: Positions,
   },
 ]

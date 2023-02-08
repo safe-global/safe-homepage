@@ -1,9 +1,11 @@
 import { Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material'
 import { Container } from '@mui/system'
+import clsx from 'clsx'
 import type { ReactElement } from 'react'
 
 import ArrowIcon from '@/public/images/arrow-out-icon.svg'
 
+import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 
 export const Values = ({
@@ -15,7 +17,7 @@ export const Values = ({
 }): ReactElement => {
   return (
     <Container>
-      <Grid container className={css.container}>
+      <Grid container className={clsx(layoutCss.container, css.container)}>
         <Typography variant="h2" className={css.title}>
           {title}
         </Typography>

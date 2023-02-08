@@ -1,10 +1,12 @@
 import { Button, Chip, Grid, Typography } from '@mui/material'
 import { Container } from '@mui/system'
 import Link from 'next/link'
+import clsx from 'clsx'
 import type { ReactElement } from 'react'
 
 import type { Position } from '@/hooks/useOpenPositions'
 
+import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 
 export const Intro = ({
@@ -23,7 +25,7 @@ export const Intro = ({
 }): ReactElement => {
   return (
     <Container className={css.bg}>
-      <Grid container className={css.container}>
+      <Grid container className={clsx(layoutCss.container, css.container)}>
         <Grid item>
           <Chip
             label={`${positions.length} open position${positions.length === 1 ? '' : 's'}`}
