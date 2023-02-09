@@ -1,5 +1,9 @@
-import React from 'react'
+import { coreContent } from '@/components/Core/content'
 
-export const Core = () => {
-  return <div>Core</div>
-}
+export const Core = () => (
+  <>
+    {coreContent.map(({ component: Component, ...rest }, index) => {
+      return <Component key={index} {...rest} />
+    })}
+  </>
+)
