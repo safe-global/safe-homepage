@@ -1,4 +1,4 @@
-import {type ComponentType, type ReactElement } from 'react'
+import { type ComponentType, type ReactElement } from 'react'
 
 type ContentItem = any & {
   component: ComponentType
