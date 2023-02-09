@@ -1,13 +1,13 @@
 import Intro from '@/components/Home/Intro'
 import Stats from '@/components/Home/Stats'
-import TrustedBy from '@/components/Home/TrustedBy'
+import TitleLogos from '@/components/Home/TitleLogos'
 import BigIconsCardGrid from '@/components/Home/BigIconsCardGrid'
 import Networks from '@/components/common/Networks'
-import Ecosystem from '@/components/Home/Ecosystem'
-import Security from '@/components/Home/Security'
-import Governance from '@/components/Home/Governance'
-import Contact from '@/components/Home/Contact'
-import WalletDownload from '@/components/common/WalletDownload'
+import TextCardWithBackground from '@/components/Home/TextCardWithBackground'
+import ImageParalaxText from '@/components/Home/ImageParalaxText'
+import TitleTextLinkedCardGrid from '@/components/Home/TitleTextLinkedCardGrid'
+import TitleButton from '@/components/Home/TitleButton'
+import TextBlockBanner from '@/components/common/TextBlockBanner'
 
 export const homeContent = [
   {
@@ -154,7 +154,6 @@ export const homeContent = [
         Trusted by the best in <b>Web3</b>
       </>
     ),
-    text: '',
     items: [
       {
         image: {
@@ -223,7 +222,7 @@ export const homeContent = [
         },
       },
     ],
-    component: TrustedBy,
+    component: TitleLogos,
   },
   {
     items: [
@@ -282,7 +281,7 @@ export const homeContent = [
       </>
     ),
     text: '130+ projects including DAO tools, DeFi, NFT collectives are building on Safe Core.',
-    component: Ecosystem,
+    component: TextCardWithBackground,
   },
   {
     caption: 'Security',
@@ -302,7 +301,7 @@ export const homeContent = [
       title: 'Read report',
       href: '#',
     },
-    component: Security,
+    component: ImageParalaxText,
   },
   {
     caption: 'Governance',
@@ -347,7 +346,7 @@ export const homeContent = [
         },
       },
     ],
-    component: Governance,
+    component: TitleTextLinkedCardGrid,
   },
   {
     title: 'Want ot reach the core team members?',
@@ -356,11 +355,11 @@ export const homeContent = [
       title: 'Contact us',
       href: '#',
     },
-    component: Contact,
+    component: TitleButton,
   },
   {
     title: 'Use Safe {WALLET} anywhere',
     text: 'Access your assets anywhere without compromising on security on our flagship interfaces built on Safe {Core}.',
-    component: WalletDownload,
+    component: TextBlockBanner,
   },
 ]

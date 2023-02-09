@@ -2,9 +2,18 @@ import { Container, Grid, Typography } from '@mui/material'
 import type { ReactElement } from 'react'
 
 import layoutCss from '@/components/common/styles.module.css'
-import type { BaseBlock } from '@/components/Home/types'
 
-const TrustedBy = ({ title, items }: BaseBlock): ReactElement => {
+type TitleLogosProps = {
+  title: string
+  items: {
+    image: {
+      src: string
+      alt: string
+    }
+  }[]
+}
+
+const TitleLogos = ({ title, items }: TitleLogosProps): ReactElement => {
   return (
     <Container>
       <div className={layoutCss.container}>
@@ -26,4 +35,4 @@ const TrustedBy = ({ title, items }: BaseBlock): ReactElement => {
   )
 }
 
-export default TrustedBy
+export default TitleLogos

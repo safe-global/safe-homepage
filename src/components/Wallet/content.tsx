@@ -12,7 +12,7 @@ import HeroSection from '@/components/Wallet/Hero'
 import UspBlock from '@/components/common/UspBlock'
 import ImageText from '@/components/Wallet/ImageText'
 import Networks from '@/components/common/Networks'
-import WalletDownload from '@/components/common/WalletDownload'
+import TextBlockBanner from '@/components/common/TextBlockBanner'
 
 export type ColumnWidths = 3 | 4
 
@@ -275,6 +275,6 @@ export const walletContent = [
   {
     title: 'Use Safe {WALLET} anywhere',
     text: 'Access your assets anywhere without compromising on security on our flagship interfaces built on Safe {Core}.',
-    component: WalletDownload,
+    component: TextBlockBanner,
   },
 ]

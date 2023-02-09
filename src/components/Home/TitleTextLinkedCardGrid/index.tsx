@@ -7,7 +7,7 @@ import clsx from 'clsx'
 import layoutCss from '@/components/common/styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
 
-const Governance = ({ title, text, caption, items }: BaseBlock): ReactElement => {
+const TitleTextLinkedCardGrid = ({ title, text, caption, items }: BaseBlock): ReactElement => {
   return (
     <Container>
       <div className={layoutCss.container}>
@@ -53,4 +53,4 @@ const Governance = ({ title, text, caption, items }: BaseBlock): ReactElement =>
   )
 }
 
-export default Governance
+export default TitleTextLinkedCardGrid
