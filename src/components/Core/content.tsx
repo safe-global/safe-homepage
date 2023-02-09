@@ -39,7 +39,10 @@ export const coreContent = [
       text: 'Tap into the ecosystem’s cutting-edge plug-ins or write your own custom logic to plug into the Safe core contracts.',
       link: { text: 'Get started', href: '#' },
     },
-    image: <img src="/images/Core/safe-core-protocol.png" alt="Safe core protocol" />,
+    image: {
+      src: '/images/Core/safe-core-protocol.png',
+      alt: 'Safe core protocol',
+    },
     grid: {
       title: 'Benefits',
       items: [

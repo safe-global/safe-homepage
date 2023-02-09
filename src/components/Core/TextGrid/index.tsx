@@ -4,7 +4,10 @@ import LinkButton from '@/components/common/LinkButton'
 import css from './styles.module.css'
 
 export type TextGridProps = {
-  image: JSX.Element
+  image: {
+    src: string
+    alt: string
+  }
   textBlock: {
     caption: string
     title: JSX.Element
@@ -47,7 +50,7 @@ const TextGrid = ({ image, textBlock, grid }: TextGridProps) => {
             </LinkButton>
           </Grid>
           <Grid item md={6}>
-            {image}
+            <img src={image.src} alt={image.alt} />
           </Grid>
         </Grid>
         <Grid container mt={{ xs: 5, md: 10 }}>
