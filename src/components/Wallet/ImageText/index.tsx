@@ -7,9 +7,12 @@ import css from './styles.module.css'
 
 export type ImageTextProps = {
   variant: 'image-text' | 'text-image'
-  image: JSX.Element
+  image: {
+    src: string
+    alt: string
+  }
   textBlock: {
-    title: JSX.Element
+    title: string
     text: string
     subBlock?: ReactElement
     buttons?: {
@@ -57,7 +60,7 @@ const ImageText = ({ image, textBlock, variant }: ImageTextProps): ReactElement 
           ) : null}
         </Grid>
         <Grid item md={6}>
-          {image}
+          <img {...image} />
         </Grid>
       </Grid>
     </Container>

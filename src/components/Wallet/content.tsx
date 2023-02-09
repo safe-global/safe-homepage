@@ -1,12 +1,4 @@
-import Image from 'next/image'
 import type { StepsType } from '@/components/Wallet/Stepper'
-import CoManageImage from '@/public/images/Wallet/co-manage.png'
-import OwnershipImage from '@/public/images/Wallet/ownership.png'
-import BatchTransactionsImage from '@/public/images/Wallet/batch-transactions.png'
-import SignerTypesImage from '@/public/images/Wallet/signer-types.png'
-import PocketMultisigImage from '@/public/images/Wallet/pocket-multisig.png'
-import ClientAppsImage from '@/public/images/Wallet/clients.png'
-import SimulateTransactionsImage from '@/public/images/Wallet/simulate-transactions.png'
 import Stepper from '@/components/Wallet/Stepper'
 import HeroSection from '@/components/Wallet/Hero'
 import UspBlock from '@/components/common/UspBlock'
@@ -33,7 +25,10 @@ const convenienceContentSteps: StepsType = [
 
 export const walletContent = [
   {
-    image: <Image src={ClientAppsImage} alt="Web and mobile clients" />,
+    image: {
+      src: '/images/Wallet/clients.png',
+      alt: 'Web and mobile clients',
+    },
     textBlock: {
       title: 'The most secure way to own assets',
       button: { text: 'Launch wallet', href: '#' },
@@ -47,24 +42,23 @@ export const walletContent = [
       {
         image: {
           src: '/images/Wallet/shield.svg',
-          alt: 'Shield with a checkmark on it',
+          alt: 'Shield with a checkmark',
         },
         title: 'Battle Tested Security',
         text: 'Top notch security and custom access control for you and for your users.',
       },
       {
         image: {
-          src: '/images/Wallet/check.svg',
-          alt: 'Checkmark',
+          src: '/images/Wallet/people.svg',
+          alt: 'Group of owners',
         },
         title: 'Co-ownership',
         text: 'Multi-sig based trustless group ownership ownership and asset co-ordination.',
       },
       {
         image: {
-          // TODO: Use correct image from design
-          src: '/images/Wallet/settings.svg',
-          alt: 'Control panel sliders',
+          src: '/images/Wallet/key.svg',
+          alt: 'Ownership key',
         },
         title: 'Self-custody',
         text: 'We never own any of the assets stored in user accounts. We never will.',
@@ -74,7 +68,10 @@ export const walletContent = [
   },
   {
     variant: 'text-image',
-    image: <Image src={CoManageImage} alt="Accounts around a multisig" />,
+    image: {
+      src: '/images/Wallet/co-manage.png',
+      alt: 'Accounts around a multisig',
+    },
     textBlock: {
       title: (
         <>
@@ -88,7 +85,10 @@ export const walletContent = [
   },
   {
     variant: 'image-text',
-    image: <Image src={OwnershipImage} alt="Transactions require confirmations from owners" />,
+    image: {
+      src: '/images/Wallet/ownership.png',
+      alt: 'Transactions require confirmations from owners',
+    },
     textBlock: {
       title: (
         <>
@@ -102,10 +102,12 @@ export const walletContent = [
   },
   {
     variant: 'text-image',
-    // TODO: image to be replaced when available from design
-    image: <Image src={OwnershipImage} alt="Transactions require confirmations from owners" />,
+    image: {
+      src: '/images/Wallet/safe-apps-store.png',
+      alt: 'Transactions require confirmations from owners',
+    },
     textBlock: {
-      title: 'Built-in App Store',
+      title: 'Built-in app store',
       text: 'Use the best dapps in web3 right from inside your Safe WALLET.',
       buttons: [{ text: 'Get started', href: '#', variant: 'link' }],
     },
@@ -113,7 +115,10 @@ export const walletContent = [
   },
   {
     variant: 'image-text',
-    image: <Image src={BatchTransactionsImage} alt="Batching transactions" />,
+    image: {
+      src: '/images/Wallet/batch-transactions.png',
+      alt: 'Batching transactions',
+    },
     textBlock: {
       title: (
         <>
@@ -127,7 +132,10 @@ export const walletContent = [
   },
   {
     variant: 'text-image',
-    image: <Image src={SignerTypesImage} alt="Different wallet types" />,
+    image: {
+      src: '/images/Wallet/signer-types.png',
+      alt: 'Different wallet types',
+    },
     textBlock: {
       title: (
         <>
@@ -141,7 +149,10 @@ export const walletContent = [
   },
   {
     variant: 'image-text',
-    image: <Image src={SimulateTransactionsImage} alt="Simulate transactions" />,
+    image: {
+      src: '/images/Wallet/simulate-transactions.png',
+      alt: 'Simulate transactions in Tenderly',
+    },
     textBlock: {
       title: (
         <>
@@ -264,7 +275,10 @@ export const walletContent = [
   },
   {
     variant: 'text-image',
-    image: <Image src={PocketMultisigImage} alt="Safe mobile app" />,
+    image: {
+      src: '/images/Wallet/pocket-multisig.png',
+      alt: 'Safe mobile app',
+    },
     textBlock: {
       title: 'Convenience of multisig in your pocket',
       text: 'Track your assets and transactions on mobile. Stay informed on-the-go.',
