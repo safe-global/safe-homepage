@@ -2,7 +2,7 @@ import SafeCoreImage from '@/public/images/safe-core-type.svg'
 import SafeWalletImage from '@/public/images/safe-wallet-type.svg'
 
 import Intro from '@/components/Home/Intro'
-import Community from '@/components/Home/Community'
+import Stats from '@/components/Home/Stats'
 import TrustedBy from '@/components/Home/TrustedBy'
 import SafeCoreWallet from '@/components/Home/SafeCoreWallet'
 import Networks from '@/components/Home/Networks'
@@ -40,7 +40,114 @@ export const homeContent = [
         text: 'Safe accounts deployed',
       },
     ],
-    component: Community,
+    component: Stats,
+  },
+  {
+    networks: [
+      [
+        {
+          name: 'Ethereum Mainnet',
+          icon: {
+            src: '/images/chainsLogos/EthereumLogo.png',
+            alt: 'Ethereum logo',
+          },
+        },
+        {
+          name: 'BNB Smart Chain',
+          icon: {
+            src: '/images/chainsLogos/BNBLogo.png',
+            alt: 'BNB Chain logo',
+          },
+        },
+        {
+          name: 'Optimism',
+          icon: {
+            src: '/images/chainsLogos/OptimismLogo.png',
+            alt: 'Optimism logo',
+          },
+        },
+        {
+          name: 'Arbitrum',
+          icon: {
+            src: '/images/chainsLogos/ArbitrumLogo.png',
+            alt: 'Arbitrum logo',
+          },
+        },
+        {
+          name: 'Polygon',
+          icon: {
+            src: '/images/chainsLogos/PolygonLogo.png',
+            alt: 'Polygon logo',
+          },
+        },
+        {
+          name: 'Avalanche',
+          icon: {
+            src: '/images/chainsLogos/AvalancheLogo.png',
+            alt: 'Avalanche logo',
+          },
+        },
+        {
+          name: 'Gnosis Chain',
+          icon: {
+            src: '/images/chainsLogos/GnosisChainLogo.png',
+            alt: 'Gnosis Chain logo',
+          },
+        },
+      ],
+      [
+        {
+          name: 'Avalanche',
+          icon: {
+            src: '/images/chainsLogos/AvalancheLogo.png',
+            alt: 'Avalanche logo',
+          },
+        },
+        {
+          name: 'Polygon',
+          icon: {
+            src: '/images/chainsLogos/PolygonLogo.png',
+            alt: 'Polygon logo',
+          },
+        },
+        {
+          name: 'Gnosis Chain',
+          icon: {
+            src: '/images/chainsLogos/GnosisChainLogo.png',
+            alt: 'Gnosis Chain logo',
+          },
+        },
+        {
+          name: 'Aurora',
+          icon: {
+            src: '/images/chainsLogos/AuroraLogo.png',
+            alt: 'Aurora logo',
+          },
+        },
+        {
+          name: 'Ethereum Mainnet',
+          icon: {
+            src: '/images/chainsLogos/EthereumLogo.png',
+            alt: 'Ethereum logo',
+          },
+        },
+        {
+          name: 'Optimism',
+          icon: {
+            src: '/images/chainsLogos/OptimismLogo.png',
+            alt: 'Optimism logo',
+          },
+        },
+        {
+          name: 'BNB Smart Chain',
+          icon: {
+            src: '/images/chainsLogos/BNBLogo.png',
+            alt: 'BNB Chain logo',
+          },
+        },
+      ],
+    ],
+    component: Networks,
   },
   {
     title: (

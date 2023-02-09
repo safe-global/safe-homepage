@@ -11,11 +11,11 @@ const defaultThemeColors = {
   textColor: '#000000',
 }
 
-export type AvailableNetworksProps = {
+export type NetworksProps = {
   networks: NetworkChipProps[][]
 }
 
-const AvailableNetworks = ({ networks }: AvailableNetworksProps) => {
+const Networks = ({ networks }: NetworksProps) => {
   const { data: chainsData = [] } = useChainsData()
 
   return (
@@ -42,4 +42,4 @@ const AvailableNetworks = ({ networks }: AvailableNetworksProps) => {
   )
 }
 
-export default AvailableNetworks
+export default Networks

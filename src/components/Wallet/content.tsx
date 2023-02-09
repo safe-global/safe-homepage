@@ -1,12 +1,4 @@
 import Image from 'next/image'
-import ArbitrumIcon from '@/public/images/chainsLogos/ArbitrumLogo.png'
-import AuroraIcon from '@/public/images/chainsLogos/AuroraLogo.png'
-import AvalancheIcon from '@/public/images/chainsLogos/AvalancheLogo.png'
-import BNBIcon from '@/public/images/chainsLogos/BNBLogo.png'
-import EthereumIcon from '@/public/images/chainsLogos/EthereumLogo.png'
-import GnosisChainIcon from '@/public/images/chainsLogos/GnosisChainLogo.png'
-import OptimismIcon from '@/public/images/chainsLogos/OptimismLogo.png'
-import PolygonIcon from '@/public/images/chainsLogos/PolygonLogo.png'
 import type { StepsType } from '@/components/Wallet/Stepper'
 import CoManageImage from '@/public/images/Wallet/co-manage.png'
 import OwnershipImage from '@/public/images/Wallet/ownership.png'
@@ -19,7 +11,7 @@ import Stepper from '@/components/Wallet/Stepper'
 import HeroSection from '@/components/Wallet/Hero'
 import UspBlock from '@/components/common/UspBlock'
 import ImageText from '@/components/Wallet/ImageText'
-import AvailableNetworks from '@/components/Wallet/AvailableNetworks'
+import Networks from '@/components/common/Networks'
 import WalletDownload from '@/components/common/WalletDownload'
 
 export type ColumnWidths = 3 | 4
@@ -166,65 +158,107 @@ export const walletContent = [
       [
         {
           name: 'Ethereum Mainnet',
-          icon: <Image src={EthereumIcon} alt="Ethereum logo" />,
+          icon: {
+            src: '/images/chainsLogos/EthereumLogo.png',
+            alt: 'Ethereum logo',
+          },
         },
         {
           name: 'BNB Smart Chain',
-          icon: <Image src={BNBIcon} alt="BNB Chain logo" />,
+          icon: {
+            src: '/images/chainsLogos/BNBLogo.png',
+            alt: 'BNB Chain logo',
+          },
         },
         {
           name: 'Optimism',
-          icon: <Image src={OptimismIcon} alt="Optimism logo" />,
+          icon: {
+            src: '/images/chainsLogos/OptimismLogo.png',
+            alt: 'Optimism logo',
+          },
         },
         {
           name: 'Arbitrum',
-          icon: <Image src={ArbitrumIcon} alt="Arbitrum logo" />,
+          icon: {
+            src: '/images/chainsLogos/ArbitrumLogo.png',
+            alt: 'Arbitrum logo',
+          },
         },
         {
           name: 'Polygon',
-          icon: <Image src={PolygonIcon} alt="Polygon logo" />,
+          icon: {
+            src: '/images/chainsLogos/PolygonLogo.png',
+            alt: 'Polygon logo',
+          },
         },
         {
           name: 'Avalanche',
-          icon: <Image src={AvalancheIcon} alt="Avalanche logo" />,
+          icon: {
+            src: '/images/chainsLogos/AvalancheLogo.png',
+            alt: 'Avalanche logo',
+          },
         },
         {
           name: 'Gnosis Chain',
-          icon: <Image src={GnosisChainIcon} alt="Gnosis Chain logo" />,
+          icon: {
+            src: '/images/chainsLogos/GnosisChainLogo.png',
+            alt: 'Gnosis Chain logo',
+          },
         },
       ],
       [
         {
           name: 'Avalanche',
-          icon: <Image src={AvalancheIcon} alt="Avalanche logo" />,
+          icon: {
+            src: '/images/chainsLogos/AvalancheLogo.png',
+            alt: 'Avalanche logo',
+          },
         },
         {
           name: 'Polygon',
-          icon: <Image src={PolygonIcon} alt="Polygon logo" />,
+          icon: {
+            src: '/images/chainsLogos/PolygonLogo.png',
+            alt: 'Polygon logo',
+          },
         },
         {
           name: 'Gnosis Chain',
-          icon: <Image src={GnosisChainIcon} alt="Gnosis Chain logo" />,
+          icon: {
+            src: '/images/chainsLogos/GnosisChainLogo.png',
+            alt: 'Gnosis Chain logo',
+          },
         },
         {
           name: 'Aurora',
-          icon: <Image src={AuroraIcon} alt="Aurora logo" />,
+          icon: {
+            src: '/images/chainsLogos/AuroraLogo.png',
+            alt: 'Aurora logo',
+          },
         },
         {
           name: 'Ethereum Mainnet',
-          icon: <Image src={EthereumIcon} alt="Ethereum logo" />,
+          icon: {
+            src: '/images/chainsLogos/EthereumLogo.png',
+            alt: 'Ethereum logo',
+          },
         },
         {
           name: 'Optimism',
-          icon: <Image src={OptimismIcon} alt="Optimism logo" />,
+          icon: {
+            src: '/images/chainsLogos/OptimismLogo.png',
+            alt: 'Optimism logo',
+          },
         },
         {
           name: 'BNB Smart Chain',
-          icon: <Image src={BNBIcon} alt="BNB Chain logo" />,
+          icon: {
+            src: '/images/chainsLogos/BNBLogo.png',
+            alt: 'BNB Chain logo',
+          },
         },
       ],
     ],
-    component: AvailableNetworks,
+    component: Networks,
   },
   {
     variant: 'text-image',

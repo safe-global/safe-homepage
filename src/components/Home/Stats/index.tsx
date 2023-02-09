@@ -5,7 +5,7 @@ import css from './styles.module.css'
 import layoutCss from '@/components/common/styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
 
-const Community = ({ caption, title, text, items }: BaseBlock): ReactElement => {
+const Stats = ({ caption, title, text, items }: BaseBlock): ReactElement => {
   return (
     <Container>
       <Grid container className={layoutCss.container} spacing="30px">
@@ -38,4 +38,4 @@ const Community = ({ caption, title, text, items }: BaseBlock): ReactElement => 
   )
 }
 
-export default Community
+export default Stats
