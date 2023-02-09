@@ -4,7 +4,7 @@ import LinkButton from '@/components/common/LinkButton'
 import css from './styles.module.css'
 
 export type TextGridProps = {
-  image: {
+  image?: {
     src: string
     alt: string
   }
@@ -20,6 +20,7 @@ export type TextGridProps = {
   grid: {
     title: string
     items: {
+      title: string
       text: string
     }[]
   }
@@ -49,20 +50,23 @@ const TextGrid = ({ image, textBlock, grid }: TextGridProps) => {
               {link.text}
             </LinkButton>
           </Grid>
-          <Grid item md={6}>
-            <img src={image.src} alt={image.alt} />
-          </Grid>
+          {image ? (
+            <Grid item md={6}>
+              <img src={image.src} alt={image.alt} />
+            </Grid>
+          ) : null}
         </Grid>
         <Grid container mt={{ xs: 5, md: 10 }}>
           <Typography variant="caption" component="div" mb={3}>
             {gridTitle}
           </Typography>
           <Grid container>
-            {items.map(({ text }, index) => (
+            {items.map(({ title, text }, index) => (
               <Grid key={index} item xs={12} md={12 / items.length} className={css.card}>
-                <Typography variant="h4" color="text.primary">
-                  {text}
+                <Typography variant="h4" color="text.primary" mb={1}>
+                  {title}
                 </Typography>
+                <Typography color="primary.light">{text}</Typography>
               </Grid>
             ))}
           </Grid>
