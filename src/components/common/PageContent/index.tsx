@@ -1,10 +1,12 @@
 import { type ComponentType, type ReactElement } from 'react'
 
-type ContentItem = any & {
-  component: ComponentType
-}
+type ComponentAndProps<T> = {
+  component: ComponentType<T>
+} & T
 
-const PageContent = ({ content }: { content: ContentItem[] }): ReactElement => {
+type ContentItems = Array<ComponentAndProps<any>>
+
+const PageContent = ({ content }: { content: ContentItems }): ReactElement => {
   return (
     <>
       {content.map(({ component: Component, ...rest }, index) => {
