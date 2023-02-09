@@ -1,4 +1,4 @@
-import AaStack from '@/components/Core/AaStack'
+import LinkedCardGrid from '@/components/Core/LinkedCardGrid'
 
 export const coreContent = [
   {
@@ -20,6 +20,6 @@ export const coreContent = [
         text: 'Discover and contribute to a growing ecosystem of technological breakthroughs based on Safe with the Safe{Core} Protocol.',
       },
     ],
-    component: AaStack,
+    component: LinkedCardGrid,
   },
 ]

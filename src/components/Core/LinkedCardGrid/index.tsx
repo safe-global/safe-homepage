@@ -28,12 +28,12 @@ const GridItem = ({ icon, title, text }: BaseBlock) => (
   </Grid>
 )
 
-export type AaStackProps = {
+export type LinkedCardGridProps = {
   title: string
   items: BaseBlock[]
 }
 
-const AaStack = ({ title, items }: AaStackProps) => (
+const LinkedCardGrid = ({ title, items }: LinkedCardGridProps) => (
   <Container className={layoutCss.containerShort}>
     <Grid container className={layoutCss.containerShort} justifyContent="center">
       <Typography variant="caption" textAlign="center" component="div" mt="100px" mb={3}>
@@ -48,4 +48,4 @@ const AaStack = ({ title, items }: AaStackProps) => (
   </Container>
 )
 
-export default AaStack
+export default LinkedCardGrid
