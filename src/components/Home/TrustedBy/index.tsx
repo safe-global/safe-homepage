@@ -2,7 +2,6 @@ import { Container, Grid, Typography } from '@mui/material'
 import type { ReactElement } from 'react'
 
 import layoutCss from '@/components/common/styles.module.css'
-import { Image } from '@/components/common/Image'
 import type { BaseBlock } from '@/components/Home/types'
 
 const TrustedBy = ({ title, items }: BaseBlock): ReactElement => {
@@ -17,7 +16,7 @@ const TrustedBy = ({ title, items }: BaseBlock): ReactElement => {
             {items &&
               items.map((item, index) => (
                 <Grid key={index} item>
-                  <Image {...item.image} />
+                  <img {...item.image} />
                 </Grid>
               ))}
           </Grid>

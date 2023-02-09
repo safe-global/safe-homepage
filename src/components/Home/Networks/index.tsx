@@ -1,8 +1,6 @@
 import type { BaseBlock } from '@/components/Home/types'
 import { Grid, Typography } from '@mui/material'
 
-import { Image } from '@/components/common/Image'
-
 import css from './styles.module.css'
 
 const Networks = ({ title, text, items }: BaseBlock) => {
@@ -16,7 +14,7 @@ const Networks = ({ title, text, items }: BaseBlock) => {
           {items &&
             items.map((item, index) => (
               <Grid key={index} item>
-                <Image {...item.image} />
+                <img {...item.image} />
               </Grid>
             ))}
         </Grid>

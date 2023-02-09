@@ -3,7 +3,6 @@ import { Chip, Container, Grid, Typography } from '@mui/material'
 import type { GridProps } from '@mui/material'
 import type { ReactElement } from 'react'
 
-import { Image } from '@/components/common/Image'
 import type { BaseBlock } from '@/components/Home/types'
 
 import layoutCss from '@/components/common/styles.module.css'
@@ -21,7 +20,7 @@ const GridItem = ({ image, title, text, caption, width = 4 }: BaseBlock & { widt
       justifyContent="space-between"
     >
       <div>
-        {image ? <Image {...image} /> : null}
+        {image ? <img {...image} /> : null}
         <Typography variant="h4" className={css.title}>
           {title}
         </Typography>

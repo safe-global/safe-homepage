@@ -4,7 +4,6 @@ import { Container, Grid, Typography } from '@mui/material'
 import LinkButton from '@/components/common/LinkButton'
 import css from './styles.module.css'
 import ArrowIcon from '@/public/images/arrow-out-icon.svg'
-import { Image } from '@/components/common/Image'
 import type { BaseBlock } from '@/components/Home/types'
 
 const SafeCoreWallet = ({ items }: BaseBlock): ReactElement => {
@@ -19,7 +18,7 @@ const SafeCoreWallet = ({ items }: BaseBlock): ReactElement => {
                   <Typography variant="caption" mb={3}>
                     {item.caption}
                   </Typography>
-                  <Image {...item.image} />
+                  <img {...item.image} />
                   <div className={css.tag}>{item.text}</div>
                   <Typography variant="h3" mb={5} mt={2}>
                     {item.title}
