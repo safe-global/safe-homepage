@@ -69,6 +69,10 @@ export const coreContent = [
       text: 'Tap into the ecosystem’s cutting-edge plug-ins or write your own custom logic to plug into the Safe core contracts.',
       link: { text: 'Get started', href: '#' },
     },
+    gist: {
+      // TODO: replace for a definitive gist
+      id: '10a395880c30867601515560a4e5854d',
+    },
     grid: {
       title: 'Features',
       items: [
