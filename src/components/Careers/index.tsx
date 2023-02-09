@@ -1,13 +1,8 @@
 import type { ReactElement } from 'react'
 
+import PageContent from '@/components/common/PageContent'
 import { careersContent } from '@/components/Careers/content'
 
 export const Careers = (): ReactElement => {
-  return (
-    <>
-      {careersContent.map(({ component: Component, ...rest }, index) => {
-        return <Component key={index} {...rest} />
-      })}
-    </>
-  )
+  return <PageContent content={careersContent} />
 }
