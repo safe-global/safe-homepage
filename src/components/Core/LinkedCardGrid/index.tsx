@@ -1,10 +1,18 @@
 import { Container, Grid, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
-import type { BaseBlock } from '@/components/Home/types'
 import ArrowIcon from '@/public/images/arrow-out-icon.svg'
 import css from './styles.module.css'
 
-const GridItem = ({ icon, title, text }: BaseBlock) => (
+type GridItemProps = {
+  icon: {
+    src: string
+    alt: string
+  }
+  title: string
+  text: string
+}
+
+const GridItem = ({ icon, title, text }: GridItemProps) => (
   <Grid
     item
     xs={12}
@@ -16,7 +24,7 @@ const GridItem = ({ icon, title, text }: BaseBlock) => (
     position="relative"
   >
     <a href="#" className={css.cardLink}>
-      {icon}
+      <img src={icon.src} alt={icon.alt} />
       <div>
         <Typography variant="h4" mt={3} mb={1} color="text.primary">
           {title}
@@ -30,7 +38,7 @@ const GridItem = ({ icon, title, text }: BaseBlock) => (
 
 export type LinkedCardGridProps = {
   title: string
-  items: BaseBlock[]
+  items: GridItemProps[]
 }
 
 const LinkedCardGrid = ({ title, items }: LinkedCardGridProps) => (
