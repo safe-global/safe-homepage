@@ -6,7 +6,7 @@ import type { ReactElement } from 'react'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 
-export const Application = ({
+export const BannerCta = ({
   title,
   text,
   link,

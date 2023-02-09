@@ -4,7 +4,7 @@ import { ImageText } from './ImageText'
 import { Cards } from './Cards'
 import UspBlock from '@/components/common/UspBlock'
 import { Positions } from './Positions'
-import { Application } from './Application'
+import { BannerCta } from './BannerCta'
 
 export const careersContent = [
   {
@@ -186,7 +186,7 @@ export const careersContent = [
     component: Positions,
   },
   {
-    component: Application,
+    component: BannerCta,
     title: "Couldn't find what you were looking for?",
     text: 'Send us an initiative application!',
     link: {
