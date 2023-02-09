@@ -5,6 +5,8 @@ import clsx from 'clsx'
 import type { ReactElement } from 'react'
 
 import { useOpenPositions } from '@/hooks/useOpenPositions'
+import { FloatingTiles } from '@/components/Careers/FloatingTiles'
+import { palette } from '@/styles/palette'
 
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
@@ -24,7 +26,10 @@ export const Intro = ({
   const { data: positions = [] } = useOpenPositions()
 
   return (
-    <Container className={css.bg}>
+    <Container>
+      <div className={css.orbit}>
+        <FloatingTiles tiles={40} color={palette.primary.main} />
+      </div>
       <Grid container className={clsx(layoutCss.container, css.container)}>
         <Grid item>
           <Chip
