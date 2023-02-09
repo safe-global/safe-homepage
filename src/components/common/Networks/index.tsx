@@ -11,17 +11,19 @@ const defaultThemeColors = {
   textColor: '#000000',
 }
 
-export type NetworksProps = {
+type NetworksProps = {
+  title: string
+  text: string
   networks: NetworkChipProps[][]
 }
 
-const Networks = ({ networks }: NetworksProps) => {
+const Networks = ({ title, text, networks }: NetworksProps) => {
   const { data: chainsData = [] } = useChainsData()
 
   return (
     <Container className={layoutCss.container}>
       <Typography variant="h2" mb={5} align="center">
-        Available on 10+ networks
+        {title}
       </Typography>
       <div className={css.networksWrapper}>
         <div className={css.gradientBase} />
@@ -36,7 +38,7 @@ const Networks = ({ networks }: NetworksProps) => {
         <div className={clsx(css.gradientBase, css.gradientFlipped)} />
       </div>
       <Typography className={css.secondaryText} variant="body1">
-        And more networks, including testnets.
+        {text}
       </Typography>
     </Container>
   )

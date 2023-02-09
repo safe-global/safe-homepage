@@ -154,6 +154,8 @@ export const walletContent = [
     component: ImageText,
   },
   {
+    title: 'Available on 10+ networks',
+    text: 'And more networks, including testnets.',
     networks: [
       [
         {

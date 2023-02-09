@@ -13,7 +13,7 @@ export type NetworkChipProps = {
 const NetworkChip = ({ name, icon, textColor, backgroundColor }: NetworkChipProps & Omit<ChainProps, 'chainName'>) => (
   <Box className={css.wrapper} sx={{ backgroundColor }}>
     <div className={css.icon}>
-      <img src={icon.src} alt={icon.alt} />
+      <img {...icon} />
     </div>
     <Typography className={css.name} variant="body1" color={textColor}>
       {name}
