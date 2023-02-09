@@ -4,6 +4,7 @@ import { ImageText } from './ImageText'
 import { Cards } from './Cards'
 import UspBlock from '@/components/common/UspBlock'
 import { Positions } from './Positions'
+import { Application } from './Application'
 
 export const careersContent = [
   {
@@ -183,5 +184,14 @@ export const careersContent = [
   {
     title: 'Open positions',
     component: Positions,
+  },
+  {
+    component: Application,
+    title: "Couldn't find what you were looking for?",
+    text: 'Send us an initiative application!',
+    link: {
+      title: 'jobs@safe.global',
+      href: 'mailto:jobs@safe.global',
+    },
   },
 ]
