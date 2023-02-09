@@ -36,7 +36,7 @@ export const coreContent = [
     textBlock: {
       caption: 'Safe core protocol',
       title: 'Unlock more from Safe with the Safe {Core} Protocol',
-      text: 'Tap into the ecosystem&apos;s cutting-edge plug-ins or write your own custom logic to plug into the Safe core contracts.',
+      text: 'Tap into the ecosystem’s cutting-edge plug-ins or write your own custom logic to plug into the Safe core contracts.',
       link: { text: 'Get started', href: '#' },
     },
     image: {
@@ -47,16 +47,46 @@ export const coreContent = [
       title: 'Benefits',
       items: [
         {
-          text: 'Improve UX of your product with account abstraction',
+          title: 'Improve UX of your product with account abstraction',
         },
         {
-          text: 'Customize access control to Safe accounts',
+          title: 'Customize access control to Safe accounts',
         },
         {
-          text: 'Build on battle tested  security',
+          title: 'Build on battle tested  security',
         },
         {
-          text: 'Build any use case by extending the on-chain logic of core contracts',
+          title: 'Build any use case by extending the on-chain logic of core contracts',
+        },
+      ],
+    },
+    component: TextGrid,
+  },
+  {
+    textBlock: {
+      caption: 'Safe Core API',
+      title: 'Unlock more from Safe with the Safe {Core} Protocol',
+      text: 'Tap into the ecosystem’s cutting-edge plug-ins or write your own custom logic to plug into the Safe core contracts.',
+      link: { text: 'Get started', href: '#' },
+    },
+    gist: {
+      // TODO: replace for a definitive gist
+      id: '10a395880c30867601515560a4e5854d',
+    },
+    grid: {
+      title: 'Features',
+      items: [
+        {
+          title: 'Increased security',
+          text: 'Top notch security and custom access control for you and for your users',
+        },
+        {
+          title: 'Lower complexity',
+          text: 'Bundle painful blockchain click-heavy user flows in one click',
+        },
+        {
+          title: 'Infinite flexibility',
+          text: 'Fully leverage the composability of the stack using the core SDK',
         },
       ],
     },

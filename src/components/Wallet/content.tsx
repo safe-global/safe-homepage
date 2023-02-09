@@ -149,7 +149,7 @@ export const walletContent = [
           <b>Simulate transactions</b> before they happen
         </>
       ),
-      text: 'Simulate your transactions before sending them through, right from the Safe&apos;s UI. Get instant prompts and full analysis of your transaction&apos;s success or failure with a simulation report on Tenderly.',
+      text: 'Simulate your transactions before sending them through, right from the Safe’s UI. Get instant prompts and full analysis of your transaction’s success or failure with a simulation report on Tenderly.',
       buttons: [{ text: 'Get started', href: '#', variant: 'link' }],
     },
     component: ImageText,
