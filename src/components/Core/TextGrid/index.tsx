@@ -1,7 +1,7 @@
 import { Chip, Container, Grid, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import LinkButton from '@/components/common/LinkButton'
-import Gist from 'react-gist'
+import { Gist } from '@/components/common/Gist'
 import css from './styles.module.css'
 
 export type TextGridProps = {

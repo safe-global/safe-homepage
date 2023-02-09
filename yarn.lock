@@ -5005,11 +5005,6 @@ react-dom@18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
-react-gist@^1.2.4:
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/react-gist/-/react-gist-1.2.4.tgz#4ee71f24cc6f60836354e2ad6e30f6d24e06e0f7"
-  integrity sha512-uDgPJ08IJsl/7auK3CS53JKGC1P/X7tNCzo9k0r6D/5l+ilsxE1+SAaylJCh0aeyZoJOoxQikKU+MHsAvA9iFw==
-
 react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
