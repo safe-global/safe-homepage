@@ -3,7 +3,7 @@ import { Values } from './Values'
 import { ImageText } from './ImageText'
 import { Cards } from './Cards'
 import UspBlock from '@/components/common/UspBlock'
-import { Positions } from './Positions'
+import { Positions, POSITIONS_ID } from './Positions'
 import { BannerCta } from './BannerCta'
 
 export const careersContent = [
@@ -12,7 +12,7 @@ export const careersContent = [
     text: 'Our team is focused on a mission of unlocking ownership for the world. By building infrastructure that is robust and usable, we aim to fix some of web3’s biggest challenges.',
     link: {
       title: 'View positions',
-      href: '#positions',
+      href: `#${POSITIONS_ID}`,
     },
     component: Intro,
   },
@@ -183,6 +183,7 @@ export const careersContent = [
   },
   {
     title: 'Open positions',
+    id: POSITIONS_ID,
     component: Positions,
   },
   {

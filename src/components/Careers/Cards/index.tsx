@@ -37,9 +37,9 @@ const Card = ({ header, title, link }: CardProps): ReactElement => {
   )
 }
 
-export const Cards = ({ items, title }: { items: CardProps[]; title: string }): ReactElement => {
+export const Cards = ({ items, title, id }: { items: CardProps[]; title: string; id?: string }): ReactElement => {
   return (
-    <Container>
+    <Container id={id}>
       <Grid container spacing="30px" className={layoutCss.container}>
         <Grid item xs={12}>
           <Typography variant="h1" className={css.title}>

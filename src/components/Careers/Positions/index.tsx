@@ -10,6 +10,8 @@ import type { CardProps } from '@/components/Careers/Cards'
 
 import css from './styles.module.css'
 
+export const POSITIONS_ID = 'positions'
+
 const parsePosition = ({ url, location, name }: Position): CardProps => {
   return {
     title: name,
