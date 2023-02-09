@@ -38,7 +38,7 @@ const TextGrid = ({ image, textBlock, grid, gist }: TextGridProps) => {
   return (
     <Container>
       <Grid container className={layoutCss.containerShort}>
-        <Grid container className={css.wrapper} justifyContent="space-between">
+        <Grid container className={`${image ? css.wrapper : ''}`} justifyContent="space-between">
           <Grid item md={5} display="flex" flexDirection="column" justifyContent="center" gap={{ xs: 3, md: 4 }}>
             <Chip
               label={
