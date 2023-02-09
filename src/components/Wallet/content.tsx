@@ -1,7 +1,4 @@
 import Image from 'next/image'
-import ShieldIcon from '@/public/images/Wallet/shield.svg'
-import CheckIcon from '@/public/images/Wallet/check.svg'
-import SettingsIcon from '@/public/images/Wallet/settings.svg'
 import ArbitrumIcon from '@/public/images/chainsLogos/ArbitrumLogo.png'
 import AuroraIcon from '@/public/images/chainsLogos/AuroraLogo.png'
 import AvalancheIcon from '@/public/images/chainsLogos/AvalancheLogo.png'
@@ -20,7 +17,7 @@ import ClientAppsImage from '@/public/images/Wallet/clients.png'
 import SimulateTransactionsImage from '@/public/images/Wallet/simulate-transactions.png'
 import Stepper from '@/components/Wallet/Stepper'
 import HeroSection from '@/components/Wallet/Hero'
-import UspBlock from '@/components/Wallet/UspBlock'
+import UspBlock from '@/components/common/UspBlock'
 import ImageText from '@/components/Wallet/ImageText'
 import AvailableNetworks from '@/components/Wallet/AvailableNetworks'
 import WalletDownload from '@/components/common/WalletDownload'
@@ -56,17 +53,27 @@ export const walletContent = [
     title: 'Your keys. Your coins.',
     items: [
       {
-        icon: <ShieldIcon />,
+        image: {
+          src: '/images/Wallet/shield.svg',
+          alt: 'Shield with a checkmark on it',
+        },
         title: 'Battle Tested Security',
         text: 'Top notch security and custom access control for you and for your users.',
       },
       {
-        icon: <CheckIcon />,
+        image: {
+          src: '/images/Wallet/check.svg',
+          alt: 'Checkmark',
+        },
         title: 'Co-ownership',
         text: 'Multi-sig based trustless group ownership ownership and asset co-ordination.',
       },
       {
-        icon: <SettingsIcon />,
+        image: {
+          // TODO: Use correct image from design
+          src: '/images/Wallet/settings.svg',
+          alt: 'Control panel sliders',
+        },
         title: 'Self-custody',
         text: 'We never own any of the assets stored in user accounts. We never will.',
       },

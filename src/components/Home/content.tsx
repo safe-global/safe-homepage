@@ -1,27 +1,5 @@
-import Image from 'next/image'
-import OneInchLogo from '@/public/images/1inch.svg'
-import MakerLogo from '@/public/images/maker.svg'
-import ENSLogo from '@/public/images/ens.svg'
-import ZapperLogo from '@/public/images/zapper.svg'
-import AaveLogo from '@/public/images/aave.svg'
-import BalancerLogo from '@/public/images/balancer.svg'
-import VitalikImage from '@/public/images/vitalik.png'
-import PunkImage from '@/public/images/punk.png'
-import AdidasLogo from '@/public/images/adidas.svg'
-import KPMGLogo from '@/public/images/kpmg.svg'
-import StripeLogo from '@/public/images/stripe.svg'
-import CodeIcon from '@/public/images/code.svg'
-import LockIcon from '@/public/images/lock.svg'
 import SafeCoreImage from '@/public/images/safe-core-type.svg'
 import SafeWalletImage from '@/public/images/safe-wallet-type.svg'
-import MainnetIcon from '@/public/images/networks/mainnet.svg'
-import BNBIcon from '@/public/images/networks/bnb.svg'
-import OptimismIcon from '@/public/images/networks/optimism.svg'
-import ArbitrumIcon from '@/public/images/networks/arbitrum.svg'
-import PolygonIcon from '@/public/images/networks/polygon.svg'
-import AvalancheIcon from '@/public/images/networks/avalanche.svg'
-import GnosisChainIcon from '@/public/images/networks/gnosischain.svg'
-import AuroraIcon from '@/public/images/networks/aurora.svg'
 
 import Intro from '@/components/Home/Intro'
 import Community from '@/components/Home/Community'
@@ -73,37 +51,70 @@ export const homeContent = [
     text: '',
     items: [
       {
-        icon: <OneInchLogo />,
+        image: {
+          src: '/images/1inch.svg',
+          alt: '1inch',
+        },
       },
       {
-        icon: <MakerLogo />,
+        image: {
+          src: '/images/maker.svg',
+          alt: 'MakerDAO',
+        },
       },
       {
-        icon: <ENSLogo />,
+        image: {
+          src: '/images/ens.svg',
+          alt: 'Ethereum Name Service',
+        },
       },
       {
-        icon: <ZapperLogo />,
+        image: {
+          src: '/images/zapper.svg',
+          alt: 'Zapper',
+        },
       },
       {
-        icon: <AaveLogo />,
+        image: {
+          src: '/images/aave.svg',
+          alt: 'Aave',
+        },
       },
       {
-        icon: <BalancerLogo />,
+        image: {
+          src: '/images/balancer.svg',
+          alt: 'Balancer DeFi',
+        },
       },
       {
-        icon: <Image src={VitalikImage} alt="Image of Vitalik" />,
+        image: {
+          src: '/images/vitalik.png',
+          alt: 'Vitalik',
+        },
       },
       {
-        icon: <Image src={PunkImage} alt="Image of Punk" />,
+        image: {
+          src: '/images/punk.png',
+          alt: 'Punk 6529',
+        },
       },
       {
-        icon: <AdidasLogo />,
+        image: {
+          src: '/images/adidas.svg',
+          alt: 'Adidas',
+        },
       },
       {
-        icon: <KPMGLogo />,
+        image: {
+          src: '/images/kpmg.svg',
+          alt: 'KPMG International Limited',
+        },
       },
       {
-        icon: <StripeLogo />,
+        image: {
+          src: '/images/stripe.svg',
+          alt: 'Stripe',
+        },
       },
     ],
     component: TrustedBy,
@@ -113,28 +124,52 @@ export const homeContent = [
     text: 'And more networks, including testnets.',
     items: [
       {
-        icon: <MainnetIcon />,
+        image: {
+          src: '/images/networks/mainnet.svg',
+          alt: 'Mainnet',
+        },
       },
       {
-        icon: <BNBIcon />,
+        image: {
+          src: '/images/networks/bnb.svg',
+          alt: 'Binance Smart Chain',
+        },
       },
       {
-        icon: <OptimismIcon />,
+        image: {
+          src: '/images/networks/optimism.svg',
+          alt: 'Optimism',
+        },
       },
       {
-        icon: <ArbitrumIcon />,
+        image: {
+          src: '/images/networks/arbitrum.svg',
+          alt: 'Arbitrum',
+        },
       },
       {
-        icon: <PolygonIcon />,
+        image: {
+          src: '/images/networks/polygon.svg',
+          alt: 'Polygon',
+        },
       },
       {
-        icon: <AvalancheIcon />,
+        image: {
+          src: '/images/networks/avalanche.svg',
+          alt: 'Avalanche',
+        },
       },
       {
-        icon: <GnosisChainIcon />,
+        image: {
+          src: '/images/networks/gnosischain.svg',
+          alt: 'Gnosis Chain',
+        },
       },
       {
-        icon: <AuroraIcon />,
+        image: {
+          src: '/images/networks/aurora.svg',
+          alt: 'Aurora',
+        },
       },
     ],
     component: Networks,
@@ -151,7 +186,10 @@ export const homeContent = [
           </>
         ),
         text: <SafeCoreImage />,
-        icon: <CodeIcon />,
+        image: {
+          src: '/images/code.svg',
+          alt: 'Greater than sign, forward slash, less than sign',
+        },
         link: {
           title: 'Learn more',
           href: '#',
@@ -167,7 +205,10 @@ export const homeContent = [
           </>
         ),
         text: <SafeWalletImage />,
-        icon: <LockIcon />,
+        image: {
+          src: '/images/lock.svg',
+          alt: 'Padlock',
+        },
         link: {
           title: 'Learn more',
           href: '#',
