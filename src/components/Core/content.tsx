@@ -36,7 +36,7 @@ export const coreContent = [
     textBlock: {
       caption: 'Safe core protocol',
       title: 'Unlock more from Safe with the Safe {Core} Protocol',
-      text: 'Tap into the ecosystem’s cutting-edge plug-ins or write your own custom logic to plug into the Safe core contracts.',
+      text: 'Tap into the ecosystem&apos;s cutting-edge plug-ins or write your own custom logic to plug into the Safe core contracts.',
       link: { text: 'Get started', href: '#' },
     },
     image: {
