@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react'
 import Image from 'next/image'
-import { Button, Container, Grid, Typography } from '@mui/material'
+import { Button, Container, Divider, Grid, Typography } from '@mui/material'
 import { IOS_LINK, GPLAY_LINK } from '@/config/constants'
 import IOSDownload from '@/public/images/ios-download.svg'
 import GPlayDownload from '@/public/images/google-play-download.svg'
@@ -59,6 +59,7 @@ const HeroSection = ({ image, textBlock }: HeroSectionProps): ReactElement => {
           </Grid>
         </Grid>
       </Grid>
+      <Divider />
     </Container>
   )
 }

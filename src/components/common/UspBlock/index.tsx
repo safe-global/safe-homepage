@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import { Chip, Container, Divider, Grid, Typography } from '@mui/material'
+import { Chip, Container, Grid, Typography } from '@mui/material'
 import type { GridProps } from '@mui/material'
 import type { ReactElement } from 'react'
 
@@ -51,7 +51,6 @@ export type UspBlockProps = {
 
 const UspBlock = ({ variant, title, text, items }: UspBlockProps): ReactElement => (
   <Container>
-    <Divider />
     <Grid
       container
       className={clsx(layoutCss.containerShort, css.container)}
