@@ -1,27 +1,9 @@
-import type { StepsType } from '@/components/Wallet/Stepper'
-import Stepper from '@/components/Wallet/Stepper'
 import HeroSection from '@/components/Wallet/Hero'
 import UspBlock from '@/components/common/UspBlock'
 import ImageText from '@/components/Wallet/ImageText'
 import Networks from '@/components/common/Networks'
 import TextBlockBanner from '@/components/common/TextBlockBanner'
-
-export type ColumnWidths = 3 | 4
-
-const convenienceContentSteps: StepsType = [
-  {
-    label: 'Create a new signer account',
-    state: 'completed',
-  },
-  {
-    label: 'Allow push notifications',
-    description: 'Track your assets and transactions on mobile. Stay informed on-the-go.',
-    state: 'active',
-  },
-  {
-    label: 'Hardware wallet support',
-  },
-]
+import TextStepperBlockImage from '@/components/Wallet/TextStepperBlockImage'
 
 export const walletContent = [
   {
@@ -282,9 +264,22 @@ export const walletContent = [
     textBlock: {
       title: 'Convenience of multisig in your pocket',
       text: 'Track your assets and transactions on mobile. Stay informed on-the-go.',
-      subBlock: <Stepper steps={convenienceContentSteps} />,
+      steps: [
+        {
+          label: 'Create a new signer account',
+          state: 'completed',
+        },
+        {
+          label: 'Allow push notifications',
+          description: 'Track your assets and transactions on mobile. Stay informed on-the-go.',
+          state: 'active',
+        },
+        {
+          label: 'Hardware wallet support',
+        },
+      ],
     },
-    component: ImageText,
+    component: TextStepperBlockImage,
   },
   {
     title: 'Use Safe {WALLET} anywhere',

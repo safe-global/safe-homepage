@@ -14,7 +14,6 @@ export type ImageTextProps = {
   textBlock: {
     title: string
     text: string
-    subBlock?: ReactElement
     buttons?: {
       text: string
       href?: string
@@ -24,7 +23,7 @@ export type ImageTextProps = {
 }
 
 const ImageText = ({ image, textBlock, variant }: ImageTextProps): ReactElement => {
-  const { title, text, subBlock, buttons } = textBlock
+  const { title, text, buttons } = textBlock
 
   return (
     <Container>
@@ -37,7 +36,6 @@ const ImageText = ({ image, textBlock, variant }: ImageTextProps): ReactElement 
         <Grid item md={5} display="flex" flexDirection="column" justifyContent="center" gap={{ xs: 3, md: 4 }}>
           <Typography variant="h2">{title}</Typography>
           <Typography>{text}</Typography>
-          {subBlock}
           {buttons ? (
             <Box display="flex" gap={3}>
               {buttons.map((button) => {
