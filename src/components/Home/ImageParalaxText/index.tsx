@@ -9,7 +9,7 @@ import LinkButton from '@/components/common/LinkButton'
 import { MetricsCard } from './MetricsCard'
 import css from './styles.module.css'
 
-const Security = ({ title, text, caption, link }: BaseBlock): ReactElement => {
+const ImageParalaxText = ({ title, text, caption, link }: BaseBlock): ReactElement => {
   return (
     <Container disableGutters>
       <Grid container className={layoutCss.container} spacing="30px">
@@ -72,4 +72,4 @@ const Security = ({ title, text, caption, link }: BaseBlock): ReactElement => {
   )
 }
 
-export default Security
+export default ImageParalaxText

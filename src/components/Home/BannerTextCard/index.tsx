@@ -2,9 +2,8 @@ import { Grid, Typography, Container, Box } from '@mui/material'
 import type { ReactElement } from 'react'
 
 import css from './styles.module.css'
-import type { BaseBlock } from '@/components/Home/types'
 
-const Ecosystem = ({ title, text }: BaseBlock): ReactElement => {
+const BannerTextCard = ({ title, text }: { title: string; text: string }): ReactElement => {
   return (
     <div className={css.gradient}>
       <Container sx={{ textAlign: 'center' }}>
@@ -25,4 +24,4 @@ const Ecosystem = ({ title, text }: BaseBlock): ReactElement => {
   )
 }
 
-export default Ecosystem
+export default BannerTextCard

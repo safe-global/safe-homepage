@@ -1,16 +1,13 @@
-import SafeCoreImage from '@/public/images/safe-core-type.svg'
-import SafeWalletImage from '@/public/images/safe-wallet-type.svg'
-
 import Intro from '@/components/Home/Intro'
-import Community from '@/components/Home/Community'
-import TrustedBy from '@/components/Home/TrustedBy'
-import SafeCoreWallet from '@/components/Home/SafeCoreWallet'
-import Networks from '@/components/Home/Networks'
-import Ecosystem from '@/components/Home/Ecosystem'
-import Security from '@/components/Home/Security'
-import Governance from '@/components/Home/Governance'
-import Contact from '@/components/Home/Contact'
-import WalletDownload from '@/components/common/WalletDownload'
+import Stats from '@/components/Home/Stats'
+import TitleLogos from '@/components/Home/TitleLogos'
+import BigIconsCardGrid from '@/components/Home/BigIconsCardGrid'
+import Networks from '@/components/common/Networks'
+import BannerTextCard from '@/components/Home/BannerTextCard'
+import ImageParalaxText from '@/components/Home/ImageParalaxText'
+import TitleTextLinkedCardGrid from '@/components/Home/TitleTextLinkedCardGrid'
+import TitleButton from '@/components/Home/TitleButton'
+import TextBlockBanner from '@/components/common/TextBlockBanner'
 
 export const homeContent = [
   {
@@ -40,7 +37,116 @@ export const homeContent = [
         text: 'Safe accounts deployed',
       },
     ],
-    component: Community,
+    component: Stats,
+  },
+  {
+    title: 'Supported Networks',
+    text: 'And more networks, including testnets.',
+    networks: [
+      [
+        {
+          name: 'Ethereum Mainnet',
+          icon: {
+            src: '/images/chainsLogos/EthereumLogo.png',
+            alt: 'Ethereum logo',
+          },
+        },
+        {
+          name: 'BNB Smart Chain',
+          icon: {
+            src: '/images/chainsLogos/BNBLogo.png',
+            alt: 'BNB Chain logo',
+          },
+        },
+        {
+          name: 'Optimism',
+          icon: {
+            src: '/images/chainsLogos/OptimismLogo.png',
+            alt: 'Optimism logo',
+          },
+        },
+        {
+          name: 'Arbitrum',
+          icon: {
+            src: '/images/chainsLogos/ArbitrumLogo.png',
+            alt: 'Arbitrum logo',
+          },
+        },
+        {
+          name: 'Polygon',
+          icon: {
+            src: '/images/chainsLogos/PolygonLogo.png',
+            alt: 'Polygon logo',
+          },
+        },
+        {
+          name: 'Avalanche',
+          icon: {
+            src: '/images/chainsLogos/AvalancheLogo.png',
+            alt: 'Avalanche logo',
+          },
+        },
+        {
+          name: 'Gnosis Chain',
+          icon: {
+            src: '/images/chainsLogos/GnosisChainLogo.png',
+            alt: 'Gnosis Chain logo',
+          },
+        },
+      ],
+      [
+        {
+          name: 'Avalanche',
+          icon: {
+            src: '/images/chainsLogos/AvalancheLogo.png',
+            alt: 'Avalanche logo',
+          },
+        },
+        {
+          name: 'Polygon',
+          icon: {
+            src: '/images/chainsLogos/PolygonLogo.png',
+            alt: 'Polygon logo',
+          },
+        },
+        {
+          name: 'Gnosis Chain',
+          icon: {
+            src: '/images/chainsLogos/GnosisChainLogo.png',
+            alt: 'Gnosis Chain logo',
+          },
+        },
+        {
+          name: 'Aurora',
+          icon: {
+            src: '/images/chainsLogos/AuroraLogo.png',
+            alt: 'Aurora logo',
+          },
+        },
+        {
+          name: 'Ethereum Mainnet',
+          icon: {
+            src: '/images/chainsLogos/EthereumLogo.png',
+            alt: 'Ethereum logo',
+          },
+        },
+        {
+          name: 'Optimism',
+          icon: {
+            src: '/images/chainsLogos/OptimismLogo.png',
+            alt: 'Optimism logo',
+          },
+        },
+        {
+          name: 'BNB Smart Chain',
+          icon: {
+            src: '/images/chainsLogos/BNBLogo.png',
+            alt: 'BNB Chain logo',
+          },
+        },
+      ],
+    ],
+    component: Networks,
   },
   {
     title: (
@@ -48,7 +154,6 @@ export const homeContent = [
         Trusted by the best in <b>Web3</b>
       </>
     ),
-    text: '',
     items: [
       {
         image: {
@@ -117,66 +222,9 @@ export const homeContent = [
         },
       },
     ],
-    component: TrustedBy,
+    component: TitleLogos,
   },
   {
-    title: 'Supported Networks',
-    text: 'And more networks, including testnets.',
-    items: [
-      {
-        image: {
-          src: '/images/networks/mainnet.svg',
-          alt: 'Mainnet',
-        },
-      },
-      {
-        image: {
-          src: '/images/networks/bnb.svg',
-          alt: 'Binance Smart Chain',
-        },
-      },
-      {
-        image: {
-          src: '/images/networks/optimism.svg',
-          alt: 'Optimism',
-        },
-      },
-      {
-        image: {
-          src: '/images/networks/arbitrum.svg',
-          alt: 'Arbitrum',
-        },
-      },
-      {
-        image: {
-          src: '/images/networks/polygon.svg',
-          alt: 'Polygon',
-        },
-      },
-      {
-        image: {
-          src: '/images/networks/avalanche.svg',
-          alt: 'Avalanche',
-        },
-      },
-      {
-        image: {
-          src: '/images/networks/gnosischain.svg',
-          alt: 'Gnosis Chain',
-        },
-      },
-      {
-        image: {
-          src: '/images/networks/aurora.svg',
-          alt: 'Aurora',
-        },
-      },
-    ],
-    component: Networks,
-  },
-  {
-    title: '',
-    text: '',
     items: [
       {
         caption: 'Developers',
@@ -185,8 +233,11 @@ export const homeContent = [
             Build on the <i>Safest</i> account abstraction stack
           </>
         ),
-        text: <SafeCoreImage />,
-        image: {
+        text: {
+          src: '/images/safe-core-type.svg',
+          alt: 'Safe Core green background',
+        },
+        icon: {
           src: '/images/code.svg',
           alt: 'Greater than sign, forward slash, less than sign',
         },
@@ -204,8 +255,11 @@ export const homeContent = [
             multi-sig wallet in web3
           </>
         ),
-        text: <SafeWalletImage />,
-        image: {
+        text: {
+          src: '/images/safe-wallet-type.svg',
+          alt: 'Safe Wallet green background',
+        },
+        icon: {
           src: '/images/lock.svg',
           alt: 'Padlock',
         },
@@ -215,7 +269,7 @@ export const homeContent = [
         },
       },
     ],
-    component: SafeCoreWallet,
+    component: BigIconsCardGrid,
   },
   {
     title: (
@@ -227,7 +281,7 @@ export const homeContent = [
       </>
     ),
     text: '130+ projects including DAO tools, DeFi, NFT collectives are building on Safe Core.',
-    component: Ecosystem,
+    component: BannerTextCard,
   },
   {
     caption: 'Security',
@@ -247,7 +301,7 @@ export const homeContent = [
       title: 'Read report',
       href: '#',
     },
-    component: Security,
+    component: ImageParalaxText,
   },
   {
     caption: 'Governance',
@@ -292,7 +346,7 @@ export const homeContent = [
         },
       },
     ],
-    component: Governance,
+    component: TitleTextLinkedCardGrid,
   },
   {
     title: 'Want ot reach the core team members?',
@@ -301,11 +355,11 @@ export const homeContent = [
       title: 'Contact us',
       href: '#',
     },
-    component: Contact,
+    component: TitleButton,
   },
   {
     title: 'Use Safe {WALLET} anywhere',
     text: 'Access your assets anywhere without compromising on security on our flagship interfaces built on Safe {Core}.',
-    component: WalletDownload,
+    component: TextBlockBanner,
   },
 ]

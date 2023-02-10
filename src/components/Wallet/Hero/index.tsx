@@ -9,7 +9,10 @@ import QRImage from '@/public/images/Wallet/wallet-QR.png'
 import css from './styles.module.css'
 
 export type HeroSectionProps = {
-  image: JSX.Element
+  image: {
+    src: string
+    alt: string
+  }
   textBlock: {
     title: string
     button: {
@@ -27,7 +30,7 @@ const HeroSection = ({ image, textBlock }: HeroSectionProps): ReactElement => {
     <Container>
       <Grid container className={css.container} spacing={{ xs: 6, md: '30px' }} justifyContent="space-between">
         <Grid item md={6}>
-          {image}
+          <img {...image} />
         </Grid>
         <Grid item md={6}>
           <Typography className={css.title} variant="h1" mb={5}>

@@ -1,8 +1,15 @@
 import { Button, Container, Divider, Grid, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
-import type { BaseBlock } from '@/components/Home/types'
 
-const Contact = ({ title, link }: BaseBlock) => {
+type TitleButtonProps = {
+  title: string
+  link: {
+    title: string
+    href: string
+  }
+}
+
+const TitleButton = ({ title, link }: TitleButtonProps) => {
   return (
     <Container>
       <Divider />
@@ -11,8 +18,8 @@ const Contact = ({ title, link }: BaseBlock) => {
           <Typography variant="h2" mb={5}>
             {title}
           </Typography>
-          <Button href={link?.href} variant="contained" size="large">
-            {link?.title}
+          <Button href={link.href} variant="contained" size="large">
+            {link.title}
           </Button>
         </Grid>
       </Grid>
@@ -20,4 +27,4 @@ const Contact = ({ title, link }: BaseBlock) => {
   )
 }
 
-export default Contact
+export default TitleButton
