@@ -3,7 +3,7 @@ import Stats from '@/components/Home/Stats'
 import TitleLogos from '@/components/Home/TitleLogos'
 import BigIconsCardGrid from '@/components/Home/BigIconsCardGrid'
 import Networks from '@/components/common/Networks'
-import TextCardWithBackground from '@/components/Home/TextCardWithBackground'
+import BannerTextCard from '@/components/Home/BannerTextCard'
 import ImageParalaxText from '@/components/Home/ImageParalaxText'
 import TitleTextLinkedCardGrid from '@/components/Home/TitleTextLinkedCardGrid'
 import TitleButton from '@/components/Home/TitleButton'
@@ -281,7 +281,7 @@ export const homeContent = [
       </>
     ),
     text: '130+ projects including DAO tools, DeFi, NFT collectives are building on Safe Core.',
-    component: TextCardWithBackground,
+    component: BannerTextCard,
   },
   {
     caption: 'Security',

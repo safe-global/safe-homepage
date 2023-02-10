@@ -3,7 +3,7 @@ import type { ReactElement } from 'react'
 
 import css from './styles.module.css'
 
-const TextCardWithBackground = ({ title, text }: { title: string; text: string }): ReactElement => {
+const BannerTextCard = ({ title, text }: { title: string; text: string }): ReactElement => {
   return (
     <div className={css.gradient}>
       <Container sx={{ textAlign: 'center' }}>
@@ -24,4 +24,4 @@ const TextCardWithBackground = ({ title, text }: { title: string; text: string }
   )
 }
 
-export default TextCardWithBackground
+export default BannerTextCard
