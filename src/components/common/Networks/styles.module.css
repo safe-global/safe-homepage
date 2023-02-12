@@ -2,7 +2,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
+  overflow: hidden;
 }
 
 .gradientBase {
@@ -12,6 +13,7 @@
   bottom: 0;
   left: 0;
   background: linear-gradient(270deg, rgba(18, 19, 18, 0) 0%, var(--mui-palette-background-default) 100%);
+  z-index: 1;
 }
 
 .gradientFlipped {
@@ -25,6 +27,33 @@
   margin-top: 32px;
   text-align: center;
   color: var(--mui-palette-primary-light)
+}
+
+.slider {
+  animation: slide 60s linear infinite;
+}
+
+.sliderReverse {
+  transform: translateX(-1192px);
+  animation: slide-reverse 60s linear infinite;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-1208px);
+  }
+}
+
+@keyframes slide-reverse {
+  from {
+    transform: translateX(-1192px);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 @media (min-width: 600px) {
