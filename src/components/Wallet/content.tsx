@@ -4,6 +4,7 @@ import ImageText from '@/components/Wallet/ImageText'
 import Networks from '@/components/common/Networks'
 import TextBlockBanner from '@/components/common/TextBlockBanner'
 import TextStepperBlockImage from '@/components/Wallet/TextStepperBlockImage'
+import RadialAnimation from '@/components/Wallet/RadialAnimation'
 
 export const walletContent = [
   {
@@ -64,6 +65,10 @@ export const walletContent = [
       buttons: [{ text: 'Get started', href: '#', variant: 'link' }],
     },
     component: ImageText,
+  },
+  {
+    text: '',
+    component: RadialAnimation,
   },
   {
     variant: 'image-text',

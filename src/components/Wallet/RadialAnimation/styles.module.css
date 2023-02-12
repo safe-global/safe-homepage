@@ -1,0 +1,46 @@
+.wrapper {
+  background-image: url("/images/IdentPlanets/orbits.svg");
+  background-repeat: no-repeat;
+  width: 380px;
+  height: 380px;
+  position: relative;
+}
+
+.outerLayer {
+  position: absolute;
+  left: -35px;
+  top: -35px;
+  transform-origin: 225px 225px;
+  animation: rotate 30s linear infinite;
+}
+
+.middleLayer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: center;
+  animation: rotate 15s linear infinite;
+}
+
+.innerLayer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.labelLayer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(10px, -50px);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
