@@ -1,10 +1,10 @@
 import { Container, Grid, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
-import RadialAnimation from '@/components/Wallet/MultiSig/RadialAnimation'
+import RadialAnimation from './RadialAnimation'
 import LinkButton from '@/components/common/LinkButton'
 
-const MultiSig = ({ title, text, link }: BaseBlock) => {
+const TextRadialAnimation = ({ title, text, link }: BaseBlock) => {
   return (
     <Container>
       <Grid
@@ -29,4 +29,4 @@ const MultiSig = ({ title, text, link }: BaseBlock) => {
   )
 }
 
-export default MultiSig
+export default TextRadialAnimation

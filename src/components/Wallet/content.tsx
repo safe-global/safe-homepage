@@ -4,7 +4,7 @@ import ImageText from '@/components/Wallet/ImageText'
 import Networks from '@/components/common/Networks'
 import TextBlockBanner from '@/components/common/TextBlockBanner'
 import TextStepperBlockImage from '@/components/Wallet/TextStepperBlockImage'
-import MultiSig from '@/components/Wallet/MultiSig'
+import TextRadialAnimation from '@/components/Wallet/TextRadialAnimation'
 
 export const walletContent = [
   {
@@ -60,7 +60,7 @@ export const walletContent = [
       title: 'Get started',
       href: '#',
     },
-    component: MultiSig,
+    component: TextRadialAnimation,
   },
   {
     variant: 'image-text',

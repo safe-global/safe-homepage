@@ -1,4 +1,4 @@
-import css from 'src/components/Wallet/MultiSig/RadialAnimation/styles.module.css'
+import css from 'src/components/Wallet/TextRadialAnimation/RadialAnimation/styles.module.css'
 import OuterLayer from '@/public/images/IdentPlanets/outer.svg'
 import MiddleLayer from '@/public/images/IdentPlanets/middle.svg'
 import InnerLayer from '@/public/images/IdentPlanets/inner.svg'
