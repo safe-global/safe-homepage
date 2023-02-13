@@ -39,7 +39,14 @@ const TextGrid = ({ image, textBlock, grid, gist }: TextGridProps) => {
     <Container>
       <Grid container className={layoutCss.containerShort}>
         <Grid container className={`${image ? css.wrapper : ''}`} justifyContent="space-between">
-          <Grid item md={5} display="flex" flexDirection="column" justifyContent="center" gap={{ xs: 3, md: 4 }}>
+          <Grid
+            item
+            md={!image ? 8 : 5}
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+            gap={{ xs: 3, md: 4 }}
+          >
             <Chip
               label={
                 <Typography variant="caption" color="primary.main">
@@ -56,7 +63,7 @@ const TextGrid = ({ image, textBlock, grid, gist }: TextGridProps) => {
             </LinkButton>
           </Grid>
           {image ? (
-            <Grid item md={6}>
+            <Grid item md={6} mt="54px">
               <img src={image.src} alt={image.alt} />
             </Grid>
           ) : null}

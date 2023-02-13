@@ -34,8 +34,37 @@ export const coreContent = [
   },
   {
     textBlock: {
+      caption: 'Safe Core API',
+      title: 'Immediate Access to all account information to power your interface',
+      link: { text: 'Get started', href: '#' },
+    },
+    gist: {
+      // TODO: replace for a definitive gist
+      id: '10a395880c30867601515560a4e5854d',
+    },
+    grid: {
+      title: 'Features',
+      items: [
+        {
+          title: 'Increased security',
+          text: 'Top notch security and custom access control for you and for your users',
+        },
+        {
+          title: 'Lower complexity',
+          text: 'Bundle painful blockchain click-heavy user flows in one click',
+        },
+        {
+          title: 'Infinite flexibility',
+          text: 'Fully leverage the composability of the stack using the core SDK',
+        },
+      ],
+    },
+    component: TextGrid,
+  },
+  {
+    textBlock: {
       caption: 'Safe core protocol',
-      title: 'Unlock more from Safe with the Safe {Core} Protocol',
+      title: 'Build any use case with the battle tested security of Safe{Core} Protocol',
       text: 'Tap into the ecosystem’s cutting-edge plug-ins or write your own custom logic to plug into the Safe core contracts.',
       link: { text: 'Get started', href: '#' },
     },
@@ -57,36 +86,6 @@ export const coreContent = [
         },
         {
           title: 'Build any use case by extending the on-chain logic of core contracts',
-        },
-      ],
-    },
-    component: TextGrid,
-  },
-  {
-    textBlock: {
-      caption: 'Safe Core API',
-      title: 'Unlock more from Safe with the Safe {Core} Protocol',
-      text: 'Tap into the ecosystem’s cutting-edge plug-ins or write your own custom logic to plug into the Safe core contracts.',
-      link: { text: 'Get started', href: '#' },
-    },
-    gist: {
-      // TODO: replace for a definitive gist
-      id: '10a395880c30867601515560a4e5854d',
-    },
-    grid: {
-      title: 'Features',
-      items: [
-        {
-          title: 'Increased security',
-          text: 'Top notch security and custom access control for you and for your users',
-        },
-        {
-          title: 'Lower complexity',
-          text: 'Bundle painful blockchain click-heavy user flows in one click',
-        },
-        {
-          title: 'Infinite flexibility',
-          text: 'Fully leverage the composability of the stack using the core SDK',
         },
       ],
     },
