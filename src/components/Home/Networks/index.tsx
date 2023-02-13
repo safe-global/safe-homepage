@@ -14,7 +14,7 @@ const Networks = ({ title, text, items }: BaseBlock) => {
           {items &&
             items.map((item, index) => (
               <Grid key={index} item>
-                {item.icon}
+                <img {...item.image} />
               </Grid>
             ))}
         </Grid>

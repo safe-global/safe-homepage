@@ -1,50 +1,16 @@
-import Image from 'next/image'
-import ShieldIcon from '@/public/images/Wallet/shield.svg'
-import CheckIcon from '@/public/images/Wallet/check.svg'
-import SettingsIcon from '@/public/images/Wallet/settings.svg'
-import ArbitrumIcon from '@/public/images/chainsLogos/ArbitrumLogo.png'
-import AuroraIcon from '@/public/images/chainsLogos/AuroraLogo.png'
-import AvalancheIcon from '@/public/images/chainsLogos/AvalancheLogo.png'
-import BNBIcon from '@/public/images/chainsLogos/BNBLogo.png'
-import EthereumIcon from '@/public/images/chainsLogos/EthereumLogo.png'
-import GnosisChainIcon from '@/public/images/chainsLogos/GnosisChainLogo.png'
-import OptimismIcon from '@/public/images/chainsLogos/OptimismLogo.png'
-import PolygonIcon from '@/public/images/chainsLogos/PolygonLogo.png'
-import type { StepsType } from '@/components/Wallet/Stepper'
-import CoManageImage from '@/public/images/Wallet/co-manage.png'
-import OwnershipImage from '@/public/images/Wallet/ownership.png'
-import BatchTransactionsImage from '@/public/images/Wallet/batch-transactions.png'
-import SignerTypesImage from '@/public/images/Wallet/signer-types.png'
-import PocketMultisigImage from '@/public/images/Wallet/pocket-multisig.png'
-import ClientAppsImage from '@/public/images/Wallet/clients.png'
-import SimulateTransactionsImage from '@/public/images/Wallet/simulate-transactions.png'
-import Stepper from '@/components/Wallet/Stepper'
 import HeroSection from '@/components/Wallet/Hero'
-import UspBlock from '@/components/Wallet/UspBlock'
+import UspBlock from '@/components/common/UspBlock'
 import ImageText from '@/components/Wallet/ImageText'
-import AvailableNetworks from '@/components/Wallet/AvailableNetworks'
-import WalletDownload from '@/components/common/WalletDownload'
-
-export type ColumnWidths = 3 | 4
-
-const convenienceContentSteps: StepsType = [
-  {
-    label: 'Create a new signer account',
-    state: 'completed',
-  },
-  {
-    label: 'Allow push notifications',
-    description: 'Track your assets and transactions on mobile. Stay informed on-the-go.',
-    state: 'active',
-  },
-  {
-    label: 'Hardware wallet support',
-  },
-]
+import Networks from '@/components/common/Networks'
+import TextBlockBanner from '@/components/common/TextBlockBanner'
+import TextStepperBlockImage from '@/components/Wallet/TextStepperBlockImage'
 
 export const walletContent = [
   {
-    image: <Image src={ClientAppsImage} alt="Web and mobile clients" />,
+    image: {
+      src: '/images/Wallet/clients.png',
+      alt: 'Web and mobile clients',
+    },
     textBlock: {
       title: 'The most secure way to own assets',
       button: { text: 'Launch wallet', href: '#' },
@@ -56,17 +22,26 @@ export const walletContent = [
     title: 'Your keys. Your coins.',
     items: [
       {
-        icon: <ShieldIcon />,
+        image: {
+          src: '/images/Wallet/shield.svg',
+          alt: 'Shield with a checkmark',
+        },
         title: 'Battle Tested Security',
         text: 'Top notch security and custom access control for you and for your users.',
       },
       {
-        icon: <CheckIcon />,
+        image: {
+          src: '/images/Wallet/people.svg',
+          alt: 'Group of owners',
+        },
         title: 'Co-ownership',
         text: 'Multi-sig based trustless group ownership ownership and asset co-ordination.',
       },
       {
-        icon: <SettingsIcon />,
+        image: {
+          src: '/images/Wallet/key.svg',
+          alt: 'Ownership key',
+        },
         title: 'Self-custody',
         text: 'We never own any of the assets stored in user accounts. We never will.',
       },
@@ -75,7 +50,10 @@ export const walletContent = [
   },
   {
     variant: 'text-image',
-    image: <Image src={CoManageImage} alt="Accounts around a multisig" />,
+    image: {
+      src: '/images/Wallet/co-manage.png',
+      alt: 'Accounts around a multisig',
+    },
     textBlock: {
       title: (
         <>
@@ -89,7 +67,10 @@ export const walletContent = [
   },
   {
     variant: 'image-text',
-    image: <Image src={OwnershipImage} alt="Transactions require confirmations from owners" />,
+    image: {
+      src: '/images/Wallet/ownership.png',
+      alt: 'Transactions require confirmations from owners',
+    },
     textBlock: {
       title: (
         <>
@@ -103,10 +84,12 @@ export const walletContent = [
   },
   {
     variant: 'text-image',
-    // TODO: image to be replaced when available from design
-    image: <Image src={OwnershipImage} alt="Transactions require confirmations from owners" />,
+    image: {
+      src: '/images/Wallet/safe-apps-store.png',
+      alt: 'Transactions require confirmations from owners',
+    },
     textBlock: {
-      title: 'Built-in App Store',
+      title: 'Built-in app store',
       text: 'Use the best dapps in web3 right from inside your Safe WALLET.',
       buttons: [{ text: 'Get started', href: '#', variant: 'link' }],
     },
@@ -114,7 +97,10 @@ export const walletContent = [
   },
   {
     variant: 'image-text',
-    image: <Image src={BatchTransactionsImage} alt="Batching transactions" />,
+    image: {
+      src: '/images/Wallet/batch-transactions.png',
+      alt: 'Batching transactions',
+    },
     textBlock: {
       title: (
         <>
@@ -128,7 +114,10 @@ export const walletContent = [
   },
   {
     variant: 'text-image',
-    image: <Image src={SignerTypesImage} alt="Different wallet types" />,
+    image: {
+      src: '/images/Wallet/signer-types.png',
+      alt: 'Different wallet types',
+    },
     textBlock: {
       title: (
         <>
@@ -142,7 +131,10 @@ export const walletContent = [
   },
   {
     variant: 'image-text',
-    image: <Image src={SimulateTransactionsImage} alt="Simulate transactions" />,
+    image: {
+      src: '/images/Wallet/simulate-transactions.png',
+      alt: 'Simulate transactions in Tenderly',
+    },
     textBlock: {
       title: (
         <>
@@ -155,83 +147,143 @@ export const walletContent = [
     component: ImageText,
   },
   {
+    title: 'Available on 10+ networks',
+    text: 'And more networks, including testnets.',
     networks: [
       [
         {
           name: 'Ethereum Mainnet',
-          icon: <Image src={EthereumIcon} alt="Ethereum logo" />,
+          icon: {
+            src: '/images/chainsLogos/EthereumLogo.png',
+            alt: 'Ethereum logo',
+          },
         },
         {
           name: 'BNB Smart Chain',
-          icon: <Image src={BNBIcon} alt="BNB Chain logo" />,
+          icon: {
+            src: '/images/chainsLogos/BNBLogo.png',
+            alt: 'BNB Chain logo',
+          },
         },
         {
           name: 'Optimism',
-          icon: <Image src={OptimismIcon} alt="Optimism logo" />,
+          icon: {
+            src: '/images/chainsLogos/OptimismLogo.png',
+            alt: 'Optimism logo',
+          },
         },
         {
           name: 'Arbitrum',
-          icon: <Image src={ArbitrumIcon} alt="Arbitrum logo" />,
+          icon: {
+            src: '/images/chainsLogos/ArbitrumLogo.png',
+            alt: 'Arbitrum logo',
+          },
         },
         {
           name: 'Polygon',
-          icon: <Image src={PolygonIcon} alt="Polygon logo" />,
+          icon: {
+            src: '/images/chainsLogos/PolygonLogo.png',
+            alt: 'Polygon logo',
+          },
         },
         {
           name: 'Avalanche',
-          icon: <Image src={AvalancheIcon} alt="Avalanche logo" />,
+          icon: {
+            src: '/images/chainsLogos/AvalancheLogo.png',
+            alt: 'Avalanche logo',
+          },
         },
         {
           name: 'Gnosis Chain',
-          icon: <Image src={GnosisChainIcon} alt="Gnosis Chain logo" />,
+          icon: {
+            src: '/images/chainsLogos/GnosisChainLogo.png',
+            alt: 'Gnosis Chain logo',
+          },
         },
       ],
       [
         {
           name: 'Avalanche',
-          icon: <Image src={AvalancheIcon} alt="Avalanche logo" />,
+          icon: {
+            src: '/images/chainsLogos/AvalancheLogo.png',
+            alt: 'Avalanche logo',
+          },
         },
         {
           name: 'Polygon',
-          icon: <Image src={PolygonIcon} alt="Polygon logo" />,
+          icon: {
+            src: '/images/chainsLogos/PolygonLogo.png',
+            alt: 'Polygon logo',
+          },
         },
         {
           name: 'Gnosis Chain',
-          icon: <Image src={GnosisChainIcon} alt="Gnosis Chain logo" />,
+          icon: {
+            src: '/images/chainsLogos/GnosisChainLogo.png',
+            alt: 'Gnosis Chain logo',
+          },
         },
         {
           name: 'Aurora',
-          icon: <Image src={AuroraIcon} alt="Aurora logo" />,
+          icon: {
+            src: '/images/chainsLogos/AuroraLogo.png',
+            alt: 'Aurora logo',
+          },
         },
         {
           name: 'Ethereum Mainnet',
-          icon: <Image src={EthereumIcon} alt="Ethereum logo" />,
+          icon: {
+            src: '/images/chainsLogos/EthereumLogo.png',
+            alt: 'Ethereum logo',
+          },
         },
         {
           name: 'Optimism',
-          icon: <Image src={OptimismIcon} alt="Optimism logo" />,
+          icon: {
+            src: '/images/chainsLogos/OptimismLogo.png',
+            alt: 'Optimism logo',
+          },
         },
         {
           name: 'BNB Smart Chain',
-          icon: <Image src={BNBIcon} alt="BNB Chain logo" />,
+          icon: {
+            src: '/images/chainsLogos/BNBLogo.png',
+            alt: 'BNB Chain logo',
+          },
         },
       ],
     ],
-    component: AvailableNetworks,
+    component: Networks,
   },
   {
     variant: 'text-image',
-    image: <Image src={PocketMultisigImage} alt="Safe mobile app" />,
+    image: {
+      src: '/images/Wallet/pocket-multisig.png',
+      alt: 'Safe mobile app',
+    },
     textBlock: {
       title: 'Convenience of multisig in your pocket',
       text: 'Track your assets and transactions on mobile. Stay informed on-the-go.',
-      subBlock: <Stepper steps={convenienceContentSteps} />,
+      steps: [
+        {
+          label: 'Create a new signer account',
+          state: 'completed',
+        },
+        {
+          label: 'Allow push notifications',
+          description: 'Track your assets and transactions on mobile. Stay informed on-the-go.',
+          state: 'active',
+        },
+        {
+          label: 'Hardware wallet support',
+        },
+      ],
     },
-    component: ImageText,
+    component: TextStepperBlockImage,
   },
   {
     title: 'Use Safe {WALLET} anywhere',
     text: 'Access your assets anywhere without compromising on security on our flagship interfaces built on Safe {Core}.',
-    component: WalletDownload,
+    component: TextBlockBanner,
   },
 ]

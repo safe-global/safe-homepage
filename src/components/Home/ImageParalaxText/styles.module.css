@@ -1,0 +1,47 @@
+.metricsCard {
+  border: 1px solid var(--mui-palette-border-light);
+  border-radius: 6px;
+  position: absolute;
+  padding: 16px;
+}
+
+.cardHeader {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.1em;
+}
+
+.card0 {
+  width: 152px;
+  height: 120px;
+}
+
+.card1 {
+  max-width: 140px;
+}
+
+.card2 {
+  width: 152px;
+  height: 102px;
+}
+
+.card3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 136px;
+  height: 104px;
+  background-color: #b0ffc9;
+  border: none;
+}
+
+.card4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 246px;
+  height: 188px;
+  background-color: var(--mui-palette-secondary-main);
+}

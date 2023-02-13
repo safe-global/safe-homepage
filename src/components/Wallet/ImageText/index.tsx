@@ -7,11 +7,13 @@ import css from './styles.module.css'
 
 export type ImageTextProps = {
   variant: 'image-text' | 'text-image'
-  image: JSX.Element
+  image: {
+    src: string
+    alt: string
+  }
   textBlock: {
-    title: JSX.Element
+    title: string
     text: string
-    subBlock?: ReactElement
     buttons?: {
       text: string
       href?: string
@@ -21,7 +23,7 @@ export type ImageTextProps = {
 }
 
 const ImageText = ({ image, textBlock, variant }: ImageTextProps): ReactElement => {
-  const { title, text, subBlock, buttons } = textBlock
+  const { title, text, buttons } = textBlock
 
   return (
     <Container>
@@ -34,7 +36,6 @@ const ImageText = ({ image, textBlock, variant }: ImageTextProps): ReactElement 
         <Grid item md={5} display="flex" flexDirection="column" justifyContent="center" gap={{ xs: 3, md: 4 }}>
           <Typography variant="h2">{title}</Typography>
           <Typography>{text}</Typography>
-          {subBlock}
           {buttons ? (
             <Box display="flex" gap={3}>
               {buttons.map((button) => {
@@ -57,7 +58,7 @@ const ImageText = ({ image, textBlock, variant }: ImageTextProps): ReactElement 
           ) : null}
         </Grid>
         <Grid item md={6}>
-          {image}
+          <img {...image} />
         </Grid>
       </Grid>
     </Container>

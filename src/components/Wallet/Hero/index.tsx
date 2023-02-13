@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react'
 import Image from 'next/image'
-import { Button, Container, Grid, Typography } from '@mui/material'
+import { Button, Container, Divider, Grid, Typography } from '@mui/material'
 import { IOS_LINK, GPLAY_LINK } from '@/config/constants'
 import IOSDownload from '@/public/images/ios-download.svg'
 import GPlayDownload from '@/public/images/google-play-download.svg'
@@ -9,7 +9,10 @@ import QRImage from '@/public/images/Wallet/wallet-QR.png'
 import css from './styles.module.css'
 
 export type HeroSectionProps = {
-  image: JSX.Element
+  image: {
+    src: string
+    alt: string
+  }
   textBlock: {
     title: string
     button: {
@@ -27,7 +30,7 @@ const HeroSection = ({ image, textBlock }: HeroSectionProps): ReactElement => {
     <Container>
       <Grid container className={css.container} spacing={{ xs: 6, md: '30px' }} justifyContent="space-between">
         <Grid item md={6}>
-          {image}
+          <img {...image} />
         </Grid>
         <Grid item md={6}>
           <Typography className={css.title} variant="h1" mb={5}>
@@ -59,6 +62,7 @@ const HeroSection = ({ image, textBlock }: HeroSectionProps): ReactElement => {
           </Grid>
         </Grid>
       </Grid>
+      <Divider />
     </Container>
   )
 }

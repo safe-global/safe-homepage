@@ -1,0 +1,60 @@
+.card {
+  background: var(--mui-palette-border-background);
+  outline: 1px solid var(--mui-palette-border-light);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: 100%;
+  position: relative;
+  transition: 0.3s;
+  min-height: 272px;
+}
+
+.card:hover {
+  background-image: linear-gradient(45deg, var(--mui-palette-primary-main) 25%, var(--mui-palette-info-dark) 100%);
+}
+
+.card:hover * {
+  color: var(--mui-palette-background-main) !important;
+}
+
+.card:hover svg path {
+  fill: var(--mui-palette-background-main) !important;
+}
+
+.header {
+  margin-bottom: auto;
+}
+
+.title {
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.cardTitle {
+  margin-bottom: 10.5px;
+}
+
+.link *::after {
+  background-color: var(--mui-palette-background-main) !important;
+}
+
+.card:hover .arrow {
+  transform: rotate(45deg);
+}
+
+.arrow {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  transition: transform 0.3s;
+}
+
+@media (min-width: 600px) {
+  .cardTitle {
+    margin-bottom: 24px;
+  }
+}

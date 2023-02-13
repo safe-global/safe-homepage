@@ -1,0 +1,48 @@
+.bg {
+  background: url('/images/careers-bg.svg') no-repeat center -90px;
+}
+
+.chip {
+  color: var(--mui-palette-primary-main);
+  /* TODO: Use custom chip from wallet page once merged
+  Uppercase transformation does not vertically align correctly */
+  padding-top: 2px;
+}
+
+.container {
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 82px 0 202px;
+  margin-top: 0px;
+}
+
+/* TODO: Use h1 from theme when implemented
+https://github.com/safe-global/safe-homepage/issues/11 */
+.title {
+  font-size: 64px;
+  line-height: 64px;
+  text-align: center;
+  padding: 0;
+}
+
+.text {
+  text-align: center;
+  padding: 0 24px;
+}
+
+@media (min-width: 600px) {
+  .container {
+    gap: 24px;
+  }
+
+  .title {
+    font-size: 80px;
+    line-height: 88px;
+    padding: 0 42px;
+  }
+
+  .text {
+    padding: 0 292px;
+  }
+}
