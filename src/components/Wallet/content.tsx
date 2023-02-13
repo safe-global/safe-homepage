@@ -5,6 +5,10 @@ import Networks from '@/components/common/Networks'
 import TextBlockBanner from '@/components/common/TextBlockBanner'
 import TextStepperBlockImage from '@/components/Wallet/TextStepperBlockImage'
 import TextRadialAnimation from '@/components/Wallet/TextRadialAnimation'
+import SafeWalletText from '@/public/images/safewallet.svg'
+import css from '@/components/common/styles.module.css'
+import { Typography } from '@mui/material'
+import SafeCoreText from '@/public/images/safecore.svg'
 
 export const walletContent = [
   {
@@ -279,8 +283,20 @@ export const walletContent = [
     component: TextStepperBlockImage,
   },
   {
-    title: 'Use Safe {WALLET} anywhere',
-    text: 'Access your assets anywhere without compromising on security on our flagship interfaces built on Safe {Core}.',
+    title: (
+      <>
+        Use <SafeWalletText className={css.h2SafeType} /> anywhere
+      </>
+    ),
+    text: (
+      <>
+        Access your assets anywhere without compromising on security on our flagship interfaces built on{' '}
+        <Typography component="span">
+          <SafeCoreText className={css.body1SafeType} />
+        </Typography>
+        .
+      </>
+    ),
     component: TextBlockBanner,
   },
 ]
