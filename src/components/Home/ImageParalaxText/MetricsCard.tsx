@@ -1,7 +1,7 @@
 import { Box } from '@mui/material'
 import clsx from 'clsx'
 import css from './styles.module.css'
-import useScrollParallax, { DEPTH_PARAMS } from '@/hooks/useScrollParallax'
+import useScrollParallax, { DEPTH_PARAMS, type ParallaxProps } from '@/hooks/useScrollParallax'
 
 export const MetricsCard = ({
   children,
@@ -9,14 +9,12 @@ export const MetricsCard = ({
   translateY,
   depth,
   className,
-}: {
+  direction,
+}: ParallaxProps & {
   children: JSX.Element
-  translateX: number
-  translateY: number
   className: string
-  depth: 0 | 1 | 2 | 3 | 4
 }) => {
-  const boxRef = useScrollParallax(translateX, translateY, depth)
+  const boxRef = useScrollParallax({ translateX, translateY, depth, direction })
 
   return (
     <Box

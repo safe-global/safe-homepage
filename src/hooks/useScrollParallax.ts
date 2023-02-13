@@ -8,7 +8,14 @@ export const DEPTH_PARAMS = [
   { factor: -0.01, zIndex: 6 },
 ]
 
-const useScrollParallax = (translateX: number, translateY: number, depth: 0 | 1 | 2 | 3 | 4) => {
+export type ParallaxProps = {
+  translateX: number
+  translateY: number
+  depth: 0 | 1 | 2 | 3 | 4
+  direction?: 1 | -1
+}
+
+const useScrollParallax = ({ translateX, translateY, depth, direction = 1 }: ParallaxProps) => {
   const boxRef = useRef<HTMLDivElement>()
 
   const parallax = useCallback(() => {
@@ -19,7 +26,7 @@ const useScrollParallax = (translateX: number, translateY: number, depth: 0 | 1 
 
       const { top } = boxRef.current.getBoundingClientRect()
 
-      const diffY = top * DEPTH_PARAMS[depth].factor
+      const diffY = top * direction * DEPTH_PARAMS[depth].factor
 
       boxRef.current.style.transform = `translateX(${translateX}px) translateY(${translateY + diffY}px)`
     })
