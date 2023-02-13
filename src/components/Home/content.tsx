@@ -205,8 +205,8 @@ export const homeContent = [
       },
       {
         image: {
-          src: '/images/adidas.svg',
-          alt: 'Adidas',
+          src: '/images/shopify.svg',
+          alt: 'Shopify',
         },
       },
       {
@@ -219,6 +219,12 @@ export const homeContent = [
         image: {
           src: '/images/stripe.svg',
           alt: 'Stripe',
+        },
+      },
+      {
+        image: {
+          src: '/images/abinbev.svg',
+          alt: 'ABInBev',
         },
       },
     ],
