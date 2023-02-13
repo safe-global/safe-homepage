@@ -30,7 +30,7 @@ const useScrollParallax = ({ translateX, translateY, depth, direction = 1 }: Par
 
       boxRef.current.style.transform = `translateX(${translateX}px) translateY(${translateY + diffY}px)`
     })
-  }, [depth, translateX, translateY])
+  }, [depth, translateX, translateY, direction])
 
   useEffect(() => {
     window.addEventListener('scroll', parallax)

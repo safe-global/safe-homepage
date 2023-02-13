@@ -4,7 +4,7 @@ import ImageText from '@/components/Wallet/ImageText'
 import Networks from '@/components/common/Networks'
 import TextBlockBanner from '@/components/common/TextBlockBanner'
 import TextStepperBlockImage from '@/components/Wallet/TextStepperBlockImage'
-import ScrollParallax from '@/components/Wallet/ScrollParallax'
+import Ownership from '@/components/Wallet/Ownership'
 
 export const walletContent = [
   {
@@ -81,7 +81,7 @@ export const walletContent = [
       title: 'Get started',
       href: '#',
     },
-    component: ScrollParallax,
+    component: Ownership,
   },
   {
     variant: 'text-image',

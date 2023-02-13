@@ -7,9 +7,9 @@ import Address2Image from '@/public/images/Ownership/address2.svg'
 import FrameImage from '@/public/images/Ownership/frame.svg'
 import type { BaseBlock } from '@/components/Home/types'
 import css from './styles.module.css'
-import ParallaxWrapper from '@/components/Wallet/ScrollParallax/ParallaxWrapper'
+import ParallaxWrapper from '@/components/common/ParallaxWrapper'
 
-const ScrollParallax = ({ title, caption, text, link }: BaseBlock) => {
+const Ownership = ({ title, caption, text, link }: BaseBlock) => {
   return (
     <Container disableGutters>
       <Grid container className={layoutCss.container} spacing="30px">
@@ -44,4 +44,4 @@ const ScrollParallax = ({ title, caption, text, link }: BaseBlock) => {
   )
 }
 
-export default ScrollParallax
+export default Ownership

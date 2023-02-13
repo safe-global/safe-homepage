@@ -4,7 +4,7 @@ import TitleLogos from '@/components/Home/TitleLogos'
 import BigIconsCardGrid from '@/components/Home/BigIconsCardGrid'
 import Networks from '@/components/common/Networks'
 import BannerTextCard from '@/components/Home/BannerTextCard'
-import ImageParalaxText from '@/components/Home/ImageParalaxText'
+import ImageParallaxText from '@/components/Home/ImageParallaxText'
 import TitleTextLinkedCardGrid from '@/components/Home/TitleTextLinkedCardGrid'
 import TitleButton from '@/components/Home/TitleButton'
 import TextBlockBanner from '@/components/common/TextBlockBanner'
@@ -301,7 +301,7 @@ export const homeContent = [
       title: 'Read report',
       href: '#',
     },
-    component: ImageParalaxText,
+    component: ImageParallaxText,
   },
   {
     caption: 'Governance',
