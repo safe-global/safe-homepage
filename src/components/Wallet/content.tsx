@@ -4,7 +4,7 @@ import ImageText from '@/components/Wallet/ImageText'
 import Networks from '@/components/common/Networks'
 import TextBlockBanner from '@/components/common/TextBlockBanner'
 import TextStepperBlockImage from '@/components/Wallet/TextStepperBlockImage'
-import Ownership from '@/components/Wallet/Ownership'
+import ParallaxText from '@/components/Wallet/ParallaxText'
 
 export const walletContent = [
   {
@@ -67,21 +67,45 @@ export const walletContent = [
     component: ImageText,
   },
   {
-    image: {
-      src: '/images/Wallet/ownership.png',
-      alt: 'Transactions require confirmations from owners',
+    variant: 'image-text',
+    parallax: {
+      baseImage: {
+        src: '/images/Ownership/frame.svg',
+        alt: 'Parallax base image',
+      },
+      layers: [
+        {
+          image: {
+            src: '/images/Ownership/address1.svg',
+            alt: 'Address 1',
+          },
+          translateX: 0,
+          translateY: -220,
+          depth: 2,
+          direction: -1,
+        },
+        {
+          image: {
+            src: '/images/Ownership/address2.svg',
+            alt: 'Address 2',
+          },
+          translateX: 0,
+          translateY: -120,
+          depth: 0,
+          direction: -1,
+        },
+      ],
     },
-    title: (
-      <>
-        <b>Control and change account</b> ownership
-      </>
-    ),
-    text: 'Add new signers, remove signers and replace ownership by simply changing the private key(s) that control the account.',
-    link: {
-      title: 'Get started',
-      href: '#',
+    textBlock: {
+      title: (
+        <>
+          <b>Control and change account</b> ownership
+        </>
+      ),
+      text: 'Add new signers, remove signers and replace ownership by simply changing the private key(s) that control the account.',
+      buttons: [{ text: 'Get started', href: '#', variant: 'link' }],
     },
-    component: Ownership,
+    component: ParallaxText,
   },
   {
     variant: 'text-image',
