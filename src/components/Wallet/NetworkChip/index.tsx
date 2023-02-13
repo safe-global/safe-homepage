@@ -1,4 +1,4 @@
-import type { ChainProps } from '@/hooks/useChainsData'
+import type { ChainProps } from '@/components/common/Networks'
 import { Box, Typography } from '@mui/material'
 import css from './styles.module.css'
 
@@ -8,9 +8,9 @@ export type NetworkChipProps = {
     src: string
     alt: string
   }
-}
+} & Pick<ChainProps, 'textColor' | 'backgroundColor'>
 
-const NetworkChip = ({ name, icon, textColor, backgroundColor }: NetworkChipProps & Omit<ChainProps, 'chainName'>) => (
+const NetworkChip = ({ name, icon, textColor, backgroundColor }: NetworkChipProps) => (
   <Box className={css.wrapper} sx={{ backgroundColor }}>
     <div className={css.icon}>
       <img {...icon} />
