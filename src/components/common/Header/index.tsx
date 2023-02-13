@@ -43,7 +43,9 @@ const Header = () => {
   return (
     <div className={clsx(css.header, isOpen && css.visible)}>
       <div className={css.logo}>
-        <Logo />
+        <Link href={AppRoutes.index}>
+          <Logo />
+        </Link>
       </div>
       <ButtonBase className={css.burger} onClick={toggleNavigation} aria-label="Toggle navigation" disableRipple>
         <span />

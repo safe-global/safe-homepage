@@ -4,6 +4,7 @@
   width: 380px;
   height: 380px;
   position: relative;
+  margin: 0 auto;
 }
 
 .outerLayer {

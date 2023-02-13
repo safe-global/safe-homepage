@@ -4,7 +4,8 @@ import ImageText from '@/components/Wallet/ImageText'
 import Networks from '@/components/common/Networks'
 import TextBlockBanner from '@/components/common/TextBlockBanner'
 import TextStepperBlockImage from '@/components/Wallet/TextStepperBlockImage'
-import RadialAnimation from '@/components/Wallet/RadialAnimation'
+import RadialAnimation from '@/components/Wallet/MultiSig/RadialAnimation'
+import MultiSig from '@/components/Wallet/MultiSig'
 
 export const walletContent = [
   {
@@ -50,25 +51,17 @@ export const walletContent = [
     component: UspBlock,
   },
   {
-    variant: 'text-image',
-    image: {
-      src: '/images/Wallet/co-manage.png',
-      alt: 'Accounts around a multisig',
+    title: (
+      <>
+        <b>Co-manage</b> your assets
+      </>
+    ),
+    text: 'With multiple private keys, the same account can be jointly managed by several users enabling co-ownership that powers DAOs, groups and enterprises.',
+    link: {
+      title: 'Get started',
+      href: '#',
     },
-    textBlock: {
-      title: (
-        <>
-          <b>Co-manage</b> your assets
-        </>
-      ),
-      text: 'With multiple private keys, the same account can be jointly managed by several users enabling co-ownership that powers DAOs, groups and enterprises.',
-      buttons: [{ text: 'Get started', href: '#', variant: 'link' }],
-    },
-    component: ImageText,
-  },
-  {
-    text: '',
-    component: RadialAnimation,
+    component: MultiSig,
   },
   {
     variant: 'image-text',
