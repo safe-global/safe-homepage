@@ -21,6 +21,10 @@ const navItems = [
     label: 'Wallet',
     href: AppRoutes.wallet,
   },
+  {
+    label: 'Careers',
+    href: AppRoutes.careers,
+  },
 ]
 
 const Header = () => {
