@@ -6,11 +6,11 @@ type ComponentAndProps<T> = {
 
 type ContentItems = Array<ComponentAndProps<any>>
 
-const PageContent = ({ content }: { content: ContentItems }): ReactElement => {
+const PageContent = ({ content, ...props }: { content: ContentItems }): ReactElement => {
   return (
     <>
       {content.map(({ component: Component, ...rest }, index) => {
-        return <Component key={index} {...rest} />
+        return <Component key={index} {...rest} {...props} />
       })}
     </>
   )
