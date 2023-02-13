@@ -48,7 +48,7 @@ const ImageParalaxText = ({ title, text, caption, link }: BaseBlock): ReactEleme
           <MetricsCard className={css.card3} translateY={0} translateX={300} depth={0}>
             <GreenCheck />
           </MetricsCard>
-          <MetricsCard className={css.card4} translateY={56} translateX={156} depth={1}>
+          <MetricsCard className={css.card4} translateY={56} translateX={156} depth={3}>
             <Image src={RuntimeVerificationImage} alt="Runtime verification" />
           </MetricsCard>
         </Grid>
