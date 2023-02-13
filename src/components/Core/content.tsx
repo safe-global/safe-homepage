@@ -47,7 +47,7 @@ export const coreContent = [
       items: [
         {
           title: 'Increased security',
-          text: 'Top notch security and custom access control for you and for your users',
+          text: 'Top-notch security and custom access control for you and for your users',
         },
         {
           title: 'Lower complexity',
@@ -55,7 +55,7 @@ export const coreContent = [
         },
         {
           title: 'Infinite flexibility',
-          text: 'Fully leverage the composability of the stack using the core SDK',
+          text: 'Fully leverage the composability of the stack using the Core SDK',
         },
       ],
     },
@@ -64,7 +64,7 @@ export const coreContent = [
   {
     textBlock: {
       caption: 'Safe core protocol',
-      title: 'Build any use case with the battle tested security of Safe{Core} Protocol',
+      title: 'Build any use case with the battle-tested security of Safe{Core} Protocol',
       text: 'Tap into the ecosystem’s cutting-edge plug-ins or write your own custom logic to plug into the Safe core contracts.',
       link: { text: 'Get started', href: '#' },
     },
@@ -76,7 +76,7 @@ export const coreContent = [
       title: 'Benefits',
       items: [
         {
-          title: 'Improve UX of your product with account abstraction',
+          title: 'Improve the UX of your product with account abstraction',
         },
         {
           title: 'Customize access control to Safe accounts',

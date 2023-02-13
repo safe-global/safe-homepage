@@ -32,7 +32,7 @@ export const Gist = ({ id, file }: { id: string; file?: string }): ReactElement 
     const iframeHtml = getGistHtml(id, file)
     document.writeln(iframeHtml)
     document.close()
-  }, [])
+  }, [file, id])
 
   return <iframe ref={iframeRef} frameBorder={0} width="100%" id={file ? `gist-${id}-${file}` : `gist-${id}`} />
 }
