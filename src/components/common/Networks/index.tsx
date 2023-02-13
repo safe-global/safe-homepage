@@ -4,11 +4,12 @@ import { Box, Container, Typography } from '@mui/material'
 import clsx from 'clsx'
 import css from './styles.module.css'
 import layoutCss from '@/components/common/styles.module.css'
+import { type ChainInfo } from '@safe-global/safe-gateway-typescript-sdk'
 
 export type ChainProps = {
-  chainName: string
-  textColor: string
-  backgroundColor: string
+  chainName: ChainInfo['chainName']
+  textColor: ChainInfo['theme']['textColor']
+  backgroundColor: ChainInfo['theme']['backgroundColor']
 }
 
 const defaultThemeColors = {
