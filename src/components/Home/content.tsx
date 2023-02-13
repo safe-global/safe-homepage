@@ -103,31 +103,10 @@ export const homeContent = [
           },
         },
         {
-          name: 'Polygon',
-          icon: {
-            src: '/images/chainsLogos/PolygonLogo.png',
-            alt: 'Polygon logo',
-          },
-        },
-        {
           name: 'Gnosis Chain',
           icon: {
             src: '/images/chainsLogos/GnosisChainLogo.png',
             alt: 'Gnosis Chain logo',
-          },
-        },
-        {
-          name: 'Aurora',
-          icon: {
-            src: '/images/chainsLogos/AuroraLogo.png',
-            alt: 'Aurora logo',
-          },
-        },
-        {
-          name: 'Ethereum Mainnet',
-          icon: {
-            src: '/images/chainsLogos/EthereumLogo.png',
-            alt: 'Ethereum logo',
           },
         },
         {
@@ -142,6 +121,27 @@ export const homeContent = [
           icon: {
             src: '/images/chainsLogos/BNBLogo.png',
             alt: 'BNB Chain logo',
+          },
+        },
+        {
+          name: 'Ethereum Mainnet',
+          icon: {
+            src: '/images/chainsLogos/EthereumLogo.png',
+            alt: 'Ethereum logo',
+          },
+        },
+        {
+          name: 'Polygon',
+          icon: {
+            src: '/images/chainsLogos/PolygonLogo.png',
+            alt: 'Polygon logo',
+          },
+        },
+        {
+          name: 'Aurora',
+          icon: {
+            src: '/images/chainsLogos/AuroraLogo.png',
+            alt: 'Aurora logo',
           },
         },
       ],
