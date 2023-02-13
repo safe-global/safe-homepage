@@ -33,6 +33,9 @@ export const Intro = ({
             color="primary"
             className={css.chip}
             sx={({ typography }) => typography.caption}
+            clickable
+            component="a"
+            href={link.href}
           />
         </Grid>
 
