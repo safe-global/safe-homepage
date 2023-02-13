@@ -31,10 +31,6 @@
   gap: 8px;
 }
 
-.badge :global .MuiBadge-badge {
-  font-size: 14px;
-}
-
 @media (min-width: 600px) {
   .subList {
     gap: 32px;

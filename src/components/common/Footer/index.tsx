@@ -1,4 +1,4 @@
-import { Badge, ButtonBase, Container, Divider, Grid, TextField, Typography } from '@mui/material'
+import { ButtonBase, Container, Divider, Grid, TextField, Typography } from '@mui/material'
 
 import { AppRoutes } from '@/config/routes'
 import DiscordIcon from '@/public/images/discord-icon.svg'
@@ -112,13 +112,7 @@ const Footer = () => {
           <ul className={css.list}>
             {resourcesItems.map((item) => (
               <li className={css.listItem} key={item.href}>
-                {item.href === AppRoutes.careers ? (
-                  <Badge badgeContent={positions.length} color="primary" className={css.badge}>
-                    {item.label}
-                  </Badge>
-                ) : (
-                  item.label
-                )}
+                item.label
               </li>
             ))}
           </ul>
