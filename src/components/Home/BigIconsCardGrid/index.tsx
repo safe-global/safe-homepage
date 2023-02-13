@@ -4,6 +4,7 @@ import { Container, Grid, Typography } from '@mui/material'
 import LinkButton from '@/components/common/LinkButton'
 import css from './styles.module.css'
 import ArrowIcon from '@/public/images/arrow-out-icon.svg'
+import Link from 'next/link'
 
 type BigCardProps = {
   caption: string
@@ -45,7 +46,7 @@ const BigIconsCardGrid = ({ items }: BigCardGridProps): ReactElement => {
                   <Typography variant="h3" mb={5} mt={2}>
                     {item.title}
                   </Typography>
-                  <LinkButton href={item.link?.href} sx={{ mt: 'auto' }}>
+                  <LinkButton href={item.link?.href} sx={{ mt: 'auto' }} fullSize>
                     {item.link?.title}
                   </LinkButton>
                   <ArrowIcon className={css.icon} />
