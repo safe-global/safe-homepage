@@ -5,6 +5,7 @@ import Networks from '@/components/common/Networks'
 import TextBlockBanner from '@/components/common/TextBlockBanner'
 import TextStepperBlockImage from '@/components/Wallet/TextStepperBlockImage'
 import ParallaxText from '@/components/Wallet/ParallaxText'
+import OwnershipParallax from '@/components/Wallet/OwnershipParallax'
 
 export const walletContent = [
   {
@@ -68,42 +69,6 @@ export const walletContent = [
   },
   {
     variant: 'image-text',
-    parallax: {
-      baseImage: {
-        src: '/images/Wallet/Parallaxes/Ownership/frame.svg',
-        alt: 'Parallax base image',
-      },
-      layers: [
-        {
-          image: {
-            src: '/images/Wallet/Parallaxes/Ownership/address1.svg',
-            alt: 'Address 1',
-          },
-          translateX: 0,
-          translateY: -220,
-          depth: 2,
-          direction: -1,
-          initialPosition: {
-            top: '0',
-            left: '-50px',
-          },
-        },
-        {
-          image: {
-            src: '/images/Wallet/Parallaxes/Ownership/address2.svg',
-            alt: 'Address 2',
-          },
-          translateX: 0,
-          translateY: -120,
-          depth: 0,
-          direction: -1,
-          initialPosition: {
-            bottom: '0',
-            right: '-50px',
-          },
-        },
-      ],
-    },
     textBlock: {
       title: (
         <>
@@ -113,46 +78,10 @@ export const walletContent = [
       text: 'Add new signers, remove signers and replace ownership by simply changing the private key(s) that control the account.',
       buttons: [{ text: 'Get started', href: '#', variant: 'link' }],
     },
-    component: ParallaxText,
+    component: OwnershipParallax,
   },
   {
     variant: 'text-image',
-    parallax: {
-      baseImage: {
-        src: '/images/Wallet/Parallaxes/AppStore/background.svg',
-        alt: 'Parallax base image',
-      },
-      layers: [
-        {
-          image: {
-            src: '/images/Wallet/Parallaxes/AppStore/logos1.svg',
-            alt: 'Address 1',
-          },
-          translateX: 0,
-          translateY: 0,
-          depth: 2,
-          direction: -1,
-          initialPosition: {
-            top: '-400px',
-            left: '0',
-          },
-        },
-        {
-          image: {
-            src: '/images/Wallet/Parallaxes/AppStore/logos2.svg',
-            alt: 'Address 2',
-          },
-          translateX: 0,
-          translateY: 0,
-          depth: 0,
-          direction: -1,
-          initialPosition: {
-            bottom: '50px',
-            right: '0',
-          },
-        },
-      ],
-    },
     textBlock: {
       title: 'Built-in app store',
       text: 'Use the best dapps in web3 right from inside your Safe WALLET.',

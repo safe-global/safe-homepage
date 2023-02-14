@@ -13,3 +13,15 @@ type Link = {
   title?: string
   href: string
 }
+
+type TextBlock = {
+  textBlock: {
+    title: string | JSX.Element
+    text: string | JSX.Element
+    buttons?: {
+      text: string
+      href?: string
+      variant: 'button' | 'link'
+    }[]
+  }
+}

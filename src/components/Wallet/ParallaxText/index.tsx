@@ -1,24 +1,15 @@
+import type { ReactNode } from 'react'
 import { Box, Button, Container, Grid, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import imageTextCss from '@/components/Wallet/ImageText/styles.module.css'
 import LinkButton from '@/components/common/LinkButton'
-import ScrollParallax, { type ScrollParallaxProps } from '@/components/ScrollParallax'
+import type { TextBlock } from '@/components/Home/types'
 
-type ParallaxTextProps = {
+export type ParallaxTextProps = TextBlock & {
   variant: 'image-text' | 'text-image'
-  parallax: ScrollParallaxProps
-  textBlock: {
-    title: string
-    text: string
-    buttons?: {
-      text: string
-      href?: string
-      variant: 'button' | 'link'
-    }[]
-  }
 }
 
-const ParallaxText = ({ parallax, textBlock, variant }: ParallaxTextProps) => {
+const ParallaxText = ({ textBlock, variant, children }: ParallaxTextProps & { children: ReactNode }) => {
   const { title, text, buttons } = textBlock
 
   return (
@@ -56,7 +47,7 @@ const ParallaxText = ({ parallax, textBlock, variant }: ParallaxTextProps) => {
           ) : null}
         </Grid>
         <Grid item xs={12} md={6}>
-          <ScrollParallax {...parallax} />
+          {children}
         </Grid>
       </Grid>
     </Container>

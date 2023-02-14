@@ -4,21 +4,13 @@ import LinkButton from '@/components/common/LinkButton'
 
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
+import type { TextBlock } from '@/components/Home/types'
 
-export type ImageTextProps = {
+export type ImageTextProps = TextBlock & {
   variant: 'image-text' | 'text-image'
   image: {
     src: string
     alt: string
-  }
-  textBlock: {
-    title: string
-    text: string
-    buttons?: {
-      text: string
-      href?: string
-      variant: 'button' | 'link'
-    }[]
   }
 }
 
