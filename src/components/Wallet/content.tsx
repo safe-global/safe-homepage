@@ -83,6 +83,10 @@ export const walletContent = [
           translateY: -220,
           depth: 2,
           direction: -1,
+          initialPosition: {
+            top: '0',
+            left: '-50px',
+          },
         },
         {
           image: {
@@ -93,6 +97,10 @@ export const walletContent = [
           translateY: -120,
           depth: 0,
           direction: -1,
+          initialPosition: {
+            bottom: '0',
+            right: '-50px',
+          },
         },
       ],
     },
