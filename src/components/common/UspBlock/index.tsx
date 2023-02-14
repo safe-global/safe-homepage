@@ -56,7 +56,7 @@ const UspBlock = ({ variant, title, text, items }: UspBlockProps): ReactElement 
       flexDirection="column"
       alignItems="center"
     >
-      <Typography variant="h2" mb="24px">
+      <Typography variant="h2" mb={3}>
         {title}
       </Typography>
       <Typography mb="80px">{text}</Typography>
