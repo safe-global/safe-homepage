@@ -70,13 +70,13 @@ export const walletContent = [
     variant: 'image-text',
     parallax: {
       baseImage: {
-        src: '/images/Ownership/frame.svg',
+        src: '/images/Wallet/Parallaxes/Ownership/frame.svg',
         alt: 'Parallax base image',
       },
       layers: [
         {
           image: {
-            src: '/images/Ownership/address1.svg',
+            src: '/images/Wallet/Parallaxes/Ownership/address1.svg',
             alt: 'Address 1',
           },
           translateX: 0,
@@ -90,7 +90,7 @@ export const walletContent = [
         },
         {
           image: {
-            src: '/images/Ownership/address2.svg',
+            src: '/images/Wallet/Parallaxes/Ownership/address2.svg',
             alt: 'Address 2',
           },
           translateX: 0,
@@ -117,16 +117,48 @@ export const walletContent = [
   },
   {
     variant: 'text-image',
-    image: {
-      src: '/images/Wallet/safe-apps-store.png',
-      alt: 'Transactions require confirmations from owners',
+    parallax: {
+      baseImage: {
+        src: '/images/Wallet/Parallaxes/AppStore/background.svg',
+        alt: 'Parallax base image',
+      },
+      layers: [
+        {
+          image: {
+            src: '/images/Wallet/Parallaxes/AppStore/logos1.svg',
+            alt: 'Address 1',
+          },
+          translateX: 0,
+          translateY: 0,
+          depth: 2,
+          direction: -1,
+          initialPosition: {
+            top: '-400px',
+            left: '0',
+          },
+        },
+        {
+          image: {
+            src: '/images/Wallet/Parallaxes/AppStore/logos2.svg',
+            alt: 'Address 2',
+          },
+          translateX: 0,
+          translateY: 0,
+          depth: 0,
+          direction: -1,
+          initialPosition: {
+            bottom: '50px',
+            right: '0',
+          },
+        },
+      ],
     },
     textBlock: {
       title: 'Built-in app store',
       text: 'Use the best dapps in web3 right from inside your Safe WALLET.',
       buttons: [{ text: 'Get started', href: '#', variant: 'link' }],
     },
-    component: ImageText,
+    component: ParallaxText,
   },
   {
     variant: 'image-text',
