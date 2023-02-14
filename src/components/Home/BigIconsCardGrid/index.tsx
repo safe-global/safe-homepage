@@ -4,7 +4,6 @@ import { Container, Grid, Typography } from '@mui/material'
 import LinkButton from '@/components/common/LinkButton'
 import css from './styles.module.css'
 import ArrowIcon from '@/public/images/arrow-out-icon.svg'
-import Link from 'next/link'
 
 type BigCardProps = {
   caption: string
