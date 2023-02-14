@@ -56,7 +56,9 @@ const UspBlock = ({ variant, title, text, items }: UspBlockProps): ReactElement 
       flexDirection="column"
       alignItems="center"
     >
-      <Typography variant="h2">{title}</Typography>
+      <Typography variant="h2" mb="24px">
+        {title}
+      </Typography>
       <Typography mb="80px">{text}</Typography>
       <Grid container className={css.roundCorners}>
         {items.map((item, index) => (
