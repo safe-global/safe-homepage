@@ -4,7 +4,6 @@ import ImageText from '@/components/Wallet/ImageText'
 import Networks from '@/components/common/Networks'
 import TextBlockBanner from '@/components/common/TextBlockBanner'
 import TextStepperBlockImage from '@/components/Wallet/TextStepperBlockImage'
-import ParallaxText from '@/components/Wallet/ParallaxText'
 import OwnershipParallax from '@/components/Wallet/OwnershipParallax'
 
 export const walletContent = [
@@ -82,12 +81,16 @@ export const walletContent = [
   },
   {
     variant: 'text-image',
+    image: {
+      src: '/images/Wallet/safe-apps-store.png',
+      alt: 'Transactions require confirmations from owners',
+    },
     textBlock: {
       title: 'Built-in app store',
       text: 'Use the best dapps in web3 right from inside your Safe WALLET.',
       buttons: [{ text: 'Get started', href: '#', variant: 'link' }],
     },
-    component: ParallaxText,
+    component: ImageText,
   },
   {
     variant: 'image-text',
