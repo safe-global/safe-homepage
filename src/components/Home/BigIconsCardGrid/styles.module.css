@@ -31,10 +31,6 @@
     color: inherit;
 }
 
-.cardLink:hover .cardLinkButton {
-
-}
-
 .tag {
     background: var(--mui-palette-primary-main);
     padding: 4px 8px;
