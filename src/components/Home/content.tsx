@@ -8,9 +8,6 @@ import ImageParalaxText from '@/components/Home/ImageParalaxText'
 import TitleTextLinkedCardGrid from '@/components/Home/TitleTextLinkedCardGrid'
 import TitleButton from '@/components/Home/TitleButton'
 import TextBlockBanner from '@/components/common/TextBlockBanner'
-
-import { Typography } from '@mui/material'
-import SafeWalletText from '@/components/common/SafeWalletText'
 import SafeCoreText from '@/components/common/SafeCoreText'
 
 export const homeContent = [
@@ -368,20 +365,6 @@ export const homeContent = [
     component: TitleButton,
   },
   {
-    title: (
-      <>
-        Use <SafeWalletText variant="h2" /> anywhere
-      </>
-    ),
-    text: (
-      <>
-        Access your assets anywhere without compromising on security on our flagship interfaces built on{' '}
-        <Typography component="span">
-          <SafeCoreText variant="body1" />
-        </Typography>
-        .
-      </>
-    ),
     component: TextBlockBanner,
   },
 ]
