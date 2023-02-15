@@ -7,18 +7,19 @@
 
 .baseImage {
     width: 100%;
+    height: auto;
 }
 
 .address1 {
     position: absolute;
-    top: -20px;
+    top: 70px;
     left: -25px;
     width: 160px;
 }
 
 .address2 {
     position: absolute;
-    bottom: 45px;
+    bottom: -50px;
     right: -25px;
     width: 160px;
 }
