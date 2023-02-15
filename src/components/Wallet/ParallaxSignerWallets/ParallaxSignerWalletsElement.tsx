@@ -1,0 +1,25 @@
+import FrameImage from '@/public/images/Wallet/Parallaxes/SignerWallets/background.svg'
+import PhoneImage from '@/public/images/Wallet/Parallaxes/SignerWallets/phone.svg'
+import Wallets1Image from '@/public/images/Wallet/Parallaxes/SignerWallets/wallets1.svg'
+import Wallets2Image from '@/public/images/Wallet/Parallaxes/SignerWallets/wallets2.svg'
+import ParallaxWrapper from '@/components/common/ParallaxWrapper'
+import css from './styles.module.css'
+
+const ParallaxBatchingElement = () => {
+  return (
+    <div className={css.parallaxWrapper}>
+      <FrameImage className={css.baseImage} />
+      <ParallaxWrapper translateX={0} translateY={0} depth={0} direction={-1}>
+        <Wallets2Image className={css.wallets2} />
+      </ParallaxWrapper>
+      <ParallaxWrapper translateX={0} translateY={0} depth={3} direction={-1}>
+        <PhoneImage className={css.phone} />
+      </ParallaxWrapper>
+      <ParallaxWrapper translateX={0} translateY={0} depth={1} direction={-1}>
+        <Wallets1Image className={css.wallets1} />
+      </ParallaxWrapper>
+    </div>
+  )
+}
+
+export default ParallaxBatchingElement

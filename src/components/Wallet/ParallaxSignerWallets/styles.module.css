@@ -10,14 +10,21 @@
     height: auto;
 }
 
-.logos1 {
+.phone {
     position: absolute;
     bottom: -70px;
     left: 0px;
     width: 100%;
 }
 
-.logos2 {
+.wallets1 {
+    position: absolute;
+    bottom: -50px;
+    right: 0px;
+    width: 100%;
+}
+
+.wallets2 {
     position: absolute;
     bottom: -50px;
     right: 0px;
@@ -29,11 +36,15 @@
         width: 570px;
     }
 
-    .logos1 {
+    .phone {
         bottom: 25px;
     }
 
-    .logos2 {
+    .wallets1 {
+        bottom: 55px;
+    }
+
+    .wallets2 {
         bottom: 80px;
     }
 }

@@ -8,6 +8,7 @@ import TextRadialAnimation from '@/components/Wallet/TextRadialAnimation'
 import OwnershipParallax from '@/components/Wallet/OwnershipParallax'
 import ParallaxAppStore from '@/components/Wallet/ParallaxAppStore'
 import ParallaxBatching from '@/components/Wallet/ParallaxBatching'
+import ParallaxSignerWallets from '@/components/Wallet/ParallaxSignerWallets'
 
 export const walletContent = [
   {
@@ -123,7 +124,7 @@ export const walletContent = [
       text: 'From hardware wallets like ledger, tresor, to metamask type externally owned accounts, use all of these as signers on your Safe WALLET.',
       buttons: [{ text: 'Get started', href: '#', variant: 'link' }],
     },
-    component: ImageText,
+    component: ParallaxSignerWallets,
   },
   {
     variant: 'image-text',
