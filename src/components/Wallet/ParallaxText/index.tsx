@@ -1,27 +1,26 @@
-import type { ReactElement } from 'react'
+import type { ReactNode } from 'react'
 import { Box, Button, Container, Grid, Typography } from '@mui/material'
-import LinkButton from '@/components/common/LinkButton'
-
 import layoutCss from '@/components/common/styles.module.css'
-import css from './styles.module.css'
+import imageTextCss from '@/components/Wallet/ImageText/styles.module.css'
+import LinkButton from '@/components/common/LinkButton'
 import type { TextBlock } from '@/components/Home/types'
+import clsx from 'clsx'
 
-type ImageTextProps = TextBlock & {
+export type ParallaxTextProps = TextBlock & {
   variant: 'image-text' | 'text-image'
-  image: {
-    src: string
-    alt: string
-  }
 }
 
-const ImageText = ({ image, textBlock, variant }: ImageTextProps): ReactElement => {
+const ParallaxText = ({ textBlock, variant, children }: ParallaxTextProps & { children: ReactNode }) => {
   const { title, text, buttons } = textBlock
 
   return (
-    <Container>
+    <Container disableGutters>
       <Grid
         container
-        className={`${layoutCss.containerShort} ${variant === 'image-text' ? css.imageFirst : css.textFirst}`}
+        className={clsx(
+          layoutCss.containerShort,
+          variant === 'image-text' ? imageTextCss.imageFirst : imageTextCss.textFirst,
+        )}
         spacing={{ xs: 6, md: '30px' }}
         justifyContent="space-between"
       >
@@ -49,12 +48,12 @@ const ImageText = ({ image, textBlock, variant }: ImageTextProps): ReactElement 
             </Box>
           ) : null}
         </Grid>
-        <Grid item md={6}>
-          <img {...image} />
+        <Grid item xs={12} md={6}>
+          {children}
         </Grid>
       </Grid>
     </Container>
   )
 }
 
-export default ImageText
+export default ParallaxText
