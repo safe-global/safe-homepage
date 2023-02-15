@@ -14,7 +14,7 @@ export const walletContent = [
     },
     textBlock: {
       title: 'The most secure way to own assets',
-      button: { text: 'Launch wallet', href: '#' },
+      button: { text: 'Launch wallet', href: 'https://app.safe.global' },
     },
     component: HeroSection,
   },
