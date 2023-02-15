@@ -33,9 +33,6 @@ const TileBox = styled(Box)<{ duration: string }>`
     0% {
       transform: rotate(0deg);
     }
-    50% {
-      transform: rotate(-180deg);
-    }
     100% {
       transform: rotate(-360deg);
     }
@@ -57,9 +54,6 @@ const Orbit = styled(Box)<{ duration: string }>`
   @keyframes orbit {
     0% {
       transform: rotate(0deg);
-    }
-    50% {
-      transform: rotate(180deg);
     }
     100% {
       transform: rotate(360deg);
