@@ -12,6 +12,15 @@
   src: url('/fonts/Citerne-Medium.woff2') format('woff2');
 }
 
+@font-face {
+  font-family: 'Citerne';
+  font-display: swap;
+  font-weight: 400;
+  font-style: italic;
+  src: url('/fonts/Citerne-Italic.woff2') format('woff2');
+}
+
+
 html,
 body {
   padding: 0;

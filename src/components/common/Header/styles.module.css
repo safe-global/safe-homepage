@@ -65,6 +65,10 @@
   border-bottom: 1px solid var(--mui-palette-border-light);
 }
 
+.link:hover {
+  color: var(--mui-palette-primary-light);
+}
+
 .button {
   font-size: 18px;
   line-height: 26px;
@@ -134,7 +138,7 @@
   .button {
     font-size: 16px;
     line-height: 24px;
-    padding: 6px 16px;
+    padding: 5px 16px 7px;
     margin: 0;
   }
 
