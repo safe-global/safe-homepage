@@ -6,6 +6,7 @@ import TextBlockBanner from '@/components/common/TextBlockBanner'
 import TextStepperBlockImage from '@/components/Wallet/TextStepperBlockImage'
 import TextRadialAnimation from '@/components/Wallet/TextRadialAnimation'
 import OwnershipParallax from '@/components/Wallet/OwnershipParallax'
+import ParallaxAppStore from '@/components/Wallet/ParallaxAppStore'
 
 export const walletContent = [
   {
@@ -87,7 +88,7 @@ export const walletContent = [
       text: 'Use the best dapps in web3 right from inside your Safe WALLET.',
       buttons: [{ text: 'Get started', href: '#', variant: 'link' }],
     },
-    component: ImageText,
+    component: ParallaxAppStore,
   },
   {
     variant: 'image-text',
