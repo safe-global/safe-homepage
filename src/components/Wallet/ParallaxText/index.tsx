@@ -4,6 +4,7 @@ import layoutCss from '@/components/common/styles.module.css'
 import imageTextCss from '@/components/Wallet/ImageText/styles.module.css'
 import LinkButton from '@/components/common/LinkButton'
 import type { TextBlock } from '@/components/Home/types'
+import clsx from 'clsx'
 
 export type ParallaxTextProps = TextBlock & {
   variant: 'image-text' | 'text-image'
@@ -16,9 +17,10 @@ const ParallaxText = ({ textBlock, variant, children }: ParallaxTextProps & { ch
     <Container disableGutters>
       <Grid
         container
-        className={`${layoutCss.containerShort} ${
-          variant === 'image-text' ? imageTextCss.imageFirst : imageTextCss.textFirst
-        }`}
+        className={clsx(
+          layoutCss.containerShort,
+          variant === 'image-text' ? imageTextCss.imageFirst : imageTextCss.textFirst,
+        )}
         spacing={{ xs: 6, md: '30px' }}
         justifyContent="space-between"
       >
