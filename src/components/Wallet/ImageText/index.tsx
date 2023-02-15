@@ -6,7 +6,7 @@ import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 import type { TextBlock } from '@/components/Home/types'
 
-export type ImageTextProps = TextBlock & {
+type ImageTextProps = TextBlock & {
   variant: 'image-text' | 'text-image'
   image: {
     src: string
