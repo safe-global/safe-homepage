@@ -163,8 +163,8 @@ export const careersContent = [
     component: UspBlock,
   },
   {
-    caption: 'With contributors across the world, we have our main hubs in Europe and are expanding.',
     title: 'Our locations',
+    text: 'With contributors across the world, we have our main hubs in Europe and are expanding.',
     image: {
       src: '/images/hub-locations.png',
       alt: 'International office locations',
