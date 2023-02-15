@@ -3,6 +3,7 @@ import { Container } from '@mui/system'
 import Link from 'next/link'
 import clsx from 'clsx'
 import type { ReactElement } from 'react'
+import { FloatingTiles } from '@/components/Careers/FloatingTiles'
 
 import { useOpenPositions } from '@/hooks/useOpenPositions'
 
@@ -25,6 +26,7 @@ export const Intro = ({
 
   return (
     <Container className={css.bg}>
+      <FloatingTiles />
       <Grid container className={clsx(layoutCss.container, css.container)}>
         <Grid item>
           <Chip
