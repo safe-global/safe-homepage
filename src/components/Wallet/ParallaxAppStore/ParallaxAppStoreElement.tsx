@@ -4,7 +4,7 @@ import FrameImage from '@/public/images/Wallet/Parallaxes/AppStore/background.sv
 import ParallaxWrapper from '@/components/common/ParallaxWrapper'
 import css from './styles.module.css'
 
-const OwnershipParallaxElement = () => {
+const ParallaxAppStoreElement = () => {
   return (
     <div className={css.parallaxWrapper}>
       <FrameImage className={css.baseImage} />
@@ -18,4 +18,4 @@ const OwnershipParallaxElement = () => {
   )
 }
 
-export default OwnershipParallaxElement
+export default ParallaxAppStoreElement
