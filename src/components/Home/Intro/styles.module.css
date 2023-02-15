@@ -38,9 +38,23 @@
   z-index: -1;
   top: 0;
   left: 0;
-  /* Filter */
-  background-color: #000;
-  opacity: 0.3;
+}
+
+.filter {
+  z-index: -1;
+}
+
+.filter::after {
+  border-radius: 16px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  /* 0.6 opacity of video */
+  opacity: 0.4;
 }
 
 .frame {
@@ -51,6 +65,7 @@
   border-radius: 16px 0 0 0;
   width: 110px;
   height: 80px;
+  z-index: 1;
 }
 
 .frame::before {
