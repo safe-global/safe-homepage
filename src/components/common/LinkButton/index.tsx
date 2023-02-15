@@ -6,7 +6,7 @@ import clsx from 'clsx'
 
 const LinkButton = ({ children, underline = true, className, ...props }: ButtonProps & { underline?: boolean }) => {
   return (
-    <ButtonBase className={clsx(css.linkButton, underline && css.underline, className)} {...props}>
+    <ButtonBase className={clsx(css.linkButton, underline && css.underline, className)} {...props} disableRipple>
       {children}
       <div className={css.arrow}>
         <AngleIcon />

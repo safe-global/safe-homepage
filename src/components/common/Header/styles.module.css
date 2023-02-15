@@ -12,127 +12,135 @@
 }
 
 .logo {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .navigation {
-    display: none;
-    align-items: center;
-    list-style: none;
-    gap: 32px;
+  display: none;
+  align-items: center;
+  list-style: none;
+  gap: 32px;
 }
 
-
-
 .burger {
-    width: 40px;
-    height: 40px;
-    margin-left: auto;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
 }
 
 .burger span {
-    width: 26px;
-    height: 3px;
-    background: white;
-    border-radius: 1px;
+  width: 26px;
+  height: 3px;
+  background: white;
+  border-radius: 1px;
 }
 
-.burger:before, .burger:after {
-    content: "";
-    width: 26px;
-    height: 3px;
-    background: white;
-    border-radius: 1px;
-    position: absolute;
-    transition: transform 0.2s;
+.burger:before,
+.burger:after {
+  content: '';
+  width: 26px;
+  height: 3px;
+  background: white;
+  border-radius: 1px;
+  position: absolute;
+  transition: transform 0.2s;
 }
-
-
-
 
 .burger:before {
-    top: 11px;
+  top: 11px;
 }
 
 .burger:after {
-    bottom: 11px;
+  bottom: 11px;
 }
 
 .link {
-    font-size: 28px;
-    line-height: 32px;
-    display: block;
-    color: white;
-    text-decoration: none;
-    padding: 24px 0;
-    border-bottom: 1px solid var(--mui-palette-border-light);
+  font-size: 28px;
+  line-height: 32px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--mui-palette-border-light);
 }
 
 .button {
-    font-size: 18px;
-    line-height: 26px;
-    padding: 15px 0;
-    width: 100%;
-    margin-top: 24px;
+  font-size: 18px;
+  line-height: 26px;
+  padding: 15px 0;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.badge :global .MuiBadge-badge {
+  font-size: 14px;
+  top: 4px;
+  right: -4px;
 }
 
 @media (max-width: 599px) {
-    .visible {
-        background: var(--mui-palette-background-main);
-    }
+  .visible {
+    background: var(--mui-palette-background-main);
+  }
 
-    .visible .navigation {
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 80px;
-        background: var(--mui-palette-background-main);
-        width: 100%;
-        height: calc(100vh - 80px);
-        margin: 0;
-        padding: 0 16px;
-    }
+  .visible .navigation {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    background: var(--mui-palette-background-main);
+    width: 100%;
+    height: calc(100vh - 80px);
+    margin: 0;
+    padding: 0 16px;
+  }
 
-    .visible .burger span {
-        display: none;
-    }
+  .visible .burger span {
+    display: none;
+  }
 
-    .visible .burger:before {
-        transform: rotate(45deg);
-        top: 19px;
-    }
+  .visible .burger:before {
+    transform: rotate(45deg);
+    top: 19px;
+  }
 
-    .visible .burger:after {
-        transform: rotate(-45deg);
-        bottom: 18px;
-    }
+  .visible .burger:after {
+    transform: rotate(-45deg);
+    bottom: 18px;
+  }
 }
 
 @media (min-width: 600px) {
-    .header {
-        padding: 0 30px;
-    }
+  .header {
+    padding: 0 30px;
+  }
 
-    .navigation {
-        display: flex;
-    }
+  .navigation {
+    display: flex;
+  }
 
-    .burger {
-        display: none;
-    }
+  .burger {
+    display: none;
+  }
 
-    .link {
-        font-size: 18px;
-        line-height: 56px;
-        padding: 0;
-        border: 0;
-    }
+  .link {
+    font-size: 18px;
+    line-height: 56px;
+    padding: 0;
+    border: 0;
+  }
 
-    .button {
-        font-size: 16px;
-        line-height: 24px;
-        padding: 6px 16px;
-        margin: 0;
-    }
+  .button {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 6px 16px;
+    margin: 0;
+  }
+
+  .badge :global .MuiBadge-badge {
+    font-size: 14px;
+    top: 16px;
+    right: -6px;
+  }
 }
