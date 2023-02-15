@@ -28,7 +28,7 @@ const Card = ({ header, title, link }: CardProps): ReactElement => {
         <Typography variant="h3" className={css.cardTitle}>
           {title}
         </Typography>
-        <LinkButton underline={false} className={css.link}>
+        <LinkButton underline={false} className={css.link} fullSize>
           {link.title}
         </LinkButton>
         <ArrowIcon className={css.arrow} />

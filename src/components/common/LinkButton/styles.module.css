@@ -33,7 +33,7 @@
 }
 
 .fullSize:after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
@@ -43,6 +43,7 @@
 
 .arrow {
   margin-left: 4px;
+  margin-bottom: 3px;
   transition: 0.3s;
 }
 
