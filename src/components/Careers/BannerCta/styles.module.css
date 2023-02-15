@@ -16,10 +16,16 @@
   margin-bottom: 16px;
 }
 
+.button {
+  color: var(--mui-palette-secondary-main);
+}
+
 @media (min-width: 600px) {
   .container {
     padding: 104px;
     border-bottom: 80px;
+    margin-left: -104px;
+    margin-right: -104px;
   }
 
   .title {
