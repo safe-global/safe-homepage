@@ -8,6 +8,7 @@ import ImageParallaxText from '@/components/Home/ImageParallaxText'
 import TitleTextLinkedCardGrid from '@/components/Home/TitleTextLinkedCardGrid'
 import TitleButton from '@/components/Home/TitleButton'
 import TextBlockBanner from '@/components/common/TextBlockBanner'
+import SafeCoreText from '@/components/common/SafeCoreText'
 
 export const homeContent = [
   {
@@ -205,8 +206,8 @@ export const homeContent = [
       },
       {
         image: {
-          src: '/images/adidas.svg',
-          alt: 'Adidas',
+          src: '/images/shopify.svg',
+          alt: 'Shopify',
         },
       },
       {
@@ -219,6 +220,12 @@ export const homeContent = [
         image: {
           src: '/images/stripe.svg',
           alt: 'Stripe',
+        },
+      },
+      {
+        image: {
+          src: '/images/abinbev.svg',
+          alt: 'ABInBev',
         },
       },
     ],
@@ -274,7 +281,7 @@ export const homeContent = [
   {
     title: (
       <>
-        Safe {'{CORE} '}
+        <SafeCoreText variant="h2" />
         <b>powers ecosystem projects</b>
         <br />
         in every corner of web3
@@ -358,8 +365,6 @@ export const homeContent = [
     component: TitleButton,
   },
   {
-    title: 'Use Safe {WALLET} anywhere',
-    text: 'Access your assets anywhere without compromising on security on our flagship interfaces built on Safe {Core}.',
     component: TextBlockBanner,
   },
 ]

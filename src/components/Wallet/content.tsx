@@ -276,8 +276,6 @@ export const walletContent = [
     component: TextStepperBlockImage,
   },
   {
-    title: 'Use Safe {WALLET} anywhere',
-    text: 'Access your assets anywhere without compromising on security on our flagship interfaces built on Safe {Core}.',
     component: TextBlockBanner,
   },
 ]
