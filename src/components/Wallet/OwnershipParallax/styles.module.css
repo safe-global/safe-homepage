@@ -1,0 +1,42 @@
+.parallaxWrapper {
+    position: relative;
+    text-align: center;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.baseImage {
+    width: 100%;
+}
+
+.address1 {
+    position: absolute;
+    top: -20px;
+    left: -25px;
+    width: 160px;
+}
+
+.address2 {
+    position: absolute;
+    bottom: 45px;
+    right: -25px;
+    width: 160px;
+}
+
+@media (min-width: 600px) {
+    .parallaxWrapper {
+        width: 404px;
+    }
+
+    .address1 {
+        top: 0;
+        left: -50px;
+        width: auto;
+    }
+
+    .address2 {
+        bottom: 0;
+        right: -50px;
+        width: auto;
+    }
+}

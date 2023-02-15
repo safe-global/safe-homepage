@@ -5,6 +5,7 @@ import Networks from '@/components/common/Networks'
 import TextBlockBanner from '@/components/common/TextBlockBanner'
 import TextStepperBlockImage from '@/components/Wallet/TextStepperBlockImage'
 import TextRadialAnimation from '@/components/Wallet/TextRadialAnimation'
+import OwnershipParallax from '@/components/Wallet/OwnershipParallax'
 
 export const walletContent = [
   {
@@ -64,10 +65,6 @@ export const walletContent = [
   },
   {
     variant: 'image-text',
-    image: {
-      src: '/images/Wallet/ownership.png',
-      alt: 'Transactions require confirmations from owners',
-    },
     textBlock: {
       title: (
         <>
@@ -77,7 +74,7 @@ export const walletContent = [
       text: 'Add new signers, remove signers and replace ownership by simply changing the private key(s) that control the account.',
       buttons: [{ text: 'Get started', href: '#', variant: 'link' }],
     },
-    component: ImageText,
+    component: OwnershipParallax,
   },
   {
     variant: 'text-image',
