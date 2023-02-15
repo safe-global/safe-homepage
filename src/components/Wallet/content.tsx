@@ -7,6 +7,7 @@ import TextStepperBlockImage from '@/components/Wallet/TextStepperBlockImage'
 import TextRadialAnimation from '@/components/Wallet/TextRadialAnimation'
 import OwnershipParallax from '@/components/Wallet/OwnershipParallax'
 import ParallaxAppStore from '@/components/Wallet/ParallaxAppStore'
+import ParallaxBatching from '@/components/Wallet/ParallaxBatching'
 
 export const walletContent = [
   {
@@ -105,7 +106,7 @@ export const walletContent = [
       text: 'Easily batch transactions you want to make together to save on gas.',
       buttons: [{ text: 'Get started', href: '#', variant: 'link' }],
     },
-    component: ImageText,
+    component: ParallaxBatching,
   },
   {
     variant: 'text-image',
