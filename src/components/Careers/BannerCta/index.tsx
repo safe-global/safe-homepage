@@ -34,7 +34,7 @@ export const BannerCta = ({
             size="large"
             rel="noopener noreferrer"
             href={link.href}
-            className={css.button}
+            color="secondary"
           >
             {link.title}
           </Button>
