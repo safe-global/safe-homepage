@@ -27,16 +27,9 @@ const randomPointOnCircle = () => {
 
 const TileBox = styled(Box)<{ duration: string }>`
   position: absolute;
-  animation: ${(p) => p.duration} anti-orbit linear infinite;
+  animation: ${(p) => p.duration} orbit linear infinite;
+  animation-direction: reverse;
 
-  @keyframes anti-orbit {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(-360deg);
-    }
-  }
   /* Tone down the animation to avoid vestibular motion triggers */
   @media (prefers-reduced-motion) {
     animation-name: none;
@@ -84,10 +77,10 @@ const Tiles = ({ tiles, duration }: { tiles: number; duration: string }) => {
     return Array.apply('', Array(tiles)).map(() => {
       const [x, y] = randomPointOnCircle()
 
-      const top = `${x.toFixed(2)}%`
-      const left = `${y.toFixed(2)}%`
+      const top = `${x.toFixed(0)}%`
+      const left = `${y.toFixed(0)}%`
 
-      const size = `${(Math.random() * (MAX_SIZE - MIN_SIZE) + MIN_SIZE).toFixed(2)}px`
+      const size = `${(Math.random() * (MAX_SIZE - MIN_SIZE) + MIN_SIZE).toFixed(0)}px`
 
       return {
         top,
