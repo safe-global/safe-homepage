@@ -8,7 +8,7 @@ const ParallaxAppStoreElement = () => {
   return (
     <div className={css.parallaxWrapper}>
       <FrameImage className={css.baseImage} />
-      <ParallaxWrapper translateX={0} translateY={0} depth={4} direction={-1}>
+      <ParallaxWrapper translateX={0} translateY={0} depth={2} direction={-1}>
         <Logos1Image className={css.logos1} />
       </ParallaxWrapper>
       <ParallaxWrapper translateX={0} translateY={0} depth={0} direction={-1}>
