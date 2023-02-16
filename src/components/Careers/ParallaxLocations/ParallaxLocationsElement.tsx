@@ -12,16 +12,16 @@ const ParallaxLocationsElement = () => {
     <div className={css.parallaxWrapper}>
       <FrameImage className={css.baseImage} />
       <ParallaxWrapper translateX={0} translateY={0} depth={0} direction={-1}>
-        <Image src={Location1Image} alt="Safe hub locations" className={css.location1} />
+        <Image src={Location1Image} alt="Berlin, Germany" className={css.location1} />
       </ParallaxWrapper>
       <ParallaxWrapper translateX={0} translateY={0} depth={0} direction={-1}>
-        <Image src={Location2Image} alt="Safe hub locations" className={css.location2} />
+        <Image src={Location2Image} alt="Lisbon, Portugal" className={css.location2} />
       </ParallaxWrapper>
       <ParallaxWrapper translateX={0} translateY={0} depth={0} direction={-1}>
-        <Image src={Location3Image} alt="Safe hub locations" className={css.location3} />
+        <Image src={Location3Image} alt="Zug, Switzerland" className={css.location3} />
       </ParallaxWrapper>
       <ParallaxWrapper translateX={0} translateY={0} depth={0} direction={-1}>
-        <Image src={Location4Image} alt="Safe hub locations" className={css.location4} />
+        <Image src={Location4Image} alt="A Coruna, Spain" className={css.location4} />
       </ParallaxWrapper>
     </div>
   )
