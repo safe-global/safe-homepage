@@ -3,11 +3,11 @@ import UspBlock from '@/components/common/UspBlock'
 import ImageText from '@/components/Wallet/ImageText'
 import Networks from '@/components/common/Networks'
 import TextBlockBanner from '@/components/common/TextBlockBanner'
-import TextStepperBlockImage from '@/components/Wallet/TextStepperBlockImage'
 import TextRadialAnimation from '@/components/Wallet/TextRadialAnimation'
 import OwnershipParallax from '@/components/Wallet/OwnershipParallax'
 import ParallaxAppStore from '@/components/Wallet/ParallaxAppStore'
 import ParallaxBatching from '@/components/Wallet/ParallaxBatching'
+import MobileAppParallax from '@/components/Wallet/MobileAppParallax'
 
 export const walletContent = [
   {
@@ -275,7 +275,7 @@ export const walletContent = [
         },
       ],
     },
-    component: TextStepperBlockImage,
+    component: MobileAppParallax,
   },
   {
     component: TextBlockBanner,
