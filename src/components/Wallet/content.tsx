@@ -7,6 +7,7 @@ import TextRadialAnimation from '@/components/Wallet/TextRadialAnimation'
 import OwnershipParallax from '@/components/Wallet/OwnershipParallax'
 import ParallaxAppStore from '@/components/Wallet/ParallaxAppStore'
 import ParallaxBatching from '@/components/Wallet/ParallaxBatching'
+import ParallaxTxSimulation from '@/components/Wallet/ParallaxTxSimulation'
 import MobileAppParallax from '@/components/Wallet/MobileAppParallax'
 
 export const walletContent = [
@@ -140,7 +141,7 @@ export const walletContent = [
       text: 'Simulate your transactions before sending them through, right from the Safe’s UI. Get instant prompts and full analysis of your transaction’s success or failure with a simulation report on Tenderly.',
       buttons: [{ text: 'Get started', href: '#', variant: 'link' }],
     },
-    component: ImageText,
+    component: ParallaxTxSimulation,
   },
   {
     title: 'Available on 10+ networks',
