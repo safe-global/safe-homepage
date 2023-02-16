@@ -1,0 +1,28 @@
+.parallaxWrapper {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    width: 342px;
+}
+
+.baseImage {
+    width: 100%;
+    height: auto;
+}
+
+.simulation {
+    position: absolute;
+    bottom: -90px;
+    left: 0px;
+    width: 100%;
+}
+
+@media (min-width: 600px) {
+    .parallaxWrapper {
+        width: 570px;
+    }
+
+    .simulation {
+        bottom: 45px;
+    }
+}
