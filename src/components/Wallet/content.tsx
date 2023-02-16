@@ -1,12 +1,12 @@
 import HeroSection from '@/components/Wallet/Hero'
 import UspBlock from '@/components/common/UspBlock'
-import ImageText from '@/components/Wallet/ImageText'
 import Networks from '@/components/common/Networks'
 import TextBlockBanner from '@/components/common/TextBlockBanner'
 import TextRadialAnimation from '@/components/Wallet/TextRadialAnimation'
 import OwnershipParallax from '@/components/Wallet/OwnershipParallax'
 import ParallaxAppStore from '@/components/Wallet/ParallaxAppStore'
 import ParallaxBatching from '@/components/Wallet/ParallaxBatching'
+import ParallaxSignerWallets from '@/components/Wallet/ParallaxSignerWallets'
 import ParallaxTxSimulation from '@/components/Wallet/ParallaxTxSimulation'
 import MobileAppParallax from '@/components/Wallet/MobileAppParallax'
 
@@ -124,7 +124,7 @@ export const walletContent = [
       text: 'From hardware wallets like ledger, tresor, to metamask type externally owned accounts, use all of these as signers on your Safe WALLET.',
       buttons: [{ text: 'Get started', href: '#', variant: 'link' }],
     },
-    component: ImageText,
+    component: ParallaxSignerWallets,
   },
   {
     variant: 'image-text',

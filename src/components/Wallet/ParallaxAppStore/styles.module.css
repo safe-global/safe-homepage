@@ -12,16 +12,16 @@
 
 .logos1 {
   position: absolute;
-  bottom: -70px;
-  left: 0px;
-  width: 100%;
+  bottom: 195px;
+  left: 47px;
+  width: 225px;
 }
 
 .logos2 {
   position: absolute;
-  bottom: -50px;
-  right: 0px;
-  width: 100%;
+  bottom: 60px;
+  right: 30px;
+  width: 260px;
 }
 
 @media (min-width: 600px) {
@@ -30,12 +30,14 @@
   }
 
   .logos1 {
-    bottom: 25px;
-    left: 0px;
+    bottom: 330px;
+    left: 80px;
+    width: 370px;
   }
 
   .logos2 {
-    bottom: 80px;
-    right: 0px;
+    bottom: 110px;
+    left: 95px;
+    width: 400px;
   }
 }
