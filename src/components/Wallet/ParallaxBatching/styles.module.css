@@ -10,10 +10,17 @@
   height: auto;
 }
 
+.placeholder {
+  position: absolute;
+  bottom: 100px;
+  left: 0px;
+  width: 278px;
+}
+
 .transaction {
   position: absolute;
-  bottom: -90px;
-  left: 0px;
+  bottom: -110px;
+  left: -10px;
   width: 100%;
 }
 
@@ -22,8 +29,14 @@
     width: 570px;
   }
 
+  .placeholder {
+    bottom: 164px;
+    width: 463px;
+  }
+
   .transaction {
-    bottom: 45px;
-    left: 0px;
+    bottom: -20px;
+    left: -20px;
+    width: 512px;
   }
 }
