@@ -28,6 +28,10 @@ body {
   font-family: Citerne, sans-serif;
 }
 
+button {
+  font-family: Citerne, sans-serif;
+}
+
 * {
   box-sizing: border-box;
 }
