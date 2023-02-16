@@ -12,7 +12,7 @@
 
 .phone {
   position: absolute;
-  top: -550px;
+  top: -430px;
   left: 35px;
   width: 140px;
 }
@@ -24,7 +24,7 @@
 
   .phone {
     top: -700px;
-    left: 55px;
-    width: auto;
+    left: 50px;
+    width: 250px;
   }
 }
