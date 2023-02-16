@@ -1,29 +1,29 @@
 .parallaxWrapper {
-    position: relative;
-    text-align: center;
-    margin: 0 auto;
-    width: 342px;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  width: 342px;
 }
 
 .baseImage {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .transaction {
-    position: absolute;
-    bottom: -90px;
-    left: 0px;
-    width: 100%;
+  position: absolute;
+  bottom: -90px;
+  left: 0px;
+  width: 100%;
 }
 
 @media (min-width: 600px) {
-    .parallaxWrapper {
-        width: 570px;
-    }
+  .parallaxWrapper {
+    width: 570px;
+  }
 
-    .transaction {
-        bottom: 45px;
-        left: 0px;
-    }
+  .transaction {
+    bottom: 45px;
+    left: 0px;
+  }
 }

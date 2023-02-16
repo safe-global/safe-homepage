@@ -1,24 +1,24 @@
 .gradient {
-    position: relative;
-    background: url("/images/ecosystem-bg.png") no-repeat top center;
-    background-size: cover;
+  position: relative;
+  background: url("/images/ecosystem-bg.png") no-repeat top center;
+  background-size: cover;
 }
 
 .gradient:before, .gradient:after {
-    content: "";
-    top: 0;
-    display: block;
-    height: 100%;
-    position: absolute;
-    width: 10%;
+  content: "";
+  top: 0;
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 10%;
 }
 
 .gradient:before {
-    background: linear-gradient(90deg, var(--mui-palette-background-main) 0%, rgba(18, 19, 18, 0) 100%);
-    left: 0;
+  background: linear-gradient(90deg, var(--mui-palette-background-main) 0%, rgba(18, 19, 18, 0) 100%);
+  left: 0;
 }
 
 .gradient:after {
-    background: linear-gradient(270deg, var(--mui-palette-background-main) 0%, rgba(18, 19, 18, 0) 100%);
-    right: 0;
+  background: linear-gradient(270deg, var(--mui-palette-background-main) 0%, rgba(18, 19, 18, 0) 100%);
+  right: 0;
 }
