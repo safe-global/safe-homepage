@@ -6,6 +6,7 @@ type BaseBlock = {
   text: string | JSX.Element
   caption?: string
   link?: Link
+  buttons?: Buttons
   image?: DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement> & { alt: string }
   items?: Array<Partial<BaseBlock>>
 }
@@ -14,6 +15,14 @@ type Link = {
   title?: string
   href: string
 }
+
+type Button = {
+  text?: string
+  href: string
+  variant: 'button' | 'link'
+}
+
+type Buttons = Array<Button>
 
 type TextBlock = {
   textBlock: {

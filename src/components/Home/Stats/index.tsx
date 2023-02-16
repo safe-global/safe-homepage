@@ -27,8 +27,17 @@ const Stats = ({ caption, title, text, items }: BaseBlock): ReactElement => {
             {items &&
               items.map((item, index) => (
                 <div key={'metric-' + index}>
-                  <p className={css.metric}>{item.title}</p>
-                  <Typography variant="caption">{item.text}</Typography>
+                  {item.link ? (
+                    <a href={item.link.href} target="_blank" rel="noreferrer">
+                      <p className={css.metric}>{item.title}</p>
+                      <Typography variant="caption">{item.text}</Typography>
+                    </a>
+                  ) : (
+                    <>
+                      <p className={css.metric}>{item.title}</p>
+                      <Typography variant="caption">{item.text}</Typography>
+                    </>
+                  )}
                 </div>
               ))}
           </div>

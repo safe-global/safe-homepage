@@ -18,7 +18,7 @@ const TitleButton = ({ title, link }: TitleButtonProps) => {
           <Typography variant="h2" mb={5}>
             {title}
           </Typography>
-          <Button href={link.href} variant="contained" size="large">
+          <Button href={link.href} target="_blank" rel="noreferrer" variant="contained" size="large">
             {link.title}
           </Button>
         </Grid>

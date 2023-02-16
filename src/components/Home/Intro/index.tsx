@@ -1,5 +1,5 @@
 import { Button, Container, Grid, Typography } from '@mui/material'
-import { WALLET_LINK } from '@/config/constants'
+import { CORE_LINK, WALLET_LINK } from '@/config/constants'
 import css from '@/components/Home/Intro/styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
 
@@ -17,7 +17,14 @@ const Intro = ({ title, text }: BaseBlock) => {
             <Grid item md={6}>
               <Typography className={css.subtitle}>{text}</Typography>
               <div className={css.buttons}>
-                <Button variant="contained" color="background" size="large">
+                <Button
+                  variant="contained"
+                  color="background"
+                  size="large"
+                  href={CORE_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Build
                 </Button>
                 <Button

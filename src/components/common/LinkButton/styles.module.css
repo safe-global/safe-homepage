@@ -43,7 +43,7 @@
 
 .arrow {
   margin-left: 4px;
-  margin-bottom: 3px;
+  margin-bottom: -2px;
   transition: 0.3s;
 }
 
