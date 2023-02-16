@@ -14,7 +14,7 @@
     position: absolute;
     bottom: -70px;
     left: 0px;
-    width: 100%;
+    width: 125px;
 }
 
 .wallets1 {
@@ -37,7 +37,9 @@
     }
 
     .phone {
-        bottom: 25px;
+        bottom: 45px;
+        left: 170px;
+        width: 225px;
     }
 
     .wallets1 {

@@ -1,5 +1,6 @@
+import Image from 'next/image'
 import FrameImage from '@/public/images/Wallet/Parallaxes/SignerWallets/background.svg'
-import PhoneImage from '@/public/images/Wallet/Parallaxes/SignerWallets/phone.svg'
+import PhoneImage from '@/public/images/Wallet/Parallaxes/SignerWallets/phone.png'
 import Wallets1Image from '@/public/images/Wallet/Parallaxes/SignerWallets/wallets1.svg'
 import Wallets2Image from '@/public/images/Wallet/Parallaxes/SignerWallets/wallets2.svg'
 import ParallaxWrapper from '@/components/common/ParallaxWrapper'
@@ -13,7 +14,7 @@ const ParallaxBatchingElement = () => {
         <Wallets2Image className={css.wallets2} />
       </ParallaxWrapper>
       <ParallaxWrapper translateX={0} translateY={0} depth={3} direction={-1}>
-        <PhoneImage className={css.phone} />
+        <Image src={PhoneImage} alt="Assets view on Safe mobile" className={css.phone} />
       </ParallaxWrapper>
       <ParallaxWrapper translateX={0} translateY={0} depth={1} direction={-1}>
         <Wallets1Image className={css.wallets1} />
