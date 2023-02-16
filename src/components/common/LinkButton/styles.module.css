@@ -51,7 +51,7 @@
   content: '';
   height: 2px;
   width: 100%;
-  background: white;
+  background: currentColor;
   position: absolute;
   top: 50%;
   transform: translateX(-2px) translateY(-50%);

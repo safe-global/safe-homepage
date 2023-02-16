@@ -13,21 +13,12 @@
   min-height: 272px;
 }
 
-.card:hover {
-  outline-color: var(--mui-palette-primary-main);
-  outline-width: 2px;
-}
-
 .header {
   margin-bottom: auto;
 }
 
 .card:hover .arrow {
   transform: rotate(45deg);
-}
-
-.card:hover .arrow path {
-  fill: var(--mui-palette-primary-main);
 }
 
 .title {
@@ -39,19 +30,46 @@
   margin-bottom: 10.5px;
 }
 
-.link *::after {
-  background-color: var(--mui-palette-primary-main) !important;
-}
-
-.link:hover path {
-  fill: var(--mui-palette-primary-main) !important;
-}
-
 .arrow {
   position: absolute;
   top: 24px;
   right: 24px;
   transition: transform 0.3s;
+}
+
+/* Highlight */
+.highlight:hover {
+  background-image: linear-gradient(45deg, var(--mui-palette-primary-main) 25%, var(--mui-palette-info-dark) 100%);
+}
+
+.highlight:hover * {
+  color: var(--mui-palette-background-main) !important;
+}
+
+.highlight:hover svg path {
+  fill: var(--mui-palette-background-main) !important;
+}
+
+.highlight .link div::after {
+  background-color: var(--mui-palette-background-main) !important;
+}
+
+/* Outline */
+.outline:hover {
+  outline-color: var(--mui-palette-primary-main);
+  outline-width: 2px;
+}
+
+.outline:hover .arrow path {
+  fill: var(--mui-palette-primary-main);
+}
+
+.outline .link div::after {
+  background-color: var(--mui-palette-primary-main) !important;
+}
+
+.outline .link:hover path {
+  fill: var(--mui-palette-primary-main) !important;
 }
 
 @media (min-width: 600px) {
