@@ -19,7 +19,7 @@ const ParallaxText = ({ title, text, children }: ParallaxTextProps): ReactElemen
         spacing={{ xs: '48px', md: '24px' }}
         className={clsx(layoutCss.container, css.container)}
       >
-        <Grid item className={css.text}>
+        <Grid item className={css.text} mb={{ md: 10 }}>
           <Typography variant="h2" textAlign="center">
             {title}
           </Typography>
