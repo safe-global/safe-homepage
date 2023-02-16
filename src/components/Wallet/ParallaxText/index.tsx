@@ -5,13 +5,14 @@ import imageTextCss from '@/components/Wallet/ImageText/styles.module.css'
 import LinkButton from '@/components/common/LinkButton'
 import type { TextBlock } from '@/components/Home/types'
 import clsx from 'clsx'
+import Stepper from '@/components/Wallet/Stepper'
 
 export type ParallaxTextProps = TextBlock & {
   variant: 'image-text' | 'text-image'
 }
 
 const ParallaxText = ({ textBlock, variant, children }: ParallaxTextProps & { children: ReactNode }) => {
-  const { title, text, buttons } = textBlock
+  const { title, text, buttons, steps } = textBlock
 
   return (
     <Container disableGutters>
@@ -27,6 +28,7 @@ const ParallaxText = ({ textBlock, variant, children }: ParallaxTextProps & { ch
         <Grid item md={5} display="flex" flexDirection="column" justifyContent="center" gap={{ xs: 3, md: 4 }}>
           <Typography variant="h2">{title}</Typography>
           <Typography>{text}</Typography>
+          {steps && <Stepper steps={steps} />}
           {buttons ? (
             <Box display="flex" gap={3}>
               {buttons.map((button) => {

@@ -117,7 +117,7 @@ export const theme = createTheme({
         sizeLarge: {
           fontSize: '18px',
           lineHeight: '26px',
-          padding: '15px 22px',
+          padding: '14px 22px 16px',
         },
         root: {
           textTransform: 'inherit',

@@ -1,6 +1,7 @@
 .links svg {
   width: auto;
   height: 40px;
+  display: block;
 }
 
 .container {

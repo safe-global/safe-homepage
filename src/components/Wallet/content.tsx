@@ -3,12 +3,13 @@ import UspBlock from '@/components/common/UspBlock'
 import ImageText from '@/components/Wallet/ImageText'
 import Networks from '@/components/common/Networks'
 import TextBlockBanner from '@/components/common/TextBlockBanner'
-import TextStepperBlockImage from '@/components/Wallet/TextStepperBlockImage'
 import TextRadialAnimation from '@/components/Wallet/TextRadialAnimation'
 import OwnershipParallax from '@/components/Wallet/OwnershipParallax'
 import ParallaxAppStore from '@/components/Wallet/ParallaxAppStore'
 import ParallaxBatching from '@/components/Wallet/ParallaxBatching'
 import ParallaxSignerWallets from '@/components/Wallet/ParallaxSignerWallets'
+import ParallaxTxSimulation from '@/components/Wallet/ParallaxTxSimulation'
+import MobileAppParallax from '@/components/Wallet/MobileAppParallax'
 
 export const walletContent = [
   {
@@ -18,7 +19,7 @@ export const walletContent = [
     },
     textBlock: {
       title: 'The most secure way to own assets',
-      button: { text: 'Launch wallet', href: '#' },
+      button: { text: 'Launch wallet', href: 'https://app.safe.global' },
     },
     component: HeroSection,
   },
@@ -141,7 +142,7 @@ export const walletContent = [
       text: 'Simulate your transactions before sending them through, right from the Safe’s UI. Get instant prompts and full analysis of your transaction’s success or failure with a simulation report on Tenderly.',
       buttons: [{ text: 'Get started', href: '#', variant: 'link' }],
     },
-    component: ImageText,
+    component: ParallaxTxSimulation,
   },
   {
     title: 'Available on 10+ networks',
@@ -276,7 +277,7 @@ export const walletContent = [
         },
       ],
     },
-    component: TextStepperBlockImage,
+    component: MobileAppParallax,
   },
   {
     component: TextBlockBanner,

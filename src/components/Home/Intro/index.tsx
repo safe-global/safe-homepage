@@ -34,10 +34,12 @@ const Intro = ({ title, text }: BaseBlock) => {
             </Grid>
           </Grid>
         </Container>
-        <video autoPlay muted loop className={css.video}>
-          <source src="/videos/safe-logo.mp4" type="video/mp4" />
-        </video>
-        <div className={css.frame} />
+        <div className={css.filter}>
+          <video autoPlay muted loop className={css.video}>
+            <source src="/videos/safe-logo.mp4" type="video/mp4" />
+          </video>
+          <div className={css.frame} />
+        </div>
 
         <Typography variant="caption" className={css.scroll}>
           Scroll
