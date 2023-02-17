@@ -1,5 +1,6 @@
-import { ButtonBase, Grid, Typography } from '@mui/material'
+import { Grid, Typography } from '@mui/material'
 import { Container } from '@mui/system'
+import clsx from 'clsx'
 import type { ReactElement } from 'react'
 
 import LinkButton from '@/components/common/LinkButton'
@@ -12,32 +13,37 @@ export type CardProps = {
   header: ReactElement
   title: string
   link: { href: string; title: string }
+  highlight?: boolean
 }
 
-const Card = ({ header, title, link }: CardProps): ReactElement => {
+const Card = ({ header, title, link, highlight }: CardProps): ReactElement => {
   return (
     <Grid key={title} item xs={12} md={4}>
-      <ButtonBase
-        href={link.href}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={`Link to open ${title}`}
-        className={css.card}
-      >
+      <div className={clsx(css.card, highlight ? css.highlight : css.outline)}>
         <div className={css.header}>{header}</div>
         <Typography variant="h3" className={css.cardTitle}>
           {title}
         </Typography>
-        <LinkButton underline={false} className={css.link}>
+        <LinkButton underline={false} className={css.link} fullSize>
           {link.title}
         </LinkButton>
         <ArrowIcon className={css.arrow} />
-      </ButtonBase>
+      </div>
     </Grid>
   )
 }
 
-export const Cards = ({ items, title, id }: { items: CardProps[]; title: string; id?: string }): ReactElement => {
+export const Cards = ({
+  items,
+  title,
+  id,
+  highlight,
+}: {
+  items: CardProps[]
+  title: string
+  id?: string
+  highlight?: boolean
+}): ReactElement => {
   return (
     <Container id={id}>
       <Grid container spacing="30px" className={layoutCss.container}>
@@ -47,7 +53,7 @@ export const Cards = ({ items, title, id }: { items: CardProps[]; title: string;
           </Typography>
         </Grid>
         {items.map((props) => (
-          <Card key={props.title} {...props} />
+          <Card key={props.title} highlight={highlight} {...props} />
         ))}
       </Grid>
     </Container>

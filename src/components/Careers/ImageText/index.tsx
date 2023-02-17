@@ -11,10 +11,8 @@ export const ImageText = ({
   image,
   title,
   text,
-  caption,
 }: {
   variant?: 'reverse'
-  caption?: string
   title: string
   text?: string
   image: DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>
@@ -28,11 +26,6 @@ export const ImageText = ({
         className={clsx(layoutCss.container, css.container)}
       >
         <Grid item xs={12} md={5} className={css.text}>
-          {caption ? (
-            <Typography variant="body2" className={css.caption}>
-              {caption}
-            </Typography>
-          ) : null}
           <Typography variant="h2">{title}</Typography>
           {text ? <Typography>{text}</Typography> : null}
         </Grid>

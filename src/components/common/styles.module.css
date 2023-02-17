@@ -10,6 +10,18 @@
     overflow: hidden;
 }
 
+.h2SafeType {
+    margin-bottom: -15px;
+    margin-right: 10px;
+    width: 200px;
+}
+
+.body1SafeType {
+    width: 90px;
+    height: auto;
+    margin-bottom: -2px;
+}
+
 @media (min-width: 600px) {
     .container {
         margin-top: 350px;
@@ -21,5 +33,11 @@
         margin-top: 250px;
         margin-bottom: 250px;
         overflow: initial;
+    }
+
+    .h2SafeType {
+        width: auto;
+        margin-bottom: -9px;
+        margin-right: 14px;
     }
 }

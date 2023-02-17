@@ -1,14 +1,14 @@
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px;
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.005);
-  backdrop-filter: blur(8px);
-  z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.005);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
 }
 
 .logo {
@@ -63,6 +63,10 @@
   text-decoration: none;
   padding: 24px 0;
   border-bottom: 1px solid var(--mui-palette-border-light);
+}
+
+.link:hover {
+  color: var(--mui-palette-primary-light);
 }
 
 .button {
@@ -134,7 +138,7 @@
   .button {
     font-size: 16px;
     line-height: 24px;
-    padding: 6px 16px;
+    padding: 5px 16px 7px;
     margin: 0;
   }
 

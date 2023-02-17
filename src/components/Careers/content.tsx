@@ -5,6 +5,7 @@ import { Cards } from './Cards'
 import UspBlock from '@/components/common/UspBlock'
 import { Positions, POSITIONS_ID } from './Positions'
 import { BannerCta } from './BannerCta'
+import ParallaxLocations from '@/components/Careers/ParallaxLocations'
 
 export const careersContent = [
   {
@@ -163,13 +164,9 @@ export const careersContent = [
     component: UspBlock,
   },
   {
-    caption: 'With contributors across the world, we have our main hubs in Europe and are expanding.',
     title: 'Our locations',
-    image: {
-      src: '/images/hub-locations.png',
-      alt: 'International office locations',
-    },
-    component: ImageText,
+    text: 'With contributors across the world, we have our main hubs in Europe and are expanding.',
+    component: ParallaxLocations,
   },
   {
     variant: 'reverse',

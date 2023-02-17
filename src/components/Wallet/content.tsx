@@ -1,10 +1,14 @@
 import HeroSection from '@/components/Wallet/Hero'
 import UspBlock from '@/components/common/UspBlock'
-import ImageText from '@/components/Wallet/ImageText'
 import Networks from '@/components/common/Networks'
 import TextBlockBanner from '@/components/common/TextBlockBanner'
-import TextStepperBlockImage from '@/components/Wallet/TextStepperBlockImage'
 import TextRadialAnimation from '@/components/Wallet/TextRadialAnimation'
+import OwnershipParallax from '@/components/Wallet/OwnershipParallax'
+import ParallaxAppStore from '@/components/Wallet/ParallaxAppStore'
+import ParallaxBatching from '@/components/Wallet/ParallaxBatching'
+import ParallaxSignerWallets from '@/components/Wallet/ParallaxSignerWallets'
+import ParallaxTxSimulation from '@/components/Wallet/ParallaxTxSimulation'
+import MobileAppParallax from '@/components/Wallet/MobileAppParallax'
 
 export const walletContent = [
   {
@@ -14,7 +18,7 @@ export const walletContent = [
     },
     textBlock: {
       title: 'The most secure way to own assets',
-      button: { text: 'Launch wallet', href: '#' },
+      button: { text: 'Launch wallet', href: 'https://app.safe.global' },
     },
     component: HeroSection,
   },
@@ -64,10 +68,6 @@ export const walletContent = [
   },
   {
     variant: 'image-text',
-    image: {
-      src: '/images/Wallet/ownership.png',
-      alt: 'Transactions require confirmations from owners',
-    },
     textBlock: {
       title: (
         <>
@@ -77,7 +77,7 @@ export const walletContent = [
       text: 'Add new signers, remove signers and replace ownership by simply changing the private key(s) that control the account.',
       buttons: [{ text: 'Get started', href: '#', variant: 'link' }],
     },
-    component: ImageText,
+    component: OwnershipParallax,
   },
   {
     variant: 'text-image',
@@ -90,7 +90,7 @@ export const walletContent = [
       text: 'Use the best dapps in web3 right from inside your Safe WALLET.',
       buttons: [{ text: 'Get started', href: '#', variant: 'link' }],
     },
-    component: ImageText,
+    component: ParallaxAppStore,
   },
   {
     variant: 'image-text',
@@ -107,7 +107,7 @@ export const walletContent = [
       text: 'Easily batch transactions you want to make together to save on gas.',
       buttons: [{ text: 'Get started', href: '#', variant: 'link' }],
     },
-    component: ImageText,
+    component: ParallaxBatching,
   },
   {
     variant: 'text-image',
@@ -124,7 +124,7 @@ export const walletContent = [
       text: 'From hardware wallets like ledger, tresor, to metamask type externally owned accounts, use all of these as signers on your Safe WALLET.',
       buttons: [{ text: 'Get started', href: '#', variant: 'link' }],
     },
-    component: ImageText,
+    component: ParallaxSignerWallets,
   },
   {
     variant: 'image-text',
@@ -141,7 +141,7 @@ export const walletContent = [
       text: 'Simulate your transactions before sending them through, right from the Safe’s UI. Get instant prompts and full analysis of your transaction’s success or failure with a simulation report on Tenderly.',
       buttons: [{ text: 'Get started', href: '#', variant: 'link' }],
     },
-    component: ImageText,
+    component: ParallaxTxSimulation,
   },
   {
     title: 'Available on 10+ networks',
@@ -276,11 +276,9 @@ export const walletContent = [
         },
       ],
     },
-    component: TextStepperBlockImage,
+    component: MobileAppParallax,
   },
   {
-    title: 'Use Safe {WALLET} anywhere',
-    text: 'Access your assets anywhere without compromising on security on our flagship interfaces built on Safe {Core}.',
     component: TextBlockBanner,
   },
 ]

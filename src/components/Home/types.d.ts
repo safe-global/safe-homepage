@@ -1,4 +1,5 @@
 import type { DetailedHTMLProps, ImgHTMLAttributes } from 'react'
+import type { StepsType } from '@/components/Wallet/Stepper'
 
 type BaseBlock = {
   title: string | JSX.Element
@@ -12,4 +13,17 @@ type BaseBlock = {
 type Link = {
   title?: string
   href: string
+}
+
+type TextBlock = {
+  textBlock: {
+    title: string | JSX.Element
+    text: string | JSX.Element
+    buttons?: {
+      text: string
+      href?: string
+      variant: 'button' | 'link'
+    }[]
+    steps?: StepsType
+  }
 }

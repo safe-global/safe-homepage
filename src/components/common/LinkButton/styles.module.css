@@ -4,6 +4,7 @@
   letter-spacing: 0.46px;
   font-weight: 500;
   transition: 0.3s;
+  position: static;
 }
 
 .underline {
@@ -31,8 +32,18 @@
   fill: var(--mui-palette-primary-main);
 }
 
+.fullSize:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .arrow {
   margin-left: 4px;
+  margin-bottom: 3px;
   transition: 0.3s;
 }
 
@@ -40,7 +51,7 @@
   content: '';
   height: 2px;
   width: 100%;
-  background: white;
+  background: currentColor;
   position: absolute;
   top: 50%;
   transform: translateX(-2px) translateY(-50%);

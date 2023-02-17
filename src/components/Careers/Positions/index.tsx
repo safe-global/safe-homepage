@@ -36,5 +36,5 @@ export const Positions = ({ items: _items, ...rest }: ComponentProps<typeof Card
     return positions.map(parsePosition)
   }, [positions])
 
-  return <Cards items={items} {...rest} />
+  return <Cards items={items} highlight {...rest} />
 }
