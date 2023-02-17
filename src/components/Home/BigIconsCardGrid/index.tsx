@@ -45,7 +45,8 @@ const BigIconsCardGrid = ({ items }: BigCardGridProps): ReactElement => {
                   <Typography variant="h3" mb={5} mt={2}>
                     {item.title}
                   </Typography>
-                  {/* @ts-ignore target not allowed for type ButtonProps */}
+                  {/* FIXME: target not allowed for type ButtonProps */}
+                  {/* @ts-ignore */}
                   <LinkButton href={item.link?.href} target="_blank" rel="noreferrer" sx={{ mt: 'auto' }} fullSize>
                     {item.link?.title}
                   </LinkButton>
