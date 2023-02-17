@@ -3,7 +3,7 @@ import { Container } from '@mui/system'
 import Link from 'next/link'
 import clsx from 'clsx'
 import type { ReactElement } from 'react'
-import { FloatingTiles } from '@/components/Careers/FloatingTiles'
+import HeaderParticles from '@/public/images/header_particles.svg'
 
 import { useOpenPositions } from '@/hooks/useOpenPositions'
 
@@ -25,8 +25,8 @@ export const Intro = ({
   const { data: positions = [] } = useOpenPositions()
 
   return (
-    <Container className={css.bg}>
-      <FloatingTiles />
+    <Container>
+      <HeaderParticles className={css.bg} />
       <Grid container className={clsx(layoutCss.container, css.container)}>
         <Grid item>
           <Chip
