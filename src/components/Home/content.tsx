@@ -360,7 +360,7 @@ export const homeContent = [
         ),
         caption: 'Shape our future',
         link: {
-          href: 'https://forum.safe.global/t/guardians-gather/265',
+          href: 'https://guardians.safe.global',
         },
       },
     ],
