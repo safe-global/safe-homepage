@@ -31,8 +31,7 @@
         <animate attributeType="XML" attributeName="opacity" dur="10s" from="0" to="1" xlink:href="#time_group"/>
         <filter id="gooey">
           <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" color-interpolation-filters="sRGB" />
-          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-          <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+          <feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
         </filter>
     </defs>
     <g id="_R_G">
