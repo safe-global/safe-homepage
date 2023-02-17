@@ -12,7 +12,7 @@ export type ParallaxTextProps = TextBlock & {
 }
 
 const ParallaxText = ({ textBlock, variant, children }: ParallaxTextProps & { children: ReactNode }) => {
-  const { title, text, buttons, steps } = textBlock
+  const { title, text, buttons, steps, caption } = textBlock
 
   return (
     <Container disableGutters>
@@ -22,7 +22,12 @@ const ParallaxText = ({ textBlock, variant, children }: ParallaxTextProps & { ch
         spacing={{ xs: 6, md: '30px' }}
         justifyContent="space-between"
       >
-        <Grid item md={5} display="flex" flexDirection="column" justifyContent="center" gap={{ xs: 3, md: 4 }}>
+        <Grid item xs={12} md={5} display="flex" flexDirection="column" justifyContent="center" gap={{ xs: 3, md: 4 }}>
+          {caption && (
+            <Typography variant="caption" component="div">
+              {caption}
+            </Typography>
+          )}
           <Typography variant="h2">{title}</Typography>
           <Typography>{text}</Typography>
           {steps && <Stepper steps={steps} />}
@@ -47,7 +52,7 @@ const ParallaxText = ({ textBlock, variant, children }: ParallaxTextProps & { ch
             </Box>
           ) : null}
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={6} display="flex" alignItems="center">
           {children}
         </Grid>
       </Grid>
