@@ -4,18 +4,19 @@ import { Grid, Typography, Container, Box } from '@mui/material'
 import css from './styles.module.css'
 
 const BannerTextCard = ({ title, text }: { title: string; text: string }): ReactElement => {
-
   const bgRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (!bgRef.current) return
 
-    const parallax = () => {
+    const parallax = (e: MouseEvent) => {
+      let _w = window.innerWidth / 2
       let _h = window.innerHeight / 2
-      let _scrollPos = window.scrollY
-      let _depth1 = `center ${50 - (_scrollPos * 0.1 - _h) * 0.1}%`
-      let _depth2 = `center ${50 - (_scrollPos * 0.1 - _h) * 0.15}%`
-      let _depth3 = `center ${50 - (_scrollPos * 0.1 - _h) * 0.2}%`
+      let _mouseX = e.clientX
+      let _mouseY = e.clientY
+      let _depth1 = `${50 - (_mouseX - _w) * 0.005}% ${50 - (_mouseY - _h) * 0.005}%`
+      let _depth2 = `${50 - (_mouseX - _w) * 0.005}% ${50 - (_mouseY - _h) * 0.005}%`
+      let _depth3 = `${50 - (_mouseX - _w) * 0.009}% ${50 - (_mouseY - _h) * 0.009}%`
       let x = `${_depth3}, ${_depth2}, ${_depth1}`
 
       if (bgRef.current) {
@@ -23,10 +24,10 @@ const BannerTextCard = ({ title, text }: { title: string; text: string }): React
       }
     }
 
-    document.addEventListener('scroll', parallax)
+    document.addEventListener('mousemove', parallax)
 
     return () => {
-      document.removeEventListener('scroll', parallax)
+      document.removeEventListener('mousemove', parallax)
     }
   }, [])
 
