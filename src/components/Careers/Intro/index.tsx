@@ -3,6 +3,7 @@ import { Container } from '@mui/system'
 import Link from 'next/link'
 import clsx from 'clsx'
 import type { ReactElement } from 'react'
+import HeaderParticles from '@/public/images/header_particles.svg'
 
 import { useOpenPositions } from '@/hooks/useOpenPositions'
 
@@ -24,9 +25,10 @@ export const Intro = ({
   const { data: positions = [] } = useOpenPositions()
 
   return (
-    <Container className={css.bg}>
+    <Container className={css.wrapper}>
+      <HeaderParticles className={css.bg} />
       <Grid container className={clsx(layoutCss.container, css.container)}>
-        <Grid item>
+        <Grid item xs={12}>
           <Chip
             label={`${positions.length} open position${positions.length === 1 ? '' : 's'}`}
             variant="outlined"
@@ -39,15 +41,21 @@ export const Intro = ({
           />
         </Grid>
 
-        <Typography variant="h1" className={css.title}>
-          {title}
-        </Typography>
+        <Grid item xs={12} md={10}>
+          <Typography variant="h1" className={css.title}>
+            {title}
+          </Typography>
+        </Grid>
 
-        <Typography className={css.text}>{text}</Typography>
+        <Grid item xs={12} md={6} textAlign="center">
+          <Typography className={css.text} mb={3}>
+            {text}
+          </Typography>
 
-        <Button variant="contained" size="large" LinkComponent={Link} href={link.href}>
-          {link.title}
-        </Button>
+          <Button variant="contained" size="large" LinkComponent={Link} href={link.href}>
+            {link.title}
+          </Button>
+        </Grid>
       </Grid>
     </Container>
   )

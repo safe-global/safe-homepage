@@ -1,12 +1,24 @@
-.bg {
-  background: url('/images/careers-bg.svg') no-repeat center -90px;
-}
-
 .chip {
   color: var(--mui-palette-primary-main);
   /* TODO: Use custom chip from wallet page once merged
   Uppercase transformation does not vertically align correctly */
   padding-top: 2px;
+}
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+.bg {
+  width: 700px;
+  height: 700px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -5%;
+  filter: url('#gooey');
+  z-index: -1;
 }
 
 .container {
@@ -28,7 +40,6 @@ https://github.com/safe-global/safe-homepage/issues/11 */
 
 .text {
   text-align: center;
-  padding: 0 24px;
 }
 
 @media (min-width: 600px) {
@@ -39,10 +50,15 @@ https://github.com/safe-global/safe-homepage/issues/11 */
   .title {
     font-size: 80px;
     line-height: 88px;
-    padding: 0 42px;
   }
 
-  .text {
-    padding: 0 292px;
+  .bg {
+    width: 1200px;
+    height: 1200px;
+    top: -50%;
+  }
+
+  .wrapper {
+    overflow: visible;
   }
 }
