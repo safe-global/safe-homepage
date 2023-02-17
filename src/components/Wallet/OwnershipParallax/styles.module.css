@@ -10,6 +10,13 @@
   height: auto;
 }
 
+.threshold {
+  position: absolute;
+  top: 19px;
+  left: 19px;
+  width: 150px;
+}
+
 .address1 {
   position: absolute;
   top: 70px;
@@ -29,15 +36,21 @@
     width: 404px;
   }
 
+  .threshold {
+    top: 32px;
+    left: 32px;
+    width: 253px;
+  }
+
   .address1 {
     top: 0;
     left: -50px;
-    width: auto;
+    width: 265px;
   }
 
   .address2 {
     bottom: 0;
     right: -50px;
-    width: auto;
+    width: 255px;
   }
 }
