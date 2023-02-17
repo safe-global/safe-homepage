@@ -12,10 +12,23 @@
   src: url('/fonts/Citerne-Medium.woff2') format('woff2');
 }
 
+@font-face {
+  font-family: 'Citerne';
+  font-display: swap;
+  font-weight: 400;
+  font-style: italic;
+  src: url('/fonts/Citerne-Italic.woff2') format('woff2');
+}
+
+
 html,
 body {
   padding: 0;
   margin: 0;
+  font-family: Citerne, sans-serif;
+}
+
+button {
   font-family: Citerne, sans-serif;
 }
 
@@ -36,4 +49,9 @@ svg {
   .navOpen {
     overflow-y: hidden;
   }
+}
+
+b {
+  all: unset;
+  color: var(--mui-palette-primary-main);
 }

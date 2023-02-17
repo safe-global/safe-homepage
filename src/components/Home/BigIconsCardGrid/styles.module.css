@@ -1,0 +1,57 @@
+.card {
+  background: var(--mui-palette-border-background);
+  outline: 1px solid var(--mui-palette-border-light);
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  position: relative;
+  transition: 0.3s;
+}
+
+.card:hover {
+  outline-color: var(--mui-palette-primary-main);
+  outline-width: 2px;
+}
+
+.card:hover .icon {
+  transform: rotate(45deg);
+}
+
+.card:hover .icon path {
+  fill: var(--mui-palette-primary-main);
+}
+
+.tag {
+  background: var(--mui-palette-primary-main);
+  padding: 4px 8px;
+  border-radius: 6px;
+  color: var(--mui-palette-border-background);
+  font-weight: 500;
+  line-height: 1;
+  margin-top: 24px;
+}
+
+.bg {
+  background: url('/images/unlock-bg.svg') no-repeat;
+  background-size: auto;
+  background-position: center 100px;
+  padding-bottom: 350px;
+}
+
+.icon {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  transition: transform 0.3s;
+}
+
+@media (min-width: 600px) {
+  .card {
+    padding: 32px;
+  }
+}

@@ -1,0 +1,78 @@
+.networksWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+
+  --topRowWidth: 1208px;
+  --bottomRowWidth: 1192px;
+}
+
+.gradientBase {
+  position: absolute;
+  width: 94px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(270deg, rgba(18, 19, 18, 0) 0%, var(--mui-palette-background-default) 100%);
+  z-index: 1;
+}
+
+.gradientFlipped {
+  left: auto;
+  right: 0;
+  width: 138px;
+  transform: scaleX(-1);
+}
+
+.secondaryText {
+  margin-top: 32px;
+  text-align: center;
+  color: var(--mui-palette-primary-light)
+}
+
+.slider {
+  animation: slide 59s linear infinite;
+}
+
+.sliderReverse {
+  transform: translateX(calc(var(--bottomRowWidth) * -1));
+  animation: slide-reverse 60s linear infinite;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(var(--topRowWidth) * -1));
+  }
+}
+
+@keyframes slide-reverse {
+  from {
+    transform: translateX(calc(var(--bottomRowWidth) * -1));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 600px) {
+  .networksWrapper {
+    gap: 24px;
+  }
+
+  .gradientBase {
+    width: 337px;
+  }
+
+  .gradientFlipped {
+    width: 351px;
+  }
+
+  .secondaryText {
+    margin-top: 40px;
+  }
+}

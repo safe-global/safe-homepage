@@ -1,0 +1,69 @@
+.parallaxWrapper {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  width: 342px;
+}
+
+.baseImage {
+  width: 100%;
+  height: auto;
+}
+
+.location1 {
+  position: absolute;
+  bottom: 300px;
+  left: 133px;
+  width: 162px;
+}
+
+.location2 {
+  position: absolute;
+  bottom: 173px;
+  left: 193px;
+  width: 147px;
+}
+
+.location3 {
+  position: absolute;
+  bottom: 64px;
+  left: 90px;
+  width: 129px;
+}
+
+.location4 {
+  position: absolute;
+  bottom: 208px;
+  left: 0px;
+  width: 150px;
+}
+
+@media (min-width: 600px) {
+  .parallaxWrapper {
+    width: 570px;
+  }
+
+  .location1 {
+    bottom: 490px;
+    left: 224px;
+    width: 272px;
+  }
+
+  .location2 {
+    bottom: 260px;
+    left: 340px;
+    width: 247px;
+  }
+
+  .location3 {
+    bottom: 73px;
+    left: 150px;
+    width: 217px;
+  }
+
+  .location4 {
+    bottom: 320px;
+    left: 0px;
+    width: 253px;
+  }
+}

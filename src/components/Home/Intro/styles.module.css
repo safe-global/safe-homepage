@@ -40,6 +40,23 @@
   left: 0;
 }
 
+.filter {
+  z-index: -1;
+}
+
+.filter::after {
+  border-radius: 16px;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  /* 0.6 opacity of video */
+  opacity: 0.4;
+}
+
 .frame {
   position: absolute;
   background-color: var(--mui-palette-background-main);
@@ -48,6 +65,7 @@
   border-radius: 16px 0 0 0;
   width: 110px;
   height: 80px;
+  z-index: 1;
 }
 
 .frame::before {
@@ -83,7 +101,7 @@
   text-align: center;
   bottom: 64px;
   font-size: 12px;
-  color: #fff;
+  color: var(--mui-palette-text-primary);
 }
 
 .scroll::after {
@@ -92,7 +110,7 @@
   left: 50%;
   transform: translateX(-50%);
   top: 32px;
-  border-left: 2px solid #fff;
+  border-left: 2px solid var(--mui-palette-text-primary);
   height: 144px;
 }
 
@@ -100,14 +118,14 @@
   font-size: 64px;
   line-height: 64px;
   font-weight: 400;
-  color: var(--mui-palette-background-default);
+  color: var(--mui-palette-text-primary);
   margin-bottom: 24px;
 }
 
 .subtitle {
   font-size: 20px;
   line-height: 30px;
-  color: var(--mui-palette-background-default);
+  color: var(--mui-mui-palette-text-primary);
 }
 
 .buttons {

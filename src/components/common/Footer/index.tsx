@@ -5,6 +5,7 @@ import DiscordIcon from '@/public/images/discord-icon.svg'
 import TwitterIcon from '@/public/images/twitter-icon.svg'
 
 import css from './styles.module.css'
+import { useOpenPositions } from '@/hooks/useOpenPositions'
 
 const safeProtocolItems = [
   {
@@ -75,6 +76,8 @@ const subFooterItems = [
 ]
 
 const Footer = () => {
+  const { data: positions = [] } = useOpenPositions()
+
   return (
     <Container>
       <Grid container flexDirection={{ xs: 'column', md: 'row' }}>
@@ -109,7 +112,7 @@ const Footer = () => {
           <ul className={css.list}>
             {resourcesItems.map((item) => (
               <li className={css.listItem} key={item.href}>
-                {item.label}
+                item.label
               </li>
             ))}
           </ul>

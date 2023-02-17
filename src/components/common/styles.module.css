@@ -1,15 +1,43 @@
 .container {
     margin-top: 150px;
     margin-bottom: 150px;
+    overflow: hidden;
 }
 
-.primaryColor {
-    color: var(--mui-palette-primary-main);
+.containerShort {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    overflow: hidden;
+}
+
+.h2SafeType {
+    margin-bottom: -15px;
+    margin-right: 10px;
+    width: 200px;
+}
+
+.body1SafeType {
+    width: 90px;
+    height: auto;
+    margin-bottom: -2px;
 }
 
 @media (min-width: 600px) {
     .container {
         margin-top: 350px;
         margin-bottom: 350px;
+        overflow: initial;
+    }
+
+    .containerShort {
+        margin-top: 250px;
+        margin-bottom: 250px;
+        overflow: initial;
+    }
+
+    .h2SafeType {
+        width: auto;
+        margin-bottom: -9px;
+        margin-right: 14px;
     }
 }

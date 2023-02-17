@@ -1,5 +1,8 @@
-import React from 'react'
+import type { ReactElement } from 'react'
 
-export const Careers = () => {
-  return <div>Careers</div>
+import PageContent from '@/components/common/PageContent'
+import { careersContent } from '@/components/Careers/content'
+
+export const Careers = (): ReactElement => {
+  return <PageContent content={careersContent} />
 }

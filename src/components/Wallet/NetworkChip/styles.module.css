@@ -1,0 +1,20 @@
+.wrapper {
+  padding: 8px 12px 8px 8px;
+  gap: 8px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.icon img {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+}
+
+.name {
+  font-size: 18px;
+  line-height: 22px;
+}

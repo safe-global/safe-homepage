@@ -2,10 +2,21 @@ import type { ButtonProps } from '@mui/material'
 import { ButtonBase } from '@mui/material'
 import css from './styles.module.css'
 import AngleIcon from '@/public/images/angle-icon.svg'
+import clsx from 'clsx'
 
-const LinkButton = ({ children, ...props }: ButtonProps) => {
+const LinkButton = ({
+  children,
+  underline = true,
+  className,
+  fullSize = false,
+  ...props
+}: ButtonProps & { underline?: boolean; fullSize?: boolean }) => {
   return (
-    <ButtonBase className={css.linkButton} {...props}>
+    <ButtonBase
+      className={clsx(css.linkButton, underline && css.underline, fullSize && css.fullSize, className)}
+      {...props}
+      disableRipple
+    >
       {children}
       <div className={css.arrow}>
         <AngleIcon />

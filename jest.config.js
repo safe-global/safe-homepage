@@ -11,7 +11,6 @@ const customJestConfig = {
     '^@/(.*)$': '<rootDir>/src/$1',
     '^.+\\.(svg)$': '<rootDir>/mocks/svg.js',
   },
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jest-environment-jsdom',
 }
 

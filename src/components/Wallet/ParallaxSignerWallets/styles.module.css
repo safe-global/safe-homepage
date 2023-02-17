@@ -1,0 +1,56 @@
+.parallaxWrapper {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  width: 342px;
+}
+
+.baseImage {
+  width: 100%;
+  height: auto;
+}
+
+.phone {
+  position: absolute;
+  bottom: 15px;
+  left: 105px;
+  width: 140px;
+}
+
+.wallets1 {
+  position: absolute;
+  bottom: 227px;
+  right: 95px;
+  width: 165px;
+}
+
+.wallets2 {
+  position: absolute;
+  bottom: 90px;
+  right: 47px;
+  width: 270px;
+}
+
+@media (min-width: 600px) {
+  .parallaxWrapper {
+    width: 570px;
+  }
+
+  .phone {
+    bottom: 45px;
+    left: 170px;
+    width: 225px;
+  }
+
+  .wallets1 {
+    bottom: 375px;
+    width: 270px;
+    left: 130px;
+  }
+
+  .wallets2 {
+    width: 435px;
+    bottom: 130px;
+    left: 45px;
+  }
+}

@@ -9,7 +9,7 @@
     "lint:fix": "next lint --fix",
     "prettier": "prettier -w \"{src,pages,scripts}/**/*.{ts,tsx,css,js}\"",
     "routes": "node scripts/generate-routes.js > src/config/routes.ts && prettier -w src/config/routes.ts",
-    "start": "next dev",
+    "start": "next dev -p 8000",
     "test": "jest",
     "test:ci": "yarn test --ci --coverage --json --watchAll=false --testLocationInResults --outputFile=jest.results.json"
   },
@@ -21,12 +21,15 @@
     "@emotion/server": "^11.10.0",
     "@emotion/styled": "^11.10.5",
     "@mui/material": "^5.11.6",
+    "@safe-global/safe-gateway-typescript-sdk": "^3.7.0",
     "clsx": "^1.2.1",
     "next": "13.1.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "swr": "^2.0.3"
   },
   "devDependencies": {
+    "@svgr/webpack": "^6.3.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@types/jest": "^29.2.6",
@@ -34,7 +37,6 @@
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
     "@typescript-eslint/eslint-plugin": "^5.49.0",
-    "@svgr/webpack": "^6.3.1",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.5",
     "eslint-config-prettier": "^8.6.0",
