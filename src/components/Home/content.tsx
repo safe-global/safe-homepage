@@ -32,9 +32,12 @@ export const homeContent = [
       {
         title: '$36B+',
         text: 'Total assets stored',
+        link: {
+          href: 'https://dune.com/safe/ethereum',
+        },
       },
       {
-        title: '1M',
+        title: '1M+',
         text: 'Safe accounts deployed',
       },
     ],
@@ -250,7 +253,7 @@ export const homeContent = [
         },
         link: {
           title: 'Learn more',
-          href: '#',
+          href: 'https://core.safe.global',
         },
       },
       {
@@ -272,7 +275,7 @@ export const homeContent = [
         },
         link: {
           title: 'Learn more',
-          href: '#',
+          href: 'https://wallet.safe.global',
         },
       },
     ],
@@ -304,10 +307,18 @@ export const homeContent = [
       </>
     ),
     text: 'The SafeCORE smart contracts have passed the highest possible security standard in the industry: Formal Verification.',
-    link: {
-      title: 'Read report',
-      href: '#',
-    },
+    buttons: [
+      {
+        text: 'Read report',
+        href: 'https://github.com/safe-global/safe-contracts/blob/78494bcdbc61b3db52308a25f0556c42cf656ab1/docs/Gnosis_Safe_Formal_Verification_Report_1_0_0.pdf',
+        variant: 'button',
+      },
+      {
+        text: 'Start bug hunting',
+        href: 'https://docs.safe.global/learn/security/bug-bounty-program',
+        variant: 'link',
+      },
+    ],
     component: ImageParallaxText,
   },
   {
@@ -323,7 +334,7 @@ export const homeContent = [
         title: 'Forum',
         caption: 'Be a part of community',
         link: {
-          href: '#',
+          href: 'https://forum.safe.global',
         },
       },
       {
@@ -336,7 +347,7 @@ export const homeContent = [
         ),
         caption: 'Follow DAO decisions',
         link: {
-          href: '#',
+          href: 'https://forum.safe.global/c/proposals/seps/33',
         },
       },
       {
@@ -349,7 +360,7 @@ export const homeContent = [
         ),
         caption: 'Shape our future',
         link: {
-          href: '#',
+          href: 'https://guardians.safe.global',
         },
       },
     ],
@@ -360,7 +371,7 @@ export const homeContent = [
     text: '',
     link: {
       title: 'Contact us',
-      href: '#',
+      href: 'https://wn2n6ocviur.typeform.com/contactus',
     },
     component: TitleButton,
   },

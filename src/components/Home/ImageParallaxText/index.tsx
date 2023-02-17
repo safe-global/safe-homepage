@@ -8,8 +8,9 @@ import type { BaseBlock } from '@/components/Home/types'
 import LinkButton from '@/components/common/LinkButton'
 import { MetricsCard } from './MetricsCard'
 import css from './styles.module.css'
+import Link from 'next/link'
 
-const ImageParallaxText = ({ title, text, caption, link }: BaseBlock): ReactElement => {
+const ImageParallaxText = ({ title, text, caption, buttons }: BaseBlock): ReactElement => {
   return (
     <Container disableGutters>
       <Grid container className={layoutCss.container} spacing="30px">
@@ -61,10 +62,26 @@ const ImageParallaxText = ({ title, text, caption, link }: BaseBlock): ReactElem
           </Typography>
           <Typography mb={5}>{text}</Typography>
           <Box display="flex" gap={3}>
-            <Button href={link?.href} variant="contained" size="large">
-              {link?.title}
-            </Button>
-            <LinkButton href="#">Start bug hunting</LinkButton>
+            {buttons ? (
+              <Box display="flex" gap={3}>
+                {buttons.map((button) => {
+                  const { text, variant, href } = button
+                  const isButton = variant === 'button'
+                  if (isButton) {
+                    return (
+                      <Button key={text} href={href} target="_blank" rel="noreferrer" variant="contained" size="large">
+                        {text}
+                      </Button>
+                    )
+                  }
+                  return (
+                    <Link key={text} href={href} target="_blank" rel="noreferrer" passHref>
+                      <LinkButton>{text}</LinkButton>
+                    </Link>
+                  )
+                })}
+              </Box>
+            ) : null}
           </Box>
         </Grid>
       </Grid>

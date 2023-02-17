@@ -3,7 +3,7 @@ import IOSDownload from '@/public/images/ios-download.svg'
 import GPlayDownload from '@/public/images/google-play-download.svg'
 import DownloadIcon from '@/public/images/download-icon.svg'
 import css from './styles.module.css'
-import { IOS_LINK, GPLAY_LINK } from '@/config/constants'
+import { IOS_LINK, GPLAY_LINK, DESKTOP_APP_LINK } from '@/config/constants'
 import SafeWalletText from '@/components/common/SafeWalletText'
 import SafeCoreText from '@/components/common/SafeCoreText'
 
@@ -36,7 +36,14 @@ const TextBlockBanner = () => (
               </a>
             </Grid>
             <Grid item>
-              <Button variant="contained" color="secondary" size="large" disableRipple startIcon={<DownloadIcon />}>
+              <Button
+                href={DESKTOP_APP_LINK}
+                variant="contained"
+                color="secondary"
+                size="large"
+                disableRipple
+                startIcon={<DownloadIcon />}
+              >
                 Download desktop
               </Button>
             </Grid>
