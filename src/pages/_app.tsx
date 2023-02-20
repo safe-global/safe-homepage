@@ -10,7 +10,6 @@ import type { ReactElement } from 'react'
 
 import { createEmotionCache } from '@/styles/emotion'
 import { theme } from '@/styles/theme'
-import { CookieBanner } from '@/components/common/CookieBanner'
 
 import '@/styles/globals.css'
 import PageLayout from '@/components/common/PageLayout'
@@ -36,8 +35,6 @@ const App = ({
         <PageLayout>
           <Component {...pageProps} />
         </PageLayout>
-
-        <CookieBanner />
       </CssVarsProvider>
     </CacheProvider>
   )

@@ -1,72 +1,33 @@
 import Link from 'next/link'
 import { Paper, Typography, FormControlLabel, Checkbox, Button } from '@mui/material'
-import { useEffect, useState } from 'react'
-import type { ReactElement, SyntheticEvent } from 'react'
-
-import useLocalStorage from '@/services/Storage/useLocalStorage'
+import { useState } from 'react'
+import type { ReactElement } from 'react'
 
 import css from './styles.module.css'
-import ExternalStore from '@/services/ExternalStore'
 
 export const enum CookieType {
   NECESSARY = 'necessary',
   ANALYTICS = 'analytics',
 }
 
-export type CookiePreferences = {
-  [CookieType.NECESSARY]: true
-  [CookieType.ANALYTICS]: boolean
-}
-
 // TODO: Import from `AppRoutes` once page has been created
 const COOKIES_LINK = 'https://safe.global/cookie'
 
-const cookieStore = new ExternalStore(false)
-
-export const openCookieBanner = () => cookieStore.setStore(true)
-const closeCookieBanner = () => cookieStore.setStore(false)
-
-export const COOKIES_KEY = 'cookies'
-
-export const CookieBanner = (): ReactElement | null => {
-  const [cookies, setCookies] = useLocalStorage<CookiePreferences>(COOKIES_KEY)
-  const [formValues, setFormValues] = useState<CookiePreferences>({
-    [CookieType.NECESSARY]: true,
-    [CookieType.ANALYTICS]: false,
-  })
-  const showBanner = cookieStore.useStore()
-
-  // Sync form values with localStorage
-  useEffect(() => {
-    if (cookies) {
-      setFormValues(cookies)
-    }
-    cookieStore.setStore(!cookies?.[CookieType.NECESSARY])
-  }, [cookies])
-
-  const handleChange = (event: SyntheticEvent) => {
-    setFormValues({ ...formValues, [event.target.name]: event.target.checked })
-  }
+export const CookieBanner = ({
+  isAnalyticsEnabled,
+  onSubmit,
+}: {
+  isAnalyticsEnabled: boolean
+  onSubmit: (isAnalyticsEnabled: boolean) => void
+}): ReactElement | null => {
+  const [analytics, setAnalytics] = useState(isAnalyticsEnabled)
 
   const handleAccept = () => {
-    setCookies(formValues)
-    closeCookieBanner(false)
+    onSubmit(analytics)
   }
 
   const handleAcceptAll = () => {
-    const allAccepted: CookiePreferences = {
-      [CookieType.NECESSARY]: true,
-      [CookieType.ANALYTICS]: true,
-    }
-
-    setFormValues(allAccepted)
-    setCookies(allAccepted)
-
-    closeCookieBanner(false)
-  }
-
-  if (!showBanner) {
-    return null
+    onSubmit(true)
   }
 
   return (
@@ -79,15 +40,14 @@ export const CookieBanner = (): ReactElement | null => {
       </Typography>
 
       <form className={css.grid}>
-        <FormControlLabel
-          control={<Checkbox name={CookieType.NECESSARY} checked={formValues[CookieType.NECESSARY]} disabled />}
-          label="Necessary"
-        />
+        <FormControlLabel control={<Checkbox name={CookieType.NECESSARY} checked disabled />} label="Necessary" />
 
         <FormControlLabel
-          control={<Checkbox name={CookieType.ANALYTICS} checked={formValues[CookieType.ANALYTICS]} />}
+          control={<Checkbox name={CookieType.ANALYTICS} checked={analytics} />}
           label="Analytics"
-          onChange={handleChange}
+          onChange={(_, checked) => {
+            setAnalytics(checked)
+          }}
         />
 
         <div className={css.grid}>

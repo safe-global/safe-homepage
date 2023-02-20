@@ -1,5 +1,4 @@
 export const IS_BROWSER = typeof document !== 'undefined'
-export const LS_NAMESPACE = 'SAFE__'
 
 // Links
 export const WALLET_LINK = 'https://app.safe.global'
