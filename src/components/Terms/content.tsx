@@ -449,8 +449,8 @@ export const termsContent = [
             </li>
             <li>
               You do not appear on HMT Sanctions List, the U.S. Treasury Department’s Office of Foreign Asset Control’s
-              sanctions lists, the U.S. commerce department's consolidated screening list, the EU consolidated list of
-              persons, groups or entities subject to EU Financial Sanctions, nor do you act on behalf of a person
+              sanctions lists, the U.S. commerce department&apos;s consolidated screening list, the EU consolidated list
+              of persons, groups or entities subject to EU Financial Sanctions, nor do you act on behalf of a person
               sanctioned thereunder.
             </li>
             <li>You have read and understood this Agreement and agree to be bound by its terms.</li>

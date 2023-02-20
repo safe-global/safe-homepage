@@ -1,6 +1,6 @@
-import { BaseBlock } from '@/components/Home/types'
+import type { BaseBlock } from '@/components/Home/types'
 import layoutCss from '@/components/common/styles.module.css'
-import { Container, Grid, Typography } from '@mui/material'
+import { Container, Typography } from '@mui/material'
 
 const TextBlock = ({ title, text }: BaseBlock) => {
   return (
