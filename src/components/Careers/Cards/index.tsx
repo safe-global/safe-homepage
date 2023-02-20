@@ -30,7 +30,7 @@ const Card = ({ header, title, link, highlight, extra }: CardProps): ReactElemen
           </div>
         )}
 
-        {extra}
+        <div className={css.header}>{extra}</div>
 
         <Typography variant="h3" className={css.cardTitle}>
           {title}

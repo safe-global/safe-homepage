@@ -1,13 +1,11 @@
 .container {
     margin-top: 150px;
     margin-bottom: 150px;
-    overflow: hidden;
 }
 
 .containerShort {
     margin-top: 80px;
     margin-bottom: 80px;
-    overflow: hidden;
 }
 
 .h2SafeType {
@@ -26,13 +24,11 @@
     .container {
         margin-top: 350px;
         margin-bottom: 350px;
-        overflow: initial;
     }
 
     .containerShort {
         margin-top: 250px;
         margin-bottom: 250px;
-        overflow: initial;
     }
 
     .h2SafeType {
