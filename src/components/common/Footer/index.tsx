@@ -84,7 +84,7 @@ const subFooterItems = [
   },
   {
     label: 'Cookie Policy',
-    href: AppRoutes.index,
+    href: AppRoutes.cookie,
   },
   {
     label: 'Preferences',
