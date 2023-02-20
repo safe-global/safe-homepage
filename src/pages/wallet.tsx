@@ -6,7 +6,7 @@ import { loadChainsData } from '@/lib/loadChainsData'
 const WalletPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (props) => (
   <>
     <Head>
-      <title>Safe {`{Wallet}`}</title>
+      <title>{'Safe {Wallet}'}</title>
     </Head>
     <Wallet {...props} />
   </>

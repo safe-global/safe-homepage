@@ -40,7 +40,7 @@ const EditableItem = ({
   content: string
   onEdit: (val: string) => void
   isEditable: boolean
-}): ReactElement => {
+}): ReactElement | string => {
   const [html, setHtml] = useState<string>(content)
 
   const onInput = useCallback(
@@ -56,7 +56,7 @@ const EditableItem = ({
     setHtml(val)
   }, [])
 
-  if (!isEditable && !/[<>]/.test(html)) return <>{html}</>
+  if (!isEditable && !/[<>]/.test(html)) return html
 
   return (
     <span

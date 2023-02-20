@@ -7,7 +7,7 @@ const CorePage: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Safe {`{Core}`}</title>
+        <title>{'Safe {Core}'}</title>
       </Head>
       <Core />
     </>
