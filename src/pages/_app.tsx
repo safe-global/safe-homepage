@@ -7,12 +7,15 @@ import { CacheProvider } from '@emotion/react'
 import type { EmotionCache } from '@emotion/react'
 import type { AppProps } from 'next/app'
 import type { ReactElement } from 'react'
+import Head from 'next/head'
 
 import { createEmotionCache } from '@/styles/emotion'
+
 import { theme } from '@/styles/theme'
 
 import '@/styles/globals.css'
 import PageLayout from '@/components/common/PageLayout'
+import MetaTags from '@/components/common/MetaTags'
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache()
@@ -28,15 +31,21 @@ const App = ({
   emotionCache?: EmotionCache
 }): ReactElement => {
   return (
-    <CacheProvider value={emotionCache}>
-      <CssVarsProvider theme={cssVarsTheme}>
-        <CssBaseline />
+    <>
+      <Head>
+        <title key="default-title">Safe</title>
+        <MetaTags />
+      </Head>
+      <CacheProvider value={emotionCache}>
+        <CssVarsProvider theme={cssVarsTheme}>
+          <CssBaseline />
 
-        <PageLayout>
-          <Component {...pageProps} />
-        </PageLayout>
-      </CssVarsProvider>
-    </CacheProvider>
+          <PageLayout>
+            <Component {...pageProps} />
+          </PageLayout>
+        </CssVarsProvider>
+      </CacheProvider>
+    </>
   )
 }
 
