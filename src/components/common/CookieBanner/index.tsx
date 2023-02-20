@@ -6,6 +6,7 @@ import type { ReactElement, SyntheticEvent } from 'react'
 import useLocalStorage from '@/services/Storage/useLocalStorage'
 
 import css from './styles.module.css'
+import ExternalStore from '@/services/ExternalStore'
 
 export const enum CookieType {
   NECESSARY = 'necessary',
@@ -20,6 +21,8 @@ export type CookiePreferences = {
 // TODO: Import from `AppRoutes` once page has been created
 const COOKIES_LINK = 'https://safe.global/cookie'
 
+export const cookieStore = new ExternalStore(false)
+
 export const COOKIES_KEY = 'cookies'
 
 export const CookieBanner = (): ReactElement | null => {
@@ -28,14 +31,14 @@ export const CookieBanner = (): ReactElement | null => {
     [CookieType.NECESSARY]: true,
     [CookieType.ANALYTICS]: false,
   })
-  const [showBanner, setShowBanner] = useState(false)
+  const showBanner = cookieStore.useStore()
 
   // Sync form values with localStorage
   useEffect(() => {
     if (cookies) {
       setFormValues(cookies)
     }
-    setShowBanner(!cookies?.[CookieType.NECESSARY])
+    cookieStore.setStore(!cookies?.[CookieType.NECESSARY])
   }, [cookies])
 
   const handleChange = (event: SyntheticEvent) => {
@@ -44,6 +47,7 @@ export const CookieBanner = (): ReactElement | null => {
 
   const handleAccept = () => {
     setCookies(formValues)
+    cookieStore.setStore(false)
   }
 
   const handleAcceptAll = () => {
@@ -54,6 +58,8 @@ export const CookieBanner = (): ReactElement | null => {
 
     setFormValues(allAccepted)
     setCookies(allAccepted)
+
+    cookieStore.setStore(false)
   }
 
   if (!showBanner) {

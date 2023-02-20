@@ -1,4 +1,5 @@
 import { ButtonBase, Container, Divider, Grid, TextField, Typography } from '@mui/material'
+import type { SyntheticEvent } from 'react'
 
 import { AppRoutes } from '@/config/routes'
 import DiscordIcon from '@/public/images/discord-icon.svg'
@@ -7,6 +8,7 @@ import TwitterIcon from '@/public/images/twitter-icon.svg'
 import css from './styles.module.css'
 import Link from 'next/link'
 import { DOCS_LINK, HELP_LINK, PRESS_LINK, CORE_LINK, FORUM_LINK, CHAT_LINK, GUARDIANS_LINK } from '@/config/constants'
+import { cookieStore } from '@/components/common/CookieBanner'
 
 const safeProtocolItems = [
   {
@@ -72,7 +74,12 @@ const subFooterItems = [
   },
   {
     label: 'Preferences',
-    href: AppRoutes.index,
+    href: '#',
+    onClick: (e: SyntheticEvent) => {
+      // Don't scroll to top of page
+      e.preventDefault()
+      cookieStore.setStore(true)
+    },
   },
 ]
 
@@ -141,13 +148,24 @@ const Footer = () => {
       <Grid container alignItems="center" justifyContent="space-between" mb={2}>
         <Grid item>
           <ul className={css.subList}>
-            {subFooterItems.map((item) => (
-              <li className={css.subListItem} key={item.href}>
-                <Link href={item.href} target="_blank" rel="noreferrer">
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+            {subFooterItems.map((item) => {
+              if (item.onClick) {
+                return (
+                  <li className={css.subListItem} key={item.href}>
+                    <a href={item.href} onClick={item.onClick}>
+                      {item.label}
+                    </a>
+                  </li>
+                )
+              }
+              return (
+                <li className={css.subListItem} key={item.href}>
+                  <Link href={item.href} target="_blank" rel="noreferrer">
+                    {item.label}
+                  </Link>
+                </li>
+              )
+            })}
           </ul>
         </Grid>
         <Grid item my={2}>
