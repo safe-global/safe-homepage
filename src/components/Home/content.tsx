@@ -4,7 +4,7 @@ import TitleLogos from '@/components/Home/TitleLogos'
 import BigIconsCardGrid from '@/components/Home/BigIconsCardGrid'
 import Networks from '@/components/common/Networks'
 import BannerTextCard from '@/components/Home/BannerTextCard'
-import ImageParallaxText from '@/components/Home/ImageParallaxText'
+import ContractParallax from '@/components/Home/ContractParallax'
 import TitleTextLinkedCardGrid from '@/components/Home/TitleTextLinkedCardGrid'
 import TitleButton from '@/components/Home/TitleButton'
 import TextBlockBanner from '@/components/common/TextBlockBanner'
@@ -294,32 +294,35 @@ export const homeContent = [
     component: BannerTextCard,
   },
   {
-    caption: 'Security',
-    title: (
-      <>
-        Our contracts are
-        <br />
-        <b>
-          the most
+    variant: 'image-text',
+    textBlock: {
+      caption: 'Security',
+      title: (
+        <>
+          Our contracts are
           <br />
-          battle-tested
-        </b>
-      </>
-    ),
-    text: 'The SafeCORE smart contracts have passed the highest possible security standard in the industry: Formal Verification.',
-    buttons: [
-      {
-        text: 'Read report',
-        href: 'https://github.com/safe-global/safe-contracts/blob/78494bcdbc61b3db52308a25f0556c42cf656ab1/docs/Gnosis_Safe_Formal_Verification_Report_1_0_0.pdf',
-        variant: 'button',
-      },
-      {
-        text: 'Start bug hunting',
-        href: 'https://docs.safe.global/learn/security/bug-bounty-program',
-        variant: 'link',
-      },
-    ],
-    component: ImageParallaxText,
+          <b>
+            the most
+            <br />
+            battle-tested
+          </b>
+        </>
+      ),
+      text: 'The SafeCORE smart contracts have passed the highest possible security standard in the industry: Formal Verification.',
+      buttons: [
+        {
+          text: 'Read report',
+          href: 'https://github.com/safe-global/safe-contracts/blob/78494bcdbc61b3db52308a25f0556c42cf656ab1/docs/Gnosis_Safe_Formal_Verification_Report_1_0_0.pdf',
+          variant: 'button',
+        },
+        {
+          text: 'Start bug hunting',
+          href: 'https://docs.safe.global/learn/security/bug-bounty-program',
+          variant: 'link',
+        },
+      ],
+    },
+    component: ContractParallax,
   },
   {
     caption: 'Governance',

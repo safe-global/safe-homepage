@@ -1,0 +1,73 @@
+.parallaxWrapper {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  width: 342px;
+  height: 300px;
+}
+
+.bugBountyCard {
+  position: absolute;
+  left: 0;
+  width: 96px;
+  height: auto;
+}
+
+.totalAuditsCard {
+  position: absolute;
+  left: 50px;
+  top: 200px;
+  width: 81px;
+}
+
+.runtimeVerificationCard {
+  position: absolute;
+  left: 110px;
+  width: 168px;
+  height: auto;
+}
+
+.greenCheckmarkCard {
+  position: absolute;
+  right: 25px;
+  width: 93px;
+}
+
+.g0GroupCard {
+  position: absolute;
+  right: 0;
+  bottom: -15px;
+  width: 104px;
+}
+
+@media (min-width: 600px) {
+  .parallaxWrapper {
+    width: 500px;
+    height: 400px;
+  }
+
+  .bugBountyCard {
+    width: 141px;
+  }
+
+  .runtimeVerificationCard {
+    width: 246px;
+    left: 160px;
+  }
+
+  .totalAuditsCard {
+    left: 100px;
+    top: 275px;
+    width: 119px;
+  }
+
+  .greenCheckmarkCard {
+    width: 137px;
+    right: 0;
+  }
+
+  .g0GroupCard {
+    width: 152px;
+    bottom: -100px;
+  }
+}

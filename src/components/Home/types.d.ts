@@ -26,6 +26,7 @@ type Buttons = Array<Button>
 
 type TextBlock = {
   textBlock: {
+    caption?: string
     title: string | JSX.Element
     text: string | JSX.Element
     buttons?: {
