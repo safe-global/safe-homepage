@@ -21,7 +21,8 @@
 }
 
 .newBadge {
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: 500;
   background: var(--mui-palette-primary-main);
   color: var(--mui-palette-text-dark);
   padding: 0 8px;
