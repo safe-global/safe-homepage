@@ -6,7 +6,7 @@ import {
   useCallback,
   type Dispatch,
   type SetStateAction,
-  ComponentType,
+  type ComponentType,
 } from 'react'
 import { renderToStaticMarkup } from 'react-dom/server'
 import _cloneDeepWith from 'lodash/cloneDeepWith'
@@ -24,6 +24,8 @@ const preventClick = (e: SyntheticEvent) => {
   e.preventDefault()
   e.stopPropagation()
 }
+
+const NotFoundComponent = () => <div>Component not found</div>
 
 const EditableItem = ({
   children,
@@ -120,7 +122,7 @@ const PageContent = ({ content }: { content: ContentItems }): ReactElement => {
           Component = require(`@/components/${component}`).default
           if (Component == null) throw new Error('Component is null')
         } catch (e) {
-          Component = () => <div>Component {component} not found</div>
+          Component = NotFoundComponent
         }
         return <Component {...contentProps} key={index} />
       })}
