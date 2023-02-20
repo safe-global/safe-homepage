@@ -115,8 +115,9 @@ const PageContent = ({ content }: { content: ContentItems }): ReactElement => {
         let Component: ComponentType<any>
         try {
           Component = require(`@/components/${component}`).default
-          if (Component == null) throw new Error('Component is null')
+          if (Component == null) throw new Error(`Component ${component} is null`)
         } catch (e) {
+          console.error(e)
           Component = NotFoundComponent
         }
         return <Component {...contentProps} key={index} />
