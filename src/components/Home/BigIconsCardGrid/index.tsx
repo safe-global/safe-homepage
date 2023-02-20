@@ -12,7 +12,7 @@ type BigCardProps = {
     title: string
     href: string
   }
-  title_icon: {
+  titleIcon: {
     src: string
     alt: string
   }
@@ -40,7 +40,7 @@ const BigIconsCardGrid = ({ items }: BigCardGridProps): ReactElement => {
                   </Typography>
                   <img {...item.icon} />
                   <div className={css.tag}>
-                    <img {...item.title_icon} />
+                    <img {...item.titleIcon} />
                   </div>
                   <Typography variant="h3" mb={5} mt={2}>
                     {item.title}
