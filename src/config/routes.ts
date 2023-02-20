@@ -5,5 +5,6 @@ export const AppRoutes = {
   privacy: '/privacy',
   index: '/',
   core: '/core',
+  cookie: '/cookie',
   careers: '/careers',
 }
