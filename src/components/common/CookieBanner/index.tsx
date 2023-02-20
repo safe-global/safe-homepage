@@ -39,6 +39,7 @@ export const CookieBanner = (): ReactElement | null => {
   }, [cookies])
 
   const handleChange = (event: SyntheticEvent) => {
+    console.log(event.target.name, event.target.checked)
     setFormValues({ ...formValues, [event.target.name]: event.target.checked })
   }
 
@@ -70,10 +71,10 @@ export const CookieBanner = (): ReactElement | null => {
       </Typography>
 
       <form className={css.grid}>
-        <FormControlLabel control={<Checkbox disabled checked />} label="Necessary" />
+        <FormControlLabel control={<Checkbox name={CookieType.NECESSARY} checked disabled />} label="Necessary" />
 
         <FormControlLabel
-          control={<Checkbox checked={cookies?.[CookieType.ANALYTICS] || false} />}
+          control={<Checkbox name={CookieType.ANALYTICS} checked={cookies?.[CookieType.ANALYTICS]} />}
           label="Analytics"
           onChange={handleChange}
         />
