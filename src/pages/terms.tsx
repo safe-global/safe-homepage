@@ -7,7 +7,7 @@ const TermsPage: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Safe – Terms and conditions</title>
+        <title>Safe – Terms and Conditions</title>
       </Head>
       <Terms />
     </>

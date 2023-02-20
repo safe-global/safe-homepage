@@ -7,7 +7,7 @@ const PrivacyPage: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Safe – Privacy policy</title>
+        <title>Safe – Privacy</title>
       </Head>
       <Privacy />
     </>
