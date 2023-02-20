@@ -1,14 +1,15 @@
-import { Button, Chip, Grid, Typography } from '@mui/material'
+import { Button, Grid, Typography } from '@mui/material'
 import { Container } from '@mui/system'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
 import clsx from 'clsx'
 import type { ReactElement } from 'react'
 import HeaderParticles from '@/public/images/header_particles.svg'
 
-import { useOpenPositions } from '@/hooks/useOpenPositions'
-
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
+
+const PositionsCount = dynamic(() => import('./PositionsCount'))
 
 export const Intro = ({
   title,
@@ -22,23 +23,12 @@ export const Intro = ({
     href: string
   }
 }): ReactElement => {
-  const { data: positions = [] } = useOpenPositions()
-
   return (
     <Container className={css.wrapper}>
       <HeaderParticles className={css.bg} />
       <Grid container className={clsx(layoutCss.container, css.container)}>
         <Grid item xs={12}>
-          <Chip
-            label={`${positions.length} open position${positions.length === 1 ? '' : 's'}`}
-            variant="outlined"
-            color="primary"
-            className={css.chip}
-            sx={({ typography }) => typography.caption}
-            clickable
-            component="a"
-            href={link.href}
-          />
+          <PositionsCount href={link.href} className={css.chip} />
         </Grid>
 
         <Grid item xs={12} md={10}>

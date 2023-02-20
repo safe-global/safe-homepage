@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import type { NextPage } from 'next'
-
 import { Careers } from '@/components/Careers'
 
 const CareersPage: NextPage = () => {
@@ -9,6 +8,7 @@ const CareersPage: NextPage = () => {
       <Head>
         <title>Safe – Careers</title>
       </Head>
+
       <Careers />
     </>
   )
