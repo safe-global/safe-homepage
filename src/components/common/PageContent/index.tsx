@@ -1,6 +1,5 @@
 import {
   type ReactElement,
-  type SyntheticEvent,
   useEffect,
   useState,
   useCallback,
@@ -10,6 +9,7 @@ import {
 } from 'react'
 import _cloneDeepWith from 'lodash/cloneDeepWith'
 import { Button } from '@mui/material'
+import EditableItem from './EditableItem'
 
 const EDITABLE_URL_HASH = '#admin'
 
@@ -25,49 +25,7 @@ type ContentItem = {
 
 type ContentItems = Array<ContentItem>
 
-const preventClick = (e: SyntheticEvent) => {
-  e.preventDefault()
-  e.stopPropagation()
-}
-
 const NotFoundComponent = () => <div>Component not found</div>
-
-const EditableItem = ({
-  content,
-  onEdit,
-  isEditable,
-}: {
-  content: string
-  onEdit: (val: string) => void
-  isEditable: boolean
-}): ReactElement => {
-  const [html, setHtml] = useState<string>(content)
-
-  const onInput = useCallback(
-    (e: SyntheticEvent) => {
-      const val = (e.target as HTMLElement).innerHTML || ''
-      onEdit(val)
-    },
-    [onEdit],
-  )
-
-  const onBlur = useCallback((e: SyntheticEvent) => {
-    const val = (e.target as HTMLElement).innerHTML || ''
-    setHtml(val)
-  }, [])
-
-  if (!isEditable && !/[<>]/.test(html)) return <>{html}</>
-
-  return (
-    <span
-      contentEditable={isEditable}
-      dangerouslySetInnerHTML={{ __html: html }}
-      onBlur={onBlur}
-      onInput={onInput}
-      onClick={preventClick}
-    />
-  )
-}
 
 const getEditableProps = (
   props: Partial<ContentItem>,
