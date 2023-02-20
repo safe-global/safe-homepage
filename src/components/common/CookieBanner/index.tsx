@@ -24,7 +24,7 @@ const COOKIES_LINK = 'https://safe.global/cookie'
 const cookieStore = new ExternalStore(false)
 
 export const openCookieBanner = () => cookieStore.setStore(true)
-export const closeCookieBanner = () => cookieStore.setStore(false)
+const closeCookieBanner = () => cookieStore.setStore(false)
 
 export const COOKIES_KEY = 'cookies'
 
