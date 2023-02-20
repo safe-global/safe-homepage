@@ -65,8 +65,8 @@ export const Cards = ({
             {title}
           </Typography>
         </Grid>
-        {items.map((props) => (
-          <Card key={props.title} highlight={highlight} {...props} />
+        {items.map((props, index) => (
+          <Card key={index} highlight={highlight} {...props} />
         ))}
       </Grid>
     </Container>

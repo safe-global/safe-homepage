@@ -25,15 +25,15 @@ export const Values = ({
           <hr className={css.rule} />
         </div>
         <Grid container item xs={12} gap={{ xs: '48px', md: 0 }}>
-          {items.map(({ title, text, items }, _, arr) => (
-            <Grid item xs={12} md={Math.floor(12 / arr.length)} className={css.card} key={title}>
+          {items.map(({ title, text, items }, index, arr) => (
+            <Grid key={index} item xs={12} md={Math.floor(12 / arr.length)} className={css.card}>
               <Typography className={css.value}>{title}</Typography>
               <Typography variant="caption" className={css.desc}>
                 {text}
               </Typography>
               <List className={css.list}>
-                {items.map((text) => (
-                  <ListItem key={text}>
+                {items.map((text, index) => (
+                  <ListItem key={index}>
                     <ListItemIcon>
                       <ArrowIcon className={css.icon} />
                     </ListItemIcon>
