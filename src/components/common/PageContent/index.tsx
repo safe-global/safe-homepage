@@ -75,7 +75,7 @@ const getEditableProps = (
   isEditable: boolean,
 ): ReactElement => {
   return _cloneDeepWith(props, (item, key) => {
-    if (typeof key !== 'string' || (key && !(key in EditableFields))) return
+    if (typeof item === 'object' || typeof key !== 'string' || (key && !(key in EditableFields))) return
 
     const onEdit = (val: string) => {
       setNewContent((prev: ContentItems) => {
