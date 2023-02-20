@@ -21,7 +21,10 @@ export type CookiePreferences = {
 // TODO: Import from `AppRoutes` once page has been created
 const COOKIES_LINK = 'https://safe.global/cookie'
 
-export const cookieStore = new ExternalStore(false)
+const cookieStore = new ExternalStore(false)
+
+export const openCookieBanner = () => cookieStore.setStore(true)
+export const closeCookieBanner = () => cookieStore.setStore(false)
 
 export const COOKIES_KEY = 'cookies'
 
@@ -47,7 +50,7 @@ export const CookieBanner = (): ReactElement | null => {
 
   const handleAccept = () => {
     setCookies(formValues)
-    cookieStore.setStore(false)
+    closeCookieBanner(false)
   }
 
   const handleAcceptAll = () => {
@@ -59,7 +62,7 @@ export const CookieBanner = (): ReactElement | null => {
     setFormValues(allAccepted)
     setCookies(allAccepted)
 
-    cookieStore.setStore(false)
+    closeCookieBanner(false)
   }
 
   if (!showBanner) {

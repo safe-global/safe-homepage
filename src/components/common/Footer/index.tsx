@@ -8,7 +8,7 @@ import TwitterIcon from '@/public/images/twitter-icon.svg'
 import css from './styles.module.css'
 import Link from 'next/link'
 import { DOCS_LINK, HELP_LINK, PRESS_LINK, CORE_LINK, FORUM_LINK, CHAT_LINK, GUARDIANS_LINK } from '@/config/constants'
-import { cookieStore } from '@/components/common/CookieBanner'
+import { openCookieBanner } from '@/components/common/CookieBanner'
 
 const safeProtocolItems = [
   {
@@ -78,7 +78,7 @@ const subFooterItems = [
     onClick: (e: SyntheticEvent) => {
       // Don't scroll to top of page
       e.preventDefault()
-      cookieStore.setStore(true)
+      openCookieBanner(true)
     },
   },
 ]
