@@ -8,15 +8,15 @@ import {
   type SetStateAction,
   type ComponentType,
 } from 'react'
-import { renderToStaticMarkup } from 'react-dom/server'
 import _cloneDeepWith from 'lodash/cloneDeepWith'
 import { Button } from '@mui/material'
 
 const EDITABLE_URL_HASH = '#admin'
 
-enum EditableField {
-  title = 'title',
-  text = 'text',
+const EditableFields = {
+  title: true,
+  text: true,
+  caption: true,
 }
 
 type ContentItem = {
@@ -33,15 +33,15 @@ const preventClick = (e: SyntheticEvent) => {
 const NotFoundComponent = () => <div>Component not found</div>
 
 const EditableItem = ({
-  children,
+  content,
   onEdit,
   isEditable,
 }: {
-  children: ReactElement | string
+  content: string
   onEdit: (val: string) => void
   isEditable: boolean
 }): ReactElement => {
-  const [html, setHtml] = useState<string>(typeof children === 'string' ? children : renderToStaticMarkup(children))
+  const [html, setHtml] = useState<string>(content)
 
   const onInput = useCallback(
     (e: SyntheticEvent) => {
@@ -75,23 +75,17 @@ const getEditableProps = (
   isEditable: boolean,
 ): ReactElement => {
   return _cloneDeepWith(props, (item, key) => {
-    if (typeof key !== 'string') return
-    if (key && !(key in EditableField)) return item
+    if (typeof key !== 'string' || (key && !(key in EditableFields))) return
 
     const onEdit = (val: string) => {
       setNewContent((prev: ContentItems) => {
         return _cloneDeepWith(prev, (oldItem) => {
           if (oldItem === item) return val
-          if (typeof item === 'object') return renderToStaticMarkup(item)
         })
       })
     }
 
-    return (
-      <EditableItem key={key} onEdit={onEdit} isEditable={isEditable}>
-        {item}
-      </EditableItem>
-    )
+    return <EditableItem key={key} onEdit={onEdit} isEditable={isEditable} content={item} />
   })
 }
 

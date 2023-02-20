@@ -257,22 +257,25 @@
     "component": "Home/BannerTextCard"
   },
   {
-    "caption": "Security",
-    "title": "Our contracts are<br/><b>the most<br/>battle-tested</b>",
-    "text": "The SafeCORE smart contracts have passed the highest possible security standard in the industry: Formal Verification.",
-    "buttons": [
-      {
-        "text": "Read report",
-        "href": "https://github.com/safe-global/safe-contracts/blob/78494bcdbc61b3db52308a25f0556c42cf656ab1/docs/Gnosis_Safe_Formal_Verification_Report_1_0_0.pdf",
-        "variant": "button"
-      },
-      {
-        "text": "Start bug hunting",
-        "href": "https://docs.safe.global/learn/security/bug-bounty-program",
-        "variant": "link"
-      }
-    ],
-    "component": "Home/ImageParallaxText"
+    "variant": "image-text",
+    "textBlock": {
+      "caption": "Security",
+      "title": "Our contracts are<br /><b>the most<br />battle-tested</b>",
+      "text": "The SafeCORE smart contracts have passed the highest possible security standard in the industry: Formal Verification.",
+      "buttons": [
+        {
+          "text": "Read report",
+          "href": "https://github.com/safe-global/safe-contracts/blob/78494bcdbc61b3db52308a25f0556c42cf656ab1/docs/Gnosis_Safe_Formal_Verification_Report_1_0_0.pdf",
+          "variant": "button"
+        },
+        {
+          "text": "Start bug hunting",
+          "href": "https://docs.safe.global/learn/security/bug-bounty-program",
+          "variant": "link"
+        }
+      ]
+    },
+    "component": "Home/ContractParallax"
   },
   {
     "caption": "Governance",
