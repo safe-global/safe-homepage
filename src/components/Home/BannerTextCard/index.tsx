@@ -1,11 +1,38 @@
+import { useEffect, useRef, type ReactElement } from 'react'
 import { Grid, Typography, Container, Box } from '@mui/material'
-import type { ReactElement } from 'react'
 
 import css from './styles.module.css'
 
 const BannerTextCard = ({ title, text }: { title: string; text: string }): ReactElement => {
+  const bgRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!bgRef.current) return
+
+    const parallax = (e: MouseEvent) => {
+      let _w = window.innerWidth / 2
+      let _h = window.innerHeight / 2
+      let _mouseX = e.clientX
+      let _mouseY = e.clientY
+      let _depth1 = `${50 - (_mouseX - _w) * 0.005}% ${50 - (_mouseY - _h) * 0.005}%`
+      let _depth2 = `${50 - (_mouseX - _w) * 0.005}% ${50 - (_mouseY - _h) * 0.005}%`
+      let _depth3 = `${50 - (_mouseX - _w) * 0.009}% ${50 - (_mouseY - _h) * 0.009}%`
+      let x = `${_depth3}, ${_depth2}, ${_depth1}`
+
+      if (bgRef.current) {
+        bgRef.current.style.backgroundPosition = x
+      }
+    }
+
+    document.addEventListener('mousemove', parallax)
+
+    return () => {
+      document.removeEventListener('mousemove', parallax)
+    }
+  }, [])
+
   return (
-    <div className={css.gradient}>
+    <div className={css.gradient} ref={bgRef}>
       <Container sx={{ textAlign: 'center' }}>
         <Box height={{ xs: '700px', md: '1090px' }} display="flex" alignItems="center">
           <Grid container justifyContent="center">
