@@ -6,30 +6,31 @@ import TwitterIcon from '@/public/images/twitter-icon.svg'
 
 import css from './styles.module.css'
 import Link from 'next/link'
+import { DOCS_LINK, HELP_LINK, PRESS_LINK, CORE_LINK, FORUM_LINK, CHAT_LINK, GUARDIANS_LINK } from '@/config/constants'
 
 const safeProtocolItems = [
   {
     label: 'Core',
-    href: 'https://core.safe.global',
+    href: CORE_LINK,
   },
   {
     label: 'Developer Docs',
-    href: 'https://docs.safe.global',
+    href: DOCS_LINK,
   },
 ]
 
 const communityItems = [
   {
     label: 'Safe DAO',
-    href: 'https://forum.safe.global',
+    href: FORUM_LINK,
   },
   {
     label: 'Discord',
-    href: 'https://chat.safe.global',
+    href: CHAT_LINK,
   },
   {
     label: 'Safe Guardians',
-    href: 'https://forum.safe.global/t/guardians-gather/265',
+    href: GUARDIANS_LINK,
   },
 ]
 
@@ -40,7 +41,7 @@ const resourcesItems = [
   },
   {
     label: 'Help Center',
-    href: 'https://help.safe.global',
+    href: HELP_LINK,
   },
   {
     label: 'Brand Kit',
@@ -59,7 +60,7 @@ const subFooterItems = [
   },
   {
     label: 'Press Kit',
-    href: 'https://press.safe.global',
+    href: PRESS_LINK,
   },
   {
     label: 'Licenses',
