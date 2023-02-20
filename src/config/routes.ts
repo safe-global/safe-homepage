@@ -6,4 +6,5 @@ export const AppRoutes = {
   index: '/',
   core: '/core',
   careers: '/careers',
+  licenses: '/licenses',
 }

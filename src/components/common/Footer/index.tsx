@@ -80,7 +80,7 @@ const subFooterItems = [
   },
   {
     label: 'Licenses',
-    href: AppRoutes.index,
+    href: AppRoutes.licenses,
   },
   {
     label: 'Cookie Policy',
