@@ -11,6 +11,10 @@
   color: var(--mui-palette-primary-light);
 }
 
+.listItem:hover a {
+  color: white;
+}
+
 .subList {
   list-style: none;
   padding: 0;
