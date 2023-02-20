@@ -15,10 +15,7 @@
       },
       {
         "title": "$36B+",
-        "text": "Total assets stored",
-        "link": {
-          "href": "https://dune.com/safe/ethereum"
-        }
+        "text": "Total assets stored"
       },
       {
         "title": "1M+",
@@ -307,7 +304,7 @@
     "component": "Home/TitleTextLinkedCardGrid"
   },
   {
-    "title": "Want ot reach the core team members?",
+    "title": "Want to reach the core team members?",
     "text": "",
     "link": {
       "title": "Contact us",

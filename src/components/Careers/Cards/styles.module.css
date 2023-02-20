@@ -1,6 +1,6 @@
 .card {
   background: var(--mui-palette-border-background);
-  outline: 1px solid var(--mui-palette-border-light);
+  box-shadow: inset 0 0 0 1px var(--mui-palette-border-light);
   border-radius: 16px;
   padding: 24px;
   display: flex;
@@ -56,8 +56,7 @@
 
 /* Outline */
 .outline:hover {
-  outline-color: var(--mui-palette-primary-main);
-  outline-width: 2px;
+  box-shadow: inset 0 0 0 2px var(--mui-palette-primary-main);
 }
 
 .outline:hover .arrow path {

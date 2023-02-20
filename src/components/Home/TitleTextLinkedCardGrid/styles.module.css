@@ -3,6 +3,7 @@
   outline: 1px solid var(--mui-palette-border-light);
   height: 100%;
   transition: 0.3s;
+  margin: 2px;
 }
 
 .card:hover {
@@ -65,4 +66,10 @@
   height: 100%;
   z-index: 0;
   transition: 0.3s;
+}
+
+@media (min-width: 600px) {
+  .card {
+    margin: 0;
+  }
 }

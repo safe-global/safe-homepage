@@ -1,24 +1,29 @@
 .wrapper {
   background-image: url("/images/IdentPlanets/orbits.svg");
   background-repeat: no-repeat;
-  width: 380px;
-  height: 380px;
+  background-size: cover;
+  width: 228px;
+  height: 228px;
   position: relative;
   margin: 0 auto;
 }
 
 .outerLayer {
   position: absolute;
-  left: -35px;
-  top: -35px;
-  transform-origin: 225px 225px;
+  left: -22px;
+  top: -22px;
+  transform-origin: 137px 137px;
   animation: rotate 30s linear infinite;
+  width: 260px;
+  height: 260px;
 }
 
 .middleLayer {
   position: absolute;
   left: 0;
   top: 0;
+  width: 228px;
+  height: 228px;
   transform-origin: center;
   animation: rotate 15s linear infinite;
 }
@@ -28,13 +33,17 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 58px;
+  height: 58px;
 }
 
 .labelLayer {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(10px, -50px);
+  transform: translate(10px, -30px);
+  width: 81px;
+  height: auto;
 }
 
 @keyframes rotate {
@@ -43,5 +52,35 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 600px) {
+  .wrapper {
+    width: 380px;
+    height: 380px;
+  }
+
+  .outerLayer {
+    width: 430px;
+    height: 430px;
+    left: -35px;
+    top: -35px;
+    transform-origin: 225px 225px;
+  }
+
+  .middleLayer {
+    width: 380px;
+    height: 380px;
+  }
+
+  .innerLayer {
+    width: 98px;
+    height: 98px;
+  }
+
+  .labelLayer {
+    width: 135px;
+    transform: translate(10px, -50px)
   }
 }
