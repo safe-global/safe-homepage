@@ -219,7 +219,7 @@
       {
         "caption": "Developers",
         "title": "Build on the <i>Safest</i> account abstraction stack",
-        "text": {
+        "titleIcon": {
           "src": "/images/safe-core-type.svg",
           "alt": "Safe Core green background"
         },
@@ -235,7 +235,7 @@
       {
         "caption": "Users",
         "title": "Use the most secure<br/>multi-sig wallet in web3",
-        "text": {
+        "titleIcon": {
           "src": "/images/safe-wallet-type.svg",
           "alt": "Safe Wallet green background"
         },
