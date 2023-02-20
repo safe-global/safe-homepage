@@ -33,18 +33,18 @@ const ParallaxText = ({ textBlock, variant, children }: ParallaxTextProps & { ch
           {steps && <Stepper steps={steps} />}
           {buttons ? (
             <Box display="flex" gap={3}>
-              {buttons.map((button) => {
+              {buttons.map((button, index) => {
                 const { text, variant, href } = button
                 const isButton = variant === 'button'
                 if (isButton) {
                   return (
-                    <Button key={text} href={href} variant="contained" size="large">
+                    <Button key={index} href={href} variant="contained" size="large">
                       {text}
                     </Button>
                   )
                 }
                 return (
-                  <LinkButton key={text} href={href}>
+                  <LinkButton key={index} href={href}>
                     {text}
                   </LinkButton>
                 )

@@ -32,8 +32,8 @@ const BigIconsCardGrid = ({ items }: BigCardGridProps): ReactElement => {
       <Container disableGutters>
         <Grid container mt={{ xs: 8, md: '235px' }} spacing="30px">
           {items &&
-            items.map((item) => (
-              <Grid key={item.caption} item xs={12} md={6}>
+            items.map((item, index) => (
+              <Grid key={index} item xs={12} md={6}>
                 <div className={css.card}>
                   <Typography variant="caption" mb={3}>
                     {item.caption}
