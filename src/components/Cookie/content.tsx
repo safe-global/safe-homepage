@@ -272,227 +272,236 @@ export const cookiesContent = [
           <h3>APPENDIX</h3>
           <p>Overview of cookies placed and the consequences if the cookies are not placed.</p>
           <table>
-            <tr>
-              <td colSpan={4}>
-                <h4>First-party cookies</h4>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <strong>Name of cookie</strong>
-              </td>
-              <td>
-                <strong>Purpose(s) of cookie</strong>
-              </td>
-              <td>
-                <strong>Storage period of cookie</strong>
-              </td>
-              <td>
-                <strong>Consequences is cookie is not accepted</strong>
-              </td>
-            </tr>
-            <tr>
-              <td>_ga</td>
-              <td>Used to distinguish users. Also used by Fortmatic wallet.</td>
-              <td>2 years from set/update</td>
-              <td>User activity won&apos;t be tracked</td>
-            </tr>
-            <tr>
-              <td>_gid</td>
-              <td>Used to distinguish users. Also used by Fortmatic wallet.</td>
-              <td>24 hours</td>
-              <td>User activity won&apos;t be tracked</td>
-            </tr>
-            <tr>
-              <td>_gat</td>
-              <td>Used to throttle request rate. Also used by Fortmatic wallet.</td>
-              <td>1 minute</td>
-              <td>User activity won&apos;t be tracked</td>
-            </tr>
-            <tr>
-              <td>APM_TOKEN</td>
-              <td>
-                Contains a token that can be used to retrieve a Client ID from AMP Client ID service. Other possible
-                values indicate opt-out, inflight request or an error retrieving a Client ID from AMP Client ID service.
-              </td>
-              <td>30 seconds to 1 year</td>
-              <td>User activity won&apos;t be tracked</td>
-            </tr>
-            <tr>
-              <td>_gac_{'<property-id>'}</td>
-              <td>Contains campaign related information for the user</td>
-              <td>90 days</td>
-              <td>User activity won&apos;t be tracked</td>
-            </tr>
-            <tr>
-              <td>intercom-id-[app_id]</td>
-              <td>Anonymous visitor identifier cookie</td>
-              <td>9 months</td>
-              <td>User activity won&apos;t be tracked, live support via Intercom won&apos;t be available</td>
-            </tr>
-            <tr>
-              <td>intercom-session-[app_id]</td>
-              <td>
-                Identifier for each unique browser session. This session cookie is refreshed on each successful
-                logged-in ping, extending it to 1 week from that moment. The user can access their conversations and
-                have data communicated on logged out pages for 1 week, as long as the session isn’t intentionally
-                terminated with `Intercom(‘shutdown’)`, which usually happens on logout
-              </td>
-              <td>1 week</td>
-              <td>User activity won&apos;t be tracked, live support via Intercom won&apos;t be available</td>
-            </tr>
-            <tr>
-              <td>[version]_[network]__COOKIES</td>
-              <td>Saves user consent on using cookies</td>
-              <td>1 year for positive consent, 7 days for negative</td>
-              <td>If possible, cookie will be in the next session</td>
-            </tr>
-            <tr>
-              <td colSpan={4}>
-                <h4>Third-party cookies</h4>
-                <p>The cookies from this table can be set by third-party wallets.</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <strong>Name of cookie</strong>
-              </td>
-              <td>
-                <strong>Purpose(s) of cookie</strong>
-              </td>
-              <td>
-                <strong>Storage period of cookie</strong>
-              </td>
-              <td>
-                <strong>Consequences is cookie is not accepted</strong>
-              </td>
-            </tr>
-            <tr>
-              <td>amplitude_id, amplitude_idunidentified</td>
-              <td>
-                To the best of our knowledge, these cookies are used by Amplitude for session tracking for analytics
-                purposes
-              </td>
-              <td>10 years</td>
-              <td>User activity won&apos;t be tracked</td>
-            </tr>
-            <tr>
-              <td>PORTIS_JWT</td>
-              <td>JWT Authentication token set by Portis web wallet</td>
-              <td>3 days</td>
-              <td>User won&apos;t be auto-logged in to Portis web wallet.</td>
-            </tr>
-            <tr>
-              <td>mp_{'<YOURTOKEN>'}_mixpanel</td>
-              <td>To the best of our knowledge, these cookies are used to send data to Mixpanel projects</td>
-              <td>9 months</td>
-              <td>User activity won&apos;t be tracked</td>
-            </tr>
-            <tr>
-              <td>ajs_user_id</td>
-              <td>
-                To the best of our knowledge, this cookie helps track visitor usage, events, target marketing, and can
-                also measure application performance and stability
-              </td>
-              <td>1 year</td>
-              <td>User activitywon&apos;t be tracked</td>
-            </tr>
-            <tr>
-              <td>ajs_group_id</td>
-              <td>To the best of our knowledge, this cookie track visitor usage and events within the website</td>
-              <td>1 year</td>
-              <td>User activity won&apos;t be tracked</td>
-            </tr>
-            <tr>
-              <td>ajs_anonymous_id</td>
-              <td>
-                To the best of our knowledge, these cookies are generally used for Analytics and help count how many
-                people visit a certain site by tracking if you have visited before
-              </td>
-              <td>1 year</td>
-              <td>User activity won&apos;t be tracked</td>
-            </tr>
-            <tr>
-              <td>_ga</td>
-              <td>Used to distinguish users</td>
-              <td>2 years from set/update</td>
-              <td>User activity won&apos;t be tracked</td>
-            </tr>
-            <tr>
-              <td>_gid</td>
-              <td>Used to distinguish users</td>
-              <td>24 hours</td>
-              <td>User activity won&apos;t be tracked</td>
-            </tr>
-            <tr>
-              <td>_gat</td>
-              <td>Used to throttle request rate</td>
-              <td>1 minute</td>
-              <td>User activity won&apos;t be tracked</td>
-            </tr>
-            <tr>
-              <td>_BEAMER_FIRST_VISIT_{'{productID}'}</td>
-              <td>Stores the date of this user’s first visit to the site.</td>
-              <td>300 days</td>
-              <td>User activity won&apos;t be tracked</td>
-            </tr>
-            <tr>
-              <td>_BEAMER_USER_ID_{'{productID}'}</td>
-              <td>Stores an internal ID for this user.</td>
-              <td>300 days</td>
-              <td>User activity won&apos;t be tracked</td>
-            </tr>
-            <tr>
-              <td>_BEAMER_LAST_UPDATE_{'{productID}'}</td>
-              <td>Stores the timestamp for the last time the number of unread posts was updated for this user.</td>
-              <td>300 days</td>
-              <td>User activity won&apos;t be tracked</td>
-            </tr>
-            <tr>
-              <td>_BEAMER_FILTER_BY_URL_{'{productID}'}</td>
-              <td>Stores whether to apply URL filtering on the feed.</td>
-              <td>20 minutes</td>
-              <td>User activity won&apos;t be tracked</td>
-            </tr>
-            <tr>
-              <td>_BEAMER_DATE_{'{productID}'}</td>
-              <td>Stores the latest date in which the feed was opened.</td>
-              <td>300 days</td>
-              <td>User activity won&apos;t be tracked</td>
-            </tr>
-            <tr>
-              <td>_BEAMER_BOOSTED_ANNOUNCEMENT_DATE_{'{productID}'}</td>
-              <td>Stores the latest date in which a boosted announcement was displayed.</td>
-              <td>300 days</td>
-              <td>User activity won&apos;t be tracked</td>
-            </tr>
-            <tr>
-              <td>_BEAMER_LAST_POST_SHOWN_{'{productID}'}</td>
-              <td>Stores the ID of the last post shown as a teaser.</td>
-              <td>300 days</td>
-              <td>User activity won&apos;t be tracked</td>
-            </tr>
-            <tr>
-              <td>_BEAMER_SOUND_PLAYED_{'{productID}'}</td>
-              <td>Stores whether the notification sound was played since the last time the feed was opened.</td>
-              <td>7 days</td>
-              <td>User activity won&apos;t be tracked</td>
-            </tr>
-            <tr>
-              <td>_BEAMER_LAST_PUSH_PROMPT_INTERACTION_{'{productID}'}</td>
-              <td>
-                Stores the date of this user’s latest interaction with the prompt requesting permission to send push
-                notifications.
-              </td>
-              <td>300 days</td>
-              <td>User activity won&apos;t be tracked</td>
-            </tr>
-            <tr>
-              <td>_BEAMER_NPS_LAST_SHOWN_{'{productID}'}</td>
-              <td>Stores the latest date in which the NPS prompt was shown to this user.</td>
-              <td>300 days</td>
-              <td>User activity won&apos;t be tracked</td>
-            </tr>
+            <thead>
+              <tr>
+                <td colSpan={4}>
+                  <h4>First-party cookies</h4>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Name of cookie</strong>
+                </td>
+                <td>
+                  <strong>Purpose(s) of cookie</strong>
+                </td>
+                <td>
+                  <strong>Storage period of cookie</strong>
+                </td>
+                <td>
+                  <strong>Consequences is cookie is not accepted</strong>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>_ga</td>
+                <td>Used to distinguish users. Also used by Fortmatic wallet.</td>
+                <td>2 years from set/update</td>
+                <td>User activity won&apos;t be tracked</td>
+              </tr>
+              <tr>
+                <td>_gid</td>
+                <td>Used to distinguish users. Also used by Fortmatic wallet.</td>
+                <td>24 hours</td>
+                <td>User activity won&apos;t be tracked</td>
+              </tr>
+              <tr>
+                <td>_gat</td>
+                <td>Used to throttle request rate. Also used by Fortmatic wallet.</td>
+                <td>1 minute</td>
+                <td>User activity won&apos;t be tracked</td>
+              </tr>
+              <tr>
+                <td>APM_TOKEN</td>
+                <td>
+                  Contains a token that can be used to retrieve a Client ID from AMP Client ID service. Other possible
+                  values indicate opt-out, inflight request or an error retrieving a Client ID from AMP Client ID
+                  service.
+                </td>
+                <td>30 seconds to 1 year</td>
+                <td>User activity won&apos;t be tracked</td>
+              </tr>
+              <tr>
+                <td>_gac_{'<property-id>'}</td>
+                <td>Contains campaign related information for the user</td>
+                <td>90 days</td>
+                <td>User activity won&apos;t be tracked</td>
+              </tr>
+              <tr>
+                <td>intercom-id-[app_id]</td>
+                <td>Anonymous visitor identifier cookie</td>
+                <td>9 months</td>
+                <td>User activity won&apos;t be tracked, live support via Intercom won&apos;t be available</td>
+              </tr>
+              <tr>
+                <td>intercom-session-[app_id]</td>
+                <td>
+                  Identifier for each unique browser session. This session cookie is refreshed on each successful
+                  logged-in ping, extending it to 1 week from that moment. The user can access their conversations and
+                  have data communicated on logged out pages for 1 week, as long as the session isn’t intentionally
+                  terminated with `Intercom(‘shutdown’)`, which usually happens on logout
+                </td>
+                <td>1 week</td>
+                <td>User activity won&apos;t be tracked, live support via Intercom won&apos;t be available</td>
+              </tr>
+              <tr>
+                <td>[version]_[network]__COOKIES</td>
+                <td>Saves user consent on using cookies</td>
+                <td>1 year for positive consent, 7 days for negative</td>
+                <td>If possible, cookie will be in the next session</td>
+              </tr>
+            </tbody>
+            <thead>
+              <tr>
+                <td colSpan={4}>
+                  <h4>Third-party cookies</h4>
+                  <p>The cookies from this table can be set by third-party wallets.</p>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Name of cookie</strong>
+                </td>
+                <td>
+                  <strong>Purpose(s) of cookie</strong>
+                </td>
+                <td>
+                  <strong>Storage period of cookie</strong>
+                </td>
+                <td>
+                  <strong>Consequences is cookie is not accepted</strong>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>amplitude_id, amplitude_idunidentified</td>
+                <td>
+                  To the best of our knowledge, these cookies are used by Amplitude for session tracking for analytics
+                  purposes
+                </td>
+                <td>10 years</td>
+                <td>User activity won&apos;t be tracked</td>
+              </tr>
+              <tr>
+                <td>PORTIS_JWT</td>
+                <td>JWT Authentication token set by Portis web wallet</td>
+                <td>3 days</td>
+                <td>User won&apos;t be auto-logged in to Portis web wallet.</td>
+              </tr>
+              <tr>
+                <td>mp_{'<YOURTOKEN>'}_mixpanel</td>
+                <td>To the best of our knowledge, these cookies are used to send data to Mixpanel projects</td>
+                <td>9 months</td>
+                <td>User activity won&apos;t be tracked</td>
+              </tr>
+              <tr>
+                <td>ajs_user_id</td>
+                <td>
+                  To the best of our knowledge, this cookie helps track visitor usage, events, target marketing, and can
+                  also measure application performance and stability
+                </td>
+                <td>1 year</td>
+                <td>User activitywon&apos;t be tracked</td>
+              </tr>
+              <tr>
+                <td>ajs_group_id</td>
+                <td>To the best of our knowledge, this cookie track visitor usage and events within the website</td>
+                <td>1 year</td>
+                <td>User activity won&apos;t be tracked</td>
+              </tr>
+              <tr>
+                <td>ajs_anonymous_id</td>
+                <td>
+                  To the best of our knowledge, these cookies are generally used for Analytics and help count how many
+                  people visit a certain site by tracking if you have visited before
+                </td>
+                <td>1 year</td>
+                <td>User activity won&apos;t be tracked</td>
+              </tr>
+              <tr>
+                <td>_ga</td>
+                <td>Used to distinguish users</td>
+                <td>2 years from set/update</td>
+                <td>User activity won&apos;t be tracked</td>
+              </tr>
+              <tr>
+                <td>_gid</td>
+                <td>Used to distinguish users</td>
+                <td>24 hours</td>
+                <td>User activity won&apos;t be tracked</td>
+              </tr>
+              <tr>
+                <td>_gat</td>
+                <td>Used to throttle request rate</td>
+                <td>1 minute</td>
+                <td>User activity won&apos;t be tracked</td>
+              </tr>
+              <tr>
+                <td>_BEAMER_FIRST_VISIT_{'{productID}'}</td>
+                <td>Stores the date of this user’s first visit to the site.</td>
+                <td>300 days</td>
+                <td>User activity won&apos;t be tracked</td>
+              </tr>
+              <tr>
+                <td>_BEAMER_USER_ID_{'{productID}'}</td>
+                <td>Stores an internal ID for this user.</td>
+                <td>300 days</td>
+                <td>User activity won&apos;t be tracked</td>
+              </tr>
+              <tr>
+                <td>_BEAMER_LAST_UPDATE_{'{productID}'}</td>
+                <td>Stores the timestamp for the last time the number of unread posts was updated for this user.</td>
+                <td>300 days</td>
+                <td>User activity won&apos;t be tracked</td>
+              </tr>
+              <tr>
+                <td>_BEAMER_FILTER_BY_URL_{'{productID}'}</td>
+                <td>Stores whether to apply URL filtering on the feed.</td>
+                <td>20 minutes</td>
+                <td>User activity won&apos;t be tracked</td>
+              </tr>
+              <tr>
+                <td>_BEAMER_DATE_{'{productID}'}</td>
+                <td>Stores the latest date in which the feed was opened.</td>
+                <td>300 days</td>
+                <td>User activity won&apos;t be tracked</td>
+              </tr>
+              <tr>
+                <td>_BEAMER_BOOSTED_ANNOUNCEMENT_DATE_{'{productID}'}</td>
+                <td>Stores the latest date in which a boosted announcement was displayed.</td>
+                <td>300 days</td>
+                <td>User activity won&apos;t be tracked</td>
+              </tr>
+              <tr>
+                <td>_BEAMER_LAST_POST_SHOWN_{'{productID}'}</td>
+                <td>Stores the ID of the last post shown as a teaser.</td>
+                <td>300 days</td>
+                <td>User activity won&apos;t be tracked</td>
+              </tr>
+              <tr>
+                <td>_BEAMER_SOUND_PLAYED_{'{productID}'}</td>
+                <td>Stores whether the notification sound was played since the last time the feed was opened.</td>
+                <td>7 days</td>
+                <td>User activity won&apos;t be tracked</td>
+              </tr>
+              <tr>
+                <td>_BEAMER_LAST_PUSH_PROMPT_INTERACTION_{'{productID}'}</td>
+                <td>
+                  Stores the date of this user’s latest interaction with the prompt requesting permission to send push
+                  notifications.
+                </td>
+                <td>300 days</td>
+                <td>User activity won&apos;t be tracked</td>
+              </tr>
+              <tr>
+                <td>_BEAMER_NPS_LAST_SHOWN_{'{productID}'}</td>
+                <td>Stores the latest date in which the NPS prompt was shown to this user.</td>
+                <td>300 days</td>
+                <td>User activity won&apos;t be tracked</td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </>
