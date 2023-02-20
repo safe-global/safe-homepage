@@ -1,7 +1,7 @@
 .gradient {
-  background: url("/images/eco-layer-1.svg") top center,
-  url("/images/eco-layer-2.svg") center 50%,
-  url("/images/eco-layer-3.svg") center center;
+  background: url("/images/eco-layer-1.png") top center,
+  url("/images/eco-layer-2.png") center 50%,
+  url("/images/eco-layer-3.png") center center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -28,6 +28,6 @@
 
 @media (min-width: 600px) {
   .gradient {
-    background-size: auto;
+    background-size: 1523px, 1238px, 1453px;
   }
 }
