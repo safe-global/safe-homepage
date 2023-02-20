@@ -1,4 +1,6 @@
+export const IS_PRODUCTION = process.env.NEXT_PUBLIC_IS_PRODUCTION
 export const IS_BROWSER = typeof document !== 'undefined'
+export const LS_NAMESPACE = 'SAFE__'
 
 // Links
 export const WALLET_LINK = 'https://app.safe.global'
@@ -13,3 +15,9 @@ export const IOS_LINK = 'https://apps.apple.com/app/id1515759131'
 export const GPLAY_LINK = 'https://play.google.com/store/apps/details?id=io.gnosis.safe'
 export const DESKTOP_APP_LINK =
   'https://github.com/safe-global/safe-react/releases/download/v3.33.2%2Bdesktop/Safe-3.33.2.dmg'
+
+// Google Tag Manager
+// TODO: Create GA environment
+export const GOOGLE_TAG_MANAGER_ID = process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID || ''
+export const GOOGLE_TAG_MANAGER_AUTH_LIVE = process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_LIVE_AUTH || ''
+export const GOOGLE_TAG_MANAGER_DEVELOPMENT_AUTH = process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_DEVELOPMENT_AUTH || ''

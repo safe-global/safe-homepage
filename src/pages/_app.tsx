@@ -10,9 +10,17 @@ import type { ReactElement } from 'react'
 
 import { createEmotionCache } from '@/styles/emotion'
 import { theme } from '@/styles/theme'
+import { useGtm } from '@/services/analytics/useGtm'
+import { CookieBanner } from '@/components/common/CookieBanner'
 
 import '@/styles/globals.css'
 import PageLayout from '@/components/common/PageLayout'
+
+const InitApp = (): null => {
+  useGtm()
+
+  return null
+}
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache()
@@ -32,9 +40,13 @@ const App = ({
       <CssVarsProvider theme={cssVarsTheme}>
         <CssBaseline />
 
+        <InitApp />
+
         <PageLayout>
           <Component {...pageProps} />
         </PageLayout>
+
+        <CookieBanner />
       </CssVarsProvider>
     </CacheProvider>
   )
