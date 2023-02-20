@@ -11,7 +11,8 @@
   color: var(--mui-palette-primary-light);
 }
 
-.listItem:hover a {
+.listItem:hover a,
+.subListItem:hover a {
   color: white;
 }
 

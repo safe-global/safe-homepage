@@ -56,7 +56,7 @@ const subFooterItems = [
   },
   {
     label: 'Privacy',
-    href: AppRoutes.index,
+    href: AppRoutes.privacy,
   },
   {
     label: 'Press Kit',
