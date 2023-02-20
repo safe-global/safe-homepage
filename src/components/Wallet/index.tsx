@@ -1,4 +1,4 @@
-import { walletContent } from '@/components/Wallet/content'
+import walletContent from '@/content/wallet.json';
 import type { getStaticProps } from '@/pages/wallet'
 import type { InferGetStaticPropsType } from 'next'
 import PageContent from '../common/PageContent'

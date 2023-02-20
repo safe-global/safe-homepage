@@ -38,3 +38,5 @@ export const Positions = ({ items: _items, ...rest }: ComponentProps<typeof Card
 
   return <Cards items={items} highlight {...rest} />
 }
+
+export default Positions

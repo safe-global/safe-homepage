@@ -36,3 +36,5 @@ export const ImageText = ({
     </Container>
   )
 }
+
+export default ImageText

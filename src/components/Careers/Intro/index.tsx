@@ -60,3 +60,5 @@ export const Intro = ({
     </Container>
   )
 }
+
+export default Intro

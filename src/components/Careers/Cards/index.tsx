@@ -59,3 +59,5 @@ export const Cards = ({
     </Container>
   )
 }
+
+export default Cards

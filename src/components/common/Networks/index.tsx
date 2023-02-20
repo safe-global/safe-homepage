@@ -34,11 +34,11 @@ const Networks = ({ title, text, networks, chainsData }: NetworksProps) => (
       {networks.map((networksRow, index) => (
         <Box key={index} display="flex" gap="8px" className={index === 0 ? css.slider : css.sliderReverse}>
           {networksRow.map(({ name, icon }) => {
-            const chainColors = chainsData.find((chain) => chain.chainName === name) || defaultThemeColors
+            const chainColors = chainsData?.find((chain) => chain.chainName === name) || defaultThemeColors
             return <NetworkChip key={name} icon={icon} name={name} {...chainColors} />
           })}
           {networksRow.map(({ name, icon }) => {
-            const chainColors = chainsData.find((chain) => chain.chainName === name) || defaultThemeColors
+            const chainColors = chainsData?.find((chain) => chain.chainName === name) || defaultThemeColors
             return <NetworkChip key={name} icon={icon} name={name} {...chainColors} />
           })}
         </Box>

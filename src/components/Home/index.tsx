@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react'
-import { homeContent } from '@/components/Home/content'
+import homeContent from '@/content/home.json'
 import PageContent from '../common/PageContent'
 import type { InferGetStaticPropsType } from 'next'
 import type { getStaticProps } from '@/pages'
