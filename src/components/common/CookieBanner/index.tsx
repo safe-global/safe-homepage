@@ -70,10 +70,13 @@ export const CookieBanner = (): ReactElement | null => {
       </Typography>
 
       <form className={css.grid}>
-        <FormControlLabel control={<Checkbox name={CookieType.NECESSARY} checked disabled />} label="Necessary" />
+        <FormControlLabel
+          control={<Checkbox name={CookieType.NECESSARY} checked={formValues[CookieType.NECESSARY]} disabled />}
+          label="Necessary"
+        />
 
         <FormControlLabel
-          control={<Checkbox name={CookieType.ANALYTICS} checked={cookies?.[CookieType.ANALYTICS]} />}
+          control={<Checkbox name={CookieType.ANALYTICS} checked={formValues[CookieType.ANALYTICS]} />}
           label="Analytics"
           onChange={handleChange}
         />
