@@ -5,31 +5,31 @@ import DiscordIcon from '@/public/images/discord-icon.svg'
 import TwitterIcon from '@/public/images/twitter-icon.svg'
 
 import css from './styles.module.css'
-import { useOpenPositions } from '@/hooks/useOpenPositions'
+import Link from 'next/link'
 
 const safeProtocolItems = [
   {
     label: 'Core',
-    href: AppRoutes.index,
+    href: 'https://core.safe.global',
   },
   {
-    label: 'Developers Gitbook',
-    href: AppRoutes.index,
+    label: 'Developer Docs',
+    href: 'https://docs.safe.global',
   },
 ]
 
 const communityItems = [
   {
     label: 'Safe DAO',
-    href: AppRoutes.index,
+    href: 'https://forum.safe.global',
   },
   {
     label: 'Discord',
-    href: AppRoutes.core,
+    href: 'https://chat.safe.global',
   },
   {
     label: 'Safe Guardians',
-    href: AppRoutes.index,
+    href: 'https://forum.safe.global/t/guardians-gather/265',
   },
 ]
 
@@ -40,18 +40,18 @@ const resourcesItems = [
   },
   {
     label: 'Help Center',
-    href: AppRoutes.core,
+    href: 'https://help.safe.global',
   },
   {
     label: 'Brand Kit',
-    href: AppRoutes.index,
+    href: '#',
   },
 ]
 
 const subFooterItems = [
   {
     label: 'Terms',
-    href: AppRoutes.index,
+    href: AppRoutes.terms,
   },
   {
     label: 'Privacy',
@@ -59,7 +59,7 @@ const subFooterItems = [
   },
   {
     label: 'Press Kit',
-    href: AppRoutes.index,
+    href: 'https://press.safe.global',
   },
   {
     label: 'Licenses',
@@ -76,8 +76,6 @@ const subFooterItems = [
 ]
 
 const Footer = () => {
-  const { data: positions = [] } = useOpenPositions()
-
   return (
     <Container>
       <Grid container flexDirection={{ xs: 'column', md: 'row' }}>
@@ -88,7 +86,9 @@ const Footer = () => {
           <ul className={css.list}>
             {safeProtocolItems.map((item) => (
               <li className={css.listItem} key={item.href}>
-                {item.label}
+                <Link href={item.href} target="_blank" rel="noreferrer">
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>
@@ -100,7 +100,9 @@ const Footer = () => {
           <ul className={css.list}>
             {communityItems.map((item) => (
               <li className={css.listItem} key={item.href}>
-                {item.label}
+                <Link href={item.href} target="_blank" rel="noreferrer">
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>
@@ -112,7 +114,9 @@ const Footer = () => {
           <ul className={css.list}>
             {resourcesItems.map((item) => (
               <li className={css.listItem} key={item.href}>
-                item.label
+                <Link href={item.href} target="_blank" rel="noreferrer">
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>
@@ -138,7 +142,9 @@ const Footer = () => {
           <ul className={css.subList}>
             {subFooterItems.map((item) => (
               <li className={css.subListItem} key={item.href}>
-                {item.label}
+                <Link href={item.href} target="_blank" rel="noreferrer">
+                  {item.label}
+                </Link>
               </li>
             ))}
           </ul>
