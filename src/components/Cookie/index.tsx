@@ -1,8 +1,8 @@
 import type { ReactElement } from 'react'
 
 import PageContent from '@/components/common/PageContent'
-import { cookiesContent } from '@/components/Cookie/content'
+import cookiePolicyContent from '@/content/cookie-policy.json'
 
 export const Cookie = (): ReactElement => {
-  return <PageContent content={cookiesContent} />
+  return <PageContent content={cookiePolicyContent} />
 }
