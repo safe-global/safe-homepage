@@ -14,6 +14,11 @@ import { Button } from '@mui/material'
 
 const EDITABLE_URL_HASH = '#admin'
 
+enum EditableField {
+  title = 'title',
+  text = 'text',
+}
+
 type ContentItem = {
   component: string
 } & any
@@ -70,12 +75,8 @@ const getEditableProps = (
   isEditable: boolean,
 ): ReactElement => {
   return _cloneDeepWith(props, (item, key) => {
-    // Continue the recursion if the item is an object/array
-    if (Array.isArray(item) || (item != null && typeof item === 'object' && !item.props)) {
-      return
-    }
-    // Skip attributes
-    if (key === 'href' || key === 'alt' || key === 'src') return item
+    if (typeof key !== 'string') return
+    if (key && !(key in EditableField)) return item
 
     const onEdit = (val: string) => {
       setNewContent((prev: ContentItems) => {
