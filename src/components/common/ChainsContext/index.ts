@@ -1,5 +1,5 @@
 import { createContext } from 'react'
-import { ChainProps } from '../Networks'
+import type { ChainProps } from '../Networks'
 
 const ChainsContext = createContext<ChainProps[]>([])
 
