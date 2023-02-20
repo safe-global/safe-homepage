@@ -50,3 +50,5 @@ export const BannerCta = ({
     </Container>
   )
 }
+
+export default BannerCta

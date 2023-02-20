@@ -16,7 +16,7 @@ const parsePosition = ({ url, location, name }: Position): CardProps => {
   return {
     title: name,
     link: { href: url, title: 'See position' },
-    header: (
+    extra: (
       <Typography variant="caption" className={css.header}>
         <PinIcon className={css.icon} />
         {location.name}
@@ -38,3 +38,5 @@ export const Positions = ({ items: _items, ...rest }: ComponentProps<typeof Card
 
   return <Cards items={items} highlight {...rest} />
 }
+
+export default Positions

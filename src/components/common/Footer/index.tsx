@@ -12,10 +12,14 @@ const safeProtocolItems = [
   {
     label: 'Core',
     href: CORE_LINK,
+    target: '_blank',
+    rel: 'noreferrer',
   },
   {
     label: 'Developer Docs',
     href: DOCS_LINK,
+    target: '_blank',
+    rel: 'noreferrer',
   },
 ]
 
@@ -23,14 +27,20 @@ const communityItems = [
   {
     label: 'Safe DAO',
     href: FORUM_LINK,
+    target: '_blank',
+    rel: 'noreferrer',
   },
   {
     label: 'Discord',
     href: CHAT_LINK,
+    target: '_blank',
+    rel: 'noreferrer',
   },
   {
     label: 'Safe Guardians',
     href: GUARDIANS_LINK,
+    target: '_blank',
+    rel: 'noreferrer',
   },
 ]
 
@@ -42,10 +52,14 @@ const resourcesItems = [
   {
     label: 'Help Center',
     href: HELP_LINK,
+    target: '_blank',
+    rel: 'noreferrer',
   },
   {
     label: 'Brand Kit',
     href: '#',
+    target: '_blank',
+    rel: 'noreferrer',
   },
 ]
 
@@ -61,6 +75,8 @@ const subFooterItems = [
   {
     label: 'Press Kit',
     href: PRESS_LINK,
+    target: '_blank',
+    rel: 'noreferrer',
   },
   {
     label: 'Licenses',
@@ -101,7 +117,7 @@ const Footer = () => {
           <ul className={css.list}>
             {communityItems.map((item) => (
               <li className={css.listItem} key={item.href}>
-                <Link href={item.href} target="_blank" rel="noreferrer">
+                <Link href={item.href} target={item.target} rel={item.rel}>
                   {item.label}
                 </Link>
               </li>
@@ -115,7 +131,7 @@ const Footer = () => {
           <ul className={css.list}>
             {resourcesItems.map((item) => (
               <li className={css.listItem} key={item.href}>
-                <Link href={item.href} target="_blank" rel="noreferrer">
+                <Link href={item.href} target={item.target} rel={item.rel}>
                   {item.label}
                 </Link>
               </li>
@@ -143,7 +159,7 @@ const Footer = () => {
           <ul className={css.subList}>
             {subFooterItems.map((item) => (
               <li className={css.subListItem} key={item.href}>
-                <Link href={item.href} target="_blank" rel="noreferrer">
+                <Link href={item.href} target={item.target} rel={item.rel}>
                   {item.label}
                 </Link>
               </li>

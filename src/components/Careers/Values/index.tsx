@@ -48,3 +48,5 @@ export const Values = ({
     </Container>
   )
 }
+
+export default Values

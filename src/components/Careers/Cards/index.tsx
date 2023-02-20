@@ -10,23 +10,36 @@ import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 
 export type CardProps = {
-  header: ReactElement
+  header?: {
+    src: string
+    alt: string
+  }
   title: string
   link: { href: string; title: string }
   highlight?: boolean
+  extra?: ReactElement
 }
 
-const Card = ({ header, title, link, highlight }: CardProps): ReactElement => {
+const Card = ({ header, title, link, highlight, extra }: CardProps): ReactElement => {
   return (
     <Grid key={title} item xs={12} md={4}>
       <div className={clsx(css.card, highlight ? css.highlight : css.outline)}>
-        <div className={css.header}>{header}</div>
+        {header && (
+          <div className={css.header}>
+            <img {...header} />
+          </div>
+        )}
+
+        {extra}
+
         <Typography variant="h3" className={css.cardTitle}>
           {title}
         </Typography>
-        <LinkButton underline={false} className={css.link} fullSize>
+
+        <LinkButton underline={false} className={css.link} fullSize href={link.href}>
           {link.title}
         </LinkButton>
+
         <ArrowIcon className={css.arrow} />
       </div>
     </Grid>
@@ -59,3 +72,5 @@ export const Cards = ({
     </Container>
   )
 }
+
+export default Cards
