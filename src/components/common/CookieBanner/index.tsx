@@ -39,7 +39,6 @@ export const CookieBanner = (): ReactElement | null => {
   }, [cookies])
 
   const handleChange = (event: SyntheticEvent) => {
-    console.log(event.target.name, event.target.checked)
     setFormValues({ ...formValues, [event.target.name]: event.target.checked })
   }
 
