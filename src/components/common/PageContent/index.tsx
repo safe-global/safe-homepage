@@ -1,17 +1,10 @@
-import {
-  type ReactElement,
-  useEffect,
-  useState,
-  useCallback,
-  type Dispatch,
-  type SetStateAction,
-  type ComponentType,
-} from 'react'
+import { type ReactElement, useState, useCallback, type Dispatch, type SetStateAction, type ComponentType } from 'react'
 import _cloneDeepWith from 'lodash/cloneDeepWith'
 import { Button } from '@mui/material'
 import EditableItem from './EditableItem'
+import { useRouter } from 'next/router'
 
-const EDITABLE_URL_HASH = '#admin'
+const ADMIN_URL_HASH = 'admin'
 
 const EditableFields = {
   title: true,
@@ -48,15 +41,9 @@ const getEditableProps = (
 }
 
 const PageContent = ({ content }: { content: ContentItems }): ReactElement => {
-  const [isEditable, setIsEditable] = useState<boolean>(false)
   const [newContent, setNewContent] = useState<ContentItems>(content)
   const [saved, setSaved] = useState<boolean>(false)
-
-  useEffect(() => {
-    if (location.hash === EDITABLE_URL_HASH) {
-      setIsEditable(true)
-    }
-  }, [isEditable])
+  const isEditable = useRouter().asPath.split('#')[1] === ADMIN_URL_HASH
 
   const onSave = useCallback(() => {
     const data = JSON.stringify(newContent, null, 2)
