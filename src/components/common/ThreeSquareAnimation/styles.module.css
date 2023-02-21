@@ -1,0 +1,78 @@
+.box {
+  width: 80px;
+  height: 80px;
+  margin: 16px;
+  position: relative;
+  filter: url('#square-gooey');
+}
+
+.rect {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #12ff80;
+  transition: background-color 0.1s;
+  transform-origin: center;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+
+.rectTr {
+  animation-name: rect-anim-tr;
+  top: 0;
+  right: 0;
+  transform: scale(2.5);
+  animation-delay: 0.5s;
+}
+
+.rectBl {
+  animation-name: rect-anim-bl;
+  bottom: 0;
+  left: 0;
+}
+
+.rectCenter {
+  animation-name: rect-anim-center;
+  top: 30px;
+  left: 30px;
+  transform: scale(2.5);
+  animation-delay: 0.25s;
+}
+
+@keyframes rect-anim-tr {
+  0% {
+    transform: scale(2.5);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(2.5);
+  }
+}
+
+@keyframes rect-anim-center {
+  0% {
+    transform: scale(2.5);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(2.5);
+  }
+}
+
+@keyframes rect-anim-bl {
+  0% {
+    transform: scale(2.5);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(2.5);
+  }
+}
