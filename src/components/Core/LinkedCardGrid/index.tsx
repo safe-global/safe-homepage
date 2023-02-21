@@ -1,9 +1,9 @@
-import type { ComponentType } from 'react'
 import Image from 'next/image'
 import { Container, Grid, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import ArrowIcon from '@/public/images/arrow-out-icon.svg'
 import css from './styles.module.css'
+import getComponentByName from '@/lib/getComponentByName'
 
 type GridItemProps = {
   icon: {
@@ -20,14 +20,7 @@ const FallbackImage = () => {
 }
 
 const GridItem = ({ title, text, component }: GridItemProps) => {
-  let Component: ComponentType<any>
-  try {
-    Component = require(`@/components/${component}`).default
-    if (Component == null) throw new Error(`Component ${component} is null`)
-  } catch (e) {
-    console.error(e)
-    Component = FallbackImage
-  }
+  const Component = getComponentByName(component, FallbackImage)
 
   return (
     <Grid

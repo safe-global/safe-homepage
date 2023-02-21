@@ -1,15 +1,8 @@
-import {
-  type ReactElement,
-  useEffect,
-  useState,
-  useCallback,
-  type Dispatch,
-  type SetStateAction,
-  type ComponentType,
-} from 'react'
+import { type ReactElement, useEffect, useState, useCallback, type Dispatch, type SetStateAction } from 'react'
 import _cloneDeepWith from 'lodash/cloneDeepWith'
 import { Button } from '@mui/material'
 import EditableItem from './EditableItem'
+import getComponentByName from '@/lib/getComponentByName'
 
 const EDITABLE_URL_HASH = '#admin'
 
@@ -70,14 +63,7 @@ const PageContent = ({ content }: { content: ContentItems }): ReactElement => {
       {/* Render components from the content */}
       {newContent.map(({ component, ...rest }, index) => {
         const contentProps = getEditableProps(rest, setNewContent, isEditable)
-        let Component: ComponentType<any>
-        try {
-          Component = require(`@/components/${component}`).default
-          if (Component == null) throw new Error(`Component ${component} is null`)
-        } catch (e) {
-          console.error(e)
-          Component = NotFoundComponent
-        }
+        const Component = getComponentByName(component, NotFoundComponent)
         return <Component {...contentProps} key={index} />
       })}
 
