@@ -1,0 +1,47 @@
+.tweetsGrid {
+  display: flex;
+  gap: 8px;
+  position: relative;
+}
+
+.tweetsGrid a:nth-of-type(2) {
+  margin-top: 120px;
+}
+
+.tweetsGrid a:nth-of-type(4) {
+  margin-top: 213px;
+}
+
+.container {
+  width: 100vw;
+}
+
+.gradient {
+  background: url('/images/Core/tweets/bg_particles.png') no-repeat;
+  background-size: contain;
+  background-position: center -90px;
+  height: 804px;
+  padding-top: 24px;
+  position: relative;
+}
+
+.gradient:before,
+.gradient:after {
+  content: '';
+  top: 0;
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 10%;
+}
+
+.gradient:before {
+  background: linear-gradient(90deg, var(--mui-palette-background-main) 0%, rgba(18, 19, 18, 0) 100%);
+  left: 0;
+  z-index: 1;
+}
+
+.gradient:after {
+  background: linear-gradient(270deg, var(--mui-palette-background-main) 0%, rgba(18, 19, 18, 0) 100%);
+  right: 0;
+}
