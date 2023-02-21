@@ -43,6 +43,15 @@
     "component": "Core/LinkedCardGrid"
   },
   {
+    "caption": "Safe Core AA SDK",
+    "title": "Get started with <span title='Safe {CORE}'>Safe {CORE}</span> Account Abstraction SDK",
+    "link": {
+      "title": "View documentation",
+      "href": "#"
+    },
+    "component": "Core/AASdk"
+  },
+  {
     "textBlock": {
       "caption": "Safe Core API",
       "title": "Immediate access to all account information to power your applications",
