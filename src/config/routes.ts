@@ -7,4 +7,5 @@ export const AppRoutes = {
   core: '/core',
   cookie: '/cookie',
   careers: '/careers',
+  licenses: '/licenses',
 }
