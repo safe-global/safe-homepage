@@ -236,6 +236,16 @@
           }
         },
         {
+          "name": "Base",
+          "icon": {
+            "src": "/images/chainsLogos/BaseLogo.png",
+            "alt": "Base logo"
+          },
+          "backgroundColor": "#0151FE",
+          "textColor": "#ffffff",
+          "isNew": true
+        },
+        {
           "name": "Optimism",
           "icon": {
             "src": "/images/chainsLogos/OptimismLogo.png",

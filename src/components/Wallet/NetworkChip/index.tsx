@@ -8,9 +8,10 @@ export type NetworkChipProps = {
     src: string
     alt: string
   }
+  isNew?: boolean
 } & Pick<ChainProps, 'textColor' | 'backgroundColor'>
 
-const NetworkChip = ({ name, icon, textColor, backgroundColor }: NetworkChipProps) => (
+const NetworkChip = ({ name, icon, textColor, backgroundColor, isNew }: NetworkChipProps) => (
   <Box className={css.wrapper} sx={{ backgroundColor }}>
     <div className={css.icon}>
       <img {...icon} />
@@ -18,6 +19,7 @@ const NetworkChip = ({ name, icon, textColor, backgroundColor }: NetworkChipProp
     <Typography className={css.name} variant="body1" color={textColor}>
       {name}
     </Typography>
+    {isNew && <div className={css.newBadge}>New!</div>}
   </Box>
 )
 

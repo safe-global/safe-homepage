@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   flex-shrink: 0;
+  position: relative;
 }
 
 .icon img {
@@ -17,4 +18,17 @@
 .name {
   font-size: 18px;
   line-height: 22px;
+}
+
+.newBadge {
+  font-size: 12px;
+  font-weight: 500;
+  background: var(--mui-palette-primary-main);
+  color: var(--mui-palette-text-dark);
+  padding: 0 8px;
+  border-radius: 16px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  line-height: 20px;
 }

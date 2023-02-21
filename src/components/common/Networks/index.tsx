@@ -26,6 +26,21 @@ type NetworksProps = {
   chainsData: ChainProps[]
 }
 
+const NetworksRow = ({ networksRow, chainsData }: { networksRow: NetworkChipProps[]; chainsData: ChainProps[] }) => {
+  return (
+    <>
+      {networksRow.map(({ name, icon, textColor, backgroundColor, isNew }) => {
+        const chainData = chainsData?.find((chain) => chain.chainName === name)
+        const chainColors = {
+          textColor: chainData?.textColor || textColor || defaultThemeColors.textColor,
+          backgroundColor: chainData?.backgroundColor || backgroundColor || defaultThemeColors.backgroundColor,
+        }
+        return <NetworkChip key={name} icon={icon} name={name} isNew={isNew} {...chainColors} />
+      })}
+    </>
+  )
+}
+
 const Networks = ({ title, text, networks }: NetworksProps) => {
   const chainsData = useContext(ChainsContext)
 
@@ -38,14 +53,8 @@ const Networks = ({ title, text, networks }: NetworksProps) => {
         <div className={css.gradientBase} />
         {networks.map((networksRow, index) => (
           <Box key={index} display="flex" gap="8px" className={index === 0 ? css.slider : css.sliderReverse}>
-            {networksRow.map(({ name, icon }) => {
-              const chainColors = chainsData?.find((chain) => chain.chainName === name) || defaultThemeColors
-              return <NetworkChip key={name} icon={icon} name={name} {...chainColors} />
-            })}
-            {networksRow.map(({ name, icon }) => {
-              const chainColors = chainsData?.find((chain) => chain.chainName === name) || defaultThemeColors
-              return <NetworkChip key={name} icon={icon} name={name} {...chainColors} />
-            })}
+            <NetworksRow networksRow={networksRow} chainsData={chainsData} />
+            <NetworksRow networksRow={networksRow} chainsData={chainsData} />
           </Box>
         ))}
         <div className={clsx(css.gradientBase, css.gradientFlipped)} />

@@ -116,6 +116,16 @@
           }
         },
         {
+          "name": "Base",
+          "icon": {
+            "src": "/images/chainsLogos/BaseLogo.png",
+            "alt": "Base logo"
+          },
+          "backgroundColor": "#0151FE",
+          "textColor": "#ffffff",
+          "isNew": true
+        },
+        {
           "name": "Polygon",
           "icon": {
             "src": "/images/chainsLogos/PolygonLogo.png",
