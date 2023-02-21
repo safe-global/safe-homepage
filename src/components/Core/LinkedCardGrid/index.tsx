@@ -6,8 +6,9 @@ import css from './styles.module.css'
 import FourSquareAnimation from '@/components/common/FourSquareAnimation'
 import ThreeSquareAnimation from '@/components/common/ThreeSquareAnimation'
 import type { BaseBlock } from '@/components/Home/types'
+import FiveSquareAnimation from '@/components/common/FiveSquareAnimation'
 
-const SquareAnimations = [FourSquareAnimation, FourSquareAnimation, ThreeSquareAnimation]
+const SquareAnimations = [FourSquareAnimation, FiveSquareAnimation, ThreeSquareAnimation]
 
 const GridItem = ({ title, text, children, link }: BaseBlock & { children: ReactNode }) => {
   return (
