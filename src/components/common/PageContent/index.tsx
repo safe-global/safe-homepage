@@ -55,7 +55,7 @@ const PageContent = ({ content }: { content: ContentItems }): ReactElement => {
   }, [newContent])
 
   return (
-    <div className={css.container}>
+    <div className={isEditable ? css.container : undefined}>
       {/* Render components from the content */}
       {newContent.map(({ component, ...rest }, index) => {
         const contentProps = getEditableProps(rest, setNewContent, isEditable)
