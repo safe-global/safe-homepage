@@ -43,6 +43,34 @@
     "component": "Core/LinkedCardGrid"
   },
   {
+    "textBlock": {
+      "caption": "Safe Core API",
+      "title": "Immediate access to all account information to power your applications",
+      "link": {
+        "text": "Get started",
+        "href": "#"
+      }
+    },
+    "grid": {
+      "title": "Benefits",
+      "items": [
+        {
+          "title": "Decode the actions of the Safe"
+        },
+        {
+          "title": "Monitor all interactions with the Safe"
+        },
+        {
+          "title": "Use API with extensive information"
+        },
+        {
+          "title": "Support for the most important chains"
+        }
+      ]
+    },
+    "component": "Core/TextGrid"
+  },
+  {
     "caption": "Used by the best",
     "title": "What others are already building with Safe",
     "items": [
