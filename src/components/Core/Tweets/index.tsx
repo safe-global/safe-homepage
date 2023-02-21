@@ -1,4 +1,5 @@
 import { Container, Typography } from '@mui/material'
+import { TwitterTweetEmbed } from 'react-twitter-embed'
 import css from './styles.module.css'
 
 type TweetsSectionProps = {
@@ -28,11 +29,15 @@ const Tweets = ({ caption, title, items }: TweetsSectionProps) => {
 
       <div className={css.gradient}>
         <div className={css.tweetsGrid}>
-          {items.map(({ src, alt, href }, index) => (
-            <a key={index} href={href}>
-              <img src={src} alt={alt} />
-            </a>
-          ))}
+          {items.map(({ src, alt, href, id }) => {
+            return id ? (
+              <TwitterTweetEmbed key={id} tweetId={id} options={{ conversation: 'none' }} />
+            ) : (
+              <a key={id} href={href}>
+                <img src={src} alt={alt} />
+              </a>
+            )
+          })}
         </div>
       </div>
     </>

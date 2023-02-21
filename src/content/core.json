@@ -35,27 +35,32 @@
     "items": [
       {
         "src": "/images/Core/tweets/onchainden.png",
-        "alt": "Tweet from OnchainDen",
+        "alt": "Tweet from OnChainDen",
+        "id": "1615363435059118080",
         "href": "https://twitter.com/OnChainDen/status/1615363435059118080"
       },
       {
         "src": "/images/Core/tweets/tribes_xyz.png",
         "alt": "Tweet from Tribes",
+        "id": "1617555624962969603",
         "href": "https://twitter.com/tribes_xyz/status/1617555624962969603"
       },
       {
         "src": "/images/Core/tweets/ittaisvidler.png",
         "alt": "Tweet from ittai.eth",
+        "id": "1592541969137676288",
         "href": "https://twitter.com/IttaiSvidler/status/1592541969137676288"
       },
       {
         "src": "/images/Core/tweets/aaveaave.png",
         "alt": "Tweet from Aave",
+        "id": "1278718273933246464",
         "href": "https://twitter.com/AaveAave/status/1278718273933246464"
       },
       {
         "src": "/images/Core/tweets/tarungupta.png",
         "alt": "Tweet from tarungupta.eth",
+        "id": "1567088924224557062",
         "href": "https://twitter.com/tarungupta1475/status/1567088924224557062"
       }
     ],

@@ -14,11 +14,11 @@
     flex-direction: row;
   }
 
-  .tweetsGrid a:nth-of-type(2) {
+  .tweetsGrid *:nth-child(2) {
     margin-top: 120px;
   }
 
-  .tweetsGrid a:nth-of-type(4) {
+  .tweetsGrid *:nth-child(4) {
     margin-top: 213px;
   }
 
