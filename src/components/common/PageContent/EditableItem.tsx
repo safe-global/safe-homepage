@@ -1,4 +1,5 @@
-import { type SyntheticEvent, type ReactElement, useCallback } from 'react'
+import { type SyntheticEvent, type ReactElement, useCallback, useMemo } from 'react'
+import { sanitize } from 'isomorphic-dompurify'
 
 const preventClick = (e: SyntheticEvent) => {
   e.preventDefault()
@@ -17,19 +18,23 @@ const EditableItem = ({
   const onBlur = useCallback(
     (e: SyntheticEvent) => {
       const val = (e.target as HTMLElement).innerHTML || ''
-      if (val !== content) {
-        onEdit(val)
+      const cleanHtml = sanitize(val)
+      if (cleanHtml !== content) {
+        onEdit(cleanHtml)
       }
     },
     [content, onEdit],
   )
 
-  if (!isEditable && !/[<>]/.test(content)) return <>{content}</>
+  const hasHtml = /[<>]/.test(content)
+  const cleanHtml = useMemo(() => (hasHtml ? sanitize(content) : content), [hasHtml, content])
+
+  if (!isEditable && !hasHtml) return <>{content}</>
 
   return (
     <span
       contentEditable={isEditable}
-      dangerouslySetInnerHTML={{ __html: content }}
+      dangerouslySetInnerHTML={{ __html: cleanHtml }}
       onBlur={onBlur}
       onClick={preventClick}
     />
