@@ -1,5 +1,26 @@
 [
   {
+    "titleImage": {
+      "src": "/images/safe-core-type-white.svg",
+      "alt": "Safe CORE",
+      "style": {
+        "verticalAlign": "bottom",
+        "height": "2ex"
+      }
+    },
+    "title": "is Account Abstraction",
+    "text": "Full stack. Ready. Battle Tested. Open Source.",
+    "image": {
+      "src": "/images/anim1-placeholder.png",
+      "alt": "Safe blob 2"
+    },
+    "link": {
+      "title": "View documentation",
+      "href": "#"
+    },
+    "component": "Core/Intro"
+  },
+  {
     "title": "The most complete and secure account abstraction stack",
     "items": [
       {
