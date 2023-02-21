@@ -12,7 +12,6 @@ type GridItemProps = {
   }
   title: string
   text: string
-  component: string
 }
 
 const SquareAnimations = [FourSquareAnimation, FourSquareAnimation, FourSquareAnimation]
