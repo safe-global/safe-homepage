@@ -30,8 +30,11 @@ const NetworksRow = ({ networksRow, chainsData }: { networksRow: NetworkChipProp
   return (
     <>
       {networksRow.map(({ name, icon, textColor, backgroundColor, isNew }) => {
-        const chainColors =
-          chainsData?.find((chain) => chain.chainName === name) || { backgroundColor, textColor } || defaultThemeColors
+        const chainData = chainsData?.find((chain) => chain.chainName === name)
+        const chainColors = {
+          textColor: chainData?.textColor || textColor || defaultThemeColors.textColor,
+          backgroundColor: chainData?.backgroundColor || backgroundColor || defaultThemeColors.backgroundColor,
+        }
         return <NetworkChip key={name} icon={icon} name={name} isNew={isNew} {...chainColors} />
       })}
     </>
