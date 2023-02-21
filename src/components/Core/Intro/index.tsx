@@ -2,7 +2,7 @@ import { Button, Container, Divider, Grid, Typography } from '@mui/material'
 import css from './styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
 
-const CoreIntro = ({ title, text, image, link, titlePrefix }: BaseBlock) => {
+const CoreIntro = ({ title, text, image, link, titleImage }: BaseBlock) => {
   return (
     <Container>
       <Grid container className={css.container} spacing={{ xs: 6, md: '30px' }} justifyContent="space-between">
@@ -12,7 +12,7 @@ const CoreIntro = ({ title, text, image, link, titlePrefix }: BaseBlock) => {
         <Grid item md={6}>
           <Typography className={css.title} variant="h1" mb={4}>
             <>
-              {titlePrefix && <img {...titlePrefix} />} {title}
+              {titleImage && <img {...titleImage} />} {title}
             </>
           </Typography>
           <Typography variant="h4" component="div" mb={5}>

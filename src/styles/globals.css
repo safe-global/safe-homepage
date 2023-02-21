@@ -69,14 +69,14 @@ b {
 }
 
 .h2SafeType {
-  width: 13ex;
-  height: auto;
+  height: 2ex;
+  width: auto;
   vertical-align: bottom;
 }
 
 .body1SafeType {
-  width: 11ex;
-  height: auto;
+  height: 2ex;
+  width: auto;
   margin-bottom: -2px;
 }
 

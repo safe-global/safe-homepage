@@ -4,7 +4,7 @@ import { Grid, Typography, Container, Box } from '@mui/material'
 import css from './styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
 
-const BannerTextCard = ({ title, text, titlePrefix }: BaseBlock): ReactElement => {
+const BannerTextCard = ({ title, text, titleImage }: BaseBlock): ReactElement => {
   const bgRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -40,7 +40,7 @@ const BannerTextCard = ({ title, text, titlePrefix }: BaseBlock): ReactElement =
             <Grid item md={8}>
               <Typography variant="h2" mb={4} textAlign="center">
                 <>
-                  {titlePrefix && <img {...titlePrefix} />} {title}
+                  {titleImage && <img {...titleImage} />} {title}
                 </>
               </Typography>
             </Grid>

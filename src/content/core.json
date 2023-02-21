@@ -1,11 +1,11 @@
 [
   {
-    "titlePrefix": {
+    "titleImage": {
       "src": "/images/safe-core-type-white.svg",
       "alt": "Safe CORE",
       "style": {
         "verticalAlign": "bottom",
-        "width": "11ex"
+        "height": "2ex"
       }
     },
     "title": "is Account Abstraction",

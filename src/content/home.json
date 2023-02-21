@@ -259,12 +259,12 @@
     "component": "Home/BigIconsCardGrid"
   },
   {
-    "titlePrefix": {
+    "titleImage": {
       "src": "/images/safe-core-type-white.svg",
       "alt": "Safe CORE",
       "style": {
         "verticalAlign": "bottom",
-        "width": "11ex"
+        "height": "2ex"
       }
     },
     "title": "<b>powers ecosystem projects</b><br/>in every corner of web3",
