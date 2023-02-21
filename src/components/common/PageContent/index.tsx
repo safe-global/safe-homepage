@@ -1,8 +1,16 @@
-import { type ReactElement, useState, useCallback, type Dispatch, type SetStateAction, type ComponentType } from 'react'
+import {
+  type ReactElement,
+  useState,
+  useCallback,
+  type Dispatch,
+  type SetStateAction,
+  type ComponentType,
+} from 'react'
 import _cloneDeepWith from 'lodash/cloneDeepWith'
 import { Button } from '@mui/material'
 import EditableItem from './EditableItem'
 import { useRouter } from 'next/router'
+import css from './styles.module.css'
 
 const ADMIN_URL_HASH = 'admin'
 
@@ -53,7 +61,7 @@ const PageContent = ({ content }: { content: ContentItems }): ReactElement => {
   }, [newContent])
 
   return (
-    <>
+    <div className={css.container}>
       {/* Render components from the content */}
       {newContent.map(({ component, ...rest }, index) => {
         const contentProps = getEditableProps(rest, setNewContent, isEditable)
@@ -80,7 +88,7 @@ const PageContent = ({ content }: { content: ContentItems }): ReactElement => {
           {saved ? 'Copied JSON' : 'Save edits'}
         </Button>
       )}
-    </>
+    </div>
   )
 }
 
