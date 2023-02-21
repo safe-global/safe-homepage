@@ -1,34 +1,15 @@
-import type { ComponentType } from 'react'
-import Image from 'next/image'
+import type { ReactNode } from 'react'
 import { Container, Grid, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import ArrowIcon from '@/public/images/arrow-out-icon.svg'
 import css from './styles.module.css'
+import FourSquareAnimation from '@/components/common/FourSquareAnimation'
+import ThreeSquareAnimation from '@/components/common/ThreeSquareAnimation'
+import type { BaseBlock } from '@/components/Home/types'
 
-type GridItemProps = {
-  icon: {
-    src: string
-    alt: string
-  }
-  title: string
-  text: string
-  component: string
-}
+const SquareAnimations = [FourSquareAnimation, FourSquareAnimation, ThreeSquareAnimation]
 
-const FallbackImage = () => {
-  return <Image src="/images/anim2-placeholder.png" alt="Square animation" />
-}
-
-const GridItem = ({ title, text, component }: GridItemProps) => {
-  let Component: ComponentType<any>
-  try {
-    Component = require(`@/components/${component}`).default
-    if (Component == null) throw new Error(`Component ${component} is null`)
-  } catch (e) {
-    console.error(e)
-    Component = FallbackImage
-  }
-
+const GridItem = ({ title, text, children, link }: BaseBlock & { children: ReactNode }) => {
   return (
     <Grid
       item
@@ -40,10 +21,8 @@ const GridItem = ({ title, text, component }: GridItemProps) => {
       justifyContent="space-between"
       position="relative"
     >
-      <a href="#" className={css.cardLink}>
-        <div className={css.animationWrapper}>
-          <Component />
-        </div>
+      <a href={link?.href} className={css.cardLink}>
+        <div className={css.animationWrapper}>{children}</div>
         <div>
           <Typography variant="h4" mt={3} mb={1} color="text.primary">
             {title}
@@ -58,7 +37,7 @@ const GridItem = ({ title, text, component }: GridItemProps) => {
 
 export type LinkedCardGridProps = {
   title: string
-  items: GridItemProps[]
+  items: BaseBlock[]
 }
 
 const LinkedCardGrid = ({ title, items }: LinkedCardGridProps) => (
@@ -68,9 +47,14 @@ const LinkedCardGrid = ({ title, items }: LinkedCardGridProps) => (
         {title}
       </Typography>
       <Grid container>
-        {items.map((item, index) => (
-          <GridItem key={index} {...item} />
-        ))}
+        {items.map((item, index) => {
+          const Component = SquareAnimations[index]
+          return (
+            <GridItem key={index} {...item}>
+              <Component />
+            </GridItem>
+          )
+        })}
       </Grid>
     </Grid>
   </Container>

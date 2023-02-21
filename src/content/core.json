@@ -3,19 +3,28 @@
     "title": "The most complete and secure account abstraction stack",
     "items": [
       {
-        "component": "common/FourSquareAnimation",
         "title": "Safe {CORE} AA SDK",
-        "text": "Easily level up your application and empower your users with the most advanced account abstraction SDK. Cutting-edge functionality and the best UX."
+        "text": "Easily level up your application and empower your users with the most advanced account abstraction SDK. Cutting-edge functionality and the best UX.",
+        "link": {
+          "title": "",
+          "href": "#"
+        }
       },
       {
-        "component": "common/FourSquareAnimation",
         "title": "Safe {CORE} API",
-        "text": "Easily level up your application and empower your users with the most advanced account abstraction SDK. Cutting-edge functionality and the best UX."
+        "text": "Easily level up your application and empower your users with the most advanced account abstraction SDK. Cutting-edge functionality and the best UX.",
+        "link": {
+          "title": "",
+          "href": "#"
+        }
       },
       {
-        "component": "common/ThreeSquareAnimation",
         "title": "Safe {CORE} PROTOCOL",
-        "text": "Discover and contribute to a growing ecosystem of technological breakthroughs based on Safe with the Safe{Core} Protocol."
+        "text": "Discover and contribute to a growing ecosystem of technological breakthroughs based on Safe with the Safe{Core} Protocol.",
+        "link": {
+          "title": "",
+          "href": "#"
+        }
       }
     ],
     "component": "Core/LinkedCardGrid"
