@@ -1,3 +1,5 @@
+import type { ComponentType } from 'react'
+import Image from 'next/image'
 import { Container, Grid, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import ArrowIcon from '@/public/images/arrow-out-icon.svg'
@@ -10,31 +12,49 @@ type GridItemProps = {
   }
   title: string
   text: string
+  component: string
 }
 
-const GridItem = ({ icon, title, text }: GridItemProps) => (
-  <Grid
-    item
-    xs={12}
-    md={4}
-    className={css.card}
-    display="flex"
-    flexDirection="column"
-    justifyContent="space-between"
-    position="relative"
-  >
-    <a href="#" className={css.cardLink}>
-      <img src={icon.src} alt={icon.alt} />
-      <div>
-        <Typography variant="h4" mt={3} mb={1} color="text.primary">
-          {title}
-        </Typography>
-        <Typography color="primary.light">{text}</Typography>
-      </div>
-      <ArrowIcon className={css.icon} />
-    </a>
-  </Grid>
-)
+const FallbackImage = () => {
+  return <Image src="/images/anim2-placeholder.png" alt="Square animation" />
+}
+
+const GridItem = ({ title, text, component }: GridItemProps) => {
+  let Component: ComponentType<any>
+  try {
+    Component = require(`@/components/${component}`).default
+    if (Component == null) throw new Error(`Component ${component} is null`)
+  } catch (e) {
+    console.error(e)
+    Component = FallbackImage
+  }
+
+  return (
+    <Grid
+      item
+      xs={12}
+      md={4}
+      className={css.card}
+      display="flex"
+      flexDirection="column"
+      justifyContent="space-between"
+      position="relative"
+    >
+      <a href="#" className={css.cardLink}>
+        <div className={css.animationWrapper}>
+          <Component />
+        </div>
+        <div>
+          <Typography variant="h4" mt={3} mb={1} color="text.primary">
+            {title}
+          </Typography>
+          <Typography color="primary.light">{text}</Typography>
+        </div>
+        <ArrowIcon className={css.icon} />
+      </a>
+    </Grid>
+  )
+}
 
 export type LinkedCardGridProps = {
   title: string

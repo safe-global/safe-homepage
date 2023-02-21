@@ -39,6 +39,10 @@
   fill: var(--mui-palette-primary-main);
 }
 
+.cardLink:hover .animationWrapper div {
+  animation-play-state: running;
+}
+
 .cardLink img {
   width: 100px;
   height: 100px;
