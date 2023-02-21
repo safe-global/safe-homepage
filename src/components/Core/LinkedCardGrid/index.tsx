@@ -1,9 +1,9 @@
-import Image from 'next/image'
+import type { ReactNode } from 'react'
 import { Container, Grid, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import ArrowIcon from '@/public/images/arrow-out-icon.svg'
 import css from './styles.module.css'
-import getComponentByName from '@/lib/getComponentByName'
+import FourSquareAnimation from '@/components/common/FourSquareAnimation'
 
 type GridItemProps = {
   icon: {
@@ -15,13 +15,9 @@ type GridItemProps = {
   component: string
 }
 
-const FallbackImage = () => {
-  return <Image src="/images/anim2-placeholder.png" alt="Square animation" />
-}
+const SquareAnimations = [FourSquareAnimation, FourSquareAnimation, FourSquareAnimation]
 
-const GridItem = ({ title, text, component }: GridItemProps) => {
-  const Component = getComponentByName(component, FallbackImage)
-
+const GridItem = ({ title, text, children }: GridItemProps & { children: ReactNode }) => {
   return (
     <Grid
       item
@@ -34,9 +30,7 @@ const GridItem = ({ title, text, component }: GridItemProps) => {
       position="relative"
     >
       <a href="#" className={css.cardLink}>
-        <div className={css.animationWrapper}>
-          <Component />
-        </div>
+        <div className={css.animationWrapper}>{children}</div>
         <div>
           <Typography variant="h4" mt={3} mb={1} color="text.primary">
             {title}
@@ -61,9 +55,14 @@ const LinkedCardGrid = ({ title, items }: LinkedCardGridProps) => (
         {title}
       </Typography>
       <Grid container>
-        {items.map((item, index) => (
-          <GridItem key={index} {...item} />
-        ))}
+        {items.map((item, index) => {
+          const Component = SquareAnimations[index]
+          return (
+            <GridItem key={index} {...item}>
+              <Component />
+            </GridItem>
+          )
+        })}
       </Grid>
     </Grid>
   </Container>
