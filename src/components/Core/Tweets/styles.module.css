@@ -2,16 +2,16 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  position: relative;
-}
-
-.container {
-  width: 100vw;
+  overflow: hidden;
 }
 
 @media (min-width: 600px) {
   .tweetsGrid {
     flex-direction: row;
+  }
+
+  .tweetsGrid > * {
+    flex: 1;
   }
 
   .tweetsGrid *:nth-child(2) {
