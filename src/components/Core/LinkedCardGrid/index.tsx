@@ -4,19 +4,11 @@ import layoutCss from '@/components/common/styles.module.css'
 import ArrowIcon from '@/public/images/arrow-out-icon.svg'
 import css from './styles.module.css'
 import FourSquareAnimation from '@/components/common/FourSquareAnimation'
-
-type GridItemProps = {
-  icon: {
-    src: string
-    alt: string
-  }
-  title: string
-  text: string
-}
+import type { BaseBlock } from '@/components/Home/types'
 
 const SquareAnimations = [FourSquareAnimation, FourSquareAnimation, FourSquareAnimation]
 
-const GridItem = ({ title, text, children }: GridItemProps & { children: ReactNode }) => {
+const GridItem = ({ title, text, children, link }: BaseBlock & { children: ReactNode }) => {
   return (
     <Grid
       item
@@ -28,7 +20,7 @@ const GridItem = ({ title, text, children }: GridItemProps & { children: ReactNo
       justifyContent="space-between"
       position="relative"
     >
-      <a href="#" className={css.cardLink}>
+      <a href={link?.href} className={css.cardLink}>
         <div className={css.animationWrapper}>{children}</div>
         <div>
           <Typography variant="h4" mt={3} mb={1} color="text.primary">
@@ -44,7 +36,7 @@ const GridItem = ({ title, text, children }: GridItemProps & { children: ReactNo
 
 export type LinkedCardGridProps = {
   title: string
-  items: GridItemProps[]
+  items: BaseBlock[]
 }
 
 const LinkedCardGrid = ({ title, items }: LinkedCardGridProps) => (
