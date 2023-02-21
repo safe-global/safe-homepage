@@ -60,3 +60,35 @@ b {
   all: unset;
   color: var(--mui-palette-primary-main);
 }
+
+.h1SafeType {
+  width: auto;
+  height: auto;
+  margin-right: 16px;
+  margin-bottom: -7px;
+}
+
+.h2SafeType {
+  margin-bottom: -15px;
+  margin-right: 10px;
+  width: 200px;
+}
+
+.body1SafeType {
+  width: 90px;
+  height: auto;
+  margin-bottom: -2px;
+}
+
+@media (min-width: 600px) {
+  .h1SafeType {
+    width: 387px;
+    margin-bottom: -10px;
+  }
+
+  .h2SafeType {
+    width: auto;
+    margin-bottom: -9px;
+    margin-right: 14px;
+  }
+}
