@@ -63,10 +63,20 @@
   text-decoration: none;
   padding: 24px 0;
   border-bottom: 1px solid var(--mui-palette-border-light);
+  transition: all 0.2s;
 }
 
+.link:active {
+  opacity: 0.5;
+}
+
+.link.active,
 .link:hover {
   color: var(--mui-palette-primary-light);
+}
+
+.link.active {
+  pointer-events: none;
 }
 
 .button {

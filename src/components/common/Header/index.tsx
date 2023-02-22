@@ -8,6 +8,7 @@ import { WALLET_LINK } from '@/config/constants'
 import { useOpenPositions } from '@/hooks/useOpenPositions'
 import css from './styles.module.css'
 import clsx from 'clsx'
+import { useRouter } from 'next/router'
 
 const navItems = [
   {
@@ -29,6 +30,7 @@ const navItems = [
 ]
 
 const Header = () => {
+  const { asPath } = useRouter()
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const { data: positions = [] } = useOpenPositions()
 
@@ -56,7 +58,11 @@ const Header = () => {
         <ul className={css.navigation}>
           {navItems.map((item) => (
             <li key={item.href}>
-              <Link className={css.link} href={item.href} onClick={closeNavigation}>
+              <Link
+                className={clsx(css.link, item.href === asPath && css.active)}
+                href={item.href}
+                onClick={closeNavigation}
+              >
                 <Badge
                   badgeContent={item.href === AppRoutes.careers ? positions.length : undefined}
                   color="primary"
