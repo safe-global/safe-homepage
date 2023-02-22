@@ -2,8 +2,9 @@ import { useEffect, useRef, type ReactElement } from 'react'
 import { Grid, Typography, Container, Box } from '@mui/material'
 
 import css from './styles.module.css'
+import type { BaseBlock } from '@/components/Home/types'
 
-const BannerTextCard = ({ title, text }: { title: string; text: string }): ReactElement => {
+const BannerTextCard = ({ title, text }: BaseBlock): ReactElement => {
   const bgRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {

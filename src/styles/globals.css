@@ -60,3 +60,65 @@ b {
   all: unset;
   color: var(--mui-palette-primary-main);
 }
+
+.h1SafeType {
+  width: auto;
+  height: auto;
+  margin-right: 16px;
+  margin-bottom: -7px;
+}
+
+.h2SafeType {
+  height: 2ex;
+  width: auto;
+  vertical-align: bottom;
+}
+
+.body1SafeType {
+  height: 2ex;
+  width: auto;
+  margin-bottom: -2px;
+}
+
+span[title="Safe {CORE}"],
+span[title="Safe {WALLET}"],
+span[title="Safe {CORE} dark"] {
+  display: inline-block;
+  position: relative;
+  color: transparent;
+  line-height: 1;
+}
+
+span[title="Safe {WALLET}"]:after {
+  background-image: url('/images/safe-wallet-400.svg');
+}
+
+span[title="Safe {CORE}"]:after {
+  background-image: url('/images/safe-core-400-white.svg');
+}
+
+span[title="Safe {CORE} dark"]:after {
+  background-image: url('/images/safe-core-500.svg');
+}
+
+span[title="Safe {CORE}"]:after,
+span[title="Safe {WALLET}"]:after,
+span[title="Safe {CORE} dark"]:after {
+  content: "";
+  background-repeat: no-repeat;
+  background-position: 0;
+  background-size: contain;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+@media (min-width: 600px) {
+  .h1SafeType {
+    width: 387px;
+    margin-bottom: -10px;
+  }
+}

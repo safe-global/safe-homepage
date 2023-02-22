@@ -1,7 +1,10 @@
 import Link from 'next/link'
 import { Paper, Typography, FormControlLabel, Checkbox, Button } from '@mui/material'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { ReactElement } from 'react'
+
+import { AppRoutes } from '@/config/routes'
+import { useCookieBannerContext } from './CookieBannerContext'
 
 import css from './styles.module.css'
 
@@ -10,55 +13,59 @@ export const enum CookieType {
   ANALYTICS = 'analytics',
 }
 
-// TODO: Import from `AppRoutes` once page has been created
-const COOKIES_LINK = 'https://safe.global/cookie'
-
-export const CookieBanner = ({
-  isAnalyticsEnabled,
-  onSubmit,
-}: {
-  isAnalyticsEnabled: boolean
-  onSubmit: (isAnalyticsEnabled: boolean) => void
-}): ReactElement | null => {
-  const [analytics, setAnalytics] = useState(isAnalyticsEnabled)
+export const CookieBanner = (): ReactElement | null => {
+  const { isAnalyticsEnabled, setIsAnalyticsEnabled, closeBanner, isBannerOpen } = useCookieBannerContext()
+  const [analytics, setAnalytics] = useState<boolean>(false)
 
   const handleAccept = () => {
-    onSubmit(analytics)
+    setIsAnalyticsEnabled(analytics)
+    closeBanner()
   }
 
   const handleAcceptAll = () => {
-    onSubmit(true)
+    setIsAnalyticsEnabled(true)
+    closeBanner()
+  }
+
+  useEffect(() => {
+    setAnalytics(isAnalyticsEnabled)
+  }, [isAnalyticsEnabled])
+
+  if (!isBannerOpen) {
+    return null
   }
 
   return (
     <Paper className={css.container} elevation={3}>
-      <Typography align="center">
-        We use cookies to provide you with the best experience and to help improve our website and application. Please
-        read our <Link href={COOKIES_LINK}>Cookie Policy</Link> for more information. By clicking &quot;Accept
-        all&quot;, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage and
-        provide customer support.
-      </Typography>
+      <div className={css.content}>
+        <Typography align="center">
+          We use cookies to provide you with the best experience and to help improve our website and application. Please
+          read our <Link href={AppRoutes.cookie}>Cookie Policy</Link> for more information. By clicking &quot;Accept
+          all&quot;, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage
+          and provide customer support.
+        </Typography>
 
-      <form className={css.grid}>
-        <FormControlLabel control={<Checkbox name={CookieType.NECESSARY} checked disabled />} label="Necessary" />
+        <form className={css.grid}>
+          <FormControlLabel control={<Checkbox name={CookieType.NECESSARY} checked disabled />} label="Necessary" />
 
-        <FormControlLabel
-          control={<Checkbox name={CookieType.ANALYTICS} checked={analytics} />}
-          label="Analytics"
-          onChange={(_, checked) => {
-            setAnalytics(checked)
-          }}
-        />
+          <FormControlLabel
+            control={<Checkbox name={CookieType.ANALYTICS} checked={analytics} />}
+            label="Analytics"
+            onChange={(_, checked) => {
+              setAnalytics(checked)
+            }}
+          />
 
-        <div className={css.grid}>
-          <Button onClick={handleAccept} variant="outlined" disableElevation>
-            Accept selection
-          </Button>
-          <Button onClick={handleAcceptAll} variant="contained" disableElevation>
-            Accept all
-          </Button>
-        </div>
-      </form>
+          <div className={css.grid}>
+            <Button onClick={handleAccept} variant="outlined" disableElevation size="large">
+              Accept selection
+            </Button>
+            <Button onClick={handleAcceptAll} variant="contained" disableElevation size="large">
+              Accept all
+            </Button>
+          </div>
+        </form>
+      </div>
     </Paper>
   )
 }

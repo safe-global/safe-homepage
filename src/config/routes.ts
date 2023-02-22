@@ -3,9 +3,10 @@ export const AppRoutes = {
   wallet: '/wallet',
   terms: '/terms',
   privacy: '/privacy',
+  licenses: '/licenses',
   index: '/',
+  imprint: '/imprint',
   core: '/core',
   cookie: '/cookie',
   careers: '/careers',
-  licenses: '/licenses',
 }

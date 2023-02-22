@@ -1,30 +1,43 @@
 [
   {
+    "title": "<span title='Safe {CORE}'>Safe {CORE}</span> is Account Abstraction",
+    "text": "Full stack. Ready. Battle Tested. Open Source.",
+    "image": {
+      "src": "/images/anim1-placeholder.png",
+      "alt": "Safe blob 2"
+    },
+    "link": {
+      "title": "View documentation",
+      "href": "#"
+    },
+    "component": "Core/Intro"
+  },
+  {
     "title": "The most complete and secure account abstraction stack",
     "items": [
       {
-        "icon": {
-          "src": "/images/Core/blob-1.svg",
-          "alt": "Safe blob 1"
-        },
-        "title": "Safe {CORE} AA SDK",
-        "text": "Easily level up your application and empower your users with the most advanced account abstraction SDK. Cutting-edge functionality and the best UX."
+        "title": "<span title='Safe {CORE}'>Safe {CORE}</span> AA SDK",
+        "text": "Easily level up your application and empower your users with the most advanced account abstraction SDK. Cutting-edge functionality and the best UX.",
+        "link": {
+          "title": "",
+          "href": "#"
+        }
       },
       {
-        "icon": {
-          "src": "/images/Core/blob-2.svg",
-          "alt": "Safe blob 2"
-        },
-        "title": "Safe {CORE} API",
-        "text": "Easily level up your application and empower your users with the most advanced account abstraction SDK. Cutting-edge functionality and the best UX."
+        "title": "<span title='Safe {CORE}'>Safe {CORE}</span> API",
+        "text": "Easily level up your application and empower your users with the most advanced account abstraction SDK. Cutting-edge functionality and the best UX.",
+        "link": {
+          "title": "",
+          "href": "#"
+        }
       },
       {
-        "icon": {
-          "src": "/images/Core/blob-3.svg",
-          "alt": "Safe blob 3"
-        },
-        "title": "Safe {CORE} PROTOCOL",
-        "text": "Discover and contribute to a growing ecosystem of technological breakthroughs based on Safe with the Safe{Core} Protocol."
+        "title": "<span title='Safe {CORE}'>Safe {CORE}</span> PROTOCOL",
+        "text": "Discover and contribute to a growing ecosystem of technological breakthroughs based on Safe with the Safe{Core} Protocol.",
+        "link": {
+          "title": "",
+          "href": "#"
+        }
       }
     ],
     "component": "Core/LinkedCardGrid"
@@ -53,11 +66,11 @@
       },
       {
         "image": {
-          "src": "/images/Core/tweets/ittaisvidler.png",
-          "alt": "Tweet from ittai.eth"
+          "src": "/images/Core/tweets/tarungupta.png",
+          "alt": "Tweet from tarungupta.eth"
         },
         "link": {
-          "href": "https://twitter.com/IttaiSvidler/status/1592541969137676288"
+          "href": "https://twitter.com/tarungupta1475/status/1567088924224557062"
         }
       },
       {
@@ -71,11 +84,11 @@
       },
       {
         "image": {
-          "src": "/images/Core/tweets/tarungupta.png",
-          "alt": "Tweet from tarungupta.eth"
+          "src": "/images/Core/tweets/ittaisvidler.png",
+          "alt": "Tweet from ittai.eth"
         },
         "link": {
-          "href": "https://twitter.com/tarungupta1475/status/1567088924224557062"
+          "href": "https://twitter.com/IttaiSvidler/status/1592541969137676288"
         }
       }
     ],
@@ -84,7 +97,7 @@
   {
     "textBlock": {
       "caption": "Safe core protocol",
-      "title": "Build any use case with the battle-tested security of Safe{Core} Protocol",
+      "title": "Build any use case with the battle-tested security of <span title='Safe {CORE}'>Safe {CORE}</span> Protocol",
       "text": "Tap into the ecosystem’s cutting-edge plug-ins or write your own custom logic to plug into the Safe core contracts.",
       "link": {
         "text": "Get started",

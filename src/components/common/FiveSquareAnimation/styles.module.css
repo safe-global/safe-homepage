@@ -1,0 +1,122 @@
+.box {
+  width: 80px;
+  height: 80px;
+  margin: 16px;
+  position: relative;
+  filter: url('#square-gooey-1');
+}
+
+.rect {
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--mui-palette-primary-main);
+  transition: background-color 0.1s;
+  animation-timing-function: ease-out;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+
+.rectTl {
+  animation-name: rect-anim-tl;
+  animation-delay: 0.9s
+}
+
+.rectTr {
+  animation-name: rect-anim-tr;
+  animation-delay: 0.6s
+}
+
+.rectBl {
+  animation-name: rect-anim-bl;
+  height: 35px;
+}
+
+.rectBr {
+  animation-name: rect-anim-br;
+  animation-delay: 0.3s;
+  height: 35px;
+}
+
+@keyframes rect-anim-tl {
+  0% {
+    transform-origin: 15px 15px;
+    transform: scale(0)
+  }
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1) translate(-25px, -25px);
+  }
+  75% {
+    transform: scale(1) translate(-25px, -25px);
+  }
+  100% {
+    transform-origin: -10px -10px;
+    transform: scale(0) translate(-25px, -25px);
+  }
+}
+
+@keyframes rect-anim-tr {
+  0% {
+    transform-origin: 15px 15px;
+    transform: scale(0)
+  }
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1) translate(25px, -25px);
+  }
+  75% {
+    transform: scale(1) translate(25px, -25px);
+  }
+  100% {
+    transform-origin: 40px -10px;
+    transform: scale(0) translate(25px, -25px);
+  }
+}
+
+@keyframes rect-anim-br {
+  0% {
+    transform-origin: 15px 15px;
+    transform: scale(0)
+  }
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1) translate(25px, 25px);
+  }
+  75% {
+    transform: scale(1) translate(25px, 25px);
+  }
+  100% {
+    transform-origin: 40px 40px;
+    transform: scale(0) translate(25px, 25px);
+  }
+}
+
+@keyframes rect-anim-bl {
+  0% {
+    transform-origin: 15px 15px;
+    transform: scale(0)
+  }
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1) translate(-25px, 25px);
+  }
+  75% {
+    transform: scale(1) translate(-25px, 25px);
+  }
+  100% {
+    transform-origin: -10px 40px;
+    transform: scale(0) translate(-25px, 25px);
+  }
+}

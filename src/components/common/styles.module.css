@@ -8,12 +8,6 @@
   margin-bottom: 80px;
 }
 
-.h2SafeType {
-  margin-bottom: -15px;
-  margin-right: 10px;
-  width: 200px;
-}
-
 .body1SafeType {
   width: 90px;
   height: auto;
@@ -29,11 +23,5 @@
   .containerShort {
     margin-top: 250px;
     margin-bottom: 250px;
-  }
-
-  .h2SafeType {
-    width: auto;
-    margin-bottom: -9px;
-    margin-right: 14px;
   }
 }

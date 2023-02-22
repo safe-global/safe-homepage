@@ -1,0 +1,7 @@
+[
+  {
+    "title": "Imprint",
+    "text": "<p>Safe Ecosystem Foundation<br>c/o Sielva Management SA, Gubelstrasse 11\n        <br>6300 Zug, Switzerland\n      <br>Register-ID: CHE-295.207.842</p>\n      <p>\n        Directors: Lukas Schor, Christoph Simmchen, Stefan George\n        <br>Company registered in Zug, Switzerland<br></p>",
+    "component": "common/TextBlock"
+  }
+]

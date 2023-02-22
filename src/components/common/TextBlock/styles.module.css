@@ -18,11 +18,3 @@
 .block tr td {
   overflow-wrap: break-word;
 }
-
-.block tr td:first-of-type {
-  width: 37%;
-}
-
-.block tr td:nth-of-type(2) {
-  width: 63%;
-}

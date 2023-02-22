@@ -1,17 +1,12 @@
-import {
-  type ReactElement,
-  useEffect,
-  useState,
-  useCallback,
-  type Dispatch,
-  type SetStateAction,
-  type ComponentType,
-} from 'react'
+import { type ReactElement, useState, useCallback, type Dispatch, type SetStateAction } from 'react'
 import _cloneDeepWith from 'lodash/cloneDeepWith'
 import { Button } from '@mui/material'
 import EditableItem from './EditableItem'
+import { useRouter } from 'next/router'
+import css from './styles.module.css'
+import getComponentByName from '@/lib/getComponentByName'
 
-const EDITABLE_URL_HASH = '#admin'
+const ADMIN_URL_HASH = 'admin'
 
 const EditableFields = {
   title: true,
@@ -48,15 +43,9 @@ const getEditableProps = (
 }
 
 const PageContent = ({ content }: { content: ContentItems }): ReactElement => {
-  const [isEditable, setIsEditable] = useState<boolean>(false)
   const [newContent, setNewContent] = useState<ContentItems>(content)
   const [saved, setSaved] = useState<boolean>(false)
-
-  useEffect(() => {
-    if (location.hash === EDITABLE_URL_HASH) {
-      setIsEditable(true)
-    }
-  }, [isEditable])
+  const isEditable = useRouter().asPath.split('#')[1] === ADMIN_URL_HASH
 
   const onSave = useCallback(() => {
     const data = JSON.stringify(newContent, null, 2)
@@ -66,18 +55,11 @@ const PageContent = ({ content }: { content: ContentItems }): ReactElement => {
   }, [newContent])
 
   return (
-    <>
+    <div className={isEditable ? css.container : undefined}>
       {/* Render components from the content */}
       {newContent.map(({ component, ...rest }, index) => {
         const contentProps = getEditableProps(rest, setNewContent, isEditable)
-        let Component: ComponentType<any>
-        try {
-          Component = require(`@/components/${component}`).default
-          if (Component == null) throw new Error(`Component ${component} is null`)
-        } catch (e) {
-          console.error(e)
-          Component = NotFoundComponent
-        }
+        const Component = getComponentByName(component, NotFoundComponent)
         return <Component {...contentProps} key={index} />
       })}
 
@@ -93,7 +75,7 @@ const PageContent = ({ content }: { content: ContentItems }): ReactElement => {
           {saved ? 'Copied JSON' : 'Save edits'}
         </Button>
       )}
-    </>
+    </div>
   )
 }
 
