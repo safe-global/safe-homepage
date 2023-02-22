@@ -1,5 +1,6 @@
 import type { BaseBlock } from '@/components/Home/types'
 import { Container, Link, Typography } from '@mui/material'
+import HeaderParticles from '@/public/images/header_particles.svg'
 import css from './styles.module.css'
 
 const Tweets = ({ caption, title, items }: BaseBlock) => (
@@ -14,6 +15,7 @@ const Tweets = ({ caption, title, items }: BaseBlock) => (
     </Container>
 
     <div className={css.gradient}>
+      <HeaderParticles className={css.bg} />
       <div className={css.tweetsGrid}>
         {items?.map(({ image, link }, index) => (
           <Link key={index} href={link?.href || '#'} target="_blank" rel="noopener">
