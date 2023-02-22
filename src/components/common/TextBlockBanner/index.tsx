@@ -13,14 +13,11 @@ const TextBlockBanner = () => (
       <Grid container flexDirection="column" alignItems="center" justifyContent="center">
         <Grid item md={6} sx={{ textAlign: 'center' }} pt={12}>
           <Typography variant="h2" color="static.main" mb={3}>
-            Use <SafeWalletText variant="h2" /> anywhere
+            Use <span title="Safe {WALLET}">Safe {'{WALLET}'}</span> anywhere
           </Typography>
           <Typography color="static.main" mb={5}>
-            Access your assets anywhere without compromising on security on our flagship interfaces built on{' '}
-            <Typography component="span">
-              <SafeCoreText variant="body1" />
-            </Typography>
-            .
+            Access your assets anywhere without compromising on security on our flagship interfaces built on Safe{' '}
+            {'{CORE}'}
           </Typography>
         </Grid>
         <Grid item md={8}>
