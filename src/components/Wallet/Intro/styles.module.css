@@ -1,12 +1,35 @@
-.links svg {
-  width: auto;
-  height: 40px;
-  display: block;
-}
-
 .container {
   margin-top: 0px;
   margin-bottom: 75px;
+}
+
+.imagesWrapper {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+}
+
+.gif {
+  position: absolute;
+  top: 50px;
+  left: 25px;
+  transform: scale(1.5);
+  z-index: -1;
+}
+
+.button {
+  font-size: 18px;
+  line-height: 26px;
+  padding: 15px 22px;
+}
+
+.downloads {
+  display: flex;
+  gap: 12px;
+}
+
+.downloads svg {
+  width: 134px;
 }
 
 .title {
@@ -15,25 +38,43 @@
   letter-spacing: -0.01em;
 }
 
-.button {
-  font-size: 18px;
-  line-height: 28px;
-}
-
 @media (min-width: 600px) {
   .container {
     margin-top: 100px;
-    margin-bottom: 120px;
+    margin-bottom: 184px;
+  }
+
+  .imagesWrapper {
+    overflow: visible;
+  }
+
+  .image {
+    margin-top: 30px;
+    width: 90%;
+  }
+
+  .gif {
+    top: 50px;
+    left: -5px;
+    transform: scale(2);
+  }
+
+  .button {
+    padding: 8px 16px;
+    height: 54px;
+  }
+
+  .downloads {
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .downloads svg {
+    width: 181px;
   }
 
   .title {
     font-size: 80px;
     line-height: 82px;
-  }
-
-  .button {
-    font-size: 16px;
-    line-height: 24px;
-    padding: 8px 16px;
   }
 }

@@ -11,6 +11,10 @@
         "href": "https://app.safe.global"
       }
     ],
+    "gif": {
+      "src": "/images/Wallet/particles-orbit-spin.gif",
+      "alt": "Particles orbit spin"
+    },
     "component": "Wallet/Intro"
   },
   {
