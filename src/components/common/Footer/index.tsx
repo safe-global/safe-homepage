@@ -83,6 +83,10 @@ const subFooterItems = [
     href: AppRoutes.licenses,
   },
   {
+    label: 'Imprint',
+    href: AppRoutes.imprint,
+  },
+  {
     label: 'Cookie Policy',
     href: AppRoutes.cookie,
   },

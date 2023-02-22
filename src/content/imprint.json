@@ -1,0 +1,7 @@
+[
+  {
+    "title": "Imprint",
+    "text": "<p>\n        Gnosis Ltd.\n        <br />\n        World Trade Center\n        <br />6 Bayside Rd, GX111AA Gibraltar\n      </p>\n      <p>E-Mail: info@gnosis.pm</p>\n      <p>\n        Directors: Stefan George, Martin Köppelmann, Joseph Lubin, Jeremy Millar\n        <br />\n        Company registered in Gibraltar\n        <br />\n        Company Nr. 115571\n      </p>",
+    "component": "common/TextBlock"
+  }
+]
