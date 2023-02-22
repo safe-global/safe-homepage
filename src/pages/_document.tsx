@@ -9,6 +9,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 import createEmotionServer from '@emotion/server/create-instance'
 
 import { createEmotionCache } from '@/styles/emotion'
+import MetaTags from '@/components/common/MetaTags'
 
 export default class MyDocument extends Document {
   render() {
@@ -16,6 +17,7 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta name="emotion-insertion-point" content="" />
+          <MetaTags />
           {(this.props as any).emotionStyleTags}
         </Head>
         <body>
