@@ -1,8 +1,6 @@
-import { createContext, useContext, useEffect, useState } from 'react'
+import { createContext, useCallback, useContext, useEffect, useState } from 'react'
 import type { ReactNode } from 'react'
-
 import { localItem } from '@/services/Storage/local'
-import { useGa } from '@/hooks/useGa'
 
 const ANALYTICS_PREFERENCE_KEY = 'analyticsPreference'
 const analyticsPreference = localItem<boolean>(ANALYTICS_PREFERENCE_KEY)
@@ -25,32 +23,30 @@ export const CookieBannerContextProvider = ({ children }: { children: ReactNode 
   const [isBannerOpen, setIsBannerOpen] = useState(false)
   const [isAnalyticsEnabled, setIsAnalyticsEnabled] = useState(false)
 
+  const openBanner = useCallback(() => {
+    setIsBannerOpen(true)
+  }, [])
+
+  const closeBanner = useCallback(() => {
+    setIsBannerOpen(false)
+  }, [])
+
   // Sync local state
   useEffect(() => {
     const preference = analyticsPreference.get()
 
-    if (typeof preference === 'boolean') {
-      setIsAnalyticsEnabled(preference)
-    } else {
+    // Open cookie banner if no preference is set
+    if (preference == null) {
       openBanner()
-      setIsAnalyticsEnabled(false)
+    } else {
+      setIsAnalyticsEnabled(Boolean(preference))
     }
-  }, [])
+  }, [openBanner])
 
-  useGa(isAnalyticsEnabled)
-
-  const openBanner = () => {
-    setIsBannerOpen(true)
-  }
-
-  const closeBanner = () => {
-    setIsBannerOpen(false)
-  }
-
-  const storeIsAnalyticsEnabled = (preference: boolean) => {
+  const storeIsAnalyticsEnabled = useCallback((preference: boolean) => {
     analyticsPreference.set(preference)
     setIsAnalyticsEnabled(preference)
-  }
+  }, [])
 
   return (
     <CookieBannerContext.Provider

@@ -10,7 +10,7 @@ import Link from 'next/link'
 import { DOCS_LINK, HELP_LINK, PRESS_LINK, CORE_LINK, FORUM_LINK, CHAT_LINK, GUARDIANS_LINK } from '@/config/constants'
 import { useCookieBannerContext } from '../CookieBanner/CookieBannerContext'
 
-const COOKIE_PREFERENCES_LABEL = 'Preferences'
+const COOKIE_PREFERENCES = '#cookies'
 
 const safeProtocolItems = [
   {
@@ -95,8 +95,8 @@ const subFooterItems = [
     href: AppRoutes.cookie,
   },
   {
-    label: COOKIE_PREFERENCES_LABEL,
-    href: '#',
+    label: 'Preferences',
+    href: COOKIE_PREFERENCES,
   },
 ]
 
@@ -104,7 +104,7 @@ const Footer = () => {
   const { openBanner } = useCookieBannerContext()
 
   const showBanner = (e: SyntheticEvent) => {
-    // Prevent scrolling
+    // Prevent opening the hash link
     e.preventDefault()
     openBanner()
   }
@@ -126,6 +126,7 @@ const Footer = () => {
             ))}
           </ul>
         </Grid>
+
         <Grid item md={2}>
           <Typography variant="caption" color="text.primary">
             Community
@@ -140,6 +141,7 @@ const Footer = () => {
             ))}
           </ul>
         </Grid>
+
         <Grid item md={2}>
           <Typography variant="caption" color="text.primary">
             Resources
@@ -154,6 +156,7 @@ const Footer = () => {
             ))}
           </ul>
         </Grid>
+
         <Grid item md={4} ml={{ xs: 0, md: 'auto' }}>
           <Typography variant="caption" component="div" color="text.primary" mb={2}>
             Subscribe to our newsletter
@@ -169,12 +172,14 @@ const Footer = () => {
           </div>
         </Grid>
       </Grid>
+
       <Divider sx={{ mt: '26px' }} />
+
       <Grid container alignItems="center" justifyContent="space-between" mb={2}>
         <Grid item>
           <ul className={css.subList}>
             {subFooterItems.map((item) => {
-              const isCookiePreference = item.label === COOKIE_PREFERENCES_LABEL
+              const isCookiePreference = item.href === COOKIE_PREFERENCES
 
               return (
                 <li className={css.subListItem} key={item.href}>
@@ -191,6 +196,7 @@ const Footer = () => {
             })}
           </ul>
         </Grid>
+
         <Grid item my={2}>
           <Typography color="primary.light" fontSize="16px">
             ©2023 Safe Ecosystem Foundation

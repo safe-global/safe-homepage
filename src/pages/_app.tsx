@@ -16,6 +16,7 @@ import { theme } from '@/styles/theme'
 
 import '@/styles/globals.css'
 import PageLayout from '@/components/common/PageLayout'
+import { useGa } from '@/hooks/useGa'
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache()
@@ -30,6 +31,8 @@ const App = ({
 }: AppProps & {
   emotionCache?: EmotionCache
 }): ReactElement => {
+  useGa()
+
   return (
     <CacheProvider value={emotionCache}>
       <CssVarsProvider theme={cssVarsTheme}>

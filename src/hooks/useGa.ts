@@ -1,17 +1,19 @@
+import { useCookieBannerContext } from '@/components/common/CookieBanner/CookieBannerContext'
+import { GOOGLE_ANALYTICS_TRACKING_ID } from '@/config/constants'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import ReactGA from 'react-ga'
 
 let isAnalyticsInitialized = false
 
-export const useGa = (isAnalyticsEnabled: boolean) => {
+export const useGa = () => {
   const { asPath } = useRouter()
+  const { isAnalyticsEnabled } = useCookieBannerContext()
 
   // Enable/disable tracking
   useEffect(() => {
     if (isAnalyticsEnabled) {
-      // TODO: Add GA tracking ID ready to deploy
-      ReactGA.initialize('')
+      ReactGA.initialize(GOOGLE_ANALYTICS_TRACKING_ID)
       isAnalyticsInitialized = true
       return
     }
