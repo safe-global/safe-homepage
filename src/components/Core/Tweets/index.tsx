@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Container, Typography } from '@mui/material'
 import { TwitterTweetEmbed } from 'react-twitter-embed'
 import css from './styles.module.css'
@@ -17,8 +16,6 @@ type TweetProps = {
 }
 
 const Tweets = ({ caption, title, items }: TweetsSectionProps) => {
-  const [failedToLoad, setFailedToLoad] = useState<number[]>([])
-
   return (
     <>
       <Container>
@@ -32,27 +29,13 @@ const Tweets = ({ caption, title, items }: TweetsSectionProps) => {
 
       <div className={css.gradient}>
         <div className={css.tweetsGrid}>
-          {items.map(({ src, alt, href, id }, index) => {
-            if (failedToLoad.includes(index)) {
-              return (
-                <a key={id} href={href}>
-                  <img src={src} alt={alt} />
-                </a>
-              )
-            }
-
-            return (
-              <TwitterTweetEmbed
-                key={id}
-                tweetId={id}
-                options={{ conversation: 'none' }}
-                onLoad={(element) => {
-                  // if the element is undefined, it means that the tweet failed to load
-                  if (element === undefined) {
-                    setFailedToLoad((prev) => [...prev, index])
-                  }
-                }}
-              />
+          {items.map(({ src, alt, href, id }) => {
+            return id ? (
+              <TwitterTweetEmbed key={id} tweetId={id} options={{ conversation: 'none' }} />
+            ) : (
+              <a key={id} href={href}>
+                <img src={src} alt={alt} />
+              </a>
             )
           })}
         </div>
