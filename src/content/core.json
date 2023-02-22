@@ -53,11 +53,11 @@
       },
       {
         "image": {
-          "src": "/images/Core/tweets/ittaisvidler.png",
-          "alt": "Tweet from ittai.eth"
+          "src": "/images/Core/tweets/tarungupta.png",
+          "alt": "Tweet from tarungupta.eth"
         },
         "link": {
-          "href": "https://twitter.com/IttaiSvidler/status/1592541969137676288"
+          "href": "https://twitter.com/tarungupta1475/status/1567088924224557062"
         }
       },
       {
@@ -71,11 +71,11 @@
       },
       {
         "image": {
-          "src": "/images/Core/tweets/tarungupta.png",
-          "alt": "Tweet from tarungupta.eth"
+          "src": "/images/Core/tweets/ittaisvidler.png",
+          "alt": "Tweet from ittai.eth"
         },
         "link": {
-          "href": "https://twitter.com/tarungupta1475/status/1567088924224557062"
+          "href": "https://twitter.com/IttaiSvidler/status/1592541969137676288"
         }
       }
     ],
