@@ -1,6 +1,7 @@
 export const IS_BROWSER = typeof document !== 'undefined'
 export const LS_NAMESPACE = 'SAFE__'
 
+export const IS_PRODUCTION = process.env.NEXT_PUBLIC_IS_PRODUCTION
 export const GOOGLE_ANALYTICS_TRACKING_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_TRACKING_ID || ''
 
 // Links
