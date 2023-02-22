@@ -1,4 +1,4 @@
-import { Container, Typography } from '@mui/material'
+import { Container, Link, Typography } from '@mui/material'
 import css from './styles.module.css'
 
 type TweetsSectionProps = {
@@ -29,9 +29,9 @@ const Tweets = ({ caption, title, items }: TweetsSectionProps) => {
       <div className={css.gradient}>
         <div className={css.tweetsGrid}>
           {items.map(({ src, alt, href }, index) => (
-            <a key={index} href={href}>
+            <Link key={index} href={href} target="_blank" rel="noopener">
               <img src={src} alt={alt} />
-            </a>
+            </Link>
           ))}
         </div>
       </div>
