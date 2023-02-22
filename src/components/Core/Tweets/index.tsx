@@ -30,7 +30,7 @@ const Tweets = ({ caption, title, items }: TweetsSectionProps) => {
         <div className={css.tweetsGrid}>
           {items.map(({ src, alt, href }, index) => (
             <Link key={index} href={href} target="_blank" rel="noopener">
-              <img src={src} alt={alt} />
+              <img src={src} alt={alt} loading="lazy" />
             </Link>
           ))}
         </div>
