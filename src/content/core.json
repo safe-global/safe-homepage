@@ -34,29 +34,49 @@
     "title": "What others are already building with Safe",
     "items": [
       {
-        "src": "/images/Core/tweets/onchainden.png",
-        "alt": "Tweet from OnchainDen",
-        "href": "https://twitter.com/OnChainDen/status/1615363435059118080"
+        "image": {
+          "src": "/images/Core/tweets/onchainden.png",
+          "alt": "Tweet from OnchainDen"
+        },
+        "link": {
+          "href": "https://twitter.com/OnChainDen/status/1615363435059118080"
+        }
       },
       {
-        "src": "/images/Core/tweets/tribes_xyz.png",
-        "alt": "Tweet from Tribes",
-        "href": "https://twitter.com/tribes_xyz/status/1617555624962969603"
+        "image": {
+          "src": "/images/Core/tweets/tribes_xyz.png",
+          "alt": "Tweet from Tribes"
+        },
+        "link": {
+          "href": "https://twitter.com/tribes_xyz/status/1617555624962969603"
+        }
       },
       {
-        "src": "/images/Core/tweets/ittaisvidler.png",
-        "alt": "Tweet from ittai.eth",
-        "href": "https://twitter.com/IttaiSvidler/status/1592541969137676288"
+        "image": {
+          "src": "/images/Core/tweets/ittaisvidler.png",
+          "alt": "Tweet from ittai.eth"
+        },
+        "link": {
+          "href": "https://twitter.com/IttaiSvidler/status/1592541969137676288"
+        }
       },
       {
-        "src": "/images/Core/tweets/aaveaave.png",
-        "alt": "Tweet from Aave",
-        "href": "https://twitter.com/AaveAave/status/1278718273933246464"
+        "image": {
+          "src": "/images/Core/tweets/aaveaave.png",
+          "alt": "Tweet from Aave"
+        },
+        "link": {
+          "href": "https://twitter.com/AaveAave/status/1278718273933246464"
+        }
       },
       {
-        "src": "/images/Core/tweets/tarungupta.png",
-        "alt": "Tweet from tarungupta.eth",
-        "href": "https://twitter.com/tarungupta1475/status/1567088924224557062"
+        "image": {
+          "src": "/images/Core/tweets/tarungupta.png",
+          "alt": "Tweet from tarungupta.eth"
+        },
+        "link": {
+          "href": "https://twitter.com/tarungupta1475/status/1567088924224557062"
+        }
       }
     ],
     "component": "Core/Tweets"

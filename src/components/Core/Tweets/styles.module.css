@@ -21,7 +21,7 @@
   width: 300px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   .gradient {
     background-size: contain;
     background-position: center -90px;

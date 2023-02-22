@@ -1,20 +1,8 @@
+import type { BaseBlock } from '@/components/Home/types'
 import { Container, Link, Typography } from '@mui/material'
 import css from './styles.module.css'
 
-type TweetsSectionProps = {
-  caption: string
-  title: string
-  items: TweetProps[]
-}
-
-type TweetProps = {
-  id: string
-  src: string
-  alt: string
-  href: string
-}
-
-const Tweets = ({ caption, title, items }: TweetsSectionProps) => (
+const Tweets = ({ caption, title, items }: BaseBlock) => (
   <>
     <Container>
       <Typography variant="caption" textAlign="center" component="div" mt="100px" mb={3}>
@@ -27,9 +15,9 @@ const Tweets = ({ caption, title, items }: TweetsSectionProps) => (
 
     <div className={css.gradient}>
       <div className={css.tweetsGrid}>
-        {items.map(({ src, alt, href }, index) => (
-          <Link key={index} href={href} target="_blank" rel="noopener">
-            <img src={src} alt={alt} loading="lazy" />
+        {items?.map(({ image, link }, index) => (
+          <Link key={index} href={link?.href || '#'} target="_blank" rel="noopener">
+            <img src={image?.src || ''} alt={image?.alt || ''} />
           </Link>
         ))}
       </div>
