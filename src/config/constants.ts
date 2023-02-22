@@ -1,4 +1,7 @@
 export const IS_BROWSER = typeof document !== 'undefined'
+export const LS_NAMESPACE = 'SAFE__'
+
+export const GOOGLE_ANALYTICS_TRACKING_ID = process.env.GOOGLE_ANALYTICS_TRACKING_ID || ''
 
 // Links
 export const WALLET_LINK = 'https://app.safe.global'

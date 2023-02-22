@@ -3,6 +3,9 @@ import { Paper, Typography, FormControlLabel, Checkbox, Button } from '@mui/mate
 import { useState } from 'react'
 import type { ReactElement } from 'react'
 
+import { AppRoutes } from '@/config/routes'
+import { useCookieBannerContext } from './CookieBannerContext'
+
 import css from './styles.module.css'
 
 export const enum CookieType {
@@ -10,31 +13,30 @@ export const enum CookieType {
   ANALYTICS = 'analytics',
 }
 
-// TODO: Import from `AppRoutes` once page has been created
-const COOKIES_LINK = 'https://safe.global/cookie'
+export const CookieBanner = (): ReactElement | null => {
+  const { isAnalyticsEnabled, setIsAnalyticsEnabled, closeBanner, isBannerOpen } = useCookieBannerContext()
 
-export const CookieBanner = ({
-  isAnalyticsEnabled,
-  onSubmit,
-}: {
-  isAnalyticsEnabled: boolean
-  onSubmit: (isAnalyticsEnabled: boolean) => void
-}): ReactElement | null => {
   const [analytics, setAnalytics] = useState(isAnalyticsEnabled)
 
   const handleAccept = () => {
-    onSubmit(analytics)
+    setIsAnalyticsEnabled(analytics)
+    closeBanner()
   }
 
   const handleAcceptAll = () => {
-    onSubmit(true)
+    setIsAnalyticsEnabled(true)
+    closeBanner()
+  }
+
+  if (!isBannerOpen) {
+    return null
   }
 
   return (
     <Paper className={css.container} elevation={3}>
       <Typography align="center">
         We use cookies to provide you with the best experience and to help improve our website and application. Please
-        read our <Link href={COOKIES_LINK}>Cookie Policy</Link> for more information. By clicking &quot;Accept
+        read our <Link href={AppRoutes.cookie}>Cookie Policy</Link> for more information. By clicking &quot;Accept
         all&quot;, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage and
         provide customer support.
       </Typography>

@@ -9,6 +9,8 @@ import type { AppProps } from 'next/app'
 import type { ReactElement } from 'react'
 
 import { createEmotionCache } from '@/styles/emotion'
+import { CookieBannerContextProvider } from '@/components/common/CookieBanner/CookieBannerContext'
+import { CookieBanner } from '@/components/common/CookieBanner'
 
 import { theme } from '@/styles/theme'
 
@@ -32,10 +34,13 @@ const App = ({
     <CacheProvider value={emotionCache}>
       <CssVarsProvider theme={cssVarsTheme}>
         <CssBaseline />
+        <CookieBannerContextProvider>
+          <PageLayout>
+            <Component {...pageProps} />
+          </PageLayout>
 
-        <PageLayout>
-          <Component {...pageProps} />
-        </PageLayout>
+          <CookieBanner />
+        </CookieBannerContextProvider>
       </CssVarsProvider>
     </CacheProvider>
   )
