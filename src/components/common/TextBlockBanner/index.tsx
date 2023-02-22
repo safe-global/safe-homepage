@@ -4,8 +4,6 @@ import GPlayDownload from '@/public/images/google-play-download.svg'
 import DownloadIcon from '@/public/images/download-icon.svg'
 import css from './styles.module.css'
 import { IOS_LINK, GPLAY_LINK, DESKTOP_APP_LINK } from '@/config/constants'
-import SafeWalletText from '@/components/common/SafeWalletText'
-import SafeCoreText from '@/components/common/SafeCoreText'
 
 const TextBlockBanner = () => (
   <div className={css.bg}>
