@@ -2,7 +2,6 @@ import type { DetailedHTMLProps, ImgHTMLAttributes } from 'react'
 import type { StepsType } from '@/components/Wallet/Stepper'
 
 type BaseBlock = {
-  titleImage?: DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement> & { alt: string }
   title: string | JSX.Element
   text: string | JSX.Element
   caption?: string

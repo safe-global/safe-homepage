@@ -41,7 +41,7 @@ const TextGrid = ({ image, textBlock, grid, gist }: TextGridProps) => {
         <Grid container className={`${image ? css.wrapper : ''}`} justifyContent="space-between">
           <Grid
             item
-            md={!image ? 8 : 5}
+            md={!image ? 8 : 6}
             display="flex"
             flexDirection="column"
             justifyContent="center"
