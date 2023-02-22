@@ -24,6 +24,12 @@ const clientSideEmotionCache = createEmotionCache()
 // Extended theme for CssVarsProvider
 const cssVarsTheme = extendMuiTheme(theme)
 
+const InitHooks = () => {
+  useGa()
+
+  return null
+}
+
 const App = ({
   Component,
   pageProps,
@@ -31,13 +37,14 @@ const App = ({
 }: AppProps & {
   emotionCache?: EmotionCache
 }): ReactElement => {
-  useGa()
-
   return (
     <CacheProvider value={emotionCache}>
       <CssVarsProvider theme={cssVarsTheme}>
         <CssBaseline />
+
         <CookieBannerContextProvider>
+          <InitHooks />
+
           <PageLayout>
             <Component {...pageProps} />
           </PageLayout>
