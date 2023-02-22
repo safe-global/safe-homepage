@@ -1,5 +1,3 @@
-export const IS_BROWSER = typeof document !== 'undefined'
-
 // Links
 export const WALLET_LINK = 'https://app.safe.global'
 export const CORE_LINK = 'https://core.safe.global'
