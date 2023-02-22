@@ -9,17 +9,26 @@ import type { AppProps } from 'next/app'
 import type { ReactElement } from 'react'
 
 import { createEmotionCache } from '@/styles/emotion'
+import { CookieBannerContextProvider } from '@/components/common/CookieBanner/CookieBannerContext'
+import { CookieBanner } from '@/components/common/CookieBanner'
 
 import { theme } from '@/styles/theme'
 
 import '@/styles/globals.css'
 import PageLayout from '@/components/common/PageLayout'
+import { useGa } from '@/hooks/useGa'
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache()
 
 // Extended theme for CssVarsProvider
 const cssVarsTheme = extendMuiTheme(theme)
+
+const InitHooks = () => {
+  useGa()
+
+  return null
+}
 
 const App = ({
   Component,
@@ -33,9 +42,15 @@ const App = ({
       <CssVarsProvider theme={cssVarsTheme}>
         <CssBaseline />
 
-        <PageLayout>
-          <Component {...pageProps} />
-        </PageLayout>
+        <CookieBannerContextProvider>
+          <InitHooks />
+
+          <PageLayout>
+            <Component {...pageProps} />
+          </PageLayout>
+
+          <CookieBanner />
+        </CookieBannerContextProvider>
       </CssVarsProvider>
     </CacheProvider>
   )
