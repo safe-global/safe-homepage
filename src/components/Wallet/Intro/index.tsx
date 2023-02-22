@@ -21,8 +21,15 @@ const Intro = ({ image, title, buttons }: BaseBlock): ReactElement => {
             <Grid item>
               <Grid container gap="10px" className={css.links}>
                 <Grid item>
-                  {buttons?.map(({ text, href }, index) => (
-                    <Button key={text} href={href} variant="contained" target="_blank" sx={{ height: 1 }}>
+                  {buttons?.map(({ text, href }) => (
+                    <Button
+                      key={text}
+                      href={href}
+                      variant="contained"
+                      target="_blank"
+                      rel="noreferrer"
+                      className={css.button}
+                    >
                       {text}
                     </Button>
                   ))}
