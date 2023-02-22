@@ -42,6 +42,20 @@
   border-bottom-right-radius: 12px;
 }
 
+.protocolKitLink {
+  position: absolute;
+  width: 19.7%;
+  height: 15%;
+  left: 27.4%;
+  top: 30%;
+  text-indent: -9999px;
+}
+
+.protocolKitLink:hover {
+  background: rgba(255,255,255,0.2);
+  mix-blend-mode: overlay;
+}
+
 @media (min-width: 600px) {
   .wrapper {
     flex-direction: row;

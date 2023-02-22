@@ -29,12 +29,9 @@ const AASdk = ({ title, caption, text, link }: BaseBlock) => {
             <source src="/videos/aa-sdk.mp4" type="video/mp4" />
           </video>
           <img src="/images/pixel.png" className={css.imageMap} useMap="#workmap" alt="" />
-          <map name="workmap">
-            <area shape="rect" coords="265,167,453,245" alt="Protocol Kit" href="/" />
-            <area shape="rect" coords="490,145,675,220" alt="Onboarding Kit" href="/" />
-            <area shape="rect" coords="260,322,453,394" alt="API Kit" href="/" />
-            <area shape="rect" coords="525,300,706,374" alt="Connection Kit" href="/" />
-          </map>
+          <a className={css.protocolKitLink} href="#">
+            Protocol Kit
+          </a>
         </div>
       </Grid>
     </Container>
