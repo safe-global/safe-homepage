@@ -105,5 +105,14 @@
       ]
     },
     "component": "Core/TextGrid"
+  },
+  {
+    "title": "Hacking on<br /><span title='Safe {CORE}'>Safe {CORE}</span> ?",
+    "caption": "Hackathon",
+    "link": {
+      "title": "Use our Hackathon Guide",
+      "href": "#"
+    },
+    "component": "Core/BannerCta"
   }
 ]
