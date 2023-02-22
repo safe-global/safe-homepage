@@ -3,27 +3,10 @@ import { Button, Container, Divider, Grid, Typography } from '@mui/material'
 import { IOS_LINK, GPLAY_LINK } from '@/config/constants'
 import IOSDownload from '@/public/images/ios-download.svg'
 import GPlayDownload from '@/public/images/google-play-download.svg'
-
+import type { BaseBlock } from '@/components/Home/types'
 import css from './styles.module.css'
 
-export type HeroSectionProps = {
-  image: {
-    src: string
-    alt: string
-  }
-  textBlock: {
-    title: string
-    button: {
-      text: string
-      href: string
-    }
-  }
-}
-
-const HeroSection = ({ image, textBlock }: HeroSectionProps): ReactElement => {
-  const { title, button } = textBlock
-  const { text: buttonText, href } = button
-
+const Intro = ({ image, title, buttons }: BaseBlock): ReactElement => {
   return (
     <Container>
       <Grid container className={css.container} spacing={{ xs: 6, md: '30px' }} justifyContent="space-between">
@@ -38,9 +21,11 @@ const HeroSection = ({ image, textBlock }: HeroSectionProps): ReactElement => {
             <Grid item>
               <Grid container gap="10px" className={css.links}>
                 <Grid item>
-                  <Button key={buttonText} href={href} variant="contained" target="_blank" sx={{ height: 1 }}>
-                    {buttonText}
-                  </Button>
+                  {buttons?.map(({ text, href }, index) => (
+                    <Button key={text} href={href} variant="contained" target="_blank" sx={{ height: 1 }}>
+                      {text}
+                    </Button>
+                  ))}
                 </Grid>
                 <Grid item>
                   <a href={IOS_LINK} target="_blank" rel="noreferrer" aria-label="AppStore download">
@@ -62,4 +47,4 @@ const HeroSection = ({ image, textBlock }: HeroSectionProps): ReactElement => {
   )
 }
 
-export default HeroSection
+export default Intro
