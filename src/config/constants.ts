@@ -14,5 +14,4 @@ export const CHAT_LINK = 'https://chat.safe.global'
 export const GUARDIANS_LINK = 'https://forum.safe.global/t/guardians-gather/265'
 export const IOS_LINK = 'https://apps.apple.com/app/id1515759131'
 export const GPLAY_LINK = 'https://play.google.com/store/apps/details?id=io.gnosis.safe'
-export const DESKTOP_APP_LINK =
-  'https://github.com/safe-global/safe-react/releases/download/v3.33.2%2Bdesktop/Safe-3.33.2.dmg'
+export const BRAND_KIT = 'https://press.safe.global'

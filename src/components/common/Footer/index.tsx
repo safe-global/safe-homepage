@@ -9,7 +9,16 @@ import GithubIcon from '@/public/images/github-icon.svg'
 
 import css from './styles.module.css'
 import Link from 'next/link'
-import { DOCS_LINK, HELP_LINK, PRESS_LINK, CORE_LINK, FORUM_LINK, CHAT_LINK, GUARDIANS_LINK } from '@/config/constants'
+import {
+  DOCS_LINK,
+  HELP_LINK,
+  PRESS_LINK,
+  CORE_LINK,
+  FORUM_LINK,
+  CHAT_LINK,
+  GUARDIANS_LINK,
+  BRAND_KIT,
+} from '@/config/constants'
 import { useCookieBannerContext } from '../CookieBanner/CookieBannerContext'
 import Logo from '@/public/images/logo.svg'
 
@@ -64,7 +73,7 @@ const resourcesItems = [
   },
   {
     label: 'Brand Kit',
-    href: '#',
+    href: BRAND_KIT,
     target: '_blank',
     rel: 'noreferrer',
   },
