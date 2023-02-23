@@ -1,6 +1,6 @@
 [
   {
-    "title": "<span title='Safe {CORE}'>Safe {CORE}</span> is Account Abstraction",
+    "title": "Safe <u>CORE</u> is Account Abstraction",
     "text": "Full stack. Ready. Battle Tested. Open Source.",
     "image": {
       "src": "/images/anim1-placeholder.png",
@@ -16,7 +16,7 @@
     "title": "The most complete and secure account abstraction stack",
     "items": [
       {
-        "title": "<span title='Safe {CORE}'>Safe {CORE}</span> AA SDK",
+        "title": "Safe <u>CORE</u> AA SDK",
         "text": "Easily level up your application and empower your users with the most advanced account abstraction SDK. Cutting-edge functionality and the best UX.",
         "link": {
           "title": "",
@@ -24,7 +24,7 @@
         }
       },
       {
-        "title": "<span title='Safe {CORE}'>Safe {CORE}</span> API",
+        "title": "Safe <u>CORE</u> API",
         "text": "Easily level up your application and empower your users with the most advanced account abstraction SDK. Cutting-edge functionality and the best UX.",
         "link": {
           "title": "",
@@ -32,7 +32,7 @@
         }
       },
       {
-        "title": "<span title='Safe {CORE}'>Safe {CORE}</span> PROTOCOL",
+        "title": "Safe <u>CORE</u> PROTOCOL",
         "text": "Discover and contribute to a growing ecosystem of technological breakthroughs based on Safe with the Safe{Core} Protocol.",
         "link": {
           "title": "",
@@ -97,7 +97,7 @@
   {
     "textBlock": {
       "caption": "Safe core protocol",
-      "title": "Build any use case with the battle-tested security of <span title='Safe {CORE}'>Safe {CORE}</span> Protocol",
+      "title": "Build any use case with the battle-tested security of Safe <u>CORE</u> Protocol",
       "text": "Tap into the ecosystem’s cutting-edge plug-ins or write your own custom logic to plug into the Safe core contracts.",
       "link": {
         "text": "Get started",
