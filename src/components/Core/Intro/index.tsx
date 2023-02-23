@@ -6,8 +6,8 @@ const CoreIntro = ({ title, text, image, link }: BaseBlock) => {
   return (
     <Container>
       <Grid container className={css.container} spacing={{ xs: 6, md: '30px' }} justifyContent="space-between">
-        <Grid item md={6}>
-          <img {...image} />
+        <Grid item md={6} display="flex" justifyContent="center">
+          <img className={css.coreImage} {...image} />
         </Grid>
         <Grid item md={6}>
           <Typography className={css.title} variant="h1" mb={4}>
