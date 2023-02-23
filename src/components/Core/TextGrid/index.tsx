@@ -1,36 +1,20 @@
 import { Chip, Container, Grid, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import LinkButton from '@/components/common/LinkButton'
-import css from './styles.module.css'
 import ItemGrid from '@/components/common/ItemGrid'
+import type { BaseBlock } from '@/components/Home/types'
+import css from './styles.module.css'
 
-export type TextGridProps = {
-  image?: {
-    src: string
-    alt: string
-  }
-  textBlock: {
-    caption: string
-    title: JSX.Element
-    text: string
-    link: {
-      text: string
-      href: string
-    }
-  }
-  grid: {
-    title: string
-    items: {
-      title: string
-      text: string
-    }[]
-  }
-}
-
-const TextGrid = ({ image, textBlock, grid }: TextGridProps) => {
-  const { caption, title, text, link } = textBlock
-  const { title: gridTitle, items } = grid
-
+const TextGrid = ({
+  image,
+  caption,
+  title,
+  text,
+  link,
+  grid,
+}: BaseBlock & {
+  grid: BaseBlock
+}) => {
   return (
     <Container>
       <Grid container className={layoutCss.containerShort}>
@@ -54,9 +38,7 @@ const TextGrid = ({ image, textBlock, grid }: TextGridProps) => {
             />
             <Typography variant="h2">{title}</Typography>
             {text && <Typography>{text}</Typography>}
-            <LinkButton href={link.href} sx={{ width: 'fit-content' }}>
-              {link.text}
-            </LinkButton>
+            {link && <LinkButton href={link.href}>{link.title}</LinkButton>}
           </Grid>
           {image ? (
             <Grid item md={6} mt="54px">
@@ -64,7 +46,7 @@ const TextGrid = ({ image, textBlock, grid }: TextGridProps) => {
             </Grid>
           ) : null}
         </Grid>
-        <ItemGrid title={gridTitle} text="" items={items} />
+        <ItemGrid {...grid} />
       </Grid>
     </Container>
   )
