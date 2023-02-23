@@ -5,8 +5,9 @@ import IOSDownload from '@/public/images/ios-download.svg'
 import GPlayDownload from '@/public/images/google-play-download.svg'
 import type { BaseBlock } from '@/components/Home/types'
 import css from './styles.module.css'
+import HeaderParticles from '@/public/images/header_particles.svg'
 
-const Intro = ({ image, title, buttons, gif }: BaseBlock & { gif: BaseBlock['image'] }): ReactElement => {
+const Intro = ({ image, title, buttons }: BaseBlock & { gif: BaseBlock['image'] }): ReactElement => {
   return (
     <Container>
       <Grid
@@ -18,7 +19,9 @@ const Intro = ({ image, title, buttons, gif }: BaseBlock & { gif: BaseBlock['ima
         mb={1}
       >
         <Grid item md={6} className={css.imagesWrapper}>
-          <img {...gif} className={css.gif} />
+          <div className={css.particleWrapper}>
+            <HeaderParticles className={css.bg} />
+          </div>
           <img {...image} className={css.image} />
         </Grid>
         <Grid item md={6}>
