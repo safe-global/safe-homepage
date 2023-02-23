@@ -203,7 +203,7 @@
     "component": "Core/TextGrid"
   },
   {
-    "title": "Hacking on<br /><span title='Safe {CORE}'>Safe {CORE}</span> ?",
+    "title": "Hacking on<br />Safe <u>CORE</u> ?",
     "caption": "Hackathon",
     "buttons": [
       {

@@ -36,7 +36,8 @@ const Card = ({ header, title, link, highlight, extra }: CardProps): ReactElemen
           {title}
         </Typography>
 
-        <LinkButton underline={false} className={css.link} fullSize href={link.href}>
+        {/* @ts-ignore */}
+        <LinkButton underline={false} className={css.link} fullSize href={link.href} target="_blank" rel="noreferrer">
           {link.title}
         </LinkButton>
 
