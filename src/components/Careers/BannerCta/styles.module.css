@@ -20,10 +20,6 @@
   margin-bottom: 16px;
 }
 
-.button {
-  color: var(--mui-palette-secondary-main);
-}
-
 @media (min-width: 600px) {
   .container {
     padding: 104px;

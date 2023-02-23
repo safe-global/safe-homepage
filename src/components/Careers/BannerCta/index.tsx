@@ -30,8 +30,7 @@ export const BannerCta = ({ title, text, link }: BaseBlock): ReactElement => {
                   size="large"
                   rel="noopener noreferrer"
                   href={link.href}
-                  className={css.button}
-                  color="background"
+                  color="secondary"
                 >
                   {link.title}
                 </Button>

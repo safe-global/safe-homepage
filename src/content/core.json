@@ -109,10 +109,18 @@
   {
     "title": "Hacking on<br /><span title='Safe {CORE}'>Safe {CORE}</span> ?",
     "caption": "Hackathon",
-    "link": {
-      "title": "Use our Hackathon Guide",
-      "href": "#"
-    },
+    "buttons": [
+      {
+        "text": "Use our Hackathon Guide",
+        "href": "#",
+        "variant": "button"
+      },
+      {
+        "text": "March for AA Hackathon",
+        "href": "#",
+        "variant": "link"
+      }
+    ],
     "component": "Core/BannerCta"
   }
 ]
