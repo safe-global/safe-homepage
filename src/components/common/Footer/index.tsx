@@ -1,4 +1,5 @@
 import { ButtonBase, Container, Divider, Grid, TextField, Typography } from '@mui/material'
+import type { SyntheticEvent } from 'react'
 
 import { AppRoutes } from '@/config/routes'
 import DiscordIcon from '@/public/images/discord-icon.svg'
@@ -7,6 +8,9 @@ import TwitterIcon from '@/public/images/twitter-icon.svg'
 import css from './styles.module.css'
 import Link from 'next/link'
 import { DOCS_LINK, HELP_LINK, PRESS_LINK, CORE_LINK, FORUM_LINK, CHAT_LINK, GUARDIANS_LINK } from '@/config/constants'
+import { useCookieBannerContext } from '../CookieBanner/CookieBannerContext'
+
+const COOKIE_PREFERENCES = '#cookies'
 
 const safeProtocolItems = [
   {
@@ -92,11 +96,19 @@ const subFooterItems = [
   },
   {
     label: 'Preferences',
-    href: AppRoutes.index,
+    href: COOKIE_PREFERENCES,
   },
 ]
 
 const Footer = () => {
+  const { openBanner } = useCookieBannerContext()
+
+  const showBanner = (e: SyntheticEvent) => {
+    // Prevent opening the hash link
+    e.preventDefault()
+    openBanner()
+  }
+
   return (
     <Container>
       <Grid container flexDirection={{ xs: 'column', md: 'row' }}>
@@ -114,6 +126,7 @@ const Footer = () => {
             ))}
           </ul>
         </Grid>
+
         <Grid item md={2}>
           <Typography variant="caption" color="text.primary">
             Community
@@ -128,6 +141,7 @@ const Footer = () => {
             ))}
           </ul>
         </Grid>
+
         <Grid item md={2}>
           <Typography variant="caption" color="text.primary">
             Resources
@@ -142,6 +156,7 @@ const Footer = () => {
             ))}
           </ul>
         </Grid>
+
         <Grid item md={4} ml={{ xs: 0, md: 'auto' }}>
           <Typography variant="caption" component="div" color="text.primary" mb={2}>
             Subscribe to our newsletter
@@ -157,19 +172,31 @@ const Footer = () => {
           </div>
         </Grid>
       </Grid>
+
       <Divider sx={{ mt: '26px' }} />
+
       <Grid container alignItems="center" justifyContent="space-between" mb={2}>
         <Grid item>
           <ul className={css.subList}>
-            {subFooterItems.map((item) => (
-              <li className={css.subListItem} key={item.href}>
-                <Link href={item.href} target={item.target} rel={item.rel}>
-                  {item.label}
-                </Link>
-              </li>
-            ))}
+            {subFooterItems.map((item) => {
+              const isCookiePreference = item.href === COOKIE_PREFERENCES
+
+              return (
+                <li className={css.subListItem} key={item.href}>
+                  <Link
+                    href={item.href}
+                    target={item.target}
+                    rel={item.rel}
+                    onClick={isCookiePreference ? showBanner : undefined}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              )
+            })}
           </ul>
         </Grid>
+
         <Grid item my={2}>
           <Typography color="primary.light" fontSize="16px">
             ©2023 Safe Ecosystem Foundation

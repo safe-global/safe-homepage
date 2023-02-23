@@ -1,11 +1,16 @@
 .container {
-  padding: 24px 32px;
   position: fixed;
   z-index: 1300;
   bottom: 0;
   left: 0;
   width: 100%;
   border-radius: 0 !important;
+}
+
+.content {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px 32px;
 }
 
 .grid {
@@ -16,12 +21,16 @@
 }
 
 .container form {
-  margin-top: 16px;
+  margin-top: 24px;
 }
 
 .container label,
 .container input {
   user-select: none;
+}
+
+.container button {
+  min-width: 180px;
 }
 
 @media (max-width: 600px) {
