@@ -3,6 +3,7 @@ import { Chip, Container, Grid, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import css from '@/components/Core/TextGrid/styles.module.css'
 import LinkButton from '@/components/common/LinkButton'
+import clsx from 'clsx'
 
 const AASdk = ({ title, caption, text, link }: BaseBlock) => {
   return (
@@ -26,10 +27,19 @@ const AASdk = ({ title, caption, text, link }: BaseBlock) => {
         </Grid>
         <div className={css.videoWrapper}>
           <video autoPlay muted loop className={css.video}>
-            <source src="/videos/aa-sdk.mp4" type="video/mp4" />
+            <source src="/videos/aa-sdk.webm" type="video/webm" />
           </video>
-          <img src="/images/pixel.png" className={css.imageMap} useMap="#workmap" alt="" />
-          <a className={css.protocolKitLink} href="#">
+          <img src="/images/pixel.png" className={css.imageMap} alt="" />
+          <a className={clsx(css.videoLink, css.authKitLink)} href="#">
+            Auth Kit
+          </a>
+          <a className={clsx(css.videoLink, css.onRampKitLink)} href="#">
+            Onramp Kit
+          </a>
+          <a className={clsx(css.videoLink, css.relayKitLink)} href="#">
+            Relay Kit
+          </a>
+          <a className={clsx(css.videoLink, css.protocolKitLink)} href="#">
             Protocol Kit
           </a>
         </div>

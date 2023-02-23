@@ -42,17 +42,55 @@
   border-bottom-right-radius: 12px;
 }
 
-.protocolKitLink {
+.videoLink {
   position: absolute;
-  width: 19.7%;
-  height: 15%;
-  left: 27.4%;
-  top: 30%;
   text-indent: -9999px;
+  border-radius: 12px;
 }
 
-.protocolKitLink:hover {
-  background: rgba(255,255,255,0.2);
+.authKitLink {
+  position: absolute;
+  width: 22.7%;
+  height: 17.3%;
+  left: 21.8%;
+  top: 23%;
+  text-indent: -9999px;
+  border-radius: 12px;
+  clip-path: polygon(-50% -50%, 150% -50%, 150% 0%, 70% 37%, 66% 150%, -50% 150%);
+}
+
+.onRampKitLink {
+  position: absolute;
+  width: 23.7%;
+  height: 17.1%;
+  left: 54.3%;
+  top: 18.9%;
+  text-indent: -9999px;
+  border-radius: 8px;
+}
+
+.relayKitLink {
+  position: absolute;
+  width: 23.6%;
+  height: 17.1%;
+  left: 55.3%;
+  top: 59.1%;
+  text-indent: -9999px;
+  border-radius: 8px;
+}
+
+.protocolKitLink {
+  position: absolute;
+  width: 25.7%;
+  height: 17.1%;
+  left: 19.9%;
+  top: 62.8%;
+  text-indent: -9999px;
+  border-radius: 8px;
+}
+
+.videoLink:hover {
+  box-shadow: 0 0 25px white;
   mix-blend-mode: overlay;
 }
 
