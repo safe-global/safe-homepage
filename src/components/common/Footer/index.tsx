@@ -243,7 +243,7 @@ const Footer = () => {
 
         <Grid item my={2}>
           <Typography color="primary.light" fontSize="16px">
-            ©2023 Safe Ecosystem Foundation
+            ©{new Date().getFullYear()} Safe Ecosystem Foundation
           </Typography>
         </Grid>
       </Grid>
