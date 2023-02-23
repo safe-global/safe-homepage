@@ -18,7 +18,10 @@ const TextRadialAnimation = ({ title, text, link }: BaseBlock) => {
             {title}
           </Typography>
           <Typography mb={{ xs: 3, md: 5 }}>{text}</Typography>
-          <LinkButton href={link?.href}>{link?.title}</LinkButton>
+          {/* @ts-ignore */}
+          <LinkButton href={link?.href} target="_blank" rel="noreferrer">
+            {link?.title}
+          </LinkButton>
         </Grid>
         <Grid item md={1} display={{ xs: 'none', md: 'block' }} />
         <Grid item md={6}>

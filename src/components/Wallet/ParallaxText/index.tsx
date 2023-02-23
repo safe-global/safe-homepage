@@ -44,9 +44,12 @@ const ParallaxText = ({ textBlock, variant, children }: ParallaxTextProps & { ch
                   )
                 }
                 return (
-                  <LinkButton key={index} href={href}>
-                    {text}
-                  </LinkButton>
+                  <>
+                    {/* @ts-ignore */}
+                    <LinkButton key={index} href={href} target="_blank" rel="noreferrer">
+                      {text}
+                    </LinkButton>
+                  </>
                 )
               })}
             </Box>
