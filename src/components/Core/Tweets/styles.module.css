@@ -1,8 +1,8 @@
 .gradient {
-  background: url('/images/Core/tweets/bg_particles.png') no-repeat;
-  background-size: cover;
-  background-position: center -75px;
-  padding-top: 24px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative;
+  overflow: hidden;
 }
 
 .tweetsGrid {
@@ -21,12 +21,24 @@
   width: 300px;
 }
 
+.bg {
+  position: absolute;
+  width: auto;
+  height: 560px;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: url('#gooey');
+  z-index: -1;
+}
+
 @media (min-width: 900px) {
+  .bg {
+    height: 620px;
+  }
+
   .gradient {
-    background-size: contain;
-    background-position: center -90px;
-    height: 804px;
-    position: relative;
+    height: 650px;
     overflow: hidden;
   }
 

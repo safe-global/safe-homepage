@@ -4,14 +4,14 @@
       "src": "/images/Wallet/clients.png",
       "alt": "Web and mobile clients"
     },
-    "textBlock": {
-      "title": "The most secure way to own assets",
-      "button": {
+    "title": "The most secure way to own assets",
+    "buttons": [
+      {
         "text": "Launch wallet",
         "href": "https://app.safe.global"
       }
-    },
-    "component": "Wallet/Hero"
+    ],
+    "component": "Wallet/Intro"
   },
   {
     "variant": "3-columns",
@@ -55,17 +55,15 @@
   },
   {
     "variant": "image-text",
-    "textBlock": {
-      "title": "<b>Control and change account</b> ownership",
-      "text": "Add new signers, remove signers and replace ownership by simply changing the private key(s) that control the account.",
-      "buttons": [
-        {
-          "text": "Get started",
-          "href": "#",
-          "variant": "link"
-        }
-      ]
-    },
+    "title": "<b>Control and change account</b> ownership",
+    "text": "Add new signers, remove signers and replace ownership by simply changing the private key(s) that control the account.",
+    "buttons": [
+      {
+        "text": "Get started",
+        "href": "#",
+        "variant": "link"
+      }
+    ],
     "component": "Wallet/OwnershipParallax"
   },
   {
@@ -74,17 +72,15 @@
       "src": "/images/Wallet/safe-apps-store.png",
       "alt": "Transactions require confirmations from owners"
     },
-    "textBlock": {
-      "title": "Built-in app store",
-      "text": "Use the best dapps in web3 right from inside your Safe WALLET.",
-      "buttons": [
-        {
-          "text": "Get started",
-          "href": "#",
-          "variant": "link"
-        }
-      ]
-    },
+    "title": "Built-in app store",
+    "text": "Use the best dapps in web3 right from inside your Safe WALLET.",
+    "buttons": [
+      {
+        "text": "Get started",
+        "href": "#",
+        "variant": "link"
+      }
+    ],
     "component": "Wallet/ParallaxAppStore"
   },
   {
@@ -93,17 +89,15 @@
       "src": "/images/Wallet/batch-transactions.png",
       "alt": "Batching transactions"
     },
-    "textBlock": {
-      "title": "Save on gas by batching <b>multiple transactions</b> in a few clicks",
-      "text": "Easily batch transactions you want to make together to save on gas.",
-      "buttons": [
-        {
-          "text": "Get started",
-          "href": "#",
-          "variant": "link"
-        }
-      ]
-    },
+    "title": "Save on gas by batching <b>multiple transactions</b> in a few clicks",
+    "text": "Easily batch transactions you want to make together to save on gas.",
+    "buttons": [
+      {
+        "text": "Get started",
+        "href": "#",
+        "variant": "link"
+      }
+    ],
     "component": "Wallet/ParallaxBatching"
   },
   {
@@ -112,17 +106,15 @@
       "src": "/images/Wallet/signer-types.png",
       "alt": "Different wallet types"
     },
-    "textBlock": {
-      "title": "Use <b>any type of signer</b> to control your account",
-      "text": "From hardware wallets like ledger, tresor, to metamask type externally owned accounts, use all of these as signers on your Safe WALLET.",
-      "buttons": [
-        {
-          "text": "Get started",
-          "href": "#",
-          "variant": "link"
-        }
-      ]
-    },
+    "title": "Use <b>any type of signer</b> to control your account",
+    "text": "From hardware wallets like ledger, tresor, to metamask type externally owned accounts, use all of these as signers on your Safe WALLET.",
+    "buttons": [
+      {
+        "text": "Get started",
+        "href": "#",
+        "variant": "link"
+      }
+    ],
     "component": "Wallet/ParallaxSignerWallets"
   },
   {
@@ -131,17 +123,15 @@
       "src": "/images/Wallet/simulate-transactions.png",
       "alt": "Simulate transactions in Tenderly"
     },
-    "textBlock": {
-      "title": "<b>Simulate transactions</b> before they happen",
-      "text": "Simulate your transactions before sending them through, right from the Safe’s UI. Get instant prompts and full analysis of your transaction’s success or failure with a simulation report on Tenderly.",
-      "buttons": [
-        {
-          "text": "Get started",
-          "href": "#",
-          "variant": "link"
-        }
-      ]
-    },
+    "title": "<b>Simulate transactions</b> before they happen",
+    "text": "Simulate your transactions before sending them through, right from the Safe’s UI. Get instant prompts and full analysis of your transaction’s success or failure with a simulation report on Tenderly.",
+    "buttons": [
+      {
+        "text": "Get started",
+        "href": "#",
+        "variant": "link"
+      }
+    ],
     "component": "Wallet/ParallaxTxSimulation"
   },
   {
@@ -269,24 +259,22 @@
       "src": "/images/Wallet/pocket-multisig.png",
       "alt": "Safe mobile app"
     },
-    "textBlock": {
-      "title": "Convenience of multisig in your pocket",
-      "text": "Track your assets and transactions on mobile. Stay informed on-the-go.",
-      "steps": [
-        {
-          "label": "Create a new signer account",
-          "state": "completed"
-        },
-        {
-          "label": "Allow push notifications",
-          "description": "Track your assets and transactions on mobile. Stay informed on-the-go.",
-          "state": "active"
-        },
-        {
-          "label": "Hardware wallet support"
-        }
-      ]
-    },
+    "title": "Convenience of multisig in your pocket",
+    "text": "Track your assets and transactions on mobile. Stay informed on-the-go.",
+    "steps": [
+      {
+        "label": "Create a new signer account",
+        "state": "completed"
+      },
+      {
+        "label": "Allow push notifications",
+        "description": "Track your assets and transactions on mobile. Stay informed on-the-go.",
+        "state": "active"
+      },
+      {
+        "label": "Hardware wallet support"
+      }
+    ],
     "component": "Wallet/MobileAppParallax"
   },
   {

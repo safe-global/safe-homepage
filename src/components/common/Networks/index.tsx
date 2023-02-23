@@ -1,6 +1,6 @@
 import type { NetworkChipProps } from '@/components/Wallet/NetworkChip'
 import NetworkChip from '@/components/Wallet/NetworkChip'
-import { Box, Container, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import clsx from 'clsx'
 import css from './styles.module.css'
 import layoutCss from '@/components/common/styles.module.css'
@@ -45,7 +45,7 @@ const Networks = ({ title, text, networks }: NetworksProps) => {
   const chainsData = useContext(ChainsContext)
 
   return (
-    <Container className={layoutCss.container}>
+    <div className={layoutCss.container}>
       <Typography variant="h2" mb={5} align="center">
         {title}
       </Typography>
@@ -62,7 +62,7 @@ const Networks = ({ title, text, networks }: NetworksProps) => {
       <Typography className={css.secondaryText} variant="body1">
         {text}
       </Typography>
-    </Container>
+    </div>
   )
 }
 

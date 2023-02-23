@@ -5,8 +5,8 @@
   gap: 16px;
   overflow: hidden;
 
-  --topRowWidth: 1208px;
-  --bottomRowWidth: 1310px;
+  --topRowWidth: 1483px;
+  --bottomRowWidth: 1448px;
 }
 
 .gradientBase {
@@ -29,7 +29,7 @@
 .secondaryText {
   margin-top: 32px;
   text-align: center;
-  color: var(--mui-palette-primary-light)
+  color: var(--mui-palette-primary-light);
 }
 
 .slider {
