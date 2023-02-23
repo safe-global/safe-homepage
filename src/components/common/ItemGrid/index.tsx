@@ -14,15 +14,13 @@ const ItemGrid = ({ title, items }: BaseBlock) => {
           {items
             ? items.map(({ title, text, link }, index) => (
                 <Grid key={index} item xs={12} md={12 / items.length} className={css.card}>
-                  <Typography variant="h4" color="text.primary" mb={1}>
-                    {title}
-                  </Typography>
-                  <Typography color="primary.light">{text}</Typography>
-                  {link && (
-                    <LinkButton href={link.href} sx={{ mt: '32px' }}>
-                      {link.title}
-                    </LinkButton>
-                  )}
+                  <div>
+                    <Typography variant="h4" color="text.primary" mb={1}>
+                      {title}
+                    </Typography>
+                    <Typography color="primary.light">{text}</Typography>
+                  </div>
+                  {link && <LinkButton href={link.href}>{link.title}</LinkButton>}
                 </Grid>
               ))
             : null}

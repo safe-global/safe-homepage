@@ -7,6 +7,10 @@
 .card {
   border: 1px solid var(--mui-palette-border-light);
   padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .card:first-of-type {
