@@ -8,12 +8,6 @@
   margin-bottom: 80px;
 }
 
-.body1SafeType {
-  width: 90px;
-  height: auto;
-  margin-bottom: -2px;
-}
-
 @media (min-width: 600px) {
   .container {
     margin-top: 350px;

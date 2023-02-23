@@ -4,29 +4,9 @@ import { Container, Grid, Typography } from '@mui/material'
 import LinkButton from '@/components/common/LinkButton'
 import css from './styles.module.css'
 import ArrowIcon from '@/public/images/arrow-out-icon.svg'
+import type { BaseBlock } from '@/components/Home/types'
 
-type BigCardProps = {
-  caption: string
-  title: string
-  link: {
-    title: string
-    href: string
-  }
-  titleIcon: {
-    src: string
-    alt: string
-  }
-  icon: {
-    src: string
-    alt: string
-  }
-}
-
-type BigCardGridProps = {
-  items: BigCardProps[]
-}
-
-const BigIconsCardGrid = ({ items }: BigCardGridProps): ReactElement => {
+const BigIconsCardGrid = ({ items }: BaseBlock): ReactElement => {
   return (
     <div className={css.bg}>
       <Container disableGutters>
@@ -38,10 +18,8 @@ const BigIconsCardGrid = ({ items }: BigCardGridProps): ReactElement => {
                   <Typography variant="caption" mb={3}>
                     {item.caption}
                   </Typography>
-                  <img {...item.icon} />
-                  <div className={css.tag}>
-                    <img {...item.titleIcon} />
-                  </div>
+                  <img {...item.image} />
+                  <div className={css.tag}>{item.text}</div>
                   <Typography variant="h3" mb={5} mt={2}>
                     {item.title}
                   </Typography>

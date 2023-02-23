@@ -226,11 +226,12 @@
       {
         "caption": "Developers",
         "title": "Build on the <i>Safest</i> account abstraction stack",
+        "text": "Safe <u>CORE</u>",
         "titleIcon": {
           "src": "/images/safe-core-500.svg",
           "alt": "Safe Core green background"
         },
-        "icon": {
+        "image": {
           "src": "/images/code.svg",
           "alt": "Greater than sign, forward slash, less than sign"
         },
@@ -246,7 +247,8 @@
           "src": "/images/safe-wallet-500.svg",
           "alt": "Safe Wallet green background"
         },
-        "icon": {
+        "text": "Safe <u>WALLET</u>",
+        "image": {
           "src": "/images/lock.svg",
           "alt": "Padlock"
         },
@@ -259,7 +261,7 @@
     "component": "Home/BigIconsCardGrid"
   },
   {
-    "title": "<span title='Safe {CORE}'>Safe {CORE}</span> <b>powers ecosystem projects</b><br/>in every corner of web3",
+    "title": "Safe <u>CORE</u> <b>powers ecosystem projects</b><br/>in every corner of web3",
     "text": "130+ projects including DAO tools, DeFi, NFT collectives are building on Safe Core.",
     "component": "Home/BannerTextCard"
   },
