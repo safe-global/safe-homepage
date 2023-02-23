@@ -77,6 +77,20 @@
             "src": "/images/chainsLogos/GnosisChainLogo.png",
             "alt": "Gnosis Chain logo"
           }
+        },
+        {
+          "name": "Aurora",
+          "icon": {
+            "src": "/images/chainsLogos/AuroraLogo.png",
+            "alt": "Aurora logo"
+          }
+        },
+        {
+          "name": "Arbitrum",
+          "icon": {
+            "src": "/images/chainsLogos/ArbitrumLogo.png",
+            "alt": "Arbitrum logo"
+          }
         }
       ],
       [
@@ -137,6 +151,13 @@
           "icon": {
             "src": "/images/chainsLogos/AuroraLogo.png",
             "alt": "Aurora logo"
+          }
+        },
+        {
+          "name": "Arbitrum",
+          "icon": {
+            "src": "/images/chainsLogos/ArbitrumLogo.png",
+            "alt": "Arbitrum logo"
           }
         }
       ]
