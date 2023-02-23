@@ -1,0 +1,51 @@
+.wrapper {
+  margin-bottom: 80px;
+}
+
+.container {
+  text-align: center;
+  background-color: var(--mui-palette-border-light);
+  border-radius: 24px;
+  color: var(--mui-palette-text-dark);
+  padding: 24px 24px 300px;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  background-image: url("/images/robot.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+
+.text {
+  margin-bottom: 16px;
+}
+
+.button {
+  color: var(--mui-palette-secondary-main);
+}
+
+.chip {
+  border-color: var(--mui-palette-text-primary);
+  width: fit-content;
+}
+
+@media (min-width: 600px) {
+  .container {
+    padding: 104px;
+    border-bottom: 80px;
+    background-position: 150% bottom;
+    text-align: left;
+  }
+
+  .text {
+    margin-bottom: 28px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    margin-left: -104px;
+    margin-right: -104px;
+    background-position: right bottom;
+  }
+}
