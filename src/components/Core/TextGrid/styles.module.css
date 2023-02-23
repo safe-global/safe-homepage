@@ -56,7 +56,6 @@
   top: 23%;
   text-indent: -9999px;
   border-radius: 12px;
-  clip-path: polygon(-50% -50%, 150% -50%, 150% 0%, 70% 37%, 66% 150%, -50% 150%);
 }
 
 .onRampKitLink {
@@ -90,8 +89,9 @@
 }
 
 .videoLink:hover {
-  box-shadow: 0 0 25px white;
-  mix-blend-mode: overlay;
+  background-color: white;
+  filter: blur(20px);
+  mix-blend-mode: soft-light;
 }
 
 @media (min-width: 600px) {
