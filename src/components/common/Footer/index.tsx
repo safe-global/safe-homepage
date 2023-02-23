@@ -1,14 +1,17 @@
-import { ButtonBase, Container, Divider, Grid, TextField, Typography } from '@mui/material'
+import { ButtonBase, Container, Divider, Grid, Typography } from '@mui/material'
 import type { SyntheticEvent } from 'react'
 
 import { AppRoutes } from '@/config/routes'
 import DiscordIcon from '@/public/images/discord-icon.svg'
 import TwitterIcon from '@/public/images/twitter-icon.svg'
+import MirrorIcon from '@/public/images/mirror-icon.svg'
+import GithubIcon from '@/public/images/github-icon.svg'
 
 import css from './styles.module.css'
 import Link from 'next/link'
 import { DOCS_LINK, HELP_LINK, PRESS_LINK, CORE_LINK, FORUM_LINK, CHAT_LINK, GUARDIANS_LINK } from '@/config/constants'
 import { useCookieBannerContext } from '../CookieBanner/CookieBannerContext'
+import Logo from '@/public/images/logo.svg'
 
 const COOKIE_PREFERENCES = '#cookies'
 
@@ -111,10 +114,16 @@ const Footer = () => {
 
   return (
     <Container>
-      <Grid container flexDirection={{ xs: 'column', md: 'row' }}>
-        <Grid item md={2}>
+      <Grid container flexDirection={{ xs: 'column', sm: 'row' }}>
+        <Grid item xs={12} md={3} mb={{ xs: 4, md: 0 }}>
+          <Link href={AppRoutes.index}>
+            <Logo className={css.logo} />
+          </Link>
+        </Grid>
+
+        <Grid item sm={6} md={2}>
           <Typography variant="caption" color="text.primary">
-            Safe Protocol
+            Safe Core Protocol
           </Typography>
           <ul className={css.list}>
             {safeProtocolItems.map((item) => (
@@ -127,7 +136,7 @@ const Footer = () => {
           </ul>
         </Grid>
 
-        <Grid item md={2}>
+        <Grid item sm={6} md={2}>
           <Typography variant="caption" color="text.primary">
             Community
           </Typography>
@@ -142,7 +151,7 @@ const Footer = () => {
           </ul>
         </Grid>
 
-        <Grid item md={2}>
+        <Grid item sm={6} md={2}>
           <Typography variant="caption" color="text.primary">
             Resources
           </Typography>
@@ -157,25 +166,51 @@ const Footer = () => {
           </ul>
         </Grid>
 
-        <Grid item md={4} ml={{ xs: 0, md: 'auto' }}>
-          <Typography variant="caption" component="div" color="text.primary" mb={2}>
-            Subscribe to our newsletter
-          </Typography>
-          <TextField fullWidth placeholder="Your email address" />
+        <Grid item xs={12} md={3} mt={{ xs: 6, md: 0 }}>
           <div className={css.socials}>
-            <ButtonBase disableRipple aria-label="Discord">
+            <ButtonBase
+              disableRipple
+              aria-label="Twitter link"
+              href="https://twitter.com/safe"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <TwitterIcon />
+            </ButtonBase>
+            <ButtonBase
+              disableRipple
+              aria-label="Mirror link"
+              href="https://safe.mirror.xyz"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <MirrorIcon />
+            </ButtonBase>
+            <ButtonBase
+              disableRipple
+              aria-label="Discord link"
+              href="https://chat.safe.global"
+              target="_blank"
+              rel="noreferrer"
+            >
               <DiscordIcon />
             </ButtonBase>
-            <ButtonBase disableRipple aria-label="Twitter">
-              <TwitterIcon />
+            <ButtonBase
+              disableRipple
+              aria-label="Github link"
+              href="https://github.com/safe-global"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GithubIcon />
             </ButtonBase>
           </div>
         </Grid>
       </Grid>
 
-      <Divider sx={{ mt: '26px' }} />
+      <Divider sx={{ mt: 5, mb: { xs: 3, md: 0 } }} />
 
-      <Grid container alignItems="center" justifyContent="space-between" mb={2}>
+      <Grid container alignItems="center" justifyContent="space-between">
         <Grid item>
           <ul className={css.subList}>
             {subFooterItems.map((item) => {
