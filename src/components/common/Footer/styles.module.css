@@ -11,6 +11,11 @@
   color: var(--mui-palette-primary-light);
 }
 
+.listItem a,
+.subListItem a {
+  display: block;
+}
+
 .listItem:hover a,
 .subListItem:hover a {
   color: white;
@@ -31,9 +36,13 @@
 }
 
 .socials {
-  margin-top: 24px;
   display: flex;
-  gap: 8px;
+  gap: 24px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
 }
 
 @media (min-width: 600px) {
