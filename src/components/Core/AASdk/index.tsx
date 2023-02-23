@@ -7,7 +7,7 @@ import clsx from 'clsx'
 
 const AASdk = ({ title, caption, text, link }: BaseBlock) => {
   return (
-    <Container>
+    <Container className={css.wrapper}>
       <Grid container className={layoutCss.containerShort}>
         <Grid item md={8} display="flex" flexDirection="column" justifyContent="center" gap={{ xs: 3, md: 4 }} mb={5}>
           <Chip

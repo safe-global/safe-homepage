@@ -1,5 +1,5 @@
-.wrapper {
-  flex-direction: column-reverse;
+.wrapper > div {
+  margin-bottom: 80px;
 }
 
 .chip {
@@ -110,5 +110,12 @@
     border-bottom-left-radius: 0px;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .videoWrapper {
+    margin-left: -104px;
+    margin-right: -104px;
   }
 }

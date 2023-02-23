@@ -2,6 +2,7 @@ import { Chip, Container, Grid, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import LinkButton from '@/components/common/LinkButton'
 import css from './styles.module.css'
+import ItemGrid from '@/components/common/ItemGrid'
 
 export type TextGridProps = {
   image?: {
@@ -63,21 +64,7 @@ const TextGrid = ({ image, textBlock, grid }: TextGridProps) => {
             </Grid>
           ) : null}
         </Grid>
-        <Grid container mt={{ xs: 5, md: 10 }}>
-          <Typography variant="caption" component="div" mb={3}>
-            {gridTitle}
-          </Typography>
-          <Grid container>
-            {items.map(({ title, text }, index) => (
-              <Grid key={index} item xs={12} md={12 / items.length} className={css.card}>
-                <Typography variant="h4" color="text.primary" mb={1}>
-                  {title}
-                </Typography>
-                <Typography color="primary.light">{text}</Typography>
-              </Grid>
-            ))}
-          </Grid>
-        </Grid>
+        <ItemGrid title={gridTitle} text="" items={items} />
       </Grid>
     </Container>
   )
