@@ -1,17 +1,25 @@
-import { useRouter } from 'next/router'
+import Head from 'next/head'
 import type { NextPage } from 'next'
-
+import NextLink from 'next/link'
 import { AppRoutes } from '@/config/routes'
-import { useIsomorphicLayoutEffect } from '@/hooks/useIsomorphicLayoutEffect'
+import { Box, Link } from '@mui/material'
 
-const My404Page: NextPage = () => {
-  const router = useRouter()
+const My404Page: NextPage = () => (
+  <>
+    <Head>
+      <title>Safe – Page not found</title>
+    </Head>
 
-  useIsomorphicLayoutEffect(() => {
-    router.replace(AppRoutes.index)
-  }, [])
+    <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" height="55vh">
+      <h1>Page not found</h1>
 
-  return null
-}
+      <p>
+        <NextLink href={AppRoutes.index}>
+          <Link>Go home</Link>
+        </NextLink>
+      </p>
+    </Box>
+  </>
+)
 
 export default My404Page
