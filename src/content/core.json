@@ -43,6 +43,81 @@
     "component": "Core/LinkedCardGrid"
   },
   {
+    "caption": "Safe Core AA SDK",
+    "title": "Get started with Safe <u>CORE</u> Account Abstraction SDK",
+    "link": {
+      "title": "View documentation",
+      "href": "#"
+    },
+    "component": "Core/AASdk"
+  },
+  {
+    "title": "What's in there",
+    "items": [
+      {
+        "title": "Protocol Kit",
+        "text": "<ul><li>Modular and customizable smart contract accounts</li><li>Battle-tested security</li><li>Transaction Batching</li></ul>",
+        "link": {
+          "title": "Read more",
+          "href": "#"
+        }
+      },
+      {
+        "title": "Auth Kit",
+        "text": "<ul><li>Easy on-boarding using Web3Auth</li><li>Social and wallet logins</li><li>Get users started that do not have a wallet yet</li></ul>",
+        "link": {
+          "title": "Read more",
+          "href": "#"
+        }
+      },
+      {
+        "title": "Relay Kit",
+        "text": "<ul><li>Gas-less experiences using Gelato</li><li>Sponsored transaction</li><li>Pay fees in ERC-20 tokens</li></ul>",
+        "link": {
+          "title": "Read more",
+          "href": "#"
+        }
+      },
+      {
+        "title": "Onramp Kit",
+        "text": "<ul><li>Fiat on-ramping using Stripe</li><li>Pay using credit card</li></ul>",
+        "link": {
+          "title": "Read more",
+          "href": "#"
+        }
+      }
+    ],
+    "component": "common/ItemGrid"
+  },
+  {
+    "textBlock": {
+      "caption": "Safe Core API",
+      "title": "Immediate access to all account information to power your applications",
+      "link": {
+        "text": "Get started",
+        "href": "#"
+      }
+    },
+    "grid": {
+      "title": "Benefits",
+      "items": [
+        {
+          "title": "Decode the actions of the Safe"
+        },
+        {
+          "title": "Monitor all interactions with the Safe"
+        },
+        {
+          "title": "Use API with extensive information"
+        },
+        {
+          "title": "Support for the most important chains"
+        }
+      ]
+    },
+    "component": "Core/TextGrid"
+  },
+  {
     "caption": "Used by the best",
     "title": "What others are already building with Safe",
     "items": [
@@ -126,5 +201,22 @@
       ]
     },
     "component": "Core/TextGrid"
+  },
+  {
+    "title": "Hacking on<br /><span title='Safe {CORE}'>Safe {CORE}</span> ?",
+    "caption": "Hackathon",
+    "buttons": [
+      {
+        "text": "Use our Hackathon Guide",
+        "href": "#",
+        "variant": "button"
+      },
+      {
+        "text": "March for AA Hackathon",
+        "href": "#",
+        "variant": "link"
+      }
+    ],
+    "component": "Core/BannerCta"
   }
 ]

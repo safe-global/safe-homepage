@@ -3,17 +3,23 @@ import { Box, Button, Container, Grid, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 import LinkButton from '@/components/common/LinkButton'
-import type { TextBlock } from '@/components/Home/types'
+import type { BaseBlock } from '@/components/Home/types'
+import Stepper, { type StepsType } from '@/components/Wallet/Stepper'
 import clsx from 'clsx'
-import Stepper from '@/components/Wallet/Stepper'
 
-export type ParallaxTextProps = TextBlock & {
+export type ParallaxTextProps = BaseBlock & {
   variant: 'image-text' | 'text-image'
 }
 
-const ParallaxText = ({ textBlock, variant, children }: ParallaxTextProps & { children: ReactNode }) => {
-  const { title, text, buttons, steps, caption } = textBlock
-
+const ParallaxText = ({
+  title,
+  text,
+  buttons,
+  steps,
+  caption,
+  variant,
+  children,
+}: ParallaxTextProps & { children: ReactNode; steps?: StepsType }) => {
   return (
     <Container disableGutters>
       <Grid

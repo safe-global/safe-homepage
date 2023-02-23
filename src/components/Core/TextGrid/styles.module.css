@@ -9,36 +9,8 @@
   margin-top: 24px;
 }
 
-.card {
-  border: 1px solid var(--mui-palette-border-light);
-  padding: 24px;
-}
-
-.card:first-of-type {
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-}
-
-.card:last-of-type {
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-}
-
 @media (min-width: 600px) {
   .wrapper {
     flex-direction: row;
-  }
-
-  .card:first-of-type {
-    border-top-right-radius: 0px;
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
-    margin-right: -1px;
-  }
-
-  .card:last-of-type {
-    border-bottom-left-radius: 0px;
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
   }
 }

@@ -1,3 +1,7 @@
+.wrapper {
+  margin-bottom: 80px;
+}
+
 .container {
   /* TODO: Move gradient to var as used in multiple places */
   background-image: linear-gradient(45deg, rgba(15, 255, 128, 1) 0%, rgba(94, 221, 255, 1) 100%);
@@ -16,16 +20,9 @@
   margin-bottom: 16px;
 }
 
-.button {
-  color: var(--mui-palette-secondary-main);
-}
-
 @media (min-width: 600px) {
   .container {
     padding: 104px;
-    border-bottom: 80px;
-    margin-left: -104px;
-    margin-right: -104px;
   }
 
   .title {
@@ -34,5 +31,13 @@
 
   .text {
     margin-bottom: 28px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    margin-left: -104px;
+    margin-right: -104px;
+    background-position: right bottom;
   }
 }
