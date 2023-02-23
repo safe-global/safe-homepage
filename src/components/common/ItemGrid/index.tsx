@@ -1,5 +1,5 @@
 import { Container, Grid, Typography } from '@mui/material'
-import css from '@/components/Core/TextGrid/styles.module.css'
+import css from './styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
 import LinkButton from '@/components/common/LinkButton'
 

@@ -1,5 +1,5 @@
-.wrapper > div {
-  margin-bottom: 80px;
+.wrapper {
+  flex-direction: column-reverse;
 }
 
 .chip {
@@ -9,113 +9,8 @@
   margin-top: 24px;
 }
 
-.videoWrapper {
-  position: relative;
-}
-
-.video {
-  width: 100%;
-  border-radius: 16px;
-  border: 1px solid var(--mui-palette-primary-main);
-}
-
-.imageMap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.card {
-  border: 1px solid var(--mui-palette-border-light);
-  padding: 24px;
-}
-
-.card:first-of-type {
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-}
-
-.card:last-of-type {
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-}
-
-.videoLink {
-  position: absolute;
-  text-indent: -9999px;
-  border-radius: 12px;
-}
-
-.authKitLink {
-  position: absolute;
-  width: 22.7%;
-  height: 17.3%;
-  left: 21.8%;
-  top: 23%;
-  text-indent: -9999px;
-  border-radius: 12px;
-}
-
-.onRampKitLink {
-  position: absolute;
-  width: 23.7%;
-  height: 17.1%;
-  left: 54.3%;
-  top: 18.9%;
-  text-indent: -9999px;
-  border-radius: 8px;
-}
-
-.relayKitLink {
-  position: absolute;
-  width: 23.6%;
-  height: 17.1%;
-  left: 55.3%;
-  top: 59.1%;
-  text-indent: -9999px;
-  border-radius: 8px;
-}
-
-.protocolKitLink {
-  position: absolute;
-  width: 25.7%;
-  height: 17.1%;
-  left: 19.9%;
-  top: 62.8%;
-  text-indent: -9999px;
-  border-radius: 8px;
-}
-
-.videoLink:hover {
-  background-color: white;
-  filter: blur(20px);
-  mix-blend-mode: soft-light;
-}
-
 @media (min-width: 600px) {
   .wrapper {
     flex-direction: row;
-  }
-
-  .card:first-of-type {
-    border-top-right-radius: 0px;
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
-    margin-right: -1px;
-  }
-
-  .card:last-of-type {
-    border-bottom-left-radius: 0px;
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .videoWrapper {
-    margin-left: -104px;
-    margin-right: -104px;
   }
 }
