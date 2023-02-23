@@ -9,6 +9,11 @@
   letter-spacing: -0.01em;
 }
 
+.coreImage {
+  width: 450px;
+  height: auto;
+}
+
 @media(min-width: 600px) {
   .container {
     margin-top: 100px;
