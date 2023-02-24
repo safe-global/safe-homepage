@@ -1,5 +1,5 @@
 .textFirst,
-.imageFirst{
+.imageFirst {
   flex-direction: column-reverse;
 }
 

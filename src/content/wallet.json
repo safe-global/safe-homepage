@@ -23,15 +23,15 @@
           "alt": "Shield with a checkmark"
         },
         "title": "Battle Tested Security",
-        "text": "Top notch security and custom access control for you and for your users."
+        "text": "Top notch security of multiple private keys (multi-sig) and rigorously audited contracts"
       },
       {
         "image": {
           "src": "/images/Wallet/people.svg",
           "alt": "Group of owners"
         },
-        "title": "Co-ownership",
-        "text": "Multi-sig based trustless group ownership ownership and asset co-ordination."
+        "title": "Multi-signature Access",
+        "text": "Access controlled by many private keys enabling co-ownership and stronger security for individuals"
       },
       {
         "image": {
@@ -39,14 +39,14 @@
           "alt": "Ownership key"
         },
         "title": "Self-custody",
-        "text": "We never own any of the assets stored in user accounts. We never will."
+        "text": "We never own any of the assets stored in user accounts and never will"
       }
     ],
     "component": "common/UspBlock"
   },
   {
     "title": "<b>Co-manage</b> your assets",
-    "text": "With multiple private keys, the same account can be jointly managed by several users enabling co-ownership that powers DAOs, groups and enterprises.",
+    "text": "With multiple private keys, the same account can be jointly managed by many users enabling decentralised co-ownership for DAOs, groups and enterprises",
     "link": {
       "title": "Get started",
       "href": "https://app.safe.global"
@@ -55,8 +55,8 @@
   },
   {
     "variant": "image-text",
-    "title": "<b>Control and change account</b> ownership",
-    "text": "Add new signers, remove signers and replace ownership by simply changing the private key(s) that control the account.",
+    "title": "<b>Control and change</b> account ownership",
+    "text": "With adding new signers, removing old signers and replaceable account ownership, the same account is flexible for the any future needs and more secure ",
     "buttons": [
       {
         "text": "Get started",
@@ -72,8 +72,8 @@
       "src": "/images/Wallet/safe-apps-store.png",
       "alt": "Transactions require confirmations from owners"
     },
-    "title": "Built-in app store",
-    "text": "Use the best dapps in web3 right from inside your Safe WALLET.",
+    "title": "<b>Use</b> built-in app store",
+    "text": "The best web3 apps are accessible right from inside the Safe Wallet interface",
     "buttons": [
       {
         "text": "Get started",
@@ -90,7 +90,7 @@
       "alt": "Batching transactions"
     },
     "title": "Save on gas by batching <b>multiple transactions</b> in a few clicks",
-    "text": "Easily batch transactions you want to make together to save on gas.",
+    "text": "Easily batch transactions together to save on fees",
     "buttons": [
       {
         "text": "Get started",
@@ -107,7 +107,7 @@
       "alt": "Different wallet types"
     },
     "title": "Use <b>any type of signer</b> to control your account",
-    "text": "From hardware wallets like ledger, tresor, to metamask type externally owned accounts, use all of these as signers on your Safe WALLET.",
+    "text": "Use Ledger, Tresor, Metamask or any other popular wallet as a signer on your Safe Wallet",
     "buttons": [
       {
         "text": "Get started",
@@ -124,7 +124,7 @@
       "alt": "Simulate transactions in Tenderly"
     },
     "title": "<b>Simulate transactions</b> before they happen",
-    "text": "Simulate your transactions before sending them through, right from the Safe’s UI. Get instant prompts and full analysis of your transaction’s success or failure with a simulation report on Tenderly.",
+    "text": "Simulate transactions before sending them through. Get instant prompts and full analysis of your transaction's success or failure with a simulation report via Tenderly",
     "buttons": [
       {
         "text": "Get started",
@@ -135,8 +135,8 @@
     "component": "Wallet/ParallaxTxSimulation"
   },
   {
-    "title": "Available on 10+ networks",
-    "text": "And more networks, including testnets.",
+    "title": "Available on 12+ networks",
+    "text": "And more including testnets",
     "networks": [
       [
         {
@@ -259,8 +259,8 @@
       "src": "/images/Wallet/pocket-multisig.png",
       "alt": "Safe mobile app"
     },
-    "title": "Convenience of multisig in your pocket",
-    "text": "Track your assets and transactions on mobile. Stay informed on-the-go.",
+    "title": "Convenience of multi-sig in your pocket",
+    "text": "Track your assets and transactions on mobile. Stay informed and sign transactions on-the-go",
     "steps": [
       {
         "label": "Create a new signer account",
@@ -268,11 +268,11 @@
       },
       {
         "label": "Allow push notifications",
-        "description": "Track your assets and transactions on mobile. Stay informed on-the-go.",
+        "description": ["Track movement of your assets and transactions", "Get alerts"],
         "state": "active"
       },
       {
-        "label": "Hardware wallet support"
+        "label": "Sign multi-sig transactions on-the-go"
       }
     ],
     "component": "Wallet/MobileAppParallax"

@@ -1,13 +1,17 @@
+.gradient {
+  background: rgba(15, 255, 128, 1); /* fallback */
+  background-image: linear-gradient(45deg, rgba(15, 255, 128, 1) 0%, rgba(94, 221, 255, 1) 100%);
+  margin: 40px 16px 80px;
+  border-radius: 24px;
+}
+
 .bg {
-  background: rgba(15,255,128,1); /* fallback */
-  background-image: url('/images/devices.png'); /* fallback */
-  background-image: url('/images/devices.png'), linear-gradient(45deg, rgba(15,255,128,1) 0%, rgba(94,221,255,1) 100%);
+  background-image: url('/images/devices.png');
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: contain;
   padding-bottom: 35%;
-  margin: 0 16px 80px;
-  border-radius: 24px;
+  margin-top: 40px;
 }
 
 .buttons {
@@ -19,8 +23,12 @@
   display: block;
 }
 
-@media (min-width: 600px) {
-  .bg {
+@media (min-width: 900px) {
+  .gradient {
     margin: 0 30px 80px;
+  }
+
+  .bg {
+    margin: 0 150px 0 210px;
   }
 }

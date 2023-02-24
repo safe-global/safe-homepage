@@ -3,13 +3,14 @@ import layoutCss from '@/components/common/styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
 import RadialAnimation from './RadialAnimation'
 import LinkButton from '@/components/common/LinkButton'
+import Link from 'next/link'
 
 const TextRadialAnimation = ({ title, text, link }: BaseBlock) => {
   return (
     <Container>
       <Grid
         container
-        className={layoutCss.container}
+        className={layoutCss.containerMedium}
         spacing={{ xs: 6, md: '30px' }}
         flexDirection={{ xs: 'column-reverse', md: 'row' }}
       >
@@ -18,10 +19,11 @@ const TextRadialAnimation = ({ title, text, link }: BaseBlock) => {
             {title}
           </Typography>
           <Typography mb={{ xs: 3, md: 5 }}>{text}</Typography>
-          {/* @ts-ignore */}
-          <LinkButton href={link?.href} target="_blank" rel="noreferrer">
-            {link?.title}
-          </LinkButton>
+          {link && (
+            <Link href={link.href} passHref target="_blank" rel="noreferrer">
+              <LinkButton fullSize>{link.title}</LinkButton>
+            </Link>
+          )}
         </Grid>
         <Grid item md={1} display={{ xs: 'none', md: 'block' }} />
         <Grid item md={6}>

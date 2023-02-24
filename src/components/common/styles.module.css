@@ -3,6 +3,11 @@
   margin-bottom: 150px;
 }
 
+.containerMedium {
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
 .containerShort {
   margin-top: 80px;
   margin-bottom: 80px;
@@ -14,6 +19,7 @@
     margin-bottom: 350px;
   }
 
+  .containerMedium,
   .containerShort {
     margin-top: 250px;
     margin-bottom: 250px;
