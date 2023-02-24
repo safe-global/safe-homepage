@@ -94,7 +94,7 @@
     "title": "Immediate access to all account information to power your applications",
     "link": {
       "title": "Get started",
-      "href": "#"
+      "href": "https://docs.gnosis-safe.io/learn/safe-core-api"
     },
     "grid": {
       "title": "Benefits",
@@ -173,7 +173,7 @@
     "text": "Tap into the ecosystem’s cutting-edge modules and guard extensions or write your own custom logic to plug into the Safe core contracts.",
     "link": {
       "title": "Get started",
-      "href": "#"
+      "href": "https://docs.gnosis-safe.io/learn/safe-core-protocol"
     },
     "image": {
       "src": "/images/Core/safe-core-protocol.png",
