@@ -5,7 +5,7 @@ import css from './styles.module.css'
 import { IOS_LINK, GPLAY_LINK } from '@/config/constants'
 
 const TextBlockBanner = () => (
-  <div className={css.bg}>
+  <div className={css.gradient}>
     <Container>
       <Grid container flexDirection="column" alignItems="center" justifyContent="center">
         <Grid item md={6} sx={{ textAlign: 'center' }} pt={12}>
@@ -32,6 +32,7 @@ const TextBlockBanner = () => (
           </Grid>
         </Grid>
       </Grid>
+      <div className={css.bg} />
     </Container>
   </div>
 )
