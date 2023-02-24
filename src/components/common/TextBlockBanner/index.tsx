@@ -1,8 +1,8 @@
-import { Button, Container, Grid, Typography } from '@mui/material'
+import { Container, Grid, Typography } from '@mui/material'
 import IOSDownload from '@/public/images/ios-download.svg'
 import GPlayDownload from '@/public/images/google-play-download.svg'
 import css from './styles.module.css'
-import { IOS_LINK, GPLAY_LINK, WALLET_LINK } from '@/config/constants'
+import { IOS_LINK, GPLAY_LINK } from '@/config/constants'
 
 const TextBlockBanner = () => {
   return (
@@ -29,18 +29,6 @@ const TextBlockBanner = () => {
                 <a href={GPLAY_LINK} target="_blank" rel="noreferrer" aria-label="Google Play download">
                   <GPlayDownload />
                 </a>
-              </Grid>
-              <Grid item>
-                <Button
-                  href={WALLET_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  variant="contained"
-                  color="secondary"
-                  size="large"
-                >
-                  Launch Wallet
-                </Button>
               </Grid>
             </Grid>
           </Grid>
