@@ -44,7 +44,7 @@ const ParallaxText = ({
                 const isButton = variant === 'button'
                 if (isButton) {
                   return (
-                    <Button key={index} href={href} variant="contained" size="large">
+                    <Button key={index} href={href} variant="contained" size="large" target="_blank" rel="noreferrer">
                       {text}
                     </Button>
                   )

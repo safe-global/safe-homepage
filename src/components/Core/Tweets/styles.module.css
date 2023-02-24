@@ -3,6 +3,7 @@
   padding-bottom: 40px;
   position: relative;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .tweetsGrid {
@@ -19,6 +20,7 @@
   height: fit-content;
   flex-shrink: 0;
   width: 300px;
+  pointer-events: auto;
 }
 
 .bg {

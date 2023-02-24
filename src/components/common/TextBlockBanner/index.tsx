@@ -1,9 +1,8 @@
-import { Button, Container, Grid, Typography } from '@mui/material'
+import { Container, Grid, Typography } from '@mui/material'
 import IOSDownload from '@/public/images/ios-download.svg'
 import GPlayDownload from '@/public/images/google-play-download.svg'
-import DownloadIcon from '@/public/images/download-icon.svg'
 import css from './styles.module.css'
-import { IOS_LINK, GPLAY_LINK, DESKTOP_APP_LINK } from '@/config/constants'
+import { IOS_LINK, GPLAY_LINK } from '@/config/constants'
 
 const TextBlockBanner = () => (
   <div className={css.bg}>
@@ -14,7 +13,8 @@ const TextBlockBanner = () => (
             Use Safe <u>WALLET</u> anywhere
           </Typography>
           <Typography color="static.main" mb={5}>
-            Access your assets anywhere without compromising on security with our flagship interfaces built on Safe Core
+            Access your assets anywhere without compromising on security on our flagship interfaces built on Safe{' '}
+            {'{CORE}'}
           </Typography>
         </Grid>
         <Grid item md={8}>
@@ -28,18 +28,6 @@ const TextBlockBanner = () => (
               <a href={GPLAY_LINK} target="_blank" rel="noreferrer" aria-label="Google Play download">
                 <GPlayDownload />
               </a>
-            </Grid>
-            <Grid item>
-              <Button
-                href={DESKTOP_APP_LINK}
-                variant="contained"
-                color="secondary"
-                size="large"
-                disableRipple
-                startIcon={<DownloadIcon />}
-              >
-                Download desktop
-              </Button>
             </Grid>
           </Grid>
         </Grid>

@@ -90,13 +90,11 @@
     "component": "common/ItemGrid"
   },
   {
-    "textBlock": {
-      "caption": "Safe Core API",
-      "title": "Immediate access to all account information to power your applications",
-      "link": {
-        "text": "Get started",
-        "href": "#"
-      }
+    "caption": "Safe Core API",
+    "title": "Immediate access to all account information to power your applications",
+    "link": {
+      "title": "Get started",
+      "href": "#"
     },
     "grid": {
       "title": "Benefits",
@@ -170,14 +168,12 @@
     "component": "Core/Tweets"
   },
   {
-    "textBlock": {
-      "caption": "Safe core protocol",
-      "title": "Build any use case with the battle-tested security of Safe <u>CORE</u> Protocol",
-      "text": "Tap into the ecosystem’s cutting-edge plug-ins or write your own custom logic to plug into the Safe core contracts.",
-      "link": {
-        "text": "Get started",
-        "href": "#"
-      }
+    "caption": "Safe core protocol",
+    "title": "Build any use case with the battle-tested security of Safe <u>CORE</u> Protocol",
+    "text": "Tap into the ecosystem’s cutting-edge plug-ins or write your own custom logic to plug into the Safe core contracts.",
+    "link": {
+      "title": "Get started",
+      "href": "#"
     },
     "image": {
       "src": "/images/Core/safe-core-protocol.png",
