@@ -14,7 +14,7 @@ const TitleTextLinkedCardGrid = ({ title, text, caption, items }: BaseBlock): Re
         <Typography variant="caption" component="div" mb={{ xs: 2, md: 3 }}>
           {caption}
         </Typography>
-        <Grid container mb="135px" columnSpacing="30px">
+        <Grid container mb={{ xs: 8, md: '180px' }} columnSpacing="30px">
           <Grid item md={6}>
             <Typography variant="h2" mb={4}>
               {title}
@@ -35,7 +35,7 @@ const TitleTextLinkedCardGrid = ({ title, text, caption, items }: BaseBlock): Re
                 <Grid key={index} item xs={12} md={4}>
                   <div className={clsx(css.card, isLastItem && css.gradient)}>
                     <a href={item.link?.href} target="_blank" rel="noreferrer" className={css.cardLink}>
-                      <Typography variant="caption" component="div" pb="77px">
+                      <Typography variant="caption" component="div" pb="77px" color={isLastItem ? 'secondary' : ''}>
                         {item.caption}
                       </Typography>
                       <Typography variant="h3" color="text.primary">
