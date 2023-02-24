@@ -1,32 +1,32 @@
 [
   {
     "title": "Unlock Digital Asset Ownership.",
-    "text": "Safe is the most trusted decentralized custody protocol and collective asset management platform on Ethereum.",
+    "text": "<i>Safe</i> is the most trusted decentralized custody protocol and collective asset management platform on Ethereum.",
     "component": "Home/Intro"
   },
   {
     "caption": "Safe at scale",
-    "title": "<i>Safe</i> accounts hold and protect billions of $$$ in assets on EVM.",
-    "text": "Previously called Gnosis Safe, Safe spun out with a mission to build a better standard for ownership with smart contract accounts. Since 2018, Safe has grown to several EVM chains.",
+    "title": "<i>Safe</i> accounts hold and protect billions of $$$ in assets.",
+    "text": "Previously called Gnosis Safe, <i>Safe</i> spun out with a mission to build a better standard for ownership with smart contract accounts. Since 2018, Safe has grown to support several EVM chains.",
     "items": [
       {
-        "title": "14M+",
+        "title": "4M+",
         "text": "Total transactions"
       },
       {
-        "title": "$36B+",
+        "title": "$39B+",
         "text": "Total assets stored"
       },
       {
-        "title": "1M+",
+        "title": "1.5M+",
         "text": "Safe accounts deployed"
       }
     ],
     "component": "Home/Stats"
   },
   {
-    "title": "Supported Networks",
-    "text": "And more networks, including testnets.",
+    "title": "Available on 12+ networks",
+    "text": "And more including testnets.",
     "networks": [
       [
         {
@@ -165,7 +165,7 @@
     "component": "common/Networks"
   },
   {
-    "title": "Trusted by the best in <b>Web3</b>",
+    "title": "Trusted by the best",
     "items": [
       {
         "image": {
@@ -282,15 +282,15 @@
     "component": "Home/BigIconsCardGrid"
   },
   {
-    "title": "Safe <u>CORE</u> <b>powers ecosystem projects</b><br/>in every corner of web3",
-    "text": "130+ projects including DAO tools, DeFi, NFT collectives are building on Safe Core.",
+    "title": "Safe <u>CORE</u> <b>powers 130+ ecosystem projects</b><br/>in every corner of web3",
+    "text": "including projects building DAO tools, DeFi, NFT collectives and institutional custody",
     "component": "Home/BannerTextCard"
   },
   {
     "variant": "image-text",
     "caption": "Security",
     "title": "Our contracts are<br /><b>the most<br />battle-tested</b>",
-    "text": "The SafeCORE smart contracts have passed the highest possible security standard in the industry: Formal Verification.",
+    "text": "Since 2018, our smart contracts have passed the highest possible security standards in the industry including Formal Verification.",
     "buttons": [
       {
         "text": "Read report",
@@ -307,8 +307,8 @@
   },
   {
     "caption": "Governance",
-    "title": "SafeDAO <b>governs</b> the future of <i>Safe</i>",
-    "text": "The Safe is governed by SafeDAO, a decentralized  collective of core contributors, backers, GnosisDAO, users and ecosystem contributors i.e. Safe Guardians.",
+    "title": "Safe <u>DAO</u> <b>governs</b> the future of <i>Safe</i>",
+    "text": "<i>Safe</i> is governed by SafeDAO, a decentralized  collective of core contributors, backers, GnosisDAO, users and ecosystem contributors i.e Safe Guardians",
     "items": [
       {
         "title": "Forum",
@@ -326,7 +326,7 @@
       },
       {
         "title": "Safe<br/>Guardians",
-        "caption": "Shape our future",
+        "caption": "Ecosystem contributors",
         "link": {
           "href": "https://guardians.safe.global"
         }
