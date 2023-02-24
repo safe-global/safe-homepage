@@ -14,7 +14,7 @@ const TitleTextLinkedCardGrid = ({ title, text, caption, items }: BaseBlock): Re
         <Typography variant="caption" component="div" mb={{ xs: 2, md: 3 }}>
           {caption}
         </Typography>
-        <Grid container mb="135px" columnSpacing="30px">
+        <Grid container mb={{ xs: 8, md: '180px' }} columnSpacing="30px">
           <Grid item md={6}>
             <Typography variant="h2" mb={4}>
               {title}
