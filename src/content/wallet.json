@@ -135,8 +135,8 @@
     "component": "Wallet/ParallaxTxSimulation"
   },
   {
-    "title": "Available on 10+ networks",
-    "text": "And more networks, including testnets.",
+    "title": "Available on 12+ networks",
+    "text": "And more including testnets.",
     "networks": [
       [
         {
