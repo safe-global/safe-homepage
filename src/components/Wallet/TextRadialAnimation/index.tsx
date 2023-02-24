@@ -21,7 +21,7 @@ const TextRadialAnimation = ({ title, text, link }: BaseBlock) => {
           <Typography mb={{ xs: 3, md: 5 }}>{text}</Typography>
           {link && (
             <Link href={link.href} passHref target="_blank" rel="noreferrer">
-              <LinkButton fullSize>{link.title}</LinkButton>
+              <LinkButton>{link.title}</LinkButton>
             </Link>
           )}
         </Grid>

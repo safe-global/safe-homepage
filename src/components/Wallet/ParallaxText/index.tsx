@@ -52,7 +52,7 @@ const ParallaxText = ({
                 }
                 return (
                   <Link key={index} href={href} passHref target="_blank" rel="noreferrer">
-                    <LinkButton fullSize>{text}</LinkButton>
+                    <LinkButton>{text}</LinkButton>
                   </Link>
                 )
               })}
