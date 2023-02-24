@@ -10,7 +10,7 @@ enum StepState {
 
 export type StepsType = {
   label: string
-  description?: string
+  description?: string[]
   state?: 'active' | 'completed'
 }[]
 
@@ -28,9 +28,15 @@ const CustomStepper = ({ steps }: { steps: StepsType }) => (
           </Typography>
         </StepLabel>
         <StepContent className={clsx(css.stepContent, state === StepState.ACTIVE && css.activeBorder)}>
-          <Typography variant="body1" color="primary.light" marginTop="18px">
-            {description}
-          </Typography>
+          <ul className={css.list}>
+            {description?.map((item, index) => (
+              <li className={css.listItem} key={index}>
+                <Typography key={index} variant="body1" color="primary.light" marginTop="18px" display="inline">
+                  {item}
+                </Typography>
+              </li>
+            ))}
+          </ul>
         </StepContent>
       </Step>
     ))}

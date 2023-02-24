@@ -30,3 +30,16 @@
   border-left: 2px dashed var(--mui-palette-primary-light);
   height: 24px;
 }
+
+/* change color of list item marker */
+.list {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.list li::before {
+  content: '\2022';
+  color: var(--mui-palette-primary-light);
+  display: inline-block;
+  width: 1em;
+}
