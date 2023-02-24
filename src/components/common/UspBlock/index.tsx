@@ -50,8 +50,8 @@ const UspBlock = ({ variant, title, text, items }: UspBlockProps): ReactElement 
       <Typography variant="h2" mb={3}>
         {title}
       </Typography>
-      <Typography mb="80px">{text}</Typography>
-      <Grid container className={css.roundCorners}>
+      {text && <Typography>{text}</Typography>}
+      <Grid container className={css.roundCorners} mt={{ xs: 3, md: 7 }}>
         {items.map((item, index) => (
           <GridItem key={index} width={variant === '3-columns' ? 4 : 3} {...item} />
         ))}

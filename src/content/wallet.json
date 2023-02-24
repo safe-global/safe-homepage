@@ -124,7 +124,7 @@
       "alt": "Simulate transactions in Tenderly"
     },
     "title": "<b>Simulate transactions</b> before they happen",
-    "text": "Use Ledger, Tresor, Metamask or any other popular wallet as a signer on your Safe Wallet",
+    "text": "Simulate transactions before sending them through. Get instant prompts and full analysis of your transaction's success or failure with a simulation report via Tenderly",
     "buttons": [
       {
         "text": "Get started",
@@ -136,7 +136,7 @@
   },
   {
     "title": "Available on 12+ networks",
-    "text": "And more including testnets.",
+    "text": "And more including testnets",
     "networks": [
       [
         {
