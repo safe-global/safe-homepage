@@ -204,12 +204,12 @@
     "buttons": [
       {
         "text": "Use our Hackathon Guide",
-        "href": "#",
+        "href": "https://gnosis-safe.notion.site/Safe-d6c6ed61389041e28f5c7c925f653701",
         "variant": "button"
       },
       {
         "text": "March for AA Hackathon",
-        "href": "#",
+        "href": "https://dorahacks.io/hackathon/safe",
         "variant": "link"
       }
     ],
