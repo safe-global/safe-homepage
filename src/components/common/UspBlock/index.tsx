@@ -1,11 +1,7 @@
-import clsx from 'clsx'
 import { Chip, Container, Grid, Typography } from '@mui/material'
 import type { GridProps } from '@mui/material'
 import type { ReactElement } from 'react'
-
 import type { BaseBlock } from '@/components/Home/types'
-
-import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 
 const GridItem = ({ image, title, text, caption, width = 4 }: BaseBlock & { width: GridProps['md'] }): ReactElement => {
@@ -50,12 +46,7 @@ export type UspBlockProps = {
 
 const UspBlock = ({ variant, title, text, items }: UspBlockProps): ReactElement => (
   <Container>
-    <Grid
-      container
-      className={clsx(layoutCss.containerShort, css.container)}
-      flexDirection="column"
-      alignItems="center"
-    >
+    <Grid container className={css.container} flexDirection="column" alignItems="center">
       <Typography variant="h2" mb={3}>
         {title}
       </Typography>

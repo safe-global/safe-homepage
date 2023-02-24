@@ -23,15 +23,15 @@
           "alt": "Shield with a checkmark"
         },
         "title": "Battle Tested Security",
-        "text": "Top notch security and custom access control for you and for your users."
+        "text": "Top notch security of multiple private keys (multi-sig) and rigorously audited contracts"
       },
       {
         "image": {
           "src": "/images/Wallet/people.svg",
           "alt": "Group of owners"
         },
-        "title": "Co-ownership",
-        "text": "Multi-sig based trustless group ownership ownership and asset co-ordination."
+        "title": "Multi-signature Access",
+        "text": "Access controlled by many private keys enabling co-ownership and stronger security for individuals"
       },
       {
         "image": {
@@ -39,7 +39,7 @@
           "alt": "Ownership key"
         },
         "title": "Self-custody",
-        "text": "We never own any of the assets stored in user accounts. We never will."
+        "text": "We never own any of the assets stored in user accounts and never will"
       }
     ],
     "component": "common/UspBlock"
