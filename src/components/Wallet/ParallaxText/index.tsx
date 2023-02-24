@@ -5,6 +5,7 @@ import css from './styles.module.css'
 import LinkButton from '@/components/common/LinkButton'
 import type { BaseBlock } from '@/components/Home/types'
 import Stepper, { type StepsType } from '@/components/Wallet/Stepper'
+import Link from 'next/link'
 import clsx from 'clsx'
 
 export type ParallaxTextProps = BaseBlock & {
@@ -24,7 +25,7 @@ const ParallaxText = ({
     <Container disableGutters>
       <Grid
         container
-        className={clsx(layoutCss.containerShort, variant === 'image-text' ? css.imageFirst : css.textFirst)}
+        className={clsx(layoutCss.containerMedium, variant === 'image-text' ? css.imageFirst : css.textFirst)}
         spacing={{ xs: 6, md: '30px' }}
         justifyContent="space-between"
       >
@@ -50,18 +51,15 @@ const ParallaxText = ({
                   )
                 }
                 return (
-                  <>
-                    {/* @ts-ignore */}
-                    <LinkButton key={index} href={href} target="_blank" rel="noreferrer">
-                      {text}
-                    </LinkButton>
-                  </>
+                  <Link key={index} href={href} passHref target="_blank" rel="noreferrer">
+                    <LinkButton fullSize>{text}</LinkButton>
+                  </Link>
                 )
               })}
             </Box>
           ) : null}
         </Grid>
-        <Grid item xs={12} md={6} display="flex" alignItems="center">
+        <Grid xs={12} md={6} display="flex" alignItems="center">
           {children}
         </Grid>
       </Grid>

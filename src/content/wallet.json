@@ -55,8 +55,8 @@
   },
   {
     "variant": "image-text",
-    "title": "<b>Control and change account</b> ownership",
-    "text": "Add new signers, remove signers and replace ownership by simply changing the private key(s) that control the account.",
+    "title": "<b>Control and change</b> account ownership",
+    "text": "With adding new signers, removing old signers and replaceable account ownership, the same account is flexible for the any future needs and more secure ",
     "buttons": [
       {
         "text": "Get started",
@@ -72,8 +72,8 @@
       "src": "/images/Wallet/safe-apps-store.png",
       "alt": "Transactions require confirmations from owners"
     },
-    "title": "Built-in app store",
-    "text": "Use the best dapps in web3 right from inside your Safe WALLET.",
+    "title": "<b>Use</b> built-in app store",
+    "text": "The best web3 apps are accessible right from inside the Safe Wallet interface",
     "buttons": [
       {
         "text": "Get started",
@@ -90,7 +90,7 @@
       "alt": "Batching transactions"
     },
     "title": "Save on gas by batching <b>multiple transactions</b> in a few clicks",
-    "text": "Easily batch transactions you want to make together to save on gas.",
+    "text": "Easily batch transactions together to save on fees",
     "buttons": [
       {
         "text": "Get started",
@@ -107,7 +107,7 @@
       "alt": "Different wallet types"
     },
     "title": "Use <b>any type of signer</b> to control your account",
-    "text": "From hardware wallets like ledger, tresor, to metamask type externally owned accounts, use all of these as signers on your Safe WALLET.",
+    "text": "Use Ledger, Tresor, Metamask or any other popular wallet as a signer on your Safe Wallet",
     "buttons": [
       {
         "text": "Get started",
@@ -124,7 +124,7 @@
       "alt": "Simulate transactions in Tenderly"
     },
     "title": "<b>Simulate transactions</b> before they happen",
-    "text": "Simulate your transactions before sending them through, right from the Safe’s UI. Get instant prompts and full analysis of your transaction’s success or failure with a simulation report on Tenderly.",
+    "text": "Use Ledger, Tresor, Metamask or any other popular wallet as a signer on your Safe Wallet",
     "buttons": [
       {
         "text": "Get started",
