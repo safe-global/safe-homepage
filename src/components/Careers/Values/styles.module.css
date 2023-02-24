@@ -7,7 +7,7 @@
   position: relative;
   margin-top: 54px;
   margin-bottom: 48px;
-  width: calc(100% - 100px);
+  width: 100%
 }
 
 .tree::after {
@@ -35,7 +35,7 @@
 }
 
 .rule::before {
-  left: 0%;
+  left: 0;
 }
 
 .rule::after {
@@ -46,14 +46,19 @@
   color: var(--mui-palette-primary-main);
 }
 
+.list :global .MuiListItemIcon-root {
+  min-width: auto;
+  padding-right: 32px;
+}
+
 .value {
   background-image: linear-gradient(45deg, var(--mui-palette-primary-main) 25%, var(--mui-palette-info-dark) 100%);
   background-clip: text;
   color: transparent;
-  font-size: 80px;
-  line-height: 90px;
+  font-size: 64px;
+  line-height: 64px;
+  padding-bottom: 16px;
   margin-bottom: 16px;
-  width: 80%;
 }
 
 .desc {
@@ -68,10 +73,6 @@
   text-align: center;
 }
 
-.list {
-  width: 80%;
-}
-
 .icon path {
   fill: var(--mui-palette-primary-main);
 }
@@ -79,6 +80,15 @@
 @media (min-width: 600px) {
   .tree {
     width: calc(100% - 200px);
+  }
+
+  .value {
+    font-size: 80px;
+    line-height: 90px;
+  }
+
+  .list {
+    width: 80%;
   }
 }
 
