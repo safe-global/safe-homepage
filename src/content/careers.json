@@ -1,7 +1,7 @@
 [
   {
     "title": "Impact the future of ownership",
-    "text": "Our team is focused on a mission of unlocking ownership for the world. By building infrastructure that is robust and usable, we aim to fix some of web3’s biggest challenges.",
+    "text": "Our team is on a mission to unlock digital ownership for the world. By building robust and accessible tools, we aim to fix some of web3’s biggest challenges",
     "link": {
       "title": "View positions",
       "href": "#positions"
@@ -9,11 +9,11 @@
     "component": "Careers/Intro"
   },
   {
-    "title": "<b>Our</b> values",
+    "title": "<b>Our</b> ambitions",
     "items": [
       {
         "title": "Grow sustainably",
-        "text": "We have been building infrastructure since 2018 used widely and globally",
+        "text": "We have been building infrastructure used widely and globally since 2018 ",
         "items": [
           "We are in for the long haul",
           "We always grow our impact",
@@ -23,7 +23,7 @@
         ]
       },
       {
-        "title": "Build for people",
+        "title": "Build for<br />people",
         "text": "We are people focused within and outside the project",
         "items": [
           "We put people at the centre (users, teams, stakeholders, community)",
@@ -87,7 +87,7 @@
           "width": "50px"
         },
         "title": "Learning & conferences",
-        "text": "Personal education (1k€) and conference budgets (2k€) to help you grow."
+        "text": "Personal education (1k€) and conference budgets (2k€) to help you grow"
       },
       {
         "image": {
@@ -96,7 +96,7 @@
           "width": "50px"
         },
         "title": "Dedicated hacking time ",
-        "text": "Use your Friday afternoons for research or a side project in our ecosystem!"
+        "text": "Use your Friday afternoons for research or a side project in our ecosystem"
       },
       {
         "image": {
@@ -105,7 +105,7 @@
           "width": "50px"
         },
         "title": "Company & team retreats",
-        "text": "Connect with team mates outside of the office with cool trips and retreats."
+        "text": "Connect with team mates outside of the office with cool trips and retreats"
       },
       {
         "image": {
@@ -114,7 +114,7 @@
           "width": "50px"
         },
         "title": "Flexibility",
-        "text": "Manage your own work schedules with hybrid working policies. "
+        "text": "Manage your own work schedules with hybrid working policies"
       },
       {
         "image": {
@@ -123,7 +123,7 @@
           "width": "50px"
         },
         "title": "Flat hierarchies",
-        "text": "Uncomplicated team structures and no barriers to  communication."
+        "text": "Uncomplicated team structures and no barriers to  communication"
       },
       {
         "image": {
@@ -132,7 +132,7 @@
           "width": "50px"
         },
         "title": "Newest technology",
-        "text": "Work on the latest technology, equipment and web3 stack with dedicated budgets."
+        "text": "Work on the latest technology, equipment and web3 stack with dedicated budgets"
       },
       {
         "image": {
@@ -141,7 +141,7 @@
           "width": "50px"
         },
         "title": "Token plan",
-        "text": "Have a stake in our mission and shape the future of Safe  with a bonus token plan."
+        "text": "Have a stake in our mission and shape the future of Safe  with a bonus token plan"
       },
       {
         "image": {
@@ -150,14 +150,14 @@
           "width": "50px"
         },
         "title": "Relocation support",
-        "text": "Join us in one of our offices with relocation help, visa support and allowances."
+        "text": "Join us in one of our offices with relocation help, visa support and allowances"
       }
     ],
     "component": "common/UspBlock"
   },
   {
     "title": "Our locations",
-    "text": "With contributors across the world, we have our main hubs in Europe and are expanding.",
+    "text": "With contributors across the world, we are expanding and our main hubs are in Europe",
     "component": "Careers/ParallaxLocations"
   },
   {
@@ -178,7 +178,7 @@
   {
     "component": "Careers/BannerCta",
     "title": "Couldn't find what you were looking for?",
-    "text": "Send us an initiative application!",
+    "text": "Send us an open application!",
     "link": {
       "title": "jobs@safe.global",
       "href": "mailto:jobs@safe.global"
