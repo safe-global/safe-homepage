@@ -5,6 +5,7 @@ import LinkButton from '@/components/common/LinkButton'
 import css from './styles.module.css'
 import ArrowIcon from '@/public/images/arrow-out-icon.svg'
 import type { BaseBlock } from '@/components/Home/types'
+import Link from 'next/link'
 
 const BigIconsCardGrid = ({ items }: BaseBlock): ReactElement => {
   return (
@@ -23,11 +24,13 @@ const BigIconsCardGrid = ({ items }: BaseBlock): ReactElement => {
                   <Typography variant="h3" mb={5} mt={2}>
                     {item.title}
                   </Typography>
-                  {/* FIXME: target not allowed for type ButtonProps */}
-                  {/* @ts-ignore */}
-                  <LinkButton href={item.link?.href} target="_blank" rel="noreferrer" sx={{ mt: 'auto' }} fullSize>
-                    {item.link?.title}
-                  </LinkButton>
+                  {item.link && (
+                    <Link href={item.link.href} passHref>
+                      <LinkButton sx={{ mt: 'auto' }} fullSize>
+                        {item.link.title}
+                      </LinkButton>
+                    </Link>
+                  )}
                   <ArrowIcon className={css.icon} />
                 </div>
               </Grid>

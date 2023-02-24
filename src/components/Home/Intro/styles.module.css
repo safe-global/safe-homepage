@@ -24,7 +24,6 @@
   min-width: 100%;
   height: 720px;
   display: flex;
-  align-items: center;
 }
 
 .video {
@@ -99,19 +98,20 @@
   left: 0;
   right: 0;
   text-align: center;
-  bottom: 64px;
+  bottom: 40px;
   font-size: 12px;
   color: var(--mui-palette-text-primary);
 }
 
 .scroll::after {
   content: '';
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 32px;
-  border-left: 2px solid var(--mui-palette-text-primary);
-  height: 144px;
+  display: block;
+  background-image: url('/images/angle-down.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+  margin: auto;
 }
 
 .title {
@@ -155,6 +155,7 @@
 
   .wrapper {
     height: 800px;
+    align-items: center;
   }
 }
 
@@ -164,6 +165,6 @@
   }
 
   .scroll {
-    bottom: 114px;
+    bottom: 90px;
   }
 }

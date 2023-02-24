@@ -4,38 +4,36 @@ import GPlayDownload from '@/public/images/google-play-download.svg'
 import css from './styles.module.css'
 import { IOS_LINK, GPLAY_LINK } from '@/config/constants'
 
-const TextBlockBanner = () => {
-  return (
-    <div className={css.bg}>
-      <Container>
-        <Grid container flexDirection="column" alignItems="center" justifyContent="center">
-          <Grid item md={6} sx={{ textAlign: 'center' }} pt={12}>
-            <Typography variant="h2" color="static.main" mb={3}>
-              Use Safe <u>WALLET</u> anywhere
-            </Typography>
-            <Typography color="static.main" mb={5}>
-              Access your assets anywhere without compromising on security on our flagship interfaces built on Safe{' '}
-              {'{CORE}'}
-            </Typography>
-          </Grid>
-          <Grid item md={8}>
-            <Grid container gap={2} justifyContent="center">
-              <Grid item>
-                <a href={IOS_LINK} target="_blank" rel="noreferrer" aria-label="AppStore download">
-                  <IOSDownload />
-                </a>
-              </Grid>
-              <Grid item>
-                <a href={GPLAY_LINK} target="_blank" rel="noreferrer" aria-label="Google Play download">
-                  <GPlayDownload />
-                </a>
-              </Grid>
+const TextBlockBanner = () => (
+  <div className={css.bg}>
+    <Container>
+      <Grid container flexDirection="column" alignItems="center" justifyContent="center">
+        <Grid item md={6} sx={{ textAlign: 'center' }} pt={12}>
+          <Typography variant="h2" color="static.main" mb={3}>
+            Use Safe <u>WALLET</u> anywhere
+          </Typography>
+          <Typography color="static.main" mb={5}>
+            Access your assets anywhere without compromising on security on our flagship interfaces built on Safe{' '}
+            {'{CORE}'}
+          </Typography>
+        </Grid>
+        <Grid item md={8}>
+          <Grid container gap={2} justifyContent="center">
+            <Grid item>
+              <a href={IOS_LINK} target="_blank" rel="noreferrer" aria-label="AppStore download">
+                <IOSDownload />
+              </a>
+            </Grid>
+            <Grid item>
+              <a href={GPLAY_LINK} target="_blank" rel="noreferrer" aria-label="Google Play download">
+                <GPlayDownload />
+              </a>
             </Grid>
           </Grid>
         </Grid>
-      </Container>
-    </div>
-  )
-}
+      </Grid>
+    </Container>
+  </div>
+)
 
 export default TextBlockBanner
