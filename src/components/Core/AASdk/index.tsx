@@ -4,8 +4,10 @@ import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 import LinkButton from '@/components/common/LinkButton'
 import clsx from 'clsx'
+import Link from 'next/link'
+import { RELAY_KIT_LINK, ONRAMP_KIT_LINK, AUTH_KIT_LINK, PROTOCOL_KIT_LINK } from '@/config/constants'
 
-const AASdk = ({ title, caption, text, link }: BaseBlock) => {
+const AASdk = ({ title, caption, text, link, items }: BaseBlock) => {
   return (
     <Container className={css.wrapper}>
       <Grid container className={layoutCss.containerShort}>
@@ -21,24 +23,31 @@ const AASdk = ({ title, caption, text, link }: BaseBlock) => {
           />
           <Typography variant="h2">{title}</Typography>
           {text && <Typography>{text}</Typography>}
-          <LinkButton href={link?.href} sx={{ width: 'fit-content' }}>
-            {link?.title}
-          </LinkButton>
+          {link && (
+            <Link href={link.href} target="_blank" rel="noreferrer" passHref>
+              <LinkButton sx={{ width: 'fit-content' }}>{link?.title}</LinkButton>
+            </Link>
+          )}
         </Grid>
         <div className={css.videoWrapper}>
           <video autoPlay muted loop className={css.video}>
             <source src="/videos/aa-sdk.webm" type="video/webm" />
           </video>
-          <a className={clsx(css.videoLink, css.authKitLink)} href="#">
+          <a className={clsx(css.videoLink, css.authKitLink)} href={AUTH_KIT_LINK} target="_blank" rel="noreferrer">
             Auth Kit
           </a>
-          <a className={clsx(css.videoLink, css.onRampKitLink)} href="#">
+          <a className={clsx(css.videoLink, css.onRampKitLink)} href={ONRAMP_KIT_LINK} target="_blank" rel="noreferrer">
             Onramp Kit
           </a>
-          <a className={clsx(css.videoLink, css.relayKitLink)} href="#">
+          <a className={clsx(css.videoLink, css.relayKitLink)} href={RELAY_KIT_LINK} target="_blank" rel="noreferrer">
             Relay Kit
           </a>
-          <a className={clsx(css.videoLink, css.protocolKitLink)} href="#">
+          <a
+            className={clsx(css.videoLink, css.protocolKitLink)}
+            href={PROTOCOL_KIT_LINK}
+            target="_blank"
+            rel="noreferrer"
+          >
             Protocol Kit
           </a>
         </div>

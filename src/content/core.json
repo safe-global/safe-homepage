@@ -8,7 +8,7 @@
     },
     "link": {
       "title": "View documentation",
-      "href": "#"
+      "href": "https://docs.safe.global"
     },
     "component": "Core/Intro"
   },
@@ -20,7 +20,7 @@
         "text": "Easily level up your application and empower your users with the most advanced account abstraction SDK. Cutting-edge functionality and the best UX.",
         "link": {
           "title": "",
-          "href": "#"
+          "href": "https://docs.gnosis-safe.io/learn/safe-core-account-abstraction-sdk"
         }
       },
       {
@@ -28,7 +28,7 @@
         "text": "Easily level up your application and empower your users with the most advanced account abstraction SDK. Cutting-edge functionality and the best UX.",
         "link": {
           "title": "",
-          "href": "#"
+          "href": "https://docs.gnosis-safe.io/learn/safe-core-api"
         }
       },
       {
@@ -36,7 +36,7 @@
         "text": "Discover and contribute to a growing ecosystem of technological breakthroughs based on Safe with the Safe{Core} Protocol.",
         "link": {
           "title": "",
-          "href": "#"
+          "href": "https://docs.gnosis-safe.io/learn/safe-core-protocol"
         }
       }
     ],
@@ -47,7 +47,7 @@
     "title": "Get started with Safe <u>CORE</u> Account Abstraction SDK",
     "link": {
       "title": "View documentation",
-      "href": "#"
+      "href": "https://docs.safe.global"
     },
     "component": "Core/AASdk"
   },
@@ -59,7 +59,7 @@
         "text": "<ul><li>Modular and customizable smart contract accounts</li><li>Battle-tested security</li><li>Transaction Batching</li></ul>",
         "link": {
           "title": "Read more",
-          "href": "#"
+          "href": "https://docs.gnosis-safe.io/learn/safe-core-account-abstraction-sdk/protocol-kit"
         }
       },
       {
@@ -67,7 +67,7 @@
         "text": "<ul><li>Easy on-boarding using Web3Auth</li><li>Social and wallet logins</li><li>Get users started that do not have a wallet yet</li></ul>",
         "link": {
           "title": "Read more",
-          "href": "#"
+          "href": "https://docs.gnosis-safe.io/learn/safe-core-account-abstraction-sdk/auth-kit"
         }
       },
       {
@@ -75,7 +75,7 @@
         "text": "<ul><li>Gas-less experiences using Gelato</li><li>Sponsored transaction</li><li>Pay fees in ERC-20 tokens</li></ul>",
         "link": {
           "title": "Read more",
-          "href": "#"
+          "href": "https://docs.gnosis-safe.io/learn/safe-core-account-abstraction-sdk/relay-kit"
         }
       },
       {
@@ -83,7 +83,7 @@
         "text": "<ul><li>Fiat on-ramping using Stripe</li><li>Pay using credit card</li></ul>",
         "link": {
           "title": "Read more",
-          "href": "#"
+          "href": "https://docs.gnosis-safe.io/learn/safe-core-account-abstraction-sdk/onramp-kit"
         }
       }
     ],
@@ -94,30 +94,30 @@
     "title": "Immediate access to all account information to power your applications",
     "link": {
       "title": "Get started",
-      "href": "#"
+      "href": "https://docs.gnosis-safe.io/learn/safe-core-api"
     },
     "grid": {
       "title": "Benefits",
       "items": [
         {
-          "title": "Decode the actions of the Safe"
+          "title": "Decode all actions of Safe accounts"
         },
         {
           "title": "Monitor all interactions with the Safe"
         },
         {
-          "title": "Use API with extensive information"
+          "title": "Easy-to-use API with extensive information"
         },
         {
-          "title": "Support for the most important chains"
+          "title": "Available across 11+ networks"
         }
       ]
     },
     "component": "Core/TextGrid"
   },
   {
-    "caption": "Used by the best",
-    "title": "What others are already building with Safe",
+    "caption": "Safe ecosystem builders",
+    "title": "See what web3’s best builders have to say",
     "items": [
       {
         "image": {
@@ -170,10 +170,10 @@
   {
     "caption": "Safe core protocol",
     "title": "Build any use case with the battle-tested security of Safe <u>CORE</u> Protocol",
-    "text": "Tap into the ecosystem’s cutting-edge plug-ins or write your own custom logic to plug into the Safe core contracts.",
+    "text": "Tap into the ecosystem’s cutting-edge modules and guard extensions or write your own custom logic to plug into the Safe core contracts.",
     "link": {
       "title": "Get started",
-      "href": "#"
+      "href": "https://docs.gnosis-safe.io/learn/safe-core-protocol"
     },
     "image": {
       "src": "/images/Core/safe-core-protocol.png",
@@ -183,23 +183,23 @@
       "title": "Benefits",
       "items": [
         {
-          "title": "Improve the UX of your product with account abstraction"
+          "title": "Extend account logic using Safe Modules"
         },
         {
-          "title": "Customize access control to Safe accounts"
+          "title": "Implement transaction checks using Safe Guards"
         },
         {
-          "title": "Build on battle tested  security"
+          "title": "Batch transactions using Multisend"
         },
         {
-          "title": "Build any use case by extending the on-chain logic of core contracts"
+          "title": "Use new signature schemes using Fallback Handlers"
         }
       ]
     },
     "component": "Core/TextGrid"
   },
   {
-    "title": "Hacking on<br />Safe <u>CORE</u> ?",
+    "title": "Hacking on<br />Safe <u>CORE</u>?",
     "caption": "Hackathon",
     "buttons": [
       {

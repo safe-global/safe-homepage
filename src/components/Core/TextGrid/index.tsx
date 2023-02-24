@@ -4,6 +4,7 @@ import LinkButton from '@/components/common/LinkButton'
 import ItemGrid from '@/components/common/ItemGrid'
 import type { BaseBlock } from '@/components/Home/types'
 import css from './styles.module.css'
+import Link from 'next/link'
 
 const TextGrid = ({
   image,
@@ -39,11 +40,15 @@ const TextGrid = ({
             />
             <Typography variant="h2">{title}</Typography>
             {text && <Typography>{text}</Typography>}
-            {link && <LinkButton href={link.href}>{link.title}</LinkButton>}
+            {link && (
+              <Link href={link.href} target="_blank" rel="noreferrer" passHref>
+                <LinkButton>{link.title}</LinkButton>
+              </Link>
+            )}
           </Grid>
           {image ? (
-            <Grid item md={6} mt="54px">
-              <img src={image.src} alt={image.alt} />
+            <Grid item md={6}>
+              <img src={image.src} alt={image.alt} className={css.image} />
             </Grid>
           ) : null}
         </Grid>

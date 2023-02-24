@@ -22,7 +22,7 @@ const GridItem = ({ title, text, children, link }: BaseBlock & { children: React
       justifyContent="space-between"
       position="relative"
     >
-      <a href={link?.href} className={css.cardLink}>
+      <a href={link?.href} target="_blank" rel="noreferrer" className={css.cardLink}>
         <div className={css.animationWrapper}>{children}</div>
         <div>
           <Typography variant="h4" mt={3} mb={1} color="text.primary">
