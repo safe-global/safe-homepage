@@ -258,7 +258,7 @@
         },
         "link": {
           "title": "Learn more",
-          "href": "https://core.safe.global"
+          "href": "/core"
         }
       },
       {
@@ -275,7 +275,7 @@
         },
         "link": {
           "title": "Learn more",
-          "href": "https://wallet.safe.global"
+          "href": "/wallet"
         }
       }
     ],
