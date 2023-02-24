@@ -42,8 +42,8 @@ const TextGrid = ({
             {link && <LinkButton href={link.href}>{link.title}</LinkButton>}
           </Grid>
           {image ? (
-            <Grid item md={6} mt="54px">
-              <img src={image.src} alt={image.alt} />
+            <Grid item md={6}>
+              <img src={image.src} alt={image.alt} className={css.image} />
             </Grid>
           ) : null}
         </Grid>

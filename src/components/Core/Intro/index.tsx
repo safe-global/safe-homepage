@@ -16,9 +16,11 @@ const CoreIntro = ({ title, text, image, link }: BaseBlock) => {
           <Typography variant="h4" component="div" mb={5}>
             {text}
           </Typography>
-          <Button key={link?.href} href={link?.href} variant="contained" size="large">
-            {link?.title}
-          </Button>
+          {link && (
+            <Button key={link.href} href={link.href} target="_blank" rel="noreferrer" variant="contained" size="large">
+              {link.title}
+            </Button>
+          )}
         </Grid>
       </Grid>
       <Divider />

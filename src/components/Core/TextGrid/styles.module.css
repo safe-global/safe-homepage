@@ -9,8 +9,19 @@
   margin-top: 24px;
 }
 
+.image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
 @media (min-width: 600px) {
   .wrapper {
     flex-direction: row;
+  }
+
+  .image {
+    max-width: 513px;
   }
 }

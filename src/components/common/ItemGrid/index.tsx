@@ -2,6 +2,7 @@ import { Container, Grid, Typography } from '@mui/material'
 import css from './styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
 import LinkButton from '@/components/common/LinkButton'
+import Link from 'next/link'
 
 const ItemGrid = ({ title, items }: BaseBlock) => {
   return (
@@ -20,7 +21,11 @@ const ItemGrid = ({ title, items }: BaseBlock) => {
                     </Typography>
                     <Typography color="primary.light">{text}</Typography>
                   </div>
-                  {link && <LinkButton href={link.href}>{link.title}</LinkButton>}
+                  {link && (
+                    <Link href={link.href} target="_blank" rel="noreferrer" passHref>
+                      <LinkButton>{link.title}</LinkButton>
+                    </Link>
+                  )}
                 </Grid>
               ))
             : null}
