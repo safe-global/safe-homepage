@@ -35,7 +35,7 @@ const EditableItem = ({
     <span
       contentEditable={isEditable}
       dangerouslySetInnerHTML={{ __html: cleanHtml }}
-      onBlur={onBlur}
+      onBlur={isEditable ? onBlur : undefined}
       onClick={isEditable ? preventClick : undefined}
     />
   )
