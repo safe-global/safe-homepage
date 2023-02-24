@@ -1,14 +1,10 @@
 import { Button, Container, Grid, Typography } from '@mui/material'
 import IOSDownload from '@/public/images/ios-download.svg'
 import GPlayDownload from '@/public/images/google-play-download.svg'
-import DownloadIcon from '@/public/images/download-icon.svg'
 import css from './styles.module.css'
-import { IOS_LINK, GPLAY_LINK } from '@/config/constants'
-import useDesktopAppUrl from '@/hooks/useDesktopAppUrl'
+import { IOS_LINK, GPLAY_LINK, WALLET_LINK } from '@/config/constants'
 
 const TextBlockBanner = () => {
-  const desktopAppUrl = useDesktopAppUrl()
-
   return (
     <div className={css.bg}>
       <Container>
@@ -36,14 +32,14 @@ const TextBlockBanner = () => {
               </Grid>
               <Grid item>
                 <Button
-                  href={desktopAppUrl}
+                  href={WALLET_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   variant="contained"
                   color="secondary"
                   size="large"
-                  disableRipple
-                  startIcon={<DownloadIcon />}
                 >
-                  Download desktop
+                  Launch Wallet
                 </Button>
               </Grid>
             </Grid>
