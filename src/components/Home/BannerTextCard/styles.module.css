@@ -31,3 +31,9 @@
     background-size: 1523px, 1238px, 1453px;
   }
 }
+
+@media (max-width: 599px) {
+  .gradient {
+    background-position: center !important;
+  }
+}
