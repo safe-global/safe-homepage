@@ -25,6 +25,7 @@ const TextGrid = ({
             display="flex"
             flexDirection="column"
             justifyContent="center"
+            alignItems="flex-start"
             gap={{ xs: 3, md: 4 }}
           >
             <Chip
