@@ -5,6 +5,7 @@ import css from './styles.module.css'
 import LinkButton from '@/components/common/LinkButton'
 import clsx from 'clsx'
 import Link from 'next/link'
+import { RELAY_KIT_LINK, ONRAMP_KIT_LINK, AUTH_KIT_LINK, PROTOCOL_KIT_LINK } from '@/config/constants'
 
 const AASdk = ({ title, caption, text, link, items }: BaseBlock) => {
   return (
@@ -32,33 +33,18 @@ const AASdk = ({ title, caption, text, link, items }: BaseBlock) => {
           <video autoPlay muted loop className={css.video}>
             <source src="/videos/aa-sdk.webm" type="video/webm" />
           </video>
-          <a
-            className={clsx(css.videoLink, css.authKitLink)}
-            href="https://docs.gnosis-safe.io/learn/safe-core-account-abstraction-sdk/auth-kit"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a className={clsx(css.videoLink, css.authKitLink)} href={AUTH_KIT_LINK} target="_blank" rel="noreferrer">
             Auth Kit
           </a>
-          <a
-            className={clsx(css.videoLink, css.onRampKitLink)}
-            href="https://docs.gnosis-safe.io/learn/safe-core-account-abstraction-sdk/onramp-kit"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a className={clsx(css.videoLink, css.onRampKitLink)} href={ONRAMP_KIT_LINK} target="_blank" rel="noreferrer">
             Onramp Kit
           </a>
-          <a
-            className={clsx(css.videoLink, css.relayKitLink)}
-            href="https://docs.gnosis-safe.io/learn/safe-core-account-abstraction-sdk/relay-kit"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a className={clsx(css.videoLink, css.relayKitLink)} href={RELAY_KIT_LINK} target="_blank" rel="noreferrer">
             Relay Kit
           </a>
           <a
             className={clsx(css.videoLink, css.protocolKitLink)}
-            href="https://docs.gnosis-safe.io/learn/safe-core-account-abstraction-sdk/protocol-kit"
+            href={PROTOCOL_KIT_LINK}
             target="_blank"
             rel="noreferrer"
           >
