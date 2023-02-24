@@ -84,3 +84,9 @@
     transform: translate(10px, -50px)
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .wrapper > svg {
+    animation: none;
+  }
+}
