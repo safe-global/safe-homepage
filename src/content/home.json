@@ -1,12 +1,12 @@
 [
   {
-    "title": "Unlock Digital Asset Ownership.",
-    "text": "<i>Safe</i> is the most trusted decentralized custody protocol and collective asset management platform on Ethereum.",
+    "title": "Unlock Digital Asset Ownership",
+    "text": "<i>Safe</i> is the most trusted decentralized custody protocol and collective asset management platform on Ethereum",
     "component": "Home/Intro"
   },
   {
     "caption": "Safe at scale",
-    "title": "<i>Safe</i> accounts hold and protect billions of $$$ in assets.",
+    "title": "<i>Safe</i> accounts hold and protect billions of $$$ in assets",
     "text": "Previously called Gnosis Safe, <i>Safe</i> spun out with a mission to build a better standard for ownership with smart contract accounts. Since 2018, Safe has grown to support several EVM chains.",
     "items": [
       {
