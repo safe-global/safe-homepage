@@ -17,7 +17,7 @@
     "items": [
       {
         "title": "Safe <u>CORE</u> AA SDK",
-        "text": "Easily level up your application and empower your users with the most advanced account abstraction SDK. Cutting-edge functionality and the best UX.",
+        "text": "Easily level up your application and empower your users with the most advanced account abstraction SDK.",
         "link": {
           "title": "",
           "href": "https://docs.gnosis-safe.io/learn/safe-core-account-abstraction-sdk"
@@ -25,7 +25,7 @@
       },
       {
         "title": "Safe <u>CORE</u> API",
-        "text": "Easily level up your application and empower your users with the most advanced account abstraction SDK. Cutting-edge functionality and the best UX.",
+        "text": "Power your interface with all Safe account related information.",
         "link": {
           "title": "",
           "href": "https://docs.gnosis-safe.io/learn/safe-core-api"
@@ -33,7 +33,7 @@
       },
       {
         "title": "Safe <u>CORE</u> PROTOCOL",
-        "text": "Discover and contribute to a growing ecosystem of technological breakthroughs based on Safe with the Safe{Core} Protocol.",
+        "text": "Discover, integrate and build on Safe’s robust and battle-tested smart contract account standard and programmable modules.",
         "link": {
           "title": "",
           "href": "https://docs.gnosis-safe.io/learn/safe-core-protocol"
@@ -64,7 +64,7 @@
       },
       {
         "title": "Auth Kit",
-        "text": "<ul><li>Easy on-boarding using Web3Auth</li><li>Social and wallet logins</li><li>Get users started that do not have a wallet yet</li></ul>",
+        "text": "<ul><li>Easy on-boarding using Web3Auth</li><li>Social and wallet logins</li><li>Get users started without a wallet</li></ul>",
         "link": {
           "title": "Read more",
           "href": "https://docs.gnosis-safe.io/learn/safe-core-account-abstraction-sdk/auth-kit"
@@ -80,7 +80,7 @@
       },
       {
         "title": "Onramp Kit",
-        "text": "<ul><li>Fiat on-ramping using Stripe</li><li>Pay using credit card</li></ul>",
+        "text": "<ul><li>Seamless Fiat on-ramping using Stripe</li><li>Pay using a credit card</li></ul>",
         "link": {
           "title": "Read more",
           "href": "https://docs.gnosis-safe.io/learn/safe-core-account-abstraction-sdk/onramp-kit"
@@ -109,7 +109,7 @@
           "title": "Easy-to-use API with extensive information"
         },
         {
-          "title": "Available across 11+ networks"
+          "title": "Available across 12+ networks"
         }
       ]
     },
