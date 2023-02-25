@@ -13,7 +13,7 @@
     "items": [
       {
         "title": "Grow sustainably",
-        "text": "We have been building infrastructure used widely and globally since 2018 ",
+        "text": "We have been building infrastructure used widely and globally since 2018",
         "items": [
           "We are in for the long haul",
           "We always grow our impact",
@@ -104,7 +104,7 @@
           "alt": "Coffee mug",
           "width": "50px"
         },
-        "title": "Company & team retreats",
+        "title": "Company & Team retreats",
         "text": "Connect with team mates outside of the office with cool trips and retreats"
       },
       {
@@ -123,7 +123,7 @@
           "width": "50px"
         },
         "title": "Flat hierarchies",
-        "text": "Uncomplicated team structures and no barriers to  communication"
+        "text": "Uncomplicated team structures and no barriers to communication"
       },
       {
         "image": {
@@ -141,7 +141,7 @@
           "width": "50px"
         },
         "title": "Token plan",
-        "text": "Have a stake in our mission and shape the future of Safe  with a bonus token plan"
+        "text": "Have a stake in our mission and shape the future of Safe with a bonus token plan"
       },
       {
         "image": {
@@ -163,7 +163,7 @@
   {
     "variant": "reverse",
     "title": "Interview process",
-    "text": "We have a transparent and fast interview process.",
+    "text": "We have a transparent and fast interview process",
     "image": {
       "src": "/images/interview-process.svg",
       "alt": "Interview process timeline"
