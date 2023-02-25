@@ -22,7 +22,7 @@
           "src": "/images/Wallet/shield.svg",
           "alt": "Shield with a checkmark"
         },
-        "title": "Battle Tested Security",
+        "title": "Battle-tested security",
         "text": "Top notch security of multiple private keys (multi-sig) and rigorously audited contracts"
       },
       {
@@ -30,7 +30,7 @@
           "src": "/images/Wallet/people.svg",
           "alt": "Group of owners"
         },
-        "title": "Multi-signature Access",
+        "title": "Multi-signature access",
         "text": "Access controlled by many private keys enabling co-ownership and stronger security for individuals"
       },
       {
@@ -56,7 +56,7 @@
   {
     "variant": "image-text",
     "title": "<b>Control and change</b> account ownership",
-    "text": "With adding new signers, removing old signers and replaceable account ownership, the same account is flexible for the any future needs and more secure ",
+    "text": "With adding new signers, removing old signers and replaceable account ownership, the same account is flexible for the any future needs and more secure",
     "buttons": [
       {
         "text": "Get started",
