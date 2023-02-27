@@ -1,7 +1,7 @@
 [
   {
     "title": "Safe <u>CORE</u> is Account Abstraction",
-    "text": "Full stack. Ready. Battle Tested. Open Source.",
+    "text": "Full-stack. Battle-tested. Open Source.",
     "image": {
       "src": "/images/core-chip.png",
       "alt": "Safe Core chip"
@@ -13,7 +13,7 @@
     "component": "Core/Intro"
   },
   {
-    "title": "The most complete and secure account abstraction stack",
+    "title": "Our Account Abstraction stack",
     "items": [
       {
         "title": "Safe <u>CORE</u> AA SDK",

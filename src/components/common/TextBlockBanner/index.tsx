@@ -13,8 +13,7 @@ const TextBlockBanner = () => (
             Use Safe <u>WALLET</u> anywhere
           </Typography>
           <Typography color="static.main" mb={5}>
-            Access your assets anywhere without compromising on security on our flagship interfaces built on Safe{' '}
-            {'{CORE}'}
+            Access your assets anywhere without compromising on security with our flagship interfaces built on Safe Core
           </Typography>
         </Grid>
         <Grid item md={8}>

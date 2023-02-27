@@ -8,6 +8,7 @@
 
 .listItem {
   font-size: 16px;
+  line-height: 20px;
   color: var(--mui-palette-primary-light);
 }
 
