@@ -59,7 +59,7 @@ const ParallaxText = ({
             </Box>
           ) : null}
         </Grid>
-        <Grid xs={12} md={6} display="flex" alignItems="center">
+        <Grid item xs={12} md={6} display="flex" alignItems="center">
           {children}
         </Grid>
       </Grid>

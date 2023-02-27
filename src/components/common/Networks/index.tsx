@@ -29,13 +29,13 @@ type NetworksProps = {
 const NetworksRow = ({ networksRow, chainsData }: { networksRow: NetworkChipProps[]; chainsData: ChainProps[] }) => {
   return (
     <>
-      {networksRow.map(({ name, icon, textColor, backgroundColor, isNew }) => {
+      {networksRow.map(({ name, icon, textColor, backgroundColor, isNew }, i) => {
         const chainData = chainsData?.find((chain) => chain.chainName === name)
         const chainColors = {
           textColor: chainData?.textColor || textColor || defaultThemeColors.textColor,
           backgroundColor: chainData?.backgroundColor || backgroundColor || defaultThemeColors.backgroundColor,
         }
-        return <NetworkChip key={name} icon={icon} name={name} isNew={isNew} {...chainColors} />
+        return <NetworkChip key={`${name}_${i}`} icon={icon} name={name} isNew={isNew} {...chainColors} />
       })}
     </>
   )
