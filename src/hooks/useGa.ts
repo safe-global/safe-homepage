@@ -1,7 +1,7 @@
 import { useCookieBannerContext } from '@/components/common/CookieBanner/CookieBannerContext'
 import { GOOGLE_ANALYTICS_TRACKING_ID, IS_PRODUCTION } from '@/config/constants'
 import { useEffect } from 'react'
-import ReactGA from 'react-ga'
+import ReactGA from 'react-ga4'
 
 let isAnalyticsInitialized = false
 
