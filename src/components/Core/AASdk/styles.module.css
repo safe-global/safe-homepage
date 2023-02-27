@@ -26,40 +26,40 @@
 
 .authKitLink {
   position: absolute;
-  width: 22.7%;
-  height: 17.3%;
-  left: 21.8%;
-  top: 23%;
+  width: 36.7%;
+  height: 15.7%;
+  left: 5.8%;
+  top: 25.5%;
   text-indent: -9999px;
   border-radius: 12px;
 }
 
 .onRampKitLink {
   position: absolute;
-  width: 23.7%;
-  height: 17.1%;
-  left: 54.3%;
-  top: 18.9%;
+  width: 37.8%;
+  height: 15.5%;
+  left: 58%;
+  top: 21.9%;
   text-indent: -9999px;
   border-radius: 8px;
 }
 
 .relayKitLink {
   position: absolute;
-  width: 23.6%;
-  height: 17.1%;
-  left: 55.3%;
-  top: 59.1%;
+  width: 38.1%;
+  height: 15.5%;
+  left: 59.4%;
+  top: 58.1%;
   text-indent: -9999px;
   border-radius: 8px;
 }
 
 .protocolKitLink {
   position: absolute;
-  width: 25.7%;
-  height: 17.1%;
-  left: 19.9%;
-  top: 62.8%;
+  width: 41%;
+  height: 15.7%;
+  left: 2.8%;
+  top: 61.5%;
   text-indent: -9999px;
   border-radius: 8px;
 }
@@ -73,6 +73,36 @@
 @media (min-width: 600px) {
   .wrapper {
     flex-direction: row;
+  }
+}
+
+@media (min-width: 900px) {
+  .authKitLink {
+    width: 22.7%;
+    height: 17.3%;
+    left: 21.8%;
+    top: 23%;
+  }
+
+  .onRampKitLink {
+    width: 23.7%;
+    height: 17.1%;
+    left: 54.3%;
+    top: 18.9%;
+  }
+
+  .relayKitLink {
+    width: 23.6%;
+    height: 17.1%;
+    left: 55.3%;
+    top: 59.1%;
+  }
+
+  .protocolKitLink {
+    width: 25.7%;
+    height: 17.1%;
+    left: 19.9%;
+    top: 62.8%;
   }
 }
 
