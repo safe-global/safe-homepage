@@ -136,7 +136,7 @@
   },
   {
     "title": "Available on 12+ networks",
-    "text": "And more including testnets",
+    "text": "And more including testnets.",
     "networks": [
       [
         {
@@ -187,6 +187,20 @@
             "src": "/images/chainsLogos/GnosisChainLogo.png",
             "alt": "Gnosis Chain logo"
           }
+        },
+        {
+          "name": "Aurora",
+          "icon": {
+            "src": "/images/chainsLogos/AuroraLogo.png",
+            "alt": "Aurora logo"
+          }
+        },
+        {
+          "name": "Arbitrum",
+          "icon": {
+            "src": "/images/chainsLogos/ArbitrumLogo.png",
+            "alt": "Arbitrum logo"
+          }
         }
       ],
       [
@@ -198,13 +212,6 @@
           }
         },
         {
-          "name": "Polygon",
-          "icon": {
-            "src": "/images/chainsLogos/PolygonLogo.png",
-            "alt": "Polygon logo"
-          }
-        },
-        {
           "name": "Gnosis Chain",
           "icon": {
             "src": "/images/chainsLogos/GnosisChainLogo.png",
@@ -212,10 +219,17 @@
           }
         },
         {
-          "name": "Aurora",
+          "name": "Optimism",
           "icon": {
-            "src": "/images/chainsLogos/AuroraLogo.png",
-            "alt": "Aurora logo"
+            "src": "/images/chainsLogos/OptimismLogo.png",
+            "alt": "Optimism logo"
+          }
+        },
+        {
+          "name": "BNB Smart Chain",
+          "icon": {
+            "src": "/images/chainsLogos/BNBLogo.png",
+            "alt": "BNB Chain logo"
           }
         },
         {
@@ -236,17 +250,24 @@
           "isNew": true
         },
         {
-          "name": "Optimism",
+          "name": "Polygon",
           "icon": {
-            "src": "/images/chainsLogos/OptimismLogo.png",
-            "alt": "Optimism logo"
+            "src": "/images/chainsLogos/PolygonLogo.png",
+            "alt": "Polygon logo"
           }
         },
         {
-          "name": "BNB Smart Chain",
+          "name": "Aurora",
           "icon": {
-            "src": "/images/chainsLogos/BNBLogo.png",
-            "alt": "BNB Chain logo"
+            "src": "/images/chainsLogos/AuroraLogo.png",
+            "alt": "Aurora logo"
+          }
+        },
+        {
+          "name": "Arbitrum",
+          "icon": {
+            "src": "/images/chainsLogos/ArbitrumLogo.png",
+            "alt": "Arbitrum logo"
           }
         }
       ]
