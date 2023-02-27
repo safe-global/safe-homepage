@@ -19,7 +19,9 @@ const ItemGrid = ({ title, items }: BaseBlock) => {
                     <Typography variant="h4" color="text.primary" mb={1}>
                       {title}
                     </Typography>
-                    <Typography color="primary.light">{text}</Typography>
+                    <Typography color="primary.light" component="div">
+                      {text}
+                    </Typography>
                   </div>
                   {link && (
                     <Link href={link.href} target="_blank" rel="noreferrer" passHref>
