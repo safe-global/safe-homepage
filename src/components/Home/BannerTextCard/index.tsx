@@ -36,8 +36,8 @@ const BannerTextCard = ({ title, text }: BaseBlock): ReactElement => {
     <div className={css.gradient} ref={bgRef}>
       <Container sx={{ textAlign: 'center' }}>
         <Box height={{ xs: '700px', md: '1090px' }} display="flex" alignItems="center">
-          <Grid container justifyContent="center">
-            <Grid item md={8}>
+          <Grid container justifyContent="center" flexDirection="column" alignItems="center">
+            <Grid item md={8} xl={6}>
               <Typography variant="h2" mb={4} textAlign="center">
                 {title}
               </Typography>

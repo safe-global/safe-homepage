@@ -11,7 +11,7 @@ const BigIconsCardGrid = ({ items }: BaseBlock): ReactElement => {
   return (
     <div className={css.bg}>
       <Container disableGutters>
-        <Grid container mt={{ xs: 8, md: '235px' }} spacing="30px">
+        <Grid container mt={{ xs: 8, md: '235px' }} spacing={{ xs: '30px', xl: '50px' }}>
           {items &&
             items.map((item, index) => (
               <Grid key={index} item xs={12} md={6}>

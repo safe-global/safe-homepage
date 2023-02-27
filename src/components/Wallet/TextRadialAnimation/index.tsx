@@ -11,7 +11,7 @@ const TextRadialAnimation = ({ title, text, link }: BaseBlock) => {
       <Grid
         container
         className={layoutCss.containerMedium}
-        spacing={{ xs: 6, md: '30px' }}
+        spacing={{ xs: 6, md: '30px', xl: '50px' }}
         flexDirection={{ xs: 'column-reverse', md: 'row' }}
       >
         <Grid item md={5}>

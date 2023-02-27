@@ -14,7 +14,7 @@ const TitleTextLinkedCardGrid = ({ title, text, caption, items }: BaseBlock): Re
         <Typography variant="caption" component="div" mb={{ xs: 2, md: 3 }}>
           {caption}
         </Typography>
-        <Grid container mb={{ xs: 8, md: '180px' }} columnSpacing="30px">
+        <Grid container mb={{ xs: 8, md: '180px' }} columnSpacing={{ xs: '30px', xl: '50px' }}>
           <Grid item md={6}>
             <Typography variant="h2" mb={4}>
               {title}
@@ -26,7 +26,7 @@ const TitleTextLinkedCardGrid = ({ title, text, caption, items }: BaseBlock): Re
           </Grid>
         </Grid>
 
-        <Grid container spacing="30px">
+        <Grid container spacing={{ xs: '30px', xl: '50px' }}>
           {items &&
             items.map((item, index) => {
               const isLastItem = index === items.length - 1

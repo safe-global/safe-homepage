@@ -60,7 +60,7 @@ export const Cards = ({
 }): ReactElement => {
   return (
     <Container id={id}>
-      <Grid container spacing={{ xs: 2, md: '30px' }} className={layoutCss.container}>
+      <Grid container spacing={{ xs: 2, md: '30px', xl: '50px' }} className={layoutCss.container}>
         <Grid item xs={12}>
           <Typography variant="h1" className={css.title} mb={{ xs: 3, md: 10 }}>
             {title}

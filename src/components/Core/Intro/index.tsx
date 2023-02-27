@@ -5,7 +5,12 @@ import type { BaseBlock } from '@/components/Home/types'
 const CoreIntro = ({ title, text, image, link }: BaseBlock) => {
   return (
     <Container>
-      <Grid container className={css.container} spacing={{ xs: 6, md: '30px' }} justifyContent="space-between">
+      <Grid
+        container
+        className={css.container}
+        spacing={{ xs: 6, md: '30px', xl: '50px' }}
+        justifyContent="space-between"
+      >
         <Grid item md={6} display="flex" justifyContent="center">
           <img className={css.coreImage} {...image} />
         </Grid>

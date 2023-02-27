@@ -8,7 +8,7 @@ import type { BaseBlock } from '@/components/Home/types'
 const Stats = ({ caption, title, text, items }: BaseBlock): ReactElement => {
   return (
     <Container>
-      <Grid container className={layoutCss.container} spacing="30px">
+      <Grid container className={layoutCss.container} spacing={{ xs: '30px', xl: '50px' }}>
         <Grid item md={1} />
         <Grid item md={5}>
           <Typography variant="caption" component="div" mb={2}>

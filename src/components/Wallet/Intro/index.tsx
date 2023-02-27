@@ -13,7 +13,7 @@ const Intro = ({ image, title, buttons }: BaseBlock & { gif: BaseBlock['image'] 
       <Grid
         container
         className={css.container}
-        spacing={{ xs: 6, md: '30px' }}
+        spacing={{ xs: 6, md: '30px', xl: '50px' }}
         justifyContent="space-between"
         mt="10px"
         mb={1}

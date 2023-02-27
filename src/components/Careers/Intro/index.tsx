@@ -31,13 +31,13 @@ export const Intro = ({
           <PositionsCount href={link.href} className={css.chip} />
         </Grid>
 
-        <Grid item xs={12} md={10}>
+        <Grid item xs={12} md={10} xl={5}>
           <Typography variant="h1" className={css.title}>
             {title}
           </Typography>
         </Grid>
 
-        <Grid item xs={12} md={6} textAlign="center">
+        <Grid item xs={12} md={6} xl={5} textAlign="center">
           <Typography className={css.text} mb={3}>
             {text}
           </Typography>
