@@ -7,6 +7,7 @@ import css from './styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
 import clsx from 'clsx'
 import LinkButton from '@/components/common/LinkButton'
+import Link from 'next/link'
 
 export const BannerCta = ({ title, buttons, caption }: BaseBlock): ReactElement => {
   return (
@@ -30,17 +31,19 @@ export const BannerCta = ({ title, buttons, caption }: BaseBlock): ReactElement 
               {buttons.map((button, index) => {
                 const { text, variant, href } = button
                 const isButton = variant === 'button'
-                if (isButton) {
-                  return (
-                    <Button key={index} href={href} variant="contained" size="large" color="secondary">
-                      {text}
-                    </Button>
-                  )
-                }
+
                 return (
-                  <LinkButton key={index} href={href} color="secondary" sx={{ width: 'fit-content' }}>
-                    {text}
-                  </LinkButton>
+                  <Link key={index} href={href} target="_blank" rel="noreferrer" passHref>
+                    {isButton ? (
+                      <Button variant="contained" size="large" color="secondary">
+                        {text}
+                      </Button>
+                    ) : (
+                      <LinkButton color="secondary" sx={{ width: 'fit-content' }}>
+                        {text}
+                      </LinkButton>
+                    )}
+                  </Link>
                 )
               })}
             </Box>
