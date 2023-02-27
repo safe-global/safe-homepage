@@ -223,20 +223,20 @@
       },
       {
         "image": {
-          "src": "/images/kpmg.svg",
-          "alt": "KPMG International Limited"
-        }
-      },
-      {
-        "image": {
           "src": "/images/stripe.svg",
           "alt": "Stripe"
         }
       },
       {
         "image": {
-          "src": "/images/abinbev.svg",
-          "alt": "ABInBev"
+          "src": "/images/polygon.svg",
+          "alt": "Polygon"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/chainlink.svg",
+          "alt": "Chainlink"
         }
       }
     ],
