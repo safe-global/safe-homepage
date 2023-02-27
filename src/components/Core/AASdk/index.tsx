@@ -1,15 +1,14 @@
 import type { BaseBlock } from '@/components/Home/types'
-import { Chip, Container, Grid, Typography, useMediaQuery } from '@mui/material'
+import { Chip, Container, Grid, type Theme, Typography, useMediaQuery } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 import LinkButton from '@/components/common/LinkButton'
 import clsx from 'clsx'
 import Link from 'next/link'
 import { RELAY_KIT_LINK, ONRAMP_KIT_LINK, AUTH_KIT_LINK, PROTOCOL_KIT_LINK } from '@/config/constants'
-import { theme } from '@/styles/theme'
 
 const AASdk = ({ title, caption, text, link }: BaseBlock) => {
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'))
+  const isSmallScreen = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'))
 
   return (
     <Container className={css.wrapper}>
