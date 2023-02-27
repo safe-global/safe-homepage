@@ -1,14 +1,10 @@
 import { type ReactElement, useState, useCallback, type Dispatch, type SetStateAction } from 'react'
 import _cloneDeepWith from 'lodash/cloneDeepWith'
 import { Button } from '@mui/material'
+import EditableItem from './EditableItem'
 import { useRouter } from 'next/router'
 import css from './styles.module.css'
 import getComponentByName from '@/lib/getComponentByName'
-import dynamic from 'next/dynamic'
-
-const EditableItem = dynamic(() => import('./EditableItem'), {
-  ssr: false,
-})
 
 const ADMIN_URL_HASH = 'admin'
 
