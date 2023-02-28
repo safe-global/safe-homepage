@@ -1,3 +1,7 @@
+.block {
+  margin-bottom: 80px;
+}
+
 .block a {
   text-decoration: underline;
   color: var(--mui-palette-secondary-light);
