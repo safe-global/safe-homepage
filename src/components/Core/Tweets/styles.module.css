@@ -1,9 +1,7 @@
 .gradient {
-  padding-top: 40px;
-  padding-bottom: 40px;
   position: relative;
   overflow: hidden;
-  pointer-events: none;
+  margin-bottom: 150px;
 }
 
 .tweetsGrid {
@@ -42,6 +40,7 @@
   .gradient {
     height: 650px;
     overflow: hidden;
+    margin-bottom: 350px;
   }
 
   .gradient:before,
@@ -52,6 +51,7 @@
     height: 100%;
     position: absolute;
     width: 10%;
+    pointer-events: none;
   }
 
   .gradient:before {

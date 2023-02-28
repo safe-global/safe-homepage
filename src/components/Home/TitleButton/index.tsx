@@ -13,7 +13,7 @@ const TitleButton = ({ title, link }: TitleButtonProps) => {
   return (
     <Container>
       <Divider />
-      <Grid container className={layoutCss.container} justifyContent="center">
+      <Grid container className={layoutCss.containerMedium} justifyContent="center">
         <Grid item md={6} textAlign="center">
           <Typography variant="h2" mb={5}>
             {title}

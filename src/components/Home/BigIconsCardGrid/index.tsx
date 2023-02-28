@@ -3,6 +3,7 @@ import { Container, Grid, Typography } from '@mui/material'
 
 import LinkButton from '@/components/common/LinkButton'
 import css from './styles.module.css'
+import layoutCss from '@/components/common/styles.module.css'
 import ArrowIcon from '@/public/images/arrow-out-icon.svg'
 import type { BaseBlock } from '@/components/Home/types'
 import Link from 'next/link'
@@ -11,7 +12,7 @@ const BigIconsCardGrid = ({ items }: BaseBlock): ReactElement => {
   return (
     <div className={css.bg}>
       <Container disableGutters>
-        <Grid container mt={{ xs: 8, md: '235px' }} spacing={{ xs: '30px', xl: '50px' }}>
+        <Grid container className={layoutCss.containerMedium} spacing={{ xs: '30px', xl: '50px' }}>
           {items &&
             items.map((item, index) => (
               <Grid key={index} item xs={12} md={6}>

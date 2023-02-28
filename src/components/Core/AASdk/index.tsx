@@ -11,8 +11,8 @@ const AASdk = ({ title, caption, text, link }: BaseBlock) => {
   const isSmallScreen = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'))
 
   return (
-    <Container className={css.wrapper}>
-      <Grid container className={layoutCss.containerShort}>
+    <Container>
+      <Grid container className={layoutCss.containerMedium}>
         <Grid item md={8} display="flex" flexDirection="column" justifyContent="center" gap={{ xs: 3, md: 4 }} mb={5}>
           <Chip
             label={

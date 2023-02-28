@@ -3,6 +3,7 @@ import type { GridProps } from '@mui/material'
 import type { ReactElement } from 'react'
 import type { BaseBlock } from '@/components/Home/types'
 import css from './styles.module.css'
+import layoutCss from '@/components/common/styles.module.css'
 
 const GridItem = ({ image, title, text, caption, width = 4 }: BaseBlock & { width: GridProps['md'] }): ReactElement => {
   return (
@@ -46,7 +47,7 @@ export type UspBlockProps = {
 
 const UspBlock = ({ variant, title, text, items }: UspBlockProps): ReactElement => (
   <Container>
-    <Grid container className={css.container} flexDirection="column" alignItems="center">
+    <Grid container className={layoutCss.containerShort} flexDirection="column" alignItems="center">
       <Typography variant="h2" mb={3}>
         {title}
       </Typography>

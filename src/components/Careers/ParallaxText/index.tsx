@@ -17,7 +17,7 @@ const ParallaxText = ({ title, text, children }: ParallaxTextProps): ReactElemen
         container
         direction="column"
         spacing={{ xs: '48px', md: '24px' }}
-        className={clsx(layoutCss.container, css.container)}
+        className={clsx(layoutCss.containerMedium, css.container)}
       >
         <Grid item className={css.text} mb={{ md: 10 }}>
           <Typography variant="h2" textAlign="center">

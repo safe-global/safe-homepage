@@ -7,7 +7,7 @@ import type { BaseBlock } from '@/components/Home/types'
 const TitleLogos = ({ title, items }: BaseBlock): ReactElement => {
   return (
     <Container>
-      <div className={layoutCss.container}>
+      <div className={layoutCss.containerMedium}>
         <Typography variant="h2" mb={8} textAlign="center">
           {title}
         </Typography>

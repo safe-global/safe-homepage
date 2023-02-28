@@ -45,7 +45,7 @@ const Networks = ({ title, text, networks }: NetworksProps) => {
   const chainsData = useContext(ChainsContext)
 
   return (
-    <div className={layoutCss.container}>
+    <div className={layoutCss.containerMedium}>
       <Typography variant="h2" mb={5} align="center">
         {title}
       </Typography>

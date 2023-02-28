@@ -13,6 +13,7 @@ import css from './styles.module.css'
 const parsePosition = ({ url, location, name }: Position): CardProps => {
   return {
     title: name,
+    text: '',
     link: { href: url, title: 'See position' },
     extra: (
       <Typography variant="caption" className={css.header}>

@@ -8,25 +8,21 @@ import ArrowIcon from '@/public/images/arrow-out-icon.svg'
 
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
+import type { BaseBlock } from '@/components/Home/types'
+import Link from 'next/link'
 
-export type CardProps = {
-  header?: {
-    src: string
-    alt: string
-  }
-  title: string
-  link: { href: string; title: string }
+export type CardProps = BaseBlock & {
   highlight?: boolean
   extra?: ReactElement
 }
 
-const Card = ({ header, title, link, highlight, extra }: CardProps): ReactElement => {
+const Card = ({ image, title, link, highlight, extra }: CardProps): ReactElement => {
   return (
-    <Grid key={title} item xs={12} md={4}>
+    <Grid item xs={12} md={4}>
       <div className={clsx(css.card, highlight ? css.highlight : css.outline)}>
-        {header && (
+        {image && (
           <div className={css.header}>
-            <img {...header} />
+            <img {...image} />
           </div>
         )}
 
@@ -36,10 +32,13 @@ const Card = ({ header, title, link, highlight, extra }: CardProps): ReactElemen
           {title}
         </Typography>
 
-        {/* @ts-ignore */}
-        <LinkButton underline={false} className={css.link} fullSize href={link.href} target="_blank" rel="noreferrer">
-          {link.title}
-        </LinkButton>
+        {link && (
+          <Link href={link.href} target="_blank" rel="noreferrer" passHref>
+            <LinkButton underline={false} className={css.link} fullSize>
+              {link.title}
+            </LinkButton>
+          </Link>
+        )}
 
         <ArrowIcon className={css.arrow} />
       </div>
@@ -60,9 +59,9 @@ export const Cards = ({
 }): ReactElement => {
   return (
     <Container id={id}>
-      <Grid container spacing={{ xs: 2, md: '30px', xl: '50px' }} className={layoutCss.container}>
+      <Grid container spacing={{ xs: 2, md: '30px', xl: '50px' }} className={layoutCss.containerMedium}>
         <Grid item xs={12}>
-          <Typography variant="h1" className={css.title} mb={{ xs: 3, md: 10 }}>
+          <Typography variant="h1" className={css.title} mb={{ xs: 3, md: '50px' }}>
             {title}
           </Typography>
         </Grid>

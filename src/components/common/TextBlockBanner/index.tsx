@@ -2,12 +2,19 @@ import { Container, Grid, Typography } from '@mui/material'
 import IOSDownload from '@/public/images/ios-download.svg'
 import GPlayDownload from '@/public/images/google-play-download.svg'
 import css from './styles.module.css'
+import layoutCss from '@/components/common/styles.module.css'
 import { IOS_LINK, GPLAY_LINK } from '@/config/constants'
 
 const TextBlockBanner = () => (
   <div className={css.gradient}>
     <Container>
-      <Grid container flexDirection="column" alignItems="center" justifyContent="center">
+      <Grid
+        container
+        className={layoutCss.containerMedium}
+        flexDirection="column"
+        alignItems="center"
+        justifyContent="center"
+      >
         <Grid item md={6} sx={{ textAlign: 'center' }} pt={12}>
           <Typography variant="h2" color="static.main" mb={3}>
             Use Safe <u>WALLET</u> anywhere
