@@ -39,6 +39,15 @@ declare module '@mui/material/Button' {
 }
 
 export const theme = createTheme({
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1630,
+    },
+  },
   palette: {
     mode: 'dark',
     ...palette,
@@ -135,10 +144,20 @@ export const theme = createTheme({
       },
     },
     MuiContainer: {
+      defaultProps: {
+        fixed: true,
+        maxWidth: 'xl',
+        disableGutters: true,
+      },
       styleOverrides: {
         root: {
-          paddingLeft: '16px',
-          paddingRight: '16px',
+          paddingLeft: '15px',
+          paddingRight: '15px',
+
+          '@media (min-width:1630px)': {
+            paddingLeft: '24px',
+            paddingRight: '24px',
+          },
 
           '& .MuiContainer-root': {
             paddingLeft: 0,

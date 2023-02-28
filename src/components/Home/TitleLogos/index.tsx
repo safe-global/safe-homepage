@@ -2,18 +2,9 @@ import { Container, Grid, Typography } from '@mui/material'
 import type { ReactElement } from 'react'
 
 import layoutCss from '@/components/common/styles.module.css'
+import type { BaseBlock } from '@/components/Home/types'
 
-type TitleLogosProps = {
-  title: string
-  items: {
-    image: {
-      src: string
-      alt: string
-    }
-  }[]
-}
-
-const TitleLogos = ({ title, items }: TitleLogosProps): ReactElement => {
+const TitleLogos = ({ title, items }: BaseBlock): ReactElement => {
   return (
     <Container>
       <div className={layoutCss.container}>

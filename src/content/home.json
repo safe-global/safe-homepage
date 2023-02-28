@@ -7,7 +7,7 @@
   {
     "caption": "Safe at scale",
     "title": "<i>Safe</i> accounts hold and protect billions of $$$ in assets",
-    "text": "Previously called Gnosis Safe, <i>Safe</i> spun out with a mission to build a better standard for ownership with smart contract accounts. Since 2018, Safe has grown to support several EVM chains.",
+    "text": "Previously called Gnosis Safe, <i>Safe</i> spun out with a mission to build a better standard for ownership with smart contract accounts. Since 2018, Safe has grown to support several EVM chains",
     "items": [
       {
         "title": "4M+",
@@ -26,7 +26,7 @@
   },
   {
     "title": "Available on 12+ networks",
-    "text": "And more including testnets.",
+    "text": "and more, including testnets",
     "networks": [
       [
         {
@@ -223,20 +223,20 @@
       },
       {
         "image": {
-          "src": "/images/kpmg.svg",
-          "alt": "KPMG International Limited"
-        }
-      },
-      {
-        "image": {
           "src": "/images/stripe.svg",
           "alt": "Stripe"
         }
       },
       {
         "image": {
-          "src": "/images/abinbev.svg",
-          "alt": "ABInBev"
+          "src": "/images/polygon.svg",
+          "alt": "Polygon"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/chainlink.svg",
+          "alt": "Chainlink"
         }
       }
     ],
@@ -290,7 +290,7 @@
     "variant": "image-text",
     "caption": "Security",
     "title": "Our contracts are<br /><b>the most<br />battle-tested</b>",
-    "text": "Since 2018, our smart contracts have passed the highest possible security standards in the industry including Formal Verification.",
+    "text": "Since 2018, our smart contracts have passed the highest possible security standards in the industry including Formal Verification",
     "buttons": [
       {
         "text": "Read report",

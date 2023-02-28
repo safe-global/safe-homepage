@@ -26,7 +26,7 @@ const ParallaxText = ({
       <Grid
         container
         className={clsx(layoutCss.containerMedium, variant === 'image-text' ? css.imageFirst : css.textFirst)}
-        spacing={{ xs: 6, md: '30px' }}
+        spacing={{ xs: 6, md: '30px', xl: '50px' }}
         justifyContent="space-between"
       >
         <Grid item xs={12} md={5} display="flex" flexDirection="column" justifyContent="center" gap={{ xs: 3, md: 4 }}>
