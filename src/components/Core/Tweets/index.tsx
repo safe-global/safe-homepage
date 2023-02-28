@@ -2,10 +2,11 @@ import type { BaseBlock } from '@/components/Home/types'
 import { Container, Link, Typography } from '@mui/material'
 import HeaderParticles from '@/public/images/header_particles.svg'
 import css from './styles.module.css'
+import layoutCss from '@/components/common/styles.module.css'
 
 const Tweets = ({ caption, title, items }: BaseBlock) => (
   <>
-    <Container>
+    <Container className={layoutCss.container}>
       <Typography variant="caption" textAlign="center" component="div" mt="100px" mb={3}>
         {caption}
       </Typography>

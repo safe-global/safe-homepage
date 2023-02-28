@@ -18,7 +18,7 @@ const TextGrid = ({
 }) => {
   return (
     <Container>
-      <Grid container className={layoutCss.containerShort}>
+      <Grid container className={layoutCss.containerMedium}>
         <Grid container className={`${image ? css.wrapper : ''}`} justifyContent="space-between">
           <Grid
             item

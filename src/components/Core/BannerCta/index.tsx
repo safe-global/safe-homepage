@@ -11,7 +11,7 @@ import Link from 'next/link'
 
 export const BannerCta = ({ title, buttons, caption }: BaseBlock): ReactElement => {
   return (
-    <Container className={clsx(layoutCss.containerShort, css.wrapper)}>
+    <Container className={clsx(layoutCss.containerMedium, css.wrapper)}>
       <div className={css.container}>
         <Container>
           <Chip
