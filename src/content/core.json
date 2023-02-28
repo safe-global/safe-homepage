@@ -2,9 +2,8 @@
   {
     "title": "Safe <u>CORE</u> is Account Abstraction",
     "text": "Full-stack. Battle-tested. Open Source.",
-    "image": {
-      "src": "/images/core-chip.png",
-      "alt": "Safe Core chip"
+    "video": {
+      "src": "/videos/intro-chip.webm"
     },
     "link": {
       "title": "View documentation",
