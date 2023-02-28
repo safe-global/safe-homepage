@@ -1,11 +1,5 @@
-.container {
-  margin-top: 150px;
-}
-
-.containerMedium {
-  margin-top: 150px;
-}
-
+.container,
+.containerMedium,
 .containerShort {
   margin-top: 150px;
 }
