@@ -9,6 +9,11 @@
   letter-spacing: -0.01em;
 }
 
+.video {
+  max-width: 90%;
+  height: auto;
+}
+
 .coreImage {
   width: 450px;
   height: auto;
