@@ -81,14 +81,6 @@ const resourcesItems = [
 
 const subFooterItems = [
   {
-    label: 'Terms',
-    href: AppRoutes.terms,
-  },
-  {
-    label: 'Privacy',
-    href: AppRoutes.privacy,
-  },
-  {
     label: 'Press Kit',
     href: PRESS_LINK,
     target: '_blank',
@@ -101,10 +93,6 @@ const subFooterItems = [
   {
     label: 'Imprint',
     href: AppRoutes.imprint,
-  },
-  {
-    label: 'Cookie Policy',
-    href: AppRoutes.cookie,
   },
   {
     label: 'Preferences',
