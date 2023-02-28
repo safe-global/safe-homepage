@@ -17,7 +17,7 @@ export const Values = ({
 }): ReactElement => {
   return (
     <Container>
-      <Grid container className={clsx(layoutCss.container, css.container)}>
+      <Grid container className={clsx(layoutCss.containerShort, css.container)}>
         <Typography variant="h2" className={css.title}>
           {title}
         </Typography>

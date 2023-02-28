@@ -1,6 +1,5 @@
 import type { ReactNode } from 'react'
 import { Container, Grid, Typography } from '@mui/material'
-import layoutCss from '@/components/common/styles.module.css'
 import ArrowIcon from '@/public/images/arrow-out-icon.svg'
 import css from './styles.module.css'
 import FourSquareAnimation from '@/components/common/FourSquareAnimation'

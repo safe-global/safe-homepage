@@ -40,7 +40,7 @@
     "title": "<i>Safe</i> in the news",
     "items": [
       {
-        "header": {
+        "image": {
           "src": "/images/mirror.svg",
           "alt": "Mirror logo"
         },
@@ -51,7 +51,7 @@
         }
       },
       {
-        "header": {
+        "image": {
           "src": "/images/yahoo-finance.svg",
           "alt": "Yahoo Finance logo"
         },
@@ -62,7 +62,7 @@
         }
       },
       {
-        "header": {
+        "image": {
           "src": "/images/decrypt.svg",
           "alt": "Decrypt logo"
         },
