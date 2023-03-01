@@ -3,7 +3,7 @@ import Head from 'next/head'
 const defaultMetaTags = {
   pageTitle: 'Safe',
   description: 'Safe is the most trusted platform to manage digital assets on Ethereum',
-  image: '/images/social-share.png',
+  image: 'https://safe.global/images/og-image.png',
   site: 'safe',
 }
 
