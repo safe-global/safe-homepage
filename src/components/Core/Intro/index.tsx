@@ -2,7 +2,7 @@ import { Button, Container, Divider, Grid, Typography } from '@mui/material'
 import css from './styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
 
-const CoreIntro = ({ title, text, video, link }: BaseBlock & { video: { src: string } }) => {
+const CoreIntro = ({ title, text, link }: BaseBlock) => {
   return (
     <Container>
       <Grid
@@ -14,7 +14,9 @@ const CoreIntro = ({ title, text, video, link }: BaseBlock & { video: { src: str
       >
         <Grid item md={6} display="flex" justifyContent="center">
           <video autoPlay muted loop className={css.video}>
-            <source src={video.src} type="video/webm" />
+            <source src="/videos/intro-chip.webm" type="video/webm" />
+            <source src="/videos/intro-chip.mp4" type="video/mp4" />
+            <img src="/images/intro-chip.png" alt="Core Chip" />
           </video>
         </Grid>
         <Grid item md={6}>
