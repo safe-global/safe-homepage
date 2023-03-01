@@ -12,7 +12,7 @@ type TitleButtonProps = {
 const TitleButton = ({ title, link }: TitleButtonProps) => {
   return (
     <Container>
-      <Divider />
+      <Divider sx={{ mt: '100px' }} />
       <Grid container className={layoutCss.containerMedium} justifyContent="center">
         <Grid item md={6} textAlign="center">
           <Typography variant="h2" mb={5}>
