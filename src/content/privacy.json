@@ -1,5 +1,9 @@
 [
   {
+    "pageTitle": "Safe – Privacy",
+    "component": "common/MetaTags"
+  },
+  {
     "title": "Privacy",
     "component": "common/TextBlock"
   }

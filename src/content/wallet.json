@@ -1,5 +1,9 @@
 [
   {
+    "pageTitle": "Safe Wallet – Self-custodial multisig wallet for the Ethereum ecosystem",
+    "component": "common/MetaTags"
+  },
+  {
     "image": {
       "src": "/images/Wallet/clients.png",
       "alt": "Web and mobile clients"

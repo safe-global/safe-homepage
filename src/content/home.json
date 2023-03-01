@@ -1,5 +1,9 @@
 [
   {
+    "pageTitle": "Safe – Previously Gnosis Safe – Crypto wallet, web3 account abstraction developer stack",
+    "component": "common/MetaTags"
+  },
+  {
     "title": "Unlock Digital Asset Ownership",
     "text": "<i>Safe</i> is the most trusted decentralized custody protocol and collective asset management platform on Ethereum and the EVM",
     "component": "Home/Intro"

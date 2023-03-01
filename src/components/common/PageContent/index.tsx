@@ -5,8 +5,10 @@ import EditableItem from './EditableItem'
 import { useRouter } from 'next/router'
 import css from './styles.module.css'
 import getComponentByName from '@/lib/getComponentByName'
+import MetaTags from '../MetaTags'
 
 const ADMIN_URL_HASH = 'admin'
+const SEO_COMPONENT = 'common/MetaTags'
 
 const EditableFields = {
   title: true,
@@ -47,6 +49,9 @@ const PageContent = ({ content }: { content: ContentItems }): ReactElement => {
   const [saved, setSaved] = useState<boolean>(false)
   const isEditable = useRouter().asPath.split('#')[1] === ADMIN_URL_HASH
 
+  const seo = newContent.find((item) => item.component === SEO_COMPONENT)
+  const mainContent = newContent.filter((item) => item.component !== SEO_COMPONENT)
+
   const onSave = useCallback(() => {
     const data = JSON.stringify(newContent, null, 2)
     navigator.clipboard.writeText(data)
@@ -55,27 +60,31 @@ const PageContent = ({ content }: { content: ContentItems }): ReactElement => {
   }, [newContent])
 
   return (
-    <div className={isEditable ? css.container : undefined}>
-      {/* Render components from the content */}
-      {newContent.map(({ component, ...rest }, index) => {
-        const contentProps = getEditableProps(rest, setNewContent, isEditable)
-        const Component = getComponentByName(component, NotFoundComponent)
-        return <Component {...contentProps} key={index} />
-      })}
+    <>
+      {seo && <MetaTags {...seo} />}
 
-      {/* Save edits button */}
-      {newContent !== content && (
-        <Button
-          variant="contained"
-          size="large"
-          onClick={onSave}
-          sx={{ position: 'fixed', bottom: '10px', right: '10px', zIndex: 1000 }}
-          disabled={saved}
-        >
-          {saved ? 'Copied JSON' : 'Save edits'}
-        </Button>
-      )}
-    </div>
+      <div className={isEditable ? css.container : undefined}>
+        {/* Render components from the content */}
+        {mainContent.map(({ component, ...rest }, index) => {
+          const contentProps = getEditableProps(rest, setNewContent, isEditable)
+          const Component = getComponentByName(component, NotFoundComponent)
+          return <Component {...contentProps} key={index} />
+        })}
+
+        {/* Save edits button */}
+        {newContent !== content && (
+          <Button
+            variant="contained"
+            size="large"
+            onClick={onSave}
+            sx={{ position: 'fixed', bottom: '10px', right: '10px', zIndex: 1000 }}
+            disabled={saved}
+          >
+            {saved ? 'Copied JSON' : 'Save edits'}
+          </Button>
+        )}
+      </div>
+    </>
   )
 }
 

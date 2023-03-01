@@ -1,5 +1,9 @@
 [
   {
+    "pageTitle": "Safe – Terms and Conditions",
+    "component": "common/MetaTags"
+  },
+  {
     "title": "Terms and conditions",
     "component": "common/TextBlock"
   }
