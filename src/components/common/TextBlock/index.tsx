@@ -6,7 +6,7 @@ import css from './styles.module.css'
 
 const TextBlock = ({ title, text }: BaseBlock) => {
   return (
-    <Container className={clsx(layoutCss.containerShort, css.block)}>
+    <Container className={clsx(layoutCss.containerTiny, css.block)}>
       <Typography variant="h1">{title}</Typography>
       {text}
     </Container>

@@ -85,6 +85,7 @@
   .value {
     font-size: 80px;
     line-height: 90px;
+    max-width: 90%;
   }
 
   .list {
@@ -102,5 +103,11 @@
   .rule::before,
   .rule::after {
     display: block;
+  }
+}
+
+@media (min-width: 1630px) {
+  .tree {
+    width: 791px;
   }
 }
