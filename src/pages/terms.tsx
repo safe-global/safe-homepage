@@ -1,14 +1,12 @@
-import Head from 'next/head'
 import type { NextPage } from 'next'
-
 import { Terms } from '@/components/Terms'
+import MetaTags from '@/components/common/MetaTags'
 
 const TermsPage: NextPage = () => {
   return (
     <>
-      <Head>
-        <title>Safe – Terms and Conditions</title>
-      </Head>
+      <MetaTags title="Safe – Terms and Conditions" />
+
       <Terms />
     </>
   )

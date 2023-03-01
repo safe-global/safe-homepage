@@ -1,14 +1,12 @@
-import Head from 'next/head'
 import type { NextPage } from 'next'
-
 import { Imprint } from '@/components/Imprint'
+import MetaTags from '@/components/common/MetaTags'
 
 const ImprintPage: NextPage = () => {
   return (
     <>
-      <Head>
-        <title>Safe – Imprint</title>
-      </Head>
+      <MetaTags title="Safe – Imprint" />
+
       <Imprint />
     </>
   )

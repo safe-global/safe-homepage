@@ -1,14 +1,12 @@
-import Head from 'next/head'
 import type { NextPage } from 'next'
-
 import { Cookie } from '@/components/Cookie'
+import MetaTags from '@/components/common/MetaTags'
 
 const CookiePage: NextPage = () => {
   return (
     <>
-      <Head>
-        <title>Safe – Cookie Policy</title>
-      </Head>
+      <MetaTags title="Safe – Cookie Policy" />
+
       <Cookie />
     </>
   )

@@ -1,14 +1,12 @@
-import Head from 'next/head'
 import type { NextPage } from 'next'
-
 import { Licenses } from '@/components/Licenses'
+import MetaTags from '@/components/common/MetaTags'
 
 const LicensesPage: NextPage = () => {
   return (
     <>
-      <Head>
-        <title>Safe – Licenses</title>
-      </Head>
+      <MetaTags title="Safe – Licenses" />
+
       <Licenses />
     </>
   )

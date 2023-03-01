@@ -7,9 +7,7 @@
 
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import createEmotionServer from '@emotion/server/create-instance'
-
 import { createEmotionCache } from '@/styles/emotion'
-import MetaTags from '@/components/common/MetaTags'
 
 export default class MyDocument extends Document {
   render() {
@@ -17,7 +15,16 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <meta name="emotion-insertion-point" content="" />
-          <MetaTags />
+
+          <meta name="theme-color" content="#12FF80" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-title" content="safe" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png" />
+
           {(this.props as any).emotionStyleTags}
         </Head>
         <body>
