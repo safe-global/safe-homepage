@@ -16,7 +16,7 @@ export default class MyDocument extends Document {
         <Head>
           <meta name="emotion-insertion-point" content="" />
 
-          <meta name="theme-color" content="#12FF80" />
+          <meta name="theme-color" content="#121312" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-title" content="safe" />
           <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
