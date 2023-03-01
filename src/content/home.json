@@ -1,7 +1,7 @@
 [
   {
     "title": "Unlock Digital Asset Ownership",
-    "text": "<i>Safe</i> is the most trusted decentralized custody protocol and collective asset management platform on Ethereum",
+    "text": "<i>Safe</i> is the most trusted decentralized custody protocol and collective asset management platform on Ethereum and the EVM",
     "component": "Home/Intro"
   },
   {
@@ -312,7 +312,7 @@
     "items": [
       {
         "title": "Forum",
-        "caption": "Be a part of community",
+        "caption": "Join community",
         "link": {
           "href": "https://forum.safe.global"
         }
