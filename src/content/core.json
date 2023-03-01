@@ -1,5 +1,9 @@
 [
   {
+    "pageTitle": "Safe Core – Full stack account abstraction",
+    "component": "common/MetaTags"
+  },
+  {
     "title": "Safe <u>CORE</u> is Account Abstraction",
     "text": "Full-stack. Battle-tested. Open-source.",
     "video": {

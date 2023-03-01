@@ -1,5 +1,9 @@
 [
   {
+    "pageTitle": "Jobs at Safe",
+    "component": "common/MetaTags"
+  },
+  {
     "title": "Impact the future of ownership",
     "text": "Our team is on a mission to unlock digital ownership for the world. By building robust and accessible tools, we aim to fix some of web3’s biggest challenges",
     "link": {
