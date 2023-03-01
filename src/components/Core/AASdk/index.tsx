@@ -34,6 +34,10 @@ const AASdk = ({ title, caption, text, link }: BaseBlock) => {
         <div className={css.videoWrapper}>
           <video autoPlay muted loop className={css.video}>
             <source src={isSmallScreen ? '/videos/aa-sdk-mobile.webm' : '/videos/aa-sdk.webm'} type="video/webm" />
+            <source
+              src={isSmallScreen ? '/videos/aa-sdk-mobile.hevc.mp4' : '/videos/aa-sdk.hevc.mp4'}
+              type="video/mp4"
+            />
             <source src={isSmallScreen ? '/videos/aa-sdk-mobile.mp4' : '/videos/aa-sdk.mp4'} type="video/mp4" />
             <img src="/images/aa-sdk.png" alt="AA SDK Overview" />
           </video>
