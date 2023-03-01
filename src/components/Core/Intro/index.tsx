@@ -15,6 +15,7 @@ const CoreIntro = ({ title, text, link }: BaseBlock) => {
         <Grid item md={6} display="flex" justifyContent="center">
           <video autoPlay muted loop className={css.video}>
             <source src="/videos/intro-chip.webm" type="video/webm" />
+            <source src="/videos/intro-chip.hevc.mp4" type="video/mp4" />
             <source src="/videos/intro-chip.mp4" type="video/mp4" />
             <img src="/images/intro-chip.png" alt="Core Chip" />
           </video>
