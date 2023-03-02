@@ -3,7 +3,7 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "io.gnosis.instantsafe",
+      "package_name": "io.gnosis.safe",
       "sha256_cert_fingerprints": [
         "BE:40:A7:47:33:CA:5B:B6:93:9A:AE:CE:12:11:B0:0F:E1:BC:EA:6C:6C:E6:B6:03:CF:0D:28:FF:46:AE:46:1C"
       ]

@@ -1,22 +1,32 @@
 {
-    "applinks": {
-        "details": [
-            {
-                "appIDs": [
-                    "ZKG876RKJ8.io.gnosis.multisig.prod.mainnet",
-                    "ZKG876RKJ8.io.gnosis.multisig.prerelease",
-                    "ZKG876RKJ8.io.gnosis.multisig.dev.mainnet",
-                    "ZKG876RKJ8.io.gnosis.multisig.dev.rinkeby",
-                    "ZKG876RKJ8.io.gnosis.multisig.staging.mainnet",
-                    "ZKG876RKJ8.io.gnosis.multisig.staging.rinkeby"
-                ],
-                "components": [
-                    {
-                        "/": "*",
-                        "comment": "Matches all universal links"
-                    }
-                ]
-            }
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "ZKG876RKJ8.io.gnosis.multisig.prod.mainnet",
+          "ZKG876RKJ8.io.gnosis.multisig.prerelease",
+          "ZKG876RKJ8.io.gnosis.multisig.dev.mainnet",
+          "ZKG876RKJ8.io.gnosis.multisig.dev.rinkeby",
+          "ZKG876RKJ8.io.gnosis.multisig.staging.mainnet",
+          "ZKG876RKJ8.io.gnosis.multisig.staging.rinkeby"
+        ],
+        "components": [
+          {
+            "/": "*",
+            "comment": "Matches all universal links"
+          }
         ]
+      }
+    ],
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.gnosis.safe.internal",
+      "sha256_cert_fingerprints": [
+        "a8:de:8a:80:10:e9:aa:9d:80:7a:d6:4a:0c:d9:c4:62:11:27:01:ed"
+      ]
     }
+  }
 }
