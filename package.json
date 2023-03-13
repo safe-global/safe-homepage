@@ -2,7 +2,7 @@
   "name": "safe-landing-page",
   "homepage": "https://github.com/safe-global/safe-landing-page",
   "license": "GPL-3.0",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "build": "next build && next export",
     "lint": "tsc && next lint",
