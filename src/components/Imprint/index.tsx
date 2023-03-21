@@ -3,5 +3,5 @@ import PageContent from '@/components/common/PageContent'
 import imprintContent from '@/content/imprint.json'
 
 export const Imprint = (): ReactElement => {
-  return <PageContent content={imprintContent} />
+  return <PageContent content={imprintContent} path="imprint.json" />
 }

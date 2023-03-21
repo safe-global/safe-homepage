@@ -6,6 +6,6 @@ import PageContent from '../common/PageContent'
 
 export const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => (
   <ChainsContext.Provider value={props.chainsData}>
-    <PageContent content={homeContent} />
+    <PageContent content={homeContent} path="home.json" />
   </ChainsContext.Provider>
 )

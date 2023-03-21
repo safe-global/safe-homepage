@@ -3,5 +3,5 @@ import PageContent from '@/components/common/PageContent'
 import licensesContent from '@/content/licenses.json'
 
 export const Licenses = (): ReactElement => {
-  return <PageContent content={licensesContent} />
+  return <PageContent content={licensesContent} path="licenses.json" />
 }

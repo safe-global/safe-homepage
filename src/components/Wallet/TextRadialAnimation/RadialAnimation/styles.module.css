@@ -1,5 +1,5 @@
 .wrapper {
-  background-image: url("/images/IdentPlanets/orbits.svg");
+  background-image: url('/images/IdentPlanets/orbits.svg');
   background-repeat: no-repeat;
   background-size: cover;
   width: 228px;
@@ -81,7 +81,7 @@
 
   .labelLayer {
     width: 135px;
-    transform: translate(10px, -50px)
+    transform: translate(10px, -50px);
   }
 }
 

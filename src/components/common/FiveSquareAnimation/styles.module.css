@@ -22,12 +22,12 @@
 
 .rectTl {
   animation-name: rect-anim-tl;
-  animation-delay: 0.9s
+  animation-delay: 0.9s;
 }
 
 .rectTr {
   animation-name: rect-anim-tr;
-  animation-delay: 0.6s
+  animation-delay: 0.6s;
 }
 
 .rectBl {
@@ -44,7 +44,7 @@
 @keyframes rect-anim-tl {
   0% {
     transform-origin: 15px 15px;
-    transform: scale(0)
+    transform: scale(0);
   }
   25% {
     transform: scale(1);
@@ -64,7 +64,7 @@
 @keyframes rect-anim-tr {
   0% {
     transform-origin: 15px 15px;
-    transform: scale(0)
+    transform: scale(0);
   }
   25% {
     transform: scale(1);
@@ -84,7 +84,7 @@
 @keyframes rect-anim-br {
   0% {
     transform-origin: 15px 15px;
-    transform: scale(0)
+    transform: scale(0);
   }
   25% {
     transform: scale(1);
@@ -104,7 +104,7 @@
 @keyframes rect-anim-bl {
   0% {
     transform-origin: 15px 15px;
-    transform: scale(0)
+    transform: scale(0);
   }
   25% {
     transform: scale(1);

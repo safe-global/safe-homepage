@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import css from './styles.module.css'
 import getComponentByName from '@/lib/getComponentByName'
 import MetaTags from '../MetaTags'
+import useSaveEdits from './useSaveEdits'
 
 const ADMIN_URL_HASH = 'admin'
 const SEO_COMPONENT = 'common/MetaTags'
@@ -44,20 +45,20 @@ const getEditableProps = (
   })
 }
 
-const PageContent = ({ content }: { content: ContentItems }): ReactElement => {
+const PageContent = ({ content, path }: { content: ContentItems; path: string }): ReactElement => {
   const [newContent, setNewContent] = useState<ContentItems>(content)
   const [saved, setSaved] = useState<boolean>(false)
   const isEditable = useRouter().asPath.split('#')[1] === ADMIN_URL_HASH
+  const saveEdits = useSaveEdits(newContent, path)
 
   const seo = newContent.find((item) => item.component === SEO_COMPONENT)
   const mainContent = newContent.filter((item) => item.component !== SEO_COMPONENT)
 
   const onSave = useCallback(() => {
-    const data = JSON.stringify(newContent, null, 2)
-    navigator.clipboard.writeText(data)
     setSaved(true)
     setTimeout(() => setSaved(false), 2000)
-  }, [newContent])
+    saveEdits()
+  }, [saveEdits])
 
   return (
     <>
