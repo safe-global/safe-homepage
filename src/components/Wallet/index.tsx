@@ -6,6 +6,6 @@ import PageContent from '../common/PageContent'
 
 export const Wallet = (props: InferGetStaticPropsType<typeof getStaticProps>) => (
   <ChainsContext.Provider value={props.chainsData}>
-    <PageContent content={walletContent} />
+    <PageContent content={walletContent} path="wallet.json" />
   </ChainsContext.Provider>
 )

@@ -19,7 +19,7 @@
   height: auto;
 }
 
-@media(min-width: 600px) {
+@media (min-width: 600px) {
   .container {
     margin-top: 100px;
     margin-bottom: 120px;

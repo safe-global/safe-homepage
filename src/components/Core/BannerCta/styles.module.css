@@ -10,7 +10,7 @@
   padding: 24px 24px 300px;
   justify-content: space-between;
   margin-bottom: 40px;
-  background-image: url("/images/robot.png");
+  background-image: url('/images/robot.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
