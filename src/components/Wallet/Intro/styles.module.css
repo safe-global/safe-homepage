@@ -33,7 +33,6 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  filter: url('#gooey');
   z-index: -1;
 }
 
