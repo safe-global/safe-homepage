@@ -17,7 +17,6 @@
   left: 50%;
   transform: translateX(-50%);
   top: -5%;
-  filter: url('#gooey');
   z-index: -1;
 }
 
