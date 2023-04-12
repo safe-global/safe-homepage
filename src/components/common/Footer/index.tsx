@@ -18,6 +18,7 @@ import {
   CHAT_LINK,
   GUARDIANS_LINK,
   BRAND_KIT,
+  LICENSES_LINK,
 } from '@/config/constants'
 import { useCookieBannerContext } from '../CookieBanner/CookieBannerContext'
 import Logo from '@/public/images/logo.svg'
@@ -88,7 +89,9 @@ const subFooterItems = [
   },
   {
     label: 'Licenses',
-    href: AppRoutes.licenses,
+    href: LICENSES_LINK,
+    target: '_blank',
+    rel: 'noreferrer',
   },
   {
     label: 'Imprint',

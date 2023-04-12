@@ -15,6 +15,7 @@ export const GUARDIANS_LINK = 'https://forum.safe.global/t/guardians-gather/265'
 export const IOS_LINK = 'https://apps.apple.com/app/id1515759131'
 export const GPLAY_LINK = 'https://play.google.com/store/apps/details?id=io.gnosis.safe'
 export const BRAND_KIT = 'https://press.safe.global'
+export const LICENSES_LINK = 'https://app.safe.global/licenses'
 
 export const PROTOCOL_KIT_LINK = 'https://docs.safe.global/learn/safe-core-account-abstraction-sdk/protocol-kit'
 export const AUTH_KIT_LINK = 'https://docs.safe.global/learn/safe-core-account-abstraction-sdk/auth-kit'
