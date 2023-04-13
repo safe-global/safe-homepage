@@ -1,3 +1,8 @@
+# Safe Homepage
+
+![license](https://img.shields.io/github/license/safe-global/safe-homepage)
+![release](https://img.shields.io/github/v/release/safe-global/safe-homepage)
+
 ## Getting Started
 
 These instructions will help you get a copy of the project up and running on your local machine for development and testing purposes.
