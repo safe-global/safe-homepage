@@ -22,11 +22,19 @@ const defaultThemeColors = {
 type NetworksProps = {
   title: string
   text: string
-  networks: NetworkChipProps[][]
+  networks: NetworkChipProps[]
   chainsData: ChainProps[]
 }
 
-const NetworksRow = ({ networksRow, chainsData }: { networksRow: NetworkChipProps[]; chainsData: ChainProps[] }) => {
+const NetworksRow = ({
+  showNew,
+  networksRow,
+  chainsData,
+}: {
+  showNew?: boolean
+  networksRow: NetworkChipProps[]
+  chainsData: ChainProps[]
+}) => {
   return (
     <>
       {networksRow.map(({ name, icon, textColor, backgroundColor, isNew }, i) => {
@@ -35,7 +43,7 @@ const NetworksRow = ({ networksRow, chainsData }: { networksRow: NetworkChipProp
           textColor: chainData?.textColor || textColor || defaultThemeColors.textColor,
           backgroundColor: chainData?.backgroundColor || backgroundColor || defaultThemeColors.backgroundColor,
         }
-        return <NetworkChip key={`${name}_${i}`} icon={icon} name={name} isNew={isNew} {...chainColors} />
+        return <NetworkChip key={`${name}_${i}`} icon={icon} name={name} isNew={isNew && showNew} {...chainColors} />
       })}
     </>
   )
@@ -43,6 +51,7 @@ const NetworksRow = ({ networksRow, chainsData }: { networksRow: NetworkChipProp
 
 const Networks = ({ title, text, networks }: NetworksProps) => {
   const chainsData = useContext(ChainsContext)
+  const shuffledNetworks = networks.slice(2, 8).reverse().concat(networks.slice(8).reverse(), networks.slice(0, 2))
 
   return (
     <div className={layoutCss.containerMedium}>
@@ -51,10 +60,10 @@ const Networks = ({ title, text, networks }: NetworksProps) => {
       </Typography>
       <div className={css.networksWrapper}>
         <div className={css.gradientBase} />
-        {networks.map((networksRow, index) => (
+        {[0, 1].map((index) => (
           <Box key={index} display="flex" gap="8px" className={index === 0 ? css.slider : css.sliderReverse}>
-            <NetworksRow networksRow={networksRow} chainsData={chainsData} />
-            <NetworksRow networksRow={networksRow} chainsData={chainsData} />
+            <NetworksRow networksRow={networks} chainsData={chainsData} showNew={index === 1} />
+            <NetworksRow networksRow={shuffledNetworks} chainsData={chainsData} showNew={index === 1} />
           </Box>
         ))}
         <div className={clsx(css.gradientBase, css.gradientFlipped)} />
