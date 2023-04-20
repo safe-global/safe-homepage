@@ -26,7 +26,15 @@ type NetworksProps = {
   chainsData: ChainProps[]
 }
 
-const NetworksRow = ({ networksRow, chainsData }: { networksRow: NetworkChipProps[]; chainsData: ChainProps[] }) => {
+const NetworksRow = ({
+  showNew,
+  networksRow,
+  chainsData,
+}: {
+  showNew?: boolean
+  networksRow: NetworkChipProps[]
+  chainsData: ChainProps[]
+}) => {
   return (
     <>
       {networksRow.map(({ name, icon, textColor, backgroundColor, isNew }, i) => {
@@ -35,7 +43,7 @@ const NetworksRow = ({ networksRow, chainsData }: { networksRow: NetworkChipProp
           textColor: chainData?.textColor || textColor || defaultThemeColors.textColor,
           backgroundColor: chainData?.backgroundColor || backgroundColor || defaultThemeColors.backgroundColor,
         }
-        return <NetworkChip key={`${name}_${i}`} icon={icon} name={name} isNew={isNew} {...chainColors} />
+        return <NetworkChip key={`${name}_${i}`} icon={icon} name={name} isNew={isNew && showNew} {...chainColors} />
       })}
     </>
   )
@@ -55,7 +63,7 @@ const Networks = ({ title, text, networks }: NetworksProps) => {
         {[0, 1].map((index) => (
           <Box key={index} display="flex" gap="8px" className={index === 0 ? css.slider : css.sliderReverse}>
             <NetworksRow networksRow={networks} chainsData={chainsData} />
-            <NetworksRow networksRow={shuffledNetworks} chainsData={chainsData} />
+            <NetworksRow networksRow={shuffledNetworks} chainsData={chainsData} showNew />
           </Box>
         ))}
         <div className={clsx(css.gradientBase, css.gradientFlipped)} />

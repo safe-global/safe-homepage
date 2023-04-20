@@ -100,7 +100,8 @@
         "icon": {
           "src": "/images/chainsLogos/CeloLogo.png",
           "alt": "Celo logo"
-        }
+        },
+        "isNew": true
       }
     ],
     "component": "common/Networks"
