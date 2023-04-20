@@ -22,7 +22,7 @@ const defaultThemeColors = {
 type NetworksProps = {
   title: string
   text: string
-  networks: NetworkChipProps[][]
+  networks: NetworkChipProps[]
   chainsData: ChainProps[]
 }
 
@@ -43,6 +43,7 @@ const NetworksRow = ({ networksRow, chainsData }: { networksRow: NetworkChipProp
 
 const Networks = ({ title, text, networks }: NetworksProps) => {
   const chainsData = useContext(ChainsContext)
+  const shuffledNetworks = networks.slice(2, 8).reverse().concat(networks.slice(8).reverse(), networks.slice(0, 2))
 
   return (
     <div className={layoutCss.containerMedium}>
@@ -51,10 +52,10 @@ const Networks = ({ title, text, networks }: NetworksProps) => {
       </Typography>
       <div className={css.networksWrapper}>
         <div className={css.gradientBase} />
-        {networks.map((networksRow, index) => (
+        {[0, 1].map((index) => (
           <Box key={index} display="flex" gap="8px" className={index === 0 ? css.slider : css.sliderReverse}>
-            <NetworksRow networksRow={networksRow} chainsData={chainsData} />
-            <NetworksRow networksRow={networksRow} chainsData={chainsData} />
+            <NetworksRow networksRow={networks} chainsData={chainsData} />
+            <NetworksRow networksRow={shuffledNetworks} chainsData={chainsData} />
           </Box>
         ))}
         <div className={clsx(css.gradientBase, css.gradientFlipped)} />

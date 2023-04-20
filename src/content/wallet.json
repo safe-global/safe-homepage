@@ -142,139 +142,76 @@
     "title": "Available on 12+ networks",
     "text": "and more, including testnets",
     "networks": [
-      [
-        {
-          "name": "Ethereum Mainnet",
-          "icon": {
-            "src": "/images/chainsLogos/EthereumLogo.png",
-            "alt": "Ethereum logo"
-          }
-        },
-        {
-          "name": "BNB Smart Chain",
-          "icon": {
-            "src": "/images/chainsLogos/BNBLogo.png",
-            "alt": "BNB Chain logo"
-          }
-        },
-        {
-          "name": "Optimism",
-          "icon": {
-            "src": "/images/chainsLogos/OptimismLogo.png",
-            "alt": "Optimism logo"
-          }
-        },
-        {
-          "name": "Arbitrum",
-          "icon": {
-            "src": "/images/chainsLogos/ArbitrumLogo.png",
-            "alt": "Arbitrum logo"
-          }
-        },
-        {
-          "name": "Polygon",
-          "icon": {
-            "src": "/images/chainsLogos/PolygonLogo.png",
-            "alt": "Polygon logo"
-          }
-        },
-        {
-          "name": "Avalanche",
-          "icon": {
-            "src": "/images/chainsLogos/AvalancheLogo.png",
-            "alt": "Avalanche logo"
-          }
-        },
-        {
-          "name": "Gnosis Chain",
-          "icon": {
-            "src": "/images/chainsLogos/GnosisChainLogo.png",
-            "alt": "Gnosis Chain logo"
-          }
-        },
-        {
-          "name": "Aurora",
-          "icon": {
-            "src": "/images/chainsLogos/AuroraLogo.png",
-            "alt": "Aurora logo"
-          }
-        },
-        {
-          "name": "Arbitrum",
-          "icon": {
-            "src": "/images/chainsLogos/ArbitrumLogo.png",
-            "alt": "Arbitrum logo"
-          }
+      {
+        "name": "Ethereum Mainnet",
+        "icon": {
+          "src": "/images/chainsLogos/EthereumLogo.png",
+          "alt": "Ethereum logo"
         }
-      ],
-      [
-        {
-          "name": "Avalanche",
-          "icon": {
-            "src": "/images/chainsLogos/AvalancheLogo.png",
-            "alt": "Avalanche logo"
-          }
-        },
-        {
-          "name": "Gnosis Chain",
-          "icon": {
-            "src": "/images/chainsLogos/GnosisChainLogo.png",
-            "alt": "Gnosis Chain logo"
-          }
-        },
-        {
-          "name": "Optimism",
-          "icon": {
-            "src": "/images/chainsLogos/OptimismLogo.png",
-            "alt": "Optimism logo"
-          }
-        },
-        {
-          "name": "BNB Smart Chain",
-          "icon": {
-            "src": "/images/chainsLogos/BNBLogo.png",
-            "alt": "BNB Chain logo"
-          }
-        },
-        {
-          "name": "Ethereum Mainnet",
-          "icon": {
-            "src": "/images/chainsLogos/EthereumLogo.png",
-            "alt": "Ethereum logo"
-          }
-        },
-        {
-          "name": "Base",
-          "icon": {
-            "src": "/images/chainsLogos/BaseLogo.png",
-            "alt": "Base logo"
-          },
-          "backgroundColor": "#0151FE",
-          "textColor": "#ffffff",
-          "isNew": true
-        },
-        {
-          "name": "Polygon",
-          "icon": {
-            "src": "/images/chainsLogos/PolygonLogo.png",
-            "alt": "Polygon logo"
-          }
-        },
-        {
-          "name": "Aurora",
-          "icon": {
-            "src": "/images/chainsLogos/AuroraLogo.png",
-            "alt": "Aurora logo"
-          }
-        },
-        {
-          "name": "Arbitrum",
-          "icon": {
-            "src": "/images/chainsLogos/ArbitrumLogo.png",
-            "alt": "Arbitrum logo"
-          }
+      },
+      {
+        "name": "BNB Smart Chain",
+        "icon": {
+          "src": "/images/chainsLogos/BNBLogo.png",
+          "alt": "BNB Chain logo"
         }
-      ]
+      },
+      {
+        "name": "Optimism",
+        "icon": {
+          "src": "/images/chainsLogos/OptimismLogo.png",
+          "alt": "Optimism logo"
+        }
+      },
+      {
+        "name": "Arbitrum",
+        "icon": {
+          "src": "/images/chainsLogos/ArbitrumLogo.png",
+          "alt": "Arbitrum logo"
+        }
+      },
+      {
+        "name": "Polygon",
+        "icon": {
+          "src": "/images/chainsLogos/PolygonLogo.png",
+          "alt": "Polygon logo"
+        }
+      },
+      {
+        "name": "Avalanche",
+        "icon": {
+          "src": "/images/chainsLogos/AvalancheLogo.png",
+          "alt": "Avalanche logo"
+        }
+      },
+      {
+        "name": "Gnosis Chain",
+        "icon": {
+          "src": "/images/chainsLogos/GnosisChainLogo.png",
+          "alt": "Gnosis Chain logo"
+        }
+      },
+      {
+        "name": "Aurora",
+        "icon": {
+          "src": "/images/chainsLogos/AuroraLogo.png",
+          "alt": "Aurora logo"
+        }
+      },
+      {
+        "name": "Arbitrum",
+        "icon": {
+          "src": "/images/chainsLogos/ArbitrumLogo.png",
+          "alt": "Arbitrum logo"
+        }
+      },
+      {
+        "name": "Celo",
+        "icon": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo logo"
+        }
+      }
     ],
     "component": "common/Networks"
   },
