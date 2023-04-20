@@ -62,8 +62,8 @@ const Networks = ({ title, text, networks }: NetworksProps) => {
         <div className={css.gradientBase} />
         {[0, 1].map((index) => (
           <Box key={index} display="flex" gap="8px" className={index === 0 ? css.slider : css.sliderReverse}>
-            <NetworksRow networksRow={networks} chainsData={chainsData} />
-            <NetworksRow networksRow={shuffledNetworks} chainsData={chainsData} showNew />
+            <NetworksRow networksRow={networks} chainsData={chainsData} showNew={index === 1} />
+            <NetworksRow networksRow={shuffledNetworks} chainsData={chainsData} showNew={index === 1} />
           </Box>
         ))}
         <div className={clsx(css.gradientBase, css.gradientFlipped)} />
