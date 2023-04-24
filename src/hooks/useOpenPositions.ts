@@ -1,39 +1,60 @@
 import useSWR from 'swr'
 
-const BREEZY_API_URL = 'https://safe-global.breezy.hr/json'
-const SWR_KEY = 'open-positions'
+const ASHBY_API_URL = 'https://api.ashbyhq.com/posting-api/job-board/safe.global/'
 
-export type Position = {
-  id: string
-  friendly_id: string
-  name: string
-  url: string
-  published_date: string
-  type: {
-    id: string
-    name: string
-  }
-  location: {
-    country: {
-      name: string
-      id: string
-    }
-    city: string
-    is_remote: boolean
-    name: string
-  }
-  department: string
-  company: {
-    name: string
-    logo_url: string | null
-    friendly_id: string
+type SecondaryLocation = {
+  location: string
+  address: {
+    addressLocality: string
+    addressRegion: string
+    addressCountry: string
   }
 }
 
-const fetchOpenPositions = async (): Promise<Position[]> => {
-  return fetch(BREEZY_API_URL).then((res) => res.json())
+const enum EmploymentType {
+  FULL_TIME = 'FullTime',
+  PART_TIME = 'PartTime',
+  CONTRACTOR = 'Contractor',
+  INTERN = 'Intern',
+  TEMPORARY = 'Temporary',
+}
+
+export type Position = {
+  title: string
+  location: string
+  secondaryLocations: Array<SecondaryLocation>
+  department: string
+  team: string
+  isRemote: boolean
+  descriptionHtml: string
+  descriptionPlain: string
+  publishedAt: string
+  employmentType: EmploymentType
+  address: {
+    postalAddress: {
+      addressLocality: string
+      addressRegion: string
+      addressCountry: string
+    }
+  }
+  jobUrl: string
+  applyUrl: string
+  isListed: boolean
+}
+
+type OpenPositions = {
+  apiVersion: string
+  jobs: Array<Position>
+}
+
+const fetchOpenPositions = async (): Promise<OpenPositions['jobs']> => {
+  return fetch(ASHBY_API_URL)
+    .then((res) => res.json())
+    .then((data) => data.jobs)
 }
 
 export const useOpenPositions = () => {
-  return useSWR<Position[]>(SWR_KEY, fetchOpenPositions, { fallbackData: [] })
+  const SWR_KEY = 'open-positions'
+
+  return useSWR<OpenPositions['jobs']>(SWR_KEY, fetchOpenPositions, { fallbackData: [] })
 }
