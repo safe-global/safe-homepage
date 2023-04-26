@@ -10,15 +10,15 @@ import type { CardProps } from '@/components/Careers/Cards'
 
 import css from './styles.module.css'
 
-const parsePosition = ({ url, location, name }: Position): CardProps => {
+const parsePosition = ({ jobUrl, location, title }: Position): CardProps => {
   return {
-    title: name,
+    title,
     text: '',
-    link: { href: url, title: 'See position' },
+    link: { href: jobUrl, title: 'See position' },
     extra: (
       <Typography variant="caption" className={css.header}>
         <PinIcon className={css.icon} />
-        {location.name}
+        {location}
       </Typography>
     ),
   }
