@@ -1,6 +1,6 @@
 import type { NetworkChipProps } from '@/components/Wallet/NetworkChip'
 import NetworkChip from '@/components/Wallet/NetworkChip'
-import { Box, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
 import clsx from 'clsx'
 import css from './styles.module.css'
 import layoutCss from '@/components/common/styles.module.css'
@@ -26,15 +26,7 @@ type NetworksProps = {
   chainsData: ChainProps[]
 }
 
-const NetworksRow = ({
-  showNew,
-  networksRow,
-  chainsData,
-}: {
-  showNew?: boolean
-  networksRow: NetworkChipProps[]
-  chainsData: ChainProps[]
-}) => {
+const NetworksRow = ({ networksRow, chainsData }: { networksRow: NetworkChipProps[]; chainsData: ChainProps[] }) => {
   return (
     <>
       {networksRow.map(({ name, icon, textColor, backgroundColor, isNew }, i) => {
@@ -43,7 +35,7 @@ const NetworksRow = ({
           textColor: chainData?.textColor || textColor || defaultThemeColors.textColor,
           backgroundColor: chainData?.backgroundColor || backgroundColor || defaultThemeColors.backgroundColor,
         }
-        return <NetworkChip key={`${name}_${i}`} icon={icon} name={name} isNew={isNew && showNew} {...chainColors} />
+        return <NetworkChip key={`${name}_${i}`} icon={icon} name={name} isNew={isNew} {...chainColors} />
       })}
     </>
   )
@@ -60,12 +52,18 @@ const Networks = ({ title, text, networks }: NetworksProps) => {
       </Typography>
       <div className={css.networksWrapper}>
         <div className={css.gradientBase} />
-        {[0, 1].map((index) => (
-          <Box key={index} display="flex" gap="8px" className={index === 0 ? css.slider : css.sliderReverse}>
-            <NetworksRow networksRow={networks} chainsData={chainsData} showNew={index === 1} />
-            <NetworksRow networksRow={shuffledNetworks} chainsData={chainsData} showNew={index === 1} />
-          </Box>
-        ))}
+        <div className={css.animation}>
+          <div className={css.slider}>
+            <NetworksRow networksRow={networks} chainsData={chainsData} />
+            <NetworksRow networksRow={networks} chainsData={chainsData} />
+          </div>
+        </div>
+        <div className={clsx(css.animation, css.animationReverse)}>
+          <div className={css.slider}>
+            <NetworksRow networksRow={shuffledNetworks} chainsData={chainsData} />
+            <NetworksRow networksRow={shuffledNetworks} chainsData={chainsData} />
+          </div>
+        </div>
         <div className={clsx(css.gradientBase, css.gradientFlipped)} />
       </div>
       <Typography className={css.secondaryText} variant="body1">
