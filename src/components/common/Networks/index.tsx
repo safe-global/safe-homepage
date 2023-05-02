@@ -46,6 +46,7 @@ const Networks = ({ title, text, networks }: NetworksProps) => {
   const [shuffledNetworks, setShuffledNetworks] = useState<NetworkChipProps[]>([])
   const chainsData = useContext(ChainsContext)
 
+  // To prevent hydration errors
   useEffect(() => {
     setShuffledNetworks(shuffle(networks))
   }, [networks])
