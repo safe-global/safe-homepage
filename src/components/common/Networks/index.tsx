@@ -1,4 +1,3 @@
-import { shuffle } from 'lodash'
 import type { NetworkChipProps } from '@/components/Wallet/NetworkChip'
 import NetworkChip from '@/components/Wallet/NetworkChip'
 import { Typography } from '@mui/material'
@@ -6,7 +5,7 @@ import clsx from 'clsx'
 import css from './styles.module.css'
 import layoutCss from '@/components/common/styles.module.css'
 import { type ChainInfo } from '@safe-global/safe-gateway-typescript-sdk'
-import { useContext, useEffect, useState } from 'react'
+import { useContext } from 'react'
 import ChainsContext from '../ChainsContext'
 
 export type ChainProps = {
@@ -43,13 +42,8 @@ const NetworksRow = ({ networksRow, chainsData }: { networksRow: NetworkChipProp
 }
 
 const Networks = ({ title, text, networks }: NetworksProps) => {
-  const [shuffledNetworks, setShuffledNetworks] = useState<NetworkChipProps[]>([])
   const chainsData = useContext(ChainsContext)
-
-  // To prevent hydration errors
-  useEffect(() => {
-    setShuffledNetworks(shuffle(networks))
-  }, [networks])
+  const shuffledNetworks = networks.slice(2, 8).reverse().concat(networks.slice(8).reverse(), networks.slice(0, 2))
 
   return (
     <div className={layoutCss.containerMedium}>
