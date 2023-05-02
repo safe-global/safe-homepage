@@ -1,0 +1,16 @@
+[
+  {
+    "pageTitle": "Safe – Ecosystem",
+    "component": "common/MetaTags"
+  },
+  {
+    "title": "Explore the Safe Ecosystem",
+    "text": "Explore projects that have built with Safe to leverage the power of smart contract accounts.",
+    "component": "Ecosystem/Intro"
+  },
+  {
+    "title": "ASD",
+    "text": "ASDDSA",
+    "component": "Ecosystem/Projects"
+  }
+]

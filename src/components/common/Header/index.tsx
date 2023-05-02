@@ -24,6 +24,10 @@ const navItems = [
     href: AppRoutes.wallet,
   },
   {
+    label: 'Ecosystem',
+    href: AppRoutes.ecosystem,
+  },
+  {
     label: 'Careers',
     href: AppRoutes.careers,
   },
