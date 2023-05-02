@@ -14,7 +14,7 @@ export type NetworkChipProps = {
 const NetworkChip = ({ name, icon, textColor, backgroundColor, isNew }: NetworkChipProps) => (
   <Box className={css.wrapper} sx={{ backgroundColor }}>
     <div className={css.icon}>
-      <img {...icon} />
+      <img {...icon} width={40} height={40} />
     </div>
     <Typography className={css.name} variant="body1" color={textColor}>
       {name}

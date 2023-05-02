@@ -4,9 +4,7 @@
   flex-direction: column;
   gap: 16px;
   overflow: hidden;
-
-  --topRowWidth: 1483px;
-  --bottomRowWidth: 1448px;
+  padding: 8px 0;
 }
 
 .gradientBase {
@@ -32,30 +30,36 @@
   color: var(--mui-palette-primary-light);
 }
 
-.slider {
-  animation: slide 59s linear infinite;
+.animation {
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  display: flex;
+  width: max-content;
+  min-width: 200%;
+  animation-duration: 100s;
+  animation-delay: 0s;
+  animation-play-state: running;
+  animation-name: slide;
+  gap: 8px;
 }
 
-.sliderReverse {
-  transform: translateX(calc(var(--bottomRowWidth) * -1));
-  animation: slide-reverse 60s linear infinite;
+.animationReverse {
+  animation-direction: reverse;
+}
+
+.slider {
+  display: flex;
+  gap: 8px;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  font-size: 0;
 }
 
 @keyframes slide {
-  from {
-    transform: translateX(0);
-  }
   to {
-    transform: translateX(calc(var(--topRowWidth) * -1));
-  }
-}
-
-@keyframes slide-reverse {
-  from {
-    transform: translateX(calc(var(--bottomRowWidth) * -1));
-  }
-  to {
-    transform: translateX(0);
+    transform: translate(-50%)
   }
 }
 
