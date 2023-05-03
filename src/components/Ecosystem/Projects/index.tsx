@@ -18,7 +18,6 @@ import SearchIcon from '@/public/images/search.svg'
 import EcosystemDB from '@/content/ecosystem-data.json'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
-import type { BaseBlock } from '@/components/Home/types'
 import clsx from 'clsx'
 
 type EcosystemProject = {
@@ -50,7 +49,9 @@ const Card = ({ ...item }: EcosystemProject) => {
   return (
     <Grid item xs={12} md={4}>
       <div className={css.card}>
-        <Avatar sx={{ width: 48, height: 48, mb: 2 }}>&nbsp;</Avatar>
+        <Avatar className={css.image} src={item.logo}>
+          &nbsp;
+        </Avatar>
         <div className={css.socials}>
           {item.twitter && (
             <IconButton
@@ -85,8 +86,8 @@ const Card = ({ ...item }: EcosystemProject) => {
         </Typography>
         <div className={css.categories}>
           {categories &&
-            categories.map((category) => {
-              return <Chip className={css.categoryChip} label={category} />
+            categories.map((category, idx) => {
+              return <Chip key={category + idx} className={css.categoryChip} label={category} />
             })}
         </div>
       </div>
@@ -94,7 +95,7 @@ const Card = ({ ...item }: EcosystemProject) => {
   )
 }
 
-export const Projects = ({ title, buttons, caption }: BaseBlock): ReactElement => {
+export const Projects = (): ReactElement => {
   const projects = EcosystemDB as EcosystemProject[]
 
   return (

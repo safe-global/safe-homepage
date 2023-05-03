@@ -23,8 +23,11 @@
 .image {
   width: 48px;
   height: 48px;
-  background-color: #A1A3A7;
-  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.image > img {
+  object-fit: contain;
 }
 
 .socials {
