@@ -67,6 +67,12 @@ const Header = () => {
                   badgeContent={item.href === AppRoutes.careers ? positions.length : undefined}
                   color="primary"
                   className={css.badge}
+                  slotProps={{
+                    badge: {
+                      // @ts-expect-error - disable badge in search results
+                      'data-nosnippet': true,
+                    },
+                  }}
                 >
                   {item.label}
                 </Badge>
