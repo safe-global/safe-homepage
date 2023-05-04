@@ -11,6 +11,7 @@ import {
   AppBar,
   Toolbar,
   IconButton,
+  Box,
 } from '@mui/material'
 import clsx from 'clsx'
 import { useMemo, useState } from 'react'
@@ -102,7 +103,8 @@ const getFilteredProjects = ({
   })
 }
 
-const SPACING = '30px'
+const SPACING_XS = 2
+const SPACING_MD = '30px'
 
 export const Projects = (): ReactElement => {
   const [query, setQuery] = useState<string>('')
@@ -189,7 +191,7 @@ export const Projects = (): ReactElement => {
 
         <Divider sx={{ my: 9 }} />
 
-        <Grid container spacing={SPACING}>
+        <Grid container spacing={{ xs: SPACING_XS, md: SPACING_MD }}>
           <Grid item xs={12} md={3} display="flex" alignItems="center" justifyContent="space-between">
             <Typography>
               {searchResult.length}{' '}
@@ -243,7 +245,15 @@ export const Projects = (): ReactElement => {
             {sidebar}
           </Grid>
 
-          <Grid item container xs={12} md={9} spacing={SPACING} display="flex" alignContent="flex-start">
+          <Grid
+            item
+            container
+            xs={12}
+            md={9}
+            spacing={{ xs: SPACING_XS, md: SPACING_MD }}
+            display="flex"
+            alignContent="flex-start"
+          >
             {searchResult.map((ecosystemProject, idx) => {
               return (
                 <Grid item xs={12} md={4} key={ecosystemProject.project + idx}>
@@ -258,16 +268,20 @@ export const Projects = (): ReactElement => {
       </Container>
 
       <Dialog fullScreen open={isFilterDrawerOpen}>
-        <AppBar position="sticky" color="transparent" className={css.appBar}>
-          <Toolbar>
-            <IconButton onClick={() => setIsFilterDrawerOpen(false)}>
+        <AppBar className={css.appBar}>
+          <Toolbar disableGutters>
+            <IconButton onClick={() => setIsFilterDrawerOpen(false)} sx={{ padding: 2 }}>
               <ArrowBackIcon />
             </IconButton>
-            Filter
+            <Divider orientation="vertical" />
+            <Box p={2} color="white">
+              Filter
+            </Box>
           </Toolbar>
         </AppBar>
         <div className={css.filterWrapper}>
           {sidebar}
+          <span style={{ flex: 1 }} />
           <Button variant="contained" size="large" fullWidth onClick={() => setIsFilterDrawerOpen(false)}>
             Show results
           </Button>

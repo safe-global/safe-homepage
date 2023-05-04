@@ -1,6 +1,8 @@
 .appBar {
   border-bottom: 1px solid var(--mui-palette-border-light);
   font-size: 20px;
+  position: sticky;
+  background-color: var(--mui-palette-background-main);
 }
 
 .wrapper {
@@ -74,6 +76,10 @@
   min-height: unset;
 }
 
+.accordion :global .MuiAccordionSummary-expandIconWrapper {
+  margin-right: 2px;
+}
+
 .accordion :global .MuiAccordionSummary-content {
   margin: 16px 0 !important;
 }
@@ -121,7 +127,11 @@
 }
 
 .filterWrapper {
-  padding: 0 16px;
+  padding: 0 16px 20px;
+  background-color: var(--mui-palette-background-main);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .filterWrapper :global .MuiPaper-root {
