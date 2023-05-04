@@ -1,3 +1,8 @@
+.appBar {
+  border-bottom: 1px solid var(--mui-palette-border-light);
+  font-size: 20px;
+}
+
 .wrapper {
   margin-top: 0;
 }
@@ -51,6 +56,10 @@
   font-size: 14px;
 }
 
+.sidebar {
+  display: none;
+}
+
 .accordion {
   background-color: transparent;
   margin: 0 !important;
@@ -94,4 +103,41 @@
 .chipContainer {
   display: flex;
   gap: 8px;
+}
+
+.filterButton {
+  border: 1px solid var(--mui-palette-border-light);
+  color: var(--mui-palette-text-primary);
+  font-size: 16px;
+  padding: 16px 20px;
+}
+
+.filterButton :global .MuiButton-startIcon {
+  margin-right: 20px;
+}
+
+.filterButton :global .MuiButton-startIcon svg {
+  margin: 4px;
+}
+
+.filterWrapper {
+  padding: 0 16px;
+}
+
+.filterWrapper :global .MuiPaper-root {
+  box-shadow: unset;
+}
+
+.filterWrapper :global .MuiPaper-root:not(:last-child) {
+  border-bottom: 1px solid var(--mui-palette-border-light);
+}
+
+@media (min-width: 600px) {
+  .filterButton {
+    display: none;
+  }
+
+  .sidebar {
+    display: block;
+  }
 }

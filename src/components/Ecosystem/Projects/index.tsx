@@ -1,10 +1,25 @@
-import { Container, Divider, Grid, Typography, Chip, TextField, InputAdornment } from '@mui/material'
+import {
+  Container,
+  Divider,
+  Grid,
+  Typography,
+  Chip,
+  TextField,
+  InputAdornment,
+  Button,
+  Dialog,
+  AppBar,
+  Toolbar,
+  IconButton,
+} from '@mui/material'
 import clsx from 'clsx'
 import { useMemo, useState } from 'react'
 import type { Dispatch, ReactElement, SetStateAction } from 'react'
 
 import SearchIcon from '@/public/images/search.svg'
 import CrossIcon from '@/public/images/cross.svg'
+import FilterIcon from '@/public/images/filter.svg'
+import ArrowBackIcon from '@/public/images/arrow-back.svg'
 import { useProjectSearch } from './useProjectsSearch'
 import { SidebarAccordion } from './SidebarAccordion'
 import { ProjectCard } from './ProjectCard'
@@ -91,6 +106,7 @@ const SPACING = '30px'
 
 export const Projects = (): ReactElement => {
   const [query, setQuery] = useState<string>('')
+  const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false)
 
   const [selectedCategories, setSelectedCategories] = useState<string[]>([])
   const [selectedIntegrations, setSelectedIntegrations] = useState<string[]>([])
@@ -116,115 +132,148 @@ export const Projects = (): ReactElement => {
 
   const searchResult = useProjectSearch(filteredProjects, query)
 
+  const sidebar = (
+    <>
+      <SidebarAccordion
+        title="Category"
+        items={uniqueCategories}
+        selectedItems={selectedCategories}
+        onChange={onSelectCategory}
+      />
+
+      <SidebarAccordion
+        title="Integration type"
+        items={uniqueIntegrations}
+        selectedItems={selectedIntegrations}
+        onChange={onSelectIntegration}
+      />
+
+      <SidebarAccordion
+        title="Network type"
+        items={uniqueNetworks}
+        selectedItems={selectedNetworks}
+        onChange={onSelectNetwork}
+      />
+    </>
+  )
+
   return (
-    <Container className={clsx(layoutCss.containerMedium, css.wrapper)}>
-      <Grid container>
-        <Grid item xs={12} md={8}>
-          <TextField
-            className={css.searchField}
-            variant="outlined"
-            placeholder="Search by name or category"
-            InputProps={{
-              startAdornment: (
-                <InputAdornment position="start">
-                  <SearchIcon />
-                </InputAdornment>
-              ),
-            }}
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            fullWidth
-          />
+    <>
+      <Container className={clsx(layoutCss.containerMedium, css.wrapper)}>
+        <Grid container>
+          <Grid item xs={12} md={8}>
+            <TextField
+              className={css.searchField}
+              variant="outlined"
+              placeholder="Search by name or category"
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <SearchIcon />
+                  </InputAdornment>
+                ),
+              }}
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              fullWidth
+            />
 
-          <Typography mt={2}>
-            <Typography component="span" color="primary.light">
-              Example:
-            </Typography>{' '}
-            DeFi, DAO Tooling, Payments, NFT, Infrastructure
-          </Typography>
-        </Grid>
-      </Grid>
-
-      <Divider sx={{ my: 9 }} />
-
-      <Grid container spacing={SPACING}>
-        <Grid item xs={12} md={3}>
-          <Typography>
-            {searchResult.length}{' '}
-            <Typography color="primary.light" component="span">
-              results
+            <Typography mt={2}>
+              <Typography component="span" color="primary.light">
+                Example:
+              </Typography>{' '}
+              DeFi, DAO Tooling, Payments, NFT, Infrastructure
             </Typography>
-          </Typography>
+          </Grid>
         </Grid>
 
-        <Grid item xs={12} md={9} className={css.chipContainer}>
-          {selectedCategories.map((category) => (
-            <Chip
-              key={category}
-              className={css.chip}
-              label={category}
-              onDelete={() => onSelectCategory(category, false)}
-              deleteIcon={<CrossIcon />}
-            />
-          ))}
+        <Divider sx={{ my: 9 }} />
 
-          {selectedIntegrations.map((integration) => (
-            <Chip
-              key={integration}
-              className={css.chip}
-              label={integration}
-              onDelete={() => onSelectIntegration(integration, false)}
-              deleteIcon={<CrossIcon />}
-            />
-          ))}
+        <Grid container spacing={SPACING}>
+          <Grid item xs={12} md={3} display="flex" alignItems="center" justifyContent="space-between">
+            <Typography>
+              {searchResult.length}{' '}
+              <Typography color="primary.light" component="span">
+                results
+              </Typography>
+            </Typography>
+            <Button
+              variant="outlined"
+              className={css.filterButton}
+              startIcon={<FilterIcon />}
+              onClick={() => setIsFilterDrawerOpen(true)}
+            >
+              Filter
+            </Button>
+          </Grid>
 
-          {selectedNetworks.map((network) => (
-            <Chip
-              key={network}
-              className={css.chip}
-              label={network}
-              onDelete={() => onSelectNetwork(network, false)}
-              deleteIcon={<CrossIcon />}
-            />
-          ))}
+          <Grid item xs={12} md={9} className={css.chipContainer}>
+            {selectedCategories.map((category) => (
+              <Chip
+                key={category}
+                className={css.chip}
+                label={category}
+                onDelete={() => onSelectCategory(category, false)}
+                deleteIcon={<CrossIcon />}
+              />
+            ))}
+
+            {selectedIntegrations.map((integration) => (
+              <Chip
+                key={integration}
+                className={css.chip}
+                label={integration}
+                onDelete={() => onSelectIntegration(integration, false)}
+                deleteIcon={<CrossIcon />}
+              />
+            ))}
+
+            {selectedNetworks.map((network) => (
+              <Chip
+                key={network}
+                className={css.chip}
+                label={network}
+                onDelete={() => onSelectNetwork(network, false)}
+                deleteIcon={<CrossIcon />}
+              />
+            ))}
+          </Grid>
+
+          <Grid item xs={12} md={3} className={css.sidebar}>
+            {sidebar}
+          </Grid>
+
+          <Grid item container xs={12} md={9} spacing={SPACING} display="flex" alignContent="flex-start">
+            {searchResult.map((ecosystemProject, idx) => {
+              return (
+                <Grid item xs={12} md={4} key={ecosystemProject.project + idx}>
+                  <ProjectCard {...ecosystemProject} />
+                </Grid>
+              )
+            })}
+          </Grid>
         </Grid>
 
-        <Grid item xs={12} md={3}>
-          <SidebarAccordion
-            title="Category"
-            items={uniqueCategories}
-            selectedItems={selectedCategories}
-            onChange={onSelectCategory}
-          />
+        <Divider sx={{ my: '100px' }} />
+      </Container>
 
-          <SidebarAccordion
-            title="Integration type"
-            items={uniqueIntegrations}
-            selectedItems={selectedIntegrations}
-            onChange={onSelectIntegration}
-          />
-
-          <SidebarAccordion
-            title="Network type"
-            items={uniqueNetworks}
-            selectedItems={selectedNetworks}
-            onChange={onSelectNetwork}
-          />
-        </Grid>
-
-        <Grid item container xs={12} md={9} spacing={SPACING} display="flex" alignContent="flex-start">
-          {searchResult.map((ecosystemProject, idx) => {
-            return (
-              <Grid item xs={12} md={4} key={ecosystemProject.project + idx}>
-                <ProjectCard {...ecosystemProject} />
-              </Grid>
-            )
-          })}
-        </Grid>
-      </Grid>
-
-      <Divider sx={{ my: '100px' }} />
-    </Container>
+      <Dialog fullScreen open={isFilterDrawerOpen}>
+        <AppBar position="sticky" color="transparent" className={css.appBar}>
+          <Toolbar>
+            <IconButton onClick={() => setIsFilterDrawerOpen(false)}>
+              <ArrowBackIcon />
+            </IconButton>
+            Filter
+          </Toolbar>
+        </AppBar>
+        <div className={css.filterWrapper}>
+          {sidebar}
+          <Button variant="contained" size="large" fullWidth onClick={() => setIsFilterDrawerOpen(false)}>
+            Show results
+          </Button>
+        </div>
+      </Dialog>
+    </>
   )
 }
 

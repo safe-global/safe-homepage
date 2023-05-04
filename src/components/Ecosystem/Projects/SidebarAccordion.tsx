@@ -1,6 +1,5 @@
 import {
   Typography,
-  SvgIcon,
   Accordion,
   AccordionSummary,
   AccordionDetails,
@@ -27,9 +26,7 @@ export const SidebarAccordion = ({
 }) => {
   return (
     <Accordion defaultExpanded className={css.accordion}>
-      <AccordionSummary
-        expandIcon={<SvgIcon component={ChevronDownIcon} fontSize="small" color="inherit" inheritViewBox />}
-      >
+      <AccordionSummary expandIcon={<ChevronDownIcon />}>
         <Typography variant="caption" color="text.primary">
           {title}
         </Typography>
