@@ -1,0 +1,52 @@
+.wrapper {
+  margin-top: 0;
+}
+
+.card {
+  background: var(--mui-palette-border-background);
+  box-shadow: inset 0 0 0 1px var(--mui-palette-border-light);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  position: relative;
+  transition: 0.3s;
+  min-height: 272px;
+}
+
+.searchField :global .MuiInputBase-root {
+  background: white;
+}
+
+.image {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+}
+
+.image > img {
+  object-fit: contain;
+}
+
+.socials {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  gap: 8px;
+}
+
+.categories {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.categoryChip {
+  border-radius: 4px;
+  height: 23px;
+  font-size: 14px;
+}

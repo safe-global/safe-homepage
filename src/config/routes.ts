@@ -3,10 +3,13 @@ export const AppRoutes = {
   wallet: '/wallet',
   terms: '/terms',
   privacy: '/privacy',
-  licenses: '/licenses',
   index: '/',
   imprint: '/imprint',
+  ecosystem: '/ecosystem',
   core: '/core',
   cookie: '/cookie',
+  cla: {
+    index: '/cla',
+  },
   careers: '/careers',
 }

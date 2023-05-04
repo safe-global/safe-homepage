@@ -1,0 +1,22 @@
+.container {
+  margin-top: 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 64px;
+  line-height: 64px;
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 600px) {
+  .container {
+    margin-top: 100px;
+  }
+
+  .title {
+    font-size: 80px;
+    line-height: 82px;
+  }
+}
