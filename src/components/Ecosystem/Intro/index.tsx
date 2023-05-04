@@ -5,13 +5,7 @@ import type { BaseBlock } from '@/components/Home/types'
 const EcosystemIntro = ({ title, text }: BaseBlock) => {
   return (
     <Container>
-      <Grid
-        container
-        className={css.container}
-        spacing={{ xs: 6, md: '30px', xl: '50px' }}
-        justifyContent="space-between"
-        alignItems="center"
-      >
+      <Grid container className={css.container} spacing={{ xs: 6, md: '30px', xl: '50px' }}>
         <Grid item md={8}>
           <Typography className={css.title} variant="h1" mb={4}>
             {title}

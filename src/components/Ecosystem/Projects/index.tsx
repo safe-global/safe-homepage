@@ -40,10 +40,11 @@ type EcosystemProject = {
   interface_can_you_import_an_existing_safe: string
 }
 
-const Card = ({ ...item }: EcosystemProject) => {
+const Card = (item: EcosystemProject) => {
   const categories = item.primary_category
     .split(',')
     .concat(item.secondary_categories.split(','))
+    .map((element) => element.trim())
     .filter((element) => element)
 
   return (
@@ -138,7 +139,7 @@ export const Projects = (): ReactElement => {
           </Grid>
         </Grid>
       </Grid>
-      <Divider sx={{ mt: '100px', mb: '100px' }} />
+      <Divider sx={{ my: '100px' }} />
     </Container>
   )
 }
