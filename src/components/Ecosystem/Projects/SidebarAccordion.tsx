@@ -6,7 +6,7 @@ import {
   Checkbox,
   List,
   ListItem,
-  ListItemText,
+  FormControlLabel,
 } from '@mui/material'
 
 import ChevronDownIcon from '@/public/images/chevron-down.svg'
@@ -34,23 +34,24 @@ export const SidebarAccordion = ({
 
       <AccordionDetails>
         <List className={css.list}>
-          {items.map((item) => {
-            return (
-              <ListItem
-                key={item}
-                secondaryAction={
+          {items.map((item) => (
+            <ListItem key={item} disablePadding>
+              <FormControlLabel
+                label={item}
+                labelPlacement="start"
+                value={item}
+                control={
                   <Checkbox
-                    edge="end"
                     onChange={(_, checked) => onChange(item, checked)}
                     checked={selectedItems.includes(item)}
+                    edge="end"
                   />
                 }
-                disablePadding
-              >
-                <ListItemText primary={item} primaryTypographyProps={{ variant: 'body2' }} />
-              </ListItem>
-            )
-          })}
+                componentsProps={{ typography: { variant: 'body2' } }}
+                className={css.label}
+              />
+            </ListItem>
+          ))}
         </List>
       </AccordionDetails>
     </Accordion>

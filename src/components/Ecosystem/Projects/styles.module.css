@@ -91,13 +91,11 @@
   padding-bottom: 0;
 }
 
-.list :global .MuiListItemText-root {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-
-.list :global .MuiListItemSecondaryAction-root {
-  right: 0px;
+.label {
+  display: flex;
+  margin: 0;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .chipContainer {

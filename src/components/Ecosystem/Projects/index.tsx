@@ -85,7 +85,7 @@ const getFilteredProjects = ({
       return true
     }
 
-    return selected.some((item) => {
+    return selected.every((item) => {
       return all.includes(item)
     })
   }
