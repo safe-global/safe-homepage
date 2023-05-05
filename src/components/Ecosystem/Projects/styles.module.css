@@ -102,7 +102,16 @@
 
 .chipContainer {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
+}
+
+.description {
+  color: var(--mui-palette-primary-light);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .filterButton {

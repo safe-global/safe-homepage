@@ -48,7 +48,7 @@ export const ProjectCard = (item: EcosystemProject) => {
         {item.project}
       </Typography>
 
-      <Typography variant="body2" color="primary.light">
+      <Typography variant="body2" className={css.description}>
         {item.value_prop}
       </Typography>
 

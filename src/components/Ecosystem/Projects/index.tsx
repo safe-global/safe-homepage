@@ -108,13 +108,17 @@ const GRID_SPACING: GridProps['spacing'] = {
   md: '30px',
 }
 
+const PAGE_LENGTH = 12
+
 export const Projects = (): ReactElement => {
-  const [query, setQuery] = useState<string>('')
+  const [query, setQuery] = useState('')
   const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false)
 
   const [selectedCategories, setSelectedCategories] = useState<string[]>([])
   const [selectedIntegrations, setSelectedIntegrations] = useState<string[]>([])
   const [selectedNetworks, setSelectedNetworks] = useState<string[]>([])
+
+  const [pageLength, setPageLength] = useState(PAGE_LENGTH)
 
   const onSelect = (setState: Dispatch<SetStateAction<string[]>>) => (property: string, checked: boolean) => {
     setState((prev) => {
@@ -130,11 +134,27 @@ export const Projects = (): ReactElement => {
   const onSelectIntegration = onSelect(setSelectedIntegrations)
   const onSelectNetwork = onSelect(setSelectedNetworks)
 
+  const onShowMore = () => {
+    setPageLength((val) => {
+      return (val += PAGE_LENGTH)
+    })
+  }
+
+  // Category filtered results
   const filteredProjects = useMemo(() => {
+    if (selectedCategories.length === 0 && selectedIntegrations.length === 0 && selectedNetworks.length === 0) {
+      return projects
+    }
     return getFilteredProjects({ selectedCategories, selectedIntegrations, selectedNetworks })
   }, [selectedCategories, selectedIntegrations, selectedNetworks])
 
+  // Search results
   const searchResults = useProjectSearch(filteredProjects, query)
+
+  // Paginated filtered/search-based results
+  const visibleResults = searchResults.slice(0, pageLength)
+
+  const shouldShowMoreButton = visibleResults.length < searchResults.length
 
   const sidebar = (
     <>
@@ -244,25 +264,32 @@ export const Projects = (): ReactElement => {
           </Grid>
 
           <Grid item xs={12} md={9}>
-            <Grid container spacing={GRID_SPACING} display="flex" alignContent="flex-start">
-              {searchResults.length > 0 ? (
-                searchResults.map((project, idx) => (
+            {visibleResults.length > 0 ? (
+              <Grid container spacing={GRID_SPACING} display="flex" alignContent="flex-start">
+                {visibleResults.map((project, idx) => (
                   <Grid item xs={12} md={4} key={project.project + idx}>
                     <ProjectCard {...project} />
                   </Grid>
-                ))
-              ) : (
-                <Grid item xs textAlign="center">
-                  <SearchIcon />
-                  <Typography variant="h4" my={2}>
-                    No results found for
-                    <br />
-                    {query}
-                  </Typography>
-                  <Typography color="primary.light">Try searching something else</Typography>
-                </Grid>
-              )}
-            </Grid>
+                ))}
+                {shouldShowMoreButton && (
+                  <Grid item xs={12} display="flex" justifyContent="center">
+                    <Button variant="contained" size="large" onClick={onShowMore}>
+                      Show more
+                    </Button>
+                  </Grid>
+                )}
+              </Grid>
+            ) : (
+              <div style={{ textAlign: 'center' }}>
+                <SearchIcon />
+                <Typography variant="h4" my={2}>
+                  No results found for
+                  <br />
+                  {query}
+                </Typography>
+                <Typography color="primary.light">Try searching something else</Typography>
+              </div>
+            )}
           </Grid>
         </Grid>
 
