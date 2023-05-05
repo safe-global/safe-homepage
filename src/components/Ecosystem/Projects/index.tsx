@@ -70,7 +70,7 @@ const uniqueIntegrations = getUniqueStrings(allIntegrations)
 const allNetworks = projects.flatMap(getProjectNetworks)
 const uniqueNetworks = getUniqueStrings(allNetworks)
 
-const getFilteredProjects = ({
+export const _getFilteredProjects = ({
   selectedCategories,
   selectedIntegrations,
   selectedNetworks,
@@ -136,16 +136,18 @@ export const Projects = (): ReactElement => {
 
   const onShowMore = () => {
     setPageLength((val) => {
-      return (val += PAGE_LENGTH)
+      return val + PAGE_LENGTH
     })
   }
 
   // Category filtered results
   const filteredProjects = useMemo(() => {
-    if (selectedCategories.length === 0 && selectedIntegrations.length === 0 && selectedNetworks.length === 0) {
+    const noFilers =
+      selectedCategories.length === 0 && selectedIntegrations.length === 0 && selectedNetworks.length === 0
+    if (noFilers) {
       return projects
     }
-    return getFilteredProjects({ selectedCategories, selectedIntegrations, selectedNetworks })
+    return _getFilteredProjects({ selectedCategories, selectedIntegrations, selectedNetworks })
   }, [selectedCategories, selectedIntegrations, selectedNetworks])
 
   // Search results
@@ -218,7 +220,7 @@ export const Projects = (): ReactElement => {
             <Typography>
               {searchResults.length}{' '}
               <Typography color="primary.light" component="span">
-                results
+                result{searchResults.length === 1 ? '' : 's'}
               </Typography>
             </Typography>
             <Button variant="outlined" className={css.filterButton} onClick={() => setIsFilterDrawerOpen(true)}>

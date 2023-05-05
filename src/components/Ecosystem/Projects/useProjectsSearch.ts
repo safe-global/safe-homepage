@@ -13,16 +13,8 @@ const useProjectSearch = (projects: EcosystemProject[], query: string): Ecosyste
             weight: 0.99,
           },
           {
-            name: 'primary_integration',
+            name: 'value_prop',
             weight: 0.5,
-          },
-          {
-            name: 'primary_category',
-            weight: 0.5,
-          },
-          {
-            name: 'secondary_categories',
-            weight: 0.2,
           },
         ],
         // https://fusejs.io/api/options.html#threshold
