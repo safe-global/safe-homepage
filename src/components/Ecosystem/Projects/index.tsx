@@ -15,6 +15,7 @@ import {
 } from '@mui/material'
 import clsx from 'clsx'
 import { useMemo, useState } from 'react'
+import type { GridProps } from '@mui/material'
 import type { Dispatch, ReactElement, SetStateAction } from 'react'
 
 import SearchIcon from '@/public/images/search.svg'
@@ -25,7 +26,6 @@ import { useProjectSearch } from './useProjectsSearch'
 import { SidebarAccordion } from './SidebarAccordion'
 import { ProjectCard } from './ProjectCard'
 import { getProjectCategories, getProjectIntegrations, getProjectNetworks } from './project-utils'
-
 import EcosystemDB from '@/content/ecosystem-data.json'
 
 import layoutCss from '@/components/common/styles.module.css'
@@ -103,8 +103,10 @@ const getFilteredProjects = ({
   })
 }
 
-const SPACING_XS = 2
-const SPACING_MD = '30px'
+const GRID_SPACING: GridProps['spacing'] = {
+  xs: 2,
+  md: '30px',
+}
 
 export const Projects = (): ReactElement => {
   const [query, setQuery] = useState<string>('')
@@ -132,7 +134,7 @@ export const Projects = (): ReactElement => {
     return getFilteredProjects({ selectedCategories, selectedIntegrations, selectedNetworks })
   }, [selectedCategories, selectedIntegrations, selectedNetworks])
 
-  const searchResult = useProjectSearch(filteredProjects, query)
+  const searchResults = useProjectSearch(filteredProjects, query)
 
   const sidebar = (
     <>
@@ -191,20 +193,16 @@ export const Projects = (): ReactElement => {
 
         <Divider sx={{ my: 9 }} />
 
-        <Grid container spacing={{ xs: SPACING_XS, md: SPACING_MD }}>
+        <Grid container spacing={GRID_SPACING}>
           <Grid item xs={12} md={3} display="flex" alignItems="center" justifyContent="space-between">
             <Typography>
-              {searchResult.length}{' '}
+              {searchResults.length}{' '}
               <Typography color="primary.light" component="span">
                 results
               </Typography>
             </Typography>
-            <Button
-              variant="outlined"
-              className={css.filterButton}
-              startIcon={<FilterIcon />}
-              onClick={() => setIsFilterDrawerOpen(true)}
-            >
+            <Button variant="outlined" className={css.filterButton} onClick={() => setIsFilterDrawerOpen(true)}>
+              <FilterIcon />
               Filter
             </Button>
           </Grid>
@@ -245,22 +243,26 @@ export const Projects = (): ReactElement => {
             {sidebar}
           </Grid>
 
-          <Grid
-            item
-            container
-            xs={12}
-            md={9}
-            spacing={{ xs: SPACING_XS, md: SPACING_MD }}
-            display="flex"
-            alignContent="flex-start"
-          >
-            {searchResult.map((ecosystemProject, idx) => {
-              return (
-                <Grid item xs={12} md={4} key={ecosystemProject.project + idx}>
-                  <ProjectCard {...ecosystemProject} />
+          <Grid item xs={12} md={9}>
+            <Grid container spacing={GRID_SPACING} display="flex" alignContent="flex-start">
+              {searchResults.length > 0 ? (
+                searchResults.map((project, idx) => (
+                  <Grid item xs={12} md={4} key={project.project + idx}>
+                    <ProjectCard {...project} />
+                  </Grid>
+                ))
+              ) : (
+                <Grid item xs textAlign="center">
+                  <SearchIcon />
+                  <Typography variant="h4" my={2}>
+                    No results found for
+                    <br />
+                    {query}
+                  </Typography>
+                  <Typography color="primary.light">Try searching something else</Typography>
                 </Grid>
-              )
-            })}
+              )}
+            </Grid>
           </Grid>
         </Grid>
 
@@ -270,18 +272,19 @@ export const Projects = (): ReactElement => {
       <Dialog fullScreen open={isFilterDrawerOpen}>
         <AppBar className={css.appBar}>
           <Toolbar disableGutters>
-            <IconButton onClick={() => setIsFilterDrawerOpen(false)} sx={{ padding: 2 }}>
+            <IconButton onClick={() => setIsFilterDrawerOpen(false)} className={css.backButton} disableRipple>
               <ArrowBackIcon />
             </IconButton>
             <Divider orientation="vertical" />
-            <Box p={2} color="white">
-              Filter
-            </Box>
+            <Box p={2}>Filter</Box>
           </Toolbar>
         </AppBar>
+
         <div className={css.filterWrapper}>
           {sidebar}
+
           <span style={{ flex: 1 }} />
+
           <Button variant="contained" size="large" fullWidth onClick={() => setIsFilterDrawerOpen(false)}>
             Show results
           </Button>

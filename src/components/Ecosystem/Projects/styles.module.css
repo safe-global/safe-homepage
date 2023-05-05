@@ -1,14 +1,12 @@
-.appBar {
-  border-bottom: 1px solid var(--mui-palette-border-light);
-  font-size: 20px;
-  position: sticky;
-  background-color: var(--mui-palette-background-main);
-}
-
 .wrapper {
   margin-top: 0;
 }
 
+.searchField :global .MuiInputBase-root {
+  background: white;
+}
+
+/* Project card */
 .card {
   background: var(--mui-palette-border-background);
   box-shadow: inset 0 0 0 1px var(--mui-palette-border-light);
@@ -21,10 +19,6 @@
   position: relative;
   transition: 0.3s;
   height: 300px;
-}
-
-.searchField :global .MuiInputBase-root {
-  background: white;
 }
 
 .image {
@@ -114,16 +108,34 @@
 .filterButton {
   border: 1px solid var(--mui-palette-border-light);
   color: var(--mui-palette-text-primary);
+  display: flex;
+  align-items: center;
+  padding: 12px 16px 8px;
+  gap: 16px;
+  width: 116px;
+  height: 48px;
   font-size: 16px;
-  padding: 16px 20px;
 }
 
-.filterButton :global .MuiButton-startIcon {
-  margin-right: 20px;
+.filterButton svg {
+  margin-bottom: 6px;
 }
 
-.filterButton :global .MuiButton-startIcon svg {
-  margin: 4px;
+/* Mobile filter */
+.appBar {
+  border-bottom: 1px solid var(--mui-palette-border-light);
+  font-size: 20px;
+  position: sticky;
+  background-color: var(--mui-palette-background-main);
+  color: var(--mui-palette-text-primary);
+}
+
+.backButton {
+  width: 64px;
+}
+
+.backButton:hover {
+  background-color: unset;
 }
 
 .filterWrapper {
