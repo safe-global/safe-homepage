@@ -21,3 +21,7 @@ export const PROTOCOL_KIT_LINK = 'https://docs.safe.global/learn/safe-core-accou
 export const AUTH_KIT_LINK = 'https://docs.safe.global/learn/safe-core-account-abstraction-sdk/auth-kit'
 export const RELAY_KIT_LINK = 'https://docs.safe.global/learn/safe-core-account-abstraction-sdk/relay-kit'
 export const ONRAMP_KIT_LINK = 'https://docs.safe.global/learn/safe-core-account-abstraction-sdk/onramp-kit'
+
+export const ECOSYSTEM_DATA_URL = IS_PRODUCTION
+  ? 'https://ecosystem-database.staging.5afe.dev' // TODO: Replace with Prod URL once ready
+  : 'https://ecosystem-database.staging.5afe.dev'
