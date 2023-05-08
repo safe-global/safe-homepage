@@ -1,4 +1,4 @@
-import type { EcosystemProject } from '.'
+import { type EcosystemProject } from '@/hooks/useEcosystemData'
 
 const splitByComma = (text: string) => {
   return text

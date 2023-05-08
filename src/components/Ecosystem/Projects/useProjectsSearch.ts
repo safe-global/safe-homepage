@@ -1,7 +1,6 @@
 import { useMemo } from 'react'
 import Fuse from 'fuse.js'
-
-import type { EcosystemProject } from '.'
+import { type EcosystemProject } from '@/hooks/useEcosystemData'
 
 const useProjectSearch = (projects: EcosystemProject[], query: string): EcosystemProject[] => {
   const fuse = useMemo(

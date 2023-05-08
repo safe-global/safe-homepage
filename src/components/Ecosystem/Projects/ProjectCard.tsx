@@ -3,16 +3,17 @@ import { Avatar, Typography, IconButton, SvgIcon, Chip } from '@mui/material'
 import TwitterIcon from '@/public/images/twitter-icon.svg'
 import GithubIcon from '@/public/images/github-icon.svg'
 import { getProjectCategories } from './project-utils'
-import type { EcosystemProject } from '.'
 
 import css from './styles.module.css'
+import { ECOSYSTEM_DATA_URL } from '@/config/constants'
+import { type EcosystemProject } from '@/hooks/useEcosystemData'
 
 export const ProjectCard = (item: EcosystemProject) => {
   const categories = getProjectCategories(item)
 
   return (
     <div className={css.card}>
-      <Avatar className={css.image} src={item.logo}>
+      <Avatar className={css.image} src={ECOSYSTEM_DATA_URL + item.logo}>
         &nbsp;
       </Avatar>
 
@@ -49,7 +50,7 @@ export const ProjectCard = (item: EcosystemProject) => {
       </Typography>
 
       <Typography variant="body2" className={css.description}>
-        {item.value_prop}
+        {item.description}
       </Typography>
 
       <div className={css.categories}>
