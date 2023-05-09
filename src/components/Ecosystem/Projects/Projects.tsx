@@ -228,7 +228,7 @@ export const Projects = (): ReactElement => {
               </Typography>
               {!noFilters && (
                 <Link onClick={onResetFilters} className={css.reset} variant="caption">
-                  RESET ALL
+                  Reset all
                 </Link>
               )}
               <Button variant="outlined" className={css.filterButton} onClick={() => setIsFilterDrawerOpen(true)}>
