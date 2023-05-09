@@ -12,6 +12,7 @@ import {
   Toolbar,
   IconButton,
   Box,
+  Link,
 } from '@mui/material'
 import clsx from 'clsx'
 import { useMemo, useState } from 'react'
@@ -72,6 +73,8 @@ export const _getFilteredProjects = ({
   })
 }
 
+const EMPTY_FILTER: Array<string> = []
+
 const GRID_SPACING: GridProps['spacing'] = {
   xs: 2,
   md: '30px',
@@ -83,9 +86,9 @@ export const Projects = (): ReactElement => {
   const [query, setQuery] = useState('')
   const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false)
 
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([])
-  const [selectedIntegrations, setSelectedIntegrations] = useState<string[]>([])
-  const [selectedNetworks, setSelectedNetworks] = useState<string[]>([])
+  const [selectedCategories, setSelectedCategories] = useState(EMPTY_FILTER)
+  const [selectedIntegrations, setSelectedIntegrations] = useState(EMPTY_FILTER)
+  const [selectedNetworks, setSelectedNetworks] = useState(EMPTY_FILTER)
 
   const [pageLength, setPageLength] = useState(PAGE_LENGTH)
 
@@ -102,6 +105,12 @@ export const Projects = (): ReactElement => {
   // Networks
   const allNetworks = useMemo(() => projects.flatMap(getProjectNetworks), [projects])
   const uniqueNetworks = useMemo(() => getUniqueStrings(allNetworks), [allNetworks])
+
+  const onResetFilters = () => {
+    setSelectedCategories(EMPTY_FILTER)
+    setSelectedIntegrations(EMPTY_FILTER)
+    setSelectedNetworks(EMPTY_FILTER)
+  }
 
   const onSelect = (setState: Dispatch<SetStateAction<string[]>>) => (property: string, checked: boolean) => {
     setState((prev) => {
@@ -123,17 +132,18 @@ export const Projects = (): ReactElement => {
     })
   }
 
+  const noFilters = useMemo(() => {
+    return selectedCategories.length === 0 && selectedIntegrations.length === 0 && selectedNetworks.length === 0
+  }, [selectedCategories, selectedIntegrations, selectedNetworks])
+
   // Category filtered results
   const filteredProjects = useMemo(() => {
-    const noFilters =
-      selectedCategories.length === 0 && selectedIntegrations.length === 0 && selectedNetworks.length === 0
-
     if (noFilters) {
       return projects
     }
 
     return _getFilteredProjects({ projects, selectedCategories, selectedIntegrations, selectedNetworks })
-  }, [projects, selectedCategories, selectedIntegrations, selectedNetworks])
+  }, [noFilters, projects, selectedCategories, selectedIntegrations, selectedNetworks])
 
   // Search results
   const searchResults = useProjectSearch(filteredProjects, query)
@@ -208,6 +218,11 @@ export const Projects = (): ReactElement => {
                 result{searchResults.length === 1 ? '' : 's'}
               </Typography>
             </Typography>
+            {!noFilters && (
+              <Link onClick={onResetFilters} className={css.reset} variant="caption">
+                RESET ALL
+              </Link>
+            )}
             <Button variant="outlined" className={css.filterButton} onClick={() => setIsFilterDrawerOpen(true)}>
               <FilterIcon />
               Filter
