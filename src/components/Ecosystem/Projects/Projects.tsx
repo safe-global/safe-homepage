@@ -76,6 +76,20 @@ export const _getFilteredProjects = ({
   })
 }
 
+const SpecificCategoryFilter = ({
+  category,
+  onClick,
+}: {
+  category: EcosystemProject['primary_category']
+  onClick: (category: EcosystemProject['primary_category']) => void
+}) => {
+  return (
+    <button className={css.baseButton} onClick={() => onClick(category)}>
+      {category}
+    </button>
+  )
+}
+
 const EMPTY_FILTER: Array<string> = []
 
 const DIVIDER_Y_MARGIN = 9
@@ -130,6 +144,10 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
   const onSelectCategory = onSelect(setSelectedCategories)
   const onSelectIntegration = onSelect(setSelectedIntegrations)
   const onSelectNetwork = onSelect(setSelectedNetworks)
+
+  const toggleSpecificCategory = (category: EcosystemProject['primary_category']) => {
+    return onSelectCategory(category, !selectedCategories.includes(category))
+  }
 
   const onShowMore = () => {
     setPageLength((val) => {
@@ -208,7 +226,11 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
               <Typography component="span" color="primary.light">
                 Example:
               </Typography>{' '}
-              DeFi, DAO Tooling, Payments, NFT, Infrastructure
+              <SpecificCategoryFilter category="DeFi" onClick={toggleSpecificCategory} />,{' '}
+              <SpecificCategoryFilter category="DAO Tooling" onClick={toggleSpecificCategory} />,{' '}
+              <SpecificCategoryFilter category="Payments" onClick={toggleSpecificCategory} />,{' '}
+              <SpecificCategoryFilter category="Collectibles / NFT" onClick={toggleSpecificCategory} />,{' '}
+              <SpecificCategoryFilter category="Infrastructure" onClick={toggleSpecificCategory} />
             </Typography>
           </Grid>
         </Grid>
