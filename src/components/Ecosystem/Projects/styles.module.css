@@ -52,6 +52,16 @@
   font-size: 14px;
 }
 
+.reset {
+  text-decoration: none;
+  color: var(--mui-palette-text-primary);
+  cursor: pointer;
+}
+
+.reset:hover {
+  color: var(--mui-palette-primary-light);
+}
+
 .sidebar {
   display: none;
 }
