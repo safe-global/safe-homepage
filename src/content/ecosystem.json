@@ -9,6 +9,38 @@
     "component": "Ecosystem/Intro"
   },
   {
+    "items": [
+      {
+        "title": "Integrate with Safe",
+        "image": {
+          "src": "/images/code-dotted.svg",
+          "alt": "Code block"
+        },
+        "link": {
+          "href": "#"
+        }
+      },
+      {
+        "title": "Submit your Project",
+        "image": {
+          "src": "/images/arrow-out-icon.svg",
+          "alt": "Arrow angled"
+        },
+        "link": {
+          "href": "https://github.com/safe-global/safe-ecosystem-database/issues/new?assignees=&labels=project+%3Agame_die%3A&template=suggest_project.yaml&title=Suggest+a+project"
+        }
+      },
+      {
+        "title": "Ecosystem Careers",
+        "image": {
+          "src": "/images/arrow-out-icon.svg",
+          "alt": "Arrow angled"
+        },
+        "link": {
+          "href": "#"
+        }
+      }
+    ],
     "component": "Ecosystem/Projects"
   }
 ]
