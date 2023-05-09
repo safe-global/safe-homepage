@@ -78,10 +78,6 @@
   margin: 16px 0 !important;
 }
 
-.accordion :global .Mui-expanded .MuiAccordionSummary-content {
-  margin-bottom: 8px !important;
-}
-
 .accordion :global .MuiAccordionDetails-root {
   padding-top: 0;
 }

@@ -42,5 +42,48 @@
       }
     ],
     "component": "Ecosystem/Projects"
+  },
+  {
+    "title": "Integrate with Safe",
+    "text": "Learn how you can be a part of the Safe ecosystem by building on top of the Safe{Core} stack.",
+    "buttons": [
+      {
+        "text": "Documentation",
+        "href": "#",
+        "variant": "button"
+      },
+      {
+        "text": "Another Link",
+        "href": "#",
+        "variant": "link"
+      }
+    ],
+    "items": [
+      {
+        "title": "Connect as a Safe App",
+        "text": "Integrate your standalone dapp as a Safe App by leveraging our <a href='https://github.com/safe-global/safe-apps-sdk' target='_blank' rel='noreferrer'>safe-apps-sdk</a>, and get it <a href='https://docs.safe.global/learn/safe-apps/releasing-your-safe-app' target='_blank' rel='noreferrer'>added</a> to our Safe App store within Safe{Wallet}",
+        "image": {
+          "src": "/images/code-dotted.svg",
+          "alt": "Code block"
+        }
+      },
+      {
+        "title": "Build on Safe",
+        "text": "Create your own use case and UI/UX, powered by the security of the Safe contracts, using the <a href='https://docs.safe.global/learn/safe-core/safe-core-account-abstraction-sdk/protocol-kit' target='_blank' rel='noreferrer'>Protocol Kit</a> and the <a href='https://docs.safe.global/' target='_blank' rel='noreferrer'>{Core}SDK</a>",
+        "image": {
+          "src": "/images/arrow-out-icon.svg",
+          "alt": "Arrow angled"
+        }
+      },
+      {
+        "title": "Extend Safe Functionality",
+        "text": "Add new features to the Safe protocol by building a module, or further secure your transactions by creating a guard. Contact us for more info",
+        "image": {
+          "src": "/images/arrow-out-icon.svg",
+          "alt": "Arrow angled"
+        }
+      }
+    ],
+    "component": "Ecosystem/TextBlockItems"
   }
 ]

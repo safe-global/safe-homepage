@@ -25,6 +25,23 @@
   border-color: var(--mui-palette-primary-main);
 }
 
+.stacked.card:first-of-type {
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 0;
+}
+
+.stacked.card:last-of-type {
+  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-top-right-radius: 0;
+}
+
+.card a {
+  text-decoration: underline;
+  color: var(--mui-palette-secondary-light);
+}
+
 .cardImage {
 }
 
