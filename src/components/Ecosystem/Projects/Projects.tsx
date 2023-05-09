@@ -13,6 +13,7 @@ import {
   IconButton,
   Box,
   Link,
+  CircularProgress,
 } from '@mui/material'
 import clsx from 'clsx'
 import { useMemo, useState } from 'react'
@@ -75,6 +76,8 @@ export const _getFilteredProjects = ({
 
 const EMPTY_FILTER: Array<string> = []
 
+const DIVIDER_Y_MARGIN = 9
+
 const GRID_SPACING: GridProps['spacing'] = {
   xs: 2,
   md: '30px',
@@ -92,7 +95,7 @@ export const Projects = (): ReactElement => {
 
   const [pageLength, setPageLength] = useState(PAGE_LENGTH)
 
-  const { data: projects = [] } = useEcosystemData()
+  const { data: projects = [], isLoading } = useEcosystemData()
 
   // Categories
   const allCategories = useMemo(() => projects.flatMap(getProjectCategories), [projects])
@@ -208,94 +211,98 @@ export const Projects = (): ReactElement => {
           </Grid>
         </Grid>
 
-        <Divider sx={{ my: 9 }} />
+        <Divider sx={{ my: DIVIDER_Y_MARGIN }} />
 
-        <Grid container spacing={GRID_SPACING}>
-          <Grid item xs={12} md={3} display="flex" alignItems="center" justifyContent="space-between">
-            <Typography>
-              {searchResults.length}{' '}
-              <Typography color="primary.light" component="span">
-                result{searchResults.length === 1 ? '' : 's'}
-              </Typography>
-            </Typography>
-            {!noFilters && (
-              <Link onClick={onResetFilters} className={css.reset} variant="caption">
-                RESET ALL
-              </Link>
-            )}
-            <Button variant="outlined" className={css.filterButton} onClick={() => setIsFilterDrawerOpen(true)}>
-              <FilterIcon />
-              Filter
-            </Button>
-          </Grid>
-
-          <Grid item xs={12} md={9} className={css.chipContainer}>
-            {selectedCategories.map((category) => (
-              <Chip
-                key={category}
-                className={css.chip}
-                label={category}
-                onDelete={() => onSelectCategory(category, false)}
-                deleteIcon={<CrossIcon />}
-              />
-            ))}
-
-            {selectedIntegrations.map((integration) => (
-              <Chip
-                key={integration}
-                className={css.chip}
-                label={integration}
-                onDelete={() => onSelectIntegration(integration, false)}
-                deleteIcon={<CrossIcon />}
-              />
-            ))}
-
-            {selectedNetworks.map((network) => (
-              <Chip
-                key={network}
-                className={css.chip}
-                label={network}
-                onDelete={() => onSelectNetwork(network, false)}
-                deleteIcon={<CrossIcon />}
-              />
-            ))}
-          </Grid>
-
-          <Grid item xs={12} md={3} className={css.sidebar}>
-            {sidebar}
-          </Grid>
-
-          <Grid item xs={12} md={9}>
-            {visibleResults.length > 0 ? (
-              <Grid container spacing={GRID_SPACING} display="flex" alignContent="flex-start">
-                {visibleResults.map((project, idx) => (
-                  <Grid item xs={12} md={4} key={project.project + idx}>
-                    <ProjectCard {...project} />
-                  </Grid>
-                ))}
-                {shouldShowMoreButton && (
-                  <Grid item xs={12} display="flex" justifyContent="center">
-                    <Button variant="contained" size="large" onClick={onShowMore}>
-                      Show more
-                    </Button>
-                  </Grid>
-                )}
-              </Grid>
-            ) : (
-              <div style={{ textAlign: 'center' }}>
-                <SearchIcon />
-                <Typography variant="h4" my={2}>
-                  No results found for
-                  <br />
-                  {query}
+        {isLoading ? (
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <CircularProgress />
+          </div>
+        ) : (
+          <Grid container spacing={GRID_SPACING}>
+            <Grid item xs={12} md={3} display="flex" alignItems="center" justifyContent="space-between">
+              <Typography>
+                {searchResults.length}{' '}
+                <Typography color="primary.light" component="span">
+                  result{searchResults.length === 1 ? '' : 's'}
                 </Typography>
-                <Typography color="primary.light">Try searching something else</Typography>
-              </div>
-            )}
-          </Grid>
-        </Grid>
+              </Typography>
+              {!noFilters && (
+                <Link onClick={onResetFilters} className={css.reset} variant="caption">
+                  RESET ALL
+                </Link>
+              )}
+              <Button variant="outlined" className={css.filterButton} onClick={() => setIsFilterDrawerOpen(true)}>
+                <FilterIcon />
+                Filter
+              </Button>
+            </Grid>
 
-        <Divider sx={{ my: '100px' }} />
+            <Grid item xs={12} md={9} className={css.chipContainer}>
+              {selectedCategories.map((category) => (
+                <Chip
+                  key={category}
+                  className={css.chip}
+                  label={category}
+                  onDelete={() => onSelectCategory(category, false)}
+                  deleteIcon={<CrossIcon />}
+                />
+              ))}
+
+              {selectedIntegrations.map((integration) => (
+                <Chip
+                  key={integration}
+                  className={css.chip}
+                  label={integration}
+                  onDelete={() => onSelectIntegration(integration, false)}
+                  deleteIcon={<CrossIcon />}
+                />
+              ))}
+
+              {selectedNetworks.map((network) => (
+                <Chip
+                  key={network}
+                  className={css.chip}
+                  label={network}
+                  onDelete={() => onSelectNetwork(network, false)}
+                  deleteIcon={<CrossIcon />}
+                />
+              ))}
+            </Grid>
+
+            <Grid item xs={12} md={3} className={css.sidebar}>
+              {sidebar}
+            </Grid>
+
+            <Grid item xs={12} md={9}>
+              {visibleResults.length > 0 ? (
+                <Grid container spacing={GRID_SPACING} display="flex" alignContent="flex-start">
+                  {visibleResults.map((project, idx) => (
+                    <Grid item xs={12} md={4} key={project.project + idx}>
+                      <ProjectCard {...project} />
+                    </Grid>
+                  ))}
+                  {shouldShowMoreButton && (
+                    <Grid item xs={12} display="flex" justifyContent="center">
+                      <Button variant="contained" size="large" onClick={onShowMore}>
+                        Show more
+                      </Button>
+                    </Grid>
+                  )}
+                </Grid>
+              ) : (
+                <div style={{ textAlign: 'center' }}>
+                  <SearchIcon />
+                  <Typography variant="h4" my={2}>
+                    No results found for {query || 'selected filters'}
+                  </Typography>
+                  <Typography color="primary.light">Try searching something else</Typography>
+                </div>
+              )}
+            </Grid>
+          </Grid>
+        )}
+
+        <Divider sx={{ my: DIVIDER_Y_MARGIN }} />
       </Container>
 
       <Dialog fullScreen open={isFilterDrawerOpen}>
