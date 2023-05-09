@@ -33,6 +33,8 @@ import { type EcosystemProject } from '@/hooks/useEcosystemData'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 import { useEcosystemData } from '@/hooks/useEcosystemData'
+import { type BaseBlock } from '@/components/Home/types'
+import Cards from '@/components/Ecosystem/Cards'
 
 const getUniqueStrings = (entries: string[]) => {
   const uniqueEntries = new Set(entries)
@@ -85,7 +87,7 @@ const GRID_SPACING: GridProps['spacing'] = {
 
 const PAGE_LENGTH = 12
 
-export const Projects = (): ReactElement => {
+export const Projects = ({ items }: BaseBlock): ReactElement => {
   const [query, setQuery] = useState('')
   const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false)
 
@@ -184,7 +186,7 @@ export const Projects = (): ReactElement => {
   return (
     <>
       <Container className={clsx(layoutCss.containerMedium, css.wrapper)}>
-        <Grid container>
+        <Grid container mb={7}>
           <Grid item xs={12} md={8}>
             <TextField
               className={css.searchField}
@@ -210,6 +212,8 @@ export const Projects = (): ReactElement => {
             </Typography>
           </Grid>
         </Grid>
+
+        <Cards items={items} />
 
         <Divider sx={{ my: DIVIDER_Y_MARGIN }} />
 

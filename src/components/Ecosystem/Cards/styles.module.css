@@ -1,0 +1,76 @@
+.card {
+  background: var(--mui-palette-border-background);
+  border: 1px solid var(--mui-palette-border-light);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: 100%;
+  position: relative;
+  transition: border 0.3s;
+}
+
+.card:first-of-type {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.card:last-of-type {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.card:hover {
+  border-color: var(--mui-palette-primary-main);
+}
+
+.stacked.card:first-of-type {
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 0;
+}
+
+.stacked.card:last-of-type {
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-top-right-radius: 0;
+}
+
+.card a {
+  text-decoration: underline;
+  color: var(--mui-palette-secondary-light);
+}
+
+.cardImage {
+}
+
+.cardLink:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.cardContent {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (min-width: 600px) {
+  .card:first-of-type {
+    border-top-right-radius: 0;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+
+  .card:last-of-type {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+}
