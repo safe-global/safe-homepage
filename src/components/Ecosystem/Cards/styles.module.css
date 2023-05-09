@@ -12,13 +12,13 @@
 }
 
 .card:first-of-type {
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
 
 .card:last-of-type {
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
 }
 
 .card:hover {
@@ -26,14 +26,14 @@
 }
 
 .stacked.card:first-of-type {
-  border-top-right-radius: 12px;
-  border-top-left-radius: 12px;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
   border-bottom-left-radius: 0;
 }
 
 .stacked.card:last-of-type {
-  border-bottom-right-radius: 12px;
-  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
   border-top-right-radius: 0;
 }
 
@@ -64,13 +64,13 @@
 @media (min-width: 600px) {
   .card:first-of-type {
     border-top-right-radius: 0;
-    border-top-left-radius: 12px;
-    border-bottom-left-radius: 12px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
   }
 
   .card:last-of-type {
     border-bottom-left-radius: 0;
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
   }
 }

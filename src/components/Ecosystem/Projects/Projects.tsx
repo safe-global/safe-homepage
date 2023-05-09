@@ -200,7 +200,7 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
           </Grid>
         </Grid>
 
-        <Cards title="" text="" items={items} />
+        <Cards items={items} />
 
         <Divider sx={{ my: 9 }} />
 

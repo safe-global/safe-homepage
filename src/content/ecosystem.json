@@ -61,7 +61,7 @@
     "items": [
       {
         "title": "Connect as a Safe App",
-        "text": "Integrate your standalone dapp as a Safe App by leveraging our <a href='https://github.com/safe-global/safe-apps-sdk' target='_blank' rel='noreferrer'>safe-apps-sdk</a>, and get it <a href='https://docs.safe.global/learn/safe-apps/releasing-your-safe-app' target='_blank' rel='noreferrer'>added</a> to our Safe App store within Safe{Wallet}",
+        "text": "Integrate your standalone DApp as a Safe App by leveraging our <a href='https://github.com/safe-global/safe-apps-sdk' target='_blank' rel='noreferrer'>safe-apps-sdk</a>, and get it <a href='https://docs.safe.global/learn/safe-apps/releasing-your-safe-app' target='_blank' rel='noreferrer'>added</a> to our Safe App store within Safe{Wallet}",
         "image": {
           "src": "/images/code-dotted.svg",
           "alt": "Code block"

@@ -15,7 +15,7 @@ const TextBlockItems = ({ title, text, buttons, items }: BaseBlock) => {
           </Typography>
           <Typography mb={5}>{text}</Typography>
           {buttons ? (
-            <Box display="flex" gap={3} color="white" alignItems="center">
+            <Box display="flex" gap={3} color="text.primary" alignItems="center">
               {buttons.map((button, index) => {
                 const { text, variant, href } = button
                 const isButton = variant === 'button'
@@ -39,7 +39,7 @@ const TextBlockItems = ({ title, text, buttons, items }: BaseBlock) => {
         </Grid>
         <Grid item md={2} display={{ xs: 'none', md: 'block' }} />
         <Grid item md={5}>
-          <Cards title="" text="" items={items} stacked />
+          <Cards items={items} stacked />
         </Grid>
       </Grid>
     </Container>
