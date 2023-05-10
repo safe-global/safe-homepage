@@ -106,7 +106,7 @@ const GRID_SPACING: GridProps['spacing'] = {
 
 const PAGE_LENGTH = 12
 
-export const Projects = ({ items }: BaseBlock): ReactElement => {
+export const Projects = ({ items, initialData }: BaseBlock & { initialData: EcosystemProject[] }): ReactElement => {
   const [query, setQuery] = useState('')
   const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false)
 
@@ -116,7 +116,7 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
 
   const [pageLength, setPageLength] = useState(PAGE_LENGTH)
 
-  const { data: projects = [], isLoading } = useEcosystemData()
+  const { data: projects = initialData, isLoading } = useEcosystemData()
 
   // Categories
   const allCategories = useMemo(() => projects.flatMap(getProjectCategories), [projects])

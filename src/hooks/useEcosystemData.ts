@@ -22,7 +22,7 @@ export type EcosystemProject = {
   interface_can_you_import_an_existing_safe: string
 }
 
-const fetchEcosystemData = async (): Promise<EcosystemProject[]> => {
+export const fetchEcosystemData = async (): Promise<EcosystemProject[]> => {
   return fetch(ECOSYSTEM_DATA_URL + '/data.json').then((res) => res.json())
 }
 
