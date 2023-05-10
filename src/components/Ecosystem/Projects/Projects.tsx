@@ -17,8 +17,9 @@ import {
 } from '@mui/material'
 import clsx from 'clsx'
 import { useMemo, useState } from 'react'
-import { NextRouter, useRouter } from 'next/router'
+import { useRouter } from 'next/router'
 import NextLink from 'next/link'
+import type { NextRouter } from 'next/router'
 import type { GridProps } from '@mui/material'
 import type { Dispatch, ReactElement, SetStateAction } from 'react'
 
@@ -111,12 +112,10 @@ const PAGE_LENGTH = 12
 
 const PAGE_QUERY_PARAM = 'page'
 
-const getPage = (router: NextRouter): number => {
-  const query = Array.isArray(router.query[PAGE_QUERY_PARAM])
-    ? router.query[PAGE_QUERY_PARAM][0]
-    : router.query[PAGE_QUERY_PARAM]
+const getPage = (query: NextRouter['query']): number => {
+  const page = Array.isArray(query[PAGE_QUERY_PARAM]) ? query[PAGE_QUERY_PARAM][0] : query[PAGE_QUERY_PARAM]
 
-  return Number(query) || 1
+  return Number(page) || 1
 }
 
 export const Projects = ({ items }: BaseBlock): ReactElement => {
@@ -128,7 +127,7 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
   const [selectedNetworks, setSelectedNetworks] = useState(EMPTY_FILTER)
 
   const router = useRouter()
-  const page = getPage(router)
+  const page = getPage(router.query)
   const [pageLength, setPageLength] = useState(page * PAGE_LENGTH)
 
   const { data: projects = [], isLoading } = useEcosystemData()
