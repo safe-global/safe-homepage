@@ -4,6 +4,14 @@
   align-items: center;
 }
 
+.bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  user-select: none;
+}
+
 .title {
   font-size: 64px;
   line-height: 64px;

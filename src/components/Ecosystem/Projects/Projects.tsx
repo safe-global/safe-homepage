@@ -27,7 +27,12 @@ import ArrowBackIcon from '@/public/images/arrow-back.svg'
 import { useProjectSearch } from './useProjectsSearch'
 import { SidebarAccordion } from './SidebarAccordion'
 import { ProjectCard } from './ProjectCard'
-import { getProjectCategories, getProjectIntegrations, getProjectNetworks } from './project-utils'
+import {
+  getPrimaryProjectCategories,
+  getProjectCategories,
+  getProjectIntegrations,
+  getProjectNetworks,
+} from './project-utils'
 import { type EcosystemProject } from '@/hooks/useEcosystemData'
 
 import layoutCss from '@/components/common/styles.module.css'
@@ -76,6 +81,20 @@ export const _getFilteredProjects = ({
   })
 }
 
+const SpecificCategoryFilter = ({
+  category,
+  onClick,
+}: {
+  category: EcosystemProject['primary_category']
+  onClick: (category: EcosystemProject['primary_category']) => void
+}) => {
+  return (
+    <button className={css.baseButton} onClick={() => onClick(category)}>
+      {category}
+    </button>
+  )
+}
+
 const EMPTY_FILTER: Array<string> = []
 
 const DIVIDER_Y_MARGIN = 9
@@ -102,6 +121,9 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
   // Categories
   const allCategories = useMemo(() => projects.flatMap(getProjectCategories), [projects])
   const uniqueCategories = useMemo(() => getUniqueStrings(allCategories), [allCategories])
+
+  const allPrimaryCategories = useMemo(() => projects.flatMap(getPrimaryProjectCategories), [projects])
+  const uniquePrimaryCategories = useMemo(() => getUniqueStrings(allPrimaryCategories), [allPrimaryCategories])
 
   // Integrations
   const allIntegrations = useMemo(() => projects.flatMap(getProjectIntegrations), [projects])
@@ -130,6 +152,10 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
   const onSelectCategory = onSelect(setSelectedCategories)
   const onSelectIntegration = onSelect(setSelectedIntegrations)
   const onSelectNetwork = onSelect(setSelectedNetworks)
+
+  const toggleSpecificCategory = (category: EcosystemProject['primary_category']) => {
+    return onSelectCategory(category, !selectedCategories.includes(category))
+  }
 
   const onShowMore = () => {
     setPageLength((val) => {
@@ -208,7 +234,18 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
               <Typography component="span" color="primary.light">
                 Example:
               </Typography>{' '}
-              DeFi, DAO Tooling, Payments, NFT, Infrastructure
+              {uniquePrimaryCategories.map((primaryCategory, idx, { length }) => {
+                return (
+                  <>
+                    <SpecificCategoryFilter
+                      key={primaryCategory + idx}
+                      category={primaryCategory}
+                      onClick={toggleSpecificCategory}
+                    />
+                    {idx !== length - 1 && <>, </>}
+                  </>
+                )
+              })}
             </Typography>
           </Grid>
         </Grid>
