@@ -128,7 +128,6 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
 
   const router = useRouter()
   const page = getPage(router.query)
-  const [pageLength, setPageLength] = useState(page * PAGE_LENGTH)
 
   const { data: projects = [], isLoading } = useEcosystemData()
 
@@ -175,12 +174,6 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
     return onSelectCategory(category, !selectedCategories.includes(category))
   }
 
-  const onShowMore = () => {
-    setPageLength((val) => {
-      return val + PAGE_LENGTH
-    })
-  }
-
   const noFilters = useMemo(() => {
     return selectedCategories.length === 0 && selectedIntegrations.length === 0 && selectedNetworks.length === 0
   }, [selectedCategories, selectedIntegrations, selectedNetworks])
@@ -198,7 +191,7 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
   const searchResults = useProjectSearch(filteredProjects, query)
 
   // Paginated filtered/search-based results
-  const visibleResults = searchResults.slice(0, pageLength)
+  const visibleResults = searchResults.slice(0, PAGE_LENGTH * page)
 
   const shouldShowMoreButton = visibleResults.length < searchResults.length
 
@@ -355,7 +348,7 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
                         // Pagination marker for search engines
                         rel="next"
                       >
-                        <Button variant="contained" size="large" onClick={onShowMore}>
+                        <Button variant="contained" size="large">
                           Show more
                         </Button>
                       </NextLink>
