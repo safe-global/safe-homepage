@@ -349,7 +349,12 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
                   ))}
                   {shouldShowMoreButton && (
                     <Grid item xs={12} display="flex" justifyContent="center">
-                      <NextLink href={{ query: { [PAGE_QUERY_PARAM]: page + 1 } }} shallow>
+                      <NextLink
+                        href={{ query: { [PAGE_QUERY_PARAM]: page + 1 } }}
+                        shallow
+                        // Pagination marker for search engines
+                        rel="next"
+                      >
                         <Button variant="contained" size="large" onClick={onShowMore}>
                           Show more
                         </Button>
