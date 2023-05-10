@@ -17,8 +17,9 @@ import {
 } from '@mui/material'
 import clsx from 'clsx'
 import { useMemo, useState } from 'react'
-import { NextRouter, useRouter } from 'next/router'
+import { useRouter } from 'next/router'
 import NextLink from 'next/link'
+import type { NextRouter } from 'next/router'
 import type { GridProps } from '@mui/material'
 import type { Dispatch, ReactElement, SetStateAction } from 'react'
 
