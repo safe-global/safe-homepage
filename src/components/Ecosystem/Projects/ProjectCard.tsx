@@ -7,6 +7,7 @@ import { getProjectCategories } from './project-utils'
 import css from './styles.module.css'
 import { ECOSYSTEM_DATA_URL } from '@/config/constants'
 import { type EcosystemProject } from '@/hooks/useEcosystemData'
+import Link from 'next/link'
 
 export const ProjectCard = (item: EcosystemProject) => {
   const categories = getProjectCategories(item)
@@ -44,6 +45,10 @@ export const ProjectCard = (item: EcosystemProject) => {
           </IconButton>
         )}
       </div>
+
+      {item.project_website && (
+        <Link className={css.cardLink} href={item.project_website} target="_blank" rel="noreferrer" />
+      )}
 
       <Typography fontWeight="500" mb={0.5}>
         {item.project}
