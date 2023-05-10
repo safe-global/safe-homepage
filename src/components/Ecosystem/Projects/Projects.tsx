@@ -27,7 +27,12 @@ import ArrowBackIcon from '@/public/images/arrow-back.svg'
 import { useProjectSearch } from './useProjectsSearch'
 import { SidebarAccordion } from './SidebarAccordion'
 import { ProjectCard } from './ProjectCard'
-import { getProjectCategories, getProjectIntegrations, getProjectNetworks } from './project-utils'
+import {
+  getPrimaryProjectCategories,
+  getProjectCategories,
+  getProjectIntegrations,
+  getProjectNetworks,
+} from './project-utils'
 import { type EcosystemProject } from '@/hooks/useEcosystemData'
 
 import layoutCss from '@/components/common/styles.module.css'
@@ -116,6 +121,9 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
   // Categories
   const allCategories = useMemo(() => projects.flatMap(getProjectCategories), [projects])
   const uniqueCategories = useMemo(() => getUniqueStrings(allCategories), [allCategories])
+
+  const allPrimaryCategories = useMemo(() => projects.flatMap(getPrimaryProjectCategories), [projects])
+  const uniquePrimaryCategories = useMemo(() => getUniqueStrings(allPrimaryCategories), [allPrimaryCategories])
 
   // Integrations
   const allIntegrations = useMemo(() => projects.flatMap(getProjectIntegrations), [projects])
@@ -226,11 +234,18 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
               <Typography component="span" color="primary.light">
                 Example:
               </Typography>{' '}
-              <SpecificCategoryFilter category="DeFi" onClick={toggleSpecificCategory} />,{' '}
-              <SpecificCategoryFilter category="DAO Tooling" onClick={toggleSpecificCategory} />,{' '}
-              <SpecificCategoryFilter category="Payments" onClick={toggleSpecificCategory} />,{' '}
-              <SpecificCategoryFilter category="Collectibles / NFT" onClick={toggleSpecificCategory} />,{' '}
-              <SpecificCategoryFilter category="Infrastructure" onClick={toggleSpecificCategory} />
+              {uniquePrimaryCategories.map((primaryCategory, idx, { length }) => {
+                return (
+                  <>
+                    <SpecificCategoryFilter
+                      key={primaryCategory + idx}
+                      category={primaryCategory}
+                      onClick={toggleSpecificCategory}
+                    />
+                    {idx !== length - 1 && <>, </>}
+                  </>
+                )
+              })}
             </Typography>
           </Grid>
         </Grid>
