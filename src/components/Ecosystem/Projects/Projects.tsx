@@ -22,6 +22,7 @@ import type { Dispatch, ReactElement, SetStateAction } from 'react'
 
 import SearchIcon from '@/public/images/search.svg'
 import CrossIcon from '@/public/images/cross.svg'
+import CloseIcon from '@/public/images/close.svg'
 import FilterIcon from '@/public/images/filter.svg'
 import ArrowBackIcon from '@/public/images/arrow-back.svg'
 import { useProjectSearch } from './useProjectsSearch'
@@ -133,6 +134,10 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
   const allNetworks = useMemo(() => projects.flatMap(getProjectNetworks), [projects])
   const uniqueNetworks = useMemo(() => getUniqueStrings(allNetworks), [allNetworks])
 
+  const onResetSearch = () => {
+    setQuery('')
+  }
+
   const onResetFilters = () => {
     setSelectedCategories(EMPTY_FILTER)
     setSelectedIntegrations(EMPTY_FILTER)
@@ -224,6 +229,13 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
                     <SearchIcon />
                   </InputAdornment>
                 ),
+                endAdornment: query ? (
+                  <InputAdornment position="end">
+                    <IconButton onClick={onResetSearch}>
+                      <CloseIcon />
+                    </IconButton>
+                  </InputAdornment>
+                ) : undefined,
               }}
               value={query}
               onChange={(e) => setQuery(e.target.value)}
