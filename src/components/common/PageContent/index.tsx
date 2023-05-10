@@ -45,15 +45,7 @@ const getEditableProps = (
   })
 }
 
-const PageContent = ({
-  content,
-  path,
-  initialData,
-}: {
-  content: ContentItems
-  path: string
-  initialData?: unknown
-}): ReactElement => {
+const PageContent = ({ content, path }: { content: ContentItems; path: string }): ReactElement => {
   const [newContent, setNewContent] = useState<ContentItems>(content)
   const [saved, setSaved] = useState<boolean>(false)
   const isEditable = useRouter().asPath.split('#')[1] === ADMIN_URL_HASH
@@ -77,7 +69,7 @@ const PageContent = ({
         {mainContent.map(({ component, ...rest }, index) => {
           const contentProps = getEditableProps(rest, setNewContent, isEditable)
           const Component = getComponentByName(component, NotFoundComponent)
-          return <Component {...contentProps} initialData={initialData} key={index} />
+          return <Component {...contentProps} key={index} />
         })}
 
         {/* Save edits button */}
