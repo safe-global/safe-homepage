@@ -17,6 +17,9 @@ import {
 } from '@mui/material'
 import clsx from 'clsx'
 import { useMemo, useState } from 'react'
+import { useRouter } from 'next/router'
+import NextLink from 'next/link'
+import type { NextRouter } from 'next/router'
 import type { GridProps } from '@mui/material'
 import type { Dispatch, ReactElement, SetStateAction } from 'react'
 
@@ -107,6 +110,14 @@ const GRID_SPACING: GridProps['spacing'] = {
 
 const PAGE_LENGTH = 12
 
+const PAGE_QUERY_PARAM = 'page'
+
+const getPage = (query: NextRouter['query']): number => {
+  const page = Array.isArray(query[PAGE_QUERY_PARAM]) ? query[PAGE_QUERY_PARAM][0] : query[PAGE_QUERY_PARAM]
+
+  return Number(page) || 1
+}
+
 export const Projects = ({ items }: BaseBlock): ReactElement => {
   const [query, setQuery] = useState('')
   const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false)
@@ -115,7 +126,8 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
   const [selectedIntegrations, setSelectedIntegrations] = useState(EMPTY_FILTER)
   const [selectedNetworks, setSelectedNetworks] = useState(EMPTY_FILTER)
 
-  const [pageLength, setPageLength] = useState(PAGE_LENGTH)
+  const router = useRouter()
+  const page = getPage(router.query)
 
   const { data: projects = [], isLoading } = useEcosystemData()
 
@@ -162,12 +174,6 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
     return onSelectCategory(category, !selectedCategories.includes(category))
   }
 
-  const onShowMore = () => {
-    setPageLength((val) => {
-      return val + PAGE_LENGTH
-    })
-  }
-
   const noFilters = useMemo(() => {
     return selectedCategories.length === 0 && selectedIntegrations.length === 0 && selectedNetworks.length === 0
   }, [selectedCategories, selectedIntegrations, selectedNetworks])
@@ -185,7 +191,7 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
   const searchResults = useProjectSearch(filteredProjects, query)
 
   // Paginated filtered/search-based results
-  const visibleResults = searchResults.slice(0, pageLength)
+  const visibleResults = searchResults.slice(0, PAGE_LENGTH * page)
 
   const shouldShowMoreButton = visibleResults.length < searchResults.length
 
@@ -336,9 +342,16 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
                   ))}
                   {shouldShowMoreButton && (
                     <Grid item xs={12} display="flex" justifyContent="center">
-                      <Button variant="contained" size="large" onClick={onShowMore}>
-                        Show more
-                      </Button>
+                      <NextLink
+                        href={{ query: { [PAGE_QUERY_PARAM]: page + 1 } }}
+                        shallow
+                        // Pagination marker for search engines
+                        rel="next"
+                      >
+                        <Button variant="contained" size="large">
+                          Show more
+                        </Button>
+                      </NextLink>
                     </Grid>
                   )}
                 </Grid>
