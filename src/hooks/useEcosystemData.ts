@@ -22,12 +22,12 @@ export type EcosystemProject = {
   interface_can_you_import_an_existing_safe: string
 }
 
-const fetchEcosystemData = async (): Promise<EcosystemProject[]> => {
+export const ECOSYSTEM_SWR_KEY = 'ecosystem-data'
+
+export const fetchEcosystemData = async (): Promise<EcosystemProject[]> => {
   return fetch(ECOSYSTEM_DATA_URL + '/data.json').then((res) => res.json())
 }
 
 export const useEcosystemData = () => {
-  const ECOSYSTEM_KEY = 'ecosystem-data'
-
-  return useSWR<EcosystemProject[]>(ECOSYSTEM_KEY, fetchEcosystemData, { fallbackData: [] })
+  return useSWR<EcosystemProject[]>(ECOSYSTEM_SWR_KEY, fetchEcosystemData)
 }
