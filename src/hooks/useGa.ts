@@ -1,5 +1,5 @@
 import { useCookieBannerContext } from '@/components/common/CookieBanner/CookieBannerContext'
-import { GOOGLE_ANALYTICS_TRACKING_ID, IS_PRODUCTION } from '@/config/constants'
+import { GOOGLE_ANALYTICS_DOMAIN, GOOGLE_ANALYTICS_TRACKING_ID, IS_PRODUCTION } from '@/config/constants'
 import { useEffect } from 'react'
 import ReactGA from 'react-ga4'
 
@@ -11,7 +11,12 @@ export const useGa = () => {
   // Enable/disable tracking
   useEffect(() => {
     if (IS_PRODUCTION && isAnalyticsEnabled) {
-      ReactGA.initialize(GOOGLE_ANALYTICS_TRACKING_ID)
+      ReactGA.initialize(GOOGLE_ANALYTICS_TRACKING_ID, {
+        gaOptions: {
+          cookieFlags: `domain=${GOOGLE_ANALYTICS_TRACKING_ID};SameSite=Strict;Secure`,
+          cookieDomain: GOOGLE_ANALYTICS_DOMAIN,
+        },
+      })
       isAnalyticsInitialized = true
       return
     }
