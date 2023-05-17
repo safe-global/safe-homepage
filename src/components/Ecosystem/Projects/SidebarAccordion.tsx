@@ -25,7 +25,7 @@ export const SidebarAccordion = ({
   onChange: (item: string, checked: boolean) => void
 }) => {
   return (
-    <Accordion defaultExpanded className={css.accordion}>
+    <Accordion className={css.accordion}>
       <AccordionSummary expandIcon={<ChevronDownIcon />}>
         <Typography variant="caption" color="text.primary">
           {title}
