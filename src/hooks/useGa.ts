@@ -13,7 +13,7 @@ export const useGa = () => {
     if (IS_PRODUCTION && isAnalyticsEnabled) {
       ReactGA.initialize(GOOGLE_ANALYTICS_TRACKING_ID, {
         gaOptions: {
-          cookieFlags: `domain=${GOOGLE_ANALYTICS_TRACKING_ID};SameSite=Strict;Secure`,
+          cookieFlags: `SameSite=Strict;Secure`,
           cookieDomain: GOOGLE_ANALYTICS_DOMAIN,
         },
       })
