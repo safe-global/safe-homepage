@@ -17,7 +17,7 @@
           "alt": "Code block"
         },
         "link": {
-          "href": "#"
+          "href": "https://docs.safe.global/learn/safe-core"
         }
       },
       {
@@ -37,7 +37,7 @@
           "alt": "Arrow angled"
         },
         "link": {
-          "href": "#"
+          "href": "https://ecosystem-careers.safe.global"
         }
       }
     ],
@@ -49,12 +49,12 @@
     "buttons": [
       {
         "text": "Documentation",
-        "href": "#",
+        "href": "https://docs.safe.global/learn/safe-core",
         "variant": "button"
       },
       {
-        "text": "Another Link",
-        "href": "#",
+        "text": "Get in touch",
+        "href": "https://ecosystem-contact.safe.global",
         "variant": "link"
       }
     ],
@@ -77,7 +77,7 @@
       },
       {
         "title": "Extend Safe Functionality",
-        "text": "Add new features to the Safe protocol by building a module, or further secure your transactions by creating a guard. Contact us for more info",
+        "text": "Add new features to the Safe protocol by building a module, or further secure your transactions by creating a guard.",
         "image": {
           "src": "/images/arrow-out-icon.svg",
           "alt": "Arrow angled"
