@@ -2,6 +2,7 @@ export const LS_NAMESPACE = 'SAFE__'
 
 export const IS_PRODUCTION = process.env.NEXT_PUBLIC_IS_PRODUCTION
 export const GOOGLE_ANALYTICS_TRACKING_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_TRACKING_ID || ''
+export const GOOGLE_ANALYTICS_DOMAIN = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_DOMAIN || 'safe.global'
 
 // Links
 export const WALLET_LINK = 'https://app.safe.global'
