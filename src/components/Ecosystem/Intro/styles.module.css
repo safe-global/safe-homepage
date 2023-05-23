@@ -10,6 +10,8 @@
   right: 0;
   z-index: -1;
   user-select: none;
+  height: auto;
+  width: 100%;
 }
 
 .title {
@@ -26,5 +28,9 @@
   .title {
     font-size: 80px;
     line-height: 82px;
+  }
+
+  .bg {
+    width: auto;
   }
 }

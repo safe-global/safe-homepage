@@ -228,7 +228,7 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
             <TextField
               className={css.searchField}
               variant="outlined"
-              placeholder="Search by name or category"
+              placeholder="Search by name or description"
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">

@@ -17,12 +17,21 @@ import { theme } from '@/styles/theme'
 import '@/styles/globals.css'
 import PageLayout from '@/components/common/PageLayout'
 import { useGa } from '@/hooks/useGa'
+import DOMPurify from 'isomorphic-dompurify'
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache()
 
 // Extended theme for CssVarsProvider
 const cssVarsTheme = extendMuiTheme(theme)
+
+// Allow external links when sanitizing json data
+DOMPurify.addHook('afterSanitizeAttributes', function (node) {
+  // set all elements owning target to target=_blank
+  if ('target' in node) {
+    node.setAttribute('target', '_blank')
+  }
+})
 
 const InitHooks = () => {
   useGa()

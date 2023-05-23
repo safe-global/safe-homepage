@@ -12,7 +12,7 @@ const useProjectSearch = (projects: EcosystemProject[], query: string): Ecosyste
             weight: 0.99,
           },
           {
-            name: 'value_prop',
+            name: 'description',
             weight: 0.5,
           },
         ],
