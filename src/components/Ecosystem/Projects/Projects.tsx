@@ -16,7 +16,7 @@ import {
   CircularProgress,
 } from '@mui/material'
 import clsx from 'clsx'
-import { useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useRouter } from 'next/router'
 import NextLink from 'next/link'
 import type { NextRouter } from 'next/router'
@@ -44,6 +44,7 @@ import css from './styles.module.css'
 import { useEcosystemData } from '@/hooks/useEcosystemData'
 import { type BaseBlock } from '@/components/Home/types'
 import Cards from '@/components/Ecosystem/Cards'
+import useDebounce from '@/hooks/useDebounce'
 
 const getUniqueStrings = (entries: string[]) => {
   const uniqueEntries = new Set(entries)
@@ -119,12 +120,29 @@ const getPage = (query: NextRouter['query']): number => {
 }
 
 export const Projects = ({ items }: BaseBlock): ReactElement => {
+  const projectsRef = useRef<HTMLDivElement>(null)
   const [query, setQuery] = useState('')
   const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false)
 
   const [selectedCategories, setSelectedCategories] = useState(EMPTY_FILTER)
   const [selectedIntegrations, setSelectedIntegrations] = useState(EMPTY_FILTER)
   const [selectedNetworks, setSelectedNetworks] = useState(EMPTY_FILTER)
+
+  const debouncedQuery = useDebounce(query, 500)
+
+  // Scroll to results when user stops typing
+  useEffect(() => {
+    if (!projectsRef.current) return
+
+    const headerOffset = 100
+    const elementPosition = projectsRef.current.getBoundingClientRect().top
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth',
+    })
+  }, [debouncedQuery])
 
   const router = useRouter()
   const page = getPage(router.query)
@@ -228,7 +246,7 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
             <TextField
               className={css.searchField}
               variant="outlined"
-              placeholder="Search by name or description"
+              placeholder="Search by name, description or category"
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
@@ -277,7 +295,7 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
             <CircularProgress />
           </div>
         ) : (
-          <Grid container spacing={GRID_SPACING}>
+          <Grid container spacing={GRID_SPACING} ref={projectsRef}>
             <Grid item xs={12} md={3} display="flex" alignItems="center" justifyContent="space-between">
               <Typography>
                 {searchResults.length}{' '}

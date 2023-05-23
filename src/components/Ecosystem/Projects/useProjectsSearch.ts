@@ -15,6 +15,14 @@ const useProjectSearch = (projects: EcosystemProject[], query: string): Ecosyste
             name: 'description',
             weight: 0.5,
           },
+          {
+            name: 'primary_category',
+            weight: 0.5,
+          },
+          {
+            name: 'secondary_categories',
+            weight: 0.2,
+          },
         ],
         // https://fusejs.io/api/options.html#threshold
         // Very naive explanation: threshold represents how accurate the search results should be. The default is 0.6
