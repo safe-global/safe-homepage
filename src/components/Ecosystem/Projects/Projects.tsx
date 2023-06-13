@@ -357,7 +357,7 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
                   <Grid item xs={12}>
                     <Typography variant="body2" maxWidth={470} mb={{ md: 8 }} mx="auto" textAlign="center">
                       Listings are not endorsements and are only for informational purposes. Users should do their own
-                      research before interacting.
+                      research before interacting with them.
                     </Typography>
                   </Grid>
                 </Grid>
