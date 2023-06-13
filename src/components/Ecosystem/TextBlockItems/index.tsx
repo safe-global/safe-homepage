@@ -8,7 +8,7 @@ import Cards from '@/components/Ecosystem/Cards'
 const TextBlockItems = ({ title, text, buttons, items }: BaseBlock) => {
   return (
     <Container>
-      <Grid container className={layoutCss.containerMedium} spacing={{ xs: '30px', xl: '50px' }} mb={30}>
+      <Grid container className={layoutCss.containerTiny} spacing={{ xs: '30px', xl: '50px' }} mb={30}>
         <Grid item md={5}>
           <Typography variant="h2" mb={{ xs: 2, md: 4 }}>
             {title}

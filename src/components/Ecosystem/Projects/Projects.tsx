@@ -223,12 +223,16 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
   return (
     <>
       <Container className={clsx(layoutCss.containerMedium, css.wrapper)}>
-        <Grid container mb={7}>
+        <Cards items={items} />
+
+        <Divider sx={{ my: 5 }} />
+
+        <Grid container mb={8}>
           <Grid item xs={12} md={8}>
             <TextField
               className={css.searchField}
               variant="outlined"
-              placeholder="Search by name or category"
+              placeholder="Search by name, description or category"
               InputProps={{
                 startAdornment: (
                   <InputAdornment position="start">
@@ -267,10 +271,6 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
             </Typography>
           </Grid>
         </Grid>
-
-        <Cards items={items} />
-
-        <Divider sx={{ my: DIVIDER_Y_MARGIN }} />
 
         {isLoading ? (
           <div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -336,12 +336,12 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
               {visibleResults.length > 0 ? (
                 <Grid container spacing={GRID_SPACING} display="flex" alignContent="flex-start">
                   {visibleResults.map((project, idx) => (
-                    <Grid item xs={12} md={4} key={project.project + idx}>
+                    <Grid item xs={12} md={6} lg={4} key={project.project + idx}>
                       <ProjectCard {...project} />
                     </Grid>
                   ))}
                   {shouldShowMoreButton && (
-                    <Grid item xs={12} display="flex" justifyContent="center">
+                    <Grid item xs={12} mt={{ xs: 2, md: 0 }} display="flex" justifyContent="center">
                       <NextLink
                         href={{ query: { [PAGE_QUERY_PARAM]: page + 1 } }}
                         shallow
@@ -354,6 +354,12 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
                       </NextLink>
                     </Grid>
                   )}
+                  <Grid item xs={12}>
+                    <Typography variant="body2" maxWidth={470} mb={{ md: 8 }} mx="auto" textAlign="center">
+                      Listings are not endorsements and are only for informational purposes. Users should do their own
+                      research before interacting with them.
+                    </Typography>
+                  </Grid>
                 </Grid>
               ) : (
                 <div style={{ textAlign: 'center' }}>
