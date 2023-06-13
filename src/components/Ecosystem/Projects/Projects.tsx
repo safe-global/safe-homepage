@@ -16,7 +16,7 @@ import {
   CircularProgress,
 } from '@mui/material'
 import clsx from 'clsx'
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useRouter } from 'next/router'
 import NextLink from 'next/link'
 import type { NextRouter } from 'next/router'
@@ -44,7 +44,6 @@ import css from './styles.module.css'
 import { useEcosystemData } from '@/hooks/useEcosystemData'
 import { type BaseBlock } from '@/components/Home/types'
 import Cards from '@/components/Ecosystem/Cards'
-import useDebounce from '@/hooks/useDebounce'
 
 const getUniqueStrings = (entries: string[]) => {
   const uniqueEntries = new Set(entries)
@@ -120,29 +119,12 @@ const getPage = (query: NextRouter['query']): number => {
 }
 
 export const Projects = ({ items }: BaseBlock): ReactElement => {
-  const projectsRef = useRef<HTMLDivElement>(null)
   const [query, setQuery] = useState('')
   const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false)
 
   const [selectedCategories, setSelectedCategories] = useState(EMPTY_FILTER)
   const [selectedIntegrations, setSelectedIntegrations] = useState(EMPTY_FILTER)
   const [selectedNetworks, setSelectedNetworks] = useState(EMPTY_FILTER)
-
-  const debouncedQuery = useDebounce(query, 500)
-
-  // Scroll to results when user stops typing
-  useEffect(() => {
-    if (!projectsRef.current) return
-
-    const headerOffset = 100
-    const elementPosition = projectsRef.current.getBoundingClientRect().top
-    const offsetPosition = elementPosition + window.pageYOffset - headerOffset
-
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: 'smooth',
-    })
-  }, [debouncedQuery])
 
   const router = useRouter()
   const page = getPage(router.query)
@@ -241,7 +223,11 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
   return (
     <>
       <Container className={clsx(layoutCss.containerMedium, css.wrapper)}>
-        <Grid container mb={7}>
+        <Cards items={items} />
+
+        <Divider sx={{ my: 5 }} />
+
+        <Grid container mb={8}>
           <Grid item xs={12} md={8}>
             <TextField
               className={css.searchField}
@@ -286,16 +272,12 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
           </Grid>
         </Grid>
 
-        <Cards items={items} />
-
-        <Divider sx={{ my: DIVIDER_Y_MARGIN }} />
-
         {isLoading ? (
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <CircularProgress />
           </div>
         ) : (
-          <Grid container spacing={GRID_SPACING} ref={projectsRef}>
+          <Grid container spacing={GRID_SPACING}>
             <Grid item xs={12} md={3} display="flex" alignItems="center" justifyContent="space-between">
               <Typography>
                 {searchResults.length}{' '}
@@ -354,12 +336,12 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
               {visibleResults.length > 0 ? (
                 <Grid container spacing={GRID_SPACING} display="flex" alignContent="flex-start">
                   {visibleResults.map((project, idx) => (
-                    <Grid item xs={12} md={4} key={project.project + idx}>
+                    <Grid item xs={12} md={6} lg={4} key={project.project + idx}>
                       <ProjectCard {...project} />
                     </Grid>
                   ))}
                   {shouldShowMoreButton && (
-                    <Grid item xs={12} display="flex" justifyContent="center">
+                    <Grid item xs={12} mt={{ xs: 2, md: 0 }} display="flex" justifyContent="center">
                       <NextLink
                         href={{ query: { [PAGE_QUERY_PARAM]: page + 1 } }}
                         shallow
@@ -372,6 +354,12 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
                       </NextLink>
                     </Grid>
                   )}
+                  <Grid item xs={12}>
+                    <Typography variant="body2" maxWidth={470} mb={{ md: 8 }} mx="auto" textAlign="center">
+                      Listings are not endorsements and are only for informational purposes. Users should do their own
+                      research before interacting.
+                    </Typography>
+                  </Grid>
                 </Grid>
               ) : (
                 <div style={{ textAlign: 'center' }}>
