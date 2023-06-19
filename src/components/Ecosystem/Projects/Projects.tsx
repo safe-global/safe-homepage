@@ -37,7 +37,7 @@ import {
   getProjectIntegrations,
   getProjectNetworks,
 } from './project-utils'
-import { type EcosystemProject } from '@/hooks/useEcosystemData'
+import type { EcosystemProject, EcosystemProjectWithCategories } from '@/hooks/useEcosystemData'
 
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
@@ -50,13 +50,20 @@ const getUniqueStrings = (entries: string[]) => {
   return Array.from(uniqueEntries).sort()
 }
 
+const getProjectsWithCategories = (projects: EcosystemProject[]): EcosystemProjectWithCategories[] => {
+  return projects.map((project) => {
+    const categories = getProjectCategories(project)
+    return { ...project, categories_list: categories }
+  })
+}
+
 export const _getFilteredProjects = ({
   projects,
   selectedCategories,
   selectedIntegrations,
   selectedNetworks,
 }: {
-  projects: EcosystemProject[]
+  projects: EcosystemProjectWithCategories[]
   selectedCategories: string[]
   selectedIntegrations: string[]
   selectedNetworks: string[]
@@ -73,7 +80,7 @@ export const _getFilteredProjects = ({
   }
 
   return projects.filter((project) => {
-    const categories = getProjectCategories(project)
+    const categories = project.categories_list
     const integrations = getProjectIntegrations(project)
     const networks = getProjectNetworks(project)
 
@@ -129,10 +136,12 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
   const router = useRouter()
   const page = getPage(router.query)
 
-  const { data: projects = [], isLoading } = useEcosystemData()
+  const { data: rawProjects = [], isLoading } = useEcosystemData()
+
+  const projects = useMemo(() => getProjectsWithCategories(rawProjects), [rawProjects])
 
   // Categories
-  const allCategories = useMemo(() => projects.flatMap(getProjectCategories), [projects])
+  const allCategories = useMemo(() => projects.flatMap((project) => project.categories_list), [projects])
   const uniqueCategories = useMemo(() => getUniqueStrings(allCategories), [allCategories])
 
   const allPrimaryCategories = useMemo(() => projects.flatMap(getPrimaryProjectCategories), [projects])

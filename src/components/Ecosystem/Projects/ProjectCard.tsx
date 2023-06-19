@@ -2,15 +2,14 @@ import { Avatar, Typography, IconButton, SvgIcon, Chip } from '@mui/material'
 
 import TwitterIcon from '@/public/images/twitter-icon.svg'
 import GithubIcon from '@/public/images/github-icon.svg'
-import { getProjectCategories } from './project-utils'
 
 import css from './styles.module.css'
 import { ECOSYSTEM_DATA_URL } from '@/config/constants'
-import { type EcosystemProject } from '@/hooks/useEcosystemData'
+import { type EcosystemProjectWithCategories } from '@/hooks/useEcosystemData'
 import Link from 'next/link'
 
-export const ProjectCard = (item: EcosystemProject) => {
-  const categories = getProjectCategories(item)
+export const ProjectCard = (item: EcosystemProjectWithCategories) => {
+  const categories = item.categories_list
 
   return (
     <div className={css.card}>

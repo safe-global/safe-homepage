@@ -1,8 +1,11 @@
 import { useMemo } from 'react'
 import Fuse from 'fuse.js'
-import { type EcosystemProject } from '@/hooks/useEcosystemData'
+import { type EcosystemProjectWithCategories } from '@/hooks/useEcosystemData'
 
-const useProjectSearch = (projects: EcosystemProject[], query: string): EcosystemProject[] => {
+const useProjectSearch = (
+  projects: EcosystemProjectWithCategories[],
+  query: string,
+): EcosystemProjectWithCategories[] => {
   const fuse = useMemo(
     () =>
       new Fuse(projects, {
@@ -16,12 +19,8 @@ const useProjectSearch = (projects: EcosystemProject[], query: string): Ecosyste
             weight: 0.5,
           },
           {
-            name: 'primary_category',
+            name: 'categories_list',
             weight: 0.5,
-          },
-          {
-            name: 'secondary_categories',
-            weight: 0.2,
           },
         ],
         // https://fusejs.io/api/options.html#threshold
