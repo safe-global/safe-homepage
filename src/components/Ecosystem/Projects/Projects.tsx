@@ -50,13 +50,22 @@ const getUniqueStrings = (entries: string[]) => {
   return Array.from(uniqueEntries).sort()
 }
 
+export type EcosystemProjectWithCategories = EcosystemProject & { categories_list: string[] }
+
+const getProjectsWithCategories = (projects: EcosystemProject[]): EcosystemProjectWithCategories[] => {
+  return projects.map((project) => {
+    const categories = getProjectCategories(project)
+    return { ...project, categories_list: categories }
+  })
+}
+
 export const _getFilteredProjects = ({
   projects,
   selectedCategories,
   selectedIntegrations,
   selectedNetworks,
 }: {
-  projects: EcosystemProject[]
+  projects: EcosystemProjectWithCategories[]
   selectedCategories: string[]
   selectedIntegrations: string[]
   selectedNetworks: string[]
@@ -129,7 +138,9 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
   const router = useRouter()
   const page = getPage(router.query)
 
-  const { data: projects = [], isLoading } = useEcosystemData()
+  const { data: rawProjects = [], isLoading } = useEcosystemData()
+
+  const projects = useMemo(() => getProjectsWithCategories(rawProjects), [rawProjects])
 
   // Categories
   const allCategories = useMemo(() => projects.flatMap(getProjectCategories), [projects])
