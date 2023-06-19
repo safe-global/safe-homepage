@@ -24,5 +24,5 @@ export const RELAY_KIT_LINK = 'https://docs.safe.global/learn/safe-core-account-
 export const ONRAMP_KIT_LINK = 'https://docs.safe.global/learn/safe-core-account-abstraction-sdk/onramp-kit'
 
 export const ECOSYSTEM_DATA_URL = IS_PRODUCTION
-  ? 'https://ecosystem-database.staging.5afe.dev' // TODO: Replace with Prod URL once ready
+  ? 'https://ecosystem-database.safe.global'
   : 'https://ecosystem-database.staging.5afe.dev'
