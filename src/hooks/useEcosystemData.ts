@@ -22,6 +22,8 @@ export type EcosystemProject = {
   interface_can_you_import_an_existing_safe: string
 }
 
+export type EcosystemProjectWithCategories = EcosystemProject & { categories_list: string[] }
+
 export const ECOSYSTEM_SWR_KEY = 'ecosystem-data'
 
 export const fetchEcosystemData = async (): Promise<EcosystemProject[]> => {

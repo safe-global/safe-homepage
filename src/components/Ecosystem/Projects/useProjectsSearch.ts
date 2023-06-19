@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import Fuse from 'fuse.js'
-import { type EcosystemProjectWithCategories } from '@/components/Ecosystem/Projects/Projects'
+import { type EcosystemProjectWithCategories } from '@/hooks/useEcosystemData'
 
 const useProjectSearch = (
   projects: EcosystemProjectWithCategories[],

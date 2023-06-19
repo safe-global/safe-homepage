@@ -37,7 +37,7 @@ import {
   getProjectIntegrations,
   getProjectNetworks,
 } from './project-utils'
-import { type EcosystemProject } from '@/hooks/useEcosystemData'
+import type { EcosystemProject, EcosystemProjectWithCategories } from '@/hooks/useEcosystemData'
 
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
@@ -49,8 +49,6 @@ const getUniqueStrings = (entries: string[]) => {
   const uniqueEntries = new Set(entries)
   return Array.from(uniqueEntries).sort()
 }
-
-export type EcosystemProjectWithCategories = EcosystemProject & { categories_list: string[] }
 
 const getProjectsWithCategories = (projects: EcosystemProject[]): EcosystemProjectWithCategories[] => {
   return projects.map((project) => {
@@ -82,7 +80,7 @@ export const _getFilteredProjects = ({
   }
 
   return projects.filter((project) => {
-    const categories = getProjectCategories(project)
+    const categories = project.categories_list
     const integrations = getProjectIntegrations(project)
     const networks = getProjectNetworks(project)
 
@@ -143,7 +141,7 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
   const projects = useMemo(() => getProjectsWithCategories(rawProjects), [rawProjects])
 
   // Categories
-  const allCategories = useMemo(() => projects.flatMap(getProjectCategories), [projects])
+  const allCategories = useMemo(() => projects.flatMap((project) => project.categories_list), [projects])
   const uniqueCategories = useMemo(() => getUniqueStrings(allCategories), [allCategories])
 
   const allPrimaryCategories = useMemo(() => projects.flatMap(getPrimaryProjectCategories), [projects])
