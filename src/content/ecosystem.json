@@ -78,7 +78,7 @@
       },
       {
         "title": "Extend Safe Functionality",
-        "text": "Add new features to the Safe protocol by building a module, or further secure your transactions by creating a guard.",
+        "text": "Add new features to the Safe protocol by building a module, or further secure your transactions by creating a guard",
         "image": {
           "src": "/images/arrow-out-icon.svg",
           "alt": "Arrow angled"
