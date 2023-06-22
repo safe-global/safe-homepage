@@ -102,6 +102,10 @@ const subFooterItems = [
     href: AppRoutes.terms,
   },
   {
+    label: 'Privacy Notice',
+    href: AppRoutes.privacy,
+  },
+  {
     label: 'Preferences',
     href: COOKIE_PREFERENCES,
   },
