@@ -98,6 +98,10 @@ const subFooterItems = [
     href: AppRoutes.imprint,
   },
   {
+    label: 'Terms of Use',
+    href: AppRoutes.terms,
+  },
+  {
     label: 'Preferences',
     href: COOKIE_PREFERENCES,
   },
