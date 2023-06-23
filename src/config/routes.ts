@@ -7,6 +7,7 @@ export const AppRoutes = {
   imprint: '/imprint',
   ecosystem: '/ecosystem',
   core: '/core',
+  cookie: '/cookie',
   cla: {
     index: '/cla',
   },
