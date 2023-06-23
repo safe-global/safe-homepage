@@ -3,11 +3,11 @@ export const AppRoutes = {
   wallet: '/wallet',
   terms: '/terms',
   privacy: '/privacy',
+  cookies: '/privacy#cookies',
   index: '/',
   imprint: '/imprint',
   ecosystem: '/ecosystem',
   core: '/core',
-  cookie: '/cookie',
   cla: {
     index: '/cla',
   },
