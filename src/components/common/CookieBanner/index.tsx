@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { Paper, Typography, FormControlLabel, Checkbox, Button } from '@mui/material'
 import { useEffect, useState } from 'react'
 import type { ReactElement } from 'react'
@@ -6,7 +5,6 @@ import type { ReactElement } from 'react'
 import { useCookieBannerContext } from './CookieBannerContext'
 
 import css from './styles.module.css'
-import { AppRoutes } from '@/config/routes'
 
 export const enum CookieType {
   NECESSARY = 'necessary',
@@ -40,7 +38,7 @@ export const CookieBanner = (): ReactElement | null => {
       <div className={css.content}>
         <Typography align="center">
           We use cookies to provide you with the best experience and to help improve our website and application. Please
-          read our <Link href={`${AppRoutes.privacy}#cookies`}>Cookie Policy</Link> for more information. By clicking
+          read our <a href="https://app.safe.global/cookie">Cookie Policy</a> for more information. By clicking
           &quot;Accept all&quot;, you agree to the storing of cookies on your device to enhance site navigation, analyze
           site usage and provide customer support.
         </Typography>
