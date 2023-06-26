@@ -33,6 +33,10 @@
   min-width: 180px;
 }
 
+.container a {
+  color: var(--mui-palette-primary-main);
+}
+
 @media (max-width: 600px) {
   .container {
     padding: 24px 8px;

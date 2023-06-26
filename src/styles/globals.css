@@ -87,3 +87,18 @@ u:before {
 u:after {
   mask-image: url('/images/right-brace.svg');
 }
+
+details summary {
+  color: var(--mui-palette-primary-main);
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid white;
+  padding: 8px;
+}
