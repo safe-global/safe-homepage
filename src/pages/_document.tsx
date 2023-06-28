@@ -9,11 +9,25 @@ import Document, { Html, Head, Main, NextScript } from 'next/document'
 import createEmotionServer from '@emotion/server/create-instance'
 import { createEmotionCache } from '@/styles/emotion'
 
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Safe Global',
+  alternateName: 'Safe',
+  url: 'https://safe.global/',
+}
+
 export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
         <Head>
+          <script
+            key="structured-data"
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          />
+
           <meta name="emotion-insertion-point" content="" />
 
           <meta name="theme-color" content="#121312" />
