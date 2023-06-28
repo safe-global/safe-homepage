@@ -5,7 +5,7 @@
 
 ## Editing content
 
-The content for this website is stored in this repository in the [`/src/content`](/src/contnet) folder as JSON files for each page.
+The content for this website is stored in this repository in the [`/src/content`](/src/content) folder as JSON files for each page.
 
 To more easily edit these content files, there's an inline editing tool built into the website.
 You can access it by appending `#admin` to any page.
