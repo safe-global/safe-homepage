@@ -18,10 +18,10 @@ export const GPLAY_LINK = 'https://play.google.com/store/apps/details?id=io.gnos
 export const BRAND_KIT = 'https://press.safe.global'
 export const LICENSES_LINK = 'https://app.safe.global/licenses'
 
-export const PROTOCOL_KIT_LINK = 'https://docs.safe.global/learn/safe-core-account-abstraction-sdk/protocol-kit'
-export const AUTH_KIT_LINK = 'https://docs.safe.global/learn/safe-core-account-abstraction-sdk/auth-kit'
-export const RELAY_KIT_LINK = 'https://docs.safe.global/learn/safe-core-account-abstraction-sdk/relay-kit'
-export const ONRAMP_KIT_LINK = 'https://docs.safe.global/learn/safe-core-account-abstraction-sdk/onramp-kit'
+export const PROTOCOL_KIT_LINK = 'https://docs.safe.global/safe-core-aa-sdk/protocol-kit'
+export const AUTH_KIT_LINK = 'https://docs.safe.global/safe-core-aa-sdk/auth-kit'
+export const RELAY_KIT_LINK = 'https://docs.safe.global/safe-core-aa-sdk/relay-kit'
+export const ONRAMP_KIT_LINK = 'https://docs.safe.global/safe-core-aa-sdk/onramp-kit'
 
 export const ECOSYSTEM_DATA_URL = IS_PRODUCTION
   ? 'https://ecosystem-database.safe.global'
