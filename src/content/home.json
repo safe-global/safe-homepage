@@ -241,7 +241,7 @@
       },
       {
         "text": "Start bug hunting",
-        "href": "https://docs.safe.global/learn/security/bug-bounty-program",
+        "href": "https://docs.safe.global/safe-core-protocol/security/bug-bounty-program",
         "variant": "link"
       }
     ],

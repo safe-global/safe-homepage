@@ -23,7 +23,7 @@
         "text": "Easily level up your application and empower your users with the most advanced account abstraction SDK.",
         "link": {
           "title": "",
-          "href": "https://docs.safe.global/learn/safe-core-account-abstraction-sdk"
+          "href": "https://docs.safe.global/safe-core-aa-sdk"
         }
       },
       {
@@ -31,7 +31,7 @@
         "text": "Power your interface with all Safe account related information.",
         "link": {
           "title": "",
-          "href": "https://docs.safe.global/learn/safe-core-api"
+          "href": "https://docs.safe.global/safe-core-api"
         }
       },
       {
@@ -39,7 +39,7 @@
         "text": "Discover, integrate and build on Safe’s robust and battle-tested smart contract account standard and programmable modules.",
         "link": {
           "title": "",
-          "href": "https://docs.safe.global/learn/safe-core-protocol"
+          "href": "https://docs.safe.global/safe-core-protocol"
         }
       }
     ],
@@ -50,7 +50,7 @@
     "title": "Get started with Safe <u>CORE</u> Account Abstraction SDK",
     "link": {
       "title": "View documentation",
-      "href": "https://docs.safe.global/learn/safe-core-account-abstraction-sdk"
+      "href": "https://docs.safe.global/safe-core-aa-sdk"
     },
     "component": "Core/AASdk"
   },
@@ -62,7 +62,7 @@
         "text": "<ul><li>Modular and customizable smart contract accounts</li><li>Battle-tested security</li><li>Transaction Batching</li></ul>",
         "link": {
           "title": "Read more",
-          "href": "https://docs.safe.global/learn/safe-core-account-abstraction-sdk/protocol-kit"
+          "href": "https://docs.safe.global/safe-core-aa-sdk/protocol-kit"
         }
       },
       {
@@ -70,7 +70,7 @@
         "text": "<ul><li>Easy on-boarding using Web3Auth</li><li>Social and wallet logins</li><li>Get users started without a wallet</li></ul>",
         "link": {
           "title": "Read more",
-          "href": "https://docs.safe.global/learn/safe-core-account-abstraction-sdk/auth-kit"
+          "href": "https://docs.safe.global/safe-core-aa-sdk/auth-kit"
         }
       },
       {
@@ -78,7 +78,7 @@
         "text": "<ul><li>Gas-less experiences using Gelato</li><li>Sponsored transaction</li><li>Pay fees in ERC-20 tokens</li></ul>",
         "link": {
           "title": "Read more",
-          "href": "https://docs.safe.global/learn/safe-core-account-abstraction-sdk/relay-kit"
+          "href": "https://docs.safe.global/safe-core-aa-sdk/relay-kit"
         }
       },
       {
@@ -86,7 +86,7 @@
         "text": "<ul><li>Seamless Fiat on-ramping using Stripe</li><li>Pay using a credit card</li></ul>",
         "link": {
           "title": "Read more",
-          "href": "https://docs.safe.global/learn/safe-core-account-abstraction-sdk/onramp-kit"
+          "href": "https://docs.safe.global/safe-core-aa-sdk/onramp-kit"
         }
       }
     ],
@@ -97,7 +97,7 @@
     "title": "Immediate access to all account information to power your applications",
     "link": {
       "title": "Get started",
-      "href": "https://docs.safe.global/learn/safe-core-api"
+      "href": "https://docs.safe.global/safe-core-api"
     },
     "grid": {
       "title": "Benefits",
@@ -176,7 +176,7 @@
     "text": "Tap into the ecosystem’s cutting-edge modules and guard extensions or write your own custom logic to plug into the Safe core contracts.",
     "link": {
       "title": "Get started",
-      "href": "https://docs.safe.global/learn/safe-core-protocol"
+      "href": "https://docs.safe.global/safe-core-protocol/safe-core-protocol"
     },
     "image": {
       "src": "/images/Core/safe-core-protocol.png",
