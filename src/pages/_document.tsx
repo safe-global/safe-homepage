@@ -39,6 +39,9 @@ export default class MyDocument extends Document {
           <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png" />
 
+          {/* Plausible Analytics */}
+          <script defer data-domain="safe.global" src="https://plausible.io/js/script.js"></script>
+
           {(this.props as any).emotionStyleTags}
         </Head>
         <body>
