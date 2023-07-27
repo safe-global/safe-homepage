@@ -40,8 +40,14 @@ export default class MyDocument extends Document {
           <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png" />
 
-          {/* Plausible Analytics */}
-          {IS_PRODUCTION && <script defer data-domain="safe.global" src="https://plausible.io/js/script.js" />}
+          {IS_PRODUCTION && (
+            <>
+              {/* Plausible Analytics */}
+              <script defer data-domain="safe.global" src="https://plausible.io/js/script.js" />
+              {/* Hotjar */}
+              <script src="https://static.hotjar.com/c/hotjar-3582976.js?sv=6" async />
+            </>
+          )}
 
           {(this.props as any).emotionStyleTags}
         </Head>
