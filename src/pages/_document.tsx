@@ -8,6 +8,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import createEmotionServer from '@emotion/server/create-instance'
 import { createEmotionCache } from '@/styles/emotion'
+import { IS_PRODUCTION } from '@/config/constants'
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -40,7 +41,7 @@ export default class MyDocument extends Document {
           <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png" />
 
           {/* Plausible Analytics */}
-          <script defer data-domain="safe.global" src="https://plausible.io/js/script.js"></script>
+          {IS_PRODUCTION && <script defer data-domain="safe.global" src="https://plausible.io/js/script.js" />}
 
           {(this.props as any).emotionStyleTags}
         </Head>
