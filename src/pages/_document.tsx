@@ -44,8 +44,6 @@ export default class MyDocument extends Document {
             <>
               {/* Plausible Analytics */}
               <script defer data-domain="safe.global" src="https://plausible.io/js/script.js" />
-              {/* Hotjar */}
-              <script src="https://static.hotjar.com/c/hotjar-3582976.js?sv=6" async />
             </>
           )}
 

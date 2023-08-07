@@ -3,6 +3,8 @@ export const LS_NAMESPACE = 'SAFE__'
 export const IS_PRODUCTION = process.env.NEXT_PUBLIC_IS_PRODUCTION
 export const GOOGLE_ANALYTICS_TRACKING_ID = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_TRACKING_ID || ''
 export const GOOGLE_ANALYTICS_DOMAIN = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_DOMAIN || 'safe.global'
+export const HOTJAR_ID = process.env.NEXT_PUBLIC_HOTJAR_ID || ''
+export const HOTJAR_VERSION = process.env.NEXT_PUBLIC_HOTJAR_VERSION || '6'
 
 // Links
 export const WALLET_LINK = 'https://app.safe.global'
