@@ -19,3 +19,5 @@ runs:
       env:
         NEXT_PUBLIC_IS_PRODUCTION: ${{ inputs.is-production }}
         NEXT_PUBLIC_GOOGLE_ANALYTICS_TRACKING_ID: ${{ fromJSON(inputs.secrets).NEXT_PUBLIC_GOOGLE_ANALYTICS_TRACKING_ID }}
+        NEXT_PUBLIC_HOTJAR_ID: ${{ fromJSON(inputs.secrets).NEXT_PUBLIC_HOTJAR_ID }}
+        NEXT_PUBLIC_HOTJAR_ID_STAGING: ${{ fromJSON(inputs.secrets).NEXT_PUBLIC_HOTJAR_ID_STAGING }}
