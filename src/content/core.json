@@ -16,6 +16,27 @@
     "component": "Core/Intro"
   },
   {
+    "title": "Launching<br/>Safe <u>CORE</u> Protocol",
+    "caption": "Whitepaper",
+    "buttons": [
+      {
+        "text": "Read Whitepaper",
+        "href": "https://github.com/safe-global/safe-core-protocol-specs",
+        "variant": "button"
+      },
+      {
+        "text": "Protocol Specs",
+        "href": "https://github.com/safe-global/safe-core-protocol-specs",
+        "variant": "link"
+      }
+    ],
+    "image": {
+      "src": "/images/Core/whitepaper-new.png",
+      "alt": "document icon"
+    },
+    "component": "Core/Masthead"
+  },
+  {
     "title": "Our Account Abstraction stack",
     "items": [
       {
