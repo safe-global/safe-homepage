@@ -31,8 +31,8 @@
       }
     ],
     "image": {
-      "src": "/images/Core/whitepaper-new.png",
-      "alt": "document icon"
+      "src": "/images/Core/whitepaper-new.svg",
+      "alt": "new document"
     },
     "component": "Core/Masthead"
   },
