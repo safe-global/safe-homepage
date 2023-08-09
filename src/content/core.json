@@ -25,7 +25,7 @@
         "variant": "button"
       },
       {
-        "text": "Protocol Specs",
+        "text": "GitHub",
         "href": "https://github.com/safe-global/safe-core-protocol-specs",
         "variant": "link"
       }
