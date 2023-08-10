@@ -10,7 +10,7 @@ import Link from 'next/link'
 
 export const Masthead = ({ title, buttons, caption, image }: BaseBlock): ReactElement => {
   return (
-    <Container className={layoutCss.containerShort}>
+    <Container className={layoutCss.containerShort} id="masthead">
       <div className={css.container}>
         <Grid container spacing={{ xs: '90px', sm: '30px' }} justifyContent="space-between">
           <Grid item xs={12} md={7} lg={8}>
