@@ -6,6 +6,7 @@ import FourSquareAnimation from '@/components/common/FourSquareAnimation'
 import ThreeSquareAnimation from '@/components/common/ThreeSquareAnimation'
 import type { BaseBlock } from '@/components/Home/types'
 import FiveSquareAnimation from '@/components/common/FiveSquareAnimation'
+import layoutCss from '@/components/common/styles.module.css'
 
 const SquareAnimations = [FourSquareAnimation, FiveSquareAnimation, ThreeSquareAnimation]
 
@@ -41,7 +42,7 @@ export type LinkedCardGridProps = {
 }
 
 const LinkedCardGrid = ({ title, items }: LinkedCardGridProps) => (
-  <Container>
+  <Container className={layoutCss.containerShort}>
     <Grid container justifyContent="center" mt="100px">
       <Typography variant="caption" textAlign="center" component="div" mb={3}>
         {title}
