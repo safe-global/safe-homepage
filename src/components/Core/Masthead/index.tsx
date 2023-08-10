@@ -39,11 +39,9 @@ export const Masthead = ({ title, buttons, caption, image }: BaseBlock): ReactEl
                           {text}
                         </Button>
                       ) : (
-                        <div className={css.linkButton}>
-                          <LinkButton color="secondary" sx={{ width: 'fit-content' }}>
-                            {text}
-                          </LinkButton>
-                        </div>
+                        <LinkButton color="secondary" sx={{ width: 'fit-content' }}>
+                          {text}
+                        </LinkButton>
                       )}
                     </Link>
                   )
@@ -52,7 +50,7 @@ export const Masthead = ({ title, buttons, caption, image }: BaseBlock): ReactEl
             ) : null}
           </Grid>
           {image ? (
-            <Grid item xs={12} md={4} lg={3} className={css.image}>
+            <Grid item xs={12} md={4} lg={3} xl={2.5} className={css.image}>
               <img src={image.src} alt={image.alt} />
             </Grid>
           ) : null}

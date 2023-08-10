@@ -43,10 +43,6 @@
     display: flex;
     align-items: center;
   }
-
-  .image img {
-    width: 100%;
-  }
 }
 
 @media (min-width: 1440px) {
