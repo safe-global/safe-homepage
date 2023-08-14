@@ -3,6 +3,15 @@
   margin-bottom: 75px;
 }
 
+.container .scroll {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.container:hover .scroll {
+  opacity: 1;
+}
+
 .title {
   font-size: 64px;
   line-height: 64px;
@@ -19,9 +28,28 @@
   height: auto;
 }
 
+.scroll {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: -40px;
+  color: var(--mui-palette-text-primary);
+}
+
+.scroll::after {
+  content: '';
+  display: block;
+  background-image: url('/images/angle-down.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+  margin: auto;
+}
+
 @media (min-width: 600px) {
   .container {
-    margin-top: 100px;
+    padding-top: 100px;
     margin-bottom: 120px;
   }
 

@@ -33,6 +33,9 @@ const CoreIntro = ({ title, text, link }: BaseBlock) => {
             </Button>
           )}
         </Grid>
+        <Typography variant="caption" className={css.scroll}>
+          Scroll
+        </Typography>
       </Grid>
       <Divider />
     </Container>
