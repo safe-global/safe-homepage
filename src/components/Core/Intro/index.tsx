@@ -35,7 +35,7 @@ const CoreIntro = ({ title, text, link }: BaseBlock) => {
           )}
         </Grid>
         <Typography variant="caption" className={css.scroll}>
-          Scroll
+          New Whitepaper
         </Typography>
       </Grid>
       <Divider />

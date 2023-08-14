@@ -33,13 +33,13 @@
   margin-left: auto;
   margin-right: auto;
   bottom: -40px;
-  color: var(--mui-palette-text-primary);
+  color: var(--mui-palette-primary-main);
 }
 
 .scroll::after {
   content: '';
   display: block;
-  background-image: url('/images/angle-down.svg');
+  background-image: url('/images/angle-down-primary.svg');
   background-repeat: no-repeat;
   background-position: center;
   width: 20px;
