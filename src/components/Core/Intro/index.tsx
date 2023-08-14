@@ -8,7 +8,8 @@ const CoreIntro = ({ title, text, link }: BaseBlock) => {
       <Grid
         container
         className={css.container}
-        spacing={{ xs: 6, md: '30px', xl: '50px' }}
+        rowSpacing={{ xs: 6 }}
+        columnSpacing={{ md: '30px', xl: '50px' }}
         justifyContent="space-between"
         alignItems="center"
       >
