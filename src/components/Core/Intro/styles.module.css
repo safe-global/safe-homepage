@@ -3,13 +3,33 @@
   margin-bottom: 75px;
 }
 
-.container .scroll {
+.scroll {
+  margin: 0 auto;
   opacity: 0;
   transition: opacity 0.5s ease-in;
+  position: relative;
+  bottom: -40px;
+  cursor: pointer;
+}
+
+.scroll span {
+  color: var(--mui-palette-primary-main);
 }
 
 .container:hover .scroll {
   opacity: 1;
+  animation: bounce 1s;
+}
+
+.scroll::after {
+  content: '';
+  display: block;
+  background-image: url('/images/angle-down-primary.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+  margin: auto;
 }
 
 .title {
@@ -28,25 +48,6 @@
   height: auto;
 }
 
-.scroll {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  bottom: -40px;
-  color: var(--mui-palette-primary-main);
-}
-
-.scroll::after {
-  content: '';
-  display: block;
-  background-image: url('/images/angle-down-primary.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 20px;
-  height: 20px;
-  margin: auto;
-}
-
 @media (min-width: 600px) {
   .container {
     padding-top: 30px;
@@ -56,5 +57,16 @@
   .title {
     font-size: 80px;
     line-height: 82px;
+  }
+}
+
+@keyframes bounce {
+  from,
+  to {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
   }
 }
