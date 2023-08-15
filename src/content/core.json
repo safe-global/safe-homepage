@@ -21,7 +21,7 @@
     "buttons": [
       {
         "text": "Read Whitepaper",
-        "href": "https://github.com/safe-global/safe-core-protocol-specs",
+        "href": "https://github.com/safe-global/safe-core-protocol-specs/blob/main/whitepaper.pdf",
         "variant": "button"
       },
       {
