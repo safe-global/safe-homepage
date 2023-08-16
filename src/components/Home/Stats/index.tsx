@@ -1,11 +1,14 @@
 import { Container, Grid, Typography } from '@mui/material'
-import type { ReactElement } from 'react'
+import { type ReactElement } from 'react'
 
 import css from './styles.module.css'
 import layoutCss from '@/components/common/styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
+import { useSafeNumbers } from '@/hooks/useSafeNumbers'
 
 const Stats = ({ caption, title, text, items }: BaseBlock): ReactElement => {
+  const stats = useSafeNumbers()
+
   return (
     <Container>
       <Grid container className={layoutCss.containerShort} spacing={{ xs: '30px', xl: '50px' }}>
@@ -28,7 +31,7 @@ const Stats = ({ caption, title, text, items }: BaseBlock): ReactElement => {
               items.map((item, index) => {
                 const textBlock = (
                   <>
-                    <p className={css.metric}>{item.title}</p>
+                    <p className={css.metric}>{stats[index]}</p>
                     <Typography variant="caption">{item.text}</Typography>
                   </>
                 )
