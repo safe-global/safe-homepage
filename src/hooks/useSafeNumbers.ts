@@ -3,7 +3,7 @@ import { formatValue } from '@/lib/formatValue'
 import { DUNE_API_KEY } from '@/config/constants'
 
 const QUERY_ID_TOTAL_TRANSACTIONS = 2093960
-const QUERY_ID_TOTAL_ASSETS = 2771785
+const QUERY_ID_TOTAL_ASSETS = 2893829
 const QUERY_ID_TOTAL_SAFES_DEPOLOYED = 2459401
 
 const fallbackStats = ['16M', '$56B', '4.3M']
