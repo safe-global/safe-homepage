@@ -27,26 +27,12 @@ const Stats = ({ caption, title, text, items }: BaseBlock): ReactElement => {
         <Grid item md={1} display={{ xs: 'none', md: 'block' }} />
         <Grid item md={5}>
           <div className={css.metricWrapper}>
-            {items &&
-              items.map((item, index) => {
-                const textBlock = (
-                  <>
-                    <p className={css.metric}>{safeStats[index]}</p>
-                    <Typography variant="caption">{item.text}</Typography>
-                  </>
-                )
-                return (
-                  <div key={'metric-' + index}>
-                    {item.link ? (
-                      <a href={item.link.href} target="_blank" rel="noreferrer">
-                        {textBlock}
-                      </a>
-                    ) : (
-                      textBlock
-                    )}
-                  </div>
-                )
-              })}
+            {items?.map((item, index) => (
+              <a href={item.link?.href} target="_blank" rel="noreferrer" className={css.metric} key={'metric-' + index}>
+                <p className={css.value}>{safeStats[index]}</p>
+                <Typography variant="caption">{item.text}</Typography>
+              </a>
+            ))}
           </div>
         </Grid>
       </Grid>

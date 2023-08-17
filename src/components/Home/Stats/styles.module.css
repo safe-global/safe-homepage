@@ -5,6 +5,18 @@
 }
 
 .metric {
+  width: fit-content;
+}
+
+.metric span {
+  transition: color 0.3s ease;
+}
+
+.metric:hover span {
+  color: var(--mui-palette-primary-main);
+}
+
+.value {
   margin: 0;
   font-size: 64px;
   line-height: 64px;
@@ -14,16 +26,8 @@
   -webkit-text-fill-color: transparent;
 }
 
-.metricLabel {
-  font-size: 12px;
-  line-height: 24px;
-  margin: 0;
-  color: var(--mui-palette-primary-light);
-  text-transform: uppercase;
-}
-
 @media (min-width: 600px) {
-  .metric {
+  .value {
     font-size: 80px;
     line-height: 100px;
   }
