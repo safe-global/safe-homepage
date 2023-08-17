@@ -8,10 +8,12 @@ const IndexPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (pro
 }
 
 export async function getStaticProps() {
-  const chainsData = await loadChainsData()
-  const totalTransactions = await fetchTotalTransactions()
-  const totalAssets = await fetchTotalAssets()
-  const totalSafesDeployed = await fetchTotalSafesDeployed()
+  const [chainsData, totalTransactions, totalAssets, totalSafesDeployed] = await Promise.all([
+    loadChainsData(),
+    fetchTotalTransactions(),
+    fetchTotalAssets(),
+    fetchTotalSafesDeployed(),
+  ])
 
   return {
     props: {
