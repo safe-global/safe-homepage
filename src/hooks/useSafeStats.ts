@@ -7,8 +7,6 @@ const QUERY_ID_TOTAL_TRANSACTIONS = 2093960
 const QUERY_ID_TOTAL_ASSETS = 2893829
 const QUERY_ID_TOTAL_SAFES_DEPLOYED = 2459401
 
-const fallbackStats = ['16M', '$56B', '4.3M']
-
 function totalAssetsEndpoint(queryId: number): string {
   return `https://api.dune.com/api/v1/query/${queryId}/results?api_key=${DUNE_API_KEY}`
 }
@@ -34,12 +32,12 @@ export const fetchTotalSafesDeployed = async (): Promise<number | null> => {
     .catch(() => null)
 }
 
-export const useSafeStats = (): Array<string> => {
+export const useSafeStats = (): Array<string | null> => {
   const { totalAssets, totalSafesDeployed, totalTransactions } = useContext(SafeStatsContext)
 
-  const formattedTotalTransactions = totalTransactions ? formatValue(totalTransactions) : fallbackStats[0]
-  const formattedTotalAssets = totalAssets ? '$' + formatValue(totalAssets) : fallbackStats[1]
-  const formattedTotalSafesDeployed = totalSafesDeployed ? formatValue(totalSafesDeployed) : fallbackStats[2]
+  const formattedTotalTransactions = totalTransactions ? formatValue(totalTransactions) : null
+  const formattedTotalAssets = totalAssets ? '$' + formatValue(totalAssets) : null
+  const formattedTotalSafesDeployed = totalSafesDeployed ? formatValue(totalSafesDeployed) : null
 
   return [formattedTotalTransactions, formattedTotalAssets, formattedTotalSafesDeployed]
 }

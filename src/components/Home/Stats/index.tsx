@@ -29,7 +29,7 @@ const Stats = ({ caption, title, text, items }: BaseBlock): ReactElement => {
           <div className={css.metricWrapper}>
             {items?.map((item, index) => (
               <a href={item.link?.href} target="_blank" rel="noreferrer" className={css.metric} key={'metric-' + index}>
-                <p className={css.value}>{safeStats[index]}</p>
+                <p className={css.value}>{safeStats[index] ?? item.title}</p>
                 <Typography variant="caption">{item.text}</Typography>
               </a>
             ))}
