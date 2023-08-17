@@ -4,10 +4,10 @@ import { type ReactElement } from 'react'
 import css from './styles.module.css'
 import layoutCss from '@/components/common/styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
-import { useSafeNumbers } from '@/hooks/useSafeNumbers'
+import { useSafeStats } from '@/hooks/useSafeStats'
 
 const Stats = ({ caption, title, text, items }: BaseBlock): ReactElement => {
-  const stats = useSafeNumbers()
+  const safeStats = useSafeStats()
 
   return (
     <Container>
@@ -31,7 +31,7 @@ const Stats = ({ caption, title, text, items }: BaseBlock): ReactElement => {
               items.map((item, index) => {
                 const textBlock = (
                   <>
-                    <p className={css.metric}>{stats[index]}</p>
+                    <p className={css.metric}>{safeStats[index]}</p>
                     <Typography variant="caption">{item.text}</Typography>
                   </>
                 )
