@@ -15,15 +15,24 @@
     "items": [
       {
         "title": "16M",
-        "text": "Total transactions"
+        "text": "Total transactions",
+        "link": {
+          "href": "https://dune.com/queries/2093960/3449499"
+        }
       },
       {
         "title": "$56B",
-        "text": "Total assets stored"
+        "text": "Total assets stored",
+        "link": {
+          "href": "https://dune.com/queries/2893829/4821383"
+        }
       },
       {
         "title": "4.3M",
-        "text": "Safe accounts deployed"
+        "text": "Safe accounts deployed",
+        "link": {
+          "href": "https://dune.com/queries/2459401/4044167"
+        }
       }
     ],
     "component": "Home/Stats"
