@@ -33,7 +33,7 @@ export const fetchTotalSafesDeployed = async (): Promise<number | null> => {
 }
 
 export const useSafeStats = (): Array<string | null> => {
-  const { totalAssets, totalSafesDeployed, totalTransactions } = useContext(SafeStatsContext)
+  const { totalTransactions, totalAssets, totalSafesDeployed } = useContext(SafeStatsContext)
 
   const formattedTotalTransactions = totalTransactions ? formatValue(totalTransactions) : null
   const formattedTotalAssets = totalAssets ? '$' + formatValue(totalAssets) : null
