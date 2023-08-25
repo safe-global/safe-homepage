@@ -9,6 +9,7 @@ import { useOpenPositions } from '@/hooks/useOpenPositions'
 import css from './styles.module.css'
 import clsx from 'clsx'
 import { useRouter } from 'next/router'
+import ArrowIcon from '@/public/images/arrow-out-square-corner.svg'
 
 const navItems = [
   {
@@ -31,22 +32,23 @@ const navItems = [
     label: 'Careers',
     href: AppRoutes.careers,
   },
-]
-
-const externalItems = [
   {
     label: (
-      <>
-        Safe <u>CON</u>
-      </>
+      <div className={css.externalLink}>
+        Safe
+        <u>CON</u>
+        <ArrowIcon />
+      </div>
     ),
     href: SAFECON_LINK,
-  },
-  {
-    label: 'Launch Wallet',
-    href: WALLET_LINK,
+    external: true,
   },
 ]
+
+const externalLinkAttrs = {
+  target: '_blank',
+  rel: 'noopener noreferrer',
+}
 
 const Header = () => {
   const { asPath } = useRouter()
@@ -81,6 +83,7 @@ const Header = () => {
                 className={clsx(css.link, item.href === asPath && css.active)}
                 href={item.href}
                 onClick={closeNavigation}
+                {...(item.external ? externalLinkAttrs : {})}
               >
                 <Badge
                   badgeContent={item.href === AppRoutes.careers ? positions.length : undefined}
@@ -98,19 +101,17 @@ const Header = () => {
               </Link>
             </li>
           ))}
-          {externalItems.map((item) => (
-            <li key={item.href}>
-              <Button
-                className={css.button}
-                href={item.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                variant="contained"
-              >
-                {item.label}
-              </Button>
-            </li>
-          ))}
+          <li>
+            <Button
+              className={css.button}
+              href={WALLET_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="contained"
+            >
+              Launch Wallet
+            </Button>
+          </li>
         </ul>
       </nav>
     </div>
