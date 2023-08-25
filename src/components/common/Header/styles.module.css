@@ -88,7 +88,12 @@
 
 .externalLink u {
   white-space: nowrap;
-  margin-right: 8px;
+}
+
+.externalLink svg {
+  margin-left: 8px;
+  width: 24px;
+  height: 24px;
 }
 
 .externalLink:hover svg path {
@@ -161,6 +166,11 @@
     line-height: 56px;
     padding: 0;
     border: 0;
+  }
+
+  .externalLink svg {
+    width: 16px;
+    height: 16px;
   }
 
   .button {
