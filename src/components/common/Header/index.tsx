@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 import { AppRoutes } from '@/config/routes'
 import Logo from '@/public/images/logo.svg'
-import { WALLET_LINK } from '@/config/constants'
+import { SAFECON_LINK, WALLET_LINK } from '@/config/constants'
 import { useOpenPositions } from '@/hooks/useOpenPositions'
 import css from './styles.module.css'
 import clsx from 'clsx'
@@ -30,6 +30,21 @@ const navItems = [
   {
     label: 'Careers',
     href: AppRoutes.careers,
+  },
+]
+
+const externalItems = [
+  {
+    label: (
+      <>
+        Safe <u>CON</u>
+      </>
+    ),
+    href: SAFECON_LINK,
+  },
+  {
+    label: 'Launch Wallet',
+    href: WALLET_LINK,
   },
 ]
 
@@ -83,17 +98,19 @@ const Header = () => {
               </Link>
             </li>
           ))}
-          <li>
-            <Button
-              className={css.button}
-              href={WALLET_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="contained"
-            >
-              Launch Wallet
-            </Button>
-          </li>
+          {externalItems.map((item) => (
+            <li key={item.href}>
+              <Button
+                className={css.button}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                variant="contained"
+              >
+                {item.label}
+              </Button>
+            </li>
+          ))}
         </ul>
       </nav>
     </div>
