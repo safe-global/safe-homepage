@@ -4,7 +4,7 @@
     "component": "common/MetaTags"
   },
   {
-    "title": "Safe <u>CORE</u> is Account Abstraction",
+    "title": "Safe <u>CORE</u><br/>Smart Wallet Infrastructure",
     "text": "Full-stack. Battle-tested. Open-source.",
     "video": {
       "src": "/videos/intro-chip.webm"
@@ -14,6 +14,27 @@
       "href": "https://docs.safe.global"
     },
     "component": "Core/Intro"
+  },
+  {
+    "title": "Launching<br/>Safe <u>CORE</u> Protocol",
+    "caption": "Whitepaper",
+    "buttons": [
+      {
+        "text": "Read Whitepaper",
+        "href": "https://github.com/safe-global/safe-core-protocol-specs/blob/main/whitepaper.pdf",
+        "variant": "button"
+      },
+      {
+        "text": "GitHub",
+        "href": "https://github.com/safe-global/safe-core-protocol-specs",
+        "variant": "link"
+      }
+    ],
+    "image": {
+      "src": "/images/Core/whitepaper-new.svg",
+      "alt": "new document"
+    },
+    "component": "Core/Masthead"
   },
   {
     "title": "Our Account Abstraction stack",
@@ -169,37 +190,6 @@
       }
     ],
     "component": "Core/Tweets"
-  },
-  {
-    "caption": "Safe core protocol",
-    "title": "Build any use case with the battle-tested security of Safe <u>CORE</u> Protocol",
-    "text": "Tap into the ecosystem’s cutting-edge modules and guard extensions or write your own custom logic to plug into the Safe core contracts.",
-    "link": {
-      "title": "Get started",
-      "href": "https://docs.safe.global/safe-core-protocol/safe-core-protocol"
-    },
-    "image": {
-      "src": "/images/Core/safe-core-protocol.png",
-      "alt": "Safe core protocol"
-    },
-    "grid": {
-      "title": "Benefits",
-      "items": [
-        {
-          "title": "Extend account logic using Safe Modules"
-        },
-        {
-          "title": "Implement transaction checks using Safe Guards"
-        },
-        {
-          "title": "Batch transactions using Multisend"
-        },
-        {
-          "title": "Use new signature schemes using Fallback Handlers"
-        }
-      ]
-    },
-    "component": "Core/TextGrid"
   },
   {
     "title": "Hacking on<br />Safe <u>CORE</u>?",

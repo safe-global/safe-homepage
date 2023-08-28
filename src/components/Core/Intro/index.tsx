@@ -1,14 +1,22 @@
 import { Button, Container, Divider, Grid, Typography } from '@mui/material'
 import css from './styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
+import { scrollToElement } from '@/lib/scrollSmooth'
 
 const CoreIntro = ({ title, text, link }: BaseBlock) => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+
+    scrollToElement('#masthead', 200)
+  }
+
   return (
     <Container>
       <Grid
         container
         className={css.container}
-        spacing={{ xs: 6, md: '30px', xl: '50px' }}
+        rowSpacing={{ xs: 6 }}
+        columnSpacing={{ md: '30px', xl: '50px' }}
         justifyContent="space-between"
         alignItems="center"
       >
@@ -33,6 +41,9 @@ const CoreIntro = ({ title, text, link }: BaseBlock) => {
             </Button>
           )}
         </Grid>
+        <a onClick={handleClick} className={css.scroll}>
+          <Typography variant="caption">New Whitepaper</Typography>
+        </a>
       </Grid>
       <Divider />
     </Container>

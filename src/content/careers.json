@@ -165,27 +165,8 @@
     "component": "Careers/ParallaxLocations"
   },
   {
-    "variant": "reverse",
-    "title": "Interview process",
-    "text": "We have a transparent and fast interview process",
-    "image": {
-      "src": "/images/interview-process.svg",
-      "alt": "Interview process timeline"
-    },
-    "component": "Careers/ImageText"
-  },
-  {
     "title": "Open positions",
     "id": "positions",
     "component": "Careers/Positions"
-  },
-  {
-    "component": "Careers/BannerCta",
-    "title": "Couldn't find what you were looking for?",
-    "text": "Send us an open application!",
-    "link": {
-      "title": "jobs@safe.global",
-      "href": "mailto:jobs@safe.global"
-    }
   }
 ]

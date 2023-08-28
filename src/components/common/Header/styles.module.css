@@ -21,6 +21,7 @@
   align-items: center;
   list-style: none;
   gap: 32px;
+  --transition-duration: var(--transition-duration);
 }
 
 .burger {
@@ -44,7 +45,7 @@
   background: white;
   border-radius: 1px;
   position: absolute;
-  transition: transform 0.2s;
+  transition: transform var(--transition-duration);
 }
 
 .burger:before {
@@ -63,7 +64,7 @@
   text-decoration: none;
   padding: 24px 0;
   border-bottom: 1px solid var(--mui-palette-border-light);
-  transition: all 0.2s;
+  transition: all var(--transition-duration);
 }
 
 .link:active {
@@ -79,12 +80,34 @@
   pointer-events: none;
 }
 
+.externalLink {
+  display: flex;
+  align-items: baseline;
+  transition: all var(--transition-duration);
+}
+
+.externalLink u {
+  white-space: nowrap;
+}
+
+.externalLink svg {
+  margin-left: 8px;
+  width: 24px;
+  height: 24px;
+}
+
+.externalLink:hover svg path {
+  fill: var(--mui-palette-primary-light);
+}
+
 .button {
   font-size: 18px;
   line-height: 26px;
   padding: 15px 0;
   width: 100%;
   margin-top: 24px;
+  display: flex;
+  align-items: baseline;
 }
 
 .badge :global .MuiBadge-badge {
@@ -143,6 +166,11 @@
     line-height: 56px;
     padding: 0;
     border: 0;
+  }
+
+  .externalLink svg {
+    width: 16px;
+    height: 16px;
   }
 
   .button {
