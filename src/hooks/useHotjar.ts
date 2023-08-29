@@ -16,7 +16,7 @@ const useHotjar = () => {
       scriptRef.src = `https://static.hotjar.com/c/hotjar-${ID}.js?sv=${HOTJAR_VERSION}`
       scriptRef.async = true
       scriptRef.defer = true
-      document.body.appendChild(scriptRef)
+      document.head.appendChild(scriptRef)
       return
     }
 
