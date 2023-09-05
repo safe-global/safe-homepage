@@ -5,7 +5,7 @@
  * @returns {string} The formatted string representation of the number.
  */
 export function formatValue(value: number): string {
-  const numberFormat = new Intl.NumberFormat(undefined, {
+  const numberFormat = new Intl.NumberFormat('en-US', {
     notation: 'compact',
     maximumFractionDigits: 2,
   })
