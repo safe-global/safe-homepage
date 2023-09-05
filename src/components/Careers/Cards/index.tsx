@@ -58,8 +58,8 @@ export const Cards = ({
   highlight?: boolean
 }): ReactElement => {
   return (
-    <Container id={id}>
-      <Grid container spacing={{ xs: 2, md: '30px', xl: '50px' }} className={layoutCss.containerMedium}>
+    <Container id={id} sx={{ marginBottom: '80px' }} className={layoutCss.containerMedium}>
+      <Grid container spacing={{ xs: 2, md: '30px', xl: '50px' }}>
         <Grid item xs={12}>
           <Typography variant="h1" className={css.title} mb={{ xs: 3, md: '50px' }}>
             {title}

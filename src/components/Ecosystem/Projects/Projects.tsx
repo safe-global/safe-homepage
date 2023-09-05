@@ -74,7 +74,7 @@ export const _getFilteredProjects = ({
       return true
     }
 
-    return selected.every((item) => {
+    return selected.some((item) => {
       return all.includes(item)
     })
   }

@@ -17,6 +17,7 @@ import { theme } from '@/styles/theme'
 import '@/styles/globals.css'
 import PageLayout from '@/components/common/PageLayout'
 import { useGa } from '@/hooks/useGa'
+import useHotjar from '@/hooks/useHotjar'
 import DOMPurify from 'isomorphic-dompurify'
 
 // Client-side cache, shared for the whole session of the user in the browser.
@@ -35,6 +36,7 @@ DOMPurify.addHook('afterSanitizeAttributes', function (node) {
 
 const InitHooks = () => {
   useGa()
+  useHotjar()
 
   return null
 }

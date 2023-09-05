@@ -4,11 +4,12 @@ import Link from 'next/link'
 
 import { AppRoutes } from '@/config/routes'
 import Logo from '@/public/images/logo.svg'
-import { WALLET_LINK } from '@/config/constants'
+import { SAFECON_LINK, WALLET_LINK } from '@/config/constants'
 import { useOpenPositions } from '@/hooks/useOpenPositions'
 import css from './styles.module.css'
 import clsx from 'clsx'
 import { useRouter } from 'next/router'
+import ArrowIcon from '@/public/images/arrow-out-square-corner.svg'
 
 const navItems = [
   {
@@ -31,7 +32,23 @@ const navItems = [
     label: 'Careers',
     href: AppRoutes.careers,
   },
+  {
+    label: (
+      <div className={css.externalLink}>
+        Safe
+        <u>CON</u>
+        <ArrowIcon />
+      </div>
+    ),
+    href: SAFECON_LINK,
+    external: true,
+  },
 ]
+
+const externalLinkAttrs = {
+  target: '_blank',
+  rel: 'noopener noreferrer',
+}
 
 const Header = () => {
   const { asPath } = useRouter()
@@ -66,6 +83,7 @@ const Header = () => {
                 className={clsx(css.link, item.href === asPath && css.active)}
                 href={item.href}
                 onClick={closeNavigation}
+                {...(item.external ? externalLinkAttrs : {})}
               >
                 <Badge
                   badgeContent={item.href === AppRoutes.careers ? positions.length : undefined}
