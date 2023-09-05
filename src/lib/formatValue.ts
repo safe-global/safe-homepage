@@ -16,19 +16,26 @@ export function formatValue(value: number): string {
   let compact = ''
 
   for (const part of parts) {
-    if (part.type === 'integer') {
-      integer = part.value
-    } else if (part.type === 'decimal') {
-      if (integer.length === 1) {
-        decimalPart = part.value
-      }
-    } else if (part.type === 'fraction') {
-      if (integer.length === 1) {
-        // Truncates the fraction part to 1 decimal place if the value has a single integer digit
-        decimalPart = `${decimalPart}${part.value[0]}`
-      }
-    } else if (part.type === 'compact') {
-      compact = part.value
+    switch (part.type) {
+      case 'integer':
+        integer = part.value
+        break
+      case 'decimal':
+        if (integer.length === 1) {
+          decimalPart = part.value
+        }
+        break
+      case 'fraction':
+        if (integer.length === 1) {
+          // Truncates the fraction part to 1 decimal place if the value has a single integer digit
+          decimalPart = `${decimalPart}${part.value[0]}`
+        }
+        break
+      case 'compact':
+        compact = part.value
+        break
+      default:
+        break
     }
   }
 
