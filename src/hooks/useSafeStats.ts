@@ -1,6 +1,5 @@
 import { useContext } from 'react'
 import { formatValue } from '@/lib/formatValue'
-import { DUNE_API_KEY } from '@/config/constants'
 import SafeStatsContext from '@/components/common/SafeStatsContext'
 
 const QUERY_ID_TOTAL_TRANSACTIONS = 2093960
@@ -8,7 +7,7 @@ const QUERY_ID_TOTAL_ASSETS = 2893829
 const QUERY_ID_TOTAL_SAFES_DEPLOYED = 2459401
 
 function totalAssetsEndpoint(queryId: number): string {
-  return `https://api.dune.com/api/v1/query/${queryId}/results?api_key=${DUNE_API_KEY}`
+  return `https://api.dune.com/api/v1/query/${queryId}/results?api_key=${process.env.DUNE_API_KEY}`
 }
 
 export const fetchTotalTransactions = async (): Promise<number | null> => {
