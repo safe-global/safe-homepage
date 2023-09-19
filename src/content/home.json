@@ -70,6 +70,16 @@
         }
       },
       {
+        "name": "zkSync Era Mainnet",
+        "icon": {
+          "src": "/images/chainsLogos/ZkSyncEraLogo.png",
+          "alt": "zkSync Era logo"
+        },
+        "textColor": "#000000",
+        "backgroundColor": "#FFFFFF",
+        "isNew": true
+      },
+      {
         "name": "Polygon",
         "icon": {
           "src": "/images/chainsLogos/PolygonLogo.png",
@@ -105,13 +115,11 @@
         }
       },
       {
-        "name": "zkSync Era Mainnet",
+        "name": "Polygon zkEVM",
         "icon": {
-          "src": "/images/chainsLogos/ZkSyncEraLogo.png",
-          "alt": "zkSync Era logo"
+          "src": "/images/chainsLogos/PolygonZkEVMLogo.png",
+          "alt": "Polygon zkEVM logo"
         },
-        "textColor": "#121312",
-        "backgroundColor": "#FFFFFF",
         "isNew": true
       },
       {
@@ -120,14 +128,6 @@
           "src": "/images/chainsLogos/CeloLogo.png",
           "alt": "Celo logo"
         }
-      },
-      {
-        "name": "Polygon zkEVM",
-        "icon": {
-          "src": "/images/chainsLogos/PolygonZkEVMLogo.png",
-          "alt": "Polygon zkEVM logo"
-        },
-        "isNew": true
       }
     ],
     "component": "common/Networks"
