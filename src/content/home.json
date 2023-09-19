@@ -70,6 +70,16 @@
         }
       },
       {
+        "name": "zkSync Era Mainnet",
+        "icon": {
+          "src": "/images/chainsLogos/ZkSyncEraLogo.png",
+          "alt": "zkSync Era logo"
+        },
+        "textColor": "#000000",
+        "backgroundColor": "#FFFFFF",
+        "isNew": true
+      },
+      {
         "name": "Polygon",
         "icon": {
           "src": "/images/chainsLogos/PolygonLogo.png",
@@ -105,12 +115,19 @@
         }
       },
       {
+        "name": "Polygon zkEVM",
+        "icon": {
+          "src": "/images/chainsLogos/PolygonZkEVMLogo.png",
+          "alt": "Polygon zkEVM logo"
+        },
+        "isNew": true
+      },
+      {
         "name": "Celo",
         "icon": {
           "src": "/images/chainsLogos/CeloLogo.png",
           "alt": "Celo logo"
-        },
-        "isNew": true
+        }
       }
     ],
     "component": "common/Networks"
