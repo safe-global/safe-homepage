@@ -1,6 +1,7 @@
 [
   {
-    "pageTitle": "Safe Wallet – Self-custodial multisig wallet for the Ethereum ecosystem",
+    "pageTitle": "Safe Wallet",
+    "description": "Self-custodial multisig wallet for the Ethereum ecosystem",
     "component": "common/MetaTags"
   },
   {
@@ -231,10 +232,7 @@
       },
       {
         "label": "Allow push notifications",
-        "description": [
-          "Track movement of your assets and transactions",
-          "Get alerts"
-        ],
+        "description": ["Track movement of your assets and transactions", "Get alerts"],
         "state": "active"
       },
       {
