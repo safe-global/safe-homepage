@@ -3,5 +3,18 @@
     "pageTitle": "Safe Core – Full stack account abstraction",
     "descripton": "Shape the future of Safe",
     "component": "common/MetaTags"
+  },
+  {
+    "title": "Top delegates",
+    "text": "Get to know the most active Safe Guardians and SafeDAO delegates in the ecosystem, ready to receive your delegation.",
+    "link": {
+      "title": "View all delegates",
+      "href": "#"
+    },
+    "footer": {
+      "text": "and more than ",
+      "highlight": "2K delegates."
+    },
+    "component": "Governance/Delegates"
   }
 ]

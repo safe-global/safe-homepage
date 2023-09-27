@@ -83,15 +83,25 @@ export const theme = createTheme({
       lineHeight: '36px',
     },
     h4: {
-      fontSize: '24px',
-      lineHeight: '32px',
+      fontSize: '20px',
+      lineHeight: '30px',
+
+      '@media (min-width:600px)': {
+        fontSize: '24px',
+        lineHeight: '32px',
+      },
     },
     h5: {
       fontSize: '16px',
     },
     body1: {
-      fontSize: '18px',
-      lineHeight: '28px',
+      fontSize: '16px',
+      lineHeight: '24px',
+
+      '@media (min-width:600px)': {
+        fontSize: '18px',
+        lineHeight: '28px',
+      },
     },
     body2: {
       fontSize: '14px',
