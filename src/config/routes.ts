@@ -12,4 +12,5 @@ export const AppRoutes = {
     index: '/cla',
   },
   careers: '/careers',
+  governance: '/governance',
 }

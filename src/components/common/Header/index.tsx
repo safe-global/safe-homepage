@@ -29,6 +29,10 @@ const navItems = [
     href: AppRoutes.ecosystem,
   },
   {
+    label: 'Governance',
+    href: AppRoutes.governance,
+  },
+  {
     label: 'Careers',
     href: AppRoutes.careers,
   },
