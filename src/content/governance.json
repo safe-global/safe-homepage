@@ -16,5 +16,22 @@
       "highlight": "2K delegates."
     },
     "component": "Governance/Delegates"
+  },
+  {
+    "caption": "Community",
+    "title": "Apply for the Safe<br/>Grants Program",
+    "text": "Have a project to contribute to the Safe ecosystem? Get your ideas, builds, and integrations funded by our grants program",
+    "buttons": [
+      {
+        "text": "Learn more",
+        "href": "https://grants.safe.global",
+        "variant": "button"
+      }
+    ],
+    "image": {
+      "src": "/images/banner-lines.svg",
+      "alt": "Safe round block lines"
+    },
+    "component": "common/BannerGradientImage"
   }
 ]

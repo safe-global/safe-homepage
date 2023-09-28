@@ -1,3 +1,7 @@
+.wrapper {
+  margin-top: 80px;
+}
+
 .list {
   padding: 0;
   list-style: none;
