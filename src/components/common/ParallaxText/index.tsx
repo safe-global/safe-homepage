@@ -22,7 +22,7 @@ const ParallaxText = ({
   children,
 }: ParallaxTextProps & { children: ReactNode; steps?: StepsType }) => {
   return (
-    <Container disableGutters>
+    <Container>
       <Grid
         container
         className={clsx(layoutCss.containerMedium, variant === 'image-text' ? css.imageFirst : css.textFirst)}

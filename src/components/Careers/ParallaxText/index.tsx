@@ -4,13 +4,13 @@ import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 import clsx from 'clsx'
 
-export type ParallaxTextProps = {
+export type ParallaxTextCenteredProps = {
   title: string
   text: string
   children: ReactNode
 }
 
-const ParallaxText = ({ title, text, children }: ParallaxTextProps): ReactElement => {
+const ParallaxTextCentered = ({ title, text, children }: ParallaxTextCenteredProps): ReactElement => {
   return (
     <Container>
       <Grid
@@ -31,4 +31,4 @@ const ParallaxText = ({ title, text, children }: ParallaxTextProps): ReactElemen
   )
 }
 
-export default ParallaxText
+export default ParallaxTextCentered
