@@ -5,6 +5,16 @@
     "component": "common/MetaTags"
   },
   {
+    "component": "Governance/Proposals",
+    "title": "Live proposals",
+    "text": "Get involved in the latest proposals or write one of your own and let your voice be heard.",
+    "link": {
+      "title": "View all proposals",
+      "href": "https://snapshot.org/#/safe.eth"
+    }
+  },
+  {
+    "component": "Governance/Delegates",
     "title": "Top delegates",
     "text": "Get to know the most active Safe Guardians and SafeDAO delegates in the ecosystem, ready to receive your delegation.",
     "link": {
@@ -14,10 +24,10 @@
     "footer": {
       "text": "and more than ",
       "highlight": "2K delegates."
-    },
-    "component": "Governance/Delegates"
+    }
   },
   {
+    "component": "common/BannerGradientImage",
     "caption": "Community",
     "title": "Apply for the Safe<br/>Grants Program",
     "text": "Have a project to contribute to the Safe ecosystem? Get your ideas, builds, and integrations funded by our grants program",
@@ -31,7 +41,6 @@
     "image": {
       "src": "/images/banner-lines.svg",
       "alt": "Safe round block lines"
-    },
-    "component": "common/BannerGradientImage"
+    }
   }
 ]

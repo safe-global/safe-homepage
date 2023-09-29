@@ -1,0 +1,15 @@
+.linkButton {
+  display: flex;
+  margin-top: 24px;
+}
+
+.shortPadding {
+  padding: 8px 0 !important;
+}
+
+@media (min-width: 900px) {
+  .linkButton {
+    align-items: end;
+    justify-content: end;
+  }
+}

@@ -3,10 +3,10 @@ import React from 'react'
 import TwitterIcon from '@/public/images/twitter-icon.svg'
 import DiscordIcon from '@/public/images/discord-icon.svg'
 import css from './styles.module.css'
-import LinkButton from '@/components/common/LinkButton'
 import type { BaseBlock } from '@/components/Home/types'
-import Link from 'next/link'
 import { shortenAddress } from '@/lib/shortenAddress'
+import HeaderCTA from '@/components/common/HeaderCTA'
+import layoutCss from '@/components/common/styles.module.css'
 
 type Delegate =
   | {
@@ -21,6 +21,7 @@ type Delegate =
       discord?: string
     }
 
+// TODO: this data is to be provided by Andre
 const delegatesData: Delegate[] = [
   {
     name: 'Malik El Bay 1',
@@ -107,7 +108,6 @@ const delegatesData: Delegate[] = [
   },
 ]
 
-// TODO: Is this a delegate card or a more generic card?
 const DelegateCard = (props: Delegate) => (
   <div className={css.card}>
     <div className={css.cardHeader}>
@@ -145,28 +145,10 @@ const DelegateCard = (props: Delegate) => (
 
 const Delegates = (props: BaseBlock & { footer: { text: string; highlight: string } }) => {
   return (
-    <Container>
-      {/* Header */}
-      <Grid container mb={7}>
-        <Grid item xs={12} md={8}>
-          <Typography variant="h2" mb={3}>
-            {props.title}
-          </Typography>
-          <Typography variant="body1" color="primary.light">
-            {props.text}
-          </Typography>
-        </Grid>
-        <Grid item xs={12} md={4} className={css.linkButton}>
-          {/* link href yet TBD */}
-          {props.link && (
-            <Link href={props.link.href} target="_blank" rel="noreferrer" passHref>
-              <LinkButton className={css.shortPadding}>{props.link.title}</LinkButton>
-            </Link>
-          )}
-        </Grid>
-      </Grid>
+    <Container className={layoutCss.containerMedium}>
+      <HeaderCTA {...props} />
 
-      {/* Refactor both elements to SpacedGridFooter */}
+      {/* TODO: Refactor both elements to SpacedGridFooter */}
       {/* Table */}
       <Grid container position="relative" className={css.cardGrid} spacing={{ xs: '16px', md: '30px', xl: '50px' }}>
         {delegatesData.map((item, index) => (
