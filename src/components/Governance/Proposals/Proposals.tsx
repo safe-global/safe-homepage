@@ -3,6 +3,7 @@ import type { BaseBlock } from '@/components/Home/types'
 import HeaderCTA from '@/components/common/HeaderCTA'
 import { parseSnapshotTitle } from '@/lib/parseSnapshotTitle'
 import { useSafeSnapshot } from '@/hooks/useSafeSnapshot'
+import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 
 const PROPOSAL_LINK_BASE_URL = 'https://snapshot.org/#/safe.eth/proposal/'
@@ -55,7 +56,7 @@ const Proposals = (props: BaseBlock) => {
   const { data: proposals } = useSafeSnapshot()
 
   return (
-    <Container>
+    <Container className={layoutCss.containerMedium}>
       <HeaderCTA {...props} />
 
       <Stack spacing={3}>

@@ -10,6 +10,7 @@ import clsx from 'clsx'
 
 export type ParallaxTextProps = BaseBlock & {
   variant: 'image-text' | 'text-image'
+  mobileVariant?: 'image-text' | 'text-image'
 }
 
 const ParallaxText = ({
@@ -19,13 +20,18 @@ const ParallaxText = ({
   steps,
   caption,
   variant,
+  mobileVariant = 'image-text',
   children,
 }: ParallaxTextProps & { children: ReactNode; steps?: StepsType }) => {
   return (
     <Container>
       <Grid
         container
-        className={clsx(layoutCss.containerMedium, variant === 'image-text' ? css.imageFirst : css.textFirst)}
+        className={clsx(
+          layoutCss.containerMedium,
+          variant === 'image-text' ? css.imageFirst : css.textFirst,
+          mobileVariant === 'text-image' ? css.textFirstMobile : null,
+        )}
         spacing={{ xs: 6, md: '30px', xl: '50px' }}
         justifyContent="space-between"
       >

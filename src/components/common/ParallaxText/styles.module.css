@@ -3,6 +3,10 @@
   flex-direction: column-reverse;
 }
 
+.textFirstMobile {
+  flex-direction: column;
+}
+
 @media (min-width: 600px) {
   .textFirst {
     flex-direction: row;

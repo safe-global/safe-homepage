@@ -5,6 +5,12 @@
     "component": "common/MetaTags"
   },
   {
+    "component": "Governance/ParallaxDaoStats",
+    "variant": "image-text",
+    "mobileVariant": "text-image",
+    "title": "Safe <u>DAO</u> is a <b>decentralised collective</b> stewarding the <i>Safe</i> ecosystem"
+  },
+  {
     "component": "Governance/Proposals",
     "title": "Live proposals",
     "text": "Get involved in the latest proposals or write one of your own and let your voice be heard.",
