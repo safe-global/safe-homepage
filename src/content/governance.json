@@ -33,6 +33,20 @@
     }
   },
   {
+    "component": "Governance/ParallaxGovernanceProcess",
+    "variant": "image-text",
+    "caption": "How we work",
+    "title": "<i>Safe</i> governance process",
+    "text": "The current governance process is a series of phases involving ideation, discussion, and voting. A <b>new governance framework</b> is in the works.",
+    "buttons": [
+      {
+        "text": "Read more",
+        "href": "https://www.notion.so/safe-global/Governance-overview-be50e0780b7840f08b679341ea582661?pvs=4",
+        "variant": "link"
+      }
+    ]
+  },
+  {
     "component": "common/BannerGradientImage",
     "caption": "Community",
     "title": "Apply for the Safe<br/>Grants Program",
