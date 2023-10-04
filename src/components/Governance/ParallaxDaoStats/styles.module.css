@@ -42,19 +42,19 @@
 
   .proposals {
     bottom: 333px;
-    left: 125px;
+    left: 75px;
     width: 226px;
   }
 
   .delegates {
     bottom: 207px;
-    left: 325px;
+    left: 275px;
     width: 227px;
   }
 
   .delegators {
     bottom: 27px;
-    left: 210px;
+    left: 160px;
     width: 226px;
   }
 }

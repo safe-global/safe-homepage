@@ -58,31 +58,31 @@
     position: absolute;
     width: 128px;
     bottom: 180px;
-    left: 124px;
+    left: 104px;
   }
 
   .rightLine {
     position: absolute;
     width: 154px;
     bottom: 150px;
-    left: 290px;
+    left: 270px;
   }
 
   .stepZero {
     bottom: 253px;
-    left: 56px;
+    left: 36px;
     width: 68px;
   }
 
   .stepOne {
     bottom: 114px;
-    left: 225px;
+    left: 205px;
     width: 68px;
   }
 
   .stepTwo {
     bottom: 276px;
-    left: 443px;
+    left: 423px;
     width: 68px;
   }
 }
