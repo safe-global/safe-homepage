@@ -47,6 +47,49 @@
     ]
   },
   {
+    "component": "common/TitleLogos",
+    "hideMobile": true,
+    "title": "Join the conversation",
+    "items": [
+      {
+        "link": {
+          "href": "https://safe.mirror.xyz/"
+        },
+        "image": {
+          "src": "/images/mirror-icon-56x56.svg",
+          "alt": "Mirror link"
+        }
+      },
+      {
+        "link": {
+          "href": "https://forum.safe.global/"
+        },
+        "image": {
+          "src": "/images/discourse-icon-56x56.svg",
+          "alt": "Discourse link"
+        }
+      },
+      {
+        "link": {
+          "href": "https://chat.safe.global"
+        },
+        "image": {
+          "src": "/images/discord-icon-56x56.svg",
+          "alt": "Discord link"
+        }
+      },
+      {
+        "link": {
+          "href": "https://twitter.com/safe"
+        },
+        "image": {
+          "src": "/images/twitter-icon-56x56.svg",
+          "alt": "Twitter link"
+        }
+      }
+    ]
+  },
+  {
     "component": "common/BannerGradientImage",
     "caption": "Community",
     "title": "Apply for the Safe<br/>Grants Program",

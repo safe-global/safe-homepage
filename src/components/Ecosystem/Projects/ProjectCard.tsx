@@ -1,6 +1,6 @@
 import { Avatar, Typography, IconButton, SvgIcon, Chip } from '@mui/material'
 
-import TwitterIcon from '@/public/images/twitter-icon.svg'
+import TwitterIcon from '@/public/images/twitter-icon-28x28.svg'
 import GithubIcon from '@/public/images/github-icon.svg'
 
 import css from './styles.module.css'

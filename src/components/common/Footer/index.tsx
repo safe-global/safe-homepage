@@ -2,9 +2,9 @@ import { ButtonBase, Container, Divider, Grid, Typography } from '@mui/material'
 import type { SyntheticEvent } from 'react'
 
 import { AppRoutes } from '@/config/routes'
-import DiscordIcon from '@/public/images/discord-icon.svg'
-import TwitterIcon from '@/public/images/twitter-icon.svg'
-import MirrorIcon from '@/public/images/mirror-icon.svg'
+import DiscordIcon from '@/public/images/discord-icon-28x28.svg'
+import TwitterIcon from '@/public/images/twitter-icon-28x28.svg'
+import MirrorIcon from '@/public/images/mirror-icon-28x28.svg'
 import GithubIcon from '@/public/images/github-icon.svg'
 
 import css from './styles.module.css'
