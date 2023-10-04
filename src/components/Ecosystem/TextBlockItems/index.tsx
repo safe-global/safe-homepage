@@ -1,9 +1,8 @@
 import { type BaseBlock } from '@/components/Home/types'
-import { Button, Container, Grid, Typography, Box } from '@mui/material'
+import { Container, Grid, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
-import Link from 'next/link'
-import LinkButton from '@/components/common/LinkButton'
 import Cards from '@/components/Ecosystem/Cards'
+import ButtonsWrapper from '@/components/common/ButtonsWrapper'
 
 const TextBlockItems = ({ title, text, buttons, items }: BaseBlock) => {
   return (
@@ -14,28 +13,7 @@ const TextBlockItems = ({ title, text, buttons, items }: BaseBlock) => {
             {title}
           </Typography>
           <Typography mb={5}>{text}</Typography>
-          {buttons ? (
-            <Box display="flex" gap={3} color="text.primary" alignItems="center">
-              {buttons.map((button, index) => {
-                const { text, variant, href } = button
-                const isButton = variant === 'button'
-
-                return (
-                  <Link key={index} href={href} target="_blank" rel="noreferrer" passHref>
-                    {isButton ? (
-                      <Button variant="contained" size="large">
-                        {text}
-                      </Button>
-                    ) : (
-                      <LinkButton color="secondary" sx={{ width: 'fit-content' }}>
-                        {text}
-                      </LinkButton>
-                    )}
-                  </Link>
-                )
-              })}
-            </Box>
-          ) : null}
+          <ButtonsWrapper buttons={buttons} btnColor="primary" />
         </Grid>
         <Grid item md={2} display={{ xs: 'none', md: 'block' }} />
         <Grid item md={5}>

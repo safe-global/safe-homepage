@@ -168,11 +168,6 @@ export const theme = createTheme({
             paddingLeft: '24px',
             paddingRight: '24px',
           },
-
-          '& .MuiContainer-root': {
-            paddingLeft: 0,
-            paddingRight: 0,
-          },
         },
       },
     },
