@@ -5,6 +5,22 @@
     "component": "common/MetaTags"
   },
   {
+    "component": "Governance/Intro",
+    "title": "Engage.<br/>Participate. Vote.<br/>Shape the future of <i>Safe</i>.",
+    "buttons": [
+      {
+        "text": "Join the discussion",
+        "href": "https://forum.safe.global/",
+        "variant": "button"
+      },
+      {
+        "text": "See snapshot",
+        "href": "https://snapshot.org/#/safe.eth",
+        "variant": "link"
+      }
+    ]
+  },
+  {
     "component": "Governance/ParallaxDaoStats",
     "variant": "image-text",
     "mobileVariant": "text-image",

@@ -1,12 +1,11 @@
-import { Box, Button, Chip, Grid, Typography } from '@mui/material'
-import { Container } from '@mui/system'
 import type { ReactElement } from 'react'
+import { Chip, Grid, Typography } from '@mui/material'
+import { Container } from '@mui/system'
+import ButtonsWrapper from '@/components/common/ButtonsWrapper'
+import type { BaseBlock } from '@/components/Home/types'
 
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
-import type { BaseBlock } from '@/components/Home/types'
-import LinkButton from '@/components/common/LinkButton'
-import Link from 'next/link'
 
 export const BannerGradientImage = ({ title, buttons, caption, text, image }: BaseBlock): ReactElement => {
   return (
@@ -24,28 +23,7 @@ export const BannerGradientImage = ({ title, buttons, caption, text, image }: Ba
                 {title}
               </Typography>
               <Typography mb={5}>{text}</Typography>
-              {buttons ? (
-                <Box display="flex" gap={3} flexDirection={{ xs: 'column', md: 'row' }} alignItems="center">
-                  {buttons.map((button, index) => {
-                    const { text, variant, href } = button
-                    const isButton = variant === 'button'
-
-                    return (
-                      <Link key={index} href={href} target="_blank" rel="noreferrer" passHref>
-                        {isButton ? (
-                          <Button variant="contained" size="large" color="secondary">
-                            {text}
-                          </Button>
-                        ) : (
-                          <LinkButton color="secondary" sx={{ width: 'fit-content' }}>
-                            {text}
-                          </LinkButton>
-                        )}
-                      </Link>
-                    )
-                  })}
-                </Box>
-              ) : null}
+              <ButtonsWrapper buttons={buttons} btnColor="secondary" />
             </Grid>
             {image ? <img src={image.src} alt={image.alt} className={css.image} /> : null}
           </Grid>
