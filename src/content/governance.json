@@ -49,6 +49,94 @@
     }
   },
   {
+    "component": "Governance/ResourceHub",
+    "title": "Resource hub",
+    "link": {
+      "title": "Go to governance hub",
+      "href": "gov.safe.global"
+    },
+    "items": [
+      {
+        "image": {
+          "src": "/images/shield-check-gradient.svg",
+          "alt": "checked shield",
+          "width": "50px"
+        },
+        "title": "What is Safe{DAO}",
+        "text": "SafeDAO is a decentralised collective, stewarding the thriving ecosystem around Safe smart accounts on Ethereum and other blockchains",
+        "link": {
+          "title": "Learn more",
+          "href": "#"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/tokens-gradient.svg",
+          "alt": "stacked tokens",
+          "width": "50px"
+        },
+        "title": "What is the Safe{Token}",
+        "text": "The Safe token represents the growing value of the Safe ecosystem",
+        "link": {
+          "title": "Learn more",
+          "href": "#"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/external-link-gradient.svg",
+          "alt": "external link",
+          "width": "50px"
+        },
+        "title": "Who are Safe{Guardians}",
+        "text": "Safe Guardians are active community members who have verifiable proof of commitment to the Safe vision",
+        "link": {
+          "title": "Learn more",
+          "href": "#"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/teach-gradient.svg",
+          "alt": "teacher pointing at board",
+          "width": "50px"
+        },
+        "title": "How to delegate",
+        "text": "Token holders can delegate their votes to any address of their choice or to Safe Guardians using the SafeDAO Governance app within Safe{Wallet} or Snapshot",
+        "link": {
+          "title": "Learn more",
+          "href": "#"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/building-gradient.svg",
+          "alt": "building",
+          "width": "50px"
+        },
+        "title": "What is the Safe Grants Program",
+        "text": "SGP fosters a thriving community of contributors within the Safe ecosystem by funding ideas, projects, and integrations that align with <i>Safe</i>",
+        "link": {
+          "title": "Learn more",
+          "href": "#"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/shield-check-gradient.svg",
+          "alt": "checked shield",
+          "width": "50px"
+        },
+        "title": "What is the Safe Ecosystem Foundation",
+        "text": "SEF is a steward of SafeDAO, responsible for facilitating and administering the decisions voted in by the members of SafeDAO",
+        "link": {
+          "title": "Learn more",
+          "href": "#"
+        }
+      }
+    ]
+  },
+  {
     "component": "Governance/ParallaxGovernanceProcess",
     "variant": "image-text",
     "caption": "How we work",

@@ -1,21 +1,21 @@
-import { Chip, Container, Grid, Typography } from '@mui/material'
+import { Container, Grid, Typography } from '@mui/material'
 import type { GridProps } from '@mui/material'
 import type { ReactElement } from 'react'
 import type { BaseBlock } from '@/components/Home/types'
 import css from './styles.module.css'
 import layoutCss from '@/components/common/styles.module.css'
+import Link from 'next/link'
+import LinkButton from '@/components/common/LinkButton'
 
-const GridItem = ({ image, title, text, caption, width = 4 }: BaseBlock & { width: GridProps['md'] }): ReactElement => {
+export const GridItem = ({
+  image,
+  title,
+  text,
+  link,
+  width = 4,
+}: Partial<BaseBlock> & { width: GridProps['md'] }): ReactElement => {
   return (
-    <Grid
-      item
-      xs={12}
-      md={width}
-      className={css.gridItems}
-      display="flex"
-      flexDirection="column"
-      justifyContent="space-between"
-    >
+    <Grid item xs={12} md={width} className={css.gridItems}>
       <div>
         {image ? <img {...image} /> : null}
         <Typography variant="h4" className={css.title}>
@@ -23,29 +23,17 @@ const GridItem = ({ image, title, text, caption, width = 4 }: BaseBlock & { widt
         </Typography>
         <Typography color="primary.light">{text}</Typography>
       </div>
-      {caption ? (
-        <Chip
-          label={
-            <Typography variant="caption" color="primary.main">
-              {caption}
-            </Typography>
-          }
-          className={css.comingSoonChip}
-          variant="outlined"
-        />
-      ) : null}
+      {link && (
+        <Link href={link.href} target="_blank" rel="noreferrer" passHref>
+          <LinkButton>{link.title}</LinkButton>
+        </Link>
+      )}
     </Grid>
   )
 }
 
-export type UspBlockProps = {
-  variant: '3-columns' | '4-columns'
-  title: string
-  text?: string
-  items: BaseBlock[]
-}
-
-const UspBlock = ({ variant, title, text, items }: UspBlockProps): ReactElement => (
+// Refactor: unify the ItemGrid and accept a GridItem component
+const UspBlock = ({ variant, title, text, items }: BaseBlock & { variant: '3-columns' | '4-columns' }) => (
   <Container>
     <Grid container className={layoutCss.containerShort} flexDirection="column" alignItems="center">
       <Typography variant="h2" mb={3}>
@@ -53,7 +41,7 @@ const UspBlock = ({ variant, title, text, items }: UspBlockProps): ReactElement 
       </Typography>
       {text && <Typography>{text}</Typography>}
       <Grid container className={css.roundCorners} mt={{ xs: 3, md: 7 }}>
-        {items.map((item, index) => (
+        {items?.map((item, index) => (
           <GridItem key={index} width={variant === '3-columns' ? 4 : 3} {...item} />
         ))}
       </Grid>
