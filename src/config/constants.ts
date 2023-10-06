@@ -21,6 +21,7 @@ export const IOS_LINK = 'https://apps.apple.com/app/id1515759131'
 export const GPLAY_LINK = 'https://play.google.com/store/apps/details?id=io.gnosis.safe'
 export const BRAND_KIT = 'https://press.safe.global'
 export const LICENSES_LINK = 'https://app.safe.global/licenses'
+export const GOVERNANCE_LINK = 'https://gov.safe.global'
 
 export const PROTOCOL_KIT_LINK = 'https://docs.safe.global/safe-core-aa-sdk/protocol-kit'
 export const AUTH_KIT_LINK = 'https://docs.safe.global/safe-core-aa-sdk/auth-kit'
