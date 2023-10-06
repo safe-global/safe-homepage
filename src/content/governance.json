@@ -137,6 +137,33 @@
     ]
   },
   {
+    "component": "Governance/OurMission",
+    "title": "<b>Our mission</b> is to establish smart accounts as the default means for web3 interactions",
+    "link": {
+      "title": "Read the SafeDAO constitution",
+      "href": "#"
+    },
+    "items": [
+      {
+        "title": "Vibrant ecosystem",
+        "text": "To foster a vibrant Safe ecosystem built on shared components and standards",
+        "image": {
+          "src": "/images/Governance/ecosystem-avatars.png",
+          "alt": "Ecosystem avatars"
+        },
+        "tagline": "190+ ecosystem projects"
+      },
+      {
+        "title": "Resilience through decentralisation",
+        "text": "The <i>Safe</i> ecosystem including governance shall be independent from any single entity, decentralised, and permissionless"
+      },
+      {
+        "title": "Tokenise value",
+        "text": "Mechanisms should be created to link the growth of the Safe ecosystem to the utility of the Safe token"
+      }
+    ]
+  },
+  {
     "component": "Governance/ParallaxGovernanceProcess",
     "variant": "image-text",
     "caption": "How we work",
