@@ -21,7 +21,7 @@ const Intro = ({ title, text }: BaseBlock) => {
               <div className={css.buttons}>
                 <Link href={AppRoutes.core} passHref>
                   <Button variant="contained" color="background" size="large">
-                    Build
+                    Build on Core
                   </Button>
                 </Link>
                 <Button
@@ -32,7 +32,7 @@ const Intro = ({ title, text }: BaseBlock) => {
                   color="secondary"
                   size="large"
                 >
-                  Launch Wallet
+                  Use Wallet
                 </Button>
               </div>
             </Grid>
