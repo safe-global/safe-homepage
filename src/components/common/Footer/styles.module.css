@@ -38,7 +38,13 @@
 
 .socials {
   display: flex;
+  flex-wrap: wrap;
   gap: 24px;
+}
+
+.socials svg {
+  width: 28px;
+  height: 28px;
 }
 
 .logo {
