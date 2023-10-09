@@ -12,13 +12,13 @@ import Link from 'next/link'
 import {
   DOCS_LINK,
   HELP_LINK,
-  PRESS_LINK,
   CORE_LINK,
-  FORUM_LINK,
-  CHAT_LINK,
-  GUARDIANS_LINK,
-  BRAND_KIT,
+  PRESS_LINK,
   LICENSES_LINK,
+  GOVERNANCE_LINK,
+  ECOSYSTEM_LINK,
+  GRANTS_LINK,
+  SAFECON_LINK,
 } from '@/config/constants'
 import { useCookieBannerContext } from '../CookieBanner/CookieBannerContext'
 import Logo from '@/public/images/logo.svg'
@@ -27,7 +27,7 @@ const COOKIE_PREFERENCES = '#cookies'
 
 const safeProtocolItems = [
   {
-    label: 'Core',
+    label: 'Safe{Core}',
     href: CORE_LINK,
     target: '_blank',
     rel: 'noreferrer',
@@ -42,20 +42,26 @@ const safeProtocolItems = [
 
 const communityItems = [
   {
-    label: 'Safe DAO',
-    href: FORUM_LINK,
+    label: 'Governance',
+    href: GOVERNANCE_LINK,
     target: '_blank',
     rel: 'noreferrer',
   },
   {
-    label: 'Discord',
-    href: CHAT_LINK,
+    label: 'Ecosystem',
+    href: ECOSYSTEM_LINK,
     target: '_blank',
     rel: 'noreferrer',
   },
   {
-    label: 'Safe Guardians',
-    href: GUARDIANS_LINK,
+    label: 'Grants',
+    href: GRANTS_LINK,
+    target: '_blank',
+    rel: 'noreferrer',
+  },
+  {
+    label: 'Safe{Con}',
+    href: SAFECON_LINK,
     target: '_blank',
     rel: 'noreferrer',
   },
@@ -63,18 +69,18 @@ const communityItems = [
 
 const resourcesItems = [
   {
-    label: 'Careers',
-    href: AppRoutes.careers,
-  },
-  {
     label: 'Help Center',
     href: HELP_LINK,
     target: '_blank',
     rel: 'noreferrer',
   },
   {
+    label: 'Careers',
+    href: AppRoutes.careers,
+  },
+  {
     label: 'Brand Kit',
-    href: BRAND_KIT,
+    href: PRESS_LINK,
     target: '_blank',
     rel: 'noreferrer',
   },
@@ -88,12 +94,6 @@ const subFooterItems = [
   {
     label: 'Privacy',
     href: AppRoutes.privacy,
-  },
-  {
-    label: 'Press Kit',
-    href: PRESS_LINK,
-    target: '_blank',
-    rel: 'noreferrer',
   },
   {
     label: 'Licenses',
