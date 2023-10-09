@@ -27,7 +27,7 @@ const Intro = ({ title, text }: BaseBlock) => {
                 <Button
                   href={WALLET_LINK}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noreferrer"
                   variant="contained"
                   color="secondary"
                   size="large"
