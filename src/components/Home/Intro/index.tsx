@@ -10,7 +10,9 @@ const Intro = ({ title, text, buttons }: BaseBlock) => {
         <Container>
           <Grid container flexDirection="column" className={css.content}>
             <Grid item md={10} width="100%">
-              <Typography className={css.title}>{title}</Typography>
+              <Typography variant="h1" mb={3}>
+                {title}
+              </Typography>
             </Grid>
             <Grid item md={6}>
               <Typography className={css.subtitle}>{text}</Typography>

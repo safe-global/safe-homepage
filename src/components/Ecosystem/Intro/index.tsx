@@ -9,7 +9,7 @@ const EcosystemIntro = ({ title, text }: BaseBlock) => {
       <BackgroundParticles className={css.bg} />
       <Grid container className={css.container} spacing={{ xs: 6, md: '30px', xl: '50px' }}>
         <Grid item md={8}>
-          <Typography className={css.title} variant="h1" mb={4}>
+          <Typography variant="h1" mb={4}>
             {title}
           </Typography>
           <Typography variant="h4" component="div" mb={5}>

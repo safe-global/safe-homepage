@@ -32,7 +32,7 @@ export const Intro = ({
         </Grid>
 
         <Grid item xs={12} md={10} xl={5}>
-          <Typography variant="h1" className={css.title}>
+          <Typography variant="h1" textAlign="center">
             {title}
           </Typography>
         </Grid>

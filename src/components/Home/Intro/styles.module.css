@@ -114,15 +114,6 @@
   margin: auto;
 }
 
-.title {
-  font-size: 64px;
-  line-height: 64px;
-  font-weight: 400;
-  color: var(--mui-palette-text-primary);
-  margin-bottom: 24px;
-  overflow-wrap: break-word;
-}
-
 .subtitle {
   font-size: 20px;
   line-height: 30px;
@@ -131,11 +122,6 @@
 }
 
 @media (min-width: 600px) {
-  .title {
-    font-size: 80px;
-    line-height: 82px;
-  }
-
   .subtitle {
     font-size: 24px;
     line-height: 36px;

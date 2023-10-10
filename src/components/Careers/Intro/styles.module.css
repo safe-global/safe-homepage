@@ -28,15 +28,6 @@
   margin-top: 0px;
 }
 
-/* TODO: Use h1 from theme when implemented
-https://github.com/safe-global/safe-homepage/issues/11 */
-.title {
-  font-size: 64px;
-  line-height: 64px;
-  text-align: center;
-  padding: 0;
-}
-
 .text {
   text-align: center;
 }
@@ -44,11 +35,6 @@ https://github.com/safe-global/safe-homepage/issues/11 */
 @media (min-width: 600px) {
   .container {
     gap: 24px;
-  }
-
-  .title {
-    font-size: 80px;
-    line-height: 88px;
   }
 
   .bg {
