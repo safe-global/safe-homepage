@@ -14,7 +14,7 @@ const Intro = ({ title, text, buttons }: BaseBlock) => {
             </Grid>
             <Grid item md={6}>
               <Typography className={css.subtitle}>{text}</Typography>
-              <ButtonsWrapper buttons={buttons} />
+              <ButtonsWrapper buttons={buttons} mobileDirection="row" />
             </Grid>
           </Grid>
         </Container>

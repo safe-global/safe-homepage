@@ -13,7 +13,7 @@ const TextBlockItems = ({ title, text, buttons, items }: BaseBlock) => {
             {title}
           </Typography>
           <Typography mb={5}>{text}</Typography>
-          <ButtonsWrapper buttons={buttons} />
+          <ButtonsWrapper buttons={buttons} mobileDirection="row" />
         </Grid>
         <Grid item md={2} display={{ xs: 'none', md: 'block' }} />
         <Grid item md={5}>
