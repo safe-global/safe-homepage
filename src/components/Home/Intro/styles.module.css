@@ -120,6 +120,7 @@
   font-weight: 400;
   color: var(--mui-palette-text-primary);
   margin-bottom: 24px;
+  overflow-wrap: break-word;
 }
 
 .subtitle {
