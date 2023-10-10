@@ -22,7 +22,8 @@
       {
         "text": "Read Whitepaper",
         "href": "https://github.com/safe-global/safe-core-protocol-specs/blob/main/whitepaper.pdf",
-        "variant": "button"
+        "variant": "button",
+        "color": "secondary"
       },
       {
         "text": "GitHub",
@@ -198,7 +199,8 @@
       {
         "text": "Use our Hackathon Guide",
         "href": "https://safe-global.notion.site/Safe-d6c6ed61389041e28f5c7c925f653701",
-        "variant": "button"
+        "variant": "button",
+        "color": "secondary"
       },
       {
         "text": "March for AA Hackathon",
