@@ -1,0 +1,15 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.wrapper.mobileRow {
+  flex-direction: row;
+}
+
+@media (min-width: 900px) {
+  .wrapper {
+    flex-direction: row;
+  }
+}

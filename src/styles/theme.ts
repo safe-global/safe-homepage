@@ -60,13 +60,13 @@ export const theme = createTheme({
   typography: {
     fontFamily: 'Citerne, sans-serif',
     h1: {
-      fontSize: '32px',
-      lineHeight: '38px',
+      fontSize: '56px',
+      lineHeight: '60px',
       fontWeight: 400,
 
       '@media (min-width:600px)': {
-        fontSize: '60px',
-        lineHeight: '64px',
+        fontSize: '80px',
+        lineHeight: '82px',
       },
     },
     h2: {

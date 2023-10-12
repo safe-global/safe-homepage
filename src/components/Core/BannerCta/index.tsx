@@ -1,4 +1,4 @@
-import { Box, Button, Chip, Typography } from '@mui/material'
+import { Chip, Typography } from '@mui/material'
 import { Container } from '@mui/system'
 import type { ReactElement } from 'react'
 
@@ -6,8 +6,7 @@ import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
 import clsx from 'clsx'
-import LinkButton from '@/components/common/LinkButton'
-import Link from 'next/link'
+import ButtonsWrapper from '@/components/common/ButtonsWrapper'
 
 export const BannerCta = ({ title, buttons, caption }: BaseBlock): ReactElement => {
   return (
@@ -26,28 +25,7 @@ export const BannerCta = ({ title, buttons, caption }: BaseBlock): ReactElement 
           <Typography variant="h2" color="text.primary" mt={3} mb={5}>
             {title}
           </Typography>
-          {buttons ? (
-            <Box display="flex" gap={3} color="white" flexDirection={{ xs: 'column', md: 'row' }} alignItems="center">
-              {buttons.map((button, index) => {
-                const { text, variant, href } = button
-                const isButton = variant === 'button'
-
-                return (
-                  <Link key={index} href={href} target="_blank" rel="noreferrer" passHref>
-                    {isButton ? (
-                      <Button variant="contained" size="large" color="secondary">
-                        {text}
-                      </Button>
-                    ) : (
-                      <LinkButton color="secondary" sx={{ width: 'fit-content' }}>
-                        {text}
-                      </LinkButton>
-                    )}
-                  </Link>
-                )
-              })}
-            </Box>
-          ) : null}
+          <ButtonsWrapper buttons={buttons} />
         </Container>
       </div>
     </Container>

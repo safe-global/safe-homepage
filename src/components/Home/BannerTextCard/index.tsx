@@ -1,8 +1,9 @@
 import { useEffect, useRef, type ReactElement } from 'react'
-import { Grid, Typography, Container, Box } from '@mui/material'
+import { Grid, Typography, Container, Box, Button } from '@mui/material'
 
 import css from './styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
+import { ECOSYSTEM_LINK } from '@/config/constants'
 
 const BannerTextCard = ({ title, text }: BaseBlock): ReactElement => {
   const bgRef = useRef<HTMLDivElement>(null)
@@ -36,14 +37,17 @@ const BannerTextCard = ({ title, text }: BaseBlock): ReactElement => {
     <div className={css.gradient} ref={bgRef}>
       <Container sx={{ textAlign: 'center' }}>
         <Box height={{ xs: '700px', md: '1090px' }} display="flex" alignItems="center">
-          <Grid container justifyContent="center" flexDirection="column" alignItems="center">
+          <Grid container justifyContent="center" flexDirection="column" alignItems="center" gap={4}>
             <Grid item md={8} xl={6}>
-              <Typography variant="h2" mb={4} textAlign="center">
-                {title}
-              </Typography>
+              <Typography variant="h2">{title}</Typography>
             </Grid>
             <Grid item md={6}>
               <Typography>{text}</Typography>
+            </Grid>
+            <Grid item md={6}>
+              <Button href={ECOSYSTEM_LINK} target="_blank" rel="noreferrer" variant="contained" size="large">
+                Explore ecosystem
+              </Button>
             </Grid>
           </Grid>
         </Box>

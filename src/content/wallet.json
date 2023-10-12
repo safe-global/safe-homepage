@@ -61,7 +61,7 @@
   {
     "variant": "image-text",
     "title": "<b>Control and change</b> account ownership",
-    "text": "With adding new signers, removing old signers and replaceable account ownership, the same account is flexible for the any future needs and more secure",
+    "text": "With the ability to add new signers, remove old signers and replace account ownership, the same account is flexible for any future needs and more secure",
     "buttons": [
       {
         "text": "Get started",
@@ -140,8 +140,8 @@
     "component": "Wallet/ParallaxTxSimulation"
   },
   {
-    "title": "Available on 12+ networks",
-    "text": "and more, including testnets",
+    "title": "Available on 14+ networks",
+    "text": "including testnets",
     "networks": [
       {
         "name": "Ethereum Mainnet",
@@ -170,6 +170,16 @@
           "src": "/images/chainsLogos/ArbitrumLogo.png",
           "alt": "Arbitrum logo"
         }
+      },
+      {
+        "name": "zkSync Era Mainnet",
+        "icon": {
+          "src": "/images/chainsLogos/ZkSyncEraLogo.png",
+          "alt": "zkSync Era logo"
+        },
+        "textColor": "#000000",
+        "backgroundColor": "#FFFFFF",
+        "isNew": true
       },
       {
         "name": "Polygon",
@@ -207,12 +217,19 @@
         }
       },
       {
+        "name": "Polygon zkEVM",
+        "icon": {
+          "src": "/images/chainsLogos/PolygonZkEVMLogo.png",
+          "alt": "Polygon zkEVM logo"
+        },
+        "isNew": true
+      },
+      {
         "name": "Celo",
         "icon": {
           "src": "/images/chainsLogos/CeloLogo.png",
           "alt": "Celo logo"
-        },
-        "isNew": true
+        }
       }
     ],
     "component": "common/Networks"

@@ -1,43 +1,23 @@
-import { Button, Container, Grid, Typography } from '@mui/material'
-import { WALLET_LINK } from '@/config/constants'
+import { Grid, Typography } from '@mui/material'
 import css from '@/components/Home/Intro/styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
-import Link from 'next/link'
-import { AppRoutes } from '@/config/routes'
+import ButtonsWrapper from '@/components/common/ButtonsWrapper'
 
-const Intro = ({ title, text }: BaseBlock) => {
+const Intro = ({ title, text, buttons }: BaseBlock) => {
   return (
     <div className={css.container}>
       <div className={css.wrapper}>
-        <Container>
-          <Grid container flexDirection="column" className={css.content}>
-            <Grid item md={7}>
-              <Typography className={css.title} variant="h1">
-                {title}
-              </Typography>
-            </Grid>
-            <Grid item md={6}>
-              <Typography className={css.subtitle}>{text}</Typography>
-              <div className={css.buttons}>
-                <Link href={AppRoutes.core} passHref>
-                  <Button variant="contained" color="background" size="large">
-                    Build
-                  </Button>
-                </Link>
-                <Button
-                  href={WALLET_LINK}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  variant="contained"
-                  color="secondary"
-                  size="large"
-                >
-                  Launch Wallet
-                </Button>
-              </div>
-            </Grid>
+        <Grid container className={css.content}>
+          <Grid item md={8} width="100%">
+            <Typography variant="h1" mb={3}>
+              {title}
+            </Typography>
           </Grid>
-        </Container>
+          <Grid item md={8}>
+            <Typography className={css.subtitle}>{text}</Typography>
+            <ButtonsWrapper buttons={buttons} mobileDirection="row" />
+          </Grid>
+        </Grid>
         <div className={css.filter}>
           <video autoPlay muted loop className={css.video}>
             <source src="/videos/safe-logo.mp4" type="video/mp4" />

@@ -29,7 +29,7 @@ const CoreIntro = ({ title, text, link }: BaseBlock) => {
           </video>
         </Grid>
         <Grid item md={6}>
-          <Typography className={css.title} variant="h1" mb={4}>
+          <Typography variant="h1" mb={4}>
             {title}
           </Typography>
           <Typography variant="h4" component="div" mb={5}>

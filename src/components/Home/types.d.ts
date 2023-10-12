@@ -1,4 +1,5 @@
 import type { DetailedHTMLProps, ImgHTMLAttributes } from 'react'
+import type { ButtonProps } from '@mui/material'
 
 type BaseBlock = {
   title: string | JSX.Element
@@ -19,4 +20,5 @@ type Button = {
   text?: string
   href: string
   variant: 'button' | 'link'
+  color?: ButtonProps['color']
 }

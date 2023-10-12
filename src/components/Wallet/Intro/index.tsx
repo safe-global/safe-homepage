@@ -25,7 +25,7 @@ const Intro = ({ image, title, buttons }: BaseBlock & { gif: BaseBlock['image'] 
           <img {...image} className={css.image} />
         </Grid>
         <Grid item md={6}>
-          <Typography className={css.title} variant="h1" mb={5}>
+          <Typography variant="h1" mb={5}>
             {title}
           </Typography>
           <Grid container gap={4} flexDirection="column" justifyContent="flex-start">
