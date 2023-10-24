@@ -1,7 +1,7 @@
 import { Avatar, Container, Grid, IconButton, SvgIcon, Typography } from '@mui/material'
 import React from 'react'
-import TwitterIcon from '@/public/images/twitter-icon-28x28.svg'
-import DiscordIcon from '@/public/images/discord-icon-28x28.svg'
+import XIcon from '@/public/images/x-icon.svg'
+import DiscordIcon from '@/public/images/discord-icon.svg'
 import css from './styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
 import { shortenAddress } from '@/lib/shortenAddress'
@@ -131,7 +131,7 @@ const DelegateCard = (props: Delegate) => (
     <div className={css.socials}>
       {props.twitter && (
         <IconButton aria-label="Twitter link" href={props.twitter} target="_blank" rel="noreferrer" size="small">
-          <SvgIcon component={TwitterIcon} fontSize="inherit" color="inherit" inheritViewBox />
+          <SvgIcon component={XIcon} fontSize="inherit" color="inherit" inheritViewBox />
         </IconButton>
       )}
       {props.discord && (

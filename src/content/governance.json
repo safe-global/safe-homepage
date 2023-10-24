@@ -184,20 +184,20 @@
     "items": [
       {
         "link": {
-          "href": "https://safe.mirror.xyz/"
+          "href": "https://x.com/safe"
         },
         "image": {
-          "src": "/images/mirror-icon-56x56.svg",
-          "alt": "Mirror link"
+          "src": "/images/x-icon.svg",
+          "alt": "X page"
         }
       },
       {
         "link": {
-          "href": "https://forum.safe.global/"
+          "href": "https://forum.safe.global"
         },
         "image": {
-          "src": "/images/discourse-icon-56x56.svg",
-          "alt": "Discourse link"
+          "src": "/images/discourse-icon.svg",
+          "alt": "Discourse forum"
         }
       },
       {
@@ -205,17 +205,35 @@
           "href": "https://chat.safe.global"
         },
         "image": {
-          "src": "/images/discord-icon-56x56.svg",
-          "alt": "Discord link"
+          "src": "/images/discord-icon.svg",
+          "alt": "Discord server"
         }
       },
       {
         "link": {
-          "href": "https://twitter.com/safe"
+          "href": "https://www.youtube.com/@safeglobal"
         },
         "image": {
-          "src": "/images/twitter-icon-56x56.svg",
-          "alt": "Twitter link"
+          "src": "/images/youtube-icon.svg",
+          "alt": "Youtube channel"
+        }
+      },
+      {
+        "link": {
+          "href": "https://safe.mirror.xyz"
+        },
+        "image": {
+          "src": "/images/mirror-icon.svg",
+          "alt": "Mirror blog"
+        }
+      },
+      {
+        "link": {
+          "href": "https://github.com/safe-global"
+        },
+        "image": {
+          "src": "/images/github-icon.svg",
+          "alt": "GitHub organization"
         }
       }
     ]
@@ -229,7 +247,8 @@
       {
         "text": "Learn more",
         "href": "https://grants.safe.global",
-        "variant": "button"
+        "variant": "button",
+        "color": "secondary"
       }
     ],
     "image": {
