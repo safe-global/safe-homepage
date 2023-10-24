@@ -22,7 +22,7 @@ export const BannerCta = ({ title, buttons, caption }: BaseBlock): ReactElement 
         <Typography variant="h2" color="text.primary" mt={3} mb={5}>
           {title}
         </Typography>
-        <ButtonsWrapper buttons={buttons} btnColor="secondary" />
+        <ButtonsWrapper buttons={buttons} />
       </div>
     </Container>
   )

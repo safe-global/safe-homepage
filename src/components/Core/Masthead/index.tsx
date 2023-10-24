@@ -25,7 +25,7 @@ export const Masthead = ({ title, buttons, caption, image }: BaseBlock): ReactEl
             <Typography variant="h2" color="text.primary" mt={3} mb={5}>
               {title}
             </Typography>
-            <ButtonsWrapper buttons={buttons} btnColor="secondary" />
+            <ButtonsWrapper buttons={buttons} />
           </Grid>
           {image ? (
             <Grid item xs={12} md={4} lg={3} xl={2.5} className={css.image}>

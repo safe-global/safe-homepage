@@ -1,6 +1,6 @@
 import { Avatar, Typography, IconButton, SvgIcon, Chip } from '@mui/material'
 
-import TwitterIcon from '@/public/images/twitter-icon-28x28.svg'
+import XIcon from '@/public/images/x-icon.svg'
 import GithubIcon from '@/public/images/github-icon.svg'
 
 import css from './styles.module.css'
@@ -27,7 +27,7 @@ export const ProjectCard = (item: EcosystemProjectWithCategories) => {
             size="small"
             sx={{ color: 'primary.light' }}
           >
-            <SvgIcon component={TwitterIcon} fontSize="inherit" color="inherit" inheritViewBox />
+            <SvgIcon component={XIcon} fontSize="inherit" color="inherit" inheritViewBox />
           </IconButton>
         )}
 

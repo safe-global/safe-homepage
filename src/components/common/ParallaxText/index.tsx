@@ -43,7 +43,7 @@ const ParallaxText = ({
           <Typography variant="h2">{title}</Typography>
           <Typography>{text}</Typography>
           {steps && <Stepper steps={steps} />}
-          <ButtonsWrapper buttons={buttons} btnColor="primary" />
+          <ButtonsWrapper buttons={buttons} />
         </Grid>
         <Grid item xs={12} md={6} display="flex" alignItems="center">
           {children}

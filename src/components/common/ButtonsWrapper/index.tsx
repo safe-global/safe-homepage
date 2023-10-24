@@ -4,19 +4,24 @@ import { Button } from '@mui/material'
 import Link from 'next/link'
 import css from './styles.module.css'
 
-const ButtonsWrapper = ({ buttons, btnColor }: { buttons?: ButtonType[]; btnColor: 'primary' | 'secondary' }) => {
+type ButtonsWrapperProps = {
+  buttons?: ButtonType[]
+  mobileDirection?: 'column' | 'row'
+}
+
+const ButtonsWrapper = ({ buttons, mobileDirection }: ButtonsWrapperProps) => {
   if (!buttons || buttons.length === 0) return null
 
   return (
-    <div className={css.wrapper}>
+    <div className={`${css.wrapper} ${mobileDirection === 'row' && css.mobileRow}`}>
       {buttons.map((button, index) => {
-        const { text, variant, href } = button
+        const { text, variant, href, color = 'primary' } = button
         const isButton = variant === 'button'
 
         return (
           <Link key={index} href={href} target="_blank" rel="noreferrer" passHref>
             {isButton ? (
-              <Button variant="contained" size="large" color={btnColor}>
+              <Button variant="contained" size="large" color={color}>
                 {text}
               </Button>
             ) : (

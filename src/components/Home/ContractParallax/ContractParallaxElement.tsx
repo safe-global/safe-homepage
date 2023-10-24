@@ -11,10 +11,14 @@ const ContractParallaxElement = () => {
   return (
     <div className={css.parallaxWrapper}>
       <ParallaxWrapper translateX={0} translateY={0} depth={1} direction={-1}>
-        <Image src={BugBountyImage} alt="1M$ Average reward per bug in bug bounty" className={css.bugBountyCard} />
+        <Image
+          src={BugBountyImage}
+          alt="Bug bounty with rewards up to 1 million dollars"
+          className={css.bugBountyCard}
+        />
       </ParallaxWrapper>
       <ParallaxWrapper translateX={0} translateY={0} depth={0} direction={-1}>
-        <Image src={TotalAuditsImage} alt="11+ Total audits" className={css.totalAuditsCard} />
+        <Image src={TotalAuditsImage} alt="Six total audits" className={css.totalAuditsCard} />
       </ParallaxWrapper>
       <ParallaxWrapper translateX={0} translateY={200} depth={0} direction={-1}>
         <Image src={G0GroupImage} alt="G0 Group" className={css.g0GroupCard} />
