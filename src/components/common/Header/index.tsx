@@ -37,10 +37,6 @@ const navItems: NavItemType[] = [
     label: 'Careers',
     href: AppRoutes.careers,
   },
-  {
-    label: 'Careers',
-    href: AppRoutes.careers,
-  },
 ]
 
 const externalLinkAttrs = {

@@ -14,11 +14,15 @@
         "variant": "button"
       },
       {
-        "text": "See snapshot",
+        "text": "See Snapshot",
         "href": "https://snapshot.org/#/safe.eth",
         "variant": "link"
       }
-    ]
+    ],
+    "image": {
+      "src": "/images/Governance/particles-globe-spin.gif",
+      "alt": "spinning particles globe"
+    }
   },
   {
     "component": "Governance/ParallaxDaoStats",

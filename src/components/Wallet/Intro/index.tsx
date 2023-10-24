@@ -7,7 +7,7 @@ import type { BaseBlock } from '@/components/Home/types'
 import css from './styles.module.css'
 import HeaderParticles from '@/public/images/header_particles.svg'
 
-const Intro = ({ image, title, buttons }: BaseBlock & { gif: BaseBlock['image'] }): ReactElement => {
+const Intro = ({ image, title, buttons }: BaseBlock): ReactElement => {
   return (
     <Container>
       <Grid

@@ -23,7 +23,7 @@ export const BannerGradientImage = ({ title, buttons, caption, text, image }: Ba
                 {title}
               </Typography>
               <Typography mb={5}>{text}</Typography>
-              <ButtonsWrapper buttons={buttons} btnColor="secondary" />
+              <ButtonsWrapper buttons={buttons} />
             </Grid>
             {image ? <img src={image.src} alt={image.alt} className={css.image} /> : null}
           </Grid>
