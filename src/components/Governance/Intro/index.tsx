@@ -1,10 +1,9 @@
-import type { ReactElement } from 'react'
 import { Container, Divider, Grid, Typography } from '@mui/material'
 import type { BaseBlock } from '@/components/Home/types'
 import css from './styles.module.css'
 import ButtonsWrapper from '@/components/common/ButtonsWrapper'
 
-const Intro = ({ title, buttons, image }: BaseBlock): ReactElement => {
+const Intro = ({ title, buttons, image }: BaseBlock) => {
   return (
     <Container>
       <Grid container className={css.container} spacing={{ xs: 6, md: 1, xl: '50px' }}>
