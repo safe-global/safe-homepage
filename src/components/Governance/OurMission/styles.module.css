@@ -24,31 +24,6 @@
   border-bottom-right-radius: 12px;
 }
 
-.card:hover {
-  border-color: var(--mui-palette-primary-main);
-  z-index: 2;
-  cursor: pointer;
-}
-
-.card:hover .icon {
-  transform: rotate(45deg);
-}
-
-.card:hover .icon path {
-  fill: var(--mui-palette-primary-main);
-}
-
-.icon {
-  position: absolute;
-  top: 32px;
-  right: 32px;
-  transition: transform 0.3s;
-}
-
-.icon path {
-  transition: fill 0.3s;
-}
-
 .childrenWrapper {
   margin-top: 40px;
   display: flex;

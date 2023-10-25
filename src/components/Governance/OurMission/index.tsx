@@ -4,21 +4,17 @@ import HeaderCTA from '@/components/common/HeaderCTA'
 import { Container, Grid, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
-import ArrowIcon from '@/public/images/arrow-out-icon.svg'
 
 const GridItemBigTitle = ({ title, text, children, link }: Partial<BaseBlock> & { children?: ReactNode }) => {
   return (
     <Grid item xs={12} md={4} className={css.card}>
-      <a href={link?.href} target="_blank" rel="noreferrer" className={css.cardLink}>
-        <div>
-          <Typography variant="h4" mb={1} color="text.primary">
-            {title}
-          </Typography>
-          <Typography color="primary.light">{text}</Typography>
-        </div>
-        <ArrowIcon className={css.icon} />
-        {children ? <div className={css.childrenWrapper}>{children}</div> : null}
-      </a>
+      <div>
+        <Typography variant="h4" mb={1} color="text.primary">
+          {title}
+        </Typography>
+        <Typography color="primary.light">{text}</Typography>
+      </div>
+      {children ? <div className={css.childrenWrapper}>{children}</div> : null}
     </Grid>
   )
 }

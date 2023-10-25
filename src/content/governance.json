@@ -43,10 +43,6 @@
     "component": "Governance/Delegates",
     "title": "Top delegates",
     "text": "Get to know the most active Safe Guardians and SafeDAO delegates in the ecosystem, ready to receive your delegation.",
-    "link": {
-      "title": "View all delegates",
-      "href": "#"
-    },
     "footer": {
       "text": "and more than ",
       "highlight": "2K delegates."
@@ -70,7 +66,7 @@
         "text": "SafeDAO is a decentralised collective, stewarding the thriving ecosystem around Safe smart accounts on Ethereum and other blockchains",
         "link": {
           "title": "Learn more",
-          "href": "#"
+          "href": "https://www.notion.so/safe-global/Introduction-to-SafeDAO-07f87ad6c9bf456ca5d349e72e85bf3f"
         }
       },
       {
@@ -83,7 +79,7 @@
         "text": "The Safe token represents the growing value of the Safe ecosystem",
         "link": {
           "title": "Learn more",
-          "href": "#"
+          "href": "https://www.notion.so/safe-global/Safe-Token-d558d527aa1a47daab7837bdea60923d"
         }
       },
       {
@@ -96,7 +92,7 @@
         "text": "Safe Guardians are active community members who have verifiable proof of commitment to the Safe vision",
         "link": {
           "title": "Learn more",
-          "href": "#"
+          "href": "https://forum.safe.global/t/guardians-gather/265"
         }
       },
       {
@@ -109,7 +105,7 @@
         "text": "Token holders can delegate their votes to any address of their choice or to Safe Guardians using the SafeDAO Governance app within Safe{Wallet} or Snapshot",
         "link": {
           "title": "Learn more",
-          "href": "#"
+          "href": "https://www.notion.so/safe-global/Delegation-ce8deecb409349d2a2785b505b9d5e86"
         }
       },
       {
@@ -122,7 +118,7 @@
         "text": "SGP fosters a thriving community of contributors within the Safe ecosystem by funding ideas, projects, and integrations that align with <i>Safe</i>",
         "link": {
           "title": "Learn more",
-          "href": "#"
+          "href": "https://grants.safe.global"
         }
       },
       {
@@ -135,7 +131,7 @@
         "text": "SEF is a steward of SafeDAO, responsible for facilitating and administering the decisions voted in by the members of SafeDAO",
         "link": {
           "title": "Learn more",
-          "href": "#"
+          "href": "https://safe-global.notion.site/Safe-Ecosystem-Foundation-700f85745fdc45589b12569e0252916b"
         }
       }
     ]
@@ -145,7 +141,7 @@
     "title": "<b>Our mission</b> is to establish smart accounts as the default means for web3 interactions",
     "link": {
       "title": "Read the SafeDAO constitution",
-      "href": "#"
+      "href": "https://snapshot.org/#/safe.eth/proposal/0xbb71846f7fdfdd31033bde9cf25c880b46d50d1dda75cbf653d6a94318f96290"
     },
     "items": [
       {
