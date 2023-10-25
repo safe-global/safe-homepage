@@ -15,13 +15,13 @@ const HeaderCTA = (props: BaseBlock & { bigTitle?: boolean }) => {
           {props.text}
         </Typography>
       </Grid>
-      <Grid item xs={12} md={4} className={`${css.linkButton} ${!props.bigTitle && css.alignEnd}`}>
-        {props.link && (
+      {props.link && (
+        <Grid item xs={12} md={4} className={`${css.linkButton} ${!props.bigTitle && css.alignEnd}`}>
           <Link href={props.link.href} target="_blank" rel="noreferrer" passHref>
             <LinkButton className={css.shortPadding}>{props.link.title}</LinkButton>
           </Link>
-        )}
-      </Grid>
+        </Grid>
+      )}
     </Grid>
   )
 }

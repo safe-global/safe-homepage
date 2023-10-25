@@ -7,6 +7,8 @@ import type { BaseBlock } from '@/components/Home/types'
 import { shortenAddress } from '@/lib/shortenAddress'
 import HeaderCTA from '@/components/common/HeaderCTA'
 import layoutCss from '@/components/common/styles.module.css'
+import delegatesData from './delegates.json'
+import { getDelegateImage } from '@/lib/getDelegateImage'
 
 type Delegate =
   | {
@@ -21,102 +23,17 @@ type Delegate =
       discord?: string
     }
 
-// TODO: this data is to be provided by Andre
-const delegatesData: Delegate[] = [
-  {
-    name: 'Malik El Bay 1',
-    address: '0x34ceE420dE818Fc67dE4C4adA06CF598B2d2e3A3',
-    ens: 'malikelbay.eth',
-    image: '/images/punk.png',
-    reason: 'Safe is an important public good. As delegate my focus lies with...',
-    contribution: 'Very important contribution',
-    twitter: 'https://twitter.com/malikelbay',
-    discord: 'https://discord.com',
-  },
-  {
-    name: 'Malik El Bay 2',
-    address: '0x34ceE420dE818Fc67dE4C4adA06CF598B2d2e3A3',
-    ens: null,
-    image: '/images/punk.png',
-    reason:
-      "Deposit ETH into StakeWise, to participate in Ethereum's Proof-of-Stake consensus mechanism and receive ETH rewards in return",
-    contribution: 'Very important contribution',
-    twitter: 'https://twitter.com/malikelbay',
-  },
-  {
-    name: 'Malik El Bay 3',
-    address: '0x34ceE420dE818Fc67dE4C4adA06CF598B2d2e3A3',
-    ens: 'malikelbay.eth',
-    image: '/images/punk.png',
-    reason: 'Safe is an important public good. As delegate my focus lies with...',
-    contribution: 'Very important contribution',
-    twitter: 'https://twitter.com/malikelbay',
-  },
-  {
-    name: 'Malik El Bay 4',
-    address: '0x34ceE420dE818Fc67dE4C4adA06CF598B2d2e3A3',
-    ens: 'malikelbay.eth',
-    image: '/images/punk.png',
-    reason: 'Safe is an important public good. As delegate my focus lies with...',
-    contribution: 'Very important contribution',
-    twitter: 'https://twitter.com/malikelbay',
-  },
-  {
-    name: 'Malik El Bay 5',
-    address: '0x34ceE420dE818Fc67dE4C4adA06CF598B2d2e3A3',
-    ens: 'malikelbay.eth',
-    image: '/images/punk.png',
-    reason: 'Safe is an important public good. As delegate my focus lies with...',
-    contribution: 'Very important contribution',
-    twitter: 'https://twitter.com/malikelbay',
-  },
-  {
-    name: 'Malik El Bay 6',
-    address: '0x34ceE420dE818Fc67dE4C4adA06CF598B2d2e3A3',
-    ens: 'malikelbay.eth',
-    image: '/images/punk.png',
-    reason: 'Safe is an important public good. As delegate my focus lies with...',
-    contribution: 'Very important contribution',
-    twitter: 'https://twitter.com/malikelbay',
-  },
-  {
-    name: 'Malik El Bay 7',
-    address: '0x34ceE420dE818Fc67dE4C4adA06CF598B2d2e3A3',
-    ens: 'malikelbay.eth',
-    image: '/images/punk.png',
-    reason: 'Safe is an important public good. As delegate my focus lies with...',
-    contribution: 'Very important contribution',
-    twitter: 'https://twitter.com/malikelbay',
-  },
-  {
-    name: 'Malik El Bay 8',
-    address: '0x34ceE420dE818Fc67dE4C4adA06CF598B2d2e3A3',
-    ens: 'malikelbay.eth',
-    image: '/images/punk.png',
-    reason: 'Safe is an important public good. As delegate my focus lies with...',
-    contribution: 'Very important contribution',
-    twitter: 'https://twitter.com/malikelbay',
-  },
-  {
-    name: 'Malik El Bay 9',
-    address: '0x34ceE420dE818Fc67dE4C4adA06CF598B2d2e3A3',
-    ens: 'malikelbay.eth',
-    image: '/images/punk.png',
-    reason: 'Safe is an important public good. As delegate my focus lies with...',
-    contribution: 'Very important contribution',
-    twitter: 'https://twitter.com/malikelbay',
-  },
-]
-
 const DelegateCard = (props: Delegate) => (
   <div className={css.card}>
     <div className={css.cardHeader}>
-      <Avatar className={css.avatar} src={props.image}>
+      <Avatar className={css.avatar} src={getDelegateImage(props.address)}>
         &nbsp;
       </Avatar>
 
       <div>
-        <Typography variant="h4">{props.name}</Typography>
+        <Typography variant="h4" className={css.name}>
+          {props.name}
+        </Typography>
 
         <Typography variant="body1" color="primary.light">
           {props.ens || shortenAddress(props.address)}

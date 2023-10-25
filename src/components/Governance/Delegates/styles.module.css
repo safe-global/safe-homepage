@@ -10,10 +10,6 @@
   height: 206px;
 }
 
-.card:hover {
-  border-color: var(--mui-palette-primary-main);
-}
-
 .cardHeader {
   display: flex;
   gap: 16px;
@@ -24,6 +20,13 @@
   width: 48px;
   height: 48px;
   margin: auto;
+}
+
+.name {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .description {
