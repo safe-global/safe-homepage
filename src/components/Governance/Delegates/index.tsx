@@ -7,7 +7,7 @@ import type { BaseBlock } from '@/components/Home/types'
 import { shortenAddress } from '@/lib/shortenAddress'
 import HeaderCTA from '@/components/common/HeaderCTA'
 import layoutCss from '@/components/common/styles.module.css'
-import delegatesData from './delegates.json'
+import delegatesData from '@/content/delegates.json'
 import { getDelegateImage } from '@/lib/getDelegateImage'
 
 type Delegate =
