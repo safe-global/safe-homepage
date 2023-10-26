@@ -9,6 +9,7 @@ import { useOpenPositions } from '@/hooks/useOpenPositions'
 import css from './styles.module.css'
 import clsx from 'clsx'
 import { useRouter } from 'next/router'
+import navItemsData from '@/content/navItems.json'
 
 type NavItemType = {
   label: string | JSX.Element
@@ -16,28 +17,7 @@ type NavItemType = {
   external?: boolean
 }
 
-const navItems: NavItemType[] = [
-  {
-    label: 'Core',
-    href: AppRoutes.core,
-  },
-  {
-    label: 'Wallet',
-    href: AppRoutes.wallet,
-  },
-  {
-    label: 'Ecosystem',
-    href: AppRoutes.ecosystem,
-  },
-  {
-    label: 'Governance',
-    href: AppRoutes.governance,
-  },
-  {
-    label: 'Careers',
-    href: AppRoutes.careers,
-  },
-]
+const navItems: NavItemType[] = navItemsData
 
 const externalLinkAttrs = {
   target: '_blank',

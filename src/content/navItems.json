@@ -1,0 +1,22 @@
+[
+  {
+    "label": "Core",
+    "href": "/core"
+  },
+  {
+    "label": "Wallet",
+    "href": "/wallet"
+  },
+  {
+    "label": "Ecosystem",
+    "href": "/ecosystem"
+  },
+  {
+    "label": "Governance",
+    "href": "/governance"
+  },
+  {
+    "label": "Careers",
+    "href": "/careers"
+  }
+]
