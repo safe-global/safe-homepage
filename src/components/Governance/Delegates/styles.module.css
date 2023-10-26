@@ -78,11 +78,13 @@
   display: none;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 600px) {
   .card {
     height: 228px;
   }
+}
 
+@media (min-width: 900px) {
   .gradient {
     left: 30px;
     height: 33%;

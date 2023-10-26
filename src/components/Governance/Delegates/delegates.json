@@ -29,7 +29,7 @@
   {
     "name": "Auryn Macmillan",
     "address": "0xd714Dd60e22BbB1cbAFD0e40dE5Cfa7bBDD3F3C8",
-    "ens": null,
+    "ens": "auryn.eth",
     "image": "0xd714Dd60e22BbB1cbAFD0e40dE5Cfa7bBDD3F3C8_3x.png",
     "reason": "I care deeply about the success of the Safe ecosystem.",
     "contribution": "Co-founded Gnosis Guild and helped to create Zodiac (ERC-5005), which uses the Gnosis Safe's ModuleManager interface as the core of a standard for composable tooling for programmable accounts and DAOs.",

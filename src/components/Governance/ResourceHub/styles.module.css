@@ -2,11 +2,4 @@
   border: 1px solid var(--mui-palette-border-light);
   border-radius: 12px;
   overflow: hidden;
-  margin-top: 24px;
-}
-
-@media (min-width: 900px) {
-  .gridContainer {
-    margin-top: 56px;
-  }
 }

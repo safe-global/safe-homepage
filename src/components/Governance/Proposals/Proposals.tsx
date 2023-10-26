@@ -8,7 +8,7 @@ import css from './styles.module.css'
 
 const PROPOSAL_LINK_BASE_URL = 'https://snapshot.org/#/safe.eth/proposal/'
 
-export type SnapshotProposal = {
+type SnapshotProposal = {
   id: string
   title: string
   state: 'active' | 'closed' | 'pending'

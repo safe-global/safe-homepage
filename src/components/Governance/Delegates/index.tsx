@@ -65,8 +65,6 @@ const Delegates = (props: BaseBlock & { footer: { text: string; highlight: strin
     <Container className={layoutCss.containerMedium}>
       <HeaderCTA {...props} />
 
-      {/* TODO: Refactor both elements to SpacedGridFooter */}
-      {/* Table */}
       <Grid container position="relative" className={css.cardGrid} spacing={{ xs: '16px', md: '30px', xl: '50px' }}>
         {delegatesData.map((item, index) => (
           <Grid key={index} item xs={12} md={4}>
@@ -76,7 +74,6 @@ const Delegates = (props: BaseBlock & { footer: { text: string; highlight: strin
         <div className={css.gradient} />
       </Grid>
 
-      {/* Footer */}
       <div className={css.footer}>
         <Typography variant="body1" color="primary.light" textAlign="center">
           {props.footer.text}

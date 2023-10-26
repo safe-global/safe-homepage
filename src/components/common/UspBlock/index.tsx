@@ -32,7 +32,7 @@ export const GridItem = ({
   )
 }
 
-// Refactor: unify the ItemGrid and accept a GridItem component
+// TODO: unify the ItemGrid and accept a GridItem component
 const UspBlock = ({ variant, title, text, items }: BaseBlock & { variant: '3-columns' | '4-columns' }) => (
   <Container>
     <Grid container className={layoutCss.containerShort} flexDirection="column" alignItems="center">

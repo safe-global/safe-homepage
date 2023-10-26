@@ -10,7 +10,6 @@ const ResourceHub = ({ items, ...props }: BaseBlock) => {
     <Container className={layoutCss.containerShort}>
       <HeaderCTA {...props} />
 
-      {/* TODO: replace element after refactoring UspBlock/ItemGrid */}
       <Grid container className={css.gridContainer}>
         {items?.map((item, index) => (
           <GridItem key={index} width={4} {...item} />
