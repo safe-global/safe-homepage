@@ -147,7 +147,7 @@ const Footer = () => {
   }
 
   return (
-    <Container>
+    <Container className={css.wrapper}>
       <Grid container flexDirection={{ xs: 'column', sm: 'row' }}>
         <Grid item xs={12} md={3} mb={{ xs: 4, md: 0 }}>
           <Link href={AppRoutes.index}>

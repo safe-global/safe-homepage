@@ -1,11 +1,11 @@
 import ParallaxLocationsElement from '@/components/Careers/ParallaxLocations/ParallaxLocationsElement'
-import ParallaxText, { type ParallaxTextProps } from '@/components/Careers/ParallaxText'
+import ParallaxTextCentered, { type ParallaxTextCenteredProps } from '@/components/Careers/ParallaxText'
 
-const ParallaxLocations = (props: ParallaxTextProps) => {
+const ParallaxLocations = (props: ParallaxTextCenteredProps) => {
   return (
-    <ParallaxText {...props}>
+    <ParallaxTextCentered {...props}>
       <ParallaxLocationsElement />
-    </ParallaxText>
+    </ParallaxTextCentered>
   )
 }
 

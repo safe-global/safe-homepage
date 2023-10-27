@@ -73,10 +73,6 @@
   },
   {
     "variant": "text-image",
-    "image": {
-      "src": "/images/Wallet/safe-apps-store.png",
-      "alt": "Transactions require confirmations from owners"
-    },
     "title": "<b>Use</b> built-in app store",
     "text": "The best web3 apps are accessible right from inside the Safe Wallet interface",
     "buttons": [
@@ -90,10 +86,6 @@
   },
   {
     "variant": "image-text",
-    "image": {
-      "src": "/images/Wallet/batch-transactions.png",
-      "alt": "Batching transactions"
-    },
     "title": "Save on gas by batching <b>multiple transactions</b> in a few clicks",
     "text": "Easily batch transactions together to save on fees",
     "buttons": [
@@ -107,10 +99,6 @@
   },
   {
     "variant": "text-image",
-    "image": {
-      "src": "/images/Wallet/signer-types.png",
-      "alt": "Different wallet types"
-    },
     "title": "Use <b>any type of signer</b> to control your account",
     "text": "Use Ledger, Trezor, Metamask or any other popular wallet as a signer on your Safe Wallet",
     "buttons": [
@@ -124,10 +112,6 @@
   },
   {
     "variant": "image-text",
-    "image": {
-      "src": "/images/Wallet/simulate-transactions.png",
-      "alt": "Simulate transactions in Tenderly"
-    },
     "title": "<b>Simulate transactions</b> before they happen",
     "text": "Simulate transactions before sending them through. Get instant prompts and full analysis of your transaction's success or failure with a simulation report via Tenderly",
     "buttons": [
@@ -236,10 +220,6 @@
   },
   {
     "variant": "text-image",
-    "image": {
-      "src": "/images/Wallet/pocket-multisig.png",
-      "alt": "Safe mobile app"
-    },
     "title": "Convenience of multi-sig in your pocket",
     "text": "Track your assets and transactions on mobile. Stay informed and sign transactions on-the-go",
     "steps": [

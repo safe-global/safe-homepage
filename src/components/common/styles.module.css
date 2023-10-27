@@ -9,7 +9,15 @@
   margin-bottom: 80px;
 }
 
+.hideMobile {
+  display: none;
+}
+
 @media (min-width: 600px) {
+  .hideMobile {
+    display: block;
+  }
+
   .container {
     margin-top: 350px;
   }

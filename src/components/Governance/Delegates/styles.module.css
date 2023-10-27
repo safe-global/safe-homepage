@@ -1,0 +1,110 @@
+.card {
+  border: 1px solid var(--mui-palette-border-light);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  transition: 0.3s;
+  height: 206px;
+}
+
+.cardHeader {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  margin: auto;
+}
+
+.name {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.socials {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  display: flex;
+  gap: 16px;
+}
+
+.socials a {
+  padding: 0;
+}
+
+.socials svg {
+  width: 24px;
+  height: 24px;
+}
+
+.gradient {
+  position: absolute;
+  height: 15%;
+  bottom: 0;
+  left: 16px;
+  right: 0px;
+  background: linear-gradient(180deg, rgba(18, 19, 18, 0) 0%, var(--mui-palette-background-default) 100%);
+  z-index: 1;
+}
+
+.footer {
+  margin: 0 auto;
+}
+
+/* Footer highlight */
+.footer :global span {
+  color: var(--mui-palette-text-primary);
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+.cardGrid :global(.MuiGrid-item):nth-of-type(9) .socials {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .card {
+    height: 228px;
+  }
+}
+
+@media (min-width: 900px) {
+  .gradient {
+    left: 30px;
+    height: 33%;
+  }
+
+  .cardGrid :global(.MuiGrid-item):nth-of-type(n + 7) .socials {
+    display: none;
+  }
+
+  .footer {
+    margin: 68px auto 0;
+  }
+
+  .socials {
+    margin-top: 24px;
+  }
+}
+
+@media (min-width: 1630px) {
+  .gradient {
+    left: 50px;
+  }
+}

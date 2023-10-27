@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Abbey Titcomb",
+    "address": "0xea95cfb5dd624f43775b372db0ed2d8d0073e91c",
+    "ens": "abbeytitcomb.eth",
+    "image": "0xea95cfb5dd624f43775b372db0ed2d8d0073e91c_3x.png",
+    "reason": "I believe we have an opportunity to build more resilient open-source ecosystems with decentralized governance. I'm dedicated to stewarding communities as they figure out their own governance culture & practices.",
+    "contribution": "As a representative of Radicle, I've worked with the Gnosis Safe team on product integrations and collective ecosystem growth.",
+    "twitter": "https://twitter.com/abbey_titcomb"
+  },
+  {
+    "name": "Jonah Erlich",
+    "address": "0x752D6E0ac152a37005e67492B61Bfe41C1FfBEc5",
+    "ens": null,
+    "image": "0x752D6E0ac152a37005e67492B61Bfe41C1FfBEc5_3x.png",
+    "reason": "As a Safe builder with clarity on Safe’s problems and potential, I want to be a delegate to have an active voice stewarding its development, maintenance, and protection.",
+    "contribution": "We built, and will continue to build, Den on top of Safe, which helps on-chain organizations build and execute transactions fast.",
+    "twitter": "https://twitter.com/Jierlich"
+  },
+  {
+    "name": "Tarun Gupta",
+    "address": "0xBd3496fE269AA8Bbf685836b63b3CadEdbE2EB56",
+    "ens": null,
+    "image": "0xBd3496fE269AA8Bbf685836b63b3CadEdbE2EB56_3x.png",
+    "reason": "I am Founder & CEO at Coinshift and am on a mission to bring gnosis safe to the masses by building a sophisticated Treasury Management Infrastructure. 4+ years of experience in building on top of safe contracts and Happy to take active participation in the governance forums to thrive safe ecosystem",
+    "contribution": "Building Treasury Infrastructure on top of gnosis safe smart contracts at coinshift.",
+    "twitter": "https://twitter.com/tarungupta1475"
+  },
+  {
+    "name": "Auryn Macmillan",
+    "address": "0xd714Dd60e22BbB1cbAFD0e40dE5Cfa7bBDD3F3C8",
+    "ens": "auryn.eth",
+    "image": "0xd714Dd60e22BbB1cbAFD0e40dE5Cfa7bBDD3F3C8_3x.png",
+    "reason": "I care deeply about the success of the Safe ecosystem.",
+    "contribution": "Co-founded Gnosis Guild and helped to create Zodiac (ERC-5005), which uses the Gnosis Safe's ModuleManager interface as the core of a standard for composable tooling for programmable accounts and DAOs.",
+    "twitter": "https://twitter.com/auryn_macmillan"
+  },
+  {
+    "name": "Corbin Page",
+    "address": "0x869eC00FA1DC112917c781942Cc01c68521c415e",
+    "ens": "corbin.eth",
+    "image": "0x869eC00FA1DC112917c781942Cc01c68521c415e_3x.png",
+    "reason": "I spend a lot of time using and building on top of the Safe contracts, apps, and Zodiac. I've also been a delegate for Aave and Fei in the past. I'd love to bring that experience to the Safe community. 💪🔰",
+    "contribution": "Identifying bugs, opening PRs, and product/strategy recommendations.",
+    "twitter": "https://twitter.com/corbpage"
+  },
+  {
+    "name": "Evgeny Yurtaev",
+    "address": "0x7e5cE10826eE167de897D262fCC9976F609ECd2B",
+    "ens": "evgeny.eth",
+    "image": "0x7e5cE10826eE167de897D262fCC9976F609ECd2B_3x.png",
+    "reason": "OG DeFi degen, used Gnosis before it was Safe.",
+    "contribution": "Integration partner, active user & feedback giver.",
+    "twitter": "https://twitter.com/evgeth_"
+  },
+  {
+    "name": "🔥_🔥",
+    "address": "0xdab0d648a2a771e6952916A822dddf738b535f5A",
+    "ens": "fire-infra.pod.xyz",
+    "image": "0xdab0d648a2a771e6952916A822dddf738b535f5A_3x.png",
+    "reason": "🔥_🔥 is excited to help lead the Safe ecosystem towards a decentralised community centric future. Contributing to meaningful governance experimentation is what drives 🔥_🔥.",
+    "contribution": "Building token and governance designs across the ecosystem, often pointing towards safe infrastructure."
+  },
+  {
+    "name": "Chris Whinfrey",
+    "address": "0xD770d242c5734a3B8028CF46D2A2e980EcE07BeA",
+    "ens": "whinfrey.eth",
+    "image": "0xD770d242c5734a3B8028CF46D2A2e980EcE07BeA_3x.png",
+    "reason": "The Gnosis Safe is, without a doubt, one of the most trusted and important projects on Ethereum, securing tens of billions of dollars. As a delegate, I want to help keep the Gnosis Safe secure and user-friendly as it spins out of the broader Gnosis ecosystem. You can trust me to read every single proposal, participate in every vote, and weigh in on decisions as much as possible. I have a background in smart contract security (previously audited Open Zeppelin, dYdX, Augur, and more) as well as a background in contract-based accounts (previously cofounded Authereum). I trust the Safe contracts because I have personally audited them and have an intimate understanding of contract-based accounts, much of which I learned from studying the Safe contracts during the early days Authereum. As a delegate, I pledge to always put security first in every DAO decision and will weigh in on governance decisions from a technical standpoint when needed. I have also been a Gnosis Safe user for the past 2.5 years. I personally use a Gnosis Safe to secure the majority of my funds. A Gnosis Safe secures our team's funds at Hop. A separate Safe secures a portion of Hop DAO's funds. We used a Safe to secure Authereum's funds. The Gnosis Safe is a product that I use multiple times a week, and as a delegate, you can trust me to push for user experience improvements that will drive wider adoption and secure the Gnosis Safe as the goto evm-compatible multisig wallet. Lastly, I pledge to always vote in the best interest of the Gnosis Safe DAO and community. I will vote No on proposals that do not move the Gnosis Safe's core mission forward. I will not involve my personal interests in decision making, and should a conflict of interest arise, you can expect that I will disclose it and abstain from the vote.",
+    "contribution": "I'm one of the founders of Hop Protocol which is integrated as a Safe app and allows users to bridge directly from their Gnosis Safe to other chains. As Hop's feature set expands, there should be many more opportunities for Hop to help with the Safe app's cross-chain experience.",
+    "twitter": "https://twitter.com/WhinfreyChris"
+  },
+  {
+    "name": "0xAA",
+    "address": "0x3317AD9eDa6942b5a7BE5BA83346C0Ea82C3C26C",
+    "ens": "people-dao.eth",
+    "image": "0x3317AD9eDa6942b5a7BE5BA83346C0Ea82C3C26C_3x.png",
+    "reason": "I'm a core contributor at PeopleDAO. I value gnosis safe and advocate it actively.",
+    "contribution": "Wrote tutorials on gnosis safe for DAOs in English and Chinese.",
+    "twitter": "https://twitter.com/0xAA_Science"
+  }
+]

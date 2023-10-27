@@ -4,11 +4,12 @@ import Link from 'next/link'
 
 import { AppRoutes } from '@/config/routes'
 import Logo from '@/public/images/logo.svg'
-import { GOVERNANCE_LINK, WALLET_LINK } from '@/config/constants'
+import { WALLET_LINK } from '@/config/constants'
 import { useOpenPositions } from '@/hooks/useOpenPositions'
 import css from './styles.module.css'
 import clsx from 'clsx'
 import { useRouter } from 'next/router'
+import navItemsData from '@/content/navItems.json'
 
 type NavItemType = {
   label: string | JSX.Element
@@ -16,29 +17,7 @@ type NavItemType = {
   external?: boolean
 }
 
-const navItems: NavItemType[] = [
-  {
-    label: 'Core',
-    href: AppRoutes.core,
-  },
-  {
-    label: 'Wallet',
-    href: AppRoutes.wallet,
-  },
-  {
-    label: 'Ecosystem',
-    href: AppRoutes.ecosystem,
-  },
-  {
-    label: 'Governance',
-    href: GOVERNANCE_LINK,
-    external: true,
-  },
-  {
-    label: 'Careers',
-    href: AppRoutes.careers,
-  },
-]
+const navItems: NavItemType[] = navItemsData
 
 const externalLinkAttrs = {
   target: '_blank',

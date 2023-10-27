@@ -1,0 +1,5 @@
+.gridContainer {
+  border: 1px solid var(--mui-palette-border-light);
+  border-radius: 12px;
+  overflow: hidden;
+}

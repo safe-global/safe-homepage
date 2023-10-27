@@ -222,7 +222,7 @@
         }
       }
     ],
-    "component": "Home/TitleLogos"
+    "component": "common/TitleLogos"
   },
   {
     "items": [

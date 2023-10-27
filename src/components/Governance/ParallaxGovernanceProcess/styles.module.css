@@ -1,0 +1,88 @@
+.parallaxWrapper {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  width: 342px;
+}
+
+.baseImage {
+  width: 100%;
+  height: 240px;
+}
+
+.leftLine {
+  position: absolute;
+  width: 77px;
+  bottom: 83px;
+  left: 77px;
+}
+
+.rightLine {
+  position: absolute;
+  width: 92px;
+  bottom: 60px;
+  left: 170px;
+}
+
+.stepZero {
+  position: absolute;
+  bottom: 149px;
+  left: 36px;
+  width: 41px;
+}
+
+.stepOne {
+  position: absolute;
+  bottom: 72px;
+  left: 130px;
+  width: 41px;
+}
+
+.stepTwo {
+  position: absolute;
+  bottom: 164px;
+  left: 262px;
+  width: 41px;
+}
+
+@media (min-width: 600px) {
+  .parallaxWrapper {
+    width: 570px;
+  }
+
+  .baseImage {
+    height: 404px;
+  }
+
+  .leftLine {
+    position: absolute;
+    width: 128px;
+    bottom: 180px;
+    left: 104px;
+  }
+
+  .rightLine {
+    position: absolute;
+    width: 154px;
+    bottom: 150px;
+    left: 270px;
+  }
+
+  .stepZero {
+    bottom: 253px;
+    left: 36px;
+    width: 68px;
+  }
+
+  .stepOne {
+    bottom: 114px;
+    left: 205px;
+    width: 68px;
+  }
+
+  .stepTwo {
+    bottom: 276px;
+    left: 423px;
+    width: 68px;
+  }
+}

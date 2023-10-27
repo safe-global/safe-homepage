@@ -22,7 +22,7 @@ export const Masthead = ({ title, buttons, caption, image }: BaseBlock): ReactEl
               className={css.chip}
               variant="outlined"
             />
-            <Typography variant="h2" color="text.primary" mt={3} mb={5}>
+            <Typography variant="h2" mt={3} mb={5}>
               {title}
             </Typography>
             <ButtonsWrapper buttons={buttons} />

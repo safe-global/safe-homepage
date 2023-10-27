@@ -1,5 +1,5 @@
 import ParallaxBatchingElement from '@/components/Wallet/ParallaxBatching/ParallaxBatchingElement'
-import ParallaxText, { type ParallaxTextProps } from '@/components/Wallet/ParallaxText'
+import ParallaxText, { type ParallaxTextProps } from '@/components/common/ParallaxText'
 
 const ParallaxBatching = (props: ParallaxTextProps) => {
   return (

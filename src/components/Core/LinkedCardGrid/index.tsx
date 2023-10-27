@@ -25,7 +25,7 @@ const GridItem = ({ title, text, children, link }: BaseBlock & { children: React
       <a href={link?.href} target="_blank" rel="noreferrer" className={css.cardLink}>
         <div className={css.animationWrapper}>{children}</div>
         <div>
-          <Typography variant="h4" mt={3} mb={1} color="text.primary">
+          <Typography variant="h4" mt={3} mb={1}>
             {title}
           </Typography>
           <Typography color="primary.light">{text}</Typography>

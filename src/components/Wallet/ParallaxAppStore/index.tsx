@@ -1,5 +1,5 @@
 import ParallaxAppStoreElement from '@/components/Wallet/ParallaxAppStore/ParallaxAppStoreElement'
-import ParallaxText, { type ParallaxTextProps } from '@/components/Wallet/ParallaxText'
+import ParallaxText, { type ParallaxTextProps } from '@/components/common/ParallaxText'
 
 const ParallaxAppStore = (props: ParallaxTextProps) => {
   return (

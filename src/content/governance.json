@@ -1,0 +1,261 @@
+[
+  {
+    "pageTitle": "Safe Core – Full stack account abstraction",
+    "descripton": "Shape the future of Safe",
+    "component": "common/MetaTags"
+  },
+  {
+    "component": "Governance/Intro",
+    "title": "Engage.<br/>Participate. Vote.<br/>Shape the future of <i>Safe</i>.",
+    "buttons": [
+      {
+        "text": "Join the discussion",
+        "href": "https://forum.safe.global/",
+        "variant": "button"
+      },
+      {
+        "text": "Vote on Snapshot",
+        "href": "https://snapshot.org/#/safe.eth",
+        "variant": "link"
+      }
+    ],
+    "image": {
+      "src": "/images/Governance/particles-globe-spin.gif",
+      "alt": "spinning particles globe"
+    }
+  },
+  {
+    "component": "Governance/ParallaxDaoStats",
+    "variant": "image-text",
+    "mobileVariant": "text-image",
+    "title": "Safe <u>DAO</u> is a <b>decentralised collective</b> stewarding the <i>Safe</i> ecosystem"
+  },
+  {
+    "component": "Governance/Proposals",
+    "title": "Latest proposals",
+    "text": "Get involved in the latest proposals or write one of your own and let your voice be heard.",
+    "link": {
+      "title": "View all proposals",
+      "href": "https://snapshot.org/#/safe.eth"
+    }
+  },
+  {
+    "component": "Governance/Delegates",
+    "title": "Top delegates",
+    "text": "Get to know the most active Safe Guardians and SafeDAO delegates in the ecosystem, ready to receive your delegation.",
+    "footer": {
+      "text": "and more than 2K delegates."
+    }
+  },
+  {
+    "component": "Governance/ResourceHub",
+    "title": "Resource hub",
+    "link": {
+      "title": "Go to governance hub",
+      "href": "gov.safe.global"
+    },
+    "items": [
+      {
+        "image": {
+          "src": "/images/shield-check-gradient.svg",
+          "alt": "checked shield",
+          "width": "50px"
+        },
+        "title": "What is Safe{DAO}",
+        "text": "SafeDAO is a decentralised collective, stewarding the thriving ecosystem around Safe smart accounts on Ethereum and other blockchains",
+        "link": {
+          "title": "Learn more",
+          "href": "https://www.notion.so/safe-global/Introduction-to-SafeDAO-07f87ad6c9bf456ca5d349e72e85bf3f"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/tokens-gradient.svg",
+          "alt": "stacked tokens",
+          "width": "50px"
+        },
+        "title": "What is the Safe{Token}",
+        "text": "The Safe token represents the growing value of the Safe ecosystem",
+        "link": {
+          "title": "Learn more",
+          "href": "https://www.notion.so/safe-global/Safe-Token-d558d527aa1a47daab7837bdea60923d"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/external-link-gradient.svg",
+          "alt": "external link",
+          "width": "50px"
+        },
+        "title": "Who are Safe{Guardians}",
+        "text": "Safe Guardians are active community members who have verifiable proof of commitment to the Safe vision",
+        "link": {
+          "title": "Learn more",
+          "href": "https://forum.safe.global/t/guardians-gather/265"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/teach-gradient.svg",
+          "alt": "teacher pointing at board",
+          "width": "50px"
+        },
+        "title": "How to delegate",
+        "text": "Token holders can delegate their votes to any address of their choice or to Safe Guardians using the SafeDAO Governance app within Safe{Wallet} or Snapshot",
+        "link": {
+          "title": "Learn more",
+          "href": "https://www.notion.so/safe-global/Delegation-ce8deecb409349d2a2785b505b9d5e86"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/building-gradient.svg",
+          "alt": "building",
+          "width": "50px"
+        },
+        "title": "What is the Safe Grants Program",
+        "text": "SGP fosters a thriving community of contributors within the Safe ecosystem by funding ideas, projects, and integrations that align with <i>Safe</i>",
+        "link": {
+          "title": "Learn more",
+          "href": "https://grants.safe.global"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/shield-check-gradient.svg",
+          "alt": "checked shield",
+          "width": "50px"
+        },
+        "title": "What is the Safe Ecosystem Foundation",
+        "text": "SEF is a steward of SafeDAO, responsible for facilitating and administering the decisions voted in by the members of SafeDAO",
+        "link": {
+          "title": "Learn more",
+          "href": "https://safe-global.notion.site/Safe-Ecosystem-Foundation-700f85745fdc45589b12569e0252916b"
+        }
+      }
+    ]
+  },
+  {
+    "component": "Governance/OurMission",
+    "title": "<b>Our mission</b> is to accelerate the transition to smart accounts",
+    "link": {
+      "title": "Read the SafeDAO constitution",
+      "href": "https://snapshot.org/#/safe.eth/proposal/0xbb71846f7fdfdd31033bde9cf25c880b46d50d1dda75cbf653d6a94318f96290"
+    },
+    "items": [
+      {
+        "title": "Vibrant ecosystem",
+        "text": "To foster a vibrant Safe ecosystem built on shared components and standards",
+        "image": {
+          "src": "/images/Governance/ecosystem-avatars.png",
+          "alt": "Ecosystem avatars"
+        },
+        "link": {
+          "title": "190+ ecosystem projects",
+          "href": "https://safe.global/ecosystem"
+        }
+      },
+      {
+        "title": "Resilience through decentralisation",
+        "text": "The <i>Safe</i> ecosystem including governance shall be independent from any single entity, decentralised, and permissionless"
+      },
+      {
+        "title": "Tokenise value",
+        "text": "Mechanisms should be created to link the growth of the Safe ecosystem to the utility of the Safe token"
+      }
+    ]
+  },
+  {
+    "component": "Governance/ParallaxGovernanceProcess",
+    "variant": "image-text",
+    "caption": "How we work",
+    "title": "<i>Safe</i> governance process",
+    "text": "The current governance process is a series of phases involving ideation, discussion, and voting. A <b>new governance framework</b> is in the works.",
+    "buttons": [
+      {
+        "text": "Read more",
+        "href": "https://www.notion.so/safe-global/Governance-overview-be50e0780b7840f08b679341ea582661?pvs=4",
+        "variant": "link"
+      }
+    ]
+  },
+  {
+    "component": "common/TitleLogos",
+    "hideMobile": true,
+    "title": "Join the conversation",
+    "items": [
+      {
+        "link": {
+          "href": "https://x.com/safe"
+        },
+        "image": {
+          "src": "/images/x-icon.svg",
+          "alt": "X page"
+        }
+      },
+      {
+        "link": {
+          "href": "https://forum.safe.global"
+        },
+        "image": {
+          "src": "/images/discourse-icon.svg",
+          "alt": "Discourse forum"
+        }
+      },
+      {
+        "link": {
+          "href": "https://chat.safe.global"
+        },
+        "image": {
+          "src": "/images/discord-icon.svg",
+          "alt": "Discord server"
+        }
+      },
+      {
+        "link": {
+          "href": "https://www.youtube.com/@safeglobal"
+        },
+        "image": {
+          "src": "/images/youtube-icon.svg",
+          "alt": "Youtube channel"
+        }
+      },
+      {
+        "link": {
+          "href": "https://safe.mirror.xyz"
+        },
+        "image": {
+          "src": "/images/mirror-icon.svg",
+          "alt": "Mirror blog"
+        }
+      },
+      {
+        "link": {
+          "href": "https://github.com/safe-global"
+        },
+        "image": {
+          "src": "/images/github-icon.svg",
+          "alt": "GitHub organization"
+        }
+      }
+    ]
+  },
+  {
+    "component": "common/BannerGradientImage",
+    "caption": "Community",
+    "title": "Apply for the Safe Grants Program",
+    "text": "Have a project to contribute to the Safe ecosystem? Get your ideas, builds, and integrations funded by our grants program",
+    "buttons": [
+      {
+        "text": "Learn more",
+        "href": "https://grants.safe.global",
+        "variant": "button",
+        "color": "secondary"
+      }
+    ],
+    "image": {
+      "src": "/images/banner-lines.svg",
+      "alt": "Safe round block lines"
+    }
+  }
+]

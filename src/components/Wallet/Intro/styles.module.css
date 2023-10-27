@@ -8,14 +8,6 @@
   overflow: hidden;
 }
 
-.gif {
-  position: absolute;
-  top: 50px;
-  left: 25px;
-  transform: scale(1.5);
-  z-index: -1;
-}
-
 .particleWrapper {
   animation: scale-up-down 15s cubic-bezier(0, 1, 0.06, 1.03) infinite;
   transform-origin: center;
@@ -64,12 +56,6 @@
   .image {
     margin-top: 30px;
     width: 90%;
-  }
-
-  .gif {
-    top: 50px;
-    left: -5px;
-    transform: scale(2);
   }
 
   .button {
