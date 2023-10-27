@@ -16,7 +16,7 @@ const ItemGrid = ({ title, items }: BaseBlock) => {
             ? items.map(({ title, text, link }, index) => (
                 <Grid key={index} item xs={12} md={12 / items.length} className={css.card}>
                   <div>
-                    <Typography variant="h4" color="text.primary" mb={1}>
+                    <Typography variant="h4" mb={1}>
                       {title}
                     </Typography>
                     <Typography color="primary.light" component="div">

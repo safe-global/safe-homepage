@@ -5,11 +5,11 @@ import { Container, Grid, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 
-const GridItemBigTitle = ({ title, text, children, link }: Partial<BaseBlock> & { children?: ReactNode }) => {
+const GridItemBigTitle = ({ title, text, children }: Partial<BaseBlock> & { children?: ReactNode }) => {
   return (
     <Grid item xs={12} md={4} className={css.card}>
       <div>
-        <Typography variant="h4" mb={1} color="text.primary">
+        <Typography variant="h4" mb={1}>
           {title}
         </Typography>
         <Typography color="primary.light">{text}</Typography>
@@ -19,7 +19,7 @@ const GridItemBigTitle = ({ title, text, children, link }: Partial<BaseBlock> & 
   )
 }
 
-const OurMission = (props: Omit<BaseBlock, 'items'> & { items?: Partial<BaseBlock & { tagline: string }>[] }) => {
+const OurMission = (props: BaseBlock) => {
   return (
     <Container className={`${layoutCss.containerShort} ${css.gradientEmphasis}`}>
       <HeaderCTA {...props} bigTitle />
@@ -28,10 +28,12 @@ const OurMission = (props: Omit<BaseBlock, 'items'> & { items?: Partial<BaseBloc
         {props.items?.map((item, index) => (
           <GridItemBigTitle key={index} {...item}>
             {item.image ? <img src={item.image.src} alt={item.image.alt} /> : null}
-            {item.tagline ? (
-              <Typography variant="caption" className={css.tagline}>
-                {item.tagline}
-              </Typography>
+            {item.link ? (
+              <a href={item.link.href} target="_blank" rel="noreferrer">
+                <Typography variant="caption" className={css.tagline}>
+                  {item.link.title}
+                </Typography>
+              </a>
             ) : null}
           </GridItemBigTitle>
         ))}

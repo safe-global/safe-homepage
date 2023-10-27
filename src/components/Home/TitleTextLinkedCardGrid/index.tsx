@@ -38,9 +38,7 @@ const TitleTextLinkedCardGrid = ({ title, text, caption, items }: BaseBlock): Re
                       <Typography variant="caption" component="div" pb="77px" color={isLastItem ? 'secondary' : ''}>
                         {item.caption}
                       </Typography>
-                      <Typography variant="h3" color="text.primary">
-                        {item.title}
-                      </Typography>
+                      <Typography variant="h3">{item.title}</Typography>
                       <ArrowIcon className={css.icon} />
                     </a>
                   </div>

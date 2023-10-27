@@ -14,7 +14,7 @@
         "variant": "button"
       },
       {
-        "text": "See Snapshot",
+        "text": "Vote on Snapshot",
         "href": "https://snapshot.org/#/safe.eth",
         "variant": "link"
       }
@@ -32,7 +32,7 @@
   },
   {
     "component": "Governance/Proposals",
-    "title": "Live proposals",
+    "title": "Latest proposals",
     "text": "Get involved in the latest proposals or write one of your own and let your voice be heard.",
     "link": {
       "title": "View all proposals",
@@ -44,8 +44,7 @@
     "title": "Top delegates",
     "text": "Get to know the most active Safe Guardians and SafeDAO delegates in the ecosystem, ready to receive your delegation.",
     "footer": {
-      "text": "and more than ",
-      "highlight": "2K delegates."
+      "text": "and more than 2K delegates."
     }
   },
   {
@@ -138,7 +137,7 @@
   },
   {
     "component": "Governance/OurMission",
-    "title": "<b>Our mission</b> is to establish smart accounts as the default means for web3 interactions",
+    "title": "<b>Our mission</b> is to accelerate the transition to smart accounts",
     "link": {
       "title": "Read the SafeDAO constitution",
       "href": "https://snapshot.org/#/safe.eth/proposal/0xbb71846f7fdfdd31033bde9cf25c880b46d50d1dda75cbf653d6a94318f96290"
@@ -151,7 +150,10 @@
           "src": "/images/Governance/ecosystem-avatars.png",
           "alt": "Ecosystem avatars"
         },
-        "tagline": "190+ ecosystem projects"
+        "link": {
+          "title": "190+ ecosystem projects",
+          "href": "https://safe.global/ecosystem"
+        }
       },
       {
         "title": "Resilience through decentralisation",

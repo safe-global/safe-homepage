@@ -17,7 +17,7 @@ const Cards = ({ items, stacked = false }: Pick<BaseBlock, 'items'> & { stacked?
             className={clsx(css.card, stacked && css.stacked)}
           >
             <div className={css.cardContent}>
-              <Typography variant="h4" component="div" color="text.primary">
+              <Typography variant="h4" component="div">
                 {title}
               </Typography>
               {image && <img src={image.src} alt={image.alt} className={css.cardImage} />}
