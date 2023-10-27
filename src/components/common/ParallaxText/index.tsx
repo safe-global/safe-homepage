@@ -41,7 +41,7 @@ const ParallaxText = ({
             </Typography>
           )}
           <Typography variant="h2">{title}</Typography>
-          <Typography>{text}</Typography>
+          <Typography className={css.textBlock}>{text}</Typography>
           {steps && <Stepper steps={steps} />}
           <ButtonsWrapper buttons={buttons} />
         </Grid>
