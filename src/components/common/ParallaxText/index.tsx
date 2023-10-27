@@ -15,6 +15,7 @@ export type ParallaxTextProps = BaseBlock & {
 const ParallaxText = ({
   title,
   text,
+  richText,
   buttons,
   steps,
   caption,
@@ -41,7 +42,20 @@ const ParallaxText = ({
             </Typography>
           )}
           <Typography variant="h2">{title}</Typography>
-          <Typography>{text}</Typography>
+          {text ? <Typography>{text}</Typography> : undefined}
+          {richText ? (
+            <Typography className={css.richText}>
+              {richText.map((item, index) =>
+                item.variant === 'text' ? (
+                  item.text
+                ) : item.variant === 'link' && item.link ? (
+                  <a key={index} href={item.link.href} target="_blank" rel="noreferrer">
+                    {item.link.title}
+                  </a>
+                ) : undefined,
+              )}
+            </Typography>
+          ) : undefined}
           {steps && <Stepper steps={steps} />}
           <ButtonsWrapper buttons={buttons} />
         </Grid>

@@ -1,9 +1,12 @@
 import type { DetailedHTMLProps, ImgHTMLAttributes } from 'react'
 import type { ButtonProps } from '@mui/material'
 
+type RichTextVariant = 'text' | 'link'
+
 type BaseBlock = {
   title: string | JSX.Element
   text: string | JSX.Element
+  richText?: (Pick<BaseBlock, 'text' | 'link'> & { variant: RichTextVariant })[]
   caption?: string
   link?: Link
   buttons?: Button[]

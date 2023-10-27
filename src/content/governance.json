@@ -170,7 +170,23 @@
     "variant": "image-text",
     "caption": "How we work",
     "title": "<i>Safe</i> governance process",
-    "text": "The current governance process is a series of phases involving ideation, discussion, and voting. A <b>new governance framework</b> is in the works.",
+    "richText": [
+      {
+        "variant": "text",
+        "text": "The current governance process is a series of phases involving ideation, discussion, and voting. A "
+      },
+      {
+        "variant": "link",
+        "link": {
+          "title": "new governance framework",
+          "href": "https://forum.safe.global/t/sep-7-governance-framework/3711"
+        }
+      },
+      {
+        "variant": "text",
+        "text": " was successfully voted in by SafeDAO on Oct 20, 2023."
+      }
+    ],
     "buttons": [
       {
         "text": "Read more",

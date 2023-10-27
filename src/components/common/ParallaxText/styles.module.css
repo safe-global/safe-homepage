@@ -1,3 +1,8 @@
+.richText a {
+  text-decoration: underline;
+  color: var(--mui-palette-primary-main);
+}
+
 .textFirst,
 .imageFirst {
   flex-direction: column-reverse;
