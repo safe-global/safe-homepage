@@ -1,0 +1,4 @@
+.richText a {
+  text-decoration: underline;
+  color: var(--mui-palette-primary-main);
+}

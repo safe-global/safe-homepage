@@ -6,6 +6,7 @@ import type { BaseBlock } from '@/components/Home/types'
 import Stepper, { type StepsType } from '@/components/Wallet/Stepper'
 import clsx from 'clsx'
 import ButtonsWrapper from '@/components/common/ButtonsWrapper'
+import RichText from '@/components/common/RichText'
 
 export type ParallaxTextProps = BaseBlock & {
   variant: 'image-text' | 'text-image'
@@ -43,19 +44,7 @@ const ParallaxText = ({
           )}
           <Typography variant="h2">{title}</Typography>
           {text ? <Typography>{text}</Typography> : undefined}
-          {richText ? (
-            <Typography className={css.richText}>
-              {richText.map((item, index) =>
-                item.variant === 'text' ? (
-                  item.text
-                ) : item.variant === 'link' && item.link ? (
-                  <a key={index} href={item.link.href} target="_blank" rel="noreferrer">
-                    {item.link.title}
-                  </a>
-                ) : undefined,
-              )}
-            </Typography>
-          ) : undefined}
+          <RichText richText={richText} />
           {steps && <Stepper steps={steps} />}
           <ButtonsWrapper buttons={buttons} />
         </Grid>
