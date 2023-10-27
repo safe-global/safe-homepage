@@ -173,7 +173,7 @@
     "richText": [
       {
         "variant": "text",
-        "text": "The current governance process is a series of phases involving ideation, discussion, and voting. A "
+        "text": "SafeDAO's governance is based on an iterative and dynamic structure. Check out the "
       },
       {
         "variant": "link",
@@ -184,7 +184,7 @@
       },
       {
         "variant": "text",
-        "text": " was successfully voted in by SafeDAO on Oct 20, 2023."
+        "text": " outlining the key stakeholders, the dynamic governance approach and the governance process with its series of phases leading to a vote."
       }
     ],
     "buttons": [
