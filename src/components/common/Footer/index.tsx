@@ -17,7 +17,6 @@ import {
   CORE_LINK,
   PRESS_LINK,
   LICENSES_LINK,
-  GOVERNANCE_LINK,
   ECOSYSTEM_LINK,
   GRANTS_LINK,
   SAFECON_LINK,
@@ -51,9 +50,7 @@ const safeProtocolItems = [
 const communityItems = [
   {
     label: 'Governance',
-    href: GOVERNANCE_LINK,
-    target: '_blank',
-    rel: 'noreferrer',
+    href: AppRoutes.governance,
   },
   {
     label: 'Ecosystem',
