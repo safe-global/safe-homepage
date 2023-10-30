@@ -52,7 +52,7 @@
     "title": "Resource hub",
     "link": {
       "title": "Go to governance hub",
-      "href": "gov.safe.global"
+      "href": "https://gov.safe.global"
     },
     "items": [
       {
@@ -65,7 +65,7 @@
         "text": "SafeDAO is a decentralised collective, stewarding the thriving ecosystem around Safe smart accounts on Ethereum and other blockchains",
         "link": {
           "title": "Learn more",
-          "href": "https://www.notion.so/safe-global/Introduction-to-SafeDAO-07f87ad6c9bf456ca5d349e72e85bf3f"
+          "href": "https://safe-global.notion.site/Introduction-to-SafeDAO-07f87ad6c9bf456ca5d349e72e85bf3f"
         }
       },
       {
@@ -78,7 +78,7 @@
         "text": "The Safe token represents the growing value of the Safe ecosystem",
         "link": {
           "title": "Learn more",
-          "href": "https://www.notion.so/safe-global/Safe-Token-d558d527aa1a47daab7837bdea60923d"
+          "href": "https://safe-global.notion.site/Safe-Token-d558d527aa1a47daab7837bdea60923d"
         }
       },
       {
@@ -104,7 +104,7 @@
         "text": "Token holders can delegate their votes to any address of their choice or to Safe Guardians using the SafeDAO Governance app within Safe{Wallet} or Snapshot",
         "link": {
           "title": "Learn more",
-          "href": "https://www.notion.so/safe-global/Delegation-ce8deecb409349d2a2785b505b9d5e86"
+          "href": "https://safe-global.notion.site/Delegation-ce8deecb409349d2a2785b505b9d5e86"
         }
       },
       {
@@ -174,7 +174,7 @@
     "buttons": [
       {
         "text": "Read more",
-        "href": "https://www.notion.so/safe-global/Governance-overview-be50e0780b7840f08b679341ea582661?pvs=4",
+        "href": "https://forum.safe.global/t/new-governance-framework-and-start-of-season-1/4348",
         "variant": "link"
       }
     ]
