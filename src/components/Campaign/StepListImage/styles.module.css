@@ -1,0 +1,34 @@
+.stepListBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.listWrapper {
+  border: 1px solid var(--mui-palette-border-main);
+  padding: 32px;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.listItem {
+  position: relative;
+  border: 1px solid var(--mui-palette-border-main);
+  border-radius: 32px;
+}
+
+.listItemNumber {
+  border-radius: 50%;
+  background-color: var(--mui-palette-primary-main);
+  width: 32px;
+  height: 32px;
+  color: black;
+  text-align: center;
+  margin-right: 10px;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}

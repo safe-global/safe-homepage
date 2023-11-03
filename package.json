@@ -10,18 +10,23 @@
     "routes": "node scripts/generate-routes.js > src/config/routes.ts && prettier -w src/config/routes.ts",
     "start": "next dev -p 8000",
     "test": "jest",
-    "test:ci": "yarn test --ci --coverage --json --watchAll=false --testLocationInResults --outputFile=jest.results.json"
+    "test:ci": "yarn test --ci --coverage --json --watchAll=false --testLocationInResults --outputFile=jest.results.json",
+    "types:contentful": "export $(cat .env | awk '!/^\\s*#/' | awk '!/^\\s*$/'); cf-content-types-generator --spaceId $CONTENTFUL_SPACE_ID --token $CONTENTFUL_MANAGEMENT_TOKEN -o src/contentful/types -X && prettier --write src/contentful/types"
   },
   "pre-commit": [
     "lint"
   ],
   "dependencies": {
+    "@contentful/rich-text-html-renderer": "^16.2.0",
+    "@contentful/rich-text-react-renderer": "^15.18.0",
+    "@contentful/rich-text-types": "^16.3.0",
     "@emotion/react": "^11.10.5",
     "@emotion/server": "^11.10.0",
     "@emotion/styled": "^11.10.5",
     "@mui/material": "^5.11.6",
     "@safe-global/safe-gateway-typescript-sdk": "^3.7.0",
     "clsx": "^1.2.1",
+    "contentful": "^10.6.1",
     "fuse.js": "^6.6.2",
     "isomorphic-dompurify": "^1.0.0",
     "lodash": "^4.17.21",
@@ -42,6 +47,7 @@
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
     "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "cf-content-types-generator": "^2.12.9",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.5",
     "eslint-config-prettier": "^8.6.0",

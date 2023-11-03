@@ -1,0 +1,14 @@
+.textBlock {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+}
+
+.textBlock > * {
+  margin-bottom: 0;
+}
+
+.chip {
+  border-color: var(--mui-palette-text-primary);
+  width: fit-content;
+}
