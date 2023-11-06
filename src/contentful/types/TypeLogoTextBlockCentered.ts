@@ -1,7 +1,7 @@
 import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from 'contentful'
 import type { TypeButtonSkeleton } from './TypeButton'
 
-export interface TypeLogoTextBlockFields {
+export interface TypeLogoTextBlockCenteredFields {
   logo: EntryFieldTypes.AssetLink
   cta?: EntryFieldTypes.Symbol
   title: EntryFieldTypes.Symbol
@@ -9,9 +9,12 @@ export interface TypeLogoTextBlockFields {
   button?: EntryFieldTypes.EntryLink<TypeButtonSkeleton>
 }
 
-export type TypeLogoTextBlockSkeleton = EntrySkeletonType<TypeLogoTextBlockFields, 'logoTextBlock'>
-export type TypeLogoTextBlock<Modifiers extends ChainModifiers, Locales extends LocaleCode> = Entry<
-  TypeLogoTextBlockSkeleton,
+export type TypeLogoTextBlockCenteredSkeleton = EntrySkeletonType<
+  TypeLogoTextBlockCenteredFields,
+  'logoTextBlockCentered'
+>
+export type TypeLogoTextBlockCentered<Modifiers extends ChainModifiers, Locales extends LocaleCode> = Entry<
+  TypeLogoTextBlockCenteredSkeleton,
   Modifiers,
   Locales
 >

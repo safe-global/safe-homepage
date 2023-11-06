@@ -5,10 +5,10 @@ import Link from 'next/link'
 import css from './styles.module.css'
 import layoutCss from '@/components/common/styles.module.css'
 import type { Entry } from 'contentful'
-import type { TypeLogoTextBlockSkeleton } from '@/contentful/types'
+import type { TypeLogoTextBlockCenteredSkeleton } from '@/contentful/types'
 import { isAsset, isEntryTypeButton } from '@/lib/typeGuards'
 
-type LogoTextBlockCenteredEntry = Entry<TypeLogoTextBlockSkeleton, undefined, string>
+type LogoTextBlockCenteredEntry = Entry<TypeLogoTextBlockCenteredSkeleton, undefined, string>
 
 const LogoTextBlockCentered = (props: LogoTextBlockCenteredEntry) => {
   const { logo, cta, title, description, button } = props.fields
