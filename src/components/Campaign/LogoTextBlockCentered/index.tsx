@@ -21,7 +21,7 @@ const LogoTextBlockCentered = (props: LogoTextBlockCenteredEntry) => {
         ) : undefined}
         <Typography className={css.cta}>{cta}</Typography>
 
-        <Typography variant="h1" mb={4}>
+        <Typography variant="h1" mb={4} textAlign="center">
           {title}
         </Typography>
 

@@ -4,6 +4,11 @@ export type { TypeContentOrder, TypeContentOrderFields, TypeContentOrderSkeleton
 export type { TypeFaq, TypeFaqFields, TypeFaqSkeleton } from './TypeFaq'
 export type { TypeHero, TypeHeroFields, TypeHeroSkeleton } from './TypeHero'
 export type {
+  TypeLogoTextBlockBanner,
+  TypeLogoTextBlockBannerFields,
+  TypeLogoTextBlockBannerSkeleton,
+} from './TypeLogoTextBlockBanner'
+export type {
   TypeLogoTextBlockCentered,
   TypeLogoTextBlockCenteredFields,
   TypeLogoTextBlockCenteredSkeleton,

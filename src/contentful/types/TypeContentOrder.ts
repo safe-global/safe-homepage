@@ -2,7 +2,9 @@ import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleC
 
 export interface TypeContentOrderFields {
   componentName: EntryFieldTypes.Array<
-    EntryFieldTypes.Symbol<'faq' | 'hero' | 'logoTextBlockCentered' | 'stepListImage' | 'textBlockListCentered'>
+    EntryFieldTypes.Symbol<
+      'faq' | 'hero' | 'logoTextBlockBanner' | 'logoTextBlockCentered' | 'stepListImage' | 'textBlockListCentered'
+    >
   >
 }
 
