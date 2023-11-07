@@ -13,18 +13,18 @@ const TextBlockListCentered = (props: TextBlockListCenteredEntry) => {
 
   return (
     <Container className={layoutCss.containerMedium}>
-      <Grid container className={css.container}>
-        <Grid item md={5} py="140" px="100">
+      <Grid container>
+        {/* offset column */}
+        <Grid item lg={1} />
+        <Grid item lg={6}>
           <Typography variant="h1" mb={4}>
             {title}
           </Typography>
-          <Typography variant="h4" mb={5} color="primary.light">
+          <Typography mb={5} color="primary.light" width={{ sm: '100%', lg: '66.7%' }}>
             {description}
           </Typography>
         </Grid>
-        {/* offset column */}
-        <Grid item md={1}></Grid>
-        <Grid item md={6}>
+        <Grid item lg={5}>
           <List>
             {listItems.map((item: any, index: number) => (
               <ListItem key={index}>

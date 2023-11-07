@@ -1,0 +1,16 @@
+.accordion {
+  background-color: unset;
+  box-shadow: none;
+}
+
+.accordion :global .MuiAccordionSummary-root {
+  padding: 0;
+}
+
+.accordion :global .MuiAccordionSummary-content {
+  margin: 32px 0;
+}
+
+.accordion :global .MuiAccordionDetails-root {
+  padding: 0 0 16px;
+}

@@ -13,6 +13,7 @@ import React, { useState } from 'react'
 import type { TypeFaqSkeleton } from '@/contentful/types'
 import type { Entry } from 'contentful'
 import layoutCss from '@/components/common/styles.module.css'
+import css from './styles.module.css'
 
 type FaqEntry = Entry<TypeFaqSkeleton, undefined, string>
 
@@ -27,7 +28,7 @@ const Faq = (props: FaqEntry) => {
       <Grid container>
         <Grid item md={1} />
         <Grid item md={4}>
-          <h1>{props.fields.title}</h1>
+          <Typography variant="h1">{props.fields.title}</Typography>
         </Grid>
         <Grid item md={7}>
           {faqData.map((item, index) => {
@@ -39,7 +40,12 @@ const Faq = (props: FaqEntry) => {
             }
 
             return (
-              <Accordion expanded={openMap?.[index] ?? false} onChange={handleChange} key={item.question}>
+              <Accordion
+                className={css.accordion}
+                expanded={openMap?.[index] ?? false}
+                onChange={handleChange}
+                key={item.question}
+              >
                 <AccordionSummary expandIcon={openMap?.[index] ? <MinusIcon /> : <PlusIcon />}>
                   <Typography variant="h4">{item.question}</Typography>
                 </AccordionSummary>

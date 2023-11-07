@@ -1,10 +1,10 @@
 import { Button, Chip, Container, Grid, Typography } from '@mui/material'
-import Image from 'next/image'
 import Link from 'next/link'
 import css from './styles.module.css'
 import type { TypeHeroSkeleton } from '@/contentful/types'
 import type { Entry } from 'contentful'
 import { isAsset, isEntryTypeButton } from '@/lib/typeGuards'
+import layoutCss from '@/components/common/styles.module.css'
 
 type HeroEntry = Entry<TypeHeroSkeleton, undefined, string>
 
@@ -12,9 +12,9 @@ const Hero = (props: HeroEntry) => {
   const { caption, title, description, image, button } = props.fields
 
   return (
-    <Container>
-      <Grid container justifyContent="space-between">
-        <Grid item md={6} gap={24} className={css.textBlock}>
+    <Container className={layoutCss.containerTiny}>
+      <Grid container justifyContent="space-between" gap={10}>
+        <Grid item md={5} className={css.textBlock}>
           {caption && (
             <Chip
               label={
@@ -43,7 +43,7 @@ const Hero = (props: HeroEntry) => {
 
         {isAsset(image) && image.fields.file?.url ? (
           <Grid item md={5}>
-            <Image src={image.fields.file.url} alt={`Cover Image for ${title}`} width="400" height="400" />
+            <img src={image.fields.file.url} alt={`Cover Image for ${title}`} />
           </Grid>
         ) : undefined}
       </Grid>

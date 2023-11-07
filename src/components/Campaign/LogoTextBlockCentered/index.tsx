@@ -19,15 +19,15 @@ const LogoTextBlockCentered = (props: LogoTextBlockCenteredEntry) => {
         {isAsset(logo) && logo.fields.file?.url ? (
           <Image src={logo.fields.file.url} alt={`Cover Image for ${title}`} width="84" height="84" />
         ) : undefined}
-        <Typography className={css.cta}>{cta}</Typography>
+        <Typography variant="h4" className={css.cta}>
+          {cta}
+        </Typography>
 
-        <Typography variant="h1" mb={4} textAlign="center">
+        <Typography variant="h1" textAlign="center">
           {title}
         </Typography>
 
-        <Typography variant="h4" mb={5} color="primary.light">
-          {description}
-        </Typography>
+        <Typography color="primary.light">{description}</Typography>
 
         {isEntryTypeButton(button) ? (
           <Link href={button.fields.btnHref} target="_blank" rel="noreferrer" passHref>

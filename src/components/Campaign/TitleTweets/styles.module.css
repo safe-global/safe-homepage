@@ -1,0 +1,41 @@
+.cta {
+  margin-bottom: 40px;
+  text-align: center;
+  background: linear-gradient(260.13deg, #12ff80 1.24%, #5fddff 102.14%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.tweetsGrid {
+  padding-left: 16px;
+  padding-right: 16px;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+}
+
+.tweetsGrid > * {
+  scroll-snap-align: center;
+  height: fit-content;
+  flex-shrink: 0;
+  width: 300px;
+  pointer-events: auto;
+}
+
+@media (min-width: 900px) {
+  .tweetsGrid {
+    justify-content: center;
+    overflow-x: hidden;
+  }
+
+  .tweetsGrid img:nth-of-type(2n) {
+    margin-top: 96px;
+  }
+}

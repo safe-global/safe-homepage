@@ -20,8 +20,10 @@ const TitleTweets = (props: TitleTweetsEntry) => {
   return (
     <>
       <Container className={layoutCss.containerMedium}>
-        <Typography className={css.cta}>{cta}</Typography>
-        <Typography variant="h1" textAlign="center" mb="60px">
+        <Typography variant="h4" className={css.cta}>
+          {cta}
+        </Typography>
+        <Typography variant="h2" className={css.title}>
           {title}
         </Typography>
       </Container>
