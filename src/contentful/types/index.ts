@@ -13,6 +13,7 @@ export type {
   TypeLogoTextBlockCenteredFields,
   TypeLogoTextBlockCenteredSkeleton,
 } from './TypeLogoTextBlockCentered'
+export type { TypeRoundCardGrid, TypeRoundCardGridFields, TypeRoundCardGridSkeleton } from './TypeRoundCardGrid'
 export type { TypeStepListImage, TypeStepListImageFields, TypeStepListImageSkeleton } from './TypeStepListImage'
 export type {
   TypeTextBlockListCentered,

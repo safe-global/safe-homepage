@@ -1,0 +1,40 @@
+.card {
+  border: 1px solid var(--mui-palette-border-main);
+  border-radius: 24px;
+  padding: 24px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.image {
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image > img {
+  width: 75%;
+}
+
+.text {
+  flex-shrink: 0;
+}
+
+@media (min-width: 900px) {
+  .card {
+    height: 400px;
+    padding: 36px;
+  }
+
+  .image {
+    height: 188px;
+  }
+
+  .image > img {
+    width: 60%;
+  }
+}

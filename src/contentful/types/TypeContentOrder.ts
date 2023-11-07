@@ -3,7 +3,13 @@ import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleC
 export interface TypeContentOrderFields {
   componentName: EntryFieldTypes.Array<
     EntryFieldTypes.Symbol<
-      'faq' | 'hero' | 'logoTextBlockBanner' | 'logoTextBlockCentered' | 'stepListImage' | 'textBlockListCentered'
+      | 'faq'
+      | 'hero'
+      | 'logoTextBlockBanner'
+      | 'logoTextBlockCentered'
+      | 'roundCardGrid'
+      | 'stepListImage'
+      | 'textBlockListCentered'
     >
   >
 }
