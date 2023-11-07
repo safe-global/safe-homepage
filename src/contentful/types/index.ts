@@ -20,3 +20,8 @@ export type {
   TypeTextBlockListCenteredFields,
   TypeTextBlockListCenteredSkeleton,
 } from './TypeTextBlockListCentered'
+export type {
+  TypeTitleSpaceBetweenGrid,
+  TypeTitleSpaceBetweenGridFields,
+  TypeTitleSpaceBetweenGridSkeleton,
+} from './TypeTitleSpaceBetweenGrid'

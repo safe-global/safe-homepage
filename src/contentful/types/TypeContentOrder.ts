@@ -10,6 +10,7 @@ export interface TypeContentOrderFields {
       | 'roundCardGrid'
       | 'stepListImage'
       | 'textBlockListCentered'
+      | 'titleSpaceBetweenGrid'
     >
   >
 }
