@@ -1,6 +1,4 @@
-import { Container } from '@mui/material'
 import type { InferGetStaticPropsType, NextPage } from 'next'
-import layoutCss from '@/components/common/styles.module.css'
 import client from '@/lib/contentful'
 import type { TypeContentOrderSkeleton } from '@/contentful/types'
 import { capitalizeFirstLetter } from '@/lib/capitalizeFirstLetter'
@@ -10,7 +8,7 @@ const NotFoundComponent = () => <div>Component not found</div>
 
 const Campaigns: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ content, fetchedEntries }) => {
   return (
-    <Container className={layoutCss.containerTiny}>
+    <div>
       {fetchedEntries.map((entry, index) => {
         const campaignComponentName = `Campaign/${capitalizeFirstLetter(content[index])}`
 
@@ -18,7 +16,7 @@ const Campaigns: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ c
 
         return <Component {...entry.items[0]} key={content[index]} />
       })}
-    </Container>
+    </div>
   )
 }
 

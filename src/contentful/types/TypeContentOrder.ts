@@ -11,6 +11,7 @@ export interface TypeContentOrderFields {
       | 'stepListImage'
       | 'textBlockListCentered'
       | 'titleSpaceBetweenGrid'
+      | 'titleTweets'
     >
   >
 }

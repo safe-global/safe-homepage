@@ -25,3 +25,4 @@ export type {
   TypeTitleSpaceBetweenGridFields,
   TypeTitleSpaceBetweenGridSkeleton,
 } from './TypeTitleSpaceBetweenGrid'
+export type { TypeTitleTweets, TypeTitleTweetsFields, TypeTitleTweetsSkeleton } from './TypeTitleTweets'

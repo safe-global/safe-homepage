@@ -5,6 +5,7 @@ import css from './styles.module.css'
 import type { Entry } from 'contentful'
 import type { TypeRoundCardGridSkeleton } from '@/contentful/types'
 import { isEntryTypeButton } from '@/lib/typeGuards'
+import layoutCss from '@/components/common/styles.module.css'
 
 type RoundCardType = {
   image: {
@@ -45,7 +46,7 @@ const RoundCardGrid = (props: RoundCardGridEntry) => {
     : undefined
 
   return (
-    <Container>
+    <Container className={layoutCss.containerMedium}>
       <HeaderCTA title={title} text={text} link={headerLink} />
 
       {images ? (
