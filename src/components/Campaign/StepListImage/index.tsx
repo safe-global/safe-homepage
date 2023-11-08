@@ -12,7 +12,8 @@ const StepListImage = (props: StepListImageEntry) => {
 
   return (
     <Container>
-      <Grid container justifyContent="space-between" marginTop={6} gap={10}>
+      <Grid container className={css.gridContainer}>
+        <div className={css.spot} />
         <Grid item md={5} className={css.stepListBlock}>
           <List component="ol" className={css.listWrapper}>
             {steps.map((item: any, index: number) => (

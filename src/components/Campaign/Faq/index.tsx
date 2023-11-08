@@ -25,7 +25,8 @@ const Faq = (props: FaqEntry) => {
 
   return (
     <Container className={layoutCss.containerMedium}>
-      <Grid container>
+      <Grid container position="relative">
+        <div className={css.spot} />
         <Grid item md={1} />
         <Grid item md={4}>
           <Typography variant="h1">{props.fields.title}</Typography>

@@ -1,3 +1,21 @@
+.gridContainer {
+  justify-content: space-between;
+  gap: 80px;
+  margin-top: 48px;
+  position: relative;
+}
+
+.spot {
+  position: absolute;
+  right: -35px;
+  top: -110px;
+  z-index: -1;
+  width: 800px;
+  height: 800px;
+  background-image: radial-gradient(rgba(18, 255, 128, 0.3), rgba(18, 19, 18, 0.15) 60%, rgba(18, 19, 18, 1) 100%);
+  filter: blur(30px);
+}
+
 .stepListBlock {
   display: flex;
   flex-direction: column;

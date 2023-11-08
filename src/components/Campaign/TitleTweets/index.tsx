@@ -20,12 +20,13 @@ const TitleTweets = (props: TitleTweetsEntry) => {
   return (
     <>
       <Container className={layoutCss.containerMedium}>
-        <Typography variant="h4" className={css.cta}>
-          {cta}
-        </Typography>
-        <Typography variant="h2" className={css.title}>
-          {title}
-        </Typography>
+        <div className={css.titleWrapper}>
+          <div className={css.spot} />
+          <Typography variant="h4" className={css.cta}>
+            {cta}
+          </Typography>
+          <Typography variant="h2">{title}</Typography>
+        </div>
       </Container>
 
       <div className={css.tweetsGrid}>

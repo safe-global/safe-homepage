@@ -1,23 +1,10 @@
 import type { InferGetStaticPropsType, NextPage } from 'next'
 import client from '@/lib/contentful'
 import type { TypeContentOrderSkeleton } from '@/contentful/types'
-import { capitalizeFirstLetter } from '@/lib/capitalizeFirstLetter'
-import getComponentByName from '@/lib/getComponentByName'
+import SocialLogin from '@/components/Campaign/SocialLogin'
 
-const NotFoundComponent = () => <div>Component not found</div>
-
-const Campaigns: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ content, fetchedEntries }) => {
-  return (
-    <div>
-      {fetchedEntries.map((entry, index) => {
-        const campaignComponentName = `Campaign/${capitalizeFirstLetter(content[index])}`
-
-        const Component = getComponentByName(campaignComponentName, NotFoundComponent)
-
-        return <Component {...entry.items[0]} key={content[index]} />
-      })}
-    </div>
-  )
+const Campaigns: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (props) => {
+  return <SocialLogin {...props} />
 }
 
 export const getStaticProps = async () => {
@@ -31,8 +18,8 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      content: content,
-      fetchedEntries: fetchedEntries,
+      content,
+      fetchedEntries,
     },
   }
 }

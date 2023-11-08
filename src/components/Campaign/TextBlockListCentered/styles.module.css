@@ -1,3 +1,14 @@
+.spot {
+  position: absolute;
+  left: -200px;
+  top: -50px;
+  z-index: -1;
+  width: 600px;
+  height: 600px;
+  background-image: radial-gradient(rgba(18, 255, 128, 0.3), rgba(18, 19, 18, 0.15) 60%, rgba(18, 19, 18, 1) 100%);
+  filter: blur(30px);
+}
+
 .listItemIcon {
   border-radius: 50%;
   text-align: center;

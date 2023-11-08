@@ -50,7 +50,8 @@ const RoundCardGrid = (props: RoundCardGridEntry) => {
       <HeaderCTA title={title} text={text} link={headerLink} />
 
       {images ? (
-        <Grid container spacing={4} mt={4}>
+        <Grid container className={css.gridContainer} spacing={4}>
+          <div className={css.spot} />
           {Array.isArray(items) &&
             items.map((item, index: number) => (
               <Grid item xs={12} md={6} key={index}>

@@ -16,6 +16,7 @@ const LogoTextBlockCentered = (props: LogoTextBlockCenteredEntry) => {
   return (
     <Container className={layoutCss.containerMedium}>
       <div className={css.container}>
+        <div className={css.spot} />
         {isAsset(logo) && logo.fields.file?.url ? (
           <Image src={logo.fields.file.url} alt={`Cover Image for ${title}`} width="84" height="84" />
         ) : undefined}

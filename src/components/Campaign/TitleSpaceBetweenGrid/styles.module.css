@@ -1,8 +1,20 @@
 .wrapper {
+  position: relative;
   align-items: center;
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+
+.spot {
+  position: absolute;
+  right: -150px;
+  top: -330px;
+  z-index: -1;
+  width: 600px;
+  height: 600px;
+  background-image: radial-gradient(rgba(18, 255, 128, 0.3), rgba(18, 19, 18, 0.15) 60%, rgba(18, 19, 18, 1) 100%);
+  filter: blur(50px);
 }
 
 .item {

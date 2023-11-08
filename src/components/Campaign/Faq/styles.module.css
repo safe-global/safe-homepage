@@ -1,3 +1,14 @@
+.spot {
+  position: absolute;
+  left: -300px;
+  top: -150px;
+  z-index: -1;
+  width: 800px;
+  height: 800px;
+  background-image: radial-gradient(rgba(18, 255, 128, 0.3), rgba(18, 19, 18, 1) 80%);
+  filter: blur(50px);
+}
+
 .accordion {
   background-color: unset;
   box-shadow: none;

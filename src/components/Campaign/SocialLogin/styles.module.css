@@ -1,0 +1,9 @@
+.pageContainer {
+  overflow: hidden;
+}
+
+@media (min-width: 900px) {
+  .pageContainer {
+    overflow: visible;
+  }
+}

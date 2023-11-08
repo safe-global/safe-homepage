@@ -13,7 +13,8 @@ const TextBlockListCentered = (props: TextBlockListCenteredEntry) => {
 
   return (
     <Container className={layoutCss.containerMedium}>
-      <Grid container>
+      <Grid container position="relative">
+        <div className={css.spot} />
         {/* offset column */}
         <Grid item lg={1} />
         <Grid item lg={6}>

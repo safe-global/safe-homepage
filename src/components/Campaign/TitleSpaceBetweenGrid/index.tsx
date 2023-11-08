@@ -18,6 +18,7 @@ const TitleSpaceBetweenGrid = (props: TitleSpaceBetweenGridEntry) => {
 
       {Array.isArray(stats) ? (
         <div className={css.wrapper}>
+          <div className={css.spot} />
           {stats.map((item) => (
             <div className={css.item} key={item.text}>
               <Typography variant="h4" color="text.secondary" textAlign="center" mb="20px">

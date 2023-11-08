@@ -13,7 +13,8 @@ const Hero = (props: HeroEntry) => {
 
   return (
     <Container className={layoutCss.containerTiny}>
-      <Grid container justifyContent="space-between" gap={10}>
+      <Grid container className={css.gridContainer}>
+        <div className={css.spot} />
         <Grid item md={5} className={css.textBlock}>
           {caption && (
             <Chip
