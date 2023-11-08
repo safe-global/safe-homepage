@@ -13,7 +13,7 @@ const TitleTweets = (props: TitleTweetsEntry) => {
   const tweetsData = Array.isArray(tweets)
     ? tweets.map((tweet: any) => ({
         src: tweet.fields.file.url,
-        alt: tweet.fields.file.description,
+        alt: tweet.fields.description,
       }))
     : undefined
 

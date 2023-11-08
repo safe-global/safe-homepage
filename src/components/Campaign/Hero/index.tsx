@@ -5,6 +5,7 @@ import type { TypeHeroSkeleton } from '@/contentful/types'
 import type { Entry } from 'contentful'
 import { isAsset, isEntryTypeButton } from '@/lib/typeGuards'
 import layoutCss from '@/components/common/styles.module.css'
+import RichText from '@/components/Campaign/RichText'
 
 type HeroEntry = Entry<TypeHeroSkeleton, undefined, string>
 
@@ -27,8 +28,8 @@ const Hero = (props: HeroEntry) => {
               variant="outlined"
             />
           )}
-          <Typography variant="h1" mb={4}>
-            {title}
+          <Typography variant="h1" mb={4} className={css.title}>
+            <RichText {...title} />
           </Typography>
           <Typography variant="h4" mb={5} color="primary.light">
             {description}

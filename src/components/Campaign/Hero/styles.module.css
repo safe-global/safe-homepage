@@ -29,3 +29,7 @@
   border-color: var(--mui-palette-text-primary);
   width: fit-content;
 }
+
+.title p {
+  margin: 0;
+}

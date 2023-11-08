@@ -9,6 +9,18 @@
   filter: blur(30px);
 }
 
+.title {
+  margin-bottom: 32px;
+}
+
+.title p {
+  margin: 0;
+}
+
+.title u {
+  color: var(--mui-palette-primary-main);
+}
+
 .listItemIcon {
   border-radius: 50%;
   text-align: center;

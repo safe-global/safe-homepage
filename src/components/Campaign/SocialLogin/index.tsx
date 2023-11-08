@@ -2,7 +2,7 @@ import React from 'react'
 import { capitalizeFirstLetter } from '@/lib/capitalizeFirstLetter'
 import getComponentByName from '@/lib/getComponentByName'
 import type { InferGetStaticPropsType } from 'next'
-import type { getStaticProps } from '@/pages/campaigns/social-login'
+import type { getStaticProps } from '@/pages/campaigns/social-login-gnosis'
 import css from './styles.module.css'
 
 const NotFoundComponent = () => <div>Component not found</div>

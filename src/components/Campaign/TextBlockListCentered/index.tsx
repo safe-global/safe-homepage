@@ -5,6 +5,7 @@ import css from './styles.module.css'
 import layoutCss from '@/components/common/styles.module.css'
 import type { Entry } from 'contentful'
 import type { TypeTextBlockListCenteredSkeleton } from '@/contentful/types'
+import RichText from '@/components/Campaign/RichText'
 
 type TextBlockListCenteredEntry = Entry<TypeTextBlockListCenteredSkeleton, undefined, string>
 
@@ -18,8 +19,8 @@ const TextBlockListCentered = (props: TextBlockListCenteredEntry) => {
         {/* offset column */}
         <Grid item lg={1} />
         <Grid item lg={6}>
-          <Typography variant="h1" mb={4}>
-            {title}
+          <Typography variant="h1" className={css.title}>
+            <RichText {...title} />
           </Typography>
           <Typography mb={5} color="primary.light" width={{ sm: '100%', lg: '66.7%' }}>
             {description}

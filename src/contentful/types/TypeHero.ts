@@ -3,10 +3,11 @@ import type { TypeButtonSkeleton } from './TypeButton'
 
 export interface TypeHeroFields {
   caption?: EntryFieldTypes.Symbol
-  title: EntryFieldTypes.Symbol
+  titleSimple?: EntryFieldTypes.Symbol
   description?: EntryFieldTypes.Text
   image: EntryFieldTypes.AssetLink
   button?: EntryFieldTypes.EntryLink<TypeButtonSkeleton>
+  title: EntryFieldTypes.RichText
 }
 
 export type TypeHeroSkeleton = EntrySkeletonType<TypeHeroFields, 'hero'>

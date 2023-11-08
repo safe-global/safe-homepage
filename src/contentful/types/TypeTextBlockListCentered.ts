@@ -1,9 +1,10 @@
 import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from 'contentful'
 
 export interface TypeTextBlockListCenteredFields {
-  title: EntryFieldTypes.Symbol
+  titleSimple?: EntryFieldTypes.Symbol
   description?: EntryFieldTypes.Text
   listItems: EntryFieldTypes.Array<EntryFieldTypes.Symbol>
+  title: EntryFieldTypes.RichText
 }
 
 export type TypeTextBlockListCenteredSkeleton = EntrySkeletonType<
