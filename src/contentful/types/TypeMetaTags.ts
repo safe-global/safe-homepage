@@ -1,0 +1,13 @@
+import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from 'contentful'
+
+export interface TypeMetaTagsFields {
+  title: EntryFieldTypes.Symbol
+  description: EntryFieldTypes.Text
+}
+
+export type TypeMetaTagsSkeleton = EntrySkeletonType<TypeMetaTagsFields, 'metaTags'>
+export type TypeMetaTags<Modifiers extends ChainModifiers, Locales extends LocaleCode> = Entry<
+  TypeMetaTagsSkeleton,
+  Modifiers,
+  Locales
+>

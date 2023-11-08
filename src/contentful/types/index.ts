@@ -13,6 +13,7 @@ export type {
   TypeLogoTextBlockCenteredFields,
   TypeLogoTextBlockCenteredSkeleton,
 } from './TypeLogoTextBlockCentered'
+export type { TypeMetaTags, TypeMetaTagsFields, TypeMetaTagsSkeleton } from './TypeMetaTags'
 export type { TypeRoundCardGrid, TypeRoundCardGridFields, TypeRoundCardGridSkeleton } from './TypeRoundCardGrid'
 export type { TypeStepListImage, TypeStepListImageFields, TypeStepListImageSkeleton } from './TypeStepListImage'
 export type {

@@ -7,6 +7,7 @@ export interface TypeContentOrderFields {
       | 'hero'
       | 'logoTextBlockBanner'
       | 'logoTextBlockCentered'
+      | 'metaTags'
       | 'roundCardGrid'
       | 'stepListImage'
       | 'textBlockListCentered'
