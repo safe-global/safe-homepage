@@ -4,18 +4,14 @@ import css from './styles.module.css'
 import type { Entry } from 'contentful'
 import type { TypeTitleTweetsSkeleton } from '@/contentful/types'
 import layoutCss from '@/components/common/styles.module.css'
+import { createImageData } from '@/lib/createImageData'
 
 type TitleTweetsEntry = Entry<TypeTitleTweetsSkeleton, undefined, string>
 
 const TitleTweets = (props: TitleTweetsEntry) => {
   const { title, cta, tweets } = props.fields
 
-  const tweetsData = Array.isArray(tweets)
-    ? tweets.map((tweet: any) => ({
-        src: tweet.fields.file.url,
-        alt: tweet.fields.description,
-      }))
-    : undefined
+  const tweetsData = createImageData(tweets)
 
   return (
     <>

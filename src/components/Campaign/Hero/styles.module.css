@@ -33,3 +33,28 @@
 .title p {
   margin: 0;
 }
+
+.heroFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tagline {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+}
+
+.logos {
+  margin: 32px 0;
+  display: flex;
+  gap: 48px;
+}
+
+.chains {
+  margin: 16px 0;
+  display: flex;
+  margin-right: 16px;
+}

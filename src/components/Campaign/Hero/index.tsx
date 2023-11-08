@@ -6,11 +6,15 @@ import type { Entry } from 'contentful'
 import { isAsset, isEntryTypeButton } from '@/lib/typeGuards'
 import layoutCss from '@/components/common/styles.module.css'
 import RichText from '@/components/Campaign/RichText'
+import { createImageData } from '@/lib/createImageData'
 
 type HeroEntry = Entry<TypeHeroSkeleton, undefined, string>
 
 const Hero = (props: HeroEntry) => {
-  const { caption, title, description, image, button } = props.fields
+  const { caption, title, description, image, button, trustedBy, hasMoreComing, availableOn } = props.fields
+
+  const trustedByData = createImageData(trustedBy)
+  const availableOnData = createImageData(availableOn)
 
   return (
     <Container className={layoutCss.containerTiny}>
@@ -45,10 +49,35 @@ const Hero = (props: HeroEntry) => {
 
         {isAsset(image) && image.fields.file?.url ? (
           <Grid item md={5}>
-            <img src={image.fields.file.url} alt={`Cover Image for ${title}`} />
+            <img src={image.fields.file.url} alt={`Cover image for ${image.fields.description}`} />
           </Grid>
         ) : undefined}
       </Grid>
+
+      <div className={css.heroFooter}>
+        <div>
+          <Typography className={css.tagline}>Trusted by the best</Typography>
+          <div className={css.logos}>
+            {trustedByData?.map((logo, index) => (
+              <img key={index} src={logo.src} alt={logo.alt} />
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <Typography className={css.tagline}>Available on</Typography>
+          <div className={css.chains}>
+            {availableOnData?.map((item, index) => (
+              <img key={index} src={item.src} alt={item.alt} />
+            ))}
+          </div>
+          {hasMoreComing ? (
+            <Typography className={css.tagline} color="primary.light">
+              More coming soon
+            </Typography>
+          ) : undefined}
+        </div>
+      </div>
     </Container>
   )
 }

@@ -6,6 +6,7 @@ import type { Entry } from 'contentful'
 import type { TypeRoundCardGridSkeleton } from '@/contentful/types'
 import { isEntryTypeButton } from '@/lib/typeGuards'
 import layoutCss from '@/components/common/styles.module.css'
+import { createImageData } from '@/lib/createImageData'
 
 type RoundCardType = {
   image: {
@@ -38,12 +39,7 @@ const RoundCardGrid = (props: RoundCardGridEntry) => {
   const { title, text, link, items, cardImages } = props.fields
   const headerLink = isEntryTypeButton(link) ? { href: link.fields.btnHref, title: link.fields.btnCopy } : undefined
 
-  const images = Array.isArray(cardImages)
-    ? cardImages.map((image: any) => ({
-        url: image.fields.file.url,
-        alt: image.fields.description,
-      }))
-    : undefined
+  const images = createImageData(cardImages)
 
   return (
     <Container className={layoutCss.containerMedium}>
