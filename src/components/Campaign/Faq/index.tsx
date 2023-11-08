@@ -46,6 +46,7 @@ const Faq = (props: FaqEntry) => {
                 expanded={openMap?.[index] ?? false}
                 onChange={handleChange}
                 key={item.question}
+                disableGutters
               >
                 <AccordionSummary expandIcon={openMap?.[index] ? <MinusIcon /> : <PlusIcon />}>
                   <Typography variant="h4">{item.question}</Typography>

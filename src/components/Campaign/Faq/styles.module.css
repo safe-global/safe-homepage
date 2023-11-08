@@ -12,6 +12,11 @@
 .accordion {
   background-color: unset;
   box-shadow: none;
+  border-bottom: 1px solid var(--mui-palette-border-main);
+}
+
+.accordion::before {
+  display: none;
 }
 
 .accordion :global .MuiAccordionSummary-root {
@@ -23,5 +28,5 @@
 }
 
 .accordion :global .MuiAccordionDetails-root {
-  padding: 0 0 16px;
+  padding: 0 0 32px;
 }
