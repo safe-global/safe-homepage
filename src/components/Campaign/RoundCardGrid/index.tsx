@@ -10,7 +10,7 @@ import { createImageData } from '@/lib/createImageData'
 
 type RoundCardType = {
   image: {
-    url: string
+    src: string
     alt: string
   }
   title: string
@@ -21,7 +21,7 @@ const RoundCard = (props: RoundCardType) => {
   return (
     <div className={css.card}>
       <div className={css.image}>
-        <img src={props.image.url} alt={props.image.alt} />
+        <img src={props.image.src} alt={props.image.alt} />
       </div>
       <div className={css.text}>
         <Typography variant="h4" mb={1}>
