@@ -14,6 +14,8 @@ import type { TypeFaqSkeleton } from '@/contentful/types'
 import type { Entry } from 'contentful'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
+import BackgroundImage from '@/public/images/Campaigns/faq-bg.png'
+import Image from 'next/image'
 
 type FaqEntry = Entry<TypeFaqSkeleton, undefined, string>
 
@@ -24,42 +26,52 @@ const Faq = (props: FaqEntry) => {
   if (!Array.isArray(faqData)) return null
 
   return (
-    <Container className={layoutCss.containerMedium}>
-      <Grid container position="relative">
-        <div className={css.spot} />
-        <Grid item md={1} />
-        <Grid item md={4}>
-          <Typography variant="h1">{props.fields.title}</Typography>
-        </Grid>
-        <Grid item md={7}>
-          {faqData.map((item, index) => {
-            const handleChange: AccordionProps['onChange'] = (_, expanded) => {
-              setOpenMap((prev) => ({
-                ...prev,
-                [index]: expanded,
-              }))
-            }
+    <>
+      <Image className={css.bg} src={BackgroundImage} alt="blocks background" />
+      <Container className={layoutCss.containerMedium}>
+        <Grid container className={css.gridContainer}>
+          <div className={css.spot} />
+          <Grid item md={1} />
 
-            return (
-              <Accordion
-                className={css.accordion}
-                expanded={openMap?.[index] ?? false}
-                onChange={handleChange}
-                key={item.question}
-                disableGutters
-              >
-                <AccordionSummary expandIcon={openMap?.[index] ? <MinusIcon /> : <PlusIcon />}>
-                  <Typography variant="h4">{item.question}</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography>{item.answer}</Typography>
-                </AccordionDetails>
-              </Accordion>
-            )
-          })}
+          <Grid item md={2} width="100%">
+            <Typography variant="h1" className={css.title}>
+              {props.fields.title}
+            </Typography>
+          </Grid>
+
+          <Grid item md={2} />
+
+          <Grid item md={7}>
+            {faqData.map((item, index) => {
+              const handleChange: AccordionProps['onChange'] = (_, expanded) => {
+                setOpenMap((prev) => ({
+                  ...prev,
+                  [index]: expanded,
+                }))
+              }
+
+              return (
+                <Accordion
+                  className={css.accordion}
+                  expanded={openMap?.[index] ?? false}
+                  onChange={handleChange}
+                  key={item.question}
+                  disableGutters
+                  square
+                >
+                  <AccordionSummary expandIcon={openMap?.[index] ? <MinusIcon /> : <PlusIcon />}>
+                    <Typography variant="h4">{item.question}</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Typography>{item.answer}</Typography>
+                  </AccordionDetails>
+                </Accordion>
+              )
+            })}
+          </Grid>
         </Grid>
-      </Grid>
-    </Container>
+      </Container>
+    </>
   )
 }
 

@@ -1,3 +1,11 @@
+.bg {
+  margin-bottom: -225px;
+}
+
+.gridContainer {
+  position: relative;
+}
+
 .spot {
   position: absolute;
   left: -300px;
@@ -7,6 +15,10 @@
   height: 800px;
   background-image: radial-gradient(rgba(18, 255, 128, 0.3), rgba(18, 19, 18, 1) 80%);
   filter: blur(50px);
+}
+
+.title {
+  text-align: center;
 }
 
 .accordion {
@@ -29,4 +41,12 @@
 
 .accordion :global .MuiAccordionDetails-root {
   padding: 0 0 32px;
+}
+
+@media (min-width: 900px) {
+  .bg {
+    position: absolute;
+    left: 0px;
+    width: 66%;
+  }
 }
