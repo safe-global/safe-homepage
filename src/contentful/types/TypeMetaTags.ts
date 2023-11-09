@@ -3,6 +3,7 @@ import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleC
 export interface TypeMetaTagsFields {
   title: EntryFieldTypes.Symbol
   description: EntryFieldTypes.Text
+  image?: EntryFieldTypes.AssetLink
 }
 
 export type TypeMetaTagsSkeleton = EntrySkeletonType<TypeMetaTagsFields, 'metaTags'>
