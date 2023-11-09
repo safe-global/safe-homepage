@@ -36,8 +36,7 @@
 
 .heroFooter {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .tagline {
@@ -51,10 +50,18 @@
   margin: 32px 0;
   display: flex;
   gap: 48px;
+  flex-wrap: wrap;
 }
 
 .chains {
   margin: 16px 0;
   display: flex;
   margin-right: 16px;
+}
+
+@media (min-width: 900px) {
+  .heroFooter {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }

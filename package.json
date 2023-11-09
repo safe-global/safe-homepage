@@ -11,7 +11,8 @@
     "start": "next dev -p 8000",
     "test": "jest",
     "test:ci": "yarn test --ci --coverage --json --watchAll=false --testLocationInResults --outputFile=jest.results.json",
-    "types:contentful": "export $(cat .env | awk '!/^\\s*#/' | awk '!/^\\s*$/'); cf-content-types-generator --spaceId $CONTENTFUL_SPACE_ID --token $CONTENTFUL_MANAGEMENT_TOKEN -o src/contentful/types -X && prettier --write src/contentful/types"
+    "types:format": "export $(cat .env | awk '/^CONTENTFUL_/ && !/^\\s*#/' | awk '!/^\\s*$/')",
+    "types:cf": "cf-content-types-generator --spaceId $CONTENTFUL_SPACE_ID --token $CONTENTFUL_MANAGEMENT_TOKEN -o src/contentful/types -X"
   },
   "pre-commit": [
     "lint"
