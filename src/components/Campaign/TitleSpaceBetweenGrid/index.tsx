@@ -4,11 +4,17 @@ import css from './styles.module.css'
 import layoutCss from '@/components/common/styles.module.css'
 import type { Entry } from 'contentful'
 import type { TypeTitleSpaceBetweenGridSkeleton } from '@/contentful/types'
+import { isEntryTypeCardGridItem } from '@/lib/typeGuards'
 
 type TitleSpaceBetweenGridEntry = Entry<TypeTitleSpaceBetweenGridSkeleton, undefined, string>
 
 const TitleSpaceBetweenGrid = (props: TitleSpaceBetweenGridEntry) => {
-  const { title, stats } = props.fields
+  const { title, items } = props.fields
+
+  const stats = items.filter(isEntryTypeCardGridItem).map((item) => ({
+    title: item.fields.title,
+    text: item.fields.text,
+  }))
 
   return (
     <Container className={layoutCss.containerShort}>
@@ -20,12 +26,12 @@ const TitleSpaceBetweenGrid = (props: TitleSpaceBetweenGridEntry) => {
         <div className={css.wrapper}>
           <div className={css.spot} />
           {stats.map((item) => (
-            <div className={css.item} key={item.text}>
+            <div className={css.item} key={item.title}>
               <Typography variant="h4" color="text.secondary" textAlign="center" mb="20px">
-                {item.text}
+                {item.title}
               </Typography>
               <Typography variant="h1" className={css.value}>
-                {item.value}
+                {item.text}
               </Typography>
             </div>
           ))}

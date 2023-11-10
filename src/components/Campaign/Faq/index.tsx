@@ -16,14 +16,19 @@ import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 import BackgroundImage from '@/public/images/Campaigns/faq-bg.png'
 import Image from 'next/image'
+import { isEntryTypeFaqEntry } from '@/lib/typeGuards'
 
 type FaqEntry = Entry<TypeFaqSkeleton, undefined, string>
 
 const Faq = (props: FaqEntry) => {
   const [openMap, setOpenMap] = useState<Record<number, boolean>>()
 
-  const faqData = props.fields.list
-  if (!Array.isArray(faqData)) return null
+  const { title, items } = props.fields
+
+  const faqData = items.filter(isEntryTypeFaqEntry).map((item) => ({
+    question: item.fields.question,
+    answer: item.fields.answer,
+  }))
 
   return (
     <>
@@ -35,7 +40,7 @@ const Faq = (props: FaqEntry) => {
 
           <Grid item md={2} width="100%">
             <Typography variant="h1" className={css.title}>
-              {props.fields.title}
+              {title}
             </Typography>
           </Grid>
 
