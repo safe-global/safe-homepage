@@ -6,11 +6,11 @@ import { isAsset, isEntryTypeButton } from '@/lib/typeGuards'
 import type { Entry } from 'contentful'
 import Image from 'next/image'
 import Link from 'next/link'
-import type { TypeLogoTextBlockBannerSkeleton } from '@/contentful/types'
+import type { TypeTextBlockBannerSkeleton } from '@/contentful/types'
 
-type LogoTextBlockBannerEntry = Entry<TypeLogoTextBlockBannerSkeleton, undefined, string>
+type TextBlockBannerEntry = Entry<TypeTextBlockBannerSkeleton, undefined, string>
 
-const LogoTextBlockBanner = (props: LogoTextBlockBannerEntry) => {
+const TextBlockBanner = (props: TextBlockBannerEntry) => {
   const { logo, title, description, button } = props.fields
 
   return (
@@ -42,4 +42,4 @@ const LogoTextBlockBanner = (props: LogoTextBlockBannerEntry) => {
   )
 }
 
-export default LogoTextBlockBanner
+export default TextBlockBanner

@@ -2,13 +2,13 @@ import { Container, Typography } from '@mui/material'
 import React from 'react'
 import css from './styles.module.css'
 import type { Entry } from 'contentful'
-import type { TypeTitleTweetsSkeleton } from '@/contentful/types'
+import type { TypeTweetsSkeleton } from '@/contentful/types'
 import layoutCss from '@/components/common/styles.module.css'
 import { createImageData } from '@/lib/createImageData'
 
-type TitleTweetsEntry = Entry<TypeTitleTweetsSkeleton, undefined, string>
+type TweetsEntry = Entry<TypeTweetsSkeleton, undefined, string>
 
-const TitleTweets = (props: TitleTweetsEntry) => {
+const Tweets = (props: TweetsEntry) => {
   const { title, cta, tweets } = props.fields
 
   const tweetsData = createImageData(tweets)
@@ -34,4 +34,4 @@ const TitleTweets = (props: TitleTweetsEntry) => {
   )
 }
 
-export default TitleTweets
+export default Tweets

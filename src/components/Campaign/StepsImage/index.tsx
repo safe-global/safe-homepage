@@ -2,12 +2,12 @@ import React from 'react'
 import { Container, Grid, List, ListItem, ListItemText, Typography } from '@mui/material'
 import css from './styles.module.css'
 import type { Entry } from 'contentful'
-import type { TypeStepListImageSkeleton } from '@/contentful/types'
+import type { TypeStepsImageSkeleton } from '@/contentful/types'
 import { isAsset } from '@/lib/typeGuards'
 
-type StepListImageEntry = Entry<TypeStepListImageSkeleton, undefined, string>
+type StepsImageEntry = Entry<TypeStepsImageSkeleton, undefined, string>
 
-const StepListImage = (props: StepListImageEntry) => {
+const StepsImage = (props: StepsImageEntry) => {
   const { steps, image } = props.fields
 
   return (
@@ -35,4 +35,4 @@ const StepListImage = (props: StepListImageEntry) => {
   )
 }
 
-export default StepListImage
+export default StepsImage

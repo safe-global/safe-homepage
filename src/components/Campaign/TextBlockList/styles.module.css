@@ -1,3 +1,8 @@
+.gridContainer {
+  position: relative;
+  /* justify-content: space-between; */
+}
+
 .spot {
   position: absolute;
   left: -200px;

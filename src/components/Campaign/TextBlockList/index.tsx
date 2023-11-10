@@ -4,20 +4,20 @@ import GreenCircleCheckmarkIcon from '@/public/images/checkmark-circle.svg'
 import css from './styles.module.css'
 import layoutCss from '@/components/common/styles.module.css'
 import type { Entry } from 'contentful'
-import type { TypeTextBlockListCenteredSkeleton } from '@/contentful/types'
+import type { TypeTextBlockListSkeleton } from '@/contentful/types'
 import RichText from '@/components/Campaign/RichText'
 
-type TextBlockListCenteredEntry = Entry<TypeTextBlockListCenteredSkeleton, undefined, string>
+type TextBlockListEntry = Entry<TypeTextBlockListSkeleton, undefined, string>
 
-const TextBlockListCentered = (props: TextBlockListCenteredEntry) => {
-  const { title, description, listItems } = props.fields
+const TextBlockList = (props: TextBlockListEntry) => {
+  const { title, description, listItems, offset } = props.fields
 
   return (
     <Container className={layoutCss.containerMedium}>
-      <Grid container position="relative">
+      <Grid container className={css.gridContainer} position="relative">
         <div className={css.spot} />
         {/* offset column */}
-        <Grid item lg={1} />
+        <Grid item lg={offset} />
         <Grid item lg={6}>
           <Typography variant="h1" className={css.title}>
             <RichText {...title} />
@@ -26,7 +26,7 @@ const TextBlockListCentered = (props: TextBlockListCenteredEntry) => {
             {description}
           </Typography>
         </Grid>
-        <Grid item lg={5}>
+        <Grid item lg={6 - offset}>
           <List>
             {listItems.map((item: any, index: number) => (
               <ListItem key={index}>
@@ -43,4 +43,4 @@ const TextBlockListCentered = (props: TextBlockListCenteredEntry) => {
   )
 }
 
-export default TextBlockListCentered
+export default TextBlockList

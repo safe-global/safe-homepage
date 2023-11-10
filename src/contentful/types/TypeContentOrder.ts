@@ -5,14 +5,14 @@ export interface TypeContentOrderFields {
     EntryFieldTypes.Symbol<
       | 'faq'
       | 'hero'
-      | 'logoTextBlockBanner'
-      | 'logoTextBlockCentered'
       | 'metaTags'
       | 'roundCardGrid'
-      | 'stepListImage'
-      | 'textBlockListCentered'
+      | 'stepsImage'
+      | 'textBlockBanner'
+      | 'textBlockCentered'
+      | 'textBlockList'
       | 'titleSpaceBetweenGrid'
-      | 'titleTweets'
+      | 'tweets'
     >
   >
 }
