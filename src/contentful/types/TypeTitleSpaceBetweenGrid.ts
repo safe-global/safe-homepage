@@ -1,8 +1,9 @@
 import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from 'contentful'
+import type { TypeCardGridItemSkeleton } from './TypeCardGridItem'
 
 export interface TypeTitleSpaceBetweenGridFields {
   title: EntryFieldTypes.Symbol
-  stats?: EntryFieldTypes.Object<{ text: 'string'; value: 'string' }>
+  items: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeCardGridItemSkeleton>>
 }
 
 export type TypeTitleSpaceBetweenGridSkeleton = EntrySkeletonType<

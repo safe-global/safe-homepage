@@ -1,8 +1,9 @@
 import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from 'contentful'
+import type { TypeFaqEntrySkeleton } from './TypeFaqEntry'
 
 export interface TypeFaqFields {
   title: EntryFieldTypes.Symbol
-  list: EntryFieldTypes.Object<{ question: 'string'; answer: 'string' }>
+  items: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeFaqEntrySkeleton>>
 }
 
 export type TypeFaqSkeleton = EntrySkeletonType<TypeFaqFields, 'faq'>
