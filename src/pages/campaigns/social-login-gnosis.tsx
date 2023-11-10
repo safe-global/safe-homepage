@@ -10,7 +10,7 @@ const Campaigns: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (pro
 export const getStaticProps = async () => {
   const contentOrder = await client.getEntries<TypeContentOrderSkeleton>({ content_type: 'contentOrder' })
 
-  let content = [...contentOrder.items[0].fields.componentName]
+  const content = [...contentOrder.items[0].fields.componentName]
 
   const fetchedEntries = await Promise.all(
     content.map(async (content_type) => await client.getEntries({ content_type })),
