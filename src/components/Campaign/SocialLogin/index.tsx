@@ -1,21 +1,22 @@
 import React from 'react'
 import { capitalizeFirstLetter } from '@/lib/capitalizeFirstLetter'
 import getComponentByName from '@/lib/getComponentByName'
-import type { InferGetStaticPropsType } from 'next'
-import type { getStaticProps } from '@/pages/campaigns/social-login-gnosis'
 import css from './styles.module.css'
+import type { TypePageFields } from '@/contentful/types'
+import type { Entry } from 'contentful'
 
-const NotFoundComponent = () => <div>Component not found</div>
+const SocialLogin = (props: TypePageFields) => {
+  const content = props.content as unknown as Entry[]
 
-const SocialLogin = ({ content, fetchedEntries }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <div className={css.pageContainer}>
-      {fetchedEntries.map((entry, index) => {
-        const campaignComponentName = `Campaign/${capitalizeFirstLetter(content[index])}`
+      {content.map((item, index: number) => {
+        const contentType = item.sys.contentType.sys.id
+        const componentName = capitalizeFirstLetter(contentType)
 
-        const Component = getComponentByName(campaignComponentName, NotFoundComponent)
+        const Component = getComponentByName(`Campaign/${componentName}`, () => <></>)
 
-        return <Component {...entry.items[0]} key={content[index]} />
+        return <Component {...item} key={index} />
       })}
     </div>
   )
