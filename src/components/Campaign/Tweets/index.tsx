@@ -15,7 +15,7 @@ const Tweets = (props: TweetsEntry) => {
 
   return (
     <>
-      <Container className={layoutCss.containerMedium}>
+      <Container className={layoutCss.container}>
         <div className={css.titleWrapper}>
           <div className={css.spot} />
           <Typography variant="h4" className={css.cta}>

@@ -48,7 +48,7 @@ const Hero = (props: HeroEntry) => {
         </Grid>
 
         {isAsset(image) && image.fields.file?.url ? (
-          <Grid item md={5}>
+          <Grid item md={5} className={css.image}>
             <img src={image.fields.file.url} alt={`Cover image for ${image.fields.description}`} />
           </Grid>
         ) : undefined}

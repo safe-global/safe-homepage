@@ -17,7 +17,7 @@ const TitleSpaceBetweenGrid = (props: TitleSpaceBetweenGridEntry) => {
   }))
 
   return (
-    <Container className={layoutCss.containerShort}>
+    <Container className={layoutCss.container}>
       <Typography variant="h2" textAlign="center" mb="60px">
         {title}
       </Typography>

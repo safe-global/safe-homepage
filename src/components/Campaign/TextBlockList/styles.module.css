@@ -1,3 +1,7 @@
+.bg {
+  display: none;
+}
+
 .gridContainer {
   position: relative;
 }
@@ -9,8 +13,8 @@
   z-index: -1;
   width: 600px;
   height: 600px;
-  background-image: radial-gradient(rgba(18, 255, 128, 0.3), rgba(18, 19, 18, 0.15) 60%, rgba(18, 19, 18, 1) 100%);
-  filter: blur(30px);
+  background-image: radial-gradient(rgba(18, 255, 128, 0.5), rgba(18, 19, 18, 0.15) 60%, rgba(18, 19, 18, 1) 100%);
+  filter: blur(50px);
 }
 
 .title {
@@ -31,4 +35,13 @@
   margin-right: 10px;
   min-width: min-content;
   width: 24px;
+}
+
+@media (min-width: 900px) {
+  .bg {
+    display: block;
+    position: absolute;
+    left: 0px;
+    width: 66%;
+  }
 }

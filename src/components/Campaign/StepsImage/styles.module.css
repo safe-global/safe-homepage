@@ -1,6 +1,4 @@
 .gridContainer {
-  justify-content: space-between;
-  gap: 80px;
   margin-top: 48px;
   position: relative;
 }
@@ -12,8 +10,8 @@
   z-index: -1;
   width: 800px;
   height: 800px;
-  background-image: radial-gradient(rgba(18, 255, 128, 0.3), rgba(18, 19, 18, 0.15) 60%, rgba(18, 19, 18, 1) 100%);
-  filter: blur(30px);
+  background-image: radial-gradient(rgba(18, 255, 128, 0.5), rgba(18, 19, 18, 0.15) 60%, rgba(18, 19, 18, 1) 100%);
+  filter: blur(50px);
 }
 
 .stepListBlock {
@@ -49,4 +47,15 @@
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
+}
+
+.image {
+  margin-top: 80px;
+  max-width: 330px;
+}
+
+@media (min-width: 600px) {
+  .image {
+    margin-top: 0px;
+  }
 }

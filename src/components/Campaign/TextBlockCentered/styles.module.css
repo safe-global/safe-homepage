@@ -12,8 +12,8 @@
   z-index: -1;
   width: 400px;
   height: 400px;
-  background-image: radial-gradient(rgba(18, 255, 128, 0.3), rgba(18, 19, 18, 0.15) 60%, rgba(18, 19, 18, 1) 100%);
-  filter: blur(30px);
+  background-image: radial-gradient(rgba(18, 255, 128, 0.5), rgba(18, 19, 18, 0.15) 60%, rgba(18, 19, 18, 1) 100%);
+  filter: blur(50px);
 }
 
 .cta {

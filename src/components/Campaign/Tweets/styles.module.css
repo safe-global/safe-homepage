@@ -14,7 +14,7 @@
   z-index: -1;
   width: 700px;
   height: 700px;
-  background-image: radial-gradient(rgba(18, 255, 128, 0.3), rgba(18, 19, 18, 1) 100%);
+  background-image: radial-gradient(rgba(18, 255, 128, 0.5), rgba(18, 19, 18, 1) 100%);
   filter: blur(50px);
 }
 

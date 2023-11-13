@@ -11,8 +11,8 @@
   z-index: -1;
   width: 800px;
   height: 800px;
-  background-image: radial-gradient(rgba(18, 255, 128, 0.3), rgba(18, 19, 18, 0.15) 60%, rgba(18, 19, 18, 1) 100%);
-  filter: blur(30px);
+  background-image: radial-gradient(rgba(18, 255, 128, 0.5), rgba(18, 19, 18, 0.15) 60%, rgba(18, 19, 18, 1) 100%);
+  filter: blur(50px);
 }
 
 .textBlock {
@@ -32,6 +32,10 @@
 
 .title p {
   margin: 0;
+}
+
+.image {
+  max-width: 500px;
 }
 
 .heroFooter {
@@ -61,6 +65,7 @@
 
 @media (min-width: 900px) {
   .heroFooter {
+    margin-top: 100px;
     flex-direction: row;
     justify-content: space-between;
   }
