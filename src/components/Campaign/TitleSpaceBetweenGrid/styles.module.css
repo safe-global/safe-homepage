@@ -1,0 +1,40 @@
+.wrapper {
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.spot {
+  position: absolute;
+  right: -150px;
+  top: -330px;
+  z-index: -1;
+  width: 600px;
+  height: 600px;
+  background-image: radial-gradient(rgba(18, 255, 128, 0.4), rgba(18, 19, 18, 0.15) 60%, rgba(18, 19, 18, 1) 100%);
+  filter: blur(50px);
+}
+
+.item {
+  width: max-content;
+}
+
+.value {
+  text-align: center;
+  font-size: 88px;
+  line-height: 88px;
+  color: var(--mui-palette-primary-main);
+  background: linear-gradient(90deg, rgba(15, 255, 128, 1) 0%, rgba(94, 221, 255, 1) 60%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (min-width: 900px) {
+  .wrapper {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
