@@ -32,12 +32,15 @@ const Hero = (props: HeroEntry) => {
               variant="outlined"
             />
           )}
+
           <Typography variant="h1" mb={4} className={css.title}>
             <RichText {...title} />
           </Typography>
+
           <Typography variant="h4" mb={5} color="primary.light">
             {description}
           </Typography>
+
           {isEntryTypeButton(button) ? (
             <Link href={button.fields.btnHref} target="_blank" rel="noreferrer" passHref>
               <Button variant="contained" size="large">

@@ -1,5 +1,7 @@
 .bg {
-  margin-bottom: -225px;
+  margin-top: 200px;
+  margin-left: -20px;
+  width: 250px;
 }
 
 .gridContainer {
@@ -46,7 +48,8 @@
 @media (min-width: 900px) {
   .bg {
     position: absolute;
-    left: 0px;
-    width: 66%;
+    left: -35px;
+    width: 300px;
+    margin-top: 440px;
   }
 }

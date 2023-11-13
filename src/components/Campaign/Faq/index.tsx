@@ -33,7 +33,7 @@ const Faq = (props: FaqEntry) => {
   return (
     <>
       <Image className={css.bg} src={BackgroundImage} alt="blocks background" />
-      <Container className={layoutCss.containerMedium}>
+      <Container className={layoutCss.container}>
         <Grid container className={css.gridContainer}>
           <div className={css.spot} />
           <Grid item md={1} />
