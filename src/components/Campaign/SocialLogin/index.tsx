@@ -1,11 +1,12 @@
 import React from 'react'
 import { capitalizeFirstLetter } from '@/lib/capitalizeFirstLetter'
 import getComponentByName from '@/lib/getComponentByName'
-import css from './styles.module.css'
-import type { TypePageFields } from '@/contentful/types'
+import type { InferGetStaticPropsType } from 'next'
+import type { getStaticProps } from '@/pages/campaigns/[slug]'
 import type { Entry } from 'contentful'
+import css from './styles.module.css'
 
-const SocialLogin = (props: TypePageFields) => {
+const SocialLogin = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const content = props.content as unknown as Entry[]
 
   return (
