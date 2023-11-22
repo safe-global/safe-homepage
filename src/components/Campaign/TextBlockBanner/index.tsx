@@ -7,6 +7,8 @@ import type { Entry } from 'contentful'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { TypeTextBlockBannerSkeleton } from '@/contentful/types'
+import { trackEvent } from '@/services/analytics/trackEvent'
+import { SOCIAL_LOGIN_EVENTS } from '@/services/analytics/events/socialLogin'
 
 type TextBlockBannerEntry = Entry<TypeTextBlockBannerSkeleton, undefined, string>
 
@@ -31,7 +33,17 @@ const TextBlockBanner = (props: TextBlockBannerEntry) => {
 
           {isEntryTypeButton(button) ? (
             <Link href={button.fields.btnHref} target="_blank" rel="noreferrer" passHref>
-              <Button variant="contained" size="large" color="secondary">
+              <Button
+                variant="contained"
+                size="large"
+                color="secondary"
+                onClick={() => {
+                  trackEvent({
+                    ...SOCIAL_LOGIN_EVENTS.START_NOW_CLICK,
+                    label: 'banner',
+                  })
+                }}
+              >
                 {button.fields.btnCopy}
               </Button>
             </Link>

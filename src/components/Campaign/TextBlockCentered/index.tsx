@@ -7,6 +7,8 @@ import layoutCss from '@/components/common/styles.module.css'
 import type { Entry } from 'contentful'
 import type { TypeTextBlockCenteredSkeleton } from '@/contentful/types'
 import { isAsset, isEntryTypeButton } from '@/lib/typeGuards'
+import { trackEvent } from '@/services/analytics/trackEvent'
+import { SOCIAL_LOGIN_EVENTS } from '@/services/analytics/events/socialLogin'
 
 type TextBlockCenteredEntry = Entry<TypeTextBlockCenteredSkeleton, undefined, string>
 
@@ -32,7 +34,16 @@ const TextBlockCentered = (props: TextBlockCenteredEntry) => {
 
         {isEntryTypeButton(button) ? (
           <Link href={button.fields.btnHref} target="_blank" rel="noreferrer" passHref>
-            <Button variant="contained" size="large">
+            <Button
+              variant="contained"
+              size="large"
+              onClick={() =>
+                trackEvent({
+                  ...SOCIAL_LOGIN_EVENTS.START_NOW_CLICK,
+                  label: 'centered-block',
+                })
+              }
+            >
               {button.fields.btnCopy}
             </Button>
           </Link>

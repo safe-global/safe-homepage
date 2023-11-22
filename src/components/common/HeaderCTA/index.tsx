@@ -4,7 +4,7 @@ import { Grid, Typography } from '@mui/material'
 import Link from 'next/link'
 import css from './styles.module.css'
 
-const HeaderCTA = (props: BaseBlock & { bigTitle?: boolean }) => {
+const HeaderCTA = (props: BaseBlock & { bigTitle?: boolean; onClick?: () => void }) => {
   return (
     <Grid container mb={{ sm: 5, md: 7 }}>
       <Grid item xs={12} md={!props.bigTitle ? 8 : undefined}>
@@ -18,7 +18,9 @@ const HeaderCTA = (props: BaseBlock & { bigTitle?: boolean }) => {
       {props.link && (
         <Grid item xs={12} md={4} className={`${css.linkButton} ${!props.bigTitle && css.alignEnd}`}>
           <Link href={props.link.href} target="_blank" rel="noreferrer" passHref>
-            <LinkButton className={css.shortPadding}>{props.link.title}</LinkButton>
+            <LinkButton className={css.shortPadding} onClick={props.onClick}>
+              {props.link.title}
+            </LinkButton>
           </Link>
         </Grid>
       )}

@@ -17,6 +17,8 @@ import css from './styles.module.css'
 import BackgroundImage from '@/public/images/Campaigns/faq-bg.png'
 import Image from 'next/image'
 import { isEntryTypeFaqEntry } from '@/lib/typeGuards'
+import { trackEvent } from '@/services/analytics/trackEvent'
+import { SOCIAL_LOGIN_EVENTS } from '@/services/analytics/events/socialLogin'
 
 type FaqEntry = Entry<TypeFaqSkeleton, undefined, string>
 
@@ -28,6 +30,7 @@ const Faq = (props: FaqEntry) => {
   const faqData = items.filter(isEntryTypeFaqEntry).map((item) => ({
     question: item.fields.question,
     answer: item.fields.answer,
+    slug: item.fields.slug,
   }))
 
   return (
@@ -64,7 +67,17 @@ const Faq = (props: FaqEntry) => {
                   disableGutters
                   square
                 >
-                  <AccordionSummary expandIcon={openMap?.[index] ? <MinusIcon /> : <PlusIcon />}>
+                  <AccordionSummary
+                    expandIcon={openMap?.[index] ? <MinusIcon /> : <PlusIcon />}
+                    onClick={() => {
+                      // fire event only when accordion is expanded
+                      !openMap?.[index] &&
+                        trackEvent({
+                          ...SOCIAL_LOGIN_EVENTS.FAQ_QUESTION_EXPAND,
+                          label: `${item.slug}`,
+                        })
+                    }}
+                  >
                     <Typography variant="h4">{item.question}</Typography>
                   </AccordionSummary>
                   <AccordionDetails>
