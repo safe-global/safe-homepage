@@ -45,6 +45,14 @@
   padding: 0 0 32px;
 }
 
+.details p {
+  margin: 0;
+}
+
+.details a {
+  text-decoration: underline;
+}
+
 @media (min-width: 900px) {
   .bg {
     position: absolute;

@@ -2,7 +2,7 @@ import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleC
 
 export interface TypeFaqEntryFields {
   question: EntryFieldTypes.Symbol
-  answer: EntryFieldTypes.Text
+  answer: EntryFieldTypes.RichText
   slug?: EntryFieldTypes.Symbol
 }
 
