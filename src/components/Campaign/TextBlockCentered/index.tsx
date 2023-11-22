@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga4'
 import React from 'react'
 import { Button, Container, Typography } from '@mui/material'
 import Image from 'next/image'
@@ -32,7 +33,17 @@ const TextBlockCentered = (props: TextBlockCenteredEntry) => {
 
         {isEntryTypeButton(button) ? (
           <Link href={button.fields.btnHref} target="_blank" rel="noreferrer" passHref>
-            <Button variant="contained" size="large">
+            <Button
+              variant="contained"
+              size="large"
+              onClick={() => {
+                ReactGA.event({
+                  category: 'social-login-campaign',
+                  action: 'start-now-click',
+                  label: 'centered-block',
+                })
+              }}
+            >
               {button.fields.btnCopy}
             </Button>
           </Link>

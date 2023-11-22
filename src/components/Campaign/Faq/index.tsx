@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga4'
 import {
   Accordion,
   AccordionDetails,
@@ -28,6 +29,7 @@ const Faq = (props: FaqEntry) => {
   const faqData = items.filter(isEntryTypeFaqEntry).map((item) => ({
     question: item.fields.question,
     answer: item.fields.answer,
+    slug: item.fields.slug,
   }))
 
   return (
@@ -64,7 +66,16 @@ const Faq = (props: FaqEntry) => {
                   disableGutters
                   square
                 >
-                  <AccordionSummary expandIcon={openMap?.[index] ? <MinusIcon /> : <PlusIcon />}>
+                  <AccordionSummary
+                    expandIcon={openMap?.[index] ? <MinusIcon /> : <PlusIcon />}
+                    onClick={() => {
+                      ReactGA.event({
+                        category: 'social-login-campaign',
+                        action: 'faq-question-click',
+                        label: `${item.slug}`,
+                      })
+                    }}
+                  >
                     <Typography variant="h4">{item.question}</Typography>
                   </AccordionSummary>
                   <AccordionDetails>

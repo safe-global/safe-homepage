@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga4'
 import { Button, Container, Typography } from '@mui/material'
 import React from 'react'
 import layoutCss from '@/components/common/styles.module.css'
@@ -31,7 +32,18 @@ const TextBlockBanner = (props: TextBlockBannerEntry) => {
 
           {isEntryTypeButton(button) ? (
             <Link href={button.fields.btnHref} target="_blank" rel="noreferrer" passHref>
-              <Button variant="contained" size="large" color="secondary">
+              <Button
+                variant="contained"
+                size="large"
+                color="secondary"
+                onClick={() => {
+                  ReactGA.event({
+                    category: 'social-login-campaign',
+                    action: 'start-now-click',
+                    label: 'banner',
+                  })
+                }}
+              >
                 {button.fields.btnCopy}
               </Button>
             </Link>

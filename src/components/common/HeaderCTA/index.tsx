@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga4'
 import type { BaseBlock } from '@/components/Home/types'
 import LinkButton from '@/components/common/LinkButton'
 import { Grid, Typography } from '@mui/material'
@@ -18,7 +19,18 @@ const HeaderCTA = (props: BaseBlock & { bigTitle?: boolean }) => {
       {props.link && (
         <Grid item xs={12} md={4} className={`${css.linkButton} ${!props.bigTitle && css.alignEnd}`}>
           <Link href={props.link.href} target="_blank" rel="noreferrer" passHref>
-            <LinkButton className={css.shortPadding}>{props.link.title}</LinkButton>
+            <LinkButton
+              className={css.shortPadding}
+              onClick={() => {
+                ReactGA.event({
+                  category: 'social-login-campaign',
+                  action: 'start-now-click',
+                  label: 'round-card-grid',
+                })
+              }}
+            >
+              {props.link.title}
+            </LinkButton>
           </Link>
         </Grid>
       )}

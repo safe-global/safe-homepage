@@ -3,6 +3,7 @@ import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleC
 export interface TypeFaqEntryFields {
   question: EntryFieldTypes.Symbol
   answer: EntryFieldTypes.Text
+  slug?: EntryFieldTypes.Symbol
 }
 
 export type TypeFaqEntrySkeleton = EntrySkeletonType<TypeFaqEntryFields, 'faqEntry'>

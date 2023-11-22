@@ -1,3 +1,4 @@
+import ReactGA from 'react-ga4'
 import { Button, Chip, Container, Grid, Typography } from '@mui/material'
 import Link from 'next/link'
 import css from './styles.module.css'
@@ -43,7 +44,17 @@ const Hero = (props: HeroEntry) => {
 
           {isEntryTypeButton(button) ? (
             <Link href={button.fields.btnHref} target="_blank" rel="noreferrer" passHref>
-              <Button variant="contained" size="large">
+              <Button
+                variant="contained"
+                size="large"
+                onClick={() => {
+                  ReactGA.event({
+                    category: 'social-login-campaign',
+                    action: 'faq-question-click',
+                    label: 'hero',
+                  })
+                }}
+              >
                 {button.fields.btnCopy}
               </Button>
             </Link>
