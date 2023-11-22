@@ -6,6 +6,8 @@ import type { Entry } from 'contentful'
 import type { TypeRoundCardGridSkeleton } from '@/contentful/types'
 import { isAsset, isEntryTypeButton, isEntryTypeCardGridItem } from '@/lib/typeGuards'
 import layoutCss from '@/components/common/styles.module.css'
+import { trackEvent } from '@/services/analytics/trackEvent'
+import { SOCIAL_LOGIN_EVENTS } from '@/services/analytics/events/socialLogin'
 
 type RoundCardType = {
   title: string
@@ -44,9 +46,16 @@ const RoundCardGrid = (props: RoundCardGridEntry) => {
       : undefined,
   }))
 
+  const handleCtaClick = () => {
+    trackEvent({
+      ...SOCIAL_LOGIN_EVENTS.START_NOW_CLICK,
+      label: 'round-card-grid',
+    })
+  }
+
   return (
     <Container className={layoutCss.containerMedium}>
-      <HeaderCTA title={title} text={text} link={headerLink} />
+      <HeaderCTA title={title} text={text} link={headerLink} onClick={handleCtaClick} />
 
       <Grid container className={css.gridContainer} spacing={4}>
         <div className={css.spot} />

@@ -1,4 +1,3 @@
-import ReactGA from 'react-ga4'
 import { Button, Chip, Container, Grid, Typography } from '@mui/material'
 import Link from 'next/link'
 import css from './styles.module.css'
@@ -8,6 +7,8 @@ import { isAsset, isEntryTypeButton } from '@/lib/typeGuards'
 import layoutCss from '@/components/common/styles.module.css'
 import RichText from '@/components/Campaign/RichText'
 import { createImageData } from '@/lib/createImageData'
+import { SOCIAL_LOGIN_EVENTS } from '@/services/analytics/events/socialLogin'
+import { trackEvent } from '@/services/analytics/trackEvent'
 
 type HeroEntry = Entry<TypeHeroSkeleton, undefined, string>
 
@@ -47,13 +48,12 @@ const Hero = (props: HeroEntry) => {
               <Button
                 variant="contained"
                 size="large"
-                onClick={() => {
-                  ReactGA.event({
-                    category: 'social-login-campaign',
-                    action: 'faq-question-click',
+                onClick={() =>
+                  trackEvent({
+                    ...SOCIAL_LOGIN_EVENTS.START_NOW_CLICK,
                     label: 'hero',
                   })
-                }}
+                }
               >
                 {button.fields.btnCopy}
               </Button>

@@ -1,4 +1,3 @@
-import ReactGA from 'react-ga4'
 import React from 'react'
 import { Button, Container, Typography } from '@mui/material'
 import Image from 'next/image'
@@ -8,6 +7,8 @@ import layoutCss from '@/components/common/styles.module.css'
 import type { Entry } from 'contentful'
 import type { TypeTextBlockCenteredSkeleton } from '@/contentful/types'
 import { isAsset, isEntryTypeButton } from '@/lib/typeGuards'
+import { trackEvent } from '@/services/analytics/trackEvent'
+import { SOCIAL_LOGIN_EVENTS } from '@/services/analytics/events/socialLogin'
 
 type TextBlockCenteredEntry = Entry<TypeTextBlockCenteredSkeleton, undefined, string>
 
@@ -36,13 +37,12 @@ const TextBlockCentered = (props: TextBlockCenteredEntry) => {
             <Button
               variant="contained"
               size="large"
-              onClick={() => {
-                ReactGA.event({
-                  category: 'social-login-campaign',
-                  action: 'start-now-click',
+              onClick={() =>
+                trackEvent({
+                  ...SOCIAL_LOGIN_EVENTS.START_NOW_CLICK,
                   label: 'centered-block',
                 })
-              }}
+              }
             >
               {button.fields.btnCopy}
             </Button>

@@ -1,4 +1,3 @@
-import ReactGA from 'react-ga4'
 import {
   Accordion,
   AccordionDetails,
@@ -18,6 +17,8 @@ import css from './styles.module.css'
 import BackgroundImage from '@/public/images/Campaigns/faq-bg.png'
 import Image from 'next/image'
 import { isEntryTypeFaqEntry } from '@/lib/typeGuards'
+import { trackEvent } from '@/services/analytics/trackEvent'
+import { SOCIAL_LOGIN_EVENTS } from '@/services/analytics/events/socialLogin'
 
 type FaqEntry = Entry<TypeFaqSkeleton, undefined, string>
 
@@ -69,11 +70,12 @@ const Faq = (props: FaqEntry) => {
                   <AccordionSummary
                     expandIcon={openMap?.[index] ? <MinusIcon /> : <PlusIcon />}
                     onClick={() => {
-                      ReactGA.event({
-                        category: 'social-login-campaign',
-                        action: 'faq-question-click',
-                        label: `${item.slug}`,
-                      })
+                      // fire event only when accordion is expanded
+                      !openMap?.[index] &&
+                        trackEvent({
+                          ...SOCIAL_LOGIN_EVENTS.FAQ_QUESTION_EXPAND,
+                          label: `${item.slug}`,
+                        })
                     }}
                   >
                     <Typography variant="h4">{item.question}</Typography>

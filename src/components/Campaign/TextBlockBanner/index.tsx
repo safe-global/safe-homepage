@@ -1,4 +1,3 @@
-import ReactGA from 'react-ga4'
 import { Button, Container, Typography } from '@mui/material'
 import React from 'react'
 import layoutCss from '@/components/common/styles.module.css'
@@ -8,6 +7,8 @@ import type { Entry } from 'contentful'
 import Image from 'next/image'
 import Link from 'next/link'
 import type { TypeTextBlockBannerSkeleton } from '@/contentful/types'
+import { trackEvent } from '@/services/analytics/trackEvent'
+import { SOCIAL_LOGIN_EVENTS } from '@/services/analytics/events/socialLogin'
 
 type TextBlockBannerEntry = Entry<TypeTextBlockBannerSkeleton, undefined, string>
 
@@ -37,9 +38,8 @@ const TextBlockBanner = (props: TextBlockBannerEntry) => {
                 size="large"
                 color="secondary"
                 onClick={() => {
-                  ReactGA.event({
-                    category: 'social-login-campaign',
-                    action: 'start-now-click',
+                  trackEvent({
+                    ...SOCIAL_LOGIN_EVENTS.START_NOW_CLICK,
                     label: 'banner',
                   })
                 }}
