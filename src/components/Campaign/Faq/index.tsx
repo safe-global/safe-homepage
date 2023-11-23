@@ -19,6 +19,7 @@ import Image from 'next/image'
 import { isEntryTypeFaqEntry } from '@/lib/typeGuards'
 import { trackEvent } from '@/services/analytics/trackEvent'
 import { SOCIAL_LOGIN_EVENTS } from '@/services/analytics/events/socialLogin'
+import RichText from '@/components/Campaign/RichText'
 
 type FaqEntry = Entry<TypeFaqSkeleton, undefined, string>
 
@@ -80,8 +81,8 @@ const Faq = (props: FaqEntry) => {
                   >
                     <Typography variant="h4">{item.question}</Typography>
                   </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>{item.answer}</Typography>
+                  <AccordionDetails className={css.details}>
+                    <RichText {...item.answer} />
                   </AccordionDetails>
                 </Accordion>
               )

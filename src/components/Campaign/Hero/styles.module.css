@@ -7,7 +7,7 @@
 .spot {
   position: absolute;
   right: -35px;
-  top: -110px;
+  top: 410px;
   z-index: -1;
   width: 800px;
   height: 800px;
@@ -64,6 +64,10 @@
 }
 
 @media (min-width: 900px) {
+  .spot {
+    top: -110px;
+  }
+
   .heroFooter {
     margin-top: 100px;
     flex-direction: row;
