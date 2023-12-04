@@ -3,11 +3,11 @@ import css from './styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
 import { scrollToElement } from '@/lib/scrollSmooth'
 
-const CoreIntro = ({ title, text, link }: BaseBlock) => {
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+const CoreIntro = ({ title, text, link, scroll }: BaseBlock & { scroll?: { title: string; target: string } }) => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, target: string) => {
     e.preventDefault()
 
-    scrollToElement('#masthead', 200)
+    scrollToElement(target, 200)
   }
 
   return (
@@ -41,9 +41,11 @@ const CoreIntro = ({ title, text, link }: BaseBlock) => {
             </Button>
           )}
         </Grid>
-        <a onClick={handleClick} className={css.scroll}>
-          <Typography variant="caption">New Whitepaper</Typography>
-        </a>
+        {scroll && (
+          <a onClick={(e) => handleClick(e, scroll.target)} className={css.scroll}>
+            <Typography variant="caption">{scroll.title}</Typography>
+          </a>
+        )}
       </Grid>
       <Divider />
     </Container>
