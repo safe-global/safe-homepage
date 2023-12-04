@@ -29,10 +29,14 @@
       }
     ],
     "image": {
-      "src": "/images/Core/safeauth-logo",
+      "sm": "/images/Core/safeauth-logo-sm.png",
+      "md": "/images/Core/safeauth-logo-md.png",
       "alt": "SafeAuth logo"
     },
-    "backgroundImage": "/images/Core/safeauth-bg",
+    "backgroundImage": {
+      "sm": "/images/Core/safeauth-bg-sm.png",
+      "md": "/images/Core/safeauth-bg-md.png"
+    },
     "component": "Core/Masthead"
   },
   {

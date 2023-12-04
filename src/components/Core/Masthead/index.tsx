@@ -7,22 +7,24 @@ import css from './styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
 import ButtonsWrapper from '@/components/common/ButtonsWrapper'
 
-function generateImagePath(basePath: string, isSmallScreen: boolean) {
-  const size = isSmallScreen ? 'sm' : 'md'
-  return `${basePath}-${size}.png`
-}
-
 export const Masthead = ({
   title,
   buttons,
   caption,
   image,
   backgroundImage,
-}: BaseBlock & { backgroundImage: string }): ReactElement => {
+}: BaseBlock & {
+  image: {
+    sm: string
+    md: string
+    alt: string
+  }
+  backgroundImage: { sm: string; md: string }
+}): ReactElement => {
   const isSmallScreen = useMediaQuery('(max-width:900px)')
 
-  const bgImage = generateImagePath(backgroundImage, isSmallScreen)
-  const imageSrc = image?.src ? generateImagePath(image.src, isSmallScreen) : undefined
+  const bgImage = isSmallScreen ? backgroundImage.sm : backgroundImage.md
+  const imageSrc = image ? (isSmallScreen ? image.sm : image.md) : undefined
 
   return (
     <Container className={layoutCss.containerShort} id="masthead">
@@ -43,7 +45,7 @@ export const Masthead = ({
             </Typography>
             <ButtonsWrapper buttons={buttons} />
           </Grid>
-          {image ? (
+          {imageSrc ? (
             <Grid item xs={12} md={5} xl={4} className={css.image}>
               <img src={imageSrc} alt={image.alt} />
             </Grid>
