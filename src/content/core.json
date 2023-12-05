@@ -6,9 +6,6 @@
   {
     "title": "Safe <u>CORE</u><br/>Smart Wallet Infrastructure",
     "text": "Full-stack. Battle-tested. Open-source.",
-    "video": {
-      "src": "/videos/intro-chip.webm"
-    },
     "link": {
       "title": "View documentation",
       "href": "https://docs.safe.global"
@@ -16,24 +13,29 @@
     "component": "Core/Intro"
   },
   {
-    "title": "Launching<br/>Safe <u>CORE</u> Protocol",
-    "caption": "Whitepaper",
+    "title": "Portable Safe Accounts<br/> with Social Login",
+    "caption": "Build with Web3Auth",
     "buttons": [
       {
-        "text": "Read Whitepaper",
-        "href": "https://github.com/safe-global/safe-core-protocol-specs/blob/main/whitepaper.pdf",
+        "text": "Try it now",
+        "href": "https://safe.web3auth.com/",
         "variant": "button",
         "color": "secondary"
       },
       {
-        "text": "GitHub",
-        "href": "https://github.com/safe-global/safe-core-protocol-specs",
+        "text": "SafeAuth Docs",
+        "href": "https://docs.safe.global/safe-core-aa-sdk/auth-kit/guides/safe-auth",
         "variant": "link"
       }
     ],
     "image": {
-      "src": "/images/Core/whitepaper-new.svg",
-      "alt": "new document"
+      "sm": "/images/Core/safeauth-logo-sm.png",
+      "md": "/images/Core/safeauth-logo-md.png",
+      "alt": "SafeAuth logo"
+    },
+    "backgroundImage": {
+      "sm": "/images/Core/safeauth-bg-sm.png",
+      "md": "/images/Core/safeauth-bg-md.png"
     },
     "component": "Core/Masthead"
   },

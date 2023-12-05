@@ -1,4 +1,4 @@
-import { Chip, Grid, Typography } from '@mui/material'
+import { Chip, Grid, Typography, useMediaQuery } from '@mui/material'
 import { Container } from '@mui/system'
 import type { ReactElement } from 'react'
 
@@ -7,12 +7,30 @@ import css from './styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
 import ButtonsWrapper from '@/components/common/ButtonsWrapper'
 
-export const Masthead = ({ title, buttons, caption, image }: BaseBlock): ReactElement => {
+export const Masthead = ({
+  title,
+  buttons,
+  caption,
+  image,
+  backgroundImage,
+}: BaseBlock & {
+  image: {
+    sm: string
+    md: string
+    alt: string
+  }
+  backgroundImage: { sm: string; md: string }
+}): ReactElement => {
+  const isSmallScreen = useMediaQuery('(max-width:900px)')
+
+  const bgImage = isSmallScreen ? backgroundImage.sm : backgroundImage.md
+  const imageSrc = image ? (isSmallScreen ? image.sm : image.md) : undefined
+
   return (
     <Container className={layoutCss.containerShort} id="masthead">
-      <div className={css.container}>
+      <div className={css.container} style={{ backgroundImage: `url(${bgImage})` }}>
         <Grid container spacing={{ xs: '90px', sm: '30px' }} justifyContent="space-between">
-          <Grid item xs={12} md={7} lg={8}>
+          <Grid item xs={12} md={7}>
             <Chip
               label={
                 <Typography variant="caption" color="text.primary">
@@ -27,9 +45,9 @@ export const Masthead = ({ title, buttons, caption, image }: BaseBlock): ReactEl
             </Typography>
             <ButtonsWrapper buttons={buttons} />
           </Grid>
-          {image ? (
-            <Grid item xs={12} md={4} lg={3} xl={2.5} className={css.image}>
-              <img src={image.src} alt={image.alt} />
+          {imageSrc ? (
+            <Grid item xs={12} md={5} xl={4} className={css.image}>
+              <img src={imageSrc} alt={image.alt} />
             </Grid>
           ) : null}
         </Grid>
