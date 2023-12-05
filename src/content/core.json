@@ -17,7 +17,7 @@
     "caption": "Build with Web3Auth",
     "buttons": [
       {
-        "text": "Try",
+        "text": "Try it now",
         "href": "https://safe.web3auth.com/",
         "variant": "button",
         "color": "secondary"

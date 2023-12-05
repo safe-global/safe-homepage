@@ -7,6 +7,7 @@ const CoreIntro = ({ title, text, link, scroll }: BaseBlock & { scroll?: { title
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, target: string) => {
     e.preventDefault()
 
+    // TODO: move offset to CSS
     scrollToElement(target, 200)
   }
 
