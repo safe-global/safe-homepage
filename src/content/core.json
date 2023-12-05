@@ -13,11 +13,11 @@
     "component": "Core/Intro"
   },
   {
-    "title": "Try out SafeAuth",
-    "caption": "SafeAuth",
+    "title": "Portable Safe Accounts<br/> with Social Login",
+    "caption": "Build with SafeAuth",
     "buttons": [
       {
-        "text": "SafeAuth",
+        "text": "Try",
         "href": "https://safe.web3auth.com/",
         "variant": "button",
         "color": "secondary"
