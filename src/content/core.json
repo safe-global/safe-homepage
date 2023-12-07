@@ -210,6 +210,7 @@
         "variant": "link"
       }
     ],
-    "component": "Core/BannerCta"
+    "backgroundImage": "/images/robot.png",
+    "component": "common/BannerCta"
   }
 ]

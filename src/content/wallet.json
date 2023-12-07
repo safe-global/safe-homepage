@@ -19,6 +19,25 @@
     "component": "Wallet/Intro"
   },
   {
+    "title": "Safe <u>RecoveryHub</u>",
+    "caption": "New",
+    "buttons": [
+      {
+        "text": "Try now",
+        "href": "https://app.safe.global",
+        "variant": "button",
+        "color": "secondary"
+      },
+      {
+        "text": "Read more",
+        "href": "https://safe.mirror.xyz/WxKSxD9J1bRI-SDOuDvAAIezwVrvWWkpuwuzcLDPSmk",
+        "variant": "link"
+      }
+    ],
+    "backgroundImage": "/images/Wallet/buoy.png",
+    "component": "common/BannerCta"
+  },
+  {
     "variant": "3-columns",
     "title": "Your keys. Your coins",
     "items": [
