@@ -6,10 +6,15 @@ import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
 
-export const BannerCta = ({ title, buttons, caption }: BaseBlock): ReactElement => {
+export const BannerCta = ({
+  title,
+  buttons,
+  caption,
+  backgroundImage,
+}: BaseBlock & { backgroundImage: string }): ReactElement => {
   return (
     <Container className={layoutCss.containerMedium}>
-      <div className={css.container}>
+      <div className={css.container} style={{ backgroundImage: `url(${backgroundImage})` }}>
         <Chip
           label={
             <Typography variant="caption" color="text.primary">
