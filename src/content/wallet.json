@@ -213,13 +213,6 @@
         }
       },
       {
-        "name": "Arbitrum",
-        "icon": {
-          "src": "/images/chainsLogos/ArbitrumLogo.png",
-          "alt": "Arbitrum logo"
-        }
-      },
-      {
         "name": "Polygon zkEVM",
         "icon": {
           "src": "/images/chainsLogos/PolygonZkEVMLogo.png",
@@ -232,6 +225,13 @@
         "icon": {
           "src": "/images/chainsLogos/CeloLogo.png",
           "alt": "Celo logo"
+        }
+      },
+      {
+        "name": "Scroll",
+        "icon": {
+          "src": "/images/chainsLogos/ScrollLogo.png",
+          "alt": "Scroll logo"
         }
       }
     ],

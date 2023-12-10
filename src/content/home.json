@@ -135,6 +135,14 @@
           "src": "/images/chainsLogos/CeloLogo.png",
           "alt": "Celo logo"
         }
+      },
+      {
+        "name": "Scroll",
+        "icon": {
+          "src": "/images/chainsLogos/ScrollLogo.png",
+          "alt": "Scroll logo"
+        },
+        "isNew": true
       }
     ],
     "component": "common/Networks"
