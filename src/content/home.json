@@ -122,13 +122,6 @@
         }
       },
       {
-        "name": "Arbitrum",
-        "icon": {
-          "src": "/images/chainsLogos/ArbitrumLogo.png",
-          "alt": "Arbitrum logo"
-        }
-      },
-      {
         "name": "Polygon zkEVM",
         "icon": {
           "src": "/images/chainsLogos/PolygonZkEVMLogo.png",
