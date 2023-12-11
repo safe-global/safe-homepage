@@ -1,32 +1,35 @@
-import Link from 'next/link'
 import { useRouter } from 'next/router'
-import React from 'react'
+import type { ParsedUrlQuery } from 'querystring'
 
 type LinkHOCProps = {
   href: string
   children: React.ReactNode
-  passSearchParams?: boolean
+}
+
+// Utility function to construct the final URL
+const buildURL = (href: string, query: ParsedUrlQuery) => {
+  const url = new URL(href)
+  const baseURL = `${url.origin}${url.pathname}`
+
+  // Create a new URLSearchParams object
+  const searchParams = new URLSearchParams(url.search)
+
+  // Append query parameters from useRouter
+  Object.entries(query).forEach(([key, value]) => {
+    searchParams.append(key, value as string)
+  })
+
+  return `${baseURL}${searchParams.toString() && `?${searchParams.toString()}`}`
 }
 
 const LinkHOC = ({ href, children }: LinkHOCProps) => {
   const { query } = useRouter()
-
-  const url = new URL(href)
-  const baseURL = `${url.origin}${url.pathname}`
-  const existingSearchParams = Object.fromEntries(new URLSearchParams(url.search).entries())
+  const finalURL = buildURL(href, query)
 
   return (
-    <Link
-      href={{
-        pathname: baseURL,
-        query: { ...existingSearchParams, ...query },
-      }}
-      target="_blank"
-      rel="noreferrer"
-      passHref
-    >
+    <a href={finalURL} target="_blank" rel="noreferrer">
       {children}
-    </Link>
+    </a>
   )
 }
 
