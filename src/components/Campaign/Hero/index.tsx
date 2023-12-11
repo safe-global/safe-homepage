@@ -1,5 +1,4 @@
 import { Button, Chip, Container, Grid, Typography } from '@mui/material'
-import Link from 'next/link'
 import css from './styles.module.css'
 import type { TypeHeroSkeleton } from '@/contentful/types'
 import type { Entry } from 'contentful'
@@ -9,6 +8,7 @@ import RichText from '@/components/Campaign/RichText'
 import { createImageData } from '@/lib/createImageData'
 import { SOCIAL_LOGIN_EVENTS } from '@/services/analytics/events/socialLogin'
 import { trackEvent } from '@/services/analytics/trackEvent'
+import LinkHOC from '@/components/common/LinkHOC'
 
 type HeroEntry = Entry<TypeHeroSkeleton, undefined, string>
 
@@ -44,7 +44,7 @@ const Hero = (props: HeroEntry) => {
           </Typography>
 
           {isEntryTypeButton(button) ? (
-            <Link href={button.fields.btnHref} target="_blank" rel="noreferrer" passHref>
+            <LinkHOC href={button.fields.btnHref}>
               <Button
                 variant="contained"
                 size="large"
@@ -57,7 +57,7 @@ const Hero = (props: HeroEntry) => {
               >
                 {button.fields.btnCopy}
               </Button>
-            </Link>
+            </LinkHOC>
           ) : undefined}
         </Grid>
 
