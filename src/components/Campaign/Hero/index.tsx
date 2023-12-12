@@ -8,7 +8,7 @@ import RichText from '@/components/Campaign/RichText'
 import { createImageData } from '@/lib/createImageData'
 import { SOCIAL_LOGIN_EVENTS } from '@/services/analytics/events/socialLogin'
 import { trackEvent } from '@/services/analytics/trackEvent'
-import LinkHOC from '@/components/common/LinkHOC'
+import ExternalLinkHOC from '@/components/common/ExternalLinkHOC'
 
 type HeroEntry = Entry<TypeHeroSkeleton, undefined, string>
 
@@ -44,7 +44,7 @@ const Hero = (props: HeroEntry) => {
           </Typography>
 
           {isEntryTypeButton(button) ? (
-            <LinkHOC href={button.fields.btnHref}>
+            <ExternalLinkHOC href={button.fields.btnHref}>
               <Button
                 variant="contained"
                 size="large"
@@ -57,7 +57,7 @@ const Hero = (props: HeroEntry) => {
               >
                 {button.fields.btnCopy}
               </Button>
-            </LinkHOC>
+            </ExternalLinkHOC>
           ) : undefined}
         </Grid>
 
