@@ -16,6 +16,6 @@ describe('mergeSearchParams', () => {
 
     const result = mergeSearchParams(hrefSearchParams, routerSearchParams)
 
-    expect(result).toBeNull()
+    expect(result).toBe('')
   })
 })
