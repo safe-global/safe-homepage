@@ -1,10 +1,19 @@
 import type { BaseBlock } from '@/components/Home/types'
 import LinkButton from '@/components/common/LinkButton'
 import { Grid, Typography } from '@mui/material'
-import Link from 'next/link'
+import NextLink from 'next/link'
 import css from './styles.module.css'
+import ExternalLinkHOC from '@/components/common/ExternalLinkHOC'
 
-const HeaderCTA = (props: BaseBlock & { bigTitle?: boolean; onClick?: () => void }) => {
+type HeaderCTAProps = BaseBlock & {
+  bigTitle?: boolean
+  onClick?: () => void
+  isExternalLink?: boolean
+}
+
+const HeaderCTA = (props: HeaderCTAProps) => {
+  const LinkComponent = props.isExternalLink ? ExternalLinkHOC : NextLink
+
   return (
     <Grid container mb={{ sm: 5, md: 7 }}>
       <Grid item xs={12} md={!props.bigTitle ? 8 : undefined}>
@@ -17,11 +26,11 @@ const HeaderCTA = (props: BaseBlock & { bigTitle?: boolean; onClick?: () => void
       </Grid>
       {props.link && (
         <Grid item xs={12} md={4} className={`${css.linkButton} ${!props.bigTitle && css.alignEnd}`}>
-          <Link href={props.link.href} target="_blank" rel="noreferrer" passHref>
+          <LinkComponent href={props.link.href} target="_blank" rel="noreferrer" passHref>
             <LinkButton className={css.shortPadding} onClick={props.onClick}>
               {props.link.title}
             </LinkButton>
-          </Link>
+          </LinkComponent>
         </Grid>
       )}
     </Grid>
