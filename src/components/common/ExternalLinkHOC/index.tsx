@@ -1,5 +1,5 @@
 import { mergeSearchParams } from '@/lib/mergeSearchParams'
-import { useRouter } from 'next/router'
+import { useSearchParams } from 'next/navigation'
 
 type ExternalLinkHOCProps = {
   href: string
@@ -7,13 +7,13 @@ type ExternalLinkHOCProps = {
 }
 
 const ExternalLinkHOC = ({ href, children }: ExternalLinkHOCProps) => {
-  const { query } = useRouter()
+  const searchParams = useSearchParams()
 
   const url = new URL(href)
   const baseURL = url.origin + url.pathname
-  const searchParams = mergeSearchParams(url.search, query)
+  const finalSearchParams = mergeSearchParams(url.search, searchParams.toString())
 
-  const finalURL = baseURL + searchParams
+  const finalURL = baseURL + finalSearchParams
 
   return (
     <a href={finalURL} target="_blank" rel="noreferrer">
