@@ -4,8 +4,13 @@ import type { BaseBlock } from '@/components/Home/types'
 import RadialAnimation from './RadialAnimation'
 import LinkButton from '@/components/common/LinkButton'
 import Link from 'next/link'
+import SearchParamsContext from '@/contexts/SearchParamsContext'
+import { useContext } from 'react'
+import { appendSearchParamsToURL } from '@/lib/appendSearchParamsToURL'
 
 const TextRadialAnimation = ({ title, text, link }: BaseBlock) => {
+  const searchParams = useContext(SearchParamsContext)
+
   return (
     <Container>
       <Grid
@@ -20,7 +25,7 @@ const TextRadialAnimation = ({ title, text, link }: BaseBlock) => {
           </Typography>
           <Typography mb={{ xs: 3, md: 5 }}>{text}</Typography>
           {link && (
-            <Link href={link.href} passHref target="_blank" rel="noreferrer">
+            <Link href={appendSearchParamsToURL(link.href, searchParams)} passHref target="_blank" rel="noreferrer">
               <LinkButton>{link.title}</LinkButton>
             </Link>
           )}
