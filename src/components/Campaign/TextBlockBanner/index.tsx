@@ -1,19 +1,22 @@
 import { Button, Container, Typography } from '@mui/material'
-import React from 'react'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 import { isAsset, isEntryTypeButton } from '@/lib/typeGuards'
 import type { Entry } from 'contentful'
 import Image from 'next/image'
+import Link from 'next/link'
 import type { TypeTextBlockBannerSkeleton } from '@/contentful/types'
 import { trackEvent } from '@/services/analytics/trackEvent'
 import { SOCIAL_LOGIN_EVENTS } from '@/services/analytics/events/socialLogin'
-import ExternalLinkHOC from '@/components/common/ExternalLinkHOC'
+import SearchParamsContext from '@/contexts/SearchParamsContext'
+import { useContext } from 'react'
+import { appendSearchParamsToURL } from '@/lib/appendSearchParamsToURL'
 
 type TextBlockBannerEntry = Entry<TypeTextBlockBannerSkeleton, undefined, string>
 
 const TextBlockBanner = (props: TextBlockBannerEntry) => {
   const { logo, title, description, button } = props.fields
+  const searchParams = useContext(SearchParamsContext)
 
   return (
     <div className={css.gradient}>
@@ -32,7 +35,7 @@ const TextBlockBanner = (props: TextBlockBannerEntry) => {
           </Typography>
 
           {isEntryTypeButton(button) ? (
-            <ExternalLinkHOC href={button.fields.btnHref}>
+            <Link href={appendSearchParamsToURL(button.fields.btnHref, searchParams)}>
               <Button
                 variant="contained"
                 size="large"
@@ -46,7 +49,7 @@ const TextBlockBanner = (props: TextBlockBannerEntry) => {
               >
                 {button.fields.btnCopy}
               </Button>
-            </ExternalLinkHOC>
+            </Link>
           ) : undefined}
         </div>
       </Container>

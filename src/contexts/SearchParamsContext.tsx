@@ -2,7 +2,7 @@ import { sessionItem } from '@/services/Storage/session'
 import { useSearchParams } from 'next/navigation'
 import { type ReactNode, createContext, useEffect, useState } from 'react'
 
-const SEARCH_PARAMS_KEY = 'utmParams'
+const SEARCH_PARAMS_KEY = 'searchParams'
 const sessionSearchParams = sessionItem<string>(SEARCH_PARAMS_KEY)
 
 const SearchParamsContext = createContext<any>(undefined)

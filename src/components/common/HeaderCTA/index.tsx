@@ -3,16 +3,17 @@ import LinkButton from '@/components/common/LinkButton'
 import { Grid, Typography } from '@mui/material'
 import NextLink from 'next/link'
 import css from './styles.module.css'
-import ExternalLinkHOC from '@/components/common/ExternalLinkHOC'
+import SearchParamsContext from '@/contexts/SearchParamsContext'
+import { useContext } from 'react'
+import { appendSearchParamsToURL } from '@/lib/appendSearchParamsToURL'
 
 type HeaderCTAProps = BaseBlock & {
   bigTitle?: boolean
   onClick?: () => void
-  isExternalLink?: boolean
 }
 
 const HeaderCTA = (props: HeaderCTAProps) => {
-  const LinkComponent = props.isExternalLink ? ExternalLinkHOC : NextLink
+  const searchParams = useContext(SearchParamsContext)
 
   return (
     <Grid container mb={{ sm: 5, md: 7 }}>
@@ -26,11 +27,16 @@ const HeaderCTA = (props: HeaderCTAProps) => {
       </Grid>
       {props.link && (
         <Grid item xs={12} md={4} className={`${css.linkButton} ${!props.bigTitle && css.alignEnd}`}>
-          <LinkComponent href={props.link.href} target="_blank" rel="noreferrer" passHref>
+          <NextLink
+            href={appendSearchParamsToURL(props.link.href, searchParams)}
+            target="_blank"
+            rel="noreferrer"
+            passHref
+          >
             <LinkButton className={css.shortPadding} onClick={props.onClick}>
               {props.link.title}
             </LinkButton>
-          </LinkComponent>
+          </NextLink>
         </Grid>
       )}
     </Grid>

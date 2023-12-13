@@ -55,7 +55,7 @@ const RoundCardGrid = (props: RoundCardGridEntry) => {
 
   return (
     <Container className={layoutCss.containerMedium}>
-      <HeaderCTA title={title} text={text} link={headerLink} onClick={handleCtaClick} isExternalLink />
+      <HeaderCTA title={title} text={text} link={headerLink} onClick={handleCtaClick} />
 
       <Grid container className={css.gridContainer} spacing={4}>
         <div className={css.spot} />
