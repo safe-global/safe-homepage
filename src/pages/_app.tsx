@@ -19,6 +19,7 @@ import PageLayout from '@/components/common/PageLayout'
 import { useGa } from '@/hooks/useGa'
 import useHotjar from '@/hooks/useHotjar'
 import DOMPurify from 'isomorphic-dompurify'
+import { SearchParamsContextProvider } from '@/contexts/SearchParamsContext'
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache()
@@ -57,7 +58,9 @@ const App = ({
           <InitHooks />
 
           <PageLayout>
-            <Component {...pageProps} />
+            <SearchParamsContextProvider>
+              <Component {...pageProps} />
+            </SearchParamsContextProvider>
           </PageLayout>
 
           <CookieBanner />

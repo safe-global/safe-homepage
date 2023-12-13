@@ -8,11 +8,14 @@ import RichText from '@/components/Campaign/RichText'
 import { createImageData } from '@/lib/createImageData'
 import { SOCIAL_LOGIN_EVENTS } from '@/services/analytics/events/socialLogin'
 import { trackEvent } from '@/services/analytics/trackEvent'
-import ExternalLinkHOC from '@/components/common/ExternalLinkHOC'
+import { useContext } from 'react'
+import SearchParamsContext from '@/contexts/SearchParamsContext'
+import { appendSearchParamsToURL } from '@/lib/appendSearchParamsToURL'
 
 type HeroEntry = Entry<TypeHeroSkeleton, undefined, string>
 
 const Hero = (props: HeroEntry) => {
+  const searchParams = useContext(SearchParamsContext)
   const { caption, title, description, image, button, trustedBy, hasMoreComing, availableOn } = props.fields
 
   const trustedByData = createImageData(trustedBy)
@@ -44,7 +47,7 @@ const Hero = (props: HeroEntry) => {
           </Typography>
 
           {isEntryTypeButton(button) ? (
-            <ExternalLinkHOC href={button.fields.btnHref}>
+            <a href={appendSearchParamsToURL(button.fields.btnHref, searchParams)} target="_blank" rel="noreferrer">
               <Button
                 variant="contained"
                 size="large"
@@ -57,7 +60,7 @@ const Hero = (props: HeroEntry) => {
               >
                 {button.fields.btnCopy}
               </Button>
-            </ExternalLinkHOC>
+            </a>
           ) : undefined}
         </Grid>
 
