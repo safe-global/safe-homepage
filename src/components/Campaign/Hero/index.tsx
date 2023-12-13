@@ -1,4 +1,5 @@
 import { Button, Chip, Container, Grid, Typography } from '@mui/material'
+import Link from 'next/link'
 import css from './styles.module.css'
 import type { TypeHeroSkeleton } from '@/contentful/types'
 import type { Entry } from 'contentful'
@@ -47,7 +48,12 @@ const Hero = (props: HeroEntry) => {
           </Typography>
 
           {isEntryTypeButton(button) ? (
-            <a href={appendSearchParamsToURL(button.fields.btnHref, searchParams)} target="_blank" rel="noreferrer">
+            <Link
+              href={appendSearchParamsToURL(button.fields.btnHref, searchParams)}
+              target="_blank"
+              rel="noreferrer"
+              passHref
+            >
               <Button
                 variant="contained"
                 size="large"
@@ -60,7 +66,7 @@ const Hero = (props: HeroEntry) => {
               >
                 {button.fields.btnCopy}
               </Button>
-            </a>
+            </Link>
           ) : undefined}
         </Grid>
 

@@ -36,7 +36,12 @@ const TextBlockCentered = (props: TextBlockCenteredEntry) => {
         <Typography color="primary.light">{description}</Typography>
 
         {isEntryTypeButton(button) ? (
-          <Link href={appendSearchParamsToURL(button.fields.btnHref, searchParams)}>
+          <Link
+            href={appendSearchParamsToURL(button.fields.btnHref, searchParams)}
+            target="_blank"
+            rel="noreferrer"
+            passHref
+          >
             <Button
               variant="contained"
               size="large"

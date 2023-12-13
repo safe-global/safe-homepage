@@ -35,7 +35,12 @@ const TextBlockBanner = (props: TextBlockBannerEntry) => {
           </Typography>
 
           {isEntryTypeButton(button) ? (
-            <Link href={appendSearchParamsToURL(button.fields.btnHref, searchParams)}>
+            <Link
+              href={appendSearchParamsToURL(button.fields.btnHref, searchParams)}
+              target="_blank"
+              rel="noreferrer"
+              passHref
+            >
               <Button
                 variant="contained"
                 size="large"

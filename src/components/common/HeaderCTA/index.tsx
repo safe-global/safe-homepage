@@ -1,7 +1,7 @@
 import type { BaseBlock } from '@/components/Home/types'
 import LinkButton from '@/components/common/LinkButton'
 import { Grid, Typography } from '@mui/material'
-import NextLink from 'next/link'
+import Link from 'next/link'
 import css from './styles.module.css'
 import SearchParamsContext from '@/contexts/SearchParamsContext'
 import { useContext } from 'react'
@@ -27,16 +27,11 @@ const HeaderCTA = (props: HeaderCTAProps) => {
       </Grid>
       {props.link && (
         <Grid item xs={12} md={4} className={`${css.linkButton} ${!props.bigTitle && css.alignEnd}`}>
-          <NextLink
-            href={appendSearchParamsToURL(props.link.href, searchParams)}
-            target="_blank"
-            rel="noreferrer"
-            passHref
-          >
+          <Link href={appendSearchParamsToURL(props.link.href, searchParams)} target="_blank" rel="noreferrer" passHref>
             <LinkButton className={css.shortPadding} onClick={props.onClick}>
               {props.link.title}
             </LinkButton>
-          </NextLink>
+          </Link>
         </Grid>
       )}
     </Grid>
