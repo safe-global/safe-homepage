@@ -9,7 +9,7 @@ import type { AppProps } from 'next/app'
 import type { ReactElement } from 'react'
 
 import { createEmotionCache } from '@/styles/emotion'
-import { CookieBannerContextProvider } from '@/components/common/CookieBanner/CookieBannerContext'
+import { CookieBannerContextProvider } from '@/contexts/CookieBannerContext'
 import { CookieBanner } from '@/components/common/CookieBanner'
 
 import { theme } from '@/styles/theme'

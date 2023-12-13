@@ -3,7 +3,7 @@ import { Paper, Typography, FormControlLabel, Checkbox, Button } from '@mui/mate
 import { useEffect, useState } from 'react'
 import type { ReactElement } from 'react'
 
-import { useCookieBannerContext } from './CookieBannerContext'
+import { useCookieBannerContext } from '@/contexts/CookieBannerContext'
 
 import css from './styles.module.css'
 import { AppRoutes } from '@/config/routes'

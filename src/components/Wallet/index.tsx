@@ -1,7 +1,7 @@
 import walletContent from '@/content/wallet.json'
 import type { getStaticProps } from '@/pages/wallet'
 import type { InferGetStaticPropsType } from 'next'
-import ChainsContext from '../common/ChainsContext'
+import ChainsContext from '@/contexts/ChainsContext'
 import PageContent from '../common/PageContent'
 
 export const Wallet = (props: InferGetStaticPropsType<typeof getStaticProps>) => (

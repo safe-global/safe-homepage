@@ -1,4 +1,4 @@
-import type { ReactElement } from 'react'
+import { useContext, type ReactElement } from 'react'
 import { Button, Container, Divider, Grid, Typography } from '@mui/material'
 import { IOS_LINK, GPLAY_LINK } from '@/config/constants'
 import IOSDownload from '@/public/images/ios-download.svg'
@@ -6,8 +6,12 @@ import GPlayDownload from '@/public/images/google-play-download.svg'
 import type { BaseBlock } from '@/components/Home/types'
 import css from './styles.module.css'
 import HeaderParticles from '@/public/images/header_particles.svg'
+import SearchParamsContext from '@/contexts/SearchParamsContext'
+import { appendSearchParamsToURL } from '@/lib/appendSearchParamsToURL'
 
 const Intro = ({ image, title, buttons }: BaseBlock): ReactElement => {
+  const searchParams = useContext(SearchParamsContext)
+
   return (
     <Container>
       <Grid
@@ -35,7 +39,7 @@ const Intro = ({ image, title, buttons }: BaseBlock): ReactElement => {
                   {buttons?.map(({ text, href }) => (
                     <Button
                       key={text}
-                      href={href}
+                      href={appendSearchParamsToURL(href, searchParams)}
                       variant="contained"
                       target="_blank"
                       rel="noreferrer"

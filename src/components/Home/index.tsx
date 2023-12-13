@@ -1,9 +1,9 @@
 import homeContent from '@/content/home.json'
 import type { getStaticProps } from '@/pages/index'
 import type { InferGetStaticPropsType } from 'next'
-import ChainsContext from '../common/ChainsContext'
+import ChainsContext from '@/contexts/ChainsContext'
 import PageContent from '../common/PageContent'
-import SafeStatsContext from '@/components/common/SafeStatsContext'
+import SafeStatsContext from '@/contexts/SafeStatsContext'
 
 export const Home = (props: InferGetStaticPropsType<typeof getStaticProps>) => (
   <SafeStatsContext.Provider value={props.safeStatsData}>

@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { useCookieBannerContext } from '@/components/common/CookieBanner/CookieBannerContext'
+import { useCookieBannerContext } from '@/contexts/CookieBannerContext'
 import { HOTJAR_ID, HOTJAR_ID_STAGING, HOTJAR_VERSION, IS_PRODUCTION } from '@/config/constants'
 
 let scriptRef: HTMLScriptElement | null = null

@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { formatValue } from '@/lib/formatValue'
-import SafeStatsContext from '@/components/common/SafeStatsContext'
+import SafeStatsContext from '@/contexts/SafeStatsContext'
 
 const QUERY_ID_TOTAL_TRANSACTIONS = 2093960
 const QUERY_ID_TOTAL_ASSETS = 2893829
