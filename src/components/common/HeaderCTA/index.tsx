@@ -1,11 +1,8 @@
 import type { BaseBlock } from '@/components/Home/types'
 import LinkButton from '@/components/common/LinkButton'
 import { Grid, Typography } from '@mui/material'
-import Link from 'next/link'
 import css from './styles.module.css'
-import SearchParamsContext from '@/contexts/SearchParamsContext'
-import { useContext } from 'react'
-import { appendSearchParamsToURL } from '@/lib/appendSearchParamsToURL'
+import SafeLink from '@/components/common/SafeLink'
 
 type HeaderCTAProps = BaseBlock & {
   bigTitle?: boolean
@@ -13,8 +10,6 @@ type HeaderCTAProps = BaseBlock & {
 }
 
 const HeaderCTA = (props: HeaderCTAProps) => {
-  const searchParams = useContext(SearchParamsContext)
-
   return (
     <Grid container mb={{ sm: 5, md: 7 }}>
       <Grid item xs={12} md={!props.bigTitle ? 8 : undefined}>
@@ -27,11 +22,11 @@ const HeaderCTA = (props: HeaderCTAProps) => {
       </Grid>
       {props.link && (
         <Grid item xs={12} md={4} className={`${css.linkButton} ${!props.bigTitle && css.alignEnd}`}>
-          <Link href={appendSearchParamsToURL(props.link.href, searchParams)} target="_blank" rel="noreferrer" passHref>
+          <SafeLink href={props.link.href}>
             <LinkButton className={css.shortPadding} onClick={props.onClick}>
               {props.link.title}
             </LinkButton>
-          </Link>
+          </SafeLink>
         </Grid>
       )}
     </Grid>

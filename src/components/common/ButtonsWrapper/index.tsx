@@ -1,11 +1,8 @@
 import type { Button as ButtonType } from '@/components/Home/types'
 import LinkButton from '@/components/common/LinkButton'
 import { Button } from '@mui/material'
-import Link from 'next/link'
 import css from './styles.module.css'
-import SearchParamsContext from '@/contexts/SearchParamsContext'
-import { useContext } from 'react'
-import { appendSearchParamsToURL } from '@/lib/appendSearchParamsToURL'
+import SafeLink from '@/components/common/SafeLink'
 
 type ButtonsWrapperProps = {
   buttons?: ButtonType[]
@@ -13,8 +10,6 @@ type ButtonsWrapperProps = {
 }
 
 const ButtonsWrapper = ({ buttons, mobileDirection }: ButtonsWrapperProps) => {
-  const searchParams = useContext(SearchParamsContext)
-
   if (!buttons || buttons.length === 0) return null
 
   return (
@@ -24,13 +19,7 @@ const ButtonsWrapper = ({ buttons, mobileDirection }: ButtonsWrapperProps) => {
         const isButton = variant === 'button'
 
         return (
-          <Link
-            key={index}
-            href={appendSearchParamsToURL(href, searchParams)}
-            target="_blank"
-            rel="noreferrer"
-            passHref
-          >
+          <SafeLink key={index} href={href}>
             {isButton ? (
               <Button variant="contained" size="large" color={color}>
                 {text}
@@ -38,7 +27,7 @@ const ButtonsWrapper = ({ buttons, mobileDirection }: ButtonsWrapperProps) => {
             ) : (
               <LinkButton>{text}</LinkButton>
             )}
-          </Link>
+          </SafeLink>
         )
       })}
     </div>

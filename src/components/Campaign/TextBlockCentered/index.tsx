@@ -1,6 +1,5 @@
 import { Button, Container, Typography } from '@mui/material'
 import Image from 'next/image'
-import Link from 'next/link'
 import css from './styles.module.css'
 import layoutCss from '@/components/common/styles.module.css'
 import type { Entry } from 'contentful'
@@ -8,15 +7,12 @@ import type { TypeTextBlockCenteredSkeleton } from '@/contentful/types'
 import { isAsset, isEntryTypeButton } from '@/lib/typeGuards'
 import { trackEvent } from '@/services/analytics/trackEvent'
 import { SOCIAL_LOGIN_EVENTS } from '@/services/analytics/events/socialLogin'
-import SearchParamsContext from '@/contexts/SearchParamsContext'
-import { useContext } from 'react'
-import { appendSearchParamsToURL } from '@/lib/appendSearchParamsToURL'
+import SafeLink from '@/components/common/SafeLink'
 
 type TextBlockCenteredEntry = Entry<TypeTextBlockCenteredSkeleton, undefined, string>
 
 const TextBlockCentered = (props: TextBlockCenteredEntry) => {
   const { logo, cta, title, description, button } = props.fields
-  const searchParams = useContext(SearchParamsContext)
 
   return (
     <Container className={layoutCss.containerMedium}>
@@ -36,12 +32,7 @@ const TextBlockCentered = (props: TextBlockCenteredEntry) => {
         <Typography color="primary.light">{description}</Typography>
 
         {isEntryTypeButton(button) ? (
-          <Link
-            href={appendSearchParamsToURL(button.fields.btnHref, searchParams)}
-            target="_blank"
-            rel="noreferrer"
-            passHref
-          >
+          <SafeLink href={button.fields.btnHref}>
             <Button
               variant="contained"
               size="large"
@@ -54,7 +45,7 @@ const TextBlockCentered = (props: TextBlockCenteredEntry) => {
             >
               {button.fields.btnCopy}
             </Button>
-          </Link>
+          </SafeLink>
         ) : undefined}
       </div>
     </Container>

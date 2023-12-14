@@ -4,19 +4,15 @@ import css from './styles.module.css'
 import { isAsset, isEntryTypeButton } from '@/lib/typeGuards'
 import type { Entry } from 'contentful'
 import Image from 'next/image'
-import Link from 'next/link'
 import type { TypeTextBlockBannerSkeleton } from '@/contentful/types'
 import { trackEvent } from '@/services/analytics/trackEvent'
 import { SOCIAL_LOGIN_EVENTS } from '@/services/analytics/events/socialLogin'
-import SearchParamsContext from '@/contexts/SearchParamsContext'
-import { useContext } from 'react'
-import { appendSearchParamsToURL } from '@/lib/appendSearchParamsToURL'
+import SafeLink from '@/components/common/SafeLink'
 
 type TextBlockBannerEntry = Entry<TypeTextBlockBannerSkeleton, undefined, string>
 
 const TextBlockBanner = (props: TextBlockBannerEntry) => {
   const { logo, title, description, button } = props.fields
-  const searchParams = useContext(SearchParamsContext)
 
   return (
     <div className={css.gradient}>
@@ -35,12 +31,7 @@ const TextBlockBanner = (props: TextBlockBannerEntry) => {
           </Typography>
 
           {isEntryTypeButton(button) ? (
-            <Link
-              href={appendSearchParamsToURL(button.fields.btnHref, searchParams)}
-              target="_blank"
-              rel="noreferrer"
-              passHref
-            >
+            <SafeLink href={button.fields.btnHref}>
               <Button
                 variant="contained"
                 size="large"
@@ -54,7 +45,7 @@ const TextBlockBanner = (props: TextBlockBannerEntry) => {
               >
                 {button.fields.btnCopy}
               </Button>
-            </Link>
+            </SafeLink>
           ) : undefined}
         </div>
       </Container>
