@@ -57,11 +57,11 @@ const App = ({
         <CookieBannerContextProvider>
           <InitHooks />
 
-          <PageLayout>
-            <SearchParamsContextProvider>
+          <SearchParamsContextProvider>
+            <PageLayout>
               <Component {...pageProps} />
-            </SearchParamsContextProvider>
-          </PageLayout>
+            </PageLayout>
+          </SearchParamsContextProvider>
 
           <CookieBanner />
         </CookieBannerContextProvider>
