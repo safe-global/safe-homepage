@@ -5,11 +5,11 @@ import { type ReactNode, createContext, useEffect, useState } from 'react'
 const SEARCH_PARAMS_KEY = 'searchParams'
 const sessionSearchParams = sessionItem<string>(SEARCH_PARAMS_KEY)
 
-const SearchParamsContext = createContext<any>(undefined)
+const SearchParamsContext = createContext<string>('')
 
 export const SearchParamsContextProvider = ({ children }: { children: ReactNode }) => {
   const searchParams = useSearchParams()
-  const [searchParamsValue, setSearchParamsValue] = useState<string>()
+  const [searchParamsValue, setSearchParamsValue] = useState<string>('')
 
   useEffect(() => {
     const initialSearchParams = sessionSearchParams.get() || ''
