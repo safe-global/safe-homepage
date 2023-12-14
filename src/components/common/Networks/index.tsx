@@ -6,7 +6,7 @@ import css from './styles.module.css'
 import layoutCss from '@/components/common/styles.module.css'
 import { type ChainInfo } from '@safe-global/safe-gateway-typescript-sdk'
 import { useContext } from 'react'
-import ChainsContext from '../ChainsContext'
+import ChainsContext from '@/contexts/ChainsContext'
 
 export type ChainProps = {
   chainName: ChainInfo['chainName']

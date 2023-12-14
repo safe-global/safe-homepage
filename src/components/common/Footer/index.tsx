@@ -27,7 +27,7 @@ import {
   TWITTER_LINK,
   YOUTUBE_LINK,
 } from '@/config/constants'
-import { useCookieBannerContext } from '../CookieBanner/CookieBannerContext'
+import { useCookieBannerContext } from '@/contexts/CookieBannerContext'
 import Logo from '@/public/images/logo.svg'
 
 const COOKIE_PREFERENCES = '#cookies'

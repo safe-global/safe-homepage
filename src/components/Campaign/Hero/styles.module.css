@@ -34,6 +34,10 @@
   margin: 0;
 }
 
+.textBlock a {
+  width: fit-content;
+}
+
 .image {
   max-width: 500px;
 }

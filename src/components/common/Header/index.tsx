@@ -10,6 +10,7 @@ import css from './styles.module.css'
 import clsx from 'clsx'
 import { useRouter } from 'next/router'
 import navItemsData from '@/content/navItems.json'
+import SafeLink from '@/components/common/SafeLink'
 
 type NavItemType = {
   label: string | JSX.Element
@@ -76,15 +77,11 @@ const Header = () => {
             </li>
           ))}
           <li>
-            <Button
-              className={css.button}
-              href={WALLET_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              variant="contained"
-            >
-              Launch Wallet
-            </Button>
+            <SafeLink href={WALLET_LINK}>
+              <Button className={css.button} variant="contained">
+                Launch Wallet
+              </Button>
+            </SafeLink>
           </li>
         </ul>
       </nav>

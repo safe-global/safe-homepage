@@ -1,4 +1,4 @@
-import type { ReactElement } from 'react'
+import { type ReactElement } from 'react'
 import { Button, Container, Divider, Grid, Typography } from '@mui/material'
 import { IOS_LINK, GPLAY_LINK } from '@/config/constants'
 import IOSDownload from '@/public/images/ios-download.svg'
@@ -6,6 +6,7 @@ import GPlayDownload from '@/public/images/google-play-download.svg'
 import type { BaseBlock } from '@/components/Home/types'
 import css from './styles.module.css'
 import HeaderParticles from '@/public/images/header_particles.svg'
+import SafeLink from '@/components/common/SafeLink'
 
 const Intro = ({ image, title, buttons }: BaseBlock): ReactElement => {
   return (
@@ -33,16 +34,11 @@ const Intro = ({ image, title, buttons }: BaseBlock): ReactElement => {
               <Grid container gap={{ xs: 4, md: '10px' }}>
                 <Grid item>
                   {buttons?.map(({ text, href }) => (
-                    <Button
-                      key={text}
-                      href={href}
-                      variant="contained"
-                      target="_blank"
-                      rel="noreferrer"
-                      className={css.button}
-                    >
-                      {text}
-                    </Button>
+                    <SafeLink key={text} href={href}>
+                      <Button variant="contained" className={css.button}>
+                        {text}
+                      </Button>
+                    </SafeLink>
                   ))}
                 </Grid>
                 <div className={css.downloads}>

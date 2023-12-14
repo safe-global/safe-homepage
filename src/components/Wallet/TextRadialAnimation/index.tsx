@@ -3,7 +3,7 @@ import layoutCss from '@/components/common/styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
 import RadialAnimation from './RadialAnimation'
 import LinkButton from '@/components/common/LinkButton'
-import Link from 'next/link'
+import SafeLink from '@/components/common/SafeLink'
 
 const TextRadialAnimation = ({ title, text, link }: BaseBlock) => {
   return (
@@ -20,9 +20,9 @@ const TextRadialAnimation = ({ title, text, link }: BaseBlock) => {
           </Typography>
           <Typography mb={{ xs: 3, md: 5 }}>{text}</Typography>
           {link && (
-            <Link href={link.href} passHref target="_blank" rel="noreferrer">
+            <SafeLink href={link.href}>
               <LinkButton>{link.title}</LinkButton>
-            </Link>
+            </SafeLink>
           )}
         </Grid>
         <Grid item md={1} display={{ xs: 'none', md: 'block' }} />

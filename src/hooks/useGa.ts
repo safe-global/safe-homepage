@@ -1,4 +1,4 @@
-import { useCookieBannerContext } from '@/components/common/CookieBanner/CookieBannerContext'
+import { useCookieBannerContext } from '@/contexts/CookieBannerContext'
 import { GOOGLE_ANALYTICS_DOMAIN, GOOGLE_ANALYTICS_TRACKING_ID, IS_PRODUCTION } from '@/config/constants'
 import { useEffect } from 'react'
 import ReactGA from 'react-ga4'

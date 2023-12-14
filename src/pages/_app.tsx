@@ -9,7 +9,7 @@ import type { AppProps } from 'next/app'
 import type { ReactElement } from 'react'
 
 import { createEmotionCache } from '@/styles/emotion'
-import { CookieBannerContextProvider } from '@/components/common/CookieBanner/CookieBannerContext'
+import { CookieBannerContextProvider } from '@/contexts/CookieBannerContext'
 import { CookieBanner } from '@/components/common/CookieBanner'
 
 import { theme } from '@/styles/theme'
@@ -19,6 +19,7 @@ import PageLayout from '@/components/common/PageLayout'
 import { useGa } from '@/hooks/useGa'
 import useHotjar from '@/hooks/useHotjar'
 import DOMPurify from 'isomorphic-dompurify'
+import { SearchParamsContextProvider } from '@/contexts/SearchParamsContext'
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache()
@@ -56,9 +57,11 @@ const App = ({
         <CookieBannerContextProvider>
           <InitHooks />
 
-          <PageLayout>
-            <Component {...pageProps} />
-          </PageLayout>
+          <SearchParamsContextProvider>
+            <PageLayout>
+              <Component {...pageProps} />
+            </PageLayout>
+          </SearchParamsContextProvider>
 
           <CookieBanner />
         </CookieBannerContextProvider>

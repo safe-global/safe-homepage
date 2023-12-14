@@ -1,8 +1,8 @@
 import type { Button as ButtonType } from '@/components/Home/types'
 import LinkButton from '@/components/common/LinkButton'
 import { Button } from '@mui/material'
-import Link from 'next/link'
 import css from './styles.module.css'
+import SafeLink from '@/components/common/SafeLink'
 
 type ButtonsWrapperProps = {
   buttons?: ButtonType[]
@@ -19,7 +19,7 @@ const ButtonsWrapper = ({ buttons, mobileDirection }: ButtonsWrapperProps) => {
         const isButton = variant === 'button'
 
         return (
-          <Link key={index} href={href} target="_blank" rel="noreferrer" passHref>
+          <SafeLink key={index} href={href}>
             {isButton ? (
               <Button variant="contained" size="large" color={color}>
                 {text}
@@ -27,7 +27,7 @@ const ButtonsWrapper = ({ buttons, mobileDirection }: ButtonsWrapperProps) => {
             ) : (
               <LinkButton>{text}</LinkButton>
             )}
-          </Link>
+          </SafeLink>
         )
       })}
     </div>
