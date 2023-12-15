@@ -23,8 +23,8 @@ const CoreIntro = ({ title, text, link, scroll }: BaseBlock & { scroll?: { title
       >
         <Grid item md={6} display="flex" justifyContent="center">
           <video autoPlay muted playsInline loop className={css.video}>
-            <source src="/videos/Core/intro-chipe.webm" type="video/webm" />
-            <source src="/videos/Core/intro-chipe.hevc.mp4" type="video/mp4" />
+            <source src="/videos/Core/intro-chip.webm" type="video/webm" />
+            <source src="/videos/Core/intro-chip.hevc.mp4" type="video/mp4" />
             <img src="/images/Core/intro-chip.png" alt="Core Chip" />
           </video>
         </Grid>
