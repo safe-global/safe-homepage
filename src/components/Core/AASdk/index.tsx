@@ -32,14 +32,16 @@ const AASdk = ({ title, caption, text, link }: BaseBlock) => {
           )}
         </Grid>
         <div className={css.videoWrapper}>
-          <video autoPlay muted loop className={css.video}>
-            <source src={isSmallScreen ? '/videos/aa-sdk-mobile.webm' : '/videos/aa-sdk.webm'} type="video/webm" />
+          <video autoPlay muted playsInline loop className={css.video}>
             <source
-              src={isSmallScreen ? '/videos/aa-sdk-mobile.hevc.mp4' : '/videos/aa-sdk.hevc.mp4'}
+              src={isSmallScreen ? '/videos/Core/aa-sdk-mobile.webm' : '/videos/Core/aa-sdk.webm'}
+              type="video/webm"
+            />
+            <source
+              src={isSmallScreen ? '/videos/Core/aa-sdk-mobile.hevc.mp4' : '/videos/Core/aa-sdk.hevc.mp4'}
               type="video/mp4"
             />
-            <source src={isSmallScreen ? '/videos/aa-sdk-mobile.mp4' : '/videos/aa-sdk.mp4'} type="video/mp4" />
-            <img src="/images/aa-sdk.png" alt="AA SDK Overview" />
+            <img src="/images/Core/aa-sdk.png" alt="AA SDK Overview" />
           </video>
           <a className={clsx(css.videoLink, css.authKitLink)} href={AUTH_KIT_LINK} target="_blank" rel="noreferrer">
             Auth Kit
