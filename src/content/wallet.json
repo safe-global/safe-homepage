@@ -52,7 +52,7 @@
       ],
       "text": "Powered by"
     },
-    "component": "Core/Masthead"
+    "component": "common/Masthead"
   },
   {
     "variant": "3-columns",
