@@ -7,6 +7,18 @@
   margin-bottom: 40px;
   background-position: right;
   background-size: cover;
+  position: relative;
+}
+
+.spot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 50px;
+  width: 50%;
+  height: 300px;
+  background-image: radial-gradient(rgba(18, 255, 128, 0.8), rgba(18, 19, 18, 1) 100%);
+  filter: blur(50px);
 }
 
 .text {
@@ -26,6 +38,17 @@
   display: none;
 }
 
+.footer {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  width: max-content;
+}
+
 @media (min-width: 900px) {
   .container {
     padding: 68px 104px;
@@ -33,13 +56,25 @@
     text-align: left;
   }
 
+  .spot {
+    width: 300px;
+    right: 10%;
+    top: 50%;
+    left: unset;
+    transform: translateY(-50%);
+  }
+
   .linkButton {
     display: block;
   }
 
   .image {
-    display: flex;
-    align-items: center;
+    width: 300px;
+  }
+
+  .footer {
+    left: unset;
+    transform: unset;
   }
 }
 

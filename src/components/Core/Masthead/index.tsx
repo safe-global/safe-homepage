@@ -12,6 +12,7 @@ export const Masthead = ({
   buttons,
   caption,
   image,
+  footer,
   backgroundImage,
 }: BaseBlock & {
   image: {
@@ -20,16 +21,26 @@ export const Masthead = ({
     alt: string
   }
   backgroundImage: { sm: string; md: string }
+  footer: {
+    text: string
+    logos: [
+      {
+        src: string
+        alt: string
+      },
+    ]
+  }
 }): ReactElement => {
   const isSmallScreen = useMediaQuery('(max-width:900px)')
 
-  const bgImage = isSmallScreen ? backgroundImage.sm : backgroundImage.md
+  const bgImage = backgroundImage ? (isSmallScreen ? backgroundImage.sm : backgroundImage.md) : undefined
   const imageSrc = image ? (isSmallScreen ? image.sm : image.md) : undefined
 
   return (
     <Container className={layoutCss.containerShort} id="masthead">
       <div className={css.container} style={{ backgroundImage: `url(${bgImage})` }}>
-        <Grid container spacing={{ xs: '90px', sm: '30px' }} justifyContent="space-between">
+        {!backgroundImage ? <div className={css.spot} /> : null}
+        <Grid container spacing={{ xs: '90px', sm: '30px' }} justifyContent="space-between" position="relative">
           <Grid item xs={12} md={7}>
             <Chip
               label={
@@ -51,6 +62,13 @@ export const Masthead = ({
             </Grid>
           ) : null}
         </Grid>
+        {footer ? (
+          <div className={css.footer}>
+            {footer?.logos.map((logo, index) => {
+              return <img src={logo.src} alt={logo.alt} key={index} />
+            })}
+          </div>
+        ) : null}
       </div>
     </Container>
   )
