@@ -22,11 +22,10 @@ const CoreIntro = ({ title, text, link, scroll }: BaseBlock & { scroll?: { title
         alignItems="center"
       >
         <Grid item md={6} display="flex" justifyContent="center">
-          <video autoPlay muted loop className={css.video}>
-            <source src="/videos/intro-chip.webm" type="video/webm" />
-            <source src="/videos/intro-chip.hevc.mp4" type="video/mp4" />
-            <source src="/videos/intro-chip.mp4" type="video/mp4" />
-            <img src="/images/intro-chip.png" alt="Core Chip" />
+          <video autoPlay muted playsInline loop poster="/images/Core/intro-chip.png" className={css.video}>
+            <source src="/videos/Core/intro-chip.webm" type="video/webm" />
+            <source src="/videos/Core/intro-chip.hevc.mp4" type="video/mp4" />
+            <img src="/images/Core/intro-chip.png" alt="Core Chip" />
           </video>
         </Grid>
         <Grid item md={6}>

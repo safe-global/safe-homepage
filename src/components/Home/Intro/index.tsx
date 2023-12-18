@@ -19,8 +19,8 @@ const Intro = ({ title, text, buttons }: BaseBlock) => {
           </Grid>
         </Grid>
         <div className={css.filter}>
-          <video autoPlay muted loop className={css.video}>
-            <source src="/videos/safe-logo.mp4" type="video/mp4" />
+          <video autoPlay muted playsInline loop className={css.video}>
+            <source src="/videos/Home/safe-logo.mp4" type="video/mp4" />
           </video>
           <div className={css.frame} />
         </div>
