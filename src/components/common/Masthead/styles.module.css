@@ -2,7 +2,7 @@
   text-align: center;
   background-color: var(--mui-palette-secondary-background);
   border-radius: 32px;
-  padding: 24px;
+  padding: 24px 24px 80px;
   justify-content: space-between;
   margin-bottom: 40px;
   background-position: right;
@@ -44,14 +44,20 @@
   left: 50%;
   transform: translateX(-50%);
   display: flex;
+  align-items: center;
   flex-direction: row;
   gap: 24px;
   width: max-content;
 }
 
+.tagline {
+  color: var(--mui-palette-primary-light);
+  text-transform: uppercase;
+}
+
 @media (min-width: 900px) {
   .container {
-    padding: 68px 104px;
+    padding: 90px 104px;
     border-bottom: 80px;
     text-align: left;
   }
@@ -69,6 +75,8 @@
   }
 
   .image {
+    display: flex;
+    align-items: center;
     width: 300px;
   }
 

@@ -62,8 +62,14 @@ export const Masthead = ({
             </Grid>
           ) : null}
         </Grid>
+        {/* TODO: create a component? */}
         {footer ? (
           <div className={css.footer}>
+            {footer?.text ? (
+              <Typography variant="caption" mr="-14px">
+                {footer.text}
+              </Typography>
+            ) : null}
             {footer?.logos.map((logo, index) => {
               return <img src={logo.src} alt={logo.alt} key={index} />
             })}

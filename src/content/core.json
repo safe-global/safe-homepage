@@ -37,6 +37,15 @@
       "sm": "/images/Core/safeauth-bg-sm.png",
       "md": "/images/Core/safeauth-bg-md.png"
     },
+    "footer": {
+      "logos": [
+        {
+          "src": "/images/Wallet/web3auth-logo.svg",
+          "alt": "web3auth logo"
+        }
+      ],
+      "text": "Powered by"
+    },
     "component": "common/Masthead"
   },
   {
