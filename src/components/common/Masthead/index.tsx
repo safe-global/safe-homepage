@@ -7,6 +7,33 @@ import css from './styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
 import ButtonsWrapper from '@/components/common/ButtonsWrapper'
 
+type FooterProps = {
+  text: string
+  logos: [
+    {
+      src: string
+      alt: string
+    },
+  ]
+}
+
+const Footer = ({ logos, text }: FooterProps) => {
+  if (!logos) return null
+
+  return (
+    <div className={css.footer}>
+      {text ? (
+        <Typography variant="caption" mr="-14px">
+          {text}
+        </Typography>
+      ) : null}
+      {logos.map((logo, index) => {
+        return <img src={logo.src} alt={logo.alt} key={index} />
+      })}
+    </div>
+  )
+}
+
 export const Masthead = ({
   title,
   buttons,
@@ -21,15 +48,7 @@ export const Masthead = ({
     alt: string
   }
   backgroundImage: { sm: string; md: string }
-  footer: {
-    text: string
-    logos: [
-      {
-        src: string
-        alt: string
-      },
-    ]
-  }
+  footer: FooterProps
 }): ReactElement => {
   const isSmallScreen = useMediaQuery('(max-width:900px)')
 
@@ -62,19 +81,7 @@ export const Masthead = ({
             </Grid>
           ) : null}
         </Grid>
-        {/* TODO: create a component? */}
-        {footer ? (
-          <div className={css.footer}>
-            {footer?.text ? (
-              <Typography variant="caption" mr="-14px">
-                {footer.text}
-              </Typography>
-            ) : null}
-            {footer?.logos.map((logo, index) => {
-              return <img src={logo.src} alt={logo.alt} key={index} />
-            })}
-          </div>
-        ) : null}
+        <Footer {...footer} />
       </div>
     </Container>
   )
