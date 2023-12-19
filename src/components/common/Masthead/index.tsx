@@ -6,6 +6,7 @@ import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
 import ButtonsWrapper from '@/components/common/ButtonsWrapper'
+import { getImageSource, type ImageObj } from '@/lib/getImageSource'
 
 type FooterProps = {
   text: string
@@ -42,18 +43,14 @@ export const Masthead = ({
   footer,
   backgroundImage,
 }: BaseBlock & {
-  image: {
-    sm: string
-    md: string
-    alt: string
-  }
-  backgroundImage: { sm: string; md: string }
+  image: ImageObj
+  backgroundImage: ImageObj
   footer: FooterProps
 }): ReactElement => {
   const isSmallScreen = useMediaQuery('(max-width:900px)')
 
-  const bgImage = backgroundImage ? (isSmallScreen ? backgroundImage.sm : backgroundImage.md) : undefined
-  const imageSrc = image ? (isSmallScreen ? image.sm : image.md) : undefined
+  const bgImage = getImageSource(isSmallScreen, backgroundImage)
+  const imageSrc = getImageSource(isSmallScreen, image)
 
   return (
     <Container className={layoutCss.containerShort} id="masthead">
