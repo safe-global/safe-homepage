@@ -34,8 +34,24 @@
         "variant": "link"
       }
     ],
-    "backgroundImage": "/images/Wallet/buoy.png",
-    "component": "common/BannerCta"
+    "image": {
+      "sm": "/images/Wallet/buoy-logo.png",
+      "md": "/images/Wallet/buoy-logo.png",
+      "alt": "Recovery buoy logo"
+    },
+    "footer": {
+      "logos": [
+        {
+          "src": "/images/Wallet/Sygnum-logo.png",
+          "alt": "Sygnum logo"
+        },
+        {
+          "src": "/images/Wallet/Coincover-logo.png",
+          "alt": "Coincover logo"
+        }
+      ]
+    },
+    "component": "common/Masthead"
   },
   {
     "variant": "3-columns",

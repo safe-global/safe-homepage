@@ -37,7 +37,16 @@
       "sm": "/images/Core/safeauth-bg-sm.png",
       "md": "/images/Core/safeauth-bg-md.png"
     },
-    "component": "Core/Masthead"
+    "footer": {
+      "logos": [
+        {
+          "src": "/images/Wallet/web3auth-logo.svg",
+          "alt": "web3auth logo"
+        }
+      ],
+      "text": "Powered by"
+    },
+    "component": "common/Masthead"
   },
   {
     "title": "Our Account Abstraction stack",

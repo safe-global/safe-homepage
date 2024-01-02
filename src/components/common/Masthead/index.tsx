@@ -6,30 +6,57 @@ import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
 import ButtonsWrapper from '@/components/common/ButtonsWrapper'
+import { getImageSource, type ImageObj } from '@/lib/getImageSource'
+
+type FooterProps = {
+  text: string
+  logos: [
+    {
+      src: string
+      alt: string
+    },
+  ]
+}
+
+const Footer = ({ logos, text }: FooterProps) => {
+  if (!logos) return null
+
+  return (
+    <div className={css.footer}>
+      {text ? (
+        <Typography variant="caption" mr="-14px">
+          {text}
+        </Typography>
+      ) : null}
+      {logos.map((logo, index) => {
+        return <img src={logo.src} alt={logo.alt} key={index} />
+      })}
+    </div>
+  )
+}
 
 export const Masthead = ({
   title,
   buttons,
   caption,
   image,
+  footer,
   backgroundImage,
 }: BaseBlock & {
-  image: {
-    sm: string
-    md: string
-    alt: string
-  }
-  backgroundImage: { sm: string; md: string }
+  image: ImageObj
+  backgroundImage: ImageObj
+  footer: FooterProps
 }): ReactElement => {
   const isSmallScreen = useMediaQuery('(max-width:900px)')
 
-  const bgImage = isSmallScreen ? backgroundImage.sm : backgroundImage.md
-  const imageSrc = image ? (isSmallScreen ? image.sm : image.md) : undefined
+  const bgImage = getImageSource(isSmallScreen, backgroundImage)
+  const imageSrc = getImageSource(isSmallScreen, image)
 
   return (
     <Container className={layoutCss.containerShort} id="masthead">
       <div className={css.container} style={{ backgroundImage: `url(${bgImage})` }}>
-        <Grid container spacing={{ xs: '90px', sm: '30px' }} justifyContent="space-between">
+        {!backgroundImage ? <div className={css.spot} /> : null}
+        <Grid container spacing={{ xs: '90px', sm: '30px' }} justifyContent="space-between" position="relative">
           <Grid item xs={12} md={7}>
             <Chip
               label={
@@ -51,6 +78,7 @@ export const Masthead = ({
             </Grid>
           ) : null}
         </Grid>
+        <Footer {...footer} />
       </div>
     </Container>
   )
