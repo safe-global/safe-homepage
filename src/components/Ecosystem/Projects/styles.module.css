@@ -2,6 +2,10 @@
   margin-top: 0 !important;
 }
 
+.cardWrapper {
+  position: relative;
+}
+
 .searchField :global .MuiInputBase-root {
   background: white;
 }
@@ -20,16 +24,8 @@
   height: 300px;
 }
 
-.card:hover {
+.outline:hover {
   box-shadow: inset 0 0 0 1px var(--mui-palette-primary-main);
-}
-
-.cardLink {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .image {
@@ -56,12 +52,19 @@
   gap: 8px;
   flex-wrap: wrap;
   margin-top: 16px;
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+.categories::-webkit-scrollbar {
+  display: none;
 }
 
 .chip {
   border-radius: 4px;
   height: 23px;
   font-size: 14px;
+  cursor: pointer;
 }
 
 .reset {
@@ -128,6 +131,7 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  flex-shrink: 0;
 }
 
 .filterButton {

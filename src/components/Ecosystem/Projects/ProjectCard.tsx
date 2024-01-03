@@ -6,17 +6,35 @@ import GithubIcon from '@/public/images/github-icon.svg'
 import css from './styles.module.css'
 import { ECOSYSTEM_DATA_URL } from '@/config/constants'
 import { type EcosystemProjectWithCategories } from '@/hooks/useEcosystemData'
-import Link from 'next/link'
+import clsx from 'clsx'
 
 export const ProjectCard = (item: EcosystemProjectWithCategories) => {
   const categories = item.categories_list
 
-  return (
-    <div className={css.card}>
+  const CardContent = (
+    <div className={clsx(css.card, { [css.outline]: item.project_website })}>
       <Avatar className={css.image} src={ECOSYSTEM_DATA_URL + item.logo}>
         &nbsp;
       </Avatar>
 
+      <Typography fontWeight="500" mb={0.5}>
+        {item.project}
+      </Typography>
+
+      <Typography variant="body2" className={css.description}>
+        {item.description}
+      </Typography>
+
+      <div className={css.categories}>
+        {categories.map((category, idx) => {
+          return <Chip key={category + idx} className={css.chip} label={category} />
+        })}
+      </div>
+    </div>
+  )
+
+  return (
+    <div className={css.cardWrapper}>
       <div className={css.socials}>
         {item.twitter && (
           <IconButton
@@ -44,24 +62,13 @@ export const ProjectCard = (item: EcosystemProjectWithCategories) => {
           </IconButton>
         )}
       </div>
-
-      {item.project_website && (
-        <Link className={css.cardLink} href={item.project_website} target="_blank" rel="noreferrer" />
+      {item.project_website ? (
+        <a href={item.project_website} target="_blank" rel="noreferrer">
+          {CardContent}
+        </a>
+      ) : (
+        CardContent
       )}
-
-      <Typography fontWeight="500" mb={0.5}>
-        {item.project}
-      </Typography>
-
-      <Typography variant="body2" className={css.description}>
-        {item.description}
-      </Typography>
-
-      <div className={css.categories}>
-        {categories.map((category, idx) => {
-          return <Chip key={category + idx} className={css.chip} label={category} />
-        })}
-      </div>
     </div>
   )
 }

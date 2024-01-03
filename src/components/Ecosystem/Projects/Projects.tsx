@@ -16,7 +16,7 @@ import {
   CircularProgress,
 } from '@mui/material'
 import clsx from 'clsx'
-import { useMemo, useState } from 'react'
+import { Fragment, useMemo, useState } from 'react'
 import { useRouter } from 'next/router'
 import NextLink from 'next/link'
 import type { NextRouter } from 'next/router'
@@ -267,14 +267,10 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
               </Typography>{' '}
               {uniquePrimaryCategories.map((primaryCategory, idx, { length }) => {
                 return (
-                  <>
-                    <SpecificCategoryFilter
-                      key={primaryCategory + idx}
-                      category={primaryCategory}
-                      onClick={toggleSpecificCategory}
-                    />
-                    {idx !== length - 1 && <>, </>}
-                  </>
+                  <Fragment key={primaryCategory + idx}>
+                    <SpecificCategoryFilter category={primaryCategory} onClick={toggleSpecificCategory} />
+                    {idx !== length - 1 && ', '}
+                  </Fragment>
                 )
               })}
             </Typography>
