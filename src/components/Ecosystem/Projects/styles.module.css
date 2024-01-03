@@ -2,6 +2,10 @@
   margin-top: 0 !important;
 }
 
+.cardWrapper {
+  position: relative;
+}
+
 .searchField :global .MuiInputBase-root {
   background: white;
 }
