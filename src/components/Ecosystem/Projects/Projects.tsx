@@ -268,11 +268,7 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
               {uniquePrimaryCategories.map((primaryCategory, idx, { length }) => {
                 return (
                   <Fragment key={primaryCategory + idx}>
-                    <SpecificCategoryFilter
-                      key={primaryCategory + idx}
-                      category={primaryCategory}
-                      onClick={toggleSpecificCategory}
-                    />
+                    <SpecificCategoryFilter category={primaryCategory} onClick={toggleSpecificCategory} />
                     {idx !== length - 1 && ', '}
                   </Fragment>
                 )
