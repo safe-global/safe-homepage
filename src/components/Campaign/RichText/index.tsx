@@ -12,6 +12,7 @@ import {
 import css from './styles.module.css'
 import { Typography } from '@mui/material'
 import { isText } from '@/lib/typeGuards'
+import kebabCase from 'lodash/kebabCase'
 
 const options: Options = {
   renderNode: {
@@ -33,7 +34,12 @@ const options: Options = {
     },
     [BLOCKS.HEADING_3]: (node: Heading3) => {
       const text = node.content.find(isText)?.value
-      return <Typography variant="h3">{text}</Typography>
+
+      return (
+        <Typography id={kebabCase(text)} variant="h3">
+          {text}
+        </Typography>
+      )
     },
     [BLOCKS.EMBEDDED_ASSET]: (node: Node) => {
       const { title, description, file } = node.data.target.fields

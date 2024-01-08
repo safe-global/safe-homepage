@@ -1,5 +1,9 @@
-.avatarGroup {
-  justify-content: flex-end;
+.progressBar :global .MuiLinearProgress-root {
+  background-color: var(--mui-palette-border-main);
+  position: fixed;
+  top: 72px;
+  z-index: 1000;
+  width: 100%;
 }
 
 .breadcrumbs,
@@ -8,9 +12,14 @@
 }
 
 .tags {
-  margin: 8px 0;
+  margin: 24px 0;
   display: flex;
   gap: 8px;
+}
+
+.avatarGroup {
+  margin: 24px 0;
+  justify-content: flex-end;
 }
 
 .chip {
@@ -22,6 +31,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   margin-top: 60px;
   margin-bottom: 16px;
 }
@@ -32,7 +42,25 @@
   gap: 14px;
 }
 
+.authors {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.content {
+  scroll-snap-type: y mandatory;
+}
+
 .content a {
   text-decoration: underline;
   color: var(--mui-palette-primary-main);
+}
+
+.tableContent {
+  list-style: none;
+}
+
+.tableContent li {
+  margin-bottom: 8px;
 }

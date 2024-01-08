@@ -1,10 +1,25 @@
 import RichText from '@/components/Campaign/RichText'
 import { type getStaticProps } from '@/pages/blog/[slug]'
-import { Avatar, AvatarGroup, Breadcrumbs, Chip, Container, Link, Typography } from '@mui/material'
+import {
+  Avatar,
+  AvatarGroup,
+  Breadcrumbs,
+  Chip,
+  Container,
+  Divider,
+  Grid,
+  LinearProgress,
+  Link,
+  Typography,
+} from '@mui/material'
 import { type InferGetStaticPropsType } from 'next'
 import css from './styles.module.css'
 import { formatBlogDate } from '@/components/Blog/utils/formatBlogDate'
 import { calculateReadingTime } from '@/components/Blog/utils/calculateReadingTime'
+import React, { useEffect, useState } from 'react'
+import { scrollToElement } from '@/lib/scrollSmooth'
+import kebabCase from 'lodash/kebabCase'
+import BlogLayout from '@/components/Blog/Layout'
 
 const BlogPost = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   console.log('BlogPost props', props)
@@ -30,48 +45,132 @@ const BlogPost = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
     </Typography>,
   ]
 
+  const headings: { id: string; text: string }[] = content.content
+    .filter((item: any) => item.nodeType === 'heading-3')
+    .map((item: any) => ({
+      id: item.content[0].value,
+      text: item.content[0].value,
+    }))
+
+  const handleContentMenuClick = (e: React.MouseEvent<HTMLAnchorElement>, target: string) => {
+    e.preventDefault()
+
+    scrollToElement(`#${target}`, 100)
+  }
+
+  const [readProgress, setReadProgress] = useState(0)
+
+  // move to a useScrollProgress hook
+  const handleScroll = () => {
+    const windowHeight = window.innerHeight
+    const documentHeight = document.documentElement.scrollHeight
+    const scrollTop = window.scrollY || document.documentElement.scrollTop
+    const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100
+
+    setReadProgress(scrollPercent)
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
-    <Container className={css.post}>
-      <Breadcrumbs separator=">" className={css.breadcrumbs}>
-        {breadcrumbs}
-      </Breadcrumbs>
-      <img src={image.src} alt={image.alt} />
-      <div className={css.meta}>
-        <div className={css.metaStart}>
-          <Typography variant="h4" display="inline-block">
-            #{category}
-          </Typography>
-          <Typography variant="caption">{calculateReadingTime(content)}min</Typography>
+    <BlogLayout>
+      <div className={css.progressBar}>
+        <LinearProgress
+          variant="determinate"
+          color="primary"
+          value={readProgress}
+          // move header height to a global css variable
+          sx={{ position: 'fixed', top: '72px', zIndex: 1000, width: '100%' }}
+        />
+      </div>
+      <Container className={css.post}>
+        <Breadcrumbs separator=">" className={css.breadcrumbs}>
+          {breadcrumbs}
+        </Breadcrumbs>
+
+        <img src={image.src} alt={image.alt} />
+
+        <div className={css.meta}>
+          <div className={css.metaStart}>
+            <Typography variant="h4" display="inline-block">
+              #{category}
+            </Typography>
+            <Typography variant="caption">{calculateReadingTime(content)}min</Typography>
+          </div>
+          <Typography variant="caption">{formatBlogDate(date)}</Typography>
         </div>
-        <Typography variant="caption">{formatBlogDate(date)}</Typography>
-      </div>
-      <Typography variant="h2" mb="24px">
-        {title}
-      </Typography>
-      <Typography variant="h4" mb="24px">
-        {excerpt}
-      </Typography>
-      <div className={css.tags}>
-        {tags.map((tag: any) => {
-          const { name } = tag.fields
 
-          return <Chip key={name} label={name} className={css.chip} />
-        })}
-      </div>
-      <AvatarGroup className={css.avatarGroup} max={3}>
-        {authors.map((author: any) => {
-          const { name, picture } = author.fields
+        <Typography variant="h2" mb="24px">
+          {title}
+        </Typography>
 
-          return <Avatar key={name} src={picture.fields.file.url} alt={picture.fields.title} />
-        })}
-      </AvatarGroup>
-      <section className={css.content}>
-        <RichText {...content} />
-      </section>
+        <Typography variant="h4" mb="24px">
+          {excerpt}
+        </Typography>
 
-      <h1>Similar Posts</h1>
-      {/* TODO: Card (max. 3) */}
-    </Container>
+        <div className={css.tags}>
+          {tags.map((tag: any) => {
+            const { name } = tag.fields
+
+            return <Chip key={name} label={name} className={css.chip} />
+          })}
+        </div>
+
+        <div className={css.authors}>
+          <AvatarGroup className={css.avatarGroup} max={3}>
+            {authors.map((author: any) => {
+              const { name, picture } = author.fields
+
+              return <Avatar key={name} src={picture.fields.file.url} alt={picture.fields.title} />
+            })}
+          </AvatarGroup>
+
+          <span className={css.authorNames}>
+            {authors.map((author: any, index: number) => {
+              const { name } = author.fields
+
+              return (
+                <Typography key={name} variant="caption" color="text.primary">
+                  {`${index !== 0 ? ' &' : ''} ${name}`}
+                </Typography>
+              )
+            })}
+          </span>
+        </div>
+
+        <Divider />
+        <Grid container className={css.content}>
+          <Grid item xs={12} md={8}>
+            <RichText {...content} />
+          </Grid>
+
+          <Grid item xs={12} md={4}>
+            <ul className={css.tableContent}>
+              {headings.map((heading) => {
+                const headingKey = kebabCase(heading.id)
+
+                return (
+                  <li key={headingKey}>
+                    <a onClick={(e) => handleContentMenuClick(e, headingKey)} href={`#${headingKey}`}>
+                      {heading.text}
+                    </a>
+                  </li>
+                )
+              })}
+            </ul>
+          </Grid>
+        </Grid>
+
+        <h1>Similar Posts</h1>
+        {/* TODO: Card (max. 3) */}
+      </Container>
+    </BlogLayout>
   )
 }
 
