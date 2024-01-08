@@ -31,6 +31,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     props: {
       content: content.items[0],
     },
+    revalidate: 60,
   }
 }
 
