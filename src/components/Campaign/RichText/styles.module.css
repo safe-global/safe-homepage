@@ -1,0 +1,9 @@
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoContainer {
+  margin: 1rem 0;
+}

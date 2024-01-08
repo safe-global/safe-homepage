@@ -1032,6 +1032,13 @@
     "@contentful/rich-text-types" "^16.3.0"
     escape-html "^1.0.3"
 
+"@contentful/rich-text-plain-text-renderer@^16.0.7":
+  version "16.0.7"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-plain-text-renderer/-/rich-text-plain-text-renderer-16.0.7.tgz#2bac73d725420d7d6aae7490041bb7e45c666660"
+  integrity sha512-ryFZP3Q279kG5xfL5XmdxFv2peoivGdVq+ZglOlGPfSmpV/fXlrEW9eg/zY7vRJpLQt/XOpf2dQo4giecKPhCA==
+  dependencies:
+    "@contentful/rich-text-types" "^16.3.0"
+
 "@contentful/rich-text-react-renderer@^15.18.0":
   version "15.18.0"
   resolved "https://registry.yarnpkg.com/@contentful/rich-text-react-renderer/-/rich-text-react-renderer-15.18.0.tgz#9b2b8e61f0aa4044bebae8bc1b3f3a8612ff992c"

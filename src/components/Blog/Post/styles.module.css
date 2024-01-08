@@ -1,0 +1,38 @@
+.avatarGroup {
+  justify-content: flex-end;
+}
+
+.breadcrumbs,
+.breadcrumbs a {
+  color: var(--mui-palette-text-primary);
+}
+
+.tags {
+  margin: 8px 0;
+  display: flex;
+  gap: 8px;
+}
+
+.chip {
+  border-radius: 4px;
+  height: 24px;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 16px;
+}
+
+.metaStart {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+}
+
+.content a {
+  text-decoration: underline;
+  color: var(--mui-palette-primary-main);
+}
