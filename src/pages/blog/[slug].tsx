@@ -37,12 +37,11 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
   }
 
   return {
-    revalidate: revalidateDuration,
     props: {
-      // ...(await getServerSideTranslations(locale)),
       // previewActive: !!preview,
       blogPost,
     },
+    revalidate: revalidateDuration,
   }
 }
 

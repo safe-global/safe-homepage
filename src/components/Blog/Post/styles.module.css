@@ -1,6 +1,7 @@
 .progressBar :global .MuiLinearProgress-root {
   background-color: var(--mui-palette-border-main);
   position: fixed;
+  /* move header height to a global css variable */
   top: 72px;
   z-index: 1000;
   width: 100%;
@@ -63,4 +64,29 @@
 
 .tableContent li {
   margin-bottom: 8px;
+}
+
+.postCard {
+  height: 100%;
+  position: relative;
+  border-radius: 16px;
+}
+
+.postCard:hover {
+  outline: 1px solid var(--mui-palette-primary-main);
+}
+
+.link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.cardImage {
+  width: 368px;
+  height: 180px;
+  margin-bottom: 24px;
+  object-fit: cover;
 }

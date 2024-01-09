@@ -24,7 +24,7 @@ import BlogLayout from '@/components/Blog/Layout'
 const BlogPost = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   console.log('BlogPost props', props)
 
-  const { title, excerpt, content, coverImage, authors, tags, category, date } = props.fields
+  const { title, excerpt, content, coverImage, authors, tags, category, date, relatedPosts } = props.fields
 
   const image = {
     src: coverImage.fields.file.url,
@@ -81,13 +81,7 @@ const BlogPost = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <BlogLayout>
       <div className={css.progressBar}>
-        <LinearProgress
-          variant="determinate"
-          color="primary"
-          value={readProgress}
-          // move header height to a global css variable
-          sx={{ position: 'fixed', top: '72px', zIndex: 1000, width: '100%' }}
-        />
+        <LinearProgress variant="determinate" color="primary" value={readProgress} />
       </div>
       <Container className={css.post}>
         <Breadcrumbs separator=">" className={css.breadcrumbs}>
@@ -167,8 +161,44 @@ const BlogPost = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
           </Grid>
         </Grid>
 
-        <h1>Similar Posts</h1>
-        {/* TODO: Card (max. 3) */}
+        <Typography variant="h3" mt={15} mb={4}>
+          Read more
+        </Typography>
+        <Grid container spacing={2}>
+          {relatedPosts.slice(0, 3).map((post: any, index: string) => {
+            const { title, slug, coverImage } = post.fields
+
+            const image = {
+              src: coverImage.fields.file.url,
+              alt: coverImage.fields.title,
+            }
+
+            return (
+              <Grid key={`${slug}-${index}`} item xs={12} md={4}>
+                <div key={slug} className={css.postCard}>
+                  <Link key={slug} href={`/blog/${slug}`} className={css.link} />
+                  <img src={image.src} alt={image.alt} className={css.cardImage} />
+                  <div style={{ padding: '8px' }}>
+                    <div className={css.metaStart}>
+                      <Typography display="inline-block">#{category}</Typography>
+                      <Typography variant="caption">{calculateReadingTime(content)}min</Typography>
+                    </div>
+                    <Typography variant="h4" component="h4">
+                      {title}
+                    </Typography>
+                    <div className={css.tags}>
+                      {tags.map((tag: any) => {
+                        const { name } = tag.fields
+
+                        return <Chip key={name} label={name} className={css.chip} />
+                      })}
+                    </div>
+                  </div>
+                </div>
+              </Grid>
+            )
+          })}
+        </Grid>
       </Container>
     </BlogLayout>
   )
