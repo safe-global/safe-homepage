@@ -13,18 +13,20 @@ import {
   Typography,
 } from '@mui/material'
 import { type InferGetStaticPropsType } from 'next'
-import css from './styles.module.css'
+import css from '../styles.module.css'
 import { formatBlogDate } from '@/components/Blog/utils/formatBlogDate'
 import { calculateReadingTime } from '@/components/Blog/utils/calculateReadingTime'
 import React, { useEffect, useState } from 'react'
 import { scrollToElement } from '@/lib/scrollSmooth'
 import kebabCase from 'lodash/kebabCase'
 import BlogLayout from '@/components/Blog/Layout'
+import Card from '@/components/Blog/Card'
 
 const BlogPost = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   console.log('BlogPost props', props)
 
-  const { title, excerpt, content, coverImage, authors, tags, category, date, relatedPosts } = props.fields
+  const { title, excerpt, content, coverImage, authors, tags, category, date } = props.blogPost.fields
+  const { relatedPosts } = props
 
   const image = {
     src: coverImage.fields.file.url,
@@ -92,9 +94,7 @@ const BlogPost = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
 
         <div className={css.meta}>
           <div className={css.metaStart}>
-            <Typography variant="h4" display="inline-block">
-              #{category}
-            </Typography>
+            <Typography variant="h4">#{category}</Typography>
             <Typography variant="caption">{calculateReadingTime(content)}min</Typography>
           </div>
           <Typography variant="caption">{formatBlogDate(date)}</Typography>
@@ -165,39 +165,11 @@ const BlogPost = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
           Read more
         </Typography>
         <Grid container spacing={2}>
-          {relatedPosts.slice(0, 3).map((post: any, index: string) => {
-            const { title, slug, coverImage } = post.fields
-
-            const image = {
-              src: coverImage.fields.file.url,
-              alt: coverImage.fields.title,
-            }
-
-            return (
-              <Grid key={`${slug}-${index}`} item xs={12} md={4}>
-                <div key={slug} className={css.postCard}>
-                  <Link key={slug} href={`/blog/${slug}`} className={css.link} />
-                  <img src={image.src} alt={image.alt} className={css.cardImage} />
-                  <div style={{ padding: '8px' }}>
-                    <div className={css.metaStart}>
-                      <Typography display="inline-block">#{category}</Typography>
-                      <Typography variant="caption">{calculateReadingTime(content)}min</Typography>
-                    </div>
-                    <Typography variant="h4" component="h4">
-                      {title}
-                    </Typography>
-                    <div className={css.tags}>
-                      {tags.map((tag: any) => {
-                        const { name } = tag.fields
-
-                        return <Chip key={name} label={name} className={css.chip} />
-                      })}
-                    </div>
-                  </div>
-                </div>
-              </Grid>
-            )
-          })}
+          {relatedPosts.slice(0, 3).map((post: any) => (
+            <Grid key={post.fields.slug} item xs={12} md={4}>
+              <Card {...post} />
+            </Grid>
+          ))}
         </Grid>
       </Container>
     </BlogLayout>

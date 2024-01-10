@@ -2,7 +2,7 @@ import client from '@/lib/contentfulLocal'
 import BlogHome from '@/components/Blog'
 
 const Blog = ({ posts }: any) => {
-  // console.log('Blog props', posts)
+  console.log('Blog props', posts)
 
   return <BlogHome posts={posts} />
 }
@@ -11,7 +11,11 @@ export const getStaticProps = async () => {
   const content = await client.getEntries({
     content_type: 'post',
     include: 3,
+    // limit: 10,
   })
+
+  // Avoid any circular references
+  delete content.items[0].fields.relatedPosts
 
   return {
     props: {

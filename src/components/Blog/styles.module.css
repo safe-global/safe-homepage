@@ -13,7 +13,7 @@
 }
 
 .tags {
-  margin: 24px 0;
+  margin-top: 24px;
   display: flex;
   gap: 8px;
 }
@@ -69,10 +69,15 @@
 .postCard {
   height: 100%;
   position: relative;
-  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 1px solid var(--mui-palette-border-main);
+  overflow: hidden;
 }
 
-.postCard:hover {
+.postCard:hover,
+.postCard:hover .cardImage {
   outline: 1px solid var(--mui-palette-primary-main);
 }
 
@@ -87,6 +92,21 @@
 .cardImage {
   width: 368px;
   height: 180px;
-  margin-bottom: 24px;
   object-fit: cover;
+  object-position: center left;
+  border-bottom: 1px solid var(--mui-palette-border-main);
+}
+
+.cardBody {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cardTitle {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }

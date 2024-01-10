@@ -10,15 +10,14 @@ const revalidateDuration = 60
 const Page = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   console.log('Page props', props)
   // const blogPost = useContentfulLiveUpdates(props.blogPost)
-  // const relatedPosts = blogPost?.relatedBlogPostsCollection?.items
 
   // if (!blogPost || !relatedPosts) return null
   if (!props.blogPost) return null
 
-  return <BlogPost {...props.blogPost} />
+  return <BlogPost {...props} />
 }
 
-export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug as string
 
   const content = await client.getEntries({
@@ -36,10 +35,14 @@ export const getStaticProps: GetStaticProps = async ({ params, locale }) => {
     }
   }
 
+  const { relatedPosts } = blogPost.fields
+  delete blogPost.fields.relatedPosts
+
   return {
     props: {
       // previewActive: !!preview,
       blogPost,
+      relatedPosts,
     },
     revalidate: revalidateDuration,
   }
