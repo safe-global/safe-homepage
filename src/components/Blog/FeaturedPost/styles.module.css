@@ -1,0 +1,23 @@
+.image {
+  height: 100%;
+  object-fit: cover;
+  object-position: center left;
+  border: 1px solid var(--mui-palette-border-main);
+  border-radius: 6px;
+  transition-duration: 0.3s;
+}
+
+.image:hover {
+  border: 1px solid var(--mui-palette-primary-main);
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+}

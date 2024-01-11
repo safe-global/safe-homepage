@@ -1,7 +1,8 @@
 import Link from 'next/link'
-import { Typography, Chip } from '@mui/material'
+import { Typography } from '@mui/material'
 import css from '../styles.module.css'
 import { calculateReadingTime } from '@/components/Blog/utils/calculateReadingTime'
+import Tags from '@/components/Blog/Tags'
 
 const Card = (props: any) => {
   const { slug, title, content, coverImage, tags, category } = props.fields
@@ -29,15 +30,7 @@ const Card = (props: any) => {
 
         <span style={{ flexGrow: 1 }} />
 
-        {tags?.length > 0 ? (
-          <div className={css.tags}>
-            {tags.map((tag: any) => {
-              const { name } = tag.fields
-
-              return <Chip key={name} label={name} className={css.chip} />
-            })}
-          </div>
-        ) : null}
+        <Tags tags={tags} />
       </div>
     </div>
   )

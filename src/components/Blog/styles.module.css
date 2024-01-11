@@ -12,20 +12,9 @@
   color: var(--mui-palette-text-primary);
 }
 
-.tags {
-  margin-top: 24px;
-  display: flex;
-  gap: 8px;
-}
-
 .avatarGroup {
   margin: 24px 0;
   justify-content: flex-end;
-}
-
-.chip {
-  border-radius: 4px;
-  height: 24px;
 }
 
 .meta {
@@ -74,11 +63,16 @@
   border-radius: 8px;
   border: 1px solid var(--mui-palette-border-main);
   overflow: hidden;
+  /* TODO: make transition-duration a global value for coherency*/
+  transition-duration: 0.3s;
 }
 
-.postCard:hover,
+.postCard:hover {
+  border: 1px solid var(--mui-palette-primary-main);
+}
+
 .postCard:hover .cardImage {
-  outline: 1px solid var(--mui-palette-primary-main);
+  border-bottom: 1px solid var(--mui-palette-primary-main);
 }
 
 .link {
@@ -90,11 +84,11 @@
 }
 
 .cardImage {
-  width: 368px;
   height: 180px;
   object-fit: cover;
   object-position: center left;
   border-bottom: 1px solid var(--mui-palette-border-main);
+  transition-duration: 0.3s;
 }
 
 .cardBody {

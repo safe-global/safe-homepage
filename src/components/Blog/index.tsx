@@ -1,26 +1,42 @@
 import BlogLayout from '@/components/Blog/Layout'
-import { Container, Typography } from '@mui/material'
-import Link from 'next/link'
+import { Container, Grid, Typography } from '@mui/material'
+import Card from '@/components/Blog/Card'
+import FeaturedPost from '@/components/Blog/FeaturedPost'
 
-const BlogHome = ({ posts }: any) => {
-  // console.log('BlogHome props', posts)
+const BlogHome = (props: any) => {
+  console.log('BlogHome props', props)
+  const { featured, mostPopular, allPosts } = props
 
   return (
     <BlogLayout>
       <Container>
-        <Typography variant="h1">Blog</Typography>
+        <Typography variant="h1" mt="100px" mb="108px">
+          Blog
+        </Typography>
 
-        <ul>
-          {posts.map((post: any) => {
-            const { title, slug } = post.fields
+        <FeaturedPost {...featured} />
 
-            return (
-              <li key={slug}>
-                <Link href={`/blog/${slug}`}>{title}</Link>
-              </li>
-            )
-          })}
-        </ul>
+        <Typography variant="h3" mt={15} mb={4}>
+          Most Popular
+        </Typography>
+        <Grid container spacing={2}>
+          {mostPopular.slice(0, 3).map((post: any) => (
+            <Grid key={post.fields.slug} item xs={12} md={4}>
+              <Card {...post} />
+            </Grid>
+          ))}
+        </Grid>
+
+        <Typography variant="h3" mt={15} mb={4}>
+          All Posts
+        </Typography>
+        <Grid container spacing={2}>
+          {allPosts.map((post: any) => (
+            <Grid key={post.fields.slug} item xs={12} md={4}>
+              <Card {...post} />
+            </Grid>
+          ))}
+        </Grid>
       </Container>
     </BlogLayout>
   )

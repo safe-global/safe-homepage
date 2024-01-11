@@ -4,7 +4,6 @@ import {
   Avatar,
   AvatarGroup,
   Breadcrumbs,
-  Chip,
   Container,
   Divider,
   Grid,
@@ -21,6 +20,7 @@ import { scrollToElement } from '@/lib/scrollSmooth'
 import kebabCase from 'lodash/kebabCase'
 import BlogLayout from '@/components/Blog/Layout'
 import Card from '@/components/Blog/Card'
+import Tags from '@/components/Blog/Tags'
 
 const BlogPost = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   console.log('BlogPost props', props)
@@ -108,13 +108,7 @@ const BlogPost = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
           {excerpt}
         </Typography>
 
-        <div className={css.tags}>
-          {tags.map((tag: any) => {
-            const { name } = tag.fields
-
-            return <Chip key={name} label={name} className={css.chip} />
-          })}
-        </div>
+        <Tags tags={tags} />
 
         <div className={css.authors}>
           <AvatarGroup className={css.avatarGroup} max={3}>
