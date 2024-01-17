@@ -2,9 +2,15 @@ import BlogLayout from '@/components/Blog/Layout'
 import { Container, Grid, Typography } from '@mui/material'
 import Card from '@/components/Blog/Card'
 import FeaturedPost from '@/components/Blog/FeaturedPost'
+import { type BlogPostEntry } from '@/components/Blog/Post'
 
-const BlogHome = (props: any) => {
-  console.log('BlogHome props', props)
+type BlogHomeProps = {
+  featured: BlogPostEntry
+  mostPopular: BlogPostEntry[]
+  allPosts: BlogPostEntry[]
+}
+
+const BlogHome = (props: BlogHomeProps) => {
   const { featured, mostPopular, allPosts } = props
 
   return (

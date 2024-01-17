@@ -1,5 +1,6 @@
-import client from '@/lib/contentfulLocal'
+import client from '@/lib/contentful'
 import BlogHome from '@/components/Blog'
+import jsonStringifySafe from 'json-stringify-safe'
 
 const Blog = ({ featuredPost, mostPopular, posts }: any) => {
   return <BlogHome featured={featuredPost} mostPopular={mostPopular} allPosts={posts} />
@@ -17,25 +18,24 @@ export const getStaticProps = async () => {
     limit: 6,
   })
 
-  const posts = postsEntries.items
-
   const blogHome = blogHomeEntries.items[0]
 
-  if (!blogHome || !posts) {
+  if (!blogHome || !postsEntries) {
     return {
       notFound: true,
     }
   }
 
-  delete blogHome.fields.featured?.fields.relatedPosts
-  blogHome.fields.mostPopular?.forEach((item: any) => delete item.fields.relatedPosts)
-  posts.forEach((item: any) => delete item.fields.relatedPosts)
+  // replaces circular dependencies allowing safe conversion to JSON
+  const featuredPost = JSON.parse(jsonStringifySafe(blogHome.fields.featured))
+  const mostPopular = JSON.parse(jsonStringifySafe(blogHome.fields.mostPopular))
+  const posts = JSON.parse(jsonStringifySafe(postsEntries.items))
 
   return {
     props: {
-      featuredPost: blogHome.fields.featured,
-      mostPopular: blogHome.fields.mostPopular,
-      posts: posts,
+      featuredPost,
+      mostPopular,
+      posts,
     },
   }
 }

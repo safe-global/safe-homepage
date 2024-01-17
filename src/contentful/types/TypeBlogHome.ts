@@ -3,6 +3,7 @@ import type { TypePostSkeleton } from './TypePost'
 
 export interface TypeBlogHomeFields {
   featured: EntryFieldTypes.EntryLink<TypePostSkeleton>
+  mostPopular: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypePostSkeleton>>
 }
 
 export type TypeBlogHomeSkeleton = EntrySkeletonType<TypeBlogHomeFields, 'blogHome'>

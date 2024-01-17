@@ -4,7 +4,7 @@ import { type Entry } from 'contentful'
 import { type TypePostSkeleton } from '@/contentful/types'
 import { formatBlogDate } from '@/components/Blog/utils/formatBlogDate'
 import { calculateReadingTime } from '@/components/Blog/utils/calculateReadingTime'
-import { isAsset, isEntryTypeAuthor, isEntryTypeTag } from '@/lib/typeGuards'
+import { isAsset, isEntryTypeAuthor, isEntryTypePost, isEntryTypeTag } from '@/lib/typeGuards'
 import BlogLayout from '@/components/Blog/Layout'
 import ProgressBar from '@/components/Blog/ProgressBar'
 import BreadcrumbsNav from '@/components/Blog/BreadcrumbsNav'
@@ -18,10 +18,7 @@ import css from '../styles.module.css'
 export type BlogPostEntry = Entry<TypePostSkeleton, undefined, string>
 
 const BlogPost = (props: { blogPost: BlogPostEntry }) => {
-  console.log('BlogPost props', props)
-
-  const { title, excerpt, content, coverImage, authors, tags, category, date } = props.blogPost.fields
-  // const { relatedPosts } = props
+  const { title, excerpt, content, coverImage, authors, tags, category, date, relatedPosts } = props.blogPost.fields
 
   return (
     <BlogLayout>
@@ -70,7 +67,7 @@ const BlogPost = (props: { blogPost: BlogPostEntry }) => {
           </Grid>
         </Grid>
 
-        <RelatedPosts />
+        <RelatedPosts relatedPosts={relatedPosts?.filter(isEntryTypePost)} />
       </Container>
     </BlogLayout>
   )

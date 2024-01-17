@@ -2,11 +2,9 @@ import BlogPost, { type BlogPostEntry } from '@/components/Blog/Post'
 import { type TypePostSkeleton } from '@/contentful/types'
 import client from '@/lib/contentful'
 import type { GetStaticProps } from 'next'
-// import { SeoFields } from '@src/components/features/seo'
+import jsonStringifySafe from 'json-stringify-safe'
 
 const Page = (props: { blogPost: BlogPostEntry }) => {
-  console.log('Page props', props)
-
   if (!props.blogPost) return null
 
   return <BlogPost {...props} />
@@ -21,6 +19,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     include: 3,
   })
 
+  // replaces circular dependencies allowing safe conversion to JSON
+  const blogPost = JSON.parse(jsonStringifySafe(content.items[0]))
+
   if (!content?.items?.length) {
     return {
       redirect: {
@@ -30,17 +31,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     }
   }
 
-  const blogPost = content.items[0]
-
-  // TODO: rethink how to reference the related posts to avoid circular dependencies
-  // const { relatedPosts } = blogPost.fields
-  // delete blogPost.fields.relatedPosts
-  // relatedPosts?.forEach((post: any) => delete post.fields.relatedPosts)
-
   return {
     props: {
       blogPost,
-      // relatedPosts,
     },
   }
 }

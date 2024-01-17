@@ -3,6 +3,7 @@ import type {
   TypeButtonSkeleton,
   TypeCardGridItemSkeleton,
   TypeFaqEntrySkeleton,
+  TypePostSkeleton,
   TypeTagSkeleton,
 } from '@/contentful/types'
 import type { Asset, Entry } from 'contentful'
@@ -26,6 +27,10 @@ export const isEntryTypeTag = (obj: any): obj is Entry<TypeTagSkeleton, undefine
 
 export const isEntryTypeAuthor = (obj: any): obj is Entry<TypeAuthorSkeleton, undefined, string> => {
   return obj.sys.contentType.sys.id === 'author'
+}
+
+export const isEntryTypePost = (obj: any): obj is Entry<TypePostSkeleton, undefined, string> => {
+  return obj.sys.contentType.sys.id === 'post'
 }
 
 export const isAsset = (obj: any): obj is Asset<undefined, string> => {
