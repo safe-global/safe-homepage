@@ -1,96 +1,42 @@
-import RichText from '@/components/Campaign/RichText'
-import { type getStaticProps } from '@/pages/blog/[slug]'
-import {
-  Avatar,
-  AvatarGroup,
-  Breadcrumbs,
-  Container,
-  Divider,
-  Grid,
-  LinearProgress,
-  Link,
-  Typography,
-} from '@mui/material'
-import { type InferGetStaticPropsType } from 'next'
-import css from '../styles.module.css'
+import Image from 'next/image'
+import { Container, Divider, Grid, Typography } from '@mui/material'
+import { type Entry } from 'contentful'
+import { type TypePostSkeleton } from '@/contentful/types'
 import { formatBlogDate } from '@/components/Blog/utils/formatBlogDate'
 import { calculateReadingTime } from '@/components/Blog/utils/calculateReadingTime'
-import React, { useEffect, useState } from 'react'
-import { scrollToElement } from '@/lib/scrollSmooth'
-import kebabCase from 'lodash/kebabCase'
+import { isAsset, isEntryTypeAuthor, isEntryTypeTag } from '@/lib/typeGuards'
 import BlogLayout from '@/components/Blog/Layout'
-import Card from '@/components/Blog/Card'
+import ProgressBar from '@/components/Blog/ProgressBar'
+import BreadcrumbsNav from '@/components/Blog/BreadcrumbsNav'
 import Tags from '@/components/Blog/Tags'
+import Authors from '@/components/Blog/Authors'
+import RichText from '@/components/Campaign/RichText'
+import ContentTable from '@/components/Blog/ContentTable'
+import RelatedPosts from '@/components/Blog/RelatedPosts'
+import css from '../styles.module.css'
 
-const BlogPost = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
+export type BlogPostEntry = Entry<TypePostSkeleton, undefined, string>
+
+const BlogPost = (props: { blogPost: BlogPostEntry }) => {
   console.log('BlogPost props', props)
 
   const { title, excerpt, content, coverImage, authors, tags, category, date } = props.blogPost.fields
-  const { relatedPosts } = props
-
-  const image = {
-    src: coverImage.fields.file.url,
-    alt: coverImage.fields.title,
-  }
-
-  const breadcrumbs = [
-    <Typography key="1" variant="caption">
-      <Link href="/blog" underline="hover">
-        Blog
-      </Link>
-    </Typography>,
-    <Typography key="2" variant="caption" color="text.primary">
-      #{category}
-    </Typography>,
-    <Typography key="3" variant="caption" color="text.primary">
-      {title}
-    </Typography>,
-  ]
-
-  const headings: { id: string; text: string }[] = content.content
-    .filter((item: any) => item.nodeType === 'heading-3')
-    .map((item: any) => ({
-      id: item.content[0].value,
-      text: item.content[0].value,
-    }))
-
-  const handleContentMenuClick = (e: React.MouseEvent<HTMLAnchorElement>, target: string) => {
-    e.preventDefault()
-
-    scrollToElement(`#${target}`, 100)
-  }
-
-  const [readProgress, setReadProgress] = useState(0)
-
-  // move to a useScrollProgress hook
-  const handleScroll = () => {
-    const windowHeight = window.innerHeight
-    const documentHeight = document.documentElement.scrollHeight
-    const scrollTop = window.scrollY || document.documentElement.scrollTop
-    const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100
-
-    setReadProgress(scrollPercent)
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [])
+  // const { relatedPosts } = props
 
   return (
     <BlogLayout>
-      <div className={css.progressBar}>
-        <LinearProgress variant="determinate" color="primary" value={readProgress} />
-      </div>
+      <ProgressBar />
       <Container className={css.post}>
-        <Breadcrumbs separator=">" className={css.breadcrumbs}>
-          {breadcrumbs}
-        </Breadcrumbs>
+        <BreadcrumbsNav category={category} title={title} />
 
-        <img src={image.src} alt={image.alt} />
+        {isAsset(coverImage) && coverImage.fields.file?.url ? (
+          <Image
+            src={coverImage.fields.file.url}
+            alt={(coverImage.fields.title = '')}
+            width={coverImage.fields.file.details.image?.width}
+            height={coverImage.fields.file.details.image?.height}
+          />
+        ) : undefined}
 
         <div className={css.meta}>
           <div className={css.metaStart}>
@@ -100,7 +46,7 @@ const BlogPost = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
           <Typography variant="caption">{formatBlogDate(date)}</Typography>
         </div>
 
-        <Typography variant="h2" mb="24px">
+        <Typography variant="h2" mb="16px">
           {title}
         </Typography>
 
@@ -108,63 +54,23 @@ const BlogPost = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
           {excerpt}
         </Typography>
 
-        <Tags tags={tags} />
+        <Tags tags={tags.filter(isEntryTypeTag)} />
 
-        <div className={css.authors}>
-          <AvatarGroup className={css.avatarGroup} max={3}>
-            {authors.map((author: any) => {
-              const { name, picture } = author.fields
-
-              return <Avatar key={name} src={picture.fields.file.url} alt={picture.fields.title} />
-            })}
-          </AvatarGroup>
-
-          <span className={css.authorNames}>
-            {authors.map((author: any, index: number) => {
-              const { name } = author.fields
-
-              return (
-                <Typography key={name} variant="caption" color="text.primary">
-                  {`${index !== 0 ? ' &' : ''} ${name}`}
-                </Typography>
-              )
-            })}
-          </span>
-        </div>
+        <Authors authors={authors.filter(isEntryTypeAuthor)} />
 
         <Divider />
+
         <Grid container className={css.content}>
           <Grid item xs={12} md={8}>
             <RichText {...content} />
           </Grid>
 
           <Grid item xs={12} md={4}>
-            <ul className={css.tableContent}>
-              {headings.map((heading) => {
-                const headingKey = kebabCase(heading.id)
-
-                return (
-                  <li key={headingKey}>
-                    <a onClick={(e) => handleContentMenuClick(e, headingKey)} href={`#${headingKey}`}>
-                      {heading.text}
-                    </a>
-                  </li>
-                )
-              })}
-            </ul>
+            <ContentTable content={content} />
           </Grid>
         </Grid>
 
-        <Typography variant="h3" mt={15} mb={4}>
-          Read more
-        </Typography>
-        <Grid container spacing={2}>
-          {relatedPosts.slice(0, 3).map((post: any) => (
-            <Grid key={post.fields.slug} item xs={12} md={4}>
-              <Card {...post} />
-            </Grid>
-          ))}
-        </Grid>
+        <RelatedPosts />
       </Container>
     </BlogLayout>
   )

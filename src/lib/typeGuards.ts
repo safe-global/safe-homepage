@@ -1,4 +1,10 @@
-import type { TypeButtonSkeleton, TypeCardGridItemSkeleton, TypeFaqEntrySkeleton } from '@/contentful/types'
+import type {
+  TypeAuthorSkeleton,
+  TypeButtonSkeleton,
+  TypeCardGridItemSkeleton,
+  TypeFaqEntrySkeleton,
+  TypeTagSkeleton,
+} from '@/contentful/types'
 import type { Asset, Entry } from 'contentful'
 import type { Text } from '@contentful/rich-text-types'
 
@@ -12,6 +18,14 @@ export const isEntryTypeCardGridItem = (obj: any): obj is Entry<TypeCardGridItem
 
 export const isEntryTypeFaqEntry = (obj: any): obj is Entry<TypeFaqEntrySkeleton, undefined, string> => {
   return obj.sys.contentType.sys.id === 'faqEntry'
+}
+
+export const isEntryTypeTag = (obj: any): obj is Entry<TypeTagSkeleton, undefined, string> => {
+  return obj.sys.contentType.sys.id === 'tag'
+}
+
+export const isEntryTypeAuthor = (obj: any): obj is Entry<TypeAuthorSkeleton, undefined, string> => {
+  return obj.sys.contentType.sys.id === 'author'
 }
 
 export const isAsset = (obj: any): obj is Asset<undefined, string> => {

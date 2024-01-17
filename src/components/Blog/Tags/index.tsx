@@ -1,11 +1,13 @@
 import { Chip } from '@mui/material'
-import css from './styles.module.css'
+import css from '../styles.module.css'
+import { type Entry } from 'contentful'
+import { type TypeTagSkeleton } from '@/contentful/types'
 
-const Tags = ({ tags }: { tags: Array<any> }) => {
-  if (!tags || !tags.length) return null
+const Tags = ({ tags }: { tags: Entry<TypeTagSkeleton, undefined, string>[] }) => {
+  if (!tags.length) return null
 
   return (
-    <div className={css.wrapper}>
+    <div className={css.tagsWrapper}>
       {tags.map((tag: any) => {
         const { name } = tag.fields
 

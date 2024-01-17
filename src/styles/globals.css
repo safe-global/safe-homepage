@@ -1,3 +1,7 @@
+:root {
+  --header-height: 72px;
+}
+
 @font-face {
   font-family: 'Citerne';
   font-display: swap;
@@ -19,7 +23,6 @@
   font-style: italic;
   src: url('/fonts/Citerne-Italic.woff2') format('woff2');
 }
-
 
 html,
 body {

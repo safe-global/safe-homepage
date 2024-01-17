@@ -1,8 +1,7 @@
 .progressBar :global .MuiLinearProgress-root {
   background-color: var(--mui-palette-border-main);
   position: fixed;
-  /* move header height to a global css variable */
-  top: 72px;
+  top: var(--header-height);
   z-index: 1000;
   width: 100%;
 }
@@ -13,7 +12,7 @@
 }
 
 .avatarGroup {
-  margin: 24px 0;
+  margin: 24px;
   justify-content: flex-end;
 }
 
@@ -22,14 +21,25 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 60px;
-  margin-bottom: 16px;
+  margin-top: 30px;
+  margin-bottom: 24px;
 }
 
 .metaStart {
   display: flex;
   align-items: baseline;
   gap: 14px;
+}
+
+.tagsWrapper {
+  margin-top: 24px;
+  display: flex;
+  gap: 8px;
+}
+
+.chip {
+  border-radius: 4px;
+  height: 24px;
 }
 
 .authors {
@@ -39,6 +49,7 @@
 }
 
 .content {
+  margin-top: 30px;
   scroll-snap-type: y mandatory;
 }
 
@@ -47,11 +58,11 @@
   color: var(--mui-palette-primary-main);
 }
 
-.tableContent {
+.contentTable {
   list-style: none;
 }
 
-.tableContent li {
+.contentTable li {
   margin-bottom: 8px;
 }
 
