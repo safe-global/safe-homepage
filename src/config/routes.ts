@@ -5,6 +5,7 @@ export const AppRoutes = {
   privacy: '/privacy',
   index: '/',
   imprint: '/imprint',
+  governance: '/governance',
   ecosystem: '/ecosystem',
   core: '/core',
   cookie: '/cookie',
@@ -12,5 +13,11 @@ export const AppRoutes = {
     index: '/cla',
   },
   careers: '/careers',
-  governance: '/governance',
+  blog: {
+    index: '/blog',
+    slug: '/blog/[slug]',
+  },
+  campaigns: {
+    slug: '/campaigns/[slug]',
+  },
 }

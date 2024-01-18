@@ -5,7 +5,6 @@ import FeaturedPost from '@/components/Blog/FeaturedPost'
 import { type BlogPostEntry } from '@/components/Blog/Post'
 import SearchFilterResults from '@/components/Blog/SearchFilterResults'
 
-// Should come from the CMS?
 const categories = ['Announcements', 'Ecosystem', 'Community', 'Insights', 'Build'] as const
 export type BlogCategory = typeof categories
 

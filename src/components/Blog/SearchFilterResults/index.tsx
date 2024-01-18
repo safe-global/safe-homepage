@@ -40,8 +40,6 @@ export const _getFilteredPosts = ({ posts, selectedCategories }: { posts: any[];
   })
 }
 
-// add a generic type to this compoenent
-// maybe receives categories as well?
 const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry[]; categories: BlogCategory }) => {
   const [selectedCategories, setSelectedCategories] = useState(EMPTY_FILTER)
   const [query, setQuery] = useState('')
@@ -68,10 +66,6 @@ const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry
 
   // Category filtered results
   const filteredPosts = useMemo(() => {
-    // if (noFilters) {
-    //   return projects
-    // }
-
     return _getFilteredPosts({ posts: allPosts, selectedCategories })
   }, [allPosts, selectedCategories])
 
@@ -102,8 +96,7 @@ const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry
             </Typography>{' '}
             {categories.map((category, idx, { length }) => {
               return (
-                <Fragment key={category + idx}>
-                  {/* TODO: Implement */}
+                <Fragment key={`${category}-${idx}`}>
                   <Typography component="span">
                     <SpecificCategoryFilter category={category} onClick={toggleSpecificCategory} />
                     {idx !== length - 1 && ', '}
