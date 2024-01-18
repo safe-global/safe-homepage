@@ -3,6 +3,11 @@ import { Container, Grid, Typography } from '@mui/material'
 import Card from '@/components/Blog/Card'
 import FeaturedPost from '@/components/Blog/FeaturedPost'
 import { type BlogPostEntry } from '@/components/Blog/Post'
+import SearchFilterResults from '@/components/Blog/SearchFilterResults'
+
+// Should come from the CMS?
+const categories = ['Announcements', 'Ecosystem', 'Community', 'Insights', 'Build'] as const
+export type BlogCategory = typeof categories
 
 type BlogHomeProps = {
   featured: BlogPostEntry
@@ -23,7 +28,7 @@ const BlogHome = (props: BlogHomeProps) => {
         <FeaturedPost {...featured} />
 
         <Typography variant="h3" mt={15} mb={4}>
-          Most Popular
+          Trending
         </Typography>
         <Grid container spacing={2}>
           {mostPopular.slice(0, 3).map((post: any) => (
@@ -33,16 +38,7 @@ const BlogHome = (props: BlogHomeProps) => {
           ))}
         </Grid>
 
-        <Typography variant="h3" mt={15} mb={4}>
-          All Posts
-        </Typography>
-        <Grid container spacing={2}>
-          {allPosts.map((post: any) => (
-            <Grid key={post.fields.slug} item xs={12} md={4}>
-              <Card {...post} />
-            </Grid>
-          ))}
-        </Grid>
+        <SearchFilterResults allPosts={allPosts} categories={categories} />
       </Container>
     </BlogLayout>
   )
