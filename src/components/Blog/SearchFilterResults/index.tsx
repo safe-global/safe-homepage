@@ -78,10 +78,6 @@ const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry
   // Search results
   const searchResults = usePostsSearch(filteredPosts, query)
 
-  const onResetSearch = () => {
-    setQuery('')
-  }
-
   const visibleResults = searchResults.slice(0, PAGE_LENGTH * page)
   console.log('visibleResults', visibleResults)
   // const shouldShowMoreButton = visibleResults.length < searchResults.length

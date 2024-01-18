@@ -4,8 +4,6 @@ import {
   Grid,
   Typography,
   Chip,
-  TextField,
-  InputAdornment,
   Button,
   Dialog,
   AppBar,
@@ -25,7 +23,6 @@ import type { Dispatch, ReactElement, SetStateAction } from 'react'
 
 import SearchIcon from '@/public/images/search.svg'
 import CrossIcon from '@/public/images/cross.svg'
-import CloseIcon from '@/public/images/close.svg'
 import FilterIcon from '@/public/images/filter.svg'
 import ArrowBackIcon from '@/public/images/arrow-back.svg'
 import { useProjectSearch } from './useProjectsSearch'
@@ -44,6 +41,7 @@ import css from './styles.module.css'
 import { useEcosystemData } from '@/hooks/useEcosystemData'
 import { type BaseBlock } from '@/components/Home/types'
 import Cards from '@/components/Ecosystem/Cards'
+import SearchBar from '@/components/Blog/SearchBar'
 
 const getUniqueStrings = (entries: string[]) => {
   const uniqueEntries = new Set(entries)
@@ -155,10 +153,6 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
   const allNetworks = useMemo(() => projects.flatMap(getProjectNetworks), [projects])
   const uniqueNetworks = useMemo(() => getUniqueStrings(allNetworks), [allNetworks])
 
-  const onResetSearch = () => {
-    setQuery('')
-  }
-
   const onResetFilters = () => {
     setSelectedCategories(EMPTY_FILTER)
     setSelectedIntegrations(EMPTY_FILTER)
@@ -238,28 +232,7 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
 
         <Grid container mb={8}>
           <Grid item xs={12} md={8}>
-            <TextField
-              className={css.searchField}
-              variant="outlined"
-              placeholder="Search by name, description or category"
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <SearchIcon />
-                  </InputAdornment>
-                ),
-                endAdornment: query ? (
-                  <InputAdornment position="end">
-                    <IconButton onClick={onResetSearch}>
-                      <CloseIcon />
-                    </IconButton>
-                  </InputAdornment>
-                ) : undefined,
-              }}
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              fullWidth
-            />
+            <SearchBar query={query} setQuery={setQuery} />
 
             <Typography mt={2}>
               <Typography component="span" color="primary.light">
