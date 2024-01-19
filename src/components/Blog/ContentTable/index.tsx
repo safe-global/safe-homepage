@@ -25,19 +25,21 @@ const ContentTable = ({ content }: { content: ContentfulDocument }) => {
   )
 
   return (
-    <ul className={css.contentTable}>
-      {headings.map((heading) => {
-        const headingKey = kebabCase(heading.id)
+    <aside className={css.contentTable}>
+      <ul>
+        {headings.map((heading) => {
+          const headingKey = kebabCase(heading.id)
 
-        return (
-          <li key={headingKey}>
-            <a onClick={(e) => handleContentTableClick(e, headingKey)} href={`#${headingKey}`}>
-              {heading.text}
-            </a>
-          </li>
-        )
-      })}
-    </ul>
+          return (
+            <li key={headingKey}>
+              <a onClick={(e) => handleContentTableClick(e, headingKey)} href={`#${headingKey}`}>
+                {heading.text}
+              </a>
+            </li>
+          )
+        })}
+      </ul>
+    </aside>
   )
 }
 

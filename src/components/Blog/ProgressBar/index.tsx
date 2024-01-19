@@ -7,7 +7,7 @@ const ProgressBar = () => {
 
   return (
     <div className={css.progressBar}>
-      <LinearProgress variant="determinate" color="primary" value={readProgress} />
+      <LinearProgress variant="determinate" color="primary" value={readProgress} style={{ left: '0' }} />
     </div>
   )
 }

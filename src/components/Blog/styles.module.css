@@ -9,6 +9,7 @@
 .breadcrumbs,
 .breadcrumbs a {
   color: var(--mui-palette-text-primary);
+  margin-bottom: 24px;
 }
 
 .avatarGroup {
@@ -59,6 +60,11 @@
 }
 
 .contentTable {
+  position: sticky;
+  top: calc(var(--header-height) + 24px);
+}
+
+.contentTable ul {
   list-style: none;
 }
 
