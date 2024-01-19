@@ -1,5 +1,6 @@
 :root {
   --header-height: 72px;
+  --transition-duration: 0.3s;
 }
 
 @font-face {
@@ -75,7 +76,7 @@ u {
 
 u:before,
 u:after {
-  content: "{";
+  content: '{';
   display: inline-block;
   mask-repeat: no-repeat;
   mask-position: bottom;

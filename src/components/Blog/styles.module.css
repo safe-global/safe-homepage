@@ -74,8 +74,7 @@
   border-radius: 8px;
   border: 1px solid var(--mui-palette-border-main);
   overflow: hidden;
-  /* TODO: make transition-duration a global value for coherency*/
-  transition-duration: 0.3s;
+  transition-duration: var(--transition-duration);
 }
 
 .postCard:hover {
@@ -99,7 +98,7 @@
   object-fit: cover;
   object-position: center left;
   border-bottom: 1px solid var(--mui-palette-border-main);
-  transition-duration: 0.3s;
+  transition-duration: var(--transition-duration);
 }
 
 .cardBody {
@@ -125,4 +124,38 @@
   padding: 0;
   margin: 0;
   cursor: pointer;
+}
+
+.filterWrapper {
+  border-radius: 24px;
+  border: 1px solid var(--mui-palette-border-light);
+  overflow: hidden;
+}
+
+.filterCard {
+  border-bottom: 1px solid var(--mui-palette-border-light);
+  margin-bottom: -1px;
+}
+
+.filterButton {
+  padding: 24px 64px;
+  width: 100%;
+  transition-duration: var(--transition-duration);
+}
+
+.filterButton:hover {
+  background-color: var(--mui-palette-background-paper);
+  color: var(--mui-palette-primary-main);
+}
+
+@media (min-width: 900px) {
+  .filterCard {
+    flex-grow: 1;
+    border-bottom: 1px solid var(--mui-palette-border-light);
+    margin-right: -1px;
+  }
+
+  .filterCard {
+    border-right: 1px solid var(--mui-palette-border-light);
+  }
 }

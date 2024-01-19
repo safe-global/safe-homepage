@@ -5,8 +5,7 @@ import FeaturedPost from '@/components/Blog/FeaturedPost'
 import { type BlogPostEntry } from '@/components/Blog/Post'
 import SearchFilterResults from '@/components/Blog/SearchFilterResults'
 
-const categories = ['Announcements', 'Ecosystem', 'Community', 'Insights', 'Build'] as const
-export type BlogCategory = typeof categories
+const categories = ['Announcements', 'Ecosystem', 'Community', 'Insights', 'Build']
 
 type BlogHomeProps = {
   featured: BlogPostEntry

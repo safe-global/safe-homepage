@@ -4,7 +4,7 @@
   object-position: center left;
   border: 1px solid var(--mui-palette-border-main);
   border-radius: 6px;
-  transition-duration: 0.3s;
+  transition-duration: var(--transition-duration);
 }
 
 .image:hover {

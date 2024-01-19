@@ -1,13 +1,13 @@
-import type { BlogCategory } from '@/components/Blog'
 import type { BlogPostEntry } from '@/components/Blog/Post'
 import SearchBar from '@/components/Blog/SearchBar'
 import usePostsSearch from '@/components/Blog/usePostsSearch'
-import { Grid, Typography } from '@mui/material'
+import { ButtonBase, Grid, Typography } from '@mui/material'
 import { type NextRouter, useRouter } from 'next/router'
 import type { Dispatch, SetStateAction } from 'react'
 import { Fragment, useMemo, useState } from 'react'
 import css from '../styles.module.css'
 import Card from '@/components/Blog/Card'
+import SearchIcon from '@/public/images/search.svg'
 
 const PAGE_LENGTH = 6
 const PAGE_QUERY_PARAM = 'page'
@@ -40,7 +40,7 @@ export const _getFilteredPosts = ({ posts, selectedCategories }: { posts: any[];
   })
 }
 
-const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry[]; categories: BlogCategory }) => {
+const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry[]; categories: string[] }) => {
   const [selectedCategories, setSelectedCategories] = useState(EMPTY_FILTER)
   const [query, setQuery] = useState('')
   const getPage = (query: NextRouter['query']): number => {
@@ -108,20 +108,32 @@ const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry
         </Grid>
       </Grid>
 
-      <Grid
-        container
-        spacing={{
-          xs: 2,
-          md: '30px',
-        }}
-      >
-        {visibleResults.map((post: any, index: number) => (
-          // TODO: remove the index when enough posts are available
-          <Grid key={`${post.fields.slug}-$${index}`} item xs={12} md={4}>
-            <Card {...post} />
+      {/* Quick filter cards */}
+      <Grid container mb={4} className={css.filterWrapper}>
+        {categories.map((category) => (
+          <Grid item key={category} className={css.filterCard} xs={12} md="auto">
+            <ButtonBase className={css.filterButton} onClick={() => toggleSpecificCategory(category)}>
+              <Typography>{category}</Typography>
+            </ButtonBase>
           </Grid>
         ))}
-        {/* {shouldShowMoreButton && (
+      </Grid>
+
+      {visibleResults.length > 0 ? (
+        <Grid
+          container
+          spacing={{
+            xs: 2,
+            md: '30px',
+          }}
+        >
+          {visibleResults.map((post: any, index: number) => (
+            // TODO: remove the index when enough posts are available
+            <Grid key={`${post.fields.slug}-$${index}`} item xs={12} md={4}>
+              <Card {...post} />
+            </Grid>
+          ))}
+          {/* {shouldShowMoreButton && (
           <Grid item xs={12} mt={{ xs: 2, md: 0 }} display="flex" justifyContent="center">
             <Link
               href={{ query: { [PAGE_QUERY_PARAM]: page + 1 } }}
@@ -135,7 +147,16 @@ const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry
             </Link>
           </Grid>
         )} */}
-      </Grid>
+        </Grid>
+      ) : (
+        <div style={{ textAlign: 'center' }}>
+          <SearchIcon />
+          <Typography variant="h4" my={2}>
+            No results found for {query || 'selected filters'}
+          </Typography>
+          <Typography color="primary.light">Try searching something else</Typography>
+        </div>
+      )}
     </>
   )
 }
