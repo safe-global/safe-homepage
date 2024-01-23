@@ -2,15 +2,18 @@ import { Button, Container, Grid, TextField, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 
-const BannerGradientForm = ({ title }: { title: string }) => {
+const BannerGradientForm = ({ title, subtitle }: { title: string; subtitle: string }) => {
   return (
     <Container className={layoutCss.containerMedium}>
       <div className={css.container}>
-        <Grid container>
-          <Grid item xs={12} md={6} className={css.title}>
-            <Typography variant="h2">{title}</Typography>
-          </Grid>
+        <Grid container spacing="30px">
           <Grid item xs={12} md={6}>
+            <Typography variant="h2">{title}</Typography>
+            <Typography variant="h4" mt="16px">
+              {subtitle}
+            </Typography>
+          </Grid>
+          <Grid item xs={12} md={6} display="flex" alignItems="center">
             <form
               className={css.form}
               onSubmit={(e) => {

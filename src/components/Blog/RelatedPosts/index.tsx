@@ -8,7 +8,7 @@ const RelatedPosts = ({ relatedPosts }: { relatedPosts: Entry<TypePostSkeleton, 
 
   return (
     <>
-      <Typography variant="h3" mt={15} mb={4}>
+      <Typography variant="h3" mt="60px" mb={{ xs: 4, md: 5 }}>
         Read more
       </Typography>
       <Grid container spacing={2}>

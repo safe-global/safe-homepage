@@ -4,6 +4,7 @@ import { BLOCKS, type Document as ContentfulDocument, type Text } from '@content
 import { isText } from '@/lib/typeGuards'
 import { useMemo } from 'react'
 import { scrollToElement } from '@/lib/scrollSmooth'
+import { Typography } from '@mui/material'
 
 const ContentTable = ({ content }: { content: ContentfulDocument }) => {
   const handleContentTableClick = (e: React.MouseEvent<HTMLAnchorElement>, target: string) => {
@@ -32,9 +33,11 @@ const ContentTable = ({ content }: { content: ContentfulDocument }) => {
 
           return (
             <li key={headingKey}>
-              <a onClick={(e) => handleContentTableClick(e, headingKey)} href={`#${headingKey}`}>
-                {heading.text}
-              </a>
+              <Typography>
+                <a onClick={(e) => handleContentTableClick(e, headingKey)} href={`#${headingKey}`}>
+                  {heading.text}
+                </a>
+              </Typography>
             </li>
           )
         })}

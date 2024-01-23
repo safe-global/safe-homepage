@@ -36,7 +36,7 @@ const options: Options = {
       const text = node.content.find(isText)?.value
 
       return (
-        <Typography id={kebabCase(text)} variant="h3">
+        <Typography id={kebabCase(text)} variant="h3" mt="60px">
           {text}
         </Typography>
       )

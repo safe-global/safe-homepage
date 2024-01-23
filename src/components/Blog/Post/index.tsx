@@ -37,17 +37,17 @@ const BlogPost = (props: { blogPost: BlogPostEntry }) => {
 
         <div className={css.meta}>
           <div className={css.metaStart}>
-            <Typography variant="h4">#{category}</Typography>
+            <Typography>#{category}</Typography>
             <Typography variant="caption">{calculateReadingTime(content)}min</Typography>
           </div>
           <Typography variant="caption">{formatBlogDate(date)}</Typography>
         </div>
 
-        <Typography variant="h2" mb="16px">
+        <Typography variant="h2" className={css.title}>
           {title}
         </Typography>
 
-        <Typography variant="h4" mb="24px">
+        <Typography variant="h4" className={css.excerpt}>
           {excerpt}
         </Typography>
 
@@ -55,15 +55,15 @@ const BlogPost = (props: { blogPost: BlogPostEntry }) => {
 
         <Authors authors={authors.filter(isEntryTypeAuthor)} />
 
-        <Divider />
+        <Divider className={css.divider} />
 
-        <Grid container className={css.content}>
-          <Grid item xs={12} md={8}>
-            <RichText {...content} />
-          </Grid>
-
+        <Grid container className={css.content} columnSpacing={3}>
           <Grid item xs={12} md={4}>
             <ContentTable content={content} />
+          </Grid>
+
+          <Grid item xs={12} md={8}>
+            <RichText {...content} />
           </Grid>
         </Grid>
 
