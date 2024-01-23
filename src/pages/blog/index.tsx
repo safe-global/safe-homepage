@@ -1,5 +1,5 @@
 import client from '@/lib/contentful'
-import BlogHome from '@/components/Blog'
+import BlogHome from '@/components/Blog/BlogHome'
 import jsonStringifySafe from 'json-stringify-safe'
 
 const Blog = ({ featuredPost, mostPopular, posts }: any) => {

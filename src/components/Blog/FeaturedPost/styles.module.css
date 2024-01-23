@@ -2,7 +2,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center left;
-  border: 1px solid var(--mui-palette-border-main);
+  border: 1px solid transparent;
   border-radius: 6px;
   transition-duration: var(--transition-duration);
 }
@@ -19,5 +19,18 @@
 
 .meta {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: baseline;
+}
+
+.title,
+.excerpt {
+  margin-top: 16px;
+}
+
+@media (min-width: 900px) {
+  .title {
+    margin-top: 24px;
+  }
 }

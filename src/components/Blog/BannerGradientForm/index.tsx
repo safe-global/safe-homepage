@@ -1,10 +1,9 @@
 import { Button, Container, Grid, TextField, Typography } from '@mui/material'
-import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 
 const BannerGradientForm = ({ title, subtitle }: { title: string; subtitle: string }) => {
   return (
-    <Container className={layoutCss.containerMedium}>
+    <Container>
       <div className={css.container}>
         <Grid container spacing="30px">
           <Grid item xs={12} md={6}>

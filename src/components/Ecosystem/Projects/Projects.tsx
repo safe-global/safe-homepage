@@ -90,12 +90,12 @@ export const _getFilteredProjects = ({
   })
 }
 
-const SpecificCategoryFilter = ({
+export const SpecificCategoryFilter = ({
   category,
   onClick,
 }: {
-  category: EcosystemProject['primary_category']
-  onClick: (category: EcosystemProject['primary_category']) => void
+  category: string
+  onClick: (category: string) => void
 }) => {
   return (
     <button className={css.baseButton} onClick={() => onClick(category)}>

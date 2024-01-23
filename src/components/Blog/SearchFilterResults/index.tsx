@@ -1,25 +1,20 @@
 import type { BlogPostEntry } from '@/components/Blog/Post'
 import SearchBar from '@/components/Blog/SearchBar'
 import usePostsSearch from '@/components/Blog/usePostsSearch'
-import { ButtonBase, Grid, Typography } from '@mui/material'
+import { Box, Button, ButtonBase, Grid, Typography } from '@mui/material'
 import { type NextRouter, useRouter } from 'next/router'
 import type { Dispatch, SetStateAction } from 'react'
 import { Fragment, useMemo, useState } from 'react'
-import css from '../styles.module.css'
+import css from './styles.module.css'
+
 import Card from '@/components/Blog/Card'
 import SearchIcon from '@/public/images/search.svg'
+import { SpecificCategoryFilter } from '@/components/Ecosystem/Projects/Projects'
+import NextLink from 'next/link'
 
 const PAGE_LENGTH = 6
 const PAGE_QUERY_PARAM = 'page'
 const EMPTY_FILTER: Array<string> = []
-
-const SpecificCategoryFilter = ({ category, onClick }: { category: string; onClick: (category: string) => void }) => {
-  return (
-    <button className={css.baseButton} onClick={() => onClick(category)}>
-      {category}
-    </button>
-  )
-}
 
 export const _getFilteredPosts = ({ posts, selectedCategories }: { posts: any[]; selectedCategories: string[] }) => {
   const isMatch = (all: string[], selected: string[]) => {
@@ -73,8 +68,10 @@ const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry
   const searchResults = usePostsSearch(filteredPosts, query)
 
   const visibleResults = searchResults.slice(0, PAGE_LENGTH * page)
-  console.log('visibleResults', visibleResults)
+
+  // TODO: uncomment when enough posts are available
   // const shouldShowMoreButton = visibleResults.length < searchResults.length
+  const shouldShowMoreButton = true
 
   // TODO: change types
   const toggleSpecificCategory = (category: string) => {
@@ -83,17 +80,17 @@ const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry
 
   return (
     <>
-      <Grid container mt={15} mb={8}>
+      <Grid container mt={{ xs: '60px', md: 15 }}>
         <Grid item xs={12} md={4}>
-          <Typography variant="h2">Browse all</Typography>
+          <Typography variant="h2">All posts</Typography>
         </Grid>
         <Grid item xs={12} md={8}>
           <SearchBar query={query} setQuery={setQuery} />
 
-          <Typography mt={2}>
+          <Box mt={2}>
             <Typography component="span" color="primary.light">
-              Example:
-            </Typography>{' '}
+              Example:{' '}
+            </Typography>
             {categories.map((category, idx, { length }) => {
               return (
                 <Fragment key={`${category}-${idx}`}>
@@ -104,12 +101,12 @@ const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry
                 </Fragment>
               )
             })}
-          </Typography>
+          </Box>
         </Grid>
       </Grid>
 
-      {/* Quick filter cards */}
-      <Grid container mb={4} className={css.filterWrapper}>
+      {/* Quick filter buttons */}
+      <Grid container className={css.filterWrapper}>
         {categories.map((category) => (
           <Grid item key={category} className={css.filterCard} xs={12} md="auto">
             <ButtonBase className={css.filterButton} onClick={() => toggleSpecificCategory(category)}>
@@ -120,33 +117,28 @@ const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry
       </Grid>
 
       {visibleResults.length > 0 ? (
-        <Grid
-          container
-          spacing={{
-            xs: 2,
-            md: '30px',
-          }}
-        >
+        <Grid container className={css.resultsWrapper}>
           {visibleResults.map((post: any, index: number) => (
             // TODO: remove the index when enough posts are available
             <Grid key={`${post.fields.slug}-$${index}`} item xs={12} md={4}>
               <Card {...post} />
             </Grid>
           ))}
-          {/* {shouldShowMoreButton && (
-          <Grid item xs={12} mt={{ xs: 2, md: 0 }} display="flex" justifyContent="center">
-            <Link
-              href={{ query: { [PAGE_QUERY_PARAM]: page + 1 } }}
-              shallow
-              // Pagination marker for search engines
-              rel="next"
-            >
-              <Button variant="contained" size="large">
-                Show more
-              </Button>
-            </Link>
-          </Grid>
-        )} */}
+
+          {shouldShowMoreButton && (
+            <Grid item xs={12} display="flex" justifyContent="center">
+              <NextLink
+                href={{ query: { [PAGE_QUERY_PARAM]: page + 1 } }}
+                shallow
+                // Pagination marker for search engines
+                rel="next"
+              >
+                <Button variant="contained" size="large">
+                  Show more
+                </Button>
+              </NextLink>
+            </Grid>
+          )}
         </Grid>
       ) : (
         <div style={{ textAlign: 'center' }}>

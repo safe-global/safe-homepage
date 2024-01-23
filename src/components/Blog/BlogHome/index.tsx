@@ -19,16 +19,23 @@ const BlogHome = (props: BlogHomeProps) => {
   return (
     <BlogLayout>
       <Container>
-        <Typography variant="h1" mt="100px" mb="108px">
-          Blog
-        </Typography>
+        <Grid container mt="60px" rowGap={3}>
+          <Grid item xs={12} md={7}>
+            <Typography variant="h1">Blog</Typography>
+          </Grid>
+          <Grid item xs={12} md={5} mt="auto">
+            <Typography textAlign={{ md: 'end' }}>
+              Read the latest from Safe including new releases, use cases and community updates
+            </Typography>
+          </Grid>
+        </Grid>
 
         <FeaturedPost {...featured} />
 
-        <Typography variant="h3" mt={15} mb={4}>
+        <Typography variant="h3" mt={{ xs: '60px', md: '100px' }} mb={4}>
           Trending
         </Typography>
-        <Grid container spacing={2}>
+        <Grid container spacing={{ xs: '30px', md: 2 }}>
           {mostPopular.slice(0, 3).map((post: any) => (
             <Grid key={post.fields.slug} item xs={12} md={4}>
               <Card {...post} />

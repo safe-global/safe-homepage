@@ -6,7 +6,7 @@ import type { Dispatch, SetStateAction } from 'react'
 const SearchBar = ({ query, setQuery }: { query: string; setQuery: Dispatch<SetStateAction<string>> }) => {
   return (
     <TextField
-      sx={{ backgroundColor: 'white', borderRadius: '8px' }}
+      sx={{ backgroundColor: 'white', borderRadius: '8px', mt: '20px' }}
       variant="outlined"
       placeholder="Search by name, description or category"
       InputProps={{

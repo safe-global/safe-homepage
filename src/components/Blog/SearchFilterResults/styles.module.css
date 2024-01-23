@@ -1,0 +1,39 @@
+.filterWrapper {
+  border-radius: 6px;
+  border: 1px solid var(--mui-palette-border-light);
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+.filterCard {
+  border-bottom: 1px solid var(--mui-palette-border-light);
+  margin-bottom: -1px;
+}
+
+.filterButton {
+  padding: 24px 64px;
+  width: 100%;
+  transition-duration: var(--transition-duration);
+}
+
+.filterButton:hover {
+  background-color: var(--mui-palette-background-paper);
+  color: var(--mui-palette-primary-main);
+}
+
+.resultsWrapper {
+  margin-top: 30px;
+  gap: 30px;
+}
+
+@media (min-width: 900px) {
+  .filterCard {
+    flex-grow: 1;
+    border-bottom: 1px solid var(--mui-palette-border-light);
+    margin-right: -1px;
+  }
+
+  .filterCard {
+    border-right: 1px solid var(--mui-palette-border-light);
+  }
+}
