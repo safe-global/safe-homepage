@@ -1,8 +1,10 @@
 import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from 'contentful'
 import type { TypeAuthorSkeleton } from './TypeAuthor'
+import type { TypeMetaTagsSkeleton } from './TypeMetaTags'
 import type { TypeTagSkeleton } from './TypeTag'
 
 export interface TypePostFields {
+  metaTags: EntryFieldTypes.EntryLink<TypeMetaTagsSkeleton>
   title: EntryFieldTypes.Symbol
   slug: EntryFieldTypes.Symbol
   authors: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeAuthorSkeleton>>

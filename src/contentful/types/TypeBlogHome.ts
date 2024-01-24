@@ -1,7 +1,9 @@
 import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from 'contentful'
+import type { TypeMetaTagsSkeleton } from './TypeMetaTags'
 import type { TypePostSkeleton } from './TypePost'
 
 export interface TypeBlogHomeFields {
+  metaTags: EntryFieldTypes.EntryLink<TypeMetaTagsSkeleton>
   featured: EntryFieldTypes.EntryLink<TypePostSkeleton>
   mostPopular: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypePostSkeleton>>
 }

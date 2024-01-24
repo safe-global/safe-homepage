@@ -33,6 +33,11 @@ export const isEntryTypePost = (obj: any): obj is Entry<TypePostSkeleton, undefi
   return obj.sys.contentType.sys.id === 'post'
 }
 
+export const isEntryType = (obj: any): obj is Entry => {
+  return obj.sys.type === 'Entry'
+}
+
+// TODO: rename to isAssetType
 export const isAsset = (obj: any): obj is Asset<undefined, string> => {
   return obj.sys.type === 'Asset'
 }

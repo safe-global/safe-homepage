@@ -3,14 +3,10 @@ import { Grid, Link, Typography } from '@mui/material'
 import css from './styles.module.css'
 import { formatBlogDate } from '@/components/Blog/utils/formatBlogDate'
 import { calculateReadingTime } from '@/components/Blog/utils/calculateReadingTime'
+import { type BlogPostEntry } from '@/components/Blog/Post'
 
-const FeaturedPost = (props: any) => {
+const FeaturedPost = (props: BlogPostEntry) => {
   const { slug, coverImage, category, date, title, excerpt, tags, content } = props.fields
-
-  const image = {
-    src: coverImage.fields.file.url,
-    alt: coverImage.fields.title,
-  }
 
   return (
     <Grid container columnSpacing="60px" rowGap={3} mt="60px">

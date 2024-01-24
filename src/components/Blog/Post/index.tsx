@@ -17,11 +17,11 @@ import css from '../styles.module.css'
 
 export type BlogPostEntry = Entry<TypePostSkeleton, undefined, string>
 
-const BlogPost = (props: { blogPost: BlogPostEntry }) => {
-  const { title, excerpt, content, coverImage, authors, tags, category, date, relatedPosts } = props.blogPost.fields
+const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
+  const { title, excerpt, content, coverImage, authors, tags, category, date, relatedPosts, metaTags } = blogPost.fields
 
   return (
-    <BlogLayout>
+    <BlogLayout metaTags={metaTags}>
       <ProgressBar />
       <Container className={css.post}>
         <BreadcrumbsNav category={category} title={title} />

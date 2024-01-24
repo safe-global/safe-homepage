@@ -1,9 +1,9 @@
 import client from '@/lib/contentful'
-import BlogHome from '@/components/Blog/BlogHome'
+import BlogHome, { type BlogHomeProps } from '@/components/Blog/BlogHome'
 import jsonStringifySafe from 'json-stringify-safe'
 
-const Blog = ({ featuredPost, mostPopular, posts }: any) => {
-  return <BlogHome featured={featuredPost} mostPopular={mostPopular} allPosts={posts} />
+const Blog = (props: BlogHomeProps) => {
+  return <BlogHome {...props} />
 }
 
 export const getStaticProps = async () => {
@@ -29,13 +29,14 @@ export const getStaticProps = async () => {
   // replaces circular dependencies allowing safe conversion to JSON
   const featuredPost = JSON.parse(jsonStringifySafe(blogHome.fields.featured))
   const mostPopular = JSON.parse(jsonStringifySafe(blogHome.fields.mostPopular))
-  const posts = JSON.parse(jsonStringifySafe(postsEntries.items))
+  const allPosts = JSON.parse(jsonStringifySafe(postsEntries.items))
 
   return {
     props: {
+      metaTags: blogHome.fields.metaTags,
       featuredPost,
       mostPopular,
-      posts,
+      allPosts,
     },
   }
 }
