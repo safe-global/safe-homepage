@@ -12,7 +12,7 @@ const BannerGradientForm = ({ title, subtitle }: { title: string; subtitle: stri
               {subtitle}
             </Typography>
           </Grid>
-          <Grid item xs={12} md={6} display="flex" alignItems="center">
+          <Grid item xs={12} md={5} display="flex" alignItems="center">
             <form
               className={css.form}
               onSubmit={(e) => {

@@ -33,7 +33,7 @@ const BlogHome = (props: BlogHomeProps) => {
 
         <FeaturedPost {...featuredPost} />
 
-        <Typography variant="h3" mt={{ xs: '60px', md: '100px' }} mb={4}>
+        <Typography variant="h2" mt={{ xs: '60px', md: '100px' }} mb={4}>
           Trending
         </Typography>
         <Grid container spacing={{ xs: '30px', md: 2 }}>

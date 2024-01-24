@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Container, Divider, Grid, Typography } from '@mui/material'
+import { Box, Container, Divider, Grid, Typography } from '@mui/material'
 import { type Entry } from 'contentful'
 import { type TypePostSkeleton } from '@/contentful/types'
 import { formatBlogDate } from '@/components/Blog/utils/formatBlogDate'
@@ -13,6 +13,7 @@ import Authors from '@/components/Blog/Authors'
 import RichText from '@/components/Campaign/RichText'
 import ContentTable from '@/components/Blog/ContentTable'
 import RelatedPosts from '@/components/Blog/RelatedPosts'
+import CategoryIcon from '@/public/images/Blog/category-icon.svg'
 import css from '../styles.module.css'
 
 export type BlogPostEntry = Entry<TypePostSkeleton, undefined, string>
@@ -37,7 +38,10 @@ const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
 
         <div className={css.meta}>
           <div className={css.metaStart}>
-            <Typography>#{category}</Typography>
+            <Typography className={css.category}>
+              <CategoryIcon />
+              {category}
+            </Typography>
             <Typography variant="caption">{calculateReadingTime(content)}min</Typography>
           </div>
           <Typography variant="caption">{formatBlogDate(date)}</Typography>
@@ -51,7 +55,9 @@ const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
           {excerpt}
         </Typography>
 
-        <Tags tags={tags.filter(isEntryTypeTag)} />
+        <Box mt={{ xs: 2, md: 3 }}>
+          <Tags tags={tags.filter(isEntryTypeTag)} />
+        </Box>
 
         <Authors authors={authors.filter(isEntryTypeAuthor)} />
 

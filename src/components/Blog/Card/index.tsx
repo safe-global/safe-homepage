@@ -1,8 +1,9 @@
 import Link from 'next/link'
-import { Typography } from '@mui/material'
-import css from '../styles.module.css'
+import { Box, Typography } from '@mui/material'
+import css from './styles.module.css'
 import { calculateReadingTime } from '@/components/Blog/utils/calculateReadingTime'
 import Tags from '@/components/Blog/Tags'
+import CategoryIcon from '@/public/images/Blog/category-icon.svg'
 
 const Card = (props: any) => {
   const { slug, title, content, coverImage, tags, category } = props.fields
@@ -19,18 +20,23 @@ const Card = (props: any) => {
       <img src={image.src} alt={image.alt} className={css.cardImage} />
 
       <div className={css.cardBody}>
-        <div className={css.metaStart}>
-          <Typography>#{category}</Typography>
+        <div className={css.meta}>
+          <Typography className={css.category}>
+            <CategoryIcon />
+            {category}
+          </Typography>
           <Typography variant="caption">{calculateReadingTime(content)}min</Typography>
         </div>
 
-        <div className={css.cardTitle}>
+        <div className={css.title}>
           <Typography variant="h4">{title}</Typography>
         </div>
 
         <span style={{ flexGrow: 1 }} />
 
-        <Tags tags={tags} />
+        <Box mt={2}>
+          <Tags tags={tags} />
+        </Box>
       </div>
     </div>
   )

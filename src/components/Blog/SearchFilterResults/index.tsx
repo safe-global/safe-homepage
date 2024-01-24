@@ -117,16 +117,18 @@ const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry
       </Grid>
 
       {visibleResults.length > 0 ? (
-        <Grid container className={css.resultsWrapper}>
-          {visibleResults.map((post: any, index: number) => (
-            // TODO: remove the index when enough posts are available
-            <Grid key={`${post.fields.slug}-$${index}`} item xs={12} md={4}>
-              <Card {...post} />
-            </Grid>
-          ))}
+        <>
+          <Grid container className={css.resultsWrapper}>
+            {visibleResults.map((post: any, index: number) => (
+              // TODO: remove the index when enough posts are available
+              <Grid key={`${post.fields.slug}-$${index}`} item xs={12} md={4}>
+                <Card {...post} />
+              </Grid>
+            ))}
+          </Grid>
 
           {shouldShowMoreButton && (
-            <Grid item xs={12} display="flex" justifyContent="center">
+            <Box display="flex" justifyContent="center" mt="60px">
               <NextLink
                 href={{ query: { [PAGE_QUERY_PARAM]: page + 1 } }}
                 shallow
@@ -137,9 +139,9 @@ const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry
                   Show more
                 </Button>
               </NextLink>
-            </Grid>
+            </Box>
           )}
-        </Grid>
+        </>
       ) : (
         <div style={{ textAlign: 'center' }}>
           <SearchIcon />

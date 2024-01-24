@@ -3,7 +3,7 @@
   border-radius: 24px;
   color: var(--mui-palette-text-dark);
   padding: 60px 24px;
-  margin-top: 60px;
+  margin-top: 120px;
   justify-content: space-between;
   position: relative;
   background: rgba(15, 255, 128, 1);
@@ -11,6 +11,7 @@
 }
 
 .form {
+  width: 100%;
   margin: 0px;
   display: flex;
   flex-direction: column;

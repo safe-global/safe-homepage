@@ -5,6 +5,7 @@
   border: 1px solid transparent;
   border-radius: 6px;
   transition-duration: var(--transition-duration);
+  border: 1px solid var(--mui-palette-border-main);
 }
 
 .image:hover {
@@ -24,9 +25,27 @@
   align-items: baseline;
 }
 
+.metaStart {
+  display: flex;
+  gap: 8px;
+  flex-wrap: nowrap;
+  align-items: baseline;
+}
+
 .title,
 .excerpt {
   margin-top: 16px;
+}
+
+.title a {
+  color: var(--mui-palette-text-primary);
+  text-decoration-color: var(--mui-palette-background-default);
+  transition-duration: var(--transition-duration);
+}
+
+.title a:hover {
+  color: var(--mui-palette-primary-main);
+  text-decoration-color: var(--mui-palette-primary-main);
 }
 
 @media (min-width: 900px) {

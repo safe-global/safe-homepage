@@ -2,7 +2,7 @@
   border-radius: 6px;
   border: 1px solid var(--mui-palette-border-light);
   overflow: hidden;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .filterCard {
@@ -22,7 +22,7 @@
 }
 
 .resultsWrapper {
-  margin-top: 30px;
+  margin-top: 60px;
   gap: 30px;
 }
 
