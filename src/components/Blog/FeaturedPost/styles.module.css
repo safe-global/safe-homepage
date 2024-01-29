@@ -44,8 +44,7 @@
 }
 
 .title a:hover {
-  color: var(--mui-palette-primary-main);
-  text-decoration-color: var(--mui-palette-primary-main);
+  text-decoration-color: var(--mui-palette-text-primary);
 }
 
 @media (min-width: 900px) {

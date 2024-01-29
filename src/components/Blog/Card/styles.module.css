@@ -13,10 +13,6 @@
   border: 1px solid var(--mui-palette-primary-main);
 }
 
-.postCard:hover .cardImage {
-  border-bottom: 1px solid var(--mui-palette-primary-main);
-}
-
 .link {
   position: absolute;
   left: 0;

@@ -15,7 +15,6 @@ export const getStaticProps = async () => {
   const blogHomeEntries = await client.getEntries({
     content_type: 'blogHome',
     include: 3,
-    limit: 6,
   })
 
   const blogHome = blogHomeEntries.items[0]

@@ -10,20 +10,41 @@
   margin-bottom: -1px;
 }
 
+.filterCard:first-of-type .filterButton {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.filterCard:last-of-type .filterButton {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
 .filterButton {
   padding: 24px 64px;
   width: 100%;
   transition-duration: var(--transition-duration);
+  border: 1px transparent solid;
 }
 
-.filterButton:hover {
-  background-color: var(--mui-palette-background-paper);
-  color: var(--mui-palette-primary-main);
+.filterButton:hover,
+.selected {
+  border: 1px solid var(--mui-palette-primary-main);
 }
 
 .resultsWrapper {
   margin-top: 60px;
   gap: 30px;
+}
+
+.closeFilter {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+  margin-left: 8px;
+  margin-top: 2px;
+  color: var(--mui-palette-primary-main);
 }
 
 @media (min-width: 900px) {

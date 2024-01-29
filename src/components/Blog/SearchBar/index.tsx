@@ -17,7 +17,7 @@ const SearchBar = ({ query, setQuery }: { query: string; setQuery: Dispatch<SetS
         ),
         endAdornment: query ? (
           <InputAdornment position="end">
-            <IconButton onClick={() => setQuery('')}>
+            <IconButton onClick={() => setQuery('')} sx={{ color: 'primary.light' }}>
               <CloseIcon />
             </IconButton>
           </InputAdornment>
