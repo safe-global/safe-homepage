@@ -3,7 +3,7 @@ import SearchBar from '@/components/Blog/SearchBar'
 import usePostsSearch from '@/components/Blog/usePostsSearch'
 import { Box, Button, ButtonBase, Grid, IconButton, Typography } from '@mui/material'
 import { type NextRouter, useRouter } from 'next/router'
-import { Fragment, useMemo, useState } from 'react'
+import { Fragment, useEffect, useMemo, useState } from 'react'
 import css from './styles.module.css'
 
 import Card from '@/components/Blog/Card'
@@ -12,6 +12,7 @@ import { SpecificCategoryFilter } from '@/components/Ecosystem/Projects/Projects
 import NextLink from 'next/link'
 import clsx from 'clsx'
 import CloseIcon from '@/public/images/close.svg'
+import { scrollToElement } from '@/lib/scrollSmooth'
 
 const PAGE_LENGTH = 6
 const PAGE_QUERY_PARAM = 'page'
@@ -23,7 +24,7 @@ const getPage = (query: NextRouter['query']): number => {
 }
 
 const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry[]; categories: string[] }) => {
-  const [query, setQuery] = useState('')
+  const [searchQuery, setSearchQuery] = useState('')
   const router = useRouter()
   const selectedCategory = router.query.category as string
   const page = getPage(router.query)
@@ -32,9 +33,14 @@ const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry
     return !selectedCategory ? allPosts : allPosts.filter((post) => post.fields.category === selectedCategory)
   }, [allPosts, selectedCategory])
 
-  const searchResults = usePostsSearch(filteredPosts, query)
+  const searchResults = usePostsSearch(filteredPosts, searchQuery)
   const visibleResults = searchResults.slice(0, PAGE_LENGTH * page)
   const shouldShowMoreButton = visibleResults.length < searchResults.length
+
+  useEffect(() => {
+    const queryParams = { ...router.query }
+    if (queryParams.category) scrollToElement('#results', 250)
+  })
 
   const handleToggleCategory = (category: string) => {
     const queryParams = { ...router.query }
@@ -47,7 +53,6 @@ const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry
 
     router.push(
       {
-        pathname: router.pathname,
         query: queryParams,
       },
       undefined,
@@ -62,7 +67,7 @@ const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry
           <Typography variant="h2">All posts</Typography>
         </Grid>
         <Grid item xs={12} md={8}>
-          <SearchBar query={query} setQuery={setQuery} />
+          <SearchBar query={searchQuery} setQuery={setSearchQuery} />
 
           <Box mt={2}>
             <Typography component="span" color="primary.light">
@@ -107,10 +112,9 @@ const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry
 
       {visibleResults.length > 0 ? (
         <>
-          <Grid container className={css.resultsWrapper}>
-            {visibleResults.map((post: any, index: number) => (
-              // TODO: remove the index when enough posts are available
-              <Grid key={`${post.fields.slug}-${index}`} item xs={12} md={4}>
+          <Grid container id="results" className={css.resultsWrapper}>
+            {visibleResults.map((post: any) => (
+              <Grid key={post.fields.slug} item xs={12} md={4}>
                 <Card {...post} />
               </Grid>
             ))}
@@ -119,7 +123,7 @@ const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry
           {shouldShowMoreButton && <ShowMoreButton page={page} />}
         </>
       ) : (
-        <NoResults query={query} />
+        <NoResults query={searchQuery} />
       )}
     </>
   )

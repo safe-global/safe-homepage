@@ -1,0 +1,17 @@
+.breadcrumbs,
+.breadcrumbs a {
+  color: var(--mui-palette-text-primary);
+  margin-bottom: 24px;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs :global .MuiBreadcrumbs-separator {
+  margin: 0 4px;
+}
+
+.breadcrumbs :global .MuiTypography-root {
+  line-height: inherit;
+}
