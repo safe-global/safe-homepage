@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { Box, Container, Divider, Grid, Typography } from '@mui/material'
 import { type Entry } from 'contentful'
-import { type TypePostSkeleton } from '@/contentful/types'
+import type { TypeAuthorSkeleton, TypePostSkeleton } from '@/contentful/types'
 import { formatBlogDate } from '@/components/Blog/utils/formatBlogDate'
 import { calculateReadingTime } from '@/components/Blog/utils/calculateReadingTime'
 import { isAsset, isEntryTypeAuthor, isEntryTypePost, isEntryTypeTag } from '@/lib/typeGuards'
@@ -11,9 +11,11 @@ import BreadcrumbsNav from '@/components/Blog/BreadcrumbsNav'
 import Tags from '@/components/Blog/Tags'
 import Authors from '@/components/Blog/Authors'
 import RichText from '@/components/Campaign/RichText'
-import ContentTable from '@/components/Blog/ContentTable'
+import ContentsTable from '@/components/Blog/ContentsTable'
+import Socials from '@/components/Blog/Socials'
 import RelatedPosts from '@/components/Blog/RelatedPosts'
 import CategoryIcon from '@/public/images/Blog/category-icon.svg'
+import { type Document as ContentfulDocument } from '@contentful/rich-text-types'
 import css from '../styles.module.css'
 
 export type BlogPostEntry = Entry<TypePostSkeleton, undefined, string>
@@ -21,20 +23,13 @@ export type BlogPostEntry = Entry<TypePostSkeleton, undefined, string>
 const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
   const { title, excerpt, content, coverImage, authors, tags, category, date, relatedPosts, metaTags } = blogPost.fields
 
+  const authorsList = authors.filter(isEntryTypeAuthor)
+
   return (
     <BlogLayout metaTags={metaTags}>
       <ProgressBar />
       <Container className={css.post}>
         <BreadcrumbsNav category={category} title={title} />
-
-        {isAsset(coverImage) && coverImage.fields.file?.url ? (
-          <Image
-            src={coverImage.fields.file.url}
-            alt={(coverImage.fields.title = '')}
-            width={coverImage.fields.file.details.image?.width}
-            height={coverImage.fields.file.details.image?.height}
-          />
-        ) : undefined}
 
         <div className={css.meta}>
           <div className={css.metaStart}>
@@ -59,16 +54,25 @@ const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
           <Tags tags={tags.filter(isEntryTypeTag)} />
         </Box>
 
-        <Authors authors={authors.filter(isEntryTypeAuthor)} />
+        <Authors authors={authorsList} />
 
         <Divider className={css.divider} />
 
         <Grid container className={css.content} columnSpacing={3}>
-          <Grid item xs={12} md={4}>
-            <ContentTable content={content} />
-          </Grid>
+          <Sidebar content={content} title={title} authors={authorsList} />
 
           <Grid item xs={12} md={8}>
+            {isAsset(coverImage) && coverImage.fields.file?.url ? (
+              <Image
+                src={coverImage.fields.file.url}
+                alt={(coverImage.fields.title = '')}
+                width={coverImage.fields.file.details.image?.width}
+                height={coverImage.fields.file.details.image?.height}
+              />
+            ) : undefined}
+
+            <Sidebar content={content} title={title} authors={authorsList} showInXs />
+
             <RichText {...content} />
           </Grid>
         </Grid>
@@ -80,3 +84,22 @@ const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
 }
 
 export default BlogPost
+
+const Sidebar = ({
+  content,
+  title,
+  authors,
+  showInXs,
+}: {
+  content: ContentfulDocument
+  title: string
+  authors: Entry<TypeAuthorSkeleton, undefined, string>[]
+  showInXs?: boolean
+}) => (
+  <Grid item xs={12} md={4} className={showInXs ? css.showInXs : css.showInMd}>
+    <aside className={css.sidebar}>
+      <ContentsTable content={content} />
+      <Socials title={title} authors={authors} />
+    </aside>
+  </Grid>
+)

@@ -1,12 +1,11 @@
 import kebabCase from 'lodash/kebabCase'
-import css from '../styles.module.css'
 import { BLOCKS, type Document as ContentfulDocument, type Text } from '@contentful/rich-text-types'
 import { isText } from '@/lib/typeGuards'
 import { useMemo } from 'react'
 import { scrollToElement } from '@/lib/scrollSmooth'
 import { Typography } from '@mui/material'
 
-const ContentTable = ({ content }: { content: ContentfulDocument }) => {
+const ContentsTable = ({ content }: { content: ContentfulDocument }) => {
   const handleContentTableClick = (e: React.MouseEvent<HTMLAnchorElement>, target: string) => {
     e.preventDefault()
 
@@ -26,24 +25,22 @@ const ContentTable = ({ content }: { content: ContentfulDocument }) => {
   )
 
   return (
-    <aside className={css.contentTable}>
-      <ul>
-        {headings.map((heading) => {
-          const headingKey = kebabCase(heading.id)
+    <ul>
+      {headings.map((heading) => {
+        const headingKey = kebabCase(heading.id)
 
-          return (
-            <li key={headingKey}>
-              <Typography>
-                <a onClick={(e) => handleContentTableClick(e, headingKey)} href={`#${headingKey}`}>
-                  {heading.text}
-                </a>
-              </Typography>
-            </li>
-          )
-        })}
-      </ul>
-    </aside>
+        return (
+          <li key={headingKey}>
+            <Typography>
+              <a onClick={(e) => handleContentTableClick(e, headingKey)} href={`#${headingKey}`}>
+                {heading.text}
+              </a>
+            </Typography>
+          </li>
+        )
+      })}
+    </ul>
   )
 }
 
-export default ContentTable
+export default ContentsTable

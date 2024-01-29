@@ -71,13 +71,31 @@
   color: var(--mui-palette-primary-main);
 }
 
-.contentTable ul {
+.showInMd {
+  display: none;
+}
+
+.showInXs {
+  display: block;
+}
+
+.sidebar ul {
   padding-left: 0px;
   list-style: none;
 }
 
-.contentTable li {
+.sidebar li {
   margin-bottom: 8px;
+}
+
+.socials {
+  display: flex;
+  gap: 16px;
+}
+
+.socials svg {
+  width: 24px;
+  height: 24px;
 }
 
 @media (min-width: 900px) {
@@ -93,7 +111,15 @@
     flex-direction: row-reverse;
   }
 
-  .contentTable {
+  .showInMd {
+    display: block;
+  }
+
+  .showInXs {
+    display: none;
+  }
+
+  .sidebar {
     position: sticky;
     top: calc(var(--header-height) + 24px);
   }
