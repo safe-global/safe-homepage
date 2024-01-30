@@ -2,6 +2,8 @@ import { Breadcrumbs, Typography } from '@mui/material'
 import Link from 'next/link'
 import css from './styles.module.css'
 import { type UrlObject } from 'url'
+import CategoryIcon from '@/public/images/Blog/category-icon.svg'
+import { type ReactNode } from 'react'
 
 const TYPOGRAPHY_VARIANT = 'caption'
 const TYPOGRAPHY_COLOR = 'text.primary'
@@ -11,7 +13,7 @@ type BreadcrumbsType = {
   title: string
 }
 
-const createBreadcrumb = (key: string, text: string, linkProps: string | UrlObject) => (
+const createBreadcrumb = (key: string, text: ReactNode, linkProps: string | UrlObject) => (
   <Link key={key} href={linkProps}>
     <Typography variant={TYPOGRAPHY_VARIANT} color={TYPOGRAPHY_COLOR}>
       {text}
@@ -22,7 +24,14 @@ const createBreadcrumb = (key: string, text: string, linkProps: string | UrlObje
 const BreadcrumbsNav = ({ category, title }: BreadcrumbsType) => {
   const breadcrumbs = [
     createBreadcrumb('1', 'Blog', { pathname: '/blog' }),
-    createBreadcrumb('2', `#${category}`, { pathname: '/blog', query: { category } }),
+    createBreadcrumb(
+      '2',
+      <div className={css.category}>
+        <CategoryIcon />
+        {category}
+      </div>,
+      { pathname: '/blog', query: { category } },
+    ),
     <Typography key="3" variant={TYPOGRAPHY_VARIANT} color={TYPOGRAPHY_COLOR}>
       {title}
     </Typography>,

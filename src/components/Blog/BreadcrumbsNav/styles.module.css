@@ -15,3 +15,9 @@
 .breadcrumbs :global .MuiTypography-root {
   line-height: inherit;
 }
+
+.category {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
