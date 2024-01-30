@@ -1,5 +1,5 @@
 import XIcon from '@/public/images/x-icon.svg'
-import LinkedinIcon from '@/public/images/linkedin-icon.svg'
+import LinkedInIcon from '@/public/images/linkedin-icon.svg'
 import { type Entry } from 'contentful'
 import { type TypeAuthorSkeleton } from '@/contentful/types'
 import { IconButton, SvgIcon } from '@mui/material'
@@ -24,7 +24,7 @@ const Socials = ({ title, authors }: { title: string; authors: Entry<TypeAuthorS
   const xUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}&text=${encodeURIComponent(
     sharingText,
   )}`
-  const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`
+  const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`
 
   return (
     <div className={css.socials}>
@@ -33,9 +33,9 @@ const Socials = ({ title, authors }: { title: string; authors: Entry<TypeAuthorS
         <SvgIcon component={XIcon} fontSize="inherit" color="inherit" inheritViewBox />
       </IconButton>
 
-      {/* Linkedin */}
-      <IconButton aria-label="Share on Linkedin" href={linkedinUrl} target="_blank" rel="noreferrer" size="small">
-        <SvgIcon component={LinkedinIcon} fontSize="inherit" color="inherit" inheritViewBox />
+      {/* LinkedIn */}
+      <IconButton aria-label="Share on Linkedin" href={linkedInUrl} target="_blank" rel="noreferrer" size="small">
+        <SvgIcon component={LinkedInIcon} fontSize="inherit" color="inherit" inheritViewBox />
       </IconButton>
     </div>
   )
