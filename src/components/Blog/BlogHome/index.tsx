@@ -20,6 +20,7 @@ const BlogHome = (props: BlogHomeProps) => {
   return (
     <BlogLayout metaTags={metaTags}>
       <Container>
+        {/* Hero */}
         <Grid container mt="60px" rowGap={3}>
           <Grid item xs={12} md={7}>
             <Typography variant="h1">Blog</Typography>
@@ -33,10 +34,10 @@ const BlogHome = (props: BlogHomeProps) => {
 
         <FeaturedPost {...featuredPost} />
 
-        <Typography variant="h2" mt={{ xs: '60px', md: '100px' }} mb={4}>
+        <Typography variant="h2" mt={{ xs: '60px', md: '100px' }}>
           Trending
         </Typography>
-        <Grid container spacing={{ xs: '30px', md: 2 }}>
+        <Grid container columnSpacing={2} rowGap="30px" mt="80px">
           {mostPopular.slice(0, 3).map((post, index) => (
             // TODO: remove index from key when we have enough posts
             <Grid key={`${post.fields.slug}-${index}`} item xs={12} md={4}>
@@ -45,6 +46,7 @@ const BlogHome = (props: BlogHomeProps) => {
           ))}
         </Grid>
 
+        {/* All posts */}
         <SearchFilterResults allPosts={allPosts} categories={categories} />
       </Container>
     </BlogLayout>

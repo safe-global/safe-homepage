@@ -11,7 +11,7 @@ const BlogLayout = ({ children, metaTags }: { children: ReactNode; metaTags: Met
   return (
     <>
       {isEntryType(metaTags) ? <MetaTags {...metaTags} /> : undefined}
-      <Box mt={{ xs: '24px', md: '100px' }}>
+      <Box mt={{ xs: '24px', md: '120px' }}>
         {children}
         {/* TODO: waiting for a CRS use of the sign up emails */}
         {/* <BannerGradientForm title="Get insider updates" subtitle="Sign up to hear the latest from Safe in your inbox" /> */}

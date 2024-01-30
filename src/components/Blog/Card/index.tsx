@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Box, Typography } from '@mui/material'
 import css from './styles.module.css'
+import blogCss from '../styles.module.css'
 import { calculateReadingTime } from '@/components/Blog/utils/calculateReadingTime'
 import Tags from '@/components/Blog/Tags'
 import CategoryIcon from '@/public/images/Blog/category-icon.svg'
@@ -21,7 +22,7 @@ const Card = (props: any) => {
 
       <div className={css.cardBody}>
         <div className={css.meta}>
-          <Typography className={css.category}>
+          <Typography className={blogCss.category}>
             <CategoryIcon />
             {category}
           </Typography>

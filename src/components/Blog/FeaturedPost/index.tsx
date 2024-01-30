@@ -1,20 +1,29 @@
+import Image from 'next/image'
 import Tags from '@/components/Blog/Tags'
 import { Box, Grid, Link, Typography } from '@mui/material'
 import css from './styles.module.css'
+import blogCss from '../styles.module.css'
 import { formatBlogDate } from '@/components/Blog/utils/formatBlogDate'
 import { calculateReadingTime } from '@/components/Blog/utils/calculateReadingTime'
 import { type BlogPostEntry } from '@/components/Blog/Post'
 import { isAsset, isEntryTypeTag } from '@/lib/typeGuards'
+import CategoryIcon from '@/public/images/Blog/category-icon.svg'
 
 const FeaturedPost = (props: BlogPostEntry) => {
   const { slug, coverImage, category, date, title, excerpt, tags, content } = props.fields
 
   return (
-    <Grid container columnSpacing="60px" rowGap={3} mt="60px">
+    <Grid container columnSpacing="60px" rowGap={3} mt={10}>
       <Grid item md={7}>
         {isAsset(coverImage) && coverImage.fields.file?.url ? (
           <Link href={`/blog/${slug}`}>
-            <img src={coverImage.fields.file.url} alt={coverImage.fields.title} className={css.image} />
+            <Image
+              src={coverImage.fields.file.url}
+              alt={(coverImage.fields.title = '')}
+              width={coverImage.fields.file.details.image?.width}
+              height={coverImage.fields.file.details.image?.height}
+              className={css.image}
+            />
           </Link>
         ) : undefined}
       </Grid>
@@ -22,7 +31,10 @@ const FeaturedPost = (props: BlogPostEntry) => {
       <Grid item md={5} className={css.body}>
         <div className={css.meta}>
           <div className={css.metaStart}>
-            <Typography variant="h4">#{category}</Typography>
+            <Typography variant="h4" className={blogCss.category}>
+              <CategoryIcon />
+              {category}
+            </Typography>
             <Typography variant="caption">{calculateReadingTime(content)}min</Typography>
           </div>
           <Typography variant="caption">{formatBlogDate(date)}</Typography>
@@ -32,7 +44,6 @@ const FeaturedPost = (props: BlogPostEntry) => {
         </Typography>
         <Typography className={css.excerpt}>{excerpt}</Typography>
 
-        <span style={{ flexGrow: 1 }} />
         <Box mt={2}>
           <Tags tags={tags.filter(isEntryTypeTag)} />
         </Box>

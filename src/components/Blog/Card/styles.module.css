@@ -42,12 +42,6 @@
   align-items: baseline;
 }
 
-.category {
-  display: flex;
-  gap: 4px;
-  align-items: baseline;
-}
-
 .title {
   margin-top: 16px;
   overflow: hidden;

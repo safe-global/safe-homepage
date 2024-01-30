@@ -62,7 +62,7 @@ const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry
 
   return (
     <>
-      <Grid container mt={{ xs: '60px', md: 15 }}>
+      <Grid container mt={{ xs: '60px', md: '140px' }}>
         <Grid item xs={12} md={4}>
           <Typography variant="h2">All posts</Typography>
         </Grid>
