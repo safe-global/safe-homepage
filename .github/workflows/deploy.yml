@@ -38,14 +38,14 @@ jobs:
 
       # Extract branch name
       - name: Extract branch name
-        # if: startsWith(github.ref, 'refs/heads/epic-')
+        if: github.event.number && startsWith(github.head_ref, 'epic-')
         shell: bash
         ## Remove the prefix "refs/heads/", allow only alphanumeric characters and convert to lower case,
         run: |
           echo "branch=$(echo $GITHUB_HEAD_REF | sed 's/refs\/heads\///' | sed 's/[^a-z0-9]/_/ig' | sed 's/[A-Z]/\L&/g')" >> $GITHUB_OUTPUT
           echo "GitHub Ref: $GITHUB_REF"
           echo "GitHub Head Ref: $GITHUB_HEAD_REF"
-          echo "GitHub Output: $GITHUB_OUTPUT"
+          echo "GitHub event number: $GITHUB_EVENT_NUMBER"
 
       # # Deploy the main branch to staging
       # - name: Deploy to the staging S3
