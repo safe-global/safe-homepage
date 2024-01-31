@@ -36,6 +36,16 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
 
+      # Extract branch name
+      - name: Extract branch name
+        if: startsWith(github.ref, 'refs/heads/epic-')
+        shell: bash
+        ## Remove the prefix "refs/heads/", allow only alphanumeric characters and convert to lower case,
+        run: |
+          echo "branch=$(echo $GITHUB_HEAD_REF | sed 's/refs\/heads\///' | sed 's/[^a-z0-9]/_/ig' | sed 's/[A-Z]/\L&/g')" >> $GITHUB_OUTPUT
+          echo "GitHub Ref: $GITHUB_REF"
+          echo "GitHub Head Ref: $GITHUB_HEAD_REF"
+          echo "GitHub Output: $GITHUB_OUTPUT"
       # Deploy the main branch to staging
       - name: Deploy to the staging S3
         if: github.ref == 'refs/heads/main'
