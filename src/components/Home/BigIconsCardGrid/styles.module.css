@@ -10,7 +10,7 @@
   text-align: center;
   height: 100%;
   position: relative;
-  transition: 0.3s;
+  transition: var(--transition-duration);
 }
 
 .card:hover {
@@ -48,7 +48,7 @@
   position: absolute;
   top: 32px;
   right: 32px;
-  transition: transform 0.3s;
+  transition: transform var(--transition-duration);
 }
 
 @media (min-width: 600px) {

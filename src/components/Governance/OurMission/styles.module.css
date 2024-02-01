@@ -6,7 +6,7 @@
 
 .card {
   border: 1px solid var(--mui-palette-border-light);
-  transition: 0.3s;
+  transition: var(--transition-duration);
   padding: 24px;
   display: flex;
   flex-direction: column;

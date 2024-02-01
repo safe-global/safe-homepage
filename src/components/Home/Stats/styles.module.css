@@ -9,7 +9,7 @@
 }
 
 .metric span {
-  transition: color 0.3s ease;
+  transition: color var(--transition-duration) ease;
 }
 
 .metric:hover span {
