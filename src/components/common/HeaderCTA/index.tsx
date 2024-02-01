@@ -16,9 +16,7 @@ const HeaderCTA = (props: HeaderCTAProps) => {
         <Typography variant="h2" mb={3} className={`${props.bigTitle ? css.bigTitle : null}`}>
           {props.title}
         </Typography>
-        <Typography variant="body1" color="primary.light">
-          {props.text}
-        </Typography>
+        <Typography color="primary.light">{props.text}</Typography>
       </Grid>
       {props.link && (
         <Grid item xs={12} md={4} className={`${css.linkButton} ${!props.bigTitle && css.alignEnd}`}>
