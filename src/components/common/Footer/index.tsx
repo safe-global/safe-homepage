@@ -40,7 +40,7 @@ const safeProtocolItems = [
     rel: 'noreferrer',
   },
   {
-    label: 'Developer Docs',
+    label: 'Docs',
     href: DOCS_LINK,
     target: '_blank',
     rel: 'noreferrer',
@@ -154,7 +154,7 @@ const Footer = () => {
 
         <Grid item sm={6} md={2}>
           <Typography variant="caption" color="text.primary">
-            Safe Core Protocol
+            Developers
           </Typography>
           <ul className={css.list}>
             {safeProtocolItems.map((item) => (
