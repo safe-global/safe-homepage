@@ -20,10 +20,9 @@
   margin: 0;
   font-size: 64px;
   line-height: 64px;
-  color: var(--mui-palette-primary-main);
   background: linear-gradient(90deg, rgba(15, 255, 128, 1) 0%, rgba(94, 221, 255, 1) 60%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 @media (min-width: 600px) {

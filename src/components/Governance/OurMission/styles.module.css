@@ -1,6 +1,6 @@
 .gradientEmphasis b {
   background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
-  -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 
