@@ -2,14 +2,17 @@ import FrameImage from '@/public/images/Governance/Parallaxes/DaoStats/backgroun
 import ParallaxWrapper from '@/components/common/ParallaxWrapper'
 import css from './styles.module.css'
 import { Typography } from '@mui/material'
+import { useSafeSnapshot } from '@/hooks/useSafeSnapshot'
 
 const ParallaxDaoStatsElement = () => {
+  const { data: proposals } = useSafeSnapshot()
+
   return (
     <div className={css.parallaxWrapper}>
       <FrameImage className={css.baseImage} />
       <ParallaxWrapper translateX={0} translateY={0} depth={2} direction={-1}>
         <div className={`${css.card} ${css.proposals}`}>
-          <Typography className={css.value}>8</Typography>
+          <Typography className={css.value}>{proposals?.length || 10}</Typography>
           <Typography variant="caption" className={css.caption}>
             proposals
           </Typography>

@@ -6,6 +6,7 @@ import { useSafeSnapshot } from '@/hooks/useSafeSnapshot'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 
+const PROPOSAL_AMOUNT = 4
 const PROPOSAL_LINK_BASE_URL = 'https://snapshot.org/#/safe.eth/proposal/'
 
 type SnapshotProposal = {
@@ -60,7 +61,7 @@ const Proposals = (props: BaseBlock) => {
       <HeaderCTA {...props} />
 
       <Stack spacing={3}>
-        {proposals?.map((proposal) => (
+        {proposals?.slice(0, PROPOSAL_AMOUNT).map((proposal) => (
           <ProposalRow
             key={proposal.id}
             title={proposal.title}
