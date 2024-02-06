@@ -12,6 +12,8 @@ import CategoryIcon from '@/public/images/Blog/category-icon.svg'
 const FeaturedPost = (props: BlogPostEntry) => {
   const { slug, coverImage, category, date, title, excerpt, tags, content } = props.fields
 
+  const tagsList = tags.filter(isEntryTypeTag)
+
   return (
     <Grid container columnSpacing="60px" rowGap={3} mt={10}>
       <Grid item md={7}>
@@ -45,7 +47,7 @@ const FeaturedPost = (props: BlogPostEntry) => {
         <Typography className={css.excerpt}>{excerpt}</Typography>
 
         <Box mt={2}>
-          <Tags tags={tags.filter(isEntryTypeTag)} />
+          <Tags tags={tagsList} />
         </Box>
       </Grid>
     </Grid>

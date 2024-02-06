@@ -24,6 +24,8 @@ const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
   const { title, excerpt, content, coverImage, authors, tags, category, date, relatedPosts, metaTags } = blogPost.fields
 
   const authorsList = authors.filter(isEntryTypeAuthor)
+  const tagsList = tags.filter(isEntryTypeTag)
+  const relatedPostsList = relatedPosts?.filter(isEntryTypePost)
 
   return (
     <BlogLayout metaTags={metaTags}>
@@ -51,7 +53,7 @@ const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
         </Typography>
 
         <Box mt={{ xs: 2, md: 3 }}>
-          <Tags tags={tags.filter(isEntryTypeTag)} />
+          <Tags tags={tagsList} />
         </Box>
 
         <Authors authors={authorsList} />
@@ -77,7 +79,7 @@ const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
           </Grid>
         </Grid>
 
-        <RelatedPosts relatedPosts={relatedPosts?.filter(isEntryTypePost)} />
+        <RelatedPosts relatedPosts={relatedPostsList} />
       </Container>
     </BlogLayout>
   )

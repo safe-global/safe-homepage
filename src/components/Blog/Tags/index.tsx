@@ -8,7 +8,7 @@ const Tags = ({ tags }: { tags: Entry<TypeTagSkeleton, undefined, string>[] }) =
 
   return (
     <div className={css.tagsWrapper}>
-      {tags.map((tag: any) => {
+      {tags.map((tag) => {
         const { name } = tag.fields
 
         return <Chip key={name} label={name} className={css.chip} />
