@@ -30,40 +30,57 @@ jobs:
           is-production: false
 
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v3
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ secrets.AWS_DEFAULT_REGION }}
+          role-to-assume: ${{ secrets.AWS_ROLE }}
+          aws-region: ${{ secrets.AWS_REGION }}
 
       # Extract branch name
       - name: Extract branch name
         if: github.event.number && startsWith(github.head_ref, 'epic-')
         shell: bash
-        ## Remove the prefix "refs/heads/", allow only alphanumeric characters and convert to lower case,
-        run: |
-          echo "branch=$(echo $GITHUB_HEAD_REF | sed 's/refs\/heads\///' | sed 's/[^a-z0-9]/_/ig' | sed 's/[A-Z]/\L&/g')" >> $GITHUB_OUTPUT
-          echo "GitHub Ref: $GITHUB_REF"
-          echo "GitHub Head Ref: $GITHUB_HEAD_REF"
-          echo "GitHub event number: $GITHUB_EVENT_NUMBER"
+        ## Allow only alphanumeric characters and convert to lower case,
+        run: echo "branch=$(echo $GITHUB_HEAD_REF | sed 's/[^a-z0-9]/_/ig' | sed 's/[A-Z]/\L&/g')" >> $GITHUB_OUTPUT
+        id: extract_branch
 
-      # # Deploy the main branch to staging
-      # - name: Deploy to the staging S3
-      #   if: github.ref == 'refs/heads/main'
-      #   env:
-      #     BUCKET: s3://${{ secrets.AWS_STAGING_BUCKET_NAME }}/current
-      #   run: bash ./scripts/github/s3_upload.sh
+      # Deploy to S3
+      - name: Deploy epic PR branch
+        if: github.event.number && startsWith(github.head_ref, 'epic-')
+        env:
+          BUCKET: s3://${{ secrets.AWS_REVIEW_BUCKET_NAME }}/homepage/${{ steps.extract_branch.outputs.branch }}
+        run: bash ./scripts/github/s3_upload.sh
 
-      # # Deploy all other branches to dev
-      # - name: Deploy to the dev S3
-      #   if: github.ref != 'refs/heads/main'
-      #   env:
-      #     BUCKET: s3://${{ secrets.AWS_DEVELOPMENT_BUCKET_NAME }}
-      #   run: bash ./scripts/github/s3_upload.sh
+      # Comment if epic branch PR
+      - name: Post an epic deployment link in the PR
+        if: always() && github.event.number && startsWith(github.head_ref, 'epic-')
+        uses: mshick/add-pr-comment@v2
+        with:
+          message-id: praul
+          message: |
+            ## Branch preview
+            ✅  Deployed successfully in branch deployment:
 
-      # Comment
+            https://${{ steps.extract_branch.outputs.branch }}--homepage.review.5afe.dev
+          message-failure: |
+            ## Branch preview
+            ❌  Deploy failed!
+
+      # Deploy the main branch to staging
+      - name: Deploy to the staging S3
+        if: github.ref == 'refs/heads/main'
+        env:
+          BUCKET: s3://${{ secrets.AWS_STAGING_BUCKET_NAME }}/current
+        run: bash ./scripts/github/s3_upload.sh
+
+      # Deploy all other branches to dev
+      - name: Deploy to the dev S3
+        if: github.event.number && !startsWith(github.head_ref, 'epic-')
+        env:
+          BUCKET: s3://${{ secrets.AWS_DEVELOPMENT_BUCKET_NAME }}
+        run: bash ./scripts/github/s3_upload.sh
+
       - name: Post a deployment link in the PR
-        if: always() && github.event.number
+        if: always() && github.event.number && !startsWith(github.head_ref, 'epic-')
         uses: mshick/add-pr-comment@v2
         with:
           message-id: praul
