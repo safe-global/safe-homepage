@@ -4,7 +4,7 @@ import ParallaxText, { type ParallaxTextProps } from '@/components/common/Parall
 const ParallaxDaoStats = (props: ParallaxTextProps) => {
   return (
     <ParallaxText {...props}>
-      <ParallaxDaoStatsElement />
+      <ParallaxDaoStatsElement items={props.items} />
     </ParallaxText>
   )
 }
