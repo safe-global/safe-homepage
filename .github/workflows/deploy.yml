@@ -39,7 +39,6 @@ jobs:
       - uses: ./.github/workflows/build
         with:
           secrets: ${{ toJSON(secrets) }}
-          is-production: false
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v3
