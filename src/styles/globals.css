@@ -1,3 +1,7 @@
+:root {
+  --transition-duration: 0.3s;
+}
+
 @font-face {
   font-family: 'Citerne';
   font-display: swap;
@@ -19,7 +23,6 @@
   font-style: italic;
   src: url('/fonts/Citerne-Italic.woff2') format('woff2');
 }
-
 
 html,
 body {
@@ -72,7 +75,7 @@ u {
 
 u:before,
 u:after {
-  content: "{";
+  content: '{';
   display: inline-block;
   mask-repeat: no-repeat;
   mask-position: bottom;

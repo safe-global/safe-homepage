@@ -35,15 +35,11 @@ const DelegateCard = (props: Delegate) => (
           {props.name}
         </Typography>
 
-        <Typography variant="body1" color="primary.light">
-          {props.ens || shortenAddress(props.address)}
-        </Typography>
+        <Typography color="primary.light">{props.ens || shortenAddress(props.address)}</Typography>
       </div>
     </div>
 
-    <Typography variant="body1" className={css.description}>
-      {props.reason}
-    </Typography>
+    <Typography className={css.description}>{props.reason}</Typography>
 
     <div className={css.socials}>
       {props.twitter && (
@@ -75,7 +71,7 @@ const Delegates = (props: BaseBlock & { footer: { text: string; highlight: strin
       </Grid>
 
       <div className={css.footer}>
-        <Typography variant="body1" color="primary.light" textAlign="center">
+        <Typography color="primary.light" textAlign="center">
           {props.footer.text}
           <span>{props.footer.highlight}</span>
         </Typography>

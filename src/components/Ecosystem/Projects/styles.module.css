@@ -20,7 +20,7 @@
   flex-direction: column;
   align-items: flex-start;
   position: relative;
-  transition: 0.3s;
+  transition: var(--transition-duration);
   height: 300px;
 }
 
