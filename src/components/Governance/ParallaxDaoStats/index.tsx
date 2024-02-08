@@ -1,12 +1,5 @@
-import ParallaxDaoStatsElement from '@/components/Governance/ParallaxDaoStats/ParallaxDaoStatsElement'
-import ParallaxText, { type ParallaxTextProps } from '@/components/common/ParallaxText'
+import dynamic from 'next/dynamic'
 
-const ParallaxDaoStats = (props: ParallaxTextProps) => {
-  return (
-    <ParallaxText {...props}>
-      <ParallaxDaoStatsElement />
-    </ParallaxText>
-  )
-}
+const Proposals = dynamic(() => import('./ParallaxDaoStats'))
 
-export default ParallaxDaoStats
+export default Proposals

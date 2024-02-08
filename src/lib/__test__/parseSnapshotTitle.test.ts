@@ -7,6 +7,7 @@ const realTitles = [
   ' [SEP #4] SafeDAO Constitution',
   '[SEP #5] Redistributing Unredeemed Tokens From User Airdrop Allocation',
   '# [SEP #6] Safe Grants Program (SGP)',
+  '[SEP #20] [OBRA] Formalizing the Guardian Role onchain with Hats Protocol - Hats Protocol',
 ]
 
 const badTitles = [
@@ -31,6 +32,10 @@ describe('parseSnapshotTitle', () => {
       'Redistributing Unredeemed Tokens From User Airdrop Allocation',
     ])
     expect(parseSnapshotTitle(realTitles[5])).toEqual(['6', 'Safe Grants Program (SGP)'])
+    expect(parseSnapshotTitle(realTitles[6])).toEqual([
+      '20',
+      '[OBRA] Formalizing the Guardian Role onchain with Hats Protocol - Hats Protocol',
+    ])
   })
 
   it('returns 0 and the original title if the both groups are not present in the title', () => {

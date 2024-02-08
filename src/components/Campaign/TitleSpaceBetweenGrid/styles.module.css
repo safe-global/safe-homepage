@@ -25,11 +25,9 @@
   text-align: center;
   font-size: 88px;
   line-height: 88px;
-  color: var(--mui-palette-primary-main);
   background: linear-gradient(90deg, rgba(15, 255, 128, 1) 0%, rgba(94, 221, 255, 1) 60%);
   background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 @media (min-width: 900px) {

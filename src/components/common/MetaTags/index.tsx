@@ -1,3 +1,4 @@
+import { IS_PRODUCTION } from '@/config/constants'
 import Head from 'next/head'
 
 const defaultMetaTags = {
@@ -27,6 +28,8 @@ const MetaTags = (props: Partial<typeof defaultMetaTags>) => {
       <meta name="twitter:title" content={seo.pageTitle} />
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
+
+      {!IS_PRODUCTION && <meta name="robots" content="none" />}
     </Head>
   )
 }

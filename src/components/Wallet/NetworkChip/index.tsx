@@ -16,7 +16,7 @@ const NetworkChip = ({ name, icon, textColor, backgroundColor, isNew }: NetworkC
     <div className={css.icon}>
       <img {...icon} width={40} height={40} />
     </div>
-    <Typography className={css.name} variant="body1" color={textColor}>
+    <Typography className={css.name} color={textColor}>
       {name}
     </Typography>
     {isNew && <div className={css.newBadge}>New!</div>}

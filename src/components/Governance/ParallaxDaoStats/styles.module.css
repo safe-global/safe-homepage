@@ -10,11 +10,26 @@
   height: 290px;
 }
 
+.card {
+  padding: 14px 24px;
+  border: 1px solid var(--mui-palette-border-main);
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  background-color: var(--mui-palette-background-default);
+}
+
 .proposals {
   position: absolute;
   bottom: 242px;
   left: 60px;
-  width: 144px;
+
+  width: 101px;
+  height: 124px;
 }
 
 .delegates {
@@ -22,6 +37,7 @@
   bottom: 150px;
   left: 190px;
   width: 162px;
+  height: 118px;
 }
 
 .delegators {
@@ -29,6 +45,23 @@
   bottom: 0px;
   left: 126px;
   width: 162px;
+  height: 118px;
+}
+
+.value {
+  font-size: 57px;
+  line-height: 72px;
+  background: linear-gradient(260.13deg, #12ff80 1.24%, #5fddff 102.14%);
+  background-clip: text;
+  color: transparent;
+  text-align: left;
+}
+
+.caption {
+  font-size: 8.6px;
+  line-height: 17px;
+  display: flex;
+  align-items: flex-start;
 }
 
 @media (min-width: 600px) {
@@ -43,18 +76,31 @@
   .proposals {
     bottom: 333px;
     left: 75px;
-    width: 226px;
+    width: 141px;
+    height: 174px;
   }
 
   .delegates {
     bottom: 207px;
     left: 275px;
     width: 227px;
+    height: 164px;
   }
 
   .delegators {
     bottom: 27px;
     left: 160px;
     width: 226px;
+    height: 165px;
+  }
+
+  .value {
+    font-size: 80px;
+    line-height: 100px;
+  }
+
+  .caption {
+    font-size: 12px;
+    line-height: 24px;
   }
 }
