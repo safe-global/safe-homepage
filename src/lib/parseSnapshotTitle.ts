@@ -1,6 +1,6 @@
 // Fist group: SEP number
 // Second group: SEP title
-const snapshotRegex = /SEP #(\d+)\]?[^A-Za-z]*(.*)/
+const snapshotRegex = /SEP #(\d+)\]?[^A-Za-z[]*(.*)/
 
 /**
  * Parses a snapshot title to extract the numeric identifier and description.
