@@ -7,6 +7,8 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    permissions: write-all
+
     name: Deploy release
     steps:
       - name: Cancel previous runs
