@@ -39,7 +39,7 @@ export const isEntryType = (obj: any): obj is Entry => {
 
 // TODO: rename to isAssetType
 export const isAsset = (obj: any): obj is Asset<undefined, string> => {
-  return obj.sys.type === 'Asset'
+  return obj && obj.sys.type === 'Asset'
 }
 
 export const isText = (obj: any): obj is Text => {
