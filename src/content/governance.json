@@ -28,7 +28,21 @@
     "component": "Governance/ParallaxDaoStats",
     "variant": "image-text",
     "mobileVariant": "text-image",
-    "title": "Safe <u>DAO</u> is a <b>decentralised collective</b> stewarding the <i>Safe</i> ecosystem"
+    "title": "Safe <u>DAO</u> is a <b>decentralised collective</b> stewarding the <i>Safe</i> ecosystem",
+    "items": [
+      {
+        "title": "20",
+        "text": "Proposals"
+      },
+      {
+        "title": "5.5K",
+        "text": "Delegates"
+      },
+      {
+        "title": "16K",
+        "text": "Delegators"
+      }
+    ]
   },
   {
     "component": "Governance/Proposals",

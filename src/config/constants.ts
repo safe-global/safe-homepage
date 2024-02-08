@@ -6,6 +6,7 @@ export const GOOGLE_ANALYTICS_DOMAIN = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_
 export const HOTJAR_ID = process.env.NEXT_PUBLIC_HOTJAR_ID || ''
 export const HOTJAR_ID_STAGING = process.env.NEXT_PUBLIC_HOTJAR_ID_STAGING || ''
 export const HOTJAR_VERSION = process.env.NEXT_PUBLIC_HOTJAR_VERSION || '6'
+export const DUNE_API_KEY = process.env.DUNE_API_KEY || ''
 
 // Links
 export const WALLET_LINK = 'https://app.safe.global'

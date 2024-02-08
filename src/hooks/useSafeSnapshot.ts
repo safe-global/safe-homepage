@@ -2,8 +2,6 @@ import useSWRImmutable from 'swr/immutable'
 
 type ShapshotProposalVars = {
   space: string
-  first: number
-  skip: number
   orderBy: 'created'
   orderDirection: 'desc' | 'asc'
 }
@@ -26,10 +24,8 @@ const getSnapshot = async (variables: ShapshotProposalVars): Promise<SnapshotPro
   const SNAPSHOT_GQL_ENDPOINT = 'https://hub.snapshot.org/graphql'
 
   const query = `
-        query ($first: Int, $skip: Int, $space: String, $orderBy: String, $orderDirection: OrderDirection) {
+        query ($space: String, $orderBy: String, $orderDirection: OrderDirection) {
             proposals(
-                first: $first,
-                skip: $skip,
                 orderBy: $orderBy,
                 orderDirection: $orderDirection
                 where: { space_in: [$space] },
@@ -62,12 +58,8 @@ const getSnapshot = async (variables: ShapshotProposalVars): Promise<SnapshotPro
 }
 
 export const getSafeSnapshot = (space: string): Promise<SnapshotProposal[]> => {
-  const PROPOSAL_AMOUNT = 4
-
   return getSnapshot({
     space,
-    first: PROPOSAL_AMOUNT,
-    skip: 0,
     orderBy: 'created',
     orderDirection: 'desc',
   })
