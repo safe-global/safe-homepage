@@ -66,9 +66,7 @@ const Networks = ({ title, text, networks }: NetworksProps) => {
         </div>
         <div className={clsx(css.gradientBase, css.gradientFlipped)} />
       </div>
-      <Typography className={css.secondaryText} variant="body1">
-        {text}
-      </Typography>
+      <Typography className={css.secondaryText}>{text}</Typography>
     </div>
   )
 }

@@ -9,7 +9,7 @@
   align-items: flex-start;
   height: 100%;
   position: relative;
-  transition: 0.3s;
+  transition: var(--transition-duration);
   min-height: 272px;
 }
 
@@ -29,7 +29,7 @@
   position: absolute;
   top: 24px;
   right: 24px;
-  transition: transform 0.3s;
+  transition: transform var(--transition-duration);
 }
 
 /* Highlight */

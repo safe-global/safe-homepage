@@ -8,7 +8,7 @@
   align-items: flex-start;
   height: 100%;
   position: relative;
-  transition: border 0.3s;
+  transition: border var(--transition-duration);
 }
 
 .card:first-of-type {
@@ -42,11 +42,8 @@
   color: var(--mui-palette-secondary-light);
 }
 
-.cardImage {
-}
-
 .cardLink:after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;

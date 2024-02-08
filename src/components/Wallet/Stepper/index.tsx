@@ -31,7 +31,7 @@ const CustomStepper = ({ steps }: { steps: StepsType }) => (
           <ul className={css.list}>
             {description?.map((item, index) => (
               <li className={css.listItem} key={index}>
-                <Typography key={index} variant="body1" color="primary.light" marginTop="18px" display="inline">
+                <Typography key={index} color="primary.light" marginTop="18px" display="inline">
                   {item}
                 </Typography>
               </li>
