@@ -10,8 +10,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    permissions:
-      id-token: write
+    permissions: write-all
 
     name: Deploy to S3
 
