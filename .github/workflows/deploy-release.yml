@@ -7,7 +7,7 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
-    permissions: id-token
+    permissions: write-all
 
     name: Deploy release
     steps:
