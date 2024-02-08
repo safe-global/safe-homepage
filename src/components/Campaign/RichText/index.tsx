@@ -13,6 +13,9 @@ import css from './styles.module.css'
 import { Typography } from '@mui/material'
 import { isText } from '@/lib/typeGuards'
 import kebabCase from 'lodash/kebabCase'
+import { extractLastPathname, extractVideoId, isTwitterUrl, isYouTubeUrl } from '@/lib/urlPatterns'
+import { TwitterTweetEmbed } from 'react-twitter-embed'
+import Youtube from '@/components/Blog/Youtube'
 
 const options: Options = {
   renderNode: {
@@ -65,8 +68,26 @@ const options: Options = {
         </>
       )
     },
-  } as unknown as RenderNode,
-}
+    [BLOCKS.EMBEDDED_ENTRY]: (node: Node) => {
+      const entryUrl = node.data.target.fields.url
+
+      if (isYouTubeUrl(entryUrl)) {
+        const videoId = extractVideoId(entryUrl)
+        if (!videoId) return null
+
+        return <Youtube embedId={videoId} />
+      } else if (isTwitterUrl(entryUrl)) {
+        const tweetId = extractLastPathname(entryUrl)
+
+        return (
+          <div className={css.tweetContainer}>
+            <TwitterTweetEmbed tweetId={tweetId} />
+          </div>
+        )
+      }
+    },
+  },
+} as unknown as RenderNode
 
 const RichText = (props: ContentfulDocument) => {
   return <>{documentToReactComponents(props, options)}</>

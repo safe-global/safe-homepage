@@ -67,8 +67,17 @@
   scroll-snap-type: y mandatory;
 }
 
+.content b {
+  color: var(--mui-palette-text-primary);
+  font-weight: bold;
+}
+
 .content a {
   color: var(--mui-palette-primary-main);
+}
+
+.content a:hover {
+  text-decoration: underline;
 }
 
 .showInMd {

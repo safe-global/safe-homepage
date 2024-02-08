@@ -4,7 +4,7 @@ import { type Entry } from 'contentful'
 import { type TypeTagSkeleton } from '@/contentful/types'
 
 const Tags = ({ tags }: { tags: Entry<TypeTagSkeleton, undefined, string>[] }) => {
-  if (!tags.length) return null
+  if (!tags || !tags.length) return null
 
   return (
     <div className={css.tagsWrapper}>

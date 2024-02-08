@@ -12,7 +12,7 @@ import { type BlogPostEntry } from '@/components/Blog/Post'
 const Card = (props: BlogPostEntry) => {
   const { slug, title, content, coverImage, tags, category } = props.fields
 
-  const tagsList = tags.filter(isEntryTypeTag)
+  const tagsList = tags?.filter(isEntryTypeTag)
 
   return (
     <div className={css.postCard}>

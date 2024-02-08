@@ -112,7 +112,7 @@ const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry
 
       {visibleResults.length > 0 ? (
         <>
-          <Grid container id="results" className={css.resultsWrapper}>
+          <Grid container columnSpacing="30px" rowGap="30px" id="results" className={css.resultsWrapper}>
             {visibleResults.map((post: any) => (
               <Grid key={post.fields.slug} item xs={12} md={4}>
                 <Card {...post} />

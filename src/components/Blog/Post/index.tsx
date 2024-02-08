@@ -24,7 +24,7 @@ const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
   const { title, excerpt, content, coverImage, authors, tags, category, date, relatedPosts, metaTags } = blogPost.fields
 
   const authorsList = authors.filter(isEntryTypeAuthor)
-  const tagsList = tags.filter(isEntryTypeTag)
+  const tagsList = tags?.filter(isEntryTypeTag)
   const relatedPostsList = relatedPosts?.filter(isEntryTypePost)
 
   return (
@@ -44,7 +44,7 @@ const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
           <Typography variant="caption">{formatBlogDate(date)}</Typography>
         </div>
 
-        <Typography variant="h2" className={css.title}>
+        <Typography variant="h1" className={css.title}>
           {title}
         </Typography>
 
