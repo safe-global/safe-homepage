@@ -55,6 +55,7 @@ const options: Options = {
           {mimeGroup === 'image' && (
             <div className={css.imageContainer}>
               <img title={title} alt={description} src={file.url} />
+              {description && <span className={css.caption}>{description}</span>}
             </div>
           )}
           {mimeGroup === 'video' && (
