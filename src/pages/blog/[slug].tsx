@@ -2,7 +2,6 @@ import BlogPost, { type BlogPostEntry } from '@/components/Blog/Post'
 import { type TypePostSkeleton } from '@/contentful/types'
 import client from '@/lib/contentful'
 import type { GetStaticProps } from 'next'
-import jsonStringifySafe from 'json-stringify-safe'
 
 const Page = (props: { blogPost: BlogPostEntry }) => {
   if (!props.blogPost) return null
@@ -16,13 +15,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const content = await client.getEntries<TypePostSkeleton>({
     content_type: 'post',
     'fields.slug': slug,
-    include: 3,
   })
 
-  // replaces circular dependencies allowing safe conversion to JSON
-  const blogPost = JSON.parse(jsonStringifySafe(content.items[0]))
+  const blogPost = content.items[0]
 
-  if (!content?.items?.length) {
+  if (!blogPost) {
     return {
       redirect: {
         destination: '/404',

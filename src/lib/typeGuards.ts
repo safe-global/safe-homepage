@@ -22,15 +22,15 @@ export const isEntryTypeFaqEntry = (obj: any): obj is Entry<TypeFaqEntrySkeleton
 }
 
 export const isEntryTypeTag = (obj: any): obj is Entry<TypeTagSkeleton, undefined, string> => {
-  return obj.sys.contentType.sys.id === 'tag'
+  return obj.sys.contentType && obj.sys.contentType.sys.id === 'tag'
 }
 
 export const isEntryTypeAuthor = (obj: any): obj is Entry<TypeAuthorSkeleton, undefined, string> => {
-  return obj.sys.contentType.sys.id === 'author'
+  return obj.sys.contentType && obj.sys.contentType.sys.id === 'author'
 }
 
 export const isEntryTypePost = (obj: any): obj is Entry<TypePostSkeleton, undefined, string> => {
-  return obj.sys.contentType.sys.id === 'post'
+  return obj.sys.contentType && obj.sys.contentType.sys.id === 'post'
 }
 
 export const isEntryType = (obj: any): obj is Entry => {

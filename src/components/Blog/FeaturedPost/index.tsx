@@ -12,7 +12,7 @@ import CategoryIcon from '@/public/images/Blog/category-icon.svg'
 const FeaturedPost = (props: BlogPostEntry) => {
   const { slug, coverImage, category, date, title, excerpt, tags, content } = props.fields
 
-  const tagsList = tags.filter(isEntryTypeTag)
+  const tagsList = tags?.filter(isEntryTypeTag)
 
   return (
     <Grid container columnSpacing="60px" rowGap={3} mt={10}>

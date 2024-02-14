@@ -1,20 +1,18 @@
 import client from '@/lib/contentful'
 import BlogHome, { type BlogHomeProps } from '@/components/Blog/BlogHome'
-import jsonStringifySafe from 'json-stringify-safe'
+import type { TypeBlogHomeSkeleton, TypePostSkeleton } from '@/contentful/types'
 
 const Blog = (props: BlogHomeProps) => {
   return <BlogHome {...props} />
 }
 
 export const getStaticProps = async () => {
-  const postsEntries = await client.getEntries({
+  const postsEntries = await client.getEntries<TypePostSkeleton>({
     content_type: 'post',
-    include: 3,
   })
 
-  const blogHomeEntries = await client.getEntries({
+  const blogHomeEntries = await client.getEntries<TypeBlogHomeSkeleton>({
     content_type: 'blogHome',
-    include: 3,
   })
 
   const blogHome = blogHomeEntries.items[0]
@@ -25,17 +23,16 @@ export const getStaticProps = async () => {
     }
   }
 
-  // replaces circular dependencies allowing safe conversion to JSON
-  const featuredPost = JSON.parse(jsonStringifySafe(blogHome.fields.featured))
-  const mostPopular = JSON.parse(jsonStringifySafe(blogHome.fields.mostPopular))
-  const allPosts = JSON.parse(jsonStringifySafe(postsEntries.items))
+  // remove relatedPosts from the Post responses to avoid circular dependencies
+  blogHome.fields.mostPopular.forEach((item: any) => delete item.fields.relatedPosts)
+  postsEntries.items.forEach((item: any) => delete item.fields.relatedPosts)
 
   return {
     props: {
       metaTags: blogHome.fields.metaTags,
-      featuredPost,
-      mostPopular,
-      allPosts,
+      featuredPost: blogHome.fields.featured,
+      mostPopular: blogHome.fields.mostPopular,
+      allPosts: postsEntries.items,
     },
   }
 }
