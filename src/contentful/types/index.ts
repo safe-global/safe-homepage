@@ -2,6 +2,7 @@ export type { TypeAuthor, TypeAuthorFields, TypeAuthorSkeleton } from './TypeAut
 export type { TypeBlogHome, TypeBlogHomeFields, TypeBlogHomeSkeleton } from './TypeBlogHome'
 export type { TypeButton, TypeButtonFields, TypeButtonSkeleton } from './TypeButton'
 export type { TypeCardGridItem, TypeCardGridItemFields, TypeCardGridItemSkeleton } from './TypeCardGridItem'
+export type { TypeExternalUrl, TypeExternalUrlFields, TypeExternalUrlSkeleton } from './TypeExternalUrl'
 export type { TypeFaq, TypeFaqFields, TypeFaqSkeleton } from './TypeFaq'
 export type { TypeFaqEntry, TypeFaqEntryFields, TypeFaqEntrySkeleton } from './TypeFaqEntry'
 export type { TypeHero, TypeHeroFields, TypeHeroSkeleton } from './TypeHero'

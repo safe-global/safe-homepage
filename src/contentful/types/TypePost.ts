@@ -13,7 +13,7 @@ export interface TypePostFields {
   content: EntryFieldTypes.RichText
   date: EntryFieldTypes.Date
   category: EntryFieldTypes.Symbol<'Announcements' | 'Build' | 'Community' | 'Ecosystem' | 'Insights'>
-  tags: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeTagSkeleton>>
+  tags?: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeTagSkeleton>>
   relatedPosts?: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypePostSkeleton>>
 }
 

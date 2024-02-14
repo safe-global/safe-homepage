@@ -3,7 +3,7 @@ import css from '../styles.module.css'
 import { type Entry } from 'contentful'
 import { type TypeTagSkeleton } from '@/contentful/types'
 
-const Tags = ({ tags }: { tags: Entry<TypeTagSkeleton, undefined, string>[] }) => {
+const Tags = ({ tags }: { tags: Entry<TypeTagSkeleton, undefined, string>[] | undefined }) => {
   if (!tags || !tags.length) return null
 
   return (
