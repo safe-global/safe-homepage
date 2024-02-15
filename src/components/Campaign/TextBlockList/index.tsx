@@ -5,7 +5,7 @@ import css from './styles.module.css'
 import layoutCss from '@/components/common/styles.module.css'
 import type { Entry } from 'contentful'
 import type { TypeTextBlockListSkeleton } from '@/contentful/types'
-import RichText from '@/components/Campaign/RichText'
+import RichText from '@/components/common/RichText'
 import BackgroundImage from '@/public/images/Campaigns/faq-bg.png'
 import Image from 'next/image'
 
