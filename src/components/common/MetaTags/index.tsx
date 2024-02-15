@@ -29,7 +29,7 @@ const MetaTags = (props: Partial<typeof defaultMetaTags>) => {
       <meta name="twitter:description" content={seo.description} />
       <meta name="twitter:image" content={seo.image} />
 
-      {!IS_PRODUCTION && <meta name="robots" content="none" />}
+      {!IS_PRODUCTION && <meta name="robots" content="noindex" />}
     </Head>
   )
 }
