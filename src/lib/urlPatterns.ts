@@ -3,7 +3,7 @@ export function isYouTubeUrl(url: string) {
   return youtubeRegex.test(url)
 }
 
-export function extractVideoId(url: string) {
+export function extractYouTubeVideoId(url: string) {
   // short form
   if (url.includes('youtu.be')) return url.split('/').pop()
 
@@ -20,6 +20,6 @@ export function isTwitterUrl(url: string) {
 
 export function extractLastPathname(url: string) {
   const urlObj = new URL(url)
-  const pathnameParts = urlObj.pathname.split('/')
-  return pathnameParts[pathnameParts.length - 1]
+  const pathnameParts = urlObj.pathname.split('/').filter((part) => part !== '')
+  return pathnameParts[pathnameParts.length - 1] || ''
 }

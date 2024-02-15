@@ -1,4 +1,4 @@
-import { extractLastPathname, extractVideoId, isTwitterUrl, isYouTubeUrl } from '@/lib/urlPatterns'
+import { extractLastPathname, extractYouTubeVideoId, isTwitterUrl, isYouTubeUrl } from '@/lib/urlPatterns'
 
 describe('urlPatterns', () => {
   describe('isYouTubeUrl', () => {
@@ -13,15 +13,15 @@ describe('urlPatterns', () => {
     })
   })
 
-  describe('extractVideoId', () => {
+  describe('extractYouTubeVideoId', () => {
     it('should extract video id from YouTube URLs', () => {
-      expect(extractVideoId('https://www.youtube.com/watch?v=dQw4w9WgXcQ')).toBe('dQw4w9WgXcQ')
-      expect(extractVideoId('https://youtu.be/dQw4w9WgXcQ')).toBe('dQw4w9WgXcQ')
+      expect(extractYouTubeVideoId('https://www.youtube.com/watch?v=dQw4w9WgXcQ')).toBe('dQw4w9WgXcQ')
+      expect(extractYouTubeVideoId('https://youtu.be/dQw4w9WgXcQ')).toBe('dQw4w9WgXcQ')
     })
 
     it('should return null for non-YouTube URLs', () => {
-      expect(extractVideoId('https://www.google.com')).toBe(null)
-      expect(extractVideoId('https://twitter.com')).toBe(null)
+      expect(extractYouTubeVideoId('https://www.google.com')).toBe(null)
+      expect(extractYouTubeVideoId('https://twitter.com')).toBe(null)
     })
   })
 
@@ -40,7 +40,7 @@ describe('urlPatterns', () => {
   describe('extractLastPathname', () => {
     it('should extract last pathname component from URL', () => {
       expect(extractLastPathname('https://example.com/foo/bar')).toBe('bar')
-      expect(extractLastPathname('https://example.com/foo/bar/')).toBe('')
+      expect(extractLastPathname('https://example.com/foo/bar/')).toBe('bar')
       expect(extractLastPathname('https://example.com/')).toBe('')
     })
   })

@@ -1,4 +1,5 @@
 import { Container, Grid, Typography } from '@mui/material'
+import { MIRROR_SUBSCRIBE_LINK } from '@/config/constants'
 import css from './styles.module.css'
 
 const BannerForm = ({ title, subtitle }: { title: string; subtitle: string }) => {
@@ -13,7 +14,7 @@ const BannerForm = ({ title, subtitle }: { title: string; subtitle: string }) =>
             </Typography>
           </Grid>
           <Grid item xs={12} md={6} className={css.centeredContent} mt={3}>
-            <iframe src="https://safe.mirror.xyz/subscribe/embed" />
+            <iframe src={MIRROR_SUBSCRIBE_LINK} />
           </Grid>
           <img src="/images/banner-lines.svg" className={css.image} />
         </Grid>

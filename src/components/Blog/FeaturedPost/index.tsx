@@ -6,13 +6,11 @@ import blogCss from '../styles.module.css'
 import { formatBlogDate } from '@/components/Blog/utils/formatBlogDate'
 import { calculateReadingTime } from '@/components/Blog/utils/calculateReadingTime'
 import { type BlogPostEntry } from '@/components/Blog/Post'
-import { isAsset, isEntryTypeTag } from '@/lib/typeGuards'
+import { isAsset } from '@/lib/typeGuards'
 import CategoryIcon from '@/public/images/Blog/category-icon.svg'
 
 const FeaturedPost = (props: BlogPostEntry) => {
   const { slug, coverImage, category, date, title, excerpt, tags, content } = props.fields
-
-  const tagsList = tags?.filter(isEntryTypeTag)
 
   return (
     <Grid container columnSpacing="60px" rowGap={3} mt={10}>
@@ -47,7 +45,7 @@ const FeaturedPost = (props: BlogPostEntry) => {
         <Typography className={css.excerpt}>{excerpt}</Typography>
 
         <Box mt={2}>
-          <Tags tags={tagsList} />
+          <Tags tags={tags} />
         </Box>
       </Grid>
     </Grid>

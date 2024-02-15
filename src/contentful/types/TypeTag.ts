@@ -8,7 +8,7 @@ export interface TypeTagFields {
     | 'Events'
     | 'Grants'
     | 'NFT'
-    | 'New feature'
+    | 'New Feature'
     | 'Safe{Core}'
     | 'Safe{DAO}'
     | 'Safe{Wallet}'
