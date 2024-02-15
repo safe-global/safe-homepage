@@ -1,7 +1,7 @@
 import { extractYouTubeVideoId } from '@/lib/urlPatterns'
 import css from './styles.module.css'
 
-const YouTube = ({ url }: { url: string }) => {
+const YouTubeEmbed = ({ url }: { url: string }) => {
   const videoId = extractYouTubeVideoId(url)
 
   if (!videoId) return null
@@ -20,4 +20,4 @@ const YouTube = ({ url }: { url: string }) => {
   )
 }
 
-export default YouTube
+export default YouTubeEmbed
