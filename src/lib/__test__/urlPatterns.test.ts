@@ -1,14 +1,5 @@
 import { extractLastPathname, extractVideoId, isTwitterUrl, isYouTubeUrl } from '@/lib/urlPatterns'
 
-const goodTwitterURLs = [
-  'https://twitter.com/safe/status/1754882331871944935',
-  'https://twitter.com/kristofgazso/status/1754868141841150440',
-  'https://x.com/kristofgazso/status/1754868141841150440',
-  'https://x.com/fileverse/status/1707432735495672214?s=20',
-]
-
-const badTwitterURLs = ['https://flipper.com/fileverse/status/1707432735495672214']
-
 describe('urlPatterns', () => {
   describe('isYouTubeUrl', () => {
     it('should return true for valid YouTube URLs', () => {

@@ -25,7 +25,7 @@ export const getStaticProps = async () => {
     }
   }
 
-  // remove relatedPosts from the Post responses to avoid circular dependencies
+  // relatedPosts are not displayed on the blog home page
   blogHome.fields.mostPopular.forEach((item: any) => delete item.fields.relatedPosts)
   postsEntries.items.forEach((item: any) => delete item.fields.relatedPosts)
 
