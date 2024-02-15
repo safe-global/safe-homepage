@@ -26,6 +26,7 @@ export const TWITTER_LINK = 'https://x.com/safe'
 export const DISCORD_LINK = 'https://chat.safe.global'
 export const YOUTUBE_LINK = 'https://www.youtube.com/@safeglobal'
 export const MIRROR_LINK = 'https://safe.mirror.xyz'
+export const MIRROR_SUBSCRIBE_LINK = 'https://safe.mirror.xyz/subscribe/embed'
 export const GITHUB_LINK = 'https://github.com/safe-global'
 
 export const PROTOCOL_KIT_LINK = 'https://docs.safe.global/safe-core-aa-sdk/protocol-kit'

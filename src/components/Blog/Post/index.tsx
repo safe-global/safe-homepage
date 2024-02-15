@@ -4,13 +4,13 @@ import { type Entry } from 'contentful'
 import type { TypeAuthorSkeleton, TypePostSkeleton } from '@/contentful/types'
 import { formatBlogDate } from '@/components/Blog/utils/formatBlogDate'
 import { calculateReadingTime } from '@/components/Blog/utils/calculateReadingTime'
-import { isAsset, isEntryTypeAuthor, isEntryTypePost, isEntryTypeTag } from '@/lib/typeGuards'
+import { isAsset, isEntryTypeAuthor, isEntryTypePost } from '@/lib/typeGuards'
 import BlogLayout from '@/components/Blog/Layout'
 import ProgressBar from '@/components/Blog/ProgressBar'
 import BreadcrumbsNav from '@/components/Blog/BreadcrumbsNav'
 import Tags from '@/components/Blog/Tags'
 import Authors from '@/components/Blog/Authors'
-import RichText from '@/components/Campaign/RichText'
+import RichText from '@/components/common/RichText'
 import ContentsTable from '@/components/Blog/ContentsTable'
 import Socials from '@/components/Blog/Socials'
 import RelatedPosts from '@/components/Blog/RelatedPosts'
@@ -24,7 +24,6 @@ const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
   const { title, excerpt, content, coverImage, authors, tags, category, date, relatedPosts, metaTags } = blogPost.fields
 
   const authorsList = authors.filter(isEntryTypeAuthor)
-  const tagsList = tags.filter(isEntryTypeTag)
   const relatedPostsList = relatedPosts?.filter(isEntryTypePost)
 
   return (
@@ -44,7 +43,7 @@ const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
           <Typography variant="caption">{formatBlogDate(date)}</Typography>
         </div>
 
-        <Typography variant="h2" className={css.title}>
+        <Typography variant="h1" className={css.title}>
           {title}
         </Typography>
 
@@ -53,7 +52,7 @@ const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
         </Typography>
 
         <Box mt={{ xs: 2, md: 3 }}>
-          <Tags tags={tagsList} />
+          <Tags tags={tags} />
         </Box>
 
         <Authors authors={authorsList} />

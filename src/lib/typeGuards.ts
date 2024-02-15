@@ -9,28 +9,32 @@ import type {
 import type { Asset, Entry } from 'contentful'
 import type { Text } from '@contentful/rich-text-types'
 
+const getContentTypeSysId = (obj: any): string => {
+  return obj.sys.contentType && obj.sys.contentType.sys.id
+}
+
 export const isEntryTypeButton = (obj: any): obj is Entry<TypeButtonSkeleton, undefined, string> => {
-  return obj.sys.contentType.sys.id === 'button'
+  return getContentTypeSysId(obj) === 'button'
 }
 
 export const isEntryTypeCardGridItem = (obj: any): obj is Entry<TypeCardGridItemSkeleton, undefined, string> => {
-  return obj.sys.contentType.sys.id === 'cardGridItem'
+  return getContentTypeSysId(obj) === 'cardGridItem'
 }
 
 export const isEntryTypeFaqEntry = (obj: any): obj is Entry<TypeFaqEntrySkeleton, undefined, string> => {
-  return obj.sys.contentType.sys.id === 'faqEntry'
+  return getContentTypeSysId(obj) === 'faqEntry'
 }
 
 export const isEntryTypeTag = (obj: any): obj is Entry<TypeTagSkeleton, undefined, string> => {
-  return obj.sys.contentType.sys.id === 'tag'
+  return getContentTypeSysId(obj) === 'tag'
 }
 
 export const isEntryTypeAuthor = (obj: any): obj is Entry<TypeAuthorSkeleton, undefined, string> => {
-  return obj.sys.contentType.sys.id === 'author'
+  return getContentTypeSysId(obj) === 'author'
 }
 
 export const isEntryTypePost = (obj: any): obj is Entry<TypePostSkeleton, undefined, string> => {
-  return obj.sys.contentType.sys.id === 'post'
+  return getContentTypeSysId(obj) === 'post'
 }
 
 export const isEntryType = (obj: any): obj is Entry => {
@@ -39,7 +43,7 @@ export const isEntryType = (obj: any): obj is Entry => {
 
 // TODO: rename to isAssetType
 export const isAsset = (obj: any): obj is Asset<undefined, string> => {
-  return obj.sys.type === 'Asset'
+  return obj && obj.sys.type === 'Asset'
 }
 
 export const isText = (obj: any): obj is Text => {

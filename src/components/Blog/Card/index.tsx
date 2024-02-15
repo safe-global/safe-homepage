@@ -6,13 +6,11 @@ import blogCss from '../styles.module.css'
 import { calculateReadingTime } from '@/components/Blog/utils/calculateReadingTime'
 import Tags from '@/components/Blog/Tags'
 import CategoryIcon from '@/public/images/Blog/category-icon.svg'
-import { isAsset, isEntryTypeTag } from '@/lib/typeGuards'
+import { isAsset } from '@/lib/typeGuards'
 import { type BlogPostEntry } from '@/components/Blog/Post'
 
 const Card = (props: BlogPostEntry) => {
   const { slug, title, content, coverImage, tags, category } = props.fields
-
-  const tagsList = tags.filter(isEntryTypeTag)
 
   return (
     <div className={css.postCard}>
@@ -44,7 +42,7 @@ const Card = (props: BlogPostEntry) => {
         <span style={{ flexGrow: 1 }} />
 
         <Box mt={2}>
-          <Tags tags={tagsList} />
+          <Tags tags={tags} />
         </Box>
       </div>
     </div>

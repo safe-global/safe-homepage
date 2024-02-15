@@ -13,6 +13,9 @@ import css from './styles.module.css'
 import { Typography } from '@mui/material'
 import { isText } from '@/lib/typeGuards'
 import kebabCase from 'lodash/kebabCase'
+import { isTwitterUrl, isYouTubeUrl } from '@/lib/urlPatterns'
+import YouTube from '@/components/Blog/YouTube'
+import Twitter from '@/components/Blog/Twitter'
 
 const options: Options = {
   renderNode: {
@@ -52,6 +55,7 @@ const options: Options = {
           {mimeGroup === 'image' && (
             <div className={css.imageContainer}>
               <img title={title} alt={description} src={file.url} />
+              {description && <span className={css.caption}>{description}</span>}
             </div>
           )}
           {mimeGroup === 'video' && (
@@ -65,8 +69,17 @@ const options: Options = {
         </>
       )
     },
-  } as unknown as RenderNode,
-}
+    [BLOCKS.EMBEDDED_ENTRY]: (node: Node) => {
+      const entryUrl = node.data.target.fields.url
+
+      return isYouTubeUrl(entryUrl) ? (
+        <YouTube url={entryUrl} />
+      ) : isTwitterUrl(entryUrl) ? (
+        <Twitter url={entryUrl} />
+      ) : null
+    },
+  },
+} as unknown as RenderNode
 
 const RichText = (props: ContentfulDocument) => {
   return <>{documentToReactComponents(props, options)}</>
