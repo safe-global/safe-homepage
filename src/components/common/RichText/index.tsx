@@ -14,7 +14,7 @@ import { Typography } from '@mui/material'
 import { isText } from '@/lib/typeGuards'
 import kebabCase from 'lodash/kebabCase'
 import { isTwitterUrl, isYouTubeUrl } from '@/lib/urlPatterns'
-import YouTubeEmbed from '@/components/Blog/YouTubeEmbed'
+import YouTube from '@/components/Blog/YouTube'
 import Twitter from '@/components/Blog/Twitter'
 
 const options: Options = {
@@ -73,7 +73,7 @@ const options: Options = {
       const entryUrl = node.data.target.fields.url
 
       return isYouTubeUrl(entryUrl) ? (
-        <YouTubeEmbed url={entryUrl} />
+        <YouTube url={entryUrl} />
       ) : isTwitterUrl(entryUrl) ? (
         <Twitter url={entryUrl} />
       ) : null
