@@ -9,6 +9,8 @@ const Blog = (props: BlogHomeProps) => {
 export const getStaticProps = async () => {
   const postsEntries = await client.getEntries<TypePostSkeleton>({
     content_type: 'post',
+    // order by date, most recent first
+    order: ['-fields.date'],
   })
 
   const blogHomeEntries = await client.getEntries<TypeBlogHomeSkeleton>({

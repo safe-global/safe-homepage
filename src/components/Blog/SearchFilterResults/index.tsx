@@ -29,16 +29,9 @@ const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry
   const selectedCategory = router.query.category as string
   const page = getPage(router.query)
 
-  const allPostsSortedByDate = useMemo(
-    () => allPosts.sort((a, b) => new Date(b.fields.date).getTime() - new Date(a.fields.date).getTime()),
-    [allPosts],
-  )
-
   const filteredPosts = useMemo(() => {
-    return !selectedCategory
-      ? allPostsSortedByDate
-      : allPostsSortedByDate.filter((post) => post.fields.category === selectedCategory)
-  }, [allPostsSortedByDate, selectedCategory])
+    return !selectedCategory ? allPosts : allPosts.filter((post) => post.fields.category === selectedCategory)
+  }, [allPosts, selectedCategory])
 
   const searchResults = usePostsSearch(filteredPosts, searchQuery)
   const visibleResults = searchResults.slice(0, PAGE_LENGTH * page)
