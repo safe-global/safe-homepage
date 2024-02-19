@@ -4,6 +4,7 @@ import { isText } from '@/lib/typeGuards'
 import { useMemo } from 'react'
 import { scrollToElement } from '@/lib/scrollSmooth'
 import { Typography } from '@mui/material'
+import Link from 'next/link'
 
 const ContentsTable = ({ content }: { content: ContentfulDocument }) => {
   const handleContentTableClick = (e: React.MouseEvent<HTMLAnchorElement>, target: string) => {
@@ -15,8 +16,7 @@ const ContentsTable = ({ content }: { content: ContentfulDocument }) => {
   const headings = useMemo(
     () =>
       content.content
-        .filter((item) => item.nodeType === BLOCKS.HEADING_3)
-        .filter((item) => isText(item.content[0]))
+        .filter((item) => item.nodeType === BLOCKS.HEADING_3 && isText(item.content[0]))
         .map((item) => ({
           id: (item.content[0] as Text).value,
           text: (item.content[0] as Text).value,
@@ -32,9 +32,9 @@ const ContentsTable = ({ content }: { content: ContentfulDocument }) => {
         return (
           <li key={headingKey}>
             <Typography>
-              <a onClick={(e) => handleContentTableClick(e, headingKey)} href={`#${headingKey}`}>
+              <Link onClick={(e) => handleContentTableClick(e, headingKey)} href={`#${headingKey}`}>
                 {heading.text}
-              </a>
+              </Link>
             </Typography>
           </li>
         )

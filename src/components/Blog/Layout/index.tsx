@@ -14,7 +14,14 @@ const BlogLayout = ({ children, metaTags }: { children: ReactNode; metaTags: Met
       {isEntryType(metaTags) ? <MetaTags {...metaTags} /> : undefined}
       <Box mt={{ xs: '24px', md: '120px' }}>
         {children}
-        <BannerForm title="Get insider updates" subtitle="Sign up to hear the latest from Safe in your inbox" />
+        <BannerForm
+          title="Get insider updates"
+          subtitle={
+            <>
+              Sign up to hear the latest from <i>Safe</i> in your inbox
+            </>
+          }
+        />
       </Box>
     </>
   )

@@ -4,10 +4,11 @@ import { Box, Grid, Link, Typography } from '@mui/material'
 import css from './styles.module.css'
 import blogCss from '../styles.module.css'
 import { formatBlogDate } from '@/components/Blog/utils/formatBlogDate'
-import { calculateReadingTime } from '@/components/Blog/utils/calculateReadingTime'
+import { calculateReadingTimeInMin } from '@/components/Blog/utils/calculateReadingTime'
 import { type BlogPostEntry } from '@/components/Blog/Post'
 import { isAsset } from '@/lib/typeGuards'
 import CategoryIcon from '@/public/images/Blog/category-icon.svg'
+import { AppRoutes } from '@/config/routes'
 
 const FeaturedPost = (props: BlogPostEntry) => {
   const { slug, coverImage, category, date, title, excerpt, tags, content } = props.fields
@@ -19,7 +20,7 @@ const FeaturedPost = (props: BlogPostEntry) => {
           <Link href={`/blog/${slug}`}>
             <Image
               src={coverImage.fields.file.url}
-              alt={(coverImage.fields.title = '')}
+              alt={coverImage.fields.title ?? ''}
               width={coverImage.fields.file.details.image?.width}
               height={coverImage.fields.file.details.image?.height}
               className={css.image}
@@ -35,12 +36,12 @@ const FeaturedPost = (props: BlogPostEntry) => {
               <CategoryIcon />
               {category}
             </Typography>
-            <Typography variant="caption">{calculateReadingTime(content)}min</Typography>
+            <Typography variant="caption">{calculateReadingTimeInMin(content)}</Typography>
           </div>
           <Typography variant="caption">{formatBlogDate(date)}</Typography>
         </div>
         <Typography variant="h3" className={css.title}>
-          <Link href={`/blog/${slug}`}>{title}</Link>
+          <Link href={`${AppRoutes.blog.index}/${slug}`}>{title}</Link>
         </Typography>
         <Typography className={css.excerpt}>{excerpt}</Typography>
 

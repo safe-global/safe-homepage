@@ -3,7 +3,7 @@ import { Box, Container, Divider, Grid, Typography } from '@mui/material'
 import { type Entry } from 'contentful'
 import type { TypeAuthorSkeleton, TypePostSkeleton } from '@/contentful/types'
 import { formatBlogDate } from '@/components/Blog/utils/formatBlogDate'
-import { calculateReadingTime } from '@/components/Blog/utils/calculateReadingTime'
+import { calculateReadingTimeInMin } from '@/components/Blog/utils/calculateReadingTime'
 import { isAsset, isEntryTypeAuthor, isEntryTypePost } from '@/lib/typeGuards'
 import BlogLayout from '@/components/Blog/Layout'
 import ProgressBar from '@/components/Blog/ProgressBar'
@@ -38,7 +38,7 @@ const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
               <CategoryIcon />
               {category}
             </Typography>
-            <Typography variant="caption">{calculateReadingTime(content)}min</Typography>
+            <Typography variant="caption">{calculateReadingTimeInMin(content)}</Typography>
           </div>
           <Typography variant="caption">{formatBlogDate(date)}</Typography>
         </div>
@@ -66,7 +66,7 @@ const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
             {isAsset(coverImage) && coverImage.fields.file?.url ? (
               <Image
                 src={coverImage.fields.file.url}
-                alt={(coverImage.fields.title = '')}
+                alt={coverImage.fields.title ?? ''}
                 width={coverImage.fields.file.details.image?.width}
                 height={coverImage.fields.file.details.image?.height}
               />

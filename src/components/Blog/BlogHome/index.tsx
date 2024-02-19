@@ -7,6 +7,8 @@ import SearchFilterResults from '@/components/Blog/SearchFilterResults'
 
 const categories = ['Announcements', 'Ecosystem', 'Community', 'Insights', 'Build']
 
+const TRENDING_POSTS_COUNT = 3
+
 export type BlogHomeProps = {
   metaTags: MetaTagsEntry
   featuredPost: BlogPostEntry
@@ -27,7 +29,7 @@ const BlogHome = (props: BlogHomeProps) => {
           </Grid>
           <Grid item xs={12} md={5} mt="auto">
             <Typography textAlign={{ md: 'end' }}>
-              Read the latest from Safe including new releases, use cases and community updates
+              Read the latest from <i>Safe</i> including new releases, use cases and community updates
             </Typography>
           </Grid>
         </Grid>
@@ -38,7 +40,7 @@ const BlogHome = (props: BlogHomeProps) => {
           Trending
         </Typography>
         <Grid container columnSpacing={2} rowGap="30px" mt="80px">
-          {mostPopular.slice(0, 3).map((post) => (
+          {mostPopular.slice(0, TRENDING_POSTS_COUNT).map((post) => (
             <Grid key={post.fields.slug} item xs={12} md={4}>
               <Card {...post} />
             </Grid>

@@ -8,12 +8,12 @@ const averageWPM = 200
  * Calculates the estimated reading time in minutes for a document.
  *
  * @param {Document} content - The Contentful RichText document.
- * @returns {number} - Estimated reading time in minutes.
+ * @returns {string} - Estimated reading time in minutes.
  */
-export function calculateReadingTime(content: Document) {
+export function calculateReadingTimeInMin(content: Document) {
   const allText = documentToPlainTextString(content)
 
   const wordCount = words(allText).length
 
-  return Math.round(wordCount / averageWPM)
+  return `${Math.round(wordCount / averageWPM)}min`
 }

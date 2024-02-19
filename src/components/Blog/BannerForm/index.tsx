@@ -1,8 +1,9 @@
 import { Container, Grid, Typography } from '@mui/material'
 import { MIRROR_SUBSCRIBE_LINK } from '@/config/constants'
 import css from './styles.module.css'
+import { type ReactElement } from 'react'
 
-const BannerForm = ({ title, subtitle }: { title: string; subtitle: string }) => {
+const BannerForm = ({ title, subtitle }: { title: string; subtitle: ReactElement }) => {
   return (
     <Container>
       <div className={css.container}>

@@ -17,17 +17,13 @@ const Authors = ({ authors }: { authors: Entry<TypeAuthorSkeleton, undefined, st
         })}
       </AvatarGroup>
 
-      <span className={css.authorNames}>
+      <Typography variant="caption" color="text.primary">
         {authors.map((author, index) => {
           const { name } = author.fields
 
-          return (
-            <Typography key={name} variant="caption" color="text.primary">
-              {`${index !== 0 ? ' &' : ''} ${name}`}
-            </Typography>
-          )
+          return `${index !== 0 ? ' & ' : ''}${name}`
         })}
-      </span>
+      </Typography>
     </div>
   )
 }

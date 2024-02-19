@@ -6,6 +6,12 @@ import { IconButton, SvgIcon } from '@mui/material'
 import css from '../styles.module.css'
 import { useEffect, useState } from 'react'
 
+const twitterSharingUrl = (currentUrl: string, sharingText: string) =>
+  `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}&text=${encodeURIComponent(sharingText)}`
+
+const linkedInSharingUrl = (currentUrl: string) =>
+  `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`
+
 const Socials = ({ title, authors }: { title: string; authors: Entry<TypeAuthorSkeleton, undefined, string>[] }) => {
   const [currentUrl, setCurrentUrl] = useState('')
 
@@ -21,10 +27,8 @@ const Socials = ({ title, authors }: { title: string; authors: Entry<TypeAuthorS
     .join(', @')
     .toString()}`
 
-  const xUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}&text=${encodeURIComponent(
-    sharingText,
-  )}`
-  const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`
+  const xUrl = twitterSharingUrl(currentUrl, sharingText)
+  const linkedInUrl = linkedInSharingUrl(currentUrl)
 
   return (
     <div className={css.socials}>

@@ -26,7 +26,7 @@ const getPage = (query: NextRouter['query']): number => {
 const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry[]; categories: string[] }) => {
   const [searchQuery, setSearchQuery] = useState('')
   const router = useRouter()
-  const selectedCategory = router.query.category as string
+  const selectedCategory = router.query.category
   const page = getPage(router.query)
 
   const filteredPosts = useMemo(() => {
@@ -38,8 +38,7 @@ const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry
   const shouldShowMoreButton = visibleResults.length < searchResults.length
 
   useEffect(() => {
-    const queryParams = { ...router.query }
-    if (queryParams.category) scrollToElement('#results', 250)
+    if (router.query.category) scrollToElement('#results', 250)
   })
 
   const handleToggleCategory = (category: string) => {

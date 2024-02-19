@@ -7,8 +7,11 @@ const ordinalSuffixes = {
   many: undefined,
 }
 
+// Formatters
+const ordinalPluralRules = new Intl.PluralRules('en', { type: 'ordinal' })
+const dateFormat = new Intl.DateTimeFormat('en', { day: 'numeric', month: 'long', year: 'numeric' })
+
 function appendOrdinalSuffix(day: number) {
-  const ordinalPluralRules = new Intl.PluralRules('en', { type: 'ordinal' })
   const ordinal = ordinalPluralRules.select(day)
   const suffix = ordinalSuffixes[ordinal]
 
@@ -22,8 +25,6 @@ function appendOrdinalSuffix(day: number) {
  * @returns {string} - The formatted date in the "8th December, 2023" style.
  */
 export function formatBlogDate(inputDate: string) {
-  const dateFormat = new Intl.DateTimeFormat('en', { day: 'numeric', month: 'long', year: 'numeric' })
-
   const date = new Date(inputDate)
   const parts = dateFormat.formatToParts(date)
 

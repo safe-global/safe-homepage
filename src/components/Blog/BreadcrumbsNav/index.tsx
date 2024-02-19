@@ -4,6 +4,7 @@ import css from './styles.module.css'
 import { type UrlObject } from 'url'
 import CategoryIcon from '@/public/images/Blog/category-icon.svg'
 import { type ReactNode } from 'react'
+import { AppRoutes } from '@/config/routes'
 
 const TYPOGRAPHY_VARIANT = 'caption'
 const TYPOGRAPHY_COLOR = 'text.primary'
@@ -23,14 +24,14 @@ const createBreadcrumb = (key: string, text: ReactNode, linkProps: string | UrlO
 
 const BreadcrumbsNav = ({ category, title }: BreadcrumbsType) => {
   const breadcrumbs = [
-    createBreadcrumb('1', 'Blog', { pathname: '/blog' }),
+    createBreadcrumb('1', 'Blog', { pathname: AppRoutes.blog.index }),
     createBreadcrumb(
       '2',
       <div className={css.category}>
         <CategoryIcon />
         {category}
       </div>,
-      { pathname: '/blog', query: { category } },
+      { pathname: AppRoutes.blog.index, query: { category } },
     ),
     <Typography key="3" variant={TYPOGRAPHY_VARIANT} color={TYPOGRAPHY_COLOR}>
       {title}
