@@ -12,8 +12,7 @@ const YouTube = ({ url }: { url: string }) => {
         width="853"
         height="480"
         src={`https://www.youtube-nocookie.com/embed/${videoId}`}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
-        allowFullScreen
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
         title="Embedded YouTube"
       />
     </div>

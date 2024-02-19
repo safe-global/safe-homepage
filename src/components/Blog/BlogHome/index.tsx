@@ -38,9 +38,8 @@ const BlogHome = (props: BlogHomeProps) => {
           Trending
         </Typography>
         <Grid container columnSpacing={2} rowGap="30px" mt="80px">
-          {mostPopular.slice(0, 3).map((post, index) => (
-            // TODO: remove index from key when we have enough posts
-            <Grid key={`${post.fields.slug}-${index}`} item xs={12} md={4}>
+          {mostPopular.slice(0, 3).map((post) => (
+            <Grid key={post.fields.slug} item xs={12} md={4}>
               <Card {...post} />
             </Grid>
           ))}
