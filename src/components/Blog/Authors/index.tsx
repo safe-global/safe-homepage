@@ -3,8 +3,11 @@ import css from '../styles.module.css'
 import type { Entry } from 'contentful'
 import type { TypeAuthorSkeleton } from '@/contentful/types'
 import { isAsset } from '@/lib/typeGuards'
+import { formatAuthorsList } from '@/components/Blog/utils/formatAuthorsList'
 
-const Authors = ({ authors }: { authors: Entry<TypeAuthorSkeleton, undefined, string>[] }) => {
+export type AuthorsProps = Entry<TypeAuthorSkeleton, undefined, string>[]
+
+const Authors = ({ authors }: { authors: AuthorsProps }) => {
   return (
     <div className={css.authors}>
       <AvatarGroup className={css.avatarGroup} max={3}>
@@ -18,11 +21,7 @@ const Authors = ({ authors }: { authors: Entry<TypeAuthorSkeleton, undefined, st
       </AvatarGroup>
 
       <Typography variant="caption" color="text.primary">
-        {authors.map((author, index) => {
-          const { name } = author.fields
-
-          return `${index !== 0 ? ' & ' : ''}${name}`
-        })}
+        {formatAuthorsList(authors)}
       </Typography>
     </div>
   )
