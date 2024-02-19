@@ -1,3 +1,7 @@
+.hyperlink {
+  word-wrap: break-word;
+}
+
 .imageContainer {
   display: flex;
   flex-direction: column;

@@ -22,7 +22,7 @@ const options: Options = {
     [INLINES.HYPERLINK]: (node: Hyperlink) => {
       const text = node.content.find(isText)?.value
       return (
-        <a href={node.data.uri} target="_blank" rel="noreferrer">
+        <a className={css.hyperlink} href={node.data.uri} target="_blank" rel="noreferrer">
           {text}
         </a>
       )
