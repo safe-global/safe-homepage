@@ -28,6 +28,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     }
   }
 
+  // keep one level of relatedPosts to avoid circular references
+  blogPost.fields.relatedPosts?.forEach((post: any) => delete post.fields.relatedPosts)
+
   return {
     props: {
       blogPost,
