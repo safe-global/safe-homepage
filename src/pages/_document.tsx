@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 /**
  * This file is needed to embed MUI theme CSS into the pre-built HTML files
  * @see https://github.com/mui/material-ui/tree/master/examples/nextjs-with-typescript

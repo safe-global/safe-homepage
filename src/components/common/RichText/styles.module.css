@@ -1,0 +1,16 @@
+.hyperlink {
+  word-wrap: break-word;
+}
+
+.imageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 32px 0px;
+}
+
+.caption {
+  margin-top: 8px;
+  font-style: italic;
+}

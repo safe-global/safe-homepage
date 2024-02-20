@@ -1,0 +1,9 @@
+.tweetContainer {
+  margin: 24px auto 0;
+  width: 80%;
+}
+
+.tweetContainer > * {
+  display: flex;
+  justify-content: center;
+}

@@ -19,7 +19,7 @@ import Image from 'next/image'
 import { isEntryTypeFaqEntry } from '@/lib/typeGuards'
 import { trackEvent } from '@/services/analytics/trackEvent'
 import { SOCIAL_LOGIN_EVENTS } from '@/services/analytics/events/socialLogin'
-import RichText from '@/components/Campaign/RichText'
+import RichText from '@/components/common/RichText'
 
 type FaqEntry = Entry<TypeFaqSkeleton, undefined, string>
 
