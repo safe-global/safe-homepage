@@ -15,7 +15,7 @@ const BlogLayout = ({ children, metaTags }: { children: ReactNode; metaTags: Met
       <Box mt={{ xs: '24px', md: '120px' }}>
         {children}
         <BannerForm
-          title="Get insider updates"
+          title="Get the Alpha"
           subtitle={
             <>
               Sign up to hear the latest from <i>Safe</i> in your inbox

@@ -32,6 +32,10 @@
   align-items: baseline;
 }
 
+.title {
+  overflow-wrap: break-word;
+}
+
 .title,
 .excerpt {
   margin-top: 16px;
@@ -110,6 +114,7 @@
 @media (min-width: 900px) {
   .title {
     margin-top: 24px;
+    overflow-wrap: normal;
   }
 
   .avatarGroup {
