@@ -1,4 +1,11 @@
-import { extractLastPathname, extractYouTubeVideoId, isTwitterUrl, isYouTubeUrl } from '@/lib/urlPatterns'
+import {
+  extractLastPathname,
+  extractYouTubePlaylistParams,
+  extractYouTubeVideoId,
+  getYoutubeVideoSrc,
+  isTwitterUrl,
+  isYouTubeUrl,
+} from '@/lib/urlPatterns'
 
 describe('urlPatterns', () => {
   describe('isYouTubeUrl', () => {
@@ -7,8 +14,17 @@ describe('urlPatterns', () => {
       expect(isYouTubeUrl('https://youtu.be/dQw4w9WgXcQ')).toBe(true)
     })
 
+    it('should return true for valid videos from YouTube playlists', () => {
+      expect(isYouTubeUrl('https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=PL0knnt70iEZpZ_40NHziZ4u7u9f_OW9p6')).toBe(
+        true,
+      )
+      expect(
+        isYouTubeUrl('https://www.youtube.com/watch?v=VbYPL4SVXZw&list=PL0knnt70iEZry_pACXB4sKGSuZz5XNoOd&index=1'),
+      ).toBe(true)
+    })
+
     it('should return true for valid YouTube playlist URLs', () => {
-      expect(isYouTubeUrl('https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=PL3A5849BDE0581B19')).toBe(true)
+      expect(isYouTubeUrl('https://www.youtube.com/playlist?list=PL0knnt70iEZry_pACXB4sKGSuZz5XNoOd')).toBe(true)
     })
 
     it('should return false for invalid YouTube URLs', () => {
@@ -26,6 +42,46 @@ describe('urlPatterns', () => {
     it('should return null for non-YouTube URLs', () => {
       expect(extractYouTubeVideoId('https://www.google.com')).toBe(null)
       expect(extractYouTubeVideoId('https://twitter.com')).toBe(null)
+    })
+  })
+
+  describe('extractYouTubePlaylistParams', () => {
+    it('should extract playlist parameters from URL', () => {
+      const url = 'https://www.youtube.com/playlist?list=PL0knnt70iEZry_pACXB4sKGSuZz5XNoOd&index=3'
+      const params = extractYouTubePlaylistParams(url)
+      expect(params.list).toBe('PL0knnt70iEZry_pACXB4sKGSuZz5XNoOd')
+      expect(params.index).toBe('3')
+    })
+
+    it('should return null for parameters not present in URL', () => {
+      const url = 'https://www.youtube.com/playlist?list=PL0knnt70iEZry_pACXB4sKGSuZz5XNoOd'
+      const params = extractYouTubePlaylistParams(url)
+      expect(params.list).toBe('PL0knnt70iEZry_pACXB4sKGSuZz5XNoOd')
+      expect(params.index).toBeNull()
+    })
+  })
+
+  describe('getYoutubeVideoSrc', () => {
+    test('should return correct video src for a video URL', () => {
+      const url = 'https://www.youtube.com/watch?v=Xe5FcBK9vFw'
+      const src = getYoutubeVideoSrc(url)
+      expect(src).toBe('https://www.youtube-nocookie.com/embed/Xe5FcBK9vFw')
+    })
+
+    test('should return correct video src for a playlist URL with index', () => {
+      const url = 'https://www.youtube.com/playlist?list=PL0knnt70iEZry_pACXB4sKGSuZz5XNoOd&index=0'
+      const src = getYoutubeVideoSrc(url)
+      expect(src).toBe(
+        'https://www.youtube-nocookie.com/embed/videoseries?list=PL0knnt70iEZry_pACXB4sKGSuZz5XNoOd&index=0',
+      )
+    })
+
+    test('should return correct video src for a playlist URL without index', () => {
+      const url = 'https://www.youtube.com/playlist?list=PL0knnt70iEZry_pACXB4sKGSuZz5XNoOd'
+      const src = getYoutubeVideoSrc(url)
+      expect(src).toBe(
+        'https://www.youtube-nocookie.com/embed/videoseries?list=PL0knnt70iEZry_pACXB4sKGSuZz5XNoOd&index=1',
+      )
     })
   })
 

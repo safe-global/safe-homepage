@@ -1,5 +1,6 @@
 export function isYouTubeUrl(url: string) {
-  const youtubeRegex = /^(https?:\/\/)?(www\.)?(youtube\.com\/watch\?v=|youtu\.be\/)[\w-]{11}(&list=\w+)?$/
+  const youtubeRegex =
+    /^(https?:\/\/)?(www\.)?(youtube\.com\/(watch\?v=|playlist\?)|youtu\.be\/)([\w-]{11})?(&?list=[\w]{34})?/
   return youtubeRegex.test(url)
 }
 
@@ -11,6 +12,24 @@ export function extractYouTubeVideoId(url: string) {
   const urlObj = new URL(url)
   const searchParams = new URLSearchParams(urlObj.search)
   return searchParams.get('v')
+}
+
+export function extractYouTubePlaylistParams(url: string) {
+  const urlObj = new URL(url)
+  const searchParams = new URLSearchParams(urlObj.search)
+  return {
+    list: searchParams.get('list'),
+    index: searchParams.get('index'),
+  }
+}
+
+export const getYoutubeVideoSrc = (url: string) => {
+  const videoId = extractYouTubeVideoId(url)
+  const { list, index } = extractYouTubePlaylistParams(url)
+
+  return `https://www.youtube-nocookie.com/embed/${videoId ? videoId : 'videoseries'}${list ? `?list=${list}` : ''}${
+    !videoId ? `&index=${index ?? 1}` : ''
+  }`
 }
 
 export function isTwitterUrl(url: string) {
