@@ -1,5 +1,5 @@
 export function isYouTubeUrl(url: string) {
-  const youtubeRegex = /^(https?:\/\/)?(www\.)?(youtube\.com\/watch\?v=|youtu\.be\/)[\w-]{11}$/
+  const youtubeRegex = /^(https?:\/\/)?(www\.)?(youtube\.com\/watch\?v=|youtu\.be\/)[\w-]{11}(&list=\w+)?$/
   return youtubeRegex.test(url)
 }
 

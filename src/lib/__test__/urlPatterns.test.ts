@@ -7,6 +7,10 @@ describe('urlPatterns', () => {
       expect(isYouTubeUrl('https://youtu.be/dQw4w9WgXcQ')).toBe(true)
     })
 
+    it('should return true for valid YouTube playlist URLs', () => {
+      expect(isYouTubeUrl('https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=PL3A5849BDE0581B19')).toBe(true)
+    })
+
     it('should return false for invalid YouTube URLs', () => {
       expect(isYouTubeUrl('https://www.google.com')).toBe(false)
       expect(isYouTubeUrl('https://twitter.com')).toBe(false)
