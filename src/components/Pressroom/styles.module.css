@@ -1,9 +1,5 @@
-.container {
-  margin-top: 60px;
-  justify-content: space-between;
-}
-
-.contact {
+/* Link cards */
+.card {
   padding: 40px 32px;
   display: flex;
   flex-direction: column;
@@ -13,21 +9,21 @@
   transition: var(--transition-duration);
 }
 
-.contact:hover {
+.spacedBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card:hover {
   border-color: var(--mui-palette-primary-main);
 }
 
-.email {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.contact:hover .icon {
+.card:hover .icon {
   transform: rotate(45deg);
 }
 
-.contact:hover .icon path {
+.card:hover .icon path {
   fill: var(--mui-palette-primary-main);
 }
 

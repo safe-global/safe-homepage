@@ -1,10 +1,11 @@
 import Hero from '@/components/Pressroom/Hero'
-import React from 'react'
+import MediaKit from '@/components/Pressroom/MediaKit'
 
 const Pressroom = () => {
   return (
     <>
       <Hero />
+      <MediaKit />
     </>
   )
 }
