@@ -2,6 +2,7 @@ import type {
   TypeAuthorSkeleton,
   TypeButtonSkeleton,
   TypeCardGridItemSkeleton,
+  TypeExternalUrlSkeleton,
   TypeFaqEntrySkeleton,
   TypePostSkeleton,
   TypeTagSkeleton,
@@ -35,6 +36,10 @@ export const isEntryTypeAuthor = (obj: any): obj is Entry<TypeAuthorSkeleton, un
 
 export const isEntryTypePost = (obj: any): obj is Entry<TypePostSkeleton, undefined, string> => {
   return getContentTypeSysId(obj) === 'post'
+}
+
+export const isEntryTypeExternalURL = (obj: any): obj is Entry<TypeExternalUrlSkeleton, undefined, string> => {
+  return getContentTypeSysId(obj) === 'externalUrl'
 }
 
 export const isEntryType = (obj: any): obj is Entry => {

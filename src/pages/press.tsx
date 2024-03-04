@@ -1,8 +1,8 @@
 import client from '@/lib/contentful'
-import PressRoom, { type PressRoomProps } from '@/components/Pressroom'
+import PressRoom, { type PressRoomEntry } from '@/components/Pressroom'
 import { type TypePressRoomSkeleton } from '@/contentful/types'
 
-const PressroomPage = (props: PressRoomProps) => {
+const PressroomPage = (props: { pressRoom: PressRoomEntry }) => {
   return <PressRoom {...props} />
 }
 
@@ -21,8 +21,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      metaTags: pressRoom.fields.metaTags,
-      featuredPost: pressRoom.fields.featured,
+      pressRoom,
     },
   }
 }

@@ -1,0 +1,19 @@
+.card {
+  height: 100%;
+  position: relative;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 8px;
+  border: 1px solid var(--mui-palette-border-main);
+  transition-duration: var(--transition-duration);
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-grow: 1;
+}

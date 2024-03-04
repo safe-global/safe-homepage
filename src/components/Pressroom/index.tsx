@@ -1,27 +1,30 @@
 import FeaturedPost from '@/components/Blog/FeaturedPost'
-import { type MetaTagsEntry } from '@/components/Blog/Layout'
-import { type BlogPostEntry } from '@/components/Blog/Post'
 import MetaTags from '@/components/Campaign/MetaTags'
+import FeaturedVideos from '@/components/Pressroom/FeaturedVideos'
 import Hero from '@/components/Pressroom/Hero'
 import MediaKit from '@/components/Pressroom/MediaKit'
-import { isEntryType } from '@/lib/typeGuards'
+import { type TypePressRoomSkeleton } from '@/contentful/types'
+import { isEntryType, isEntryTypeExternalURL, isEntryTypePost } from '@/lib/typeGuards'
 import { Container } from '@mui/material'
+import { type Entry } from 'contentful'
 
-export type PressRoomProps = {
-  metaTags: MetaTagsEntry
-  featuredPost: BlogPostEntry
-}
+export type PressRoomEntry = Entry<TypePressRoomSkeleton, undefined, string>
 
-const PressRoom = (props: PressRoomProps) => {
-  const { metaTags, featuredPost } = props
+const PressRoom = ({ pressRoom }: { pressRoom: PressRoomEntry }) => {
+  const { metaTags, featured, videos } = pressRoom.fields
+
+  const videosList = videos.filter(isEntryTypeExternalURL)
 
   return (
-    <Container>
-      {isEntryType(metaTags) ? <MetaTags {...metaTags} /> : undefined}
-      <Hero />
-      <FeaturedPost {...featuredPost} />
-      <MediaKit />
-    </Container>
+    <>
+      {isEntryType(metaTags) && <MetaTags {...metaTags} />}
+      <Container>
+        <Hero />
+        {isEntryTypePost(featured) && <FeaturedPost {...featured} />}
+        <FeaturedVideos videos={videosList} />
+        <MediaKit />
+      </Container>
+    </>
   )
 }
 
