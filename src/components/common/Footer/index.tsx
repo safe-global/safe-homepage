@@ -81,7 +81,7 @@ const resourcesItems = [
   },
   {
     label: 'Press Room',
-    href: AppRoutes.pressroom,
+    href: AppRoutes.press,
   },
   {
     label: 'Careers',
