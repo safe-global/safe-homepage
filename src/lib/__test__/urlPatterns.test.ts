@@ -1,6 +1,6 @@
 import {
   extractLastPathname,
-  extractYouTubePlaylistParams,
+  extractURLSearchParams,
   extractYouTubeVideoId,
   getYoutubeVideoSrc,
   isTwitterUrl,
@@ -45,19 +45,19 @@ describe('urlPatterns', () => {
     })
   })
 
-  describe('extractYouTubePlaylistParams', () => {
-    it('should extract playlist parameters from URL', () => {
+  describe('extractURLSearchParams', () => {
+    it('should extract search parameters from URL', () => {
       const url = 'https://www.youtube.com/playlist?list=PL0knnt70iEZry_pACXB4sKGSuZz5XNoOd&index=3'
-      const params = extractYouTubePlaylistParams(url)
+      const params = extractURLSearchParams(url)
       expect(params.list).toBe('PL0knnt70iEZry_pACXB4sKGSuZz5XNoOd')
       expect(params.index).toBe('3')
     })
 
     it('should return null for parameters not present in URL', () => {
       const url = 'https://www.youtube.com/playlist?list=PL0knnt70iEZry_pACXB4sKGSuZz5XNoOd'
-      const params = extractYouTubePlaylistParams(url)
+      const params = extractURLSearchParams(url)
       expect(params.list).toBe('PL0knnt70iEZry_pACXB4sKGSuZz5XNoOd')
-      expect(params.index).toBeNull()
+      expect(params.index).toBe(undefined)
     })
   })
 
