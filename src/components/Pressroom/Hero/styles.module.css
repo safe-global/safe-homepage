@@ -1,0 +1,40 @@
+.container {
+  margin-top: 60px;
+  justify-content: space-between;
+}
+
+.contact {
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid var(--mui-palette-border-main);
+  border-radius: 16px;
+  transition: var(--transition-duration);
+}
+
+.contact:hover {
+  border-color: var(--mui-palette-primary-main);
+}
+
+.email {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact:hover .icon {
+  transform: rotate(45deg);
+}
+
+.contact:hover .icon path {
+  fill: var(--mui-palette-primary-main);
+}
+
+.icon {
+  transition: transform var(--transition-duration);
+}
+
+.icon path {
+  transition: fill var(--transition-duration);
+}

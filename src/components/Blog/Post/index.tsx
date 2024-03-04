@@ -29,7 +29,7 @@ const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
   return (
     <BlogLayout metaTags={metaTags}>
       <ProgressBar />
-      <Container className={css.post}>
+      <Container>
         <BreadcrumbsNav category={category} title={title} />
 
         <div className={css.meta}>
