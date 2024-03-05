@@ -16,14 +16,16 @@ type CardProps = {
 const Card = ({ title, image, url }: CardProps) => {
   return (
     <div className={css.card}>
-      <div>
+      <div className={css.cardHeader}>
         {isAsset(image) && image.fields.file?.url ? (
           <img src={image.fields.file.url} alt={`${image.fields.title}`} />
         ) : null}
       </div>
 
       <div className={css.cardBody}>
-        <Typography variant="h3">{title}</Typography>
+        <Typography variant="h3" className={css.title}>
+          {title}
+        </Typography>
         <SafeLink href={url}>
           <LinkButton underline={false} fullSize>
             Read more
