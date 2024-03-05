@@ -6,8 +6,8 @@ import type { TypePostSkeleton } from './TypePost'
 export interface TypePressRoomFields {
   metaTags: EntryFieldTypes.EntryLink<TypeMetaTagsSkeleton>
   featured: EntryFieldTypes.EntryLink<TypePostSkeleton>
-  news?: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeExternalUrlSkeleton>>
-  podcasts?: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeExternalUrlSkeleton>>
+  news: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeExternalUrlSkeleton>>
+  podcasts: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeExternalUrlSkeleton>>
   videos: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeExternalUrlSkeleton>>
 }
 

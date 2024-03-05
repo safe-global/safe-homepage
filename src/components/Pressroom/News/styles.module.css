@@ -1,0 +1,39 @@
+.card {
+  height: 100%;
+  position: relative;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 8px;
+  border: 1px solid var(--mui-palette-border-main);
+  transition-duration: var(--transition-duration);
+  height: 300px;
+}
+
+.card:hover {
+  box-shadow: inset 0 0 0 2px var(--mui-palette-primary-main);
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.card:hover .arrow path {
+  fill: var(--mui-palette-primary-main);
+}
+
+.card:hover .arrow {
+  transform: rotate(45deg);
+}
+
+.arrow {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  transition: transform var(--transition-duration);
+}

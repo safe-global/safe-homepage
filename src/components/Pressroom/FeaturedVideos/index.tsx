@@ -5,7 +5,7 @@ import LinkButton from '@/components/common/LinkButton'
 import { type Entry } from 'contentful'
 import { type TypeExternalUrlSkeleton } from '@/contentful/types'
 
-const VideoCard = ({ title, url }: { title: string; description: string; image: string; url: string }) => {
+const VideoCard = ({ title, url }: { title: string; url: string }) => {
   return (
     <div className={css.card}>
       <YouTube url={url} />
