@@ -1,17 +1,20 @@
 import { Grid, Typography } from '@mui/material'
 import css from './styles.module.css'
-import YouTube from '@/components/Blog/YouTube'
 import LinkButton from '@/components/common/LinkButton'
 import { type Entry } from 'contentful'
 import { type TypeExternalUrlSkeleton } from '@/contentful/types'
+import MediaPlayer from '@/components/common/MediaPlayer'
+import SafeLink from '@/components/common/SafeLink'
 
 const VideoCard = ({ title, url }: { title: string; url: string }) => {
   return (
     <div className={css.card}>
-      <YouTube url={url} />
+      <MediaPlayer url={url} />
       <div className={css.cardBody}>
         <Typography variant="h3">{title}</Typography>
-        <LinkButton href={url}>Watch now</LinkButton>
+        <SafeLink href={url}>
+          <LinkButton>Watch now</LinkButton>
+        </SafeLink>
       </div>
     </div>
   )

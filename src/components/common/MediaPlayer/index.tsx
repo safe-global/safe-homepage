@@ -1,10 +1,8 @@
-import { getYoutubeVideoSrc } from '@/lib/urlPatterns'
+import { getYoutubeVideoSrc, isYouTubeUrl } from '@/lib/urlPatterns'
 import css from './styles.module.css'
 
-const YouTube = ({ url }: { url: string }) => {
-  const videoSrc = getYoutubeVideoSrc(url)
-
-  if (!videoSrc) return null
+const MediaPlayer = ({ url }: { url: string }) => {
+  const videoSrc = isYouTubeUrl(url) ? getYoutubeVideoSrc(url) : url
 
   return (
     <div className={css.videoResponsive}>
@@ -13,10 +11,10 @@ const YouTube = ({ url }: { url: string }) => {
         height="480"
         src={videoSrc}
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
-        title="Embedded YouTube"
+        title="Embedded Video"
       />
     </div>
   )
 }
 
-export default YouTube
+export default MediaPlayer
