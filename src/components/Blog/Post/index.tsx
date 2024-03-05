@@ -1,10 +1,10 @@
 import Image from 'next/image'
-import { Box, Container, Divider, Grid, Typography } from '@mui/material'
+import { Box, Button, Container, Divider, Grid, Typography } from '@mui/material'
 import { type Entry } from 'contentful'
 import type { TypeAuthorSkeleton, TypePostSkeleton } from '@/contentful/types'
 import { formatBlogDate } from '@/components/Blog/utils/formatBlogDate'
 import { calculateReadingTimeInMin } from '@/components/Blog/utils/calculateReadingTime'
-import { isAsset, isEntryTypeAuthor, isEntryTypePost } from '@/lib/typeGuards'
+import { isAsset, isEntryTypeAuthor, isEntryTypePost, isEntryTypeTag } from '@/lib/typeGuards'
 import BlogLayout from '@/components/Blog/Layout'
 import ProgressBar from '@/components/Blog/ProgressBar'
 import BreadcrumbsNav from '@/components/Blog/BreadcrumbsNav'
@@ -17,6 +17,8 @@ import RelatedPosts from '@/components/Blog/RelatedPosts'
 import CategoryIcon from '@/public/images/Blog/category-icon.svg'
 import { type Document as ContentfulDocument } from '@contentful/rich-text-types'
 import css from '../styles.module.css'
+import some from 'lodash/some'
+import { PRESS_RELEASE_TAG } from '@/components/Blog/BlogHome'
 
 export type BlogPostEntry = Entry<TypePostSkeleton, undefined, string>
 
@@ -25,6 +27,8 @@ const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
 
   const authorsList = authors.filter(isEntryTypeAuthor)
   const relatedPostsList = relatedPosts?.filter(isEntryTypePost)
+
+  const isPressRelease = some(tags?.filter(isEntryTypeTag), (item) => item.fields.name === PRESS_RELEASE_TAG)
 
   return (
     <BlogLayout metaTags={metaTags}>
@@ -60,7 +64,7 @@ const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
         <Divider className={css.divider} />
 
         <Grid container className={css.content} columnSpacing={3}>
-          <Sidebar content={content} title={title} authors={authorsList} />
+          <Sidebar content={content} title={title} authors={authorsList} isPressRelease={isPressRelease} />
 
           <Grid item xs={12} md={8}>
             {isAsset(coverImage) && coverImage.fields.file?.url ? (
@@ -72,7 +76,7 @@ const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
               />
             ) : undefined}
 
-            <Sidebar content={content} title={title} authors={authorsList} showInXs />
+            <Sidebar content={content} title={title} authors={authorsList} isPressRelease={isPressRelease} showInXs />
 
             <RichText {...content} />
           </Grid>
@@ -91,16 +95,27 @@ const Sidebar = ({
   title,
   authors,
   showInXs,
+  isPressRelease,
 }: {
   content: ContentfulDocument
   title: string
   authors: Entry<TypeAuthorSkeleton, undefined, string>[]
   showInXs?: boolean
+  isPressRelease?: boolean
 }) => (
   <Grid item xs={12} md={4} className={showInXs ? css.showInXs : css.showInMd}>
     <aside className={css.sidebar}>
       <ContentsTable content={content} />
       <Socials title={title} authors={authors} />
+
+      {isPressRelease ? (
+        <div className={css.questionBox}>
+          <Typography>Do you have any questions?</Typography>
+          <Button href="mailto:comms@safe.global" target="_blank" variant="contained" className={css.button}>
+            <Typography>Press inquiry</Typography>
+          </Button>
+        </div>
+      ) : null}
     </aside>
   </Grid>
 )

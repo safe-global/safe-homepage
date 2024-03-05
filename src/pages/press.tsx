@@ -9,6 +9,7 @@ const PressroomPage = (props: { pressRoom: PressRoomEntry }) => {
 export const getStaticProps = async () => {
   const pressRoomEntries = await client.getEntries<TypePressRoomSkeleton>({
     content_type: 'pressRoom',
+    include: 3,
   })
 
   const pressRoom = pressRoomEntries.items[0]
