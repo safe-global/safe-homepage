@@ -9,12 +9,6 @@
   color: var(--mui-palette-text-dark);
 }
 
-.centeredContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .container iframe {
   border: 0;
   z-index: 1000;

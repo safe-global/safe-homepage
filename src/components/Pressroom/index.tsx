@@ -1,6 +1,7 @@
 import FeaturedPost from '@/components/Blog/FeaturedPost'
 import MetaTags from '@/components/Campaign/MetaTags'
 import FeaturedVideos from '@/components/Pressroom/FeaturedVideos'
+import Founders from '@/components/Pressroom/Founders'
 import Hero from '@/components/Pressroom/Hero'
 import MediaKit from '@/components/Pressroom/MediaKit'
 import News from '@/components/Pressroom/News'
@@ -25,6 +26,7 @@ const PressRoom = ({ pressRoom }: { pressRoom: PressRoomEntry }) => {
       <Container>
         <Hero />
         {isEntryTypePost(featured) && <FeaturedPost {...featured} />}
+        <Founders />
         <News news={newsList} />
         <Podcasts podcasts={podcastsList} />
         <FeaturedVideos videos={videosList} />
