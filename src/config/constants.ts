@@ -37,3 +37,5 @@ export const ONRAMP_KIT_LINK = 'https://docs.safe.global/safe-core-aa-sdk/onramp
 export const ECOSYSTEM_DATA_URL = IS_PRODUCTION
   ? 'https://ecosystem-database.safe.global'
   : 'https://ecosystem-database.staging.5afe.dev'
+
+export const COMMS_EMAIL = 'comms@safe.global'

@@ -20,7 +20,7 @@ const LinkCard = ({ title, image, url, cta, icon }: CardProps) => {
     <div className={css.card}>
       <div className={css.cardHeader}>
         {isAsset(image) && image.fields.file?.url ? (
-          <img src={image.fields.file.url} alt={`${image.fields.title}`} />
+          <img src={image.fields.file.url} alt={image.fields.title} />
         ) : (
           icon ?? null
         )}

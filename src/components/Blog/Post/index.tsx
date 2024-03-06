@@ -4,7 +4,7 @@ import { type Entry } from 'contentful'
 import type { TypeAuthorSkeleton, TypePostSkeleton } from '@/contentful/types'
 import { formatBlogDate } from '@/components/Blog/utils/formatBlogDate'
 import { calculateReadingTimeInMin } from '@/components/Blog/utils/calculateReadingTime'
-import { isAsset, isEntryTypeAuthor, isEntryTypePost, isEntryTypeTag } from '@/lib/typeGuards'
+import { isAsset, isEntryTypeAuthor, isEntryTypePost } from '@/lib/typeGuards'
 import BlogLayout from '@/components/Blog/Layout'
 import ProgressBar from '@/components/Blog/ProgressBar'
 import BreadcrumbsNav from '@/components/Blog/BreadcrumbsNav'
@@ -17,8 +17,8 @@ import RelatedPosts from '@/components/Blog/RelatedPosts'
 import CategoryIcon from '@/public/images/Blog/category-icon.svg'
 import { type Document as ContentfulDocument } from '@contentful/rich-text-types'
 import css from '../styles.module.css'
-import some from 'lodash/some'
-import { PRESS_RELEASE_TAG } from '@/components/Blog/BlogHome'
+import { PRESS_RELEASE_TAG, containsTag } from '@/lib/containsTag'
+import { COMMS_EMAIL } from '@/config/constants'
 
 export type BlogPostEntry = Entry<TypePostSkeleton, undefined, string>
 
@@ -28,7 +28,7 @@ const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
   const authorsList = authors.filter(isEntryTypeAuthor)
   const relatedPostsList = relatedPosts?.filter(isEntryTypePost)
 
-  const isPressRelease = some(tags?.filter(isEntryTypeTag), (item) => item.fields.name === PRESS_RELEASE_TAG)
+  const isPressRelease = containsTag(tags, PRESS_RELEASE_TAG)
 
   return (
     <BlogLayout metaTags={metaTags}>
@@ -111,7 +111,7 @@ const Sidebar = ({
       {isPressRelease ? (
         <div className={css.questionBox}>
           <Typography>Do you have any questions?</Typography>
-          <Button href="mailto:comms@safe.global" target="_blank" variant="contained" className={css.button}>
+          <Button href={`mailto:${COMMS_EMAIL}`} target="_blank" variant="contained" className={css.button}>
             <Typography>Press inquiry</Typography>
           </Button>
         </div>

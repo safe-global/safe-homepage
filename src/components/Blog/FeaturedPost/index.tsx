@@ -6,16 +6,15 @@ import blogCss from '../styles.module.css'
 import { formatBlogDate } from '@/components/Blog/utils/formatBlogDate'
 import { calculateReadingTimeInMin } from '@/components/Blog/utils/calculateReadingTime'
 import { type BlogPostEntry } from '@/components/Blog/Post'
-import { isAsset, isEntryTypeTag } from '@/lib/typeGuards'
+import { isAsset } from '@/lib/typeGuards'
 import CategoryIcon from '@/public/images/Blog/category-icon.svg'
 import { AppRoutes } from '@/config/routes'
-import some from 'lodash/some'
-import { PRESS_RELEASE_TAG } from '@/components/Blog/BlogHome'
+import { containsTag, PRESS_RELEASE_TAG } from '@/lib/containsTag'
 
 const FeaturedPost = (props: BlogPostEntry) => {
   const { slug, coverImage, category, date, title, excerpt, tags, content } = props.fields
 
-  const isPressRelease = some(tags?.filter(isEntryTypeTag), (item) => item.fields.name === PRESS_RELEASE_TAG)
+  const isPressRelease = containsTag(tags, PRESS_RELEASE_TAG)
 
   return (
     <Box mt={10}>

@@ -14,7 +14,7 @@ const Founders = () => {
             <Typography variant="h4">Lukas Schor</Typography>
             <Typography color="primary.light">
               Co-Founder <br />
-              Ecosystem & Marketing
+              Ecosystem &amp; Marketing
             </Typography>
           </Grid>
           <Grid item xs={12} md={6}>
@@ -35,7 +35,7 @@ const Founders = () => {
             <Typography variant="h4">Christoph Simmchen</Typography>
             <Typography color="primary.light">
               Co-Founder <br />
-              Governance & Operations
+              Governance &amp; Operations
             </Typography>
           </Grid>
         </Grid>

@@ -8,7 +8,6 @@ import SearchFilterResults from '@/components/Blog/SearchFilterResults'
 const categories = ['Announcements', 'Ecosystem', 'Community', 'Insights', 'Build']
 
 const TRENDING_POSTS_COUNT = 3
-export const PRESS_RELEASE_TAG = 'Institutional'
 
 export type BlogHomeProps = {
   metaTags: MetaTagsEntry
