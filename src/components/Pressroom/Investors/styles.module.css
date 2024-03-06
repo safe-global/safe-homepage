@@ -1,0 +1,13 @@
+.logos {
+  margin-top: 90px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.logos img {
+  max-width: 250px;
+  height: fit-content;
+}
