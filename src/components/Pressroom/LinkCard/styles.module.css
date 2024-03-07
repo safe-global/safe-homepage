@@ -4,7 +4,7 @@
   padding: 24px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
   border-radius: 8px;
   border: 1px solid var(--mui-palette-border-main);
   transition-duration: var(--transition-duration);
