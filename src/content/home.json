@@ -9,7 +9,7 @@
     "buttons": [
       {
         "text": "Build on Core",
-        "href": "https://core.safe.global",
+        "href": "https://safe.global/core",
         "variant": "button",
         "color": "background"
       },

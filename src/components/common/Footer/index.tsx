@@ -14,10 +14,8 @@ import Link from 'next/link'
 import {
   DOCS_LINK,
   HELP_LINK,
-  CORE_LINK,
   PRESS_LINK,
   LICENSES_LINK,
-  ECOSYSTEM_LINK,
   GRANTS_LINK,
   SAFECON_LINK,
   DISCORD_LINK,
@@ -35,7 +33,7 @@ const COOKIE_PREFERENCES = '#cookies'
 const safeProtocolItems = [
   {
     label: 'Safe{Core}',
-    href: CORE_LINK,
+    href: AppRoutes.core,
     target: '_blank',
     rel: 'noreferrer',
   },
@@ -54,7 +52,7 @@ const communityItems = [
   },
   {
     label: 'Ecosystem',
-    href: ECOSYSTEM_LINK,
+    href: AppRoutes.ecosystem,
     target: '_blank',
     rel: 'noreferrer',
   },
