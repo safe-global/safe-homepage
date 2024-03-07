@@ -35,3 +35,9 @@
     margin-bottom: 150px;
   }
 }
+
+.centeredContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

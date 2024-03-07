@@ -7,6 +7,7 @@ export interface TypeTagFields {
     | 'ERC-4337'
     | 'Events'
     | 'Grants'
+    | 'Institutional'
     | 'NFT'
     | 'New Feature'
     | 'Safe{Core}'

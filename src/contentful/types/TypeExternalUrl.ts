@@ -2,6 +2,8 @@ import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleC
 
 export interface TypeExternalUrlFields {
   url: EntryFieldTypes.Symbol
+  title?: EntryFieldTypes.Symbol
+  image?: EntryFieldTypes.AssetLink
 }
 
 export type TypeExternalUrlSkeleton = EntrySkeletonType<TypeExternalUrlFields, 'externalUrl'>

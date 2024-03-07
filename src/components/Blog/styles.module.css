@@ -111,6 +111,28 @@
   height: 24px;
 }
 
+.questionBox {
+  margin-top: 40px;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid var(--mui-palette-border-main);
+  border-radius: 6px;
+}
+
+.button {
+  padding: 16px 32px;
+  width: fit-content;
+}
+
+.button p {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
+  color: var(--mui-palette-text-dark);
+}
+
 @media (min-width: 900px) {
   .title {
     margin-top: 24px;

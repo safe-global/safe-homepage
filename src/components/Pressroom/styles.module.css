@@ -1,0 +1,36 @@
+/* Link cards */
+.card {
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid var(--mui-palette-border-main);
+  border-radius: 16px;
+  transition: var(--transition-duration);
+}
+
+.spacedBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card:hover {
+  border-color: var(--mui-palette-primary-main);
+}
+
+.card:hover .icon {
+  transform: rotate(45deg);
+}
+
+.card:hover .icon path {
+  fill: var(--mui-palette-primary-main);
+}
+
+.icon {
+  transition: transform var(--transition-duration);
+}
+
+.icon path {
+  transition: fill var(--transition-duration);
+}

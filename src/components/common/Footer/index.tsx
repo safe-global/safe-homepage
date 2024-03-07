@@ -80,6 +80,10 @@ const resourcesItems = [
     rel: 'noreferrer',
   },
   {
+    label: 'Press Room',
+    href: AppRoutes.press,
+  },
+  {
     label: 'Careers',
     href: AppRoutes.careers,
   },

@@ -3,6 +3,7 @@ export const AppRoutes = {
   wallet: '/wallet',
   terms: '/terms',
   privacy: '/privacy',
+  press: '/press',
   index: '/',
   imprint: '/imprint',
   governance: '/governance',

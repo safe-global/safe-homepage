@@ -1,6 +1,7 @@
 import client from '@/lib/contentful'
 import BlogHome, { type BlogHomeProps } from '@/components/Blog/BlogHome'
 import type { TypeBlogHomeSkeleton, TypePostSkeleton } from '@/contentful/types'
+import { isEntryTypePost } from '@/lib/typeGuards'
 
 const Blog = (props: BlogHomeProps) => {
   return <BlogHome {...props} />
@@ -15,6 +16,7 @@ export const getStaticProps = async () => {
 
   const blogHomeEntries = await client.getEntries<TypeBlogHomeSkeleton>({
     content_type: 'blogHome',
+    include: 3,
   })
 
   const blogHome = blogHomeEntries.items[0]
@@ -26,6 +28,9 @@ export const getStaticProps = async () => {
   }
 
   // relatedPosts are not displayed on the blog home page
+  if (isEntryTypePost(blogHome.fields.featured)) {
+    delete blogHome.fields.featured.fields.relatedPosts
+  }
   blogHome.fields.mostPopular.forEach((item: any) => delete item.fields.relatedPosts)
   postsEntries.items.forEach((item: any) => delete item.fields.relatedPosts)
 

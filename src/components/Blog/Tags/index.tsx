@@ -4,7 +4,7 @@ import type { UnresolvedLink, Entry } from 'contentful'
 import { type TypeTagSkeleton } from '@/contentful/types'
 import { isEntryTypeTag } from '@/lib/typeGuards'
 
-type TagsType = (UnresolvedLink<'Entry'> | Entry<TypeTagSkeleton, undefined, string>)[] | undefined
+export type TagsType = (UnresolvedLink<'Entry'> | Entry<TypeTagSkeleton, undefined, string>)[] | undefined
 
 const Tags = ({ tags }: { tags: TagsType }) => {
   if (!tags || !tags.length) return null
