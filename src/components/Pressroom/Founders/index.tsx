@@ -9,7 +9,7 @@ const Founders = () => {
       </Grid>
       <Grid item xs={12} md={6} className={commonCss.centeredContent}>
         <Typography variant="h2">Founding team</Typography>
-        <Grid container spacing={3} mt={3}>
+        <Grid container spacing={4} mt={3}>
           <Grid item xs={12} md={6}>
             <Typography variant="h4">Lukas Schor</Typography>
             <Typography color="primary.light">
