@@ -215,7 +215,7 @@ const Footer = () => {
 
       <Divider sx={{ mt: 5, mb: { xs: 3, md: 0 } }} />
 
-      <Grid container alignItems="center" justifyContent="space-between">
+      <Grid container alignItems="center" justifyContent="space-between" gap="8px">
         <Grid item>
           <ul className={css.subList}>
             {subFooterItems.map((item) => {
@@ -239,7 +239,7 @@ const Footer = () => {
 
         <Grid item my={2}>
           <Typography color="primary.light" fontSize="16px">
-            ©{new Date().getFullYear()} Safe Ecosystem Foundation
+            &copy;2023–{new Date().getFullYear()} Safe Ecosystem Foundation
           </Typography>
         </Grid>
       </Grid>
