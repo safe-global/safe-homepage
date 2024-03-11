@@ -33,9 +33,11 @@ export default class MyDocument extends Document {
           <meta name="apple-mobile-web-app-title" content="safe" />
           <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-          <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
-          <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png" />
-          <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png" />
+          {/* Favicons */}
+          <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png" />
+          <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
+          <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
 
           {(this.props as any).emotionStyleTags}
         </Head>
