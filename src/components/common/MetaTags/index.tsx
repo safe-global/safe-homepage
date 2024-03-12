@@ -31,6 +31,11 @@ const MetaTags = (props: Partial<typeof defaultMetaTags>) => {
 
       {!IS_PRODUCTION && <meta name="robots" content="noindex" />}
 
+      {/* Mobile tags */}
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-title" content="safe" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
       {/* Favicons */}
       <link rel="shortcut icon" href="/favicons/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />

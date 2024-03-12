@@ -3,7 +3,7 @@
  * @see https://github.com/mui/material-ui/tree/master/examples/nextjs-with-typescript
  */
 
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Document, { Html, Head, Main, NextScript, type DocumentContext } from 'next/document'
 import createEmotionServer from '@emotion/server/create-instance'
 import { createEmotionCache } from '@/styles/emotion'
 
@@ -26,13 +26,8 @@ export default class MyDocument extends Document {
             dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
           />
 
+          {/* Insertion point for Emotion's CSS styles.  */}
           <meta name="emotion-insertion-point" content="" />
-
-          <meta name="theme-color" content="#121312" />
-          <meta name="apple-mobile-web-app-capable" content="yes" />
-          <meta name="apple-mobile-web-app-title" content="safe" />
-          <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
           {(this.props as any).emotionStyleTags}
         </Head>
         <body>
@@ -44,31 +39,7 @@ export default class MyDocument extends Document {
   }
 }
 
-// `getInitialProps` belongs to `_document` (instead of `_app`),
-// it's compatible with static-site generation (SSG).
-MyDocument.getInitialProps = async (ctx) => {
-  // Resolution order
-  //
-  // On the server:
-  // 1. app.getInitialProps
-  // 2. page.getInitialProps
-  // 3. document.getInitialProps
-  // 4. app.render
-  // 5. page.render
-  // 6. document.render
-  //
-  // On the server with error:
-  // 1. document.getInitialProps
-  // 2. app.render
-  // 3. page.render
-  // 4. document.render
-  //
-  // On the client
-  // 1. app.getInitialProps
-  // 2. page.getInitialProps
-  // 3. app.render
-  // 4. page.render
-
+const getInitialProps = async (ctx: DocumentContext) => {
   const originalRenderPage = ctx.renderPage
 
   // You can consider sharing the same Emotion cache between all the SSR requests to speed up performance.
@@ -102,3 +73,5 @@ MyDocument.getInitialProps = async (ctx) => {
     emotionStyleTags,
   }
 }
+
+MyDocument.getInitialProps = getInitialProps
