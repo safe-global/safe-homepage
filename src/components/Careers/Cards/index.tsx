@@ -1,10 +1,9 @@
 import { Grid, Typography } from '@mui/material'
 import { Container } from '@mui/system'
-import type { BaseBlock } from '@/components/Home/types'
-import LinkCard from '@/components/common/LinkCard'
+import LinkCard, { type CardProps } from '@/components/common/LinkCard'
 import layoutCss from '@/components/common/styles.module.css'
 
-export type CardsProps = { items: BaseBlock[]; title: string; id?: string }
+export type CardsProps = { items: CardProps[]; title: string; id?: string; highlight?: boolean }
 
 export const Cards = ({ items, title, id }: CardsProps) => (
   <Container id={id} sx={{ marginBottom: '80px' }} className={layoutCss.containerMedium}>
@@ -14,9 +13,9 @@ export const Cards = ({ items, title, id }: CardsProps) => (
           {title}
         </Typography>
       </Grid>
-      {items.map(({ image, title, link }, index) => (
+      {items.map((item, index) => (
         <Grid key={index} item xs={12} md={4}>
-          {link ? <LinkCard cta="Read more" image={image} url={link.href} title={title} /> : undefined}
+          <LinkCard {...item} />
         </Grid>
       ))}
     </Grid>

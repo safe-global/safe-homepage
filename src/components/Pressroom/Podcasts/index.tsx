@@ -14,7 +14,11 @@ export const Podcasts = ({ podcasts }: PodcastsProps) => (
     <Grid container columnSpacing={2} rowGap="30px" mt="80px">
       {podcasts.map((item, index) => (
         <Grid key={index} item xs={12} md={4}>
-          <LinkCard title={item.fields.title || ''} icon={<HeadphoneIcon />} url={item.fields.url} cta="Listen now" />
+          <LinkCard
+            title={item.fields.title || ''}
+            icon={<HeadphoneIcon />}
+            link={{ href: item.fields.url, title: 'Listen now' }}
+          />
         </Grid>
       ))}
     </Grid>

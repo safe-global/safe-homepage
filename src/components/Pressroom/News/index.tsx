@@ -17,7 +17,11 @@ export const News = ({ news }: NewsProps) => (
 
         return (
           <Grid key={index} item xs={12} md={4}>
-            <LinkCard title={item.fields.title || ''} image={imageProps} url={item.fields.url} cta="Read more" />
+            <LinkCard
+              title={item.fields.title || ''}
+              image={imageProps}
+              link={{ href: item.fields.url, title: 'Read more' }}
+            />
           </Grid>
         )
       })}
