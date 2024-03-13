@@ -6,7 +6,6 @@ import DiscordIcon from '@/public/images/discord-icon.svg'
 import XIcon from '@/public/images/x-icon.svg'
 import YoutubeIcon from '@/public/images/youtube-icon.svg'
 import DiscourseIcon from '@/public/images/discourse-icon.svg'
-import MirrorIcon from '@/public/images/mirror-icon.svg'
 import GithubIcon from '@/public/images/github-icon.svg'
 
 import css from './styles.module.css'
@@ -21,7 +20,6 @@ import {
   DISCORD_LINK,
   FORUM_LINK,
   GITHUB_LINK,
-  MIRROR_LINK,
   TWITTER_LINK,
   YOUTUBE_LINK,
 } from '@/config/constants'
@@ -205,7 +203,6 @@ const Footer = () => {
             {createFooterButton('Discourse forum', FORUM_LINK, DiscourseIcon)}
             {createFooterButton('Discord server', DISCORD_LINK, DiscordIcon)}
             {createFooterButton('Youtube channel', YOUTUBE_LINK, YoutubeIcon)}
-            {createFooterButton('Mirror blog', MIRROR_LINK, MirrorIcon)}
             {createFooterButton('Github organization', GITHUB_LINK, GithubIcon)}
           </div>
         </Grid>
