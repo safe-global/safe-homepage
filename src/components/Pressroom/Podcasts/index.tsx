@@ -1,7 +1,7 @@
 import { Grid, Typography } from '@mui/material'
 import { type Entry } from 'contentful'
 import { type TypeExternalUrlSkeleton } from '@/contentful/types'
-import LinkCard from '@/components/Pressroom/LinkCard'
+import LinkCard from '@/components/common/LinkCard'
 import HeadphoneIcon from '@/public/images/headphone.svg'
 
 export const Podcasts = ({ podcasts }: { podcasts: Entry<TypeExternalUrlSkeleton, undefined, string>[] }) => {

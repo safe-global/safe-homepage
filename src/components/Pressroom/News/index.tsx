@@ -1,7 +1,7 @@
 import { Grid, Typography } from '@mui/material'
 import { type Entry } from 'contentful'
 import { type TypeExternalUrlSkeleton } from '@/contentful/types'
-import LinkCard from '@/components/Pressroom/LinkCard'
+import LinkCard from '@/components/common/LinkCard'
 
 export const News = ({ news }: { news: Entry<TypeExternalUrlSkeleton, undefined, string>[] }) => {
   return (
