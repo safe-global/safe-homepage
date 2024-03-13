@@ -1,11 +1,10 @@
 import { useState } from 'react'
-import { Badge, Button, ButtonBase } from '@mui/material'
+import { Button, ButtonBase } from '@mui/material'
 import Link from 'next/link'
 
 import { AppRoutes } from '@/config/routes'
 import Logo from '@/public/images/logo.svg'
 import { SAFECON_LINK, WALLET_LINK } from '@/config/constants'
-import { useOpenPositions } from '@/hooks/useOpenPositions'
 import css from './styles.module.css'
 import clsx from 'clsx'
 import { useRouter } from 'next/router'
@@ -37,7 +36,6 @@ const externalLinkAttrs = {
 const Header = () => {
   const { asPath } = useRouter()
   const [isOpen, setIsOpen] = useState<boolean>(false)
-  const { data: positions = [] } = useOpenPositions()
 
   const toggleNavigation = () => {
     setIsOpen((prev) => !prev)
@@ -69,19 +67,7 @@ const Header = () => {
                 onClick={closeNavigation}
                 {...(item.external ? externalLinkAttrs : {})}
               >
-                <Badge
-                  badgeContent={item.href === AppRoutes.careers ? positions.length : undefined}
-                  color="primary"
-                  className={css.badge}
-                  slotProps={{
-                    badge: {
-                      // @ts-expect-error - disable badge in search results
-                      'data-nosnippet': true,
-                    },
-                  }}
-                >
-                  {item.label}
-                </Badge>
+                {item.label}
               </Link>
             </li>
           ))}
