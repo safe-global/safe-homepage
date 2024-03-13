@@ -46,8 +46,8 @@
     "items": [
       {
         "image": {
-          "src": "/images/mirror.svg",
-          "alt": "Mirror logo"
+          "src": "/images/logo.svg",
+          "alt": "Safe logo"
         },
         "title": "A Call to Build Smarter Self-Custody",
         "link": {

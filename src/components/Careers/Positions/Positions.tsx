@@ -6,21 +6,24 @@ import PinIcon from '@/public/images/pin.svg'
 import { Cards } from '@/components/Careers/Cards'
 import { useOpenPositions } from '@/hooks/useOpenPositions'
 import type { Position } from '@/hooks/useOpenPositions'
-import type { CardProps } from '@/components/Careers/Cards'
+import type { CardProps } from '@/components/common/LinkCard'
 
 import css from './styles.module.css'
 
 const parsePosition = ({ jobUrl, location, title }: Position): CardProps => {
   return {
     title,
-    text: '',
-    link: { href: jobUrl, title: 'See position' },
-    extra: (
+    link: {
+      href: jobUrl,
+      title: 'See position',
+    },
+    icon: (
       <Typography variant="caption" className={css.header}>
         <PinIcon className={css.icon} />
         {location}
       </Typography>
     ),
+    highlight: true,
   }
 }
 
@@ -35,7 +38,7 @@ export const Positions = ({ items: _items, ...rest }: ComponentProps<typeof Card
     return positions.map(parsePosition)
   }, [positions])
 
-  return <Cards items={items} highlight {...rest} />
+  return <Cards items={items} {...rest} />
 }
 
 export default Positions
