@@ -1,6 +1,7 @@
 [
   {
-    "pageTitle": "Safe Core – Full stack account abstraction",
+    "pageTitle": "Safe{Core} — Modular Ethereum Smart Account Infrastructure | Safe",
+    "description": "Embrace limitless possibilities with Safe{Core}'s modular Smart Account infrastructure, tailored for all account abstraction use cases, including ERC-4337.",
     "component": "common/MetaTags"
   },
   {
