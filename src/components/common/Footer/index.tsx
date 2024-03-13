@@ -118,6 +118,10 @@ const subFooterItems = [
     label: 'Imprint',
     href: AppRoutes.imprint,
   },
+  {
+    label: 'Disclaimer',
+    href: AppRoutes.disclaimer,
+  },
 ]
 
 const createFooterButton = (label: string, href: string, IconComponent: ComponentType) => {
