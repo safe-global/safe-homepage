@@ -8,6 +8,7 @@ export const AppRoutes = {
   imprint: '/imprint',
   governance: '/governance',
   ecosystem: '/ecosystem',
+  disclaimer: '/disclaimer',
   core: '/core',
   cookie: '/cookie',
   cla: {
