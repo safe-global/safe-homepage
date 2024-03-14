@@ -1,6 +1,12 @@
 :root {
-  --header-height: 72px;
+  --header-height: 64px;
   --transition-duration: 0.3s;
+}
+
+@media (min-width: 600px) {
+  :root {
+    --header-height: 72px;
+  }
 }
 
 @font-face {
