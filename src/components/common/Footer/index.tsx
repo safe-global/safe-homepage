@@ -1,4 +1,4 @@
-import { ButtonBase, Container, Divider, Grid, Typography } from '@mui/material'
+import { Badge, ButtonBase, Container, Divider, Grid, Typography } from '@mui/material'
 import type { ComponentType, SyntheticEvent } from 'react'
 
 import { AppRoutes } from '@/config/routes'
@@ -25,6 +25,7 @@ import {
 } from '@/config/constants'
 import { useCookieBannerContext } from '@/contexts/CookieBannerContext'
 import Logo from '@/public/images/logo.svg'
+import { useOpenPositions } from '@/hooks/useOpenPositions'
 
 const COOKIE_PREFERENCES = '#cookies'
 
@@ -140,6 +141,7 @@ const createFooterButton = (label: string, href: string, IconComponent: Componen
 
 const Footer = () => {
   const { openBanner } = useCookieBannerContext()
+  const { data: positions = [] } = useOpenPositions()
 
   const showBanner = (e: SyntheticEvent) => {
     // Prevent opening the hash link
@@ -194,7 +196,19 @@ const Footer = () => {
             {resourcesItems.map((item) => (
               <li className={css.listItem} key={item.href}>
                 <Link href={item.href} target={item.target} rel={item.rel}>
-                  {item.label}
+                  <Badge
+                    badgeContent={item.href === AppRoutes.careers ? positions.length : undefined}
+                    color="primary"
+                    className={css.badge}
+                    slotProps={{
+                      badge: {
+                        // @ts-expect-error - disable badge in search results
+                        'data-nosnippet': true,
+                      },
+                    }}
+                  >
+                    {item.label}
+                  </Badge>
                 </Link>
               </li>
             ))}
