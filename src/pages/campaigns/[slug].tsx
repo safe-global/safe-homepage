@@ -1,12 +1,12 @@
 import type { GetStaticPaths, GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
 import client from '@/lib/contentful'
-import SocialLogin from '@/components/Campaign/SocialLogin'
+import Campaign from '@/components/Campaigns/Campaign'
 import type { TypePageSkeleton } from '@/contentful/types'
 
 const Campaigns: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ content }) => {
   if (!content || !content.fields) return null
 
-  return <SocialLogin {...content.fields} />
+  return <Campaign {...content.fields} />
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
