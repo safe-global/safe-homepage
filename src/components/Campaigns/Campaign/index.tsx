@@ -6,7 +6,7 @@ import type { getStaticProps } from '@/pages/campaigns/[slug]'
 import type { Entry } from 'contentful'
 import css from './styles.module.css'
 
-const SocialLogin = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Campaign = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   const content = props.content as unknown as Entry[]
 
   return (
@@ -15,7 +15,7 @@ const SocialLogin = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
         const contentType = item.sys.contentType.sys.id
         const componentName = capitalizeFirstLetter(contentType)
 
-        const Component = getComponentByName(`Campaign/${componentName}`, () => <></>)
+        const Component = getComponentByName(`Campaigns/${componentName}`, () => <></>)
 
         return <Component {...item} key={index} />
       })}
@@ -23,4 +23,4 @@ const SocialLogin = (props: InferGetStaticPropsType<typeof getStaticProps>) => {
   )
 }
 
-export default SocialLogin
+export default Campaign
