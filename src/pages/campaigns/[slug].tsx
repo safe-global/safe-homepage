@@ -1,16 +1,16 @@
-import type { GetStaticPaths, GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
+import type { GetStaticPaths, GetStaticProps } from 'next'
 import client from '@/lib/contentful'
-import Campaign from '@/components/Campaigns/Campaign'
+import Campaign, { type CampaignPageEntry } from '@/components/Campaigns/Campaign'
 import type { TypePageSkeleton } from '@/contentful/types'
 
-const Campaigns: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({ content }) => {
-  if (!content || !content.fields) return null
+const CampaignsPage = (props: { campaignPage: CampaignPageEntry }) => {
+  if (!props.campaignPage) return null
 
-  return <Campaign {...content.fields} />
+  return <Campaign {...props} />
 }
 
-export const getStaticProps: GetStaticProps = async (context) => {
-  const slug = context.params?.slug as string
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const slug = params?.slug as string
 
   const content = await client.getEntries<TypePageSkeleton>({
     content_type: 'page',
@@ -18,7 +18,9 @@ export const getStaticProps: GetStaticProps = async (context) => {
     include: 3,
   })
 
-  if (!content?.items?.length) {
+  const campaignPage = content.items[0]
+
+  if (!campaignPage) {
     return {
       redirect: {
         destination: '/404',
@@ -29,7 +31,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   return {
     props: {
-      content: content.items[0],
+      campaignPage,
     },
   }
 }
@@ -46,4 +48,4 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
-export default Campaigns
+export default CampaignsPage

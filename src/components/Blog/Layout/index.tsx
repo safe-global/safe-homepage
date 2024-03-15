@@ -1,5 +1,5 @@
 import BannerForm from '@/components/Blog/BannerForm'
-import MetaTags from '@/components/Campaigns/MetaTags'
+import MetaTags from '@/components/common/MetaTagsContentful'
 import { type TypeMetaTagsSkeleton } from '@/contentful/types'
 import { isEntryType } from '@/lib/typeGuards'
 import { Box } from '@mui/material'
