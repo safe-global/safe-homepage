@@ -1,4 +1,4 @@
-import client from '@/lib/contentful'
+import { client } from '@/lib/contentful'
 import BlogHome, { type BlogHomeProps } from '@/components/Blog/BlogHome'
 import type { TypeBlogHomeSkeleton, TypePostSkeleton } from '@/contentful/types'
 import { isEntryTypePost } from '@/lib/typeGuards'
