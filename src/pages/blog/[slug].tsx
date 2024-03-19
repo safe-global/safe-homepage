@@ -1,18 +1,27 @@
 import BlogPost, { type BlogPostEntry } from '@/components/Blog/Post'
 import { type TypePostSkeleton } from '@/contentful/types'
-import client from '@/lib/contentful'
+import { client, previewClient } from '@/lib/contentful'
 import type { GetStaticProps } from 'next'
+import Link from 'next/link'
 
-const Page = (props: { blogPost: BlogPostEntry }) => {
-  if (!props.blogPost) return null
+const Page = ({ blogPost, draftMode }: { blogPost: BlogPostEntry; draftMode: boolean }) => {
+  if (!blogPost) return null
 
-  return <BlogPost {...props} />
+  return (
+    <>
+      {draftMode && <Link href="/api/blog/disable-draft">Click here</Link>}
+      <BlogPost blogPost={blogPost} />
+    </>
+  )
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async (context) => {
+  const { params, draftMode } = context
+  console.log('#2 - Blog post getStaticProps', draftMode)
   const slug = params?.slug as string
+  const cfClient = draftMode ? previewClient : client
 
-  const content = await client.getEntries<TypePostSkeleton>({
+  const content = await cfClient.getEntries<TypePostSkeleton>({
     content_type: 'post',
     'fields.slug': slug,
   })
@@ -34,6 +43,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       blogPost,
+      draftMode,
     },
   }
 }
