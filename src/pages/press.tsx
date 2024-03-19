@@ -1,4 +1,4 @@
-import client from '@/lib/contentful'
+import { client } from '@/lib/contentful'
 import PressRoom, { type PressRoomEntry } from '@/components/Pressroom'
 import { type TypePressRoomSkeleton } from '@/contentful/types'
 

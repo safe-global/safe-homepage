@@ -1,5 +1,5 @@
 import type { GetStaticPaths, GetStaticProps } from 'next'
-import client from '@/lib/contentful'
+import { client } from '@/lib/contentful'
 import Campaign, { type CampaignPageEntry } from '@/components/Campaigns/Campaign'
 import type { TypePageSkeleton } from '@/contentful/types'
 
