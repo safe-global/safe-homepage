@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Box, Button, Container, Divider, Grid, Typography } from '@mui/material'
+import { Alert, Box, Button, Container, Divider, Grid, Typography } from '@mui/material'
 import { type Entry } from 'contentful'
 import type { TypeAuthorSkeleton, TypePostSkeleton } from '@/contentful/types'
 import { formatBlogDate } from '@/components/Blog/utils/formatBlogDate'
@@ -22,7 +22,7 @@ import { COMMS_EMAIL } from '@/config/constants'
 
 export type BlogPostEntry = Entry<TypePostSkeleton, undefined, string>
 
-const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
+const BlogPost = ({ blogPost, isPreview = false }: { blogPost: BlogPostEntry; isPreview?: boolean }) => {
   const { title, excerpt, content, coverImage, authors, tags, category, date, relatedPosts, metaTags } = blogPost.fields
 
   const authorsList = authors.filter(isEntryTypeAuthor)
@@ -31,60 +31,63 @@ const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
   const isPressRelease = containsTag(tags, PRESS_RELEASE_TAG)
 
   return (
-    <BlogLayout metaTags={metaTags}>
-      <ProgressBar />
-      <Container>
-        <BreadcrumbsNav category={category} title={title} />
+    <>
+      {isPreview ? <Alert severity="info">This is a preview version.</Alert> : null}
+      <BlogLayout metaTags={metaTags}>
+        <ProgressBar />
+        <Container>
+          <BreadcrumbsNav category={category} title={title} />
 
-        <div className={css.meta}>
-          <div className={css.metaStart}>
-            <Typography className={css.category}>
-              <CategoryIcon />
-              {category}
-            </Typography>
-            <Typography variant="caption">{calculateReadingTimeInMin(content)}</Typography>
+          <div className={css.meta}>
+            <div className={css.metaStart}>
+              <Typography className={css.category}>
+                <CategoryIcon />
+                {category}
+              </Typography>
+              <Typography variant="caption">{calculateReadingTimeInMin(content)}</Typography>
+            </div>
+            <Typography variant="caption">{formatBlogDate(date)}</Typography>
           </div>
-          <Typography variant="caption">{formatBlogDate(date)}</Typography>
-        </div>
 
-        <Typography variant="h1" className={css.title}>
-          {title}
-        </Typography>
+          <Typography variant="h1" className={css.title}>
+            {title}
+          </Typography>
 
-        <Typography variant="h4" className={css.excerpt}>
-          {excerpt}
-        </Typography>
+          <Typography variant="h4" className={css.excerpt}>
+            {excerpt}
+          </Typography>
 
-        <Box mt={{ xs: 2, md: 3 }}>
-          <Tags tags={tags} />
-        </Box>
+          <Box mt={{ xs: 2, md: 3 }}>
+            <Tags tags={tags} />
+          </Box>
 
-        <Authors authors={authorsList} />
+          <Authors authors={authorsList} />
 
-        <Divider className={css.divider} />
+          <Divider className={css.divider} />
 
-        <Grid container className={css.content} columnSpacing={3}>
-          <Sidebar content={content} title={title} authors={authorsList} isPressRelease={isPressRelease} />
+          <Grid container className={css.content} columnSpacing={3}>
+            <Sidebar content={content} title={title} authors={authorsList} isPressRelease={isPressRelease} />
 
-          <Grid item xs={12} md={8}>
-            {isAsset(coverImage) && coverImage.fields.file?.url ? (
-              <Image
-                src={coverImage.fields.file.url}
-                alt={coverImage.fields.title ?? ''}
-                width={coverImage.fields.file.details.image?.width}
-                height={coverImage.fields.file.details.image?.height}
-              />
-            ) : undefined}
+            <Grid item xs={12} md={8}>
+              {isAsset(coverImage) && coverImage.fields.file?.url ? (
+                <Image
+                  src={coverImage.fields.file.url}
+                  alt={coverImage.fields.title ?? ''}
+                  width={coverImage.fields.file.details.image?.width}
+                  height={coverImage.fields.file.details.image?.height}
+                />
+              ) : undefined}
 
-            <Sidebar content={content} title={title} authors={authorsList} isPressRelease={isPressRelease} showInXs />
+              <Sidebar content={content} title={title} authors={authorsList} isPressRelease={isPressRelease} showInXs />
 
-            <RichText {...content} />
+              <RichText {...content} />
+            </Grid>
           </Grid>
-        </Grid>
 
-        <RelatedPosts relatedPosts={relatedPostsList} />
-      </Container>
-    </BlogLayout>
+          <RelatedPosts relatedPosts={relatedPostsList} />
+        </Container>
+      </BlogLayout>
+    </>
   )
 }
 
