@@ -20,10 +20,6 @@ const Preview = () => {
 
   useEffect(() => {
     if (slug) {
-      if (secret !== process.env.NEXT_PUBLIC_CONTENTFUL_PREVIEW_SECRET) {
-        throw new Error('Invalid token')
-      }
-
       fetchDraftContent(slug).then((content) => {
         setBlogPost(content)
       })
