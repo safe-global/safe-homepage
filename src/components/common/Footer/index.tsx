@@ -1,4 +1,4 @@
-import { ButtonBase, Container, Divider, Grid, Typography } from '@mui/material'
+import { Badge, ButtonBase, Container, Divider, Grid, Typography } from '@mui/material'
 import type { ComponentType, SyntheticEvent } from 'react'
 
 import { AppRoutes } from '@/config/routes'
@@ -6,7 +6,6 @@ import DiscordIcon from '@/public/images/discord-icon.svg'
 import XIcon from '@/public/images/x-icon.svg'
 import YoutubeIcon from '@/public/images/youtube-icon.svg'
 import DiscourseIcon from '@/public/images/discourse-icon.svg'
-import MirrorIcon from '@/public/images/mirror-icon.svg'
 import GithubIcon from '@/public/images/github-icon.svg'
 
 import css from './styles.module.css'
@@ -21,12 +20,12 @@ import {
   DISCORD_LINK,
   FORUM_LINK,
   GITHUB_LINK,
-  MIRROR_LINK,
   TWITTER_LINK,
   YOUTUBE_LINK,
 } from '@/config/constants'
 import { useCookieBannerContext } from '@/contexts/CookieBannerContext'
 import Logo from '@/public/images/logo.svg'
+import { useOpenPositions } from '@/hooks/useOpenPositions'
 
 const COOKIE_PREFERENCES = '#cookies'
 
@@ -120,6 +119,10 @@ const subFooterItems = [
     label: 'Imprint',
     href: AppRoutes.imprint,
   },
+  {
+    label: 'Disclaimer',
+    href: AppRoutes.disclaimer,
+  },
 ]
 
 const createFooterButton = (label: string, href: string, IconComponent: ComponentType) => {
@@ -138,6 +141,7 @@ const createFooterButton = (label: string, href: string, IconComponent: Componen
 
 const Footer = () => {
   const { openBanner } = useCookieBannerContext()
+  const { data: positions = [] } = useOpenPositions()
 
   const showBanner = (e: SyntheticEvent) => {
     // Prevent opening the hash link
@@ -192,7 +196,19 @@ const Footer = () => {
             {resourcesItems.map((item) => (
               <li className={css.listItem} key={item.href}>
                 <Link href={item.href} target={item.target} rel={item.rel}>
-                  {item.label}
+                  <Badge
+                    badgeContent={item.href === AppRoutes.careers ? positions.length : undefined}
+                    color="primary"
+                    className={css.badge}
+                    slotProps={{
+                      badge: {
+                        // @ts-expect-error - disable badge in search results
+                        'data-nosnippet': true,
+                      },
+                    }}
+                  >
+                    {item.label}
+                  </Badge>
                 </Link>
               </li>
             ))}
@@ -205,7 +221,6 @@ const Footer = () => {
             {createFooterButton('Discourse forum', FORUM_LINK, DiscourseIcon)}
             {createFooterButton('Discord server', DISCORD_LINK, DiscordIcon)}
             {createFooterButton('Youtube channel', YOUTUBE_LINK, YoutubeIcon)}
-            {createFooterButton('Mirror blog', MIRROR_LINK, MirrorIcon)}
             {createFooterButton('Github organization', GITHUB_LINK, GithubIcon)}
           </div>
         </Grid>

@@ -1,7 +1,7 @@
 [
   {
-    "pageTitle": "Safe Core – Full stack account abstraction",
-    "descripton": "Shape the future of Safe",
+    "pageTitle": "Safe Governance — Join the Safe DAO and Shape the Future | Safe",
+    "descripton": "Be part of Safe Governance. Engage, participate, and vote in the Safe{DAO}. Your chance to directly influence and shape the future of Safe's ecosystem.",
     "component": "common/MetaTags"
   },
   {
@@ -232,15 +232,6 @@
         "image": {
           "src": "/images/youtube-icon.svg",
           "alt": "Youtube channel"
-        }
-      },
-      {
-        "link": {
-          "href": "https://safe.mirror.xyz"
-        },
-        "image": {
-          "src": "/images/mirror-icon.svg",
-          "alt": "Mirror blog"
         }
       },
       {

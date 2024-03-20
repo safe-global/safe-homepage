@@ -1,5 +1,5 @@
 import FeaturedPost from '@/components/Blog/FeaturedPost'
-import MetaTags from '@/components/Campaign/MetaTags'
+import MetaTags from '@/components/common/MetaTagsContentful'
 import FeaturedVideos from '@/components/Pressroom/FeaturedVideos'
 import Founders from '@/components/Pressroom/Founders'
 import Hero from '@/components/Pressroom/Hero'

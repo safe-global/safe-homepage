@@ -1,8 +1,10 @@
 import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from 'contentful'
+import type { TypeMetaTagsSkeleton } from './TypeMetaTags'
 
 export interface TypePageFields {
-  content: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<EntrySkeletonType>>
+  metaTags: EntryFieldTypes.EntryLink<TypeMetaTagsSkeleton>
   slug: EntryFieldTypes.Symbol
+  content: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<EntrySkeletonType>>
 }
 
 export type TypePageSkeleton = EntrySkeletonType<TypePageFields, 'page'>

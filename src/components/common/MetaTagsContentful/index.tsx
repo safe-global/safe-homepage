@@ -7,7 +7,7 @@ import { appendUrlSecure } from '@/lib/appendSecureUrl'
 
 type MetaTagsEntry = Entry<TypeMetaTagsSkeleton, undefined, string>
 
-const MetaTagsCampaigns = (props: MetaTagsEntry) => {
+const MetaTagsContentful = (props: MetaTagsEntry) => {
   const { title, description, image } = props.fields
 
   const campaignImage = isAsset(image) && image.fields.file?.url ? appendUrlSecure(image.fields.file.url) : undefined
@@ -15,4 +15,4 @@ const MetaTagsCampaigns = (props: MetaTagsEntry) => {
   return <MetaTags pageTitle={title} description={description} image={campaignImage} />
 }
 
-export default MetaTagsCampaigns
+export default MetaTagsContentful
