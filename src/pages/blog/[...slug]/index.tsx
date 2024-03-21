@@ -1,53 +1,37 @@
 import BlogPost, { type BlogPostEntry } from '@/components/Blog/Post'
 import { type TypePostSkeleton } from '@/contentful/types'
-import { client } from '@/lib/contentful'
-import type { GetStaticProps } from 'next'
+import { client, previewClient } from '@/lib/contentful'
+import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
 
-const Page = ({ blogPost }: { blogPost: BlogPostEntry }) => {
-  if (!blogPost) return null
+const fetchDraftContent = async (slug: string, isPreview: boolean) => {
+  const cfClient = isPreview ? previewClient : client
 
-  return <BlogPost blogPost={blogPost} />
-}
-
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const slug = params?.slug as string
-
-  const content = await client.getEntries<TypePostSkeleton>({
+  const content = await cfClient.getEntries<TypePostSkeleton>({
     content_type: 'post',
     'fields.slug': slug,
   })
 
-  const blogPost = content.items[0]
-
-  if (!blogPost) {
-    return {
-      redirect: {
-        destination: '/404',
-        permanent: false,
-      },
-    }
-  }
-
-  // keep one level of relatedPosts to avoid circular references
-  blogPost.fields.relatedPosts?.forEach((post: any) => delete post.fields.relatedPosts)
-
-  return {
-    props: {
-      blogPost,
-    },
-  }
+  return content.items[0]
 }
 
-export const getStaticPaths = async () => {
-  const response = await client.getEntries<TypePostSkeleton>({ content_type: 'post' })
-  const paths = response.items.map((item) => ({
-    params: { slug: item.fields.slug },
-  }))
+const Page = () => {
+  const router = useRouter()
+  const { slug, secret } = router.query as { slug: string; secret: string }
+  const [blogPost, setBlogPost] = useState<BlogPostEntry | null>(null)
 
-  return {
-    paths,
-    fallback: true,
-  }
+  const isPreview = Array.isArray(slug) && slug.includes('preview')
+  const postSlug = Array.isArray(slug) ? slug[0] : slug
+
+  useEffect(() => {
+    if (postSlug) {
+      fetchDraftContent(postSlug, isPreview).then((content) => {
+        setBlogPost(content)
+      })
+    }
+  }, [secret, postSlug, isPreview])
+
+  return blogPost ? <BlogPost blogPost={blogPost} isPreview={isPreview} /> : <div>Loading...</div>
 }
 
 export default Page
