@@ -7,7 +7,7 @@ import { extractContentfulImageProps } from '@/lib/contentful/extractContentfulI
 type NewsProps = { news: Entry<TypeExternalUrlSkeleton, undefined, string>[] }
 
 export const News = ({ news }: NewsProps) => (
-  <>
+  <div id="news">
     <Typography variant="h2" textAlign="center" mt={{ xs: '80px', md: '200px' }}>
       <em>Safe</em> in the news
     </Typography>
@@ -26,7 +26,7 @@ export const News = ({ news }: NewsProps) => (
         )
       })}
     </Grid>
-  </>
+  </div>
 )
 
 export default News
