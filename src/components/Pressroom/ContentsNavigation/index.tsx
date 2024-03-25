@@ -10,10 +10,16 @@ type NavItemType = {
   href: string
 }
 
+export const enum PressroomAnchors {
+  ABOUT_US = '#about',
+  SAFE_IN_THE_NEWS = '#news',
+  PRESS_RELEASES = '#press',
+}
+
 const sections: NavItemType[] = [
-  { label: 'About us', href: '#about' },
-  { label: 'Safe in the news', href: '#news' },
-  { label: 'Press releases', href: '#press' },
+  { label: 'About us', href: PressroomAnchors.ABOUT_US },
+  { label: 'Safe in the news', href: PressroomAnchors.SAFE_IN_THE_NEWS },
+  { label: 'Press releases', href: PressroomAnchors.PRESS_RELEASES },
   { label: 'Blog', href: AppRoutes.blog.index },
   { label: 'Media kit', href: PRESS_LINK },
 ]

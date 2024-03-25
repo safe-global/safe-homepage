@@ -1,6 +1,7 @@
 import FeaturedPost from '@/components/Blog/FeaturedPost'
 import { type BlogPostEntry } from '@/components/Blog/Post'
 import MetaTags from '@/components/common/MetaTagsContentful'
+import AboutUs from '@/components/Pressroom/AboutUs'
 import ContentsNavigation from '@/components/Pressroom/ContentsNavigation'
 import FeaturedVideos from '@/components/Pressroom/FeaturedVideos'
 import Founders from '@/components/Pressroom/Founders'
@@ -21,9 +22,10 @@ export type PressRoomEntry = Entry<TypePressRoomSkeleton, undefined, string>
 export type PressRoomProps = {
   pressRoom: PressRoomEntry
   allPosts: BlogPostEntry[]
+  totalAssets: number
 }
 
-const PressRoom = ({ pressRoom, allPosts }: PressRoomProps) => {
+const PressRoom = ({ pressRoom, allPosts, totalAssets }: PressRoomProps) => {
   const { metaTags, featured, investors, news, podcasts, videos } = pressRoom.fields
 
   const investorsList = investors.filter(isAsset)
@@ -39,6 +41,7 @@ const PressRoom = ({ pressRoom, allPosts }: PressRoomProps) => {
         <Hero />
         {isEntryTypePost(featured) && <FeaturedPost {...featured} />}
         <ContentsNavigation />
+        <AboutUs totalAssets={totalAssets} />
         <Founders />
         <Investors investors={investorsList} />
         <News news={newsList} />
