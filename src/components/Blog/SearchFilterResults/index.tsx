@@ -1,27 +1,17 @@
 import type { BlogPostEntry } from '@/components/Blog/Post'
 import SearchBar from '@/components/Blog/SearchBar'
 import usePostsSearch from '@/components/Blog/usePostsSearch'
-import { Box, Button, ButtonBase, Grid, IconButton, Typography } from '@mui/material'
-import { type NextRouter, useRouter } from 'next/router'
+import { Box, Grid, Typography } from '@mui/material'
+import { useRouter } from 'next/router'
 import { Fragment, useEffect, useMemo, useState } from 'react'
-import css from './styles.module.css'
-
 import Card from '@/components/Blog/Card'
 import SearchIcon from '@/public/images/search.svg'
 import { SpecificCategoryFilter } from '@/components/Ecosystem/Projects/Projects'
-import NextLink from 'next/link'
-import clsx from 'clsx'
-import CloseIcon from '@/public/images/close.svg'
 import { scrollToElement } from '@/lib/scrollSmooth'
+import ShowMoreButton, { getPage } from '@/components/common/ShowMoreButton'
+import CategoryFilter from '@/components/common/CategoryFilter'
 
 const PAGE_LENGTH = 6
-const PAGE_QUERY_PARAM = 'page'
-
-const getPage = (query: NextRouter['query']): number => {
-  const page = Array.isArray(query[PAGE_QUERY_PARAM]) ? query[PAGE_QUERY_PARAM][0] : query[PAGE_QUERY_PARAM]
-
-  return Number(page) || 1
-}
 
 const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry[]; categories: string[] }) => {
   const [searchQuery, setSearchQuery] = useState('')
@@ -84,35 +74,14 @@ const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry
         </Grid>
       </Grid>
 
-      {/* Category filter buttons */}
-      <Grid container className={css.filterWrapper}>
-        {categories.map((category) => {
-          const isSelected = category === selectedCategory
-
-          return (
-            <Grid item key={category} className={css.filterCard} xs={12} md="auto">
-              <ButtonBase
-                className={clsx(css.filterButton, { [css.selected]: isSelected })}
-                onClick={() => handleToggleCategory(category)}
-              >
-                <Typography>
-                  {category}
-                  {isSelected && (
-                    <IconButton className={css.closeFilter} onClick={() => handleToggleCategory(category)}>
-                      <CloseIcon />
-                    </IconButton>
-                  )}
-                </Typography>
-              </ButtonBase>
-            </Grid>
-          )
-        })}
-      </Grid>
+      <Box mt="40px">
+        <CategoryFilter categories={categories} />
+      </Box>
 
       {visibleResults.length > 0 ? (
         <>
-          <Grid container columnSpacing="30px" rowGap="30px" id="results" className={css.resultsWrapper}>
-            {visibleResults.map((post: any) => (
+          <Grid container columnSpacing="30px" rowGap="30px" id="results" mt="60px">
+            {visibleResults.map((post) => (
               <Grid key={post.fields.slug} item xs={12} md={4}>
                 <Card {...post} />
               </Grid>
@@ -129,21 +98,6 @@ const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry
 }
 
 export default SearchFilterResults
-
-const ShowMoreButton = ({ page }: { page: number }) => (
-  <Box display="flex" justifyContent="center" mt="60px">
-    <NextLink
-      href={{ query: { [PAGE_QUERY_PARAM]: page + 1 } }}
-      shallow
-      // Pagination marker for search engines
-      rel="next"
-    >
-      <Button variant="contained" size="large">
-        Show more
-      </Button>
-    </NextLink>
-  </Box>
-)
 
 const NoResults = ({ query }: { query: string }) => (
   <Box mt="60px" textAlign="center">
