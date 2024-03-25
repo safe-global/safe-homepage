@@ -11,6 +11,7 @@ import MediaKit from '@/components/Pressroom/MediaKit'
 import News from '@/components/Pressroom/News'
 import Podcasts from '@/components/Pressroom/Podcasts'
 import PressReleases from '@/components/Pressroom/PressReleases'
+import SafeInNumbers from '@/components/Pressroom/SafeInNumbers'
 import { type TypePressRoomSkeleton } from '@/contentful/types'
 import { containsTag, PRESS_RELEASE_TAG } from '@/lib/containsTag'
 import { isAsset, isEntryType, isEntryTypeExternalURL, isEntryTypePost } from '@/lib/typeGuards'
@@ -42,6 +43,7 @@ const PressRoom = ({ pressRoom, allPosts, totalAssets }: PressRoomProps) => {
         {isEntryTypePost(featured) && <FeaturedPost {...featured} />}
         <ContentsNavigation />
         <AboutUs totalAssets={totalAssets} />
+        <SafeInNumbers />
         <Founders />
         <Investors investors={investorsList} />
         <News news={newsList} />

@@ -1,0 +1,51 @@
+.animation {
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  display: flex;
+  width: max-content;
+  min-width: 200%;
+  animation-duration: 100s;
+  animation-delay: 0s;
+  animation-play-state: running;
+  animation-name: slide;
+  gap: 8px;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  gap: 40px;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  font-size: 0;
+}
+
+.metricWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.value {
+  margin: 0;
+  font-size: 64px;
+  line-height: 64px;
+  background: linear-gradient(90deg, rgba(15, 255, 128, 1) 0%, rgba(94, 221, 255, 1) 60%);
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes slide {
+  to {
+    transform: translate(-50%);
+  }
+}
+
+@media (min-width: 600px) {
+  .value {
+    font-size: 80px;
+    line-height: 100px;
+  }
+}

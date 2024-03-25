@@ -3,11 +3,12 @@ import { type Entry } from 'contentful'
 import { type TypeExternalUrlSkeleton } from '@/contentful/types'
 import LinkCard from '@/components/common/LinkCard'
 import { extractContentfulImageProps } from '@/lib/contentful/extractContentfulImageProps'
+import { PressroomAnchors } from '@/components/Pressroom/ContentsNavigation'
 
 type NewsProps = { news: Entry<TypeExternalUrlSkeleton, undefined, string>[] }
 
 export const News = ({ news }: NewsProps) => (
-  <div id="news">
+  <div id={PressroomAnchors.SAFE_IN_THE_NEWS}>
     <Typography variant="h2" textAlign="center" mt={{ xs: '80px', md: '200px' }}>
       <em>Safe</em> in the news
     </Typography>
