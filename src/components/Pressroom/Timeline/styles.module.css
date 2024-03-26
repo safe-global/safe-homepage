@@ -1,33 +1,40 @@
-.card {
-  margin-top: 32px;
-  margin-left: 150px;
-  padding: 32px 24px;
-  border: 1px solid var(--mui-palette-primary-main);
-  border-radius: 16px;
-  width: 270px;
+.stepperWrapper {
+  --stepWidth: 25vw;
+  margin-top: 100px;
+  margin-left: calc(-1 / 2 * var(--stepWidth));
+  overflow: hidden;
 }
 
-.myStepper svg {
+.stepperWrapper svg {
   color: var(--mui-palette-primary-main);
   width: 16px;
   height: 16px;
 }
 
-.myStepper :global .MuiStep-root {
-  width: 300px;
+.stepperWrapper :global .MuiStepLabel-iconContainer.MuiStepLabel-alternativeLabel {
+  margin-top: 4px;
+}
+
+.stepperWrapper :global .MuiStepper-root {
+  transition: transform ease-in-out 1s;
+}
+
+.stepperWrapper :global .MuiStep-root {
+  width: var(--stepWidth);
   height: 400px;
 }
 
-.myStepper .gridItem:first-of-type :global .MuiStepConnector-root {
-  display: none;
-}
-
-.myStepper :global .MuiStepConnector-root .MuiStepConnector-line {
+.stepperWrapper :global .MuiStepConnector-root .MuiStepConnector-line {
   border-color: var(--mui-palette-primary-main);
 }
 
-.myStepper :global .MuiStepLabel-iconContainer.MuiStepLabel-alternativeLabel {
-  margin-top: 4px;
+.card {
+  margin-top: 32px;
+  margin-left: calc(var(--stepWidth) / 2);
+  padding: 32px 24px;
+  border: 1px solid var(--mui-palette-primary-main);
+  border-radius: 16px;
+  width: calc(var(--stepWidth) * 0.8);
 }
 
 .mobileStepper {

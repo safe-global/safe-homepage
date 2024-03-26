@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Step, StepIcon, StepLabel, Stepper, Typography } from '@mui/material'
+import { Box, Button, Step, StepIcon, StepLabel, Stepper, Typography } from '@mui/material'
 import MobileStepper from '@mui/material/MobileStepper'
 import { useState } from 'react'
 import LessThanIcon from '@/public/images/less-than.svg'
@@ -7,7 +7,7 @@ import FullCircleIcon from '@/public/images/circle-full.svg'
 import EmptyCircleIcon from '@/public/images/circle-empty.svg'
 import css from './styles.module.css'
 
-const steps = [
+const items = [
   {
     label: 'March 2024',
     description: 'Safe hits $100B in TVL',
@@ -61,9 +61,9 @@ const steps = [
 
 const STEPS_PER_DOT = 3
 
-const Card = ({ label, description }: { label: string; description: string }) => (
+const StepCard = ({ label, description }: { label: string; description: string }) => (
   <div className={css.card}>
-    <Typography variant="h4" mb="16px" color="text.primary">
+    <Typography variant="h4" mb="16px">
       {label}
     </Typography>
     <Typography>{description}</Typography>
@@ -71,7 +71,8 @@ const Card = ({ label, description }: { label: string; description: string }) =>
 )
 
 const Timeline = () => {
-  const [activeStep, setActiveStep] = useState(1)
+  const [activeStep, setActiveStep] = useState(0)
+  const stepsNumber = Math.ceil(items.length / STEPS_PER_DOT)
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1)
@@ -83,35 +84,33 @@ const Timeline = () => {
 
   return (
     <Box mt="140px">
-      <Typography variant="h2" textAlign="center" mb="80px">
+      <Typography variant="h2" textAlign="center">
         Key milestones
       </Typography>
 
-      <Grid container ml="-150px">
-        <Stepper activeStep={activeStep} alternativeLabel style={{ marginTop: '100px' }} className={css.myStepper}>
-          {steps.map(({ label, description }, idx) => (
-            <Grid item xs={4} key={`${label}-${idx}`} className={css.gridItem}>
-              <Step active={idx < activeStep * STEPS_PER_DOT}>
-                <StepLabel
-                  color="red"
-                  StepIconComponent={() => (
-                    <StepIcon icon={idx < activeStep * STEPS_PER_DOT ? <FullCircleIcon /> : <EmptyCircleIcon />} />
-                  )}
-                />
-                <Card label={label} description={description} />
-              </Step>
-            </Grid>
+      <Box className={css.stepperWrapper}>
+        <Stepper activeStep={activeStep} alternativeLabel style={{ transform: `translate(-${activeStep * 75}vw)` }}>
+          {items.map(({ label, description }, idx) => (
+            <Step key={`${label}-${idx}`}>
+              <StepLabel
+                color="red"
+                StepIconComponent={() => (
+                  <StepIcon icon={idx < (activeStep + 1) * STEPS_PER_DOT ? <FullCircleIcon /> : <EmptyCircleIcon />} />
+                )}
+              />
+              <StepCard label={label} description={description} />
+            </Step>
           ))}
         </Stepper>
-      </Grid>
+      </Box>
       <MobileStepper
         className={css.mobileStepper}
         variant="dots"
-        steps={steps.length}
+        steps={stepsNumber}
         position="static"
-        activeStep={activeStep - 1}
+        activeStep={activeStep}
         nextButton={
-          <Button size="small" onClick={handleNext} disabled={activeStep === 5}>
+          <Button size="small" onClick={handleNext} disabled={activeStep === stepsNumber - 1}>
             <GreatThanIcon />
           </Button>
         }
