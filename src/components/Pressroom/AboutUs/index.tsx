@@ -13,7 +13,7 @@ const AboutUs = ({ totalAssets }: { totalAssets: number }) => {
   )
 
   return (
-    <Box mt="140px" id={PressroomAnchors.ABOUT_US} width={{ xs: '100%', md: 9 / 12 }}>
+    <Box mt="140px" id={PressroomAnchors.ABOUT_US.slice(1)} width={{ xs: '100%', md: 9 / 12 }}>
       <Typography variant="caption">About us</Typography>
       <Typography variant="h2">
         <i>Safe</i> is an onchain asset custody protocol, securing <>{totalAssetsLink}</> in assets today.
