@@ -1,4 +1,5 @@
 import { Box, Typography } from '@mui/material'
+import clsx from 'clsx'
 import css from './styles.module.css'
 
 const numbers = [
@@ -22,13 +23,15 @@ const StatsRow = () => (
 )
 
 const SafeInNumbers = () => (
-  <Box mt="120px" overflow={{ xs: 'hidden', md: 'visible' }}>
+  <Box mt="120px" overflow="hidden" position="relative">
+    <div className={css.gradientBase} />
     <div className={css.animation}>
       <div className={css.slider}>
         <StatsRow />
         <StatsRow />
       </div>
     </div>
+    <div className={clsx(css.gradientBase, css.gradientFlipped)} />
   </Box>
 )
 
