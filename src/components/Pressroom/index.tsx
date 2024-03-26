@@ -12,6 +12,7 @@ import News from '@/components/Pressroom/News'
 import Podcasts from '@/components/Pressroom/Podcasts'
 import PressReleases from '@/components/Pressroom/PressReleases'
 import SafeInNumbers from '@/components/Pressroom/SafeInNumbers'
+import Timeline from '@/components/Pressroom/Timeline'
 import { type TypePressRoomSkeleton } from '@/contentful/types'
 import { containsTag, PRESS_RELEASE_TAG } from '@/lib/containsTag'
 import { isAsset, isEntryType, isEntryTypeExternalURL, isEntryTypePost } from '@/lib/typeGuards'
@@ -46,6 +47,7 @@ const PressRoom = ({ pressRoom, allPosts, totalAssets }: PressRoomProps) => {
         <SafeInNumbers />
         <Founders />
         <Investors investors={investorsList} />
+        <Timeline />
         <News news={newsList} />
         <Podcasts podcasts={podcastsList} />
         <FeaturedVideos videos={videosList} />
