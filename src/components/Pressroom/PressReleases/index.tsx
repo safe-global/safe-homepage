@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import ShowMoreButton, { getPage } from '@/components/common/ShowMoreButton'
 import SearchIcon from '@/public/images/search.svg'
 import CategoryFilter from '@/components/common/CategoryFilter'
+import { PressroomAnchors } from '@/components/Pressroom/ContentsNavigation'
 
 const categories = ['Safe{Core}', 'Safe{Wallet}', 'Safe{DAO}', 'Ecosystem', 'Institutional', 'Internal']
 
@@ -24,10 +25,8 @@ const PressReleases = ({ allPosts }: { allPosts: BlogPostEntry[] }) => {
   const shouldShowMoreButton = visibleResults.length < allPosts.length
 
   return (
-    <>
-      <Typography variant="h2" mt={{ xs: '80px', md: '200px' }}>
-        Press releases
-      </Typography>
+    <Box id={PressroomAnchors.PRESS_RELEASES.slice(1)} mt={{ xs: '80px', md: '200px' }}>
+      <Typography variant="h2">Press releases</Typography>
 
       <Grid container columnSpacing="30px" rowGap="30px" mt="60px">
         {/* Quick filter bar*/}
@@ -59,7 +58,7 @@ const PressReleases = ({ allPosts }: { allPosts: BlogPostEntry[] }) => {
           )}
         </Grid>
       </Grid>
-    </>
+    </Box>
   )
 }
 

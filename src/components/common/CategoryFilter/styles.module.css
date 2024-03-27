@@ -2,6 +2,8 @@
   border-radius: 6px;
   border: 1px solid var(--mui-palette-border-light);
   overflow: hidden;
+  flex-wrap: nowrap;
+  flex-direction: column;
 }
 
 .filterCard {
@@ -39,6 +41,13 @@
   margin-left: 8px;
   margin-top: 2px;
   color: var(--mui-palette-primary-main);
+}
+
+@media (min-width: 600px) {
+  .filterWrapper {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 }
 
 @media (min-width: 900px) {
