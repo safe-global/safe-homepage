@@ -31,7 +31,7 @@ const PressReleases = ({ allPosts }: { allPosts: BlogPostEntry[] }) => {
       <Grid container columnSpacing="30px" rowGap="30px" mt="60px">
         {/* Quick filter bar*/}
         <Grid item xs={12} md={4}>
-          <CategoryFilter categories={categories} />
+          <CategoryFilter categories={categories} isColumn />
         </Grid>
 
         {/* Press posts */}
