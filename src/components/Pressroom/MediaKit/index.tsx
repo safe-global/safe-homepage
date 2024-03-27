@@ -13,7 +13,7 @@ const MediaKit = () => {
       {/* Media Kit */}
       <Grid container mt="120px" rowGap={4}>
         <Grid item md={6} className={css.alignCenter}>
-          <Typography variant="h1">Media kit</Typography>
+          <Typography variant="h2">Media kit</Typography>
         </Grid>
         <Grid item md={1} />
         <Grid item xs={12} md={5}>
@@ -32,7 +32,7 @@ const MediaKit = () => {
       {/* Contact Us */}
       <Grid container mt={{ xs: '120px', md: '140px' }} rowGap={4}>
         <Grid item md={6} className={css.alignCenter}>
-          <Typography variant="h1">Contact us</Typography>
+          <Typography variant="h2">Contact us</Typography>
         </Grid>
         <Grid item md={1} />
         <Grid item xs={12} md={5}>

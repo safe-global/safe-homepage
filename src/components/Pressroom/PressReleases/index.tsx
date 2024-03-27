@@ -25,7 +25,7 @@ const PressReleases = ({ allPosts }: { allPosts: BlogPostEntry[] }) => {
   const shouldShowMoreButton = visibleResults.length < allPosts.length
 
   return (
-    <Box id={PressroomAnchors.PRESS_RELEASES.slice(1)} mt={{ xs: '80px', md: '200px' }}>
+    <Box id={PressroomAnchors.PRESS_RELEASES.slice(1)} mt={{ xs: '80px', md: '250px' }}>
       <Typography variant="h2">Press releases</Typography>
 
       <Grid container columnSpacing="30px" rowGap="30px" mt="60px">

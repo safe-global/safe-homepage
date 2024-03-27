@@ -11,6 +11,20 @@ const Founders = () => {
         <Typography variant="h2">Founding team</Typography>
         <Grid container spacing={4} mt={3}>
           <Grid item xs={12} md={6}>
+            <Typography variant="h4">Christoph Simmchen</Typography>
+            <Typography color="primary.light">
+              Co-Founder <br />
+              Governance &amp; Operations
+            </Typography>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Typography variant="h4">Richard Meissner</Typography>
+            <Typography color="primary.light">
+              Co-Founder <br />
+              Safe{'{Core}'}
+            </Typography>
+          </Grid>
+          <Grid item xs={12} md={6}>
             <Typography variant="h4">Lukas Schor</Typography>
             <Typography color="primary.light">
               Co-Founder <br />
@@ -22,20 +36,6 @@ const Founders = () => {
             <Typography color="primary.light">
               Co-Founder <br />
               Safe{'{Wallet}'}
-            </Typography>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <Typography variant="h4">Richard Meissner</Typography>
-            <Typography color="primary.light">
-              Co-Founder <br />
-              Safe{'{Core}'}
-            </Typography>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <Typography variant="h4">Christoph Simmchen</Typography>
-            <Typography color="primary.light">
-              Co-Founder <br />
-              Governance &amp; Operations
             </Typography>
           </Grid>
         </Grid>

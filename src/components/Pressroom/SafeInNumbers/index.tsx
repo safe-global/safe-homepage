@@ -4,8 +4,8 @@ import css from './styles.module.css'
 
 const numbers = [
   { label: 'Partners', value: '200+' },
-  { label: 'Total Transactions', value: '4M+' },
-  { label: 'Safe Accounts Deployed', value: '1.5M+' },
+  { label: 'Total Transactions', value: '40M+' },
+  { label: 'Safe Accounts Deployed', value: '7M+' },
   { label: 'Owners', value: '3M+' },
 ]
 

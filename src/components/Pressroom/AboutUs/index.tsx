@@ -5,7 +5,7 @@ import { Box, Typography } from '@mui/material'
 const TOTAL_ASSETS_STORED = 'https://dune.com/queries/2893829/4821383'
 
 const AboutUs = ({ totalAssets }: { totalAssets: number }) => {
-  const totalAssetsStr = `~$${totalAssets ? formatValue(totalAssets) : '1B'}`
+  const totalAssetsStr = `~$${totalAssets ? formatValue(totalAssets) : '120B'}`
   const totalAssetsLink = (
     <a href={TOTAL_ASSETS_STORED} target="_blank" rel="noreferrer">
       <b>{totalAssetsStr}</b>
