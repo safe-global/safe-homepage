@@ -1,5 +1,5 @@
 .stepperWrapper {
-  --stepWidth: 25vw;
+  --stepWidth: 75vw;
   margin-top: 100px;
   margin-left: calc(-1 / 2 * var(--stepWidth));
   overflow: hidden;
@@ -40,4 +40,10 @@
 .mobileStepper {
   width: fit-content;
   margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+  .stepperWrapper {
+    --stepWidth: 25vw;
+  }
 }

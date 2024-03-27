@@ -1,6 +1,6 @@
-import { Box, Button, Step, StepIcon, StepLabel, Stepper, Typography } from '@mui/material'
+import { Box, Button, Step, StepIcon, StepLabel, Stepper, type Theme, Typography, useMediaQuery } from '@mui/material'
 import MobileStepper from '@mui/material/MobileStepper'
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import LessThanIcon from '@/public/images/less-than.svg'
 import GreatThanIcon from '@/public/images/great-than.svg'
 import FullCircleIcon from '@/public/images/circle-full.svg'
@@ -59,8 +59,6 @@ const items = [
   },
 ]
 
-const STEPS_PER_DOT = 3
-
 const StepCard = ({ label, description }: { label: string; description: string }) => (
   <div className={css.card}>
     <Typography variant="h4" mb="16px">
@@ -72,6 +70,8 @@ const StepCard = ({ label, description }: { label: string; description: string }
 
 const Timeline = () => {
   const [activeStep, setActiveStep] = useState(0)
+  const isSmallScreen = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'))
+  const STEPS_PER_DOT = useMemo(() => (isSmallScreen ? 1 : 3), [isSmallScreen])
   const stepsNumber = Math.ceil(items.length / STEPS_PER_DOT)
 
   const handleNext = () => {
