@@ -5,7 +5,7 @@ import { DUNE_API_KEY } from '@/config/constants'
 import { duneQueryUrlBuilder } from '@/lib/duneQueryUrlBuilder'
 
 const QUERY_ID_TOTAL_TRANSACTIONS = 2093960
-const QUERY_ID_TOTAL_ASSETS = 2893829
+// const QUERY_ID_TOTAL_ASSETS = 2893829
 const QUERY_ID_TOTAL_SAFES_DEPLOYED = 2459401
 
 export const fetchTotalTransactions = async (): Promise<number | null> => {
@@ -16,10 +16,12 @@ export const fetchTotalTransactions = async (): Promise<number | null> => {
 }
 
 export const fetchTotalAssets = async (): Promise<number | null> => {
-  return fetch(duneQueryUrlBuilder(QUERY_ID_TOTAL_ASSETS, DUNE_API_KEY))
-    .then((res) => res.json())
-    .then((data) => data.result.rows[0].usd_value)
-    .catch(() => null)
+  return null
+  // Dune query has a but that needs to be fixed so defaulting to a static value
+  // return fetch(duneQueryUrlBuilder(QUERY_ID_TOTAL_ASSETS, DUNE_API_KEY))
+  //   .then((res) => res.json())
+  //   .then((data) => data.result.rows[0].usd_value)
+  //   .catch(() => null)
 }
 
 export const fetchTotalSafesDeployed = async (): Promise<number | null> => {
