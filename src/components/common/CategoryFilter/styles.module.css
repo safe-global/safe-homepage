@@ -2,7 +2,6 @@
   border-radius: 6px;
   border: 1px solid var(--mui-palette-border-light);
   overflow: hidden;
-  margin-top: 40px;
 }
 
 .filterCard {
@@ -30,10 +29,6 @@
 .filterButton:hover,
 .selected {
   border: 1px solid var(--mui-palette-primary-main);
-}
-
-.resultsWrapper {
-  margin-top: 60px;
 }
 
 .closeFilter {
