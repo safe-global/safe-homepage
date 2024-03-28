@@ -9,6 +9,7 @@ export interface TypePressRoomFields {
   featured: EntryFieldTypes.EntryLink<TypePostSkeleton>
   numbers: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeSimpleBaseBlockSkeleton>>
   investors: EntryFieldTypes.Array<EntryFieldTypes.AssetLink>
+  timeline: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeSimpleBaseBlockSkeleton>>
   news: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeExternalUrlSkeleton>>
   podcasts: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeExternalUrlSkeleton>>
   videos: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeExternalUrlSkeleton>>

@@ -5,74 +5,28 @@ import LessThanIcon from '@/public/images/less-than.svg'
 import GreatThanIcon from '@/public/images/great-than.svg'
 import FullCircleIcon from '@/public/images/circle-full.svg'
 import EmptyCircleIcon from '@/public/images/circle-empty.svg'
+import { type Entry } from 'contentful'
+import { type TypeSimpleBaseBlockSkeleton } from '@/contentful/types'
 import css from './styles.module.css'
 
-const items = [
-  {
-    label: 'March 2024',
-    description: 'Safe hits $100B in TVL',
-  },
-  {
-    label: 'February 2024',
-    description: 'Safe Smart Accounts have executed over 30M transactions.',
-  },
-  {
-    label: 'March 2023',
-    description:
-      'Safe introduces the Safe{Core} modular account abstraction dev stack, alongside a refreshed Safe{Wallet}.',
-  },
-  {
-    label: 'September 2022',
-    description: 'SafeDAO is established and the Safe Token launched.',
-  },
-  {
-    label: 'July 2022',
-    description:
-      'Safe Ecosystem Foundation announces $100M in backing from strategic partners crosses $40 in assets secured.',
-  },
-  {
-    label: 'May 2022',
-    description:
-      'Independence! Safe Ecosystem Foundation is established as the operations organisation, and Core Contributors GmbH as the development company of Safe.',
-  },
-  {
-    label: 'February 2022',
-    description:
-      'GnosisDAO proposal to spin out the Safe project (GIP29) is accepted, with the highest voter turnout to label.',
-  },
-  {
-    label: 'May 2021',
-    description: 'Vitalik Buterin, founder of Ethereum, moves 1.3B in assets to his personal Safe.',
-  },
-  {
-    label: 'August 2020',
-    description: 'Safe hits TVL of more than 1B USD in ETH and ERC20 assets.',
-  },
-  {
-    label: 'July 2018',
-    description:
-      'Answering to market demand, Gnosis builds and releases a new smart account protocol called “Safe”, with gas-efficiency, modularity, and security at its core.',
-  },
-  {
-    label: 'September 2017',
-    description: 'Gnosis open-sources its internal multi-signature wallet called “Gnosis Multi-Sig Wallet”.',
-  },
-]
-
-const StepCard = ({ label, description }: { label: string; description: string }) => (
+const StepCard = ({ title, text }: { title: string; text: string }) => (
   <div className={css.card}>
     <Typography variant="h4" mb="16px">
-      {label}
+      {title}
     </Typography>
-    <Typography>{description}</Typography>
+    <Typography>{text}</Typography>
   </div>
 )
 
-const Timeline = () => {
+type TimelineProps = { items: Entry<TypeSimpleBaseBlockSkeleton, undefined, string>[] }
+
+const Timeline = ({ items }: TimelineProps) => {
   const [activeStep, setActiveStep] = useState(0)
   const isSmallScreen = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'))
   const STEPS_PER_DOT = useMemo(() => (isSmallScreen ? 1 : 3), [isSmallScreen])
   const stepsNumber = Math.ceil(items.length / STEPS_PER_DOT)
+
+  const timelineItems = items.map(({ fields }) => fields)
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1)
@@ -90,15 +44,15 @@ const Timeline = () => {
 
       <Box className={css.stepperWrapper}>
         <Stepper activeStep={activeStep} alternativeLabel style={{ transform: `translate(-${activeStep * 75}vw)` }}>
-          {items.map(({ label, description }, idx) => (
-            <Step key={`${label}-${idx}`}>
+          {timelineItems.map(({ title, text }, idx) => (
+            <Step key={`${title}-${idx}`}>
               <StepLabel
                 color="red"
                 StepIconComponent={() => (
                   <StepIcon icon={idx < (activeStep + 1) * STEPS_PER_DOT ? <FullCircleIcon /> : <EmptyCircleIcon />} />
                 )}
               />
-              <StepCard label={label} description={description} />
+              <StepCard title={title} text={text} />
             </Step>
           ))}
         </Stepper>

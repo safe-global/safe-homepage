@@ -34,10 +34,11 @@ export type PressRoomProps = {
 }
 
 const PressRoom = ({ pressRoom, allPosts, totalAssets }: PressRoomProps) => {
-  const { metaTags, numbers, featured, investors, news, podcasts, videos } = pressRoom.fields
+  const { metaTags, featured, numbers, investors, timeline, news, podcasts, videos } = pressRoom.fields
 
   const numbersList = numbers.filter(isEntryTypeSimpleBaseBlock)
   const investorsList = investors.filter(isAsset)
+  const timelineList = timeline.filter(isEntryTypeSimpleBaseBlock)
   const newsList = news.filter(isEntryTypeExternalURL)
   const podcastsList = podcasts.filter(isEntryTypeExternalURL)
   const videosList = videos.filter(isEntryTypeExternalURL)
@@ -54,7 +55,7 @@ const PressRoom = ({ pressRoom, allPosts, totalAssets }: PressRoomProps) => {
         <Marquee items={numbersList} />
         <Founders />
         <Investors investors={investorsList} />
-        <Timeline />
+        <Timeline items={timelineList} />
         <PressReleases allPosts={pressPosts} />
         <News news={newsList} />
         <Podcasts podcasts={podcastsList} />
