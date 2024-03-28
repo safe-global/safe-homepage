@@ -1,6 +1,7 @@
 import client from '@/lib/contentful'
 import PressRoom, { type PressRoomProps } from '@/components/Pressroom'
 import type { TypePressRoomSkeleton, TypePostSkeleton } from '@/contentful/types'
+import { fetchTotalAssets } from '@/hooks/useSafeStats'
 
 const PressroomPage = (props: PressRoomProps) => {
   return <PressRoom {...props} />
@@ -18,6 +19,8 @@ export const getStaticProps = async () => {
     include: 3,
   })
 
+  const totalAssets = await fetchTotalAssets()
+
   const pressRoom = pressRoomEntries.items[0]
 
   if (!pressRoom || !postsEntries) {
@@ -32,6 +35,7 @@ export const getStaticProps = async () => {
     props: {
       pressRoom,
       allPosts: postsEntries.items,
+      totalAssets,
     },
   }
 }

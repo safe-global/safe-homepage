@@ -1,0 +1,11 @@
+.navButton {
+  padding: 24px 64px;
+  width: 100%;
+  border: 1px solid var(--mui-palette-border-light);
+  transition-duration: var(--transition-duration);
+  border-radius: 6px;
+}
+
+.navButton:hover {
+  border: 1px solid var(--mui-palette-primary-main);
+}

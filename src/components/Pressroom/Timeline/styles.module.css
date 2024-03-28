@@ -1,0 +1,49 @@
+.stepperWrapper {
+  --stepWidth: 75vw;
+  margin-top: 100px;
+  margin-left: calc(-1 / 2 * var(--stepWidth));
+  overflow: hidden;
+}
+
+.stepperWrapper svg {
+  color: var(--mui-palette-primary-main);
+  width: 16px;
+  height: 16px;
+}
+
+.stepperWrapper :global .MuiStepLabel-iconContainer.MuiStepLabel-alternativeLabel {
+  margin-top: 4px;
+}
+
+.stepperWrapper :global .MuiStepper-root {
+  transition: transform ease-in-out 1s;
+}
+
+.stepperWrapper :global .MuiStep-root {
+  width: var(--stepWidth);
+  height: 400px;
+}
+
+.stepperWrapper :global .MuiStepConnector-root .MuiStepConnector-line {
+  border-color: var(--mui-palette-primary-main);
+}
+
+.card {
+  margin-top: 32px;
+  margin-left: calc(var(--stepWidth) / 2);
+  padding: 32px 24px;
+  border: 1px solid var(--mui-palette-primary-main);
+  border-radius: 16px;
+  width: calc(var(--stepWidth) * 0.8);
+}
+
+.mobileStepper {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+  .stepperWrapper {
+    --stepWidth: 25vw;
+  }
+}
