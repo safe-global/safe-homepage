@@ -7,6 +7,7 @@ import ShowMoreButton, { getPage } from '@/components/common/ShowMoreButton'
 import SearchIcon from '@/public/images/search.svg'
 import CategoryFilter from '@/components/common/CategoryFilter'
 import { PressroomAnchors } from '@/components/Pressroom/ContentsNavigation'
+import { containsTag } from '@/lib/containsTag'
 
 const categories = ['Safe{Core}', 'Safe{Wallet}', 'Safe{DAO}', 'Ecosystem', 'Institutional', 'Internal']
 
@@ -14,12 +15,12 @@ const PAGE_LENGTH = 4
 
 const PressReleases = ({ allPosts }: { allPosts: BlogPostEntry[] }) => {
   const router = useRouter()
-  const selectedCategory = router.query.category
+  const selectedTag = router.query.category as string
   const page = getPage(router.query)
 
   const filteredPosts = useMemo(() => {
-    return !selectedCategory ? allPosts : allPosts.filter((post) => post.fields.category === selectedCategory)
-  }, [allPosts, selectedCategory])
+    return !selectedTag ? allPosts : allPosts.filter((post) => containsTag(post.fields.tags, selectedTag))
+  }, [allPosts, selectedTag])
 
   const visibleResults = filteredPosts.slice(0, PAGE_LENGTH * page)
   const shouldShowMoreButton = visibleResults.length < allPosts.length
