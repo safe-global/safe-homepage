@@ -1,5 +1,5 @@
 import { type BlogPostEntry } from '@/components/Blog/Post'
-import { Box, Grid, Typography } from '@mui/material'
+import { Box, Divider, Grid, Typography } from '@mui/material'
 import React, { useMemo } from 'react'
 import Card from '@/components/Blog/Card'
 import { useRouter } from 'next/router'
@@ -26,6 +26,7 @@ const PressReleases = ({ allPosts }: { allPosts: BlogPostEntry[] }) => {
 
   return (
     <Box id={PressroomAnchors.PRESS_RELEASES.slice(1)} mt={{ xs: '80px', md: '250px' }}>
+      <Divider sx={{ mb: '140px' }} />
       <Typography variant="h2">Press releases</Typography>
 
       <Grid container columnSpacing="30px" rowGap="30px" mt="60px">

@@ -1,3 +1,10 @@
+.wrapper {
+  --items-gap: 100px;
+  margin-top: 120px;
+  overflow: hidden;
+  position: relative;
+}
+
 .animation {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
@@ -14,7 +21,7 @@
 
 .slider {
   display: flex;
-  gap: 40px;
+  gap: var(--items-gap);
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
@@ -22,10 +29,10 @@
   font-size: 0;
 }
 
-.metricWrapper {
+.rowWrapper {
   display: flex;
   flex-direction: row;
-  gap: 100px;
+  gap: var(--items-gap);
 }
 
 .value {
@@ -39,7 +46,7 @@
 
 .gradientBase {
   position: absolute;
-  width: 94px;
+  width: var(--items-gap);
   top: 0;
   bottom: 0;
   left: 0;
@@ -50,7 +57,7 @@
 .gradientFlipped {
   left: auto;
   right: 0;
-  width: 138px;
+  width: var(--items-gap);
   transform: scaleX(-1);
 }
 

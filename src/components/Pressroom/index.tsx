@@ -11,11 +11,17 @@ import MediaKit from '@/components/Pressroom/MediaKit'
 import News from '@/components/Pressroom/News'
 import Podcasts from '@/components/Pressroom/Podcasts'
 import PressReleases from '@/components/Pressroom/PressReleases'
-import SafeInNumbers from '@/components/Pressroom/SafeInNumbers'
+import Marquee from '@/components/Pressroom/Marquee'
 import Timeline from '@/components/Pressroom/Timeline'
 import { type TypePressRoomSkeleton } from '@/contentful/types'
 import { containsTag, PRESS_RELEASE_TAG } from '@/lib/containsTag'
-import { isAsset, isEntryType, isEntryTypeExternalURL, isEntryTypePost } from '@/lib/typeGuards'
+import {
+  isAsset,
+  isEntryType,
+  isEntryTypeExternalURL,
+  isEntryTypePost,
+  isEntryTypeSimpleBaseBlock,
+} from '@/lib/typeGuards'
 import { Container } from '@mui/material'
 import { type Entry } from 'contentful'
 
@@ -28,8 +34,9 @@ export type PressRoomProps = {
 }
 
 const PressRoom = ({ pressRoom, allPosts, totalAssets }: PressRoomProps) => {
-  const { metaTags, featured, investors, news, podcasts, videos } = pressRoom.fields
+  const { metaTags, numbers, featured, investors, news, podcasts, videos } = pressRoom.fields
 
+  const numbersList = numbers.filter(isEntryTypeSimpleBaseBlock)
   const investorsList = investors.filter(isAsset)
   const newsList = news.filter(isEntryTypeExternalURL)
   const podcastsList = podcasts.filter(isEntryTypeExternalURL)
@@ -44,14 +51,14 @@ const PressRoom = ({ pressRoom, allPosts, totalAssets }: PressRoomProps) => {
         {isEntryTypePost(featured) && <FeaturedPost {...featured} />}
         <ContentsNavigation />
         <AboutUs totalAssets={totalAssets} />
-        <SafeInNumbers />
+        <Marquee items={numbersList} />
         <Founders />
         <Investors investors={investorsList} />
         <Timeline />
+        <PressReleases allPosts={pressPosts} />
         <News news={newsList} />
         <Podcasts podcasts={podcastsList} />
         <FeaturedVideos videos={videosList} />
-        <PressReleases allPosts={pressPosts} />
         <MediaKit />
       </Container>
     </>

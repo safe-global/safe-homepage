@@ -5,6 +5,7 @@ import type {
   TypeExternalUrlSkeleton,
   TypeFaqEntrySkeleton,
   TypePostSkeleton,
+  TypeSimpleBaseBlockSkeleton,
   TypeTagSkeleton,
 } from '@/contentful/types'
 import type { Asset, Entry } from 'contentful'
@@ -40,6 +41,10 @@ export const isEntryTypePost = (obj: any): obj is Entry<TypePostSkeleton, undefi
 
 export const isEntryTypeExternalURL = (obj: any): obj is Entry<TypeExternalUrlSkeleton, undefined, string> => {
   return getContentTypeSysId(obj) === 'externalUrl'
+}
+
+export const isEntryTypeSimpleBaseBlock = (obj: any): obj is Entry<TypeSimpleBaseBlockSkeleton, undefined, string> => {
+  return getContentTypeSysId(obj) === 'simpleBaseBlock'
 }
 
 export const isEntryType = (obj: any): obj is Entry => {
