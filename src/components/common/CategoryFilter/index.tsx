@@ -8,7 +8,7 @@ const CategoryFilter = ({ categories }: { categories: string[] }) => {
   const router = useRouter()
   const selectedCategory = router.query.category
 
-  const handleToggleCategory = (category: string) => () => {
+  const toggleCategory = (category: string) => {
     const queryParams = { ...router.query }
 
     if (queryParams.category === category) {
@@ -30,17 +30,15 @@ const CategoryFilter = ({ categories }: { categories: string[] }) => {
     <Grid container className={css.filterWrapper}>
       {categories.map((category) => {
         const isSelected = category === selectedCategory
+        const handleClick = () => toggleCategory(category)
 
         return (
           <Grid item key={category} className={css.filterCard} xs={12} md="auto">
-            <ButtonBase
-              className={clsx(css.filterButton, { [css.selected]: isSelected })}
-              onClick={handleToggleCategory(category)}
-            >
+            <ButtonBase className={clsx(css.filterButton, { [css.selected]: isSelected })} onClick={handleClick}>
               <Typography>
                 {category}
                 {isSelected && (
-                  <IconButton className={css.closeFilter} onClick={handleToggleCategory(category)}>
+                  <IconButton className={css.closeFilter} onClick={handleClick}>
                     <CloseIcon />
                   </IconButton>
                 )}
