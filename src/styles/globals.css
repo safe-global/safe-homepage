@@ -1,6 +1,9 @@
 :root {
   --header-height: 64px;
   --transition-duration: 0.3s;
+
+  scroll-behavior: smooth !important;
+  scroll-padding-top: 100px;
 }
 
 @media (min-width: 600px) {
