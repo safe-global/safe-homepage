@@ -15,14 +15,10 @@ export const enum PressroomIds {
   PRESS_RELEASES = 'press',
 }
 
-const appendHash = (href: string) => {
-  return href.startsWith('#') ? href : `#${href}`
-}
-
 const sections: NavItemType[] = [
-  { label: 'About us', href: appendHash(PressroomIds.ABOUT_US) },
-  { label: 'Safe in the news', href: appendHash(PressroomIds.SAFE_IN_THE_NEWS) },
-  { label: 'Press releases', href: appendHash(PressroomIds.PRESS_RELEASES) },
+  { label: 'About us', href: `#${PressroomIds.ABOUT_US} },
+  { label: 'Safe in the news', href: `#${PressroomIds.SAFE_IN_THE_NEWS}` },
+  { label: 'Press releases', href:`#${PressroomIds.PRESS_RELEASES}` },
   { label: 'Blog', href: AppRoutes.blog.index },
   { label: 'Media kit', href: PRESS_LINK },
 ]

@@ -27,7 +27,7 @@ const Timeline = ({ items }: TimelineProps) => {
   const [activeStep, setActiveStep] = useState(0)
   const isSmallScreen = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'))
 
-  const STEPS_PER_DOT = isSmallScreen ? STEPS_PER_DOT_SM : STEPS_PER_DOT_LG
+  const stepsPerDot = isSmallScreen ? STEPS_PER_DOT_SM : STEPS_PER_DOT_LG
   const stepsNumber = Math.ceil(items.length / STEPS_PER_DOT)
 
   const timelineItems = items.map(({ fields }) => fields)
