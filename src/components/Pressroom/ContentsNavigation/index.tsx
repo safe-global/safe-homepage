@@ -10,29 +10,36 @@ type NavItemType = {
   href: string
 }
 
-export const enum PressroomAnchors {
-  ABOUT_US = '#about',
-  SAFE_IN_THE_NEWS = '#news',
-  PRESS_RELEASES = '#press',
+export const enum PressroomIds {
+  ABOUT_US = 'about',
+  SAFE_IN_THE_NEWS = 'news',
+  PRESS_RELEASES = 'press',
+}
+
+const appendHash = (href: string) => {
+  return href.startsWith('#') ? href : `#${href}`
 }
 
 const sections: NavItemType[] = [
-  { label: 'About us', href: PressroomAnchors.ABOUT_US },
-  { label: 'Safe in the news', href: PressroomAnchors.SAFE_IN_THE_NEWS },
-  { label: 'Press releases', href: PressroomAnchors.PRESS_RELEASES },
+  { label: 'About us', href: appendHash(PressroomIds.ABOUT_US) },
+  { label: 'Safe in the news', href: appendHash(PressroomIds.SAFE_IN_THE_NEWS) },
+  { label: 'Press releases', href: appendHash(PressroomIds.PRESS_RELEASES) },
   { label: 'Blog', href: AppRoutes.blog.index },
   { label: 'Media kit', href: PRESS_LINK },
 ]
 
 const ContentsNavigation = () => {
-  const handleContentTableClick = (e: React.MouseEvent<HTMLAnchorElement>, target: string) => {
+  const handleContentTableClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
 
-    if (!target.startsWith('#')) {
-      return window.open(target, '_blank', 'noopener noreferrer')
+    const href = e.currentTarget.getAttribute('href') || ''
+    const elementId = href?.slice(href.indexOf('#'))
+
+    if (!elementId) {
+      return window.open(href, '_blank', 'noopener noreferrer')
     }
 
-    scrollToElement(target, 100)
+    scrollToElement(elementId, 100)
   }
 
   return (
@@ -44,7 +51,7 @@ const ContentsNavigation = () => {
             <ButtonBase
               LinkComponent={NextLink}
               href={item.href}
-              onClick={(e) => handleContentTableClick(e, item.href)}
+              onClick={handleContentTableClick}
               className={css.navButton}
             >
               <Typography>{item.label}</Typography>

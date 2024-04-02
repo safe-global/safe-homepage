@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 import ShowMoreButton from '@/components/common/ShowMoreButton'
 import SearchIcon from '@/public/images/search.svg'
 import CategoryFilter from '@/components/common/CategoryFilter'
-import { PressroomAnchors } from '@/components/Pressroom/ContentsNavigation'
+import { PressroomIds } from '@/components/Pressroom/ContentsNavigation'
 import { containsTag } from '@/lib/containsTag'
 import { getPage } from '@/lib/getPage'
 
@@ -27,7 +27,7 @@ const PressReleases = ({ allPosts }: { allPosts: BlogPostEntry[] }) => {
   const shouldShowMoreButton = visibleResults.length < allPosts.length
 
   return (
-    <Box id={PressroomAnchors.PRESS_RELEASES.slice(1)} mt={{ xs: '80px', md: '250px' }}>
+    <Box id={PressroomIds.PRESS_RELEASES} mt={{ xs: '80px', md: '250px' }}>
       <Divider sx={{ mb: '140px' }} />
       <Typography variant="h2">Press releases</Typography>
 
