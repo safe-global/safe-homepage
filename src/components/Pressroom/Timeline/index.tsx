@@ -28,7 +28,7 @@ const Timeline = ({ items }: TimelineProps) => {
   const isSmallScreen = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'))
 
   const stepsPerDot = isSmallScreen ? STEPS_PER_DOT_SM : STEPS_PER_DOT_LG
-  const stepsNumber = Math.ceil(items.length / STEPS_PER_DOT)
+  const stepsNumber = Math.ceil(items.length / stepsPerDot)
 
   const timelineItems = items.map(({ fields }) => fields)
 
@@ -53,7 +53,7 @@ const Timeline = ({ items }: TimelineProps) => {
               <StepLabel
                 color="red"
                 StepIconComponent={() => (
-                  <StepIcon icon={idx < (activeStep + 1) * STEPS_PER_DOT ? <FullCircleIcon /> : <EmptyCircleIcon />} />
+                  <StepIcon icon={idx < (activeStep + 1) * stepsPerDot ? <FullCircleIcon /> : <EmptyCircleIcon />} />
                 )}
               />
               <StepCard title={title} text={text} />
