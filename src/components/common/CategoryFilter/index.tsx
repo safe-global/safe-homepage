@@ -4,7 +4,7 @@ import clsx from 'clsx'
 import CloseIcon from '@/public/images/close.svg'
 import css from './styles.module.css'
 
-const CategoryFilter = ({ categories }: { categories: string[] }) => {
+const CategoryFilter = ({ categories, isColumn = false }: { categories: string[]; isColumn?: boolean }) => {
   const router = useRouter()
   const selectedCategory = router.query.category
 
@@ -33,7 +33,7 @@ const CategoryFilter = ({ categories }: { categories: string[] }) => {
         const handleClick = () => toggleCategory(category)
 
         return (
-          <Grid item key={category} className={css.filterCard} xs={12} md="auto">
+          <Grid item key={category} className={css.filterCard} xs={12} md={isColumn ? 12 : 'auto'}>
             <ButtonBase className={clsx(css.filterButton, { [css.selected]: isSelected })} onClick={handleClick}>
               <Typography>
                 {category}

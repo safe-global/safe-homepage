@@ -1,5 +1,5 @@
 import { Step, StepContent, StepLabel, Stepper, Typography } from '@mui/material'
-import CircleIcon from '@/public/images/Wallet/circle.svg'
+import CircleIcon from '@/public/images/circle-empty.svg'
 import css from './styles.module.css'
 import clsx from 'clsx'
 
