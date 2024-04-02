@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Tags from '@/components/Blog/Tags'
-import { Box, Grid, Link, Typography } from '@mui/material'
+import { Box, Grid, Typography } from '@mui/material'
 import css from './styles.module.css'
 import blogCss from '../styles.module.css'
 import { formatBlogDate } from '@/components/Blog/utils/formatBlogDate'
@@ -10,6 +10,7 @@ import { isAsset } from '@/lib/typeGuards'
 import CategoryIcon from '@/public/images/Blog/category-icon.svg'
 import { AppRoutes } from '@/config/routes'
 import { containsTag, PRESS_RELEASE_TAG } from '@/lib/containsTag'
+import NextLink from 'next/link'
 
 const FeaturedPost = (props: BlogPostEntry) => {
   const { slug, coverImage, category, date, title, excerpt, tags, content } = props.fields
@@ -26,7 +27,7 @@ const FeaturedPost = (props: BlogPostEntry) => {
       <Grid container columnSpacing="60px" rowGap={3}>
         <Grid item md={7}>
           {isAsset(coverImage) && coverImage.fields.file?.url ? (
-            <Link href={`/blog/${slug}`}>
+            <NextLink href={`/blog/${slug}`}>
               <Image
                 src={coverImage.fields.file.url}
                 alt={coverImage.fields.title ?? ''}
@@ -34,7 +35,7 @@ const FeaturedPost = (props: BlogPostEntry) => {
                 height={coverImage.fields.file.details.image?.height}
                 className={css.image}
               />
-            </Link>
+            </NextLink>
           ) : undefined}
         </Grid>
 
@@ -50,7 +51,7 @@ const FeaturedPost = (props: BlogPostEntry) => {
             <Typography variant="caption">{formatBlogDate(date)}</Typography>
           </div>
           <Typography variant="h3" className={css.title}>
-            <Link href={`${AppRoutes.blog.index}/${slug}`}>{title}</Link>
+            <NextLink href={`${AppRoutes.blog.index}/${slug}`}>{title}</NextLink>
           </Typography>
           <Typography className={css.excerpt}>{excerpt}</Typography>
 

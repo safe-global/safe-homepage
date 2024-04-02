@@ -4,7 +4,7 @@ import { client, previewClient } from '@/lib/contentful'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
-const fetchDraftContent = async (slug: string, isPreview: boolean) => {
+const fetchContent = async (slug: string, isPreview: boolean) => {
   const cfClient = isPreview ? previewClient : client
 
   const content = await cfClient.getEntries<TypePostSkeleton>({
@@ -18,12 +18,11 @@ const fetchDraftContent = async (slug: string, isPreview: boolean) => {
 const Page = () => {
   const router = useRouter()
   const { slug, secret } = router.query as { slug: any; secret: string }
-  console.log('router query', router.query)
   const [blogPost, setBlogPost] = useState<BlogPostEntry | null>(null)
 
   useEffect(() => {
     if (slug) {
-      fetchDraftContent(slug, !!secret).then((content) => {
+      fetchContent(slug, !!secret).then((content) => {
         setBlogPost(content)
       })
     }
