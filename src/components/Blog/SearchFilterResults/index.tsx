@@ -8,8 +8,9 @@ import Card from '@/components/Blog/Card'
 import SearchIcon from '@/public/images/search.svg'
 import { SpecificCategoryFilter } from '@/components/Ecosystem/Projects/Projects'
 import { scrollToElement } from '@/lib/scrollSmooth'
-import ShowMoreButton, { getPage } from '@/components/common/ShowMoreButton'
+import ShowMoreButton from '@/components/common/ShowMoreButton'
 import CategoryFilter from '@/components/common/CategoryFilter'
+import { getPage } from '@/lib/getPage'
 
 const PAGE_LENGTH = 6
 

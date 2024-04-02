@@ -17,7 +17,6 @@ import clsx from 'clsx'
 import { Fragment, useMemo, useState } from 'react'
 import { useRouter } from 'next/router'
 import NextLink from 'next/link'
-import type { NextRouter } from 'next/router'
 import type { GridProps } from '@mui/material'
 import type { Dispatch, ReactElement, SetStateAction } from 'react'
 
@@ -42,6 +41,7 @@ import { useEcosystemData } from '@/hooks/useEcosystemData'
 import { type BaseBlock } from '@/components/Home/types'
 import Cards from '@/components/Ecosystem/Cards'
 import SearchBar from '@/components/Blog/SearchBar'
+import { getPage, PAGE_QUERY_PARAM } from '@/lib/getPage'
 
 const getUniqueStrings = (entries: string[]) => {
   const uniqueEntries = new Set(entries)
@@ -114,14 +114,6 @@ const GRID_SPACING: GridProps['spacing'] = {
 }
 
 const PAGE_LENGTH = 12
-
-const PAGE_QUERY_PARAM = 'page'
-
-const getPage = (query: NextRouter['query']): number => {
-  const page = Array.isArray(query[PAGE_QUERY_PARAM]) ? query[PAGE_QUERY_PARAM][0] : query[PAGE_QUERY_PARAM]
-
-  return Number(page) || 1
-}
 
 export const Projects = ({ items }: BaseBlock): ReactElement => {
   const [query, setQuery] = useState('')
