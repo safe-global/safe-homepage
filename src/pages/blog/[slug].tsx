@@ -17,15 +17,20 @@ const fetchContent = async (slug: string, isPreview: boolean) => {
 
 const Page = () => {
   const router = useRouter()
+
   const { slug, secret } = router.query as { slug: any; secret: string }
+  console.log('slug & secret', slug, secret)
   const [blogPost, setBlogPost] = useState<BlogPostEntry | null>(null)
 
   useEffect(() => {
     if (slug) {
+      router.push(`/blog/${slug}`)
+
       fetchContent(slug, !!secret).then((content) => {
         setBlogPost(content)
       })
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [secret, slug])
 
   return blogPost ? <BlogPost blogPost={blogPost} isPreview={!!secret} /> : <div>Loading...</div>
