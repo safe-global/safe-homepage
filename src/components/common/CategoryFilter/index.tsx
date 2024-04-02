@@ -7,7 +7,8 @@ import css from './styles.module.css'
 const CategoryFilter = ({ categories }: { categories: string[] }) => {
   const router = useRouter()
   const selectedCategory = router.query.category
-  const handleToggleCategory = (category: string) => {
+
+  const handleToggleCategory = (category: string) => () => {
     const queryParams = { ...router.query }
 
     if (queryParams.category === category) {
@@ -34,12 +35,12 @@ const CategoryFilter = ({ categories }: { categories: string[] }) => {
           <Grid item key={category} className={css.filterCard} xs={12} md="auto">
             <ButtonBase
               className={clsx(css.filterButton, { [css.selected]: isSelected })}
-              onClick={() => handleToggleCategory(category)}
+              onClick={handleToggleCategory(category)}
             >
               <Typography>
                 {category}
                 {isSelected && (
-                  <IconButton className={css.closeFilter} onClick={() => handleToggleCategory(category)}>
+                  <IconButton className={css.closeFilter} onClick={handleToggleCategory(category)}>
                     <CloseIcon />
                   </IconButton>
                 )}
