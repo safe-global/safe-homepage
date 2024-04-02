@@ -3,11 +3,12 @@ import { Box, Divider, Grid, Typography } from '@mui/material'
 import React, { useMemo } from 'react'
 import Card from '@/components/Blog/Card'
 import { useRouter } from 'next/router'
-import ShowMoreButton, { getPage } from '@/components/common/ShowMoreButton'
+import ShowMoreButton from '@/components/common/ShowMoreButton'
 import SearchIcon from '@/public/images/search.svg'
 import CategoryFilter from '@/components/common/CategoryFilter'
 import { PressroomAnchors } from '@/components/Pressroom/ContentsNavigation'
 import { containsTag } from '@/lib/containsTag'
+import { getPage } from '@/lib/getPage'
 
 const categories = ['Safe{Core}', 'Safe{Wallet}', 'Safe{DAO}', 'Ecosystem', 'Institutional', 'Internal']
 

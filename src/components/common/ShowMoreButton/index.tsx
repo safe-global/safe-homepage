@@ -1,14 +1,6 @@
+import { PAGE_QUERY_PARAM } from '@/lib/getPage'
 import { Box, Button } from '@mui/material'
-import { type NextRouter } from 'next/router'
 import NextLink from 'next/link'
-
-const PAGE_QUERY_PARAM = 'page'
-
-export const getPage = (query: NextRouter['query']): number => {
-  const page = Array.isArray(query[PAGE_QUERY_PARAM]) ? query[PAGE_QUERY_PARAM][0] : query[PAGE_QUERY_PARAM]
-
-  return Number(page) || 1
-}
 
 const ShowMoreButton = ({ page }: { page: number }) => (
   <Box display="flex" justifyContent="center" mt="60px">
