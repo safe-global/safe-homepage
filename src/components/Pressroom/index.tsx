@@ -60,7 +60,6 @@ const PressRoom = ({ pressRoom, allPosts, totalAssets }: PressRoomProps) => {
         <News news={newsList} />
         <Podcasts podcasts={podcastsList} />
         <FeaturedVideos videos={videosList} />
-        <PressReleases allPosts={pressPosts} />
         <MediaKit />
       </Container>
     </>
