@@ -1,0 +1,123 @@
+.parallaxWrapper {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  width: 342px;
+}
+
+.baseImage {
+  width: 100%;
+  height: 240px;
+}
+
+.stepZero {
+  position: absolute;
+  bottom: 149px;
+  left: 36px;
+  width: 41px;
+}
+
+.stepOne {
+  position: absolute;
+  bottom: 72px;
+  left: 130px;
+  width: 41px;
+}
+
+.stepTwo {
+  position: absolute;
+  bottom: 164px;
+  left: 262px;
+  width: 41px;
+}
+
+.stepFour {
+  position: absolute;
+  /* bottom: 149px; */
+  /* left: 36px; */
+  width: 41px;
+}
+
+.stepFive {
+  position: absolute;
+  /* bottom: 72px;
+  left: 130px; */
+  width: 41px;
+}
+
+.stepSix {
+  position: absolute;
+  /* bottom: 164px;
+  left: 262px; */
+  width: 41px;
+}
+
+@media (min-width: 600px) {
+  .parallaxWrapper {
+    width: 570px;
+  }
+
+  .baseImage {
+    height: 404px;
+  }
+
+  .stepZero {
+    bottom: 253px;
+    left: 36px;
+  }
+
+  .stepOne {
+    bottom: 235px;
+    left: 235px;
+  }
+
+  .stepTwo {
+    bottom: 380px;
+    left: 370px;
+  }
+
+  .stepFour {
+    bottom: 83px;
+    left: 36px;
+  }
+
+  .stepFive {
+    bottom: -20px;
+    left: 255px;
+  }
+
+  .stepSix {
+    bottom: 130px;
+    left: 423px;
+  }
+}
+
+.movingBox {
+  border: 1px solid var(--mui-palette-primary-main);
+  border-radius: 16px;
+  padding: 24px;
+  width: auto;
+  min-width: 158px;
+  background-color: var(--mui-palette-background-default);
+}
+
+.shadow {
+  border-radius: 16px;
+  width: calc(100% + 2px);
+  position: absolute;
+  left: -1px;
+  background-color: var(--mui-palette-background-default);
+  border: 1px solid;
+}
+
+.first {
+  height: 36px;
+  border-color: var(--mui-palette-border-main);
+  z-index: -1;
+}
+
+.second {
+  height: 48px;
+  border-color: var(--mui-palette-border-light);
+  z-index: -2;
+}
