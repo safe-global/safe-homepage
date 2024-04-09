@@ -4,6 +4,8 @@ import { type TypeLandingPageSkeleton } from '@/contentful/types'
 import Page, { type LandingPageEntry } from '@/components/common/Page'
 
 const LandingPage = (props: { landingPage: LandingPageEntry }) => {
+  if (!props.landingPage) return null
+
   return <Page {...props} />
 }
 
