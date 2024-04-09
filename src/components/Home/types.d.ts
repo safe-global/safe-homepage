@@ -1,5 +1,7 @@
 import type { DetailedHTMLProps, ImgHTMLAttributes } from 'react'
 import type { ButtonProps } from '@mui/material'
+import type { TypeBaseBlockSkeleton } from '@/contentful/types'
+import type { Entry } from 'contentful'
 
 type BaseBlock = {
   title: string | JSX.Element
@@ -22,3 +24,5 @@ type Button = {
   variant: 'button' | 'link'
   color?: ButtonProps['color']
 }
+
+type BaseBlockEntry = Entry<TypeBaseBlockSkeleton, undefined, string>

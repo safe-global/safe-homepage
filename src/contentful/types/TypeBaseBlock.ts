@@ -3,7 +3,7 @@ import type { TypeExternalUrlSkeleton } from './TypeExternalUrl'
 
 export interface TypeBaseBlockFields {
   caption?: EntryFieldTypes.Symbol
-  title: EntryFieldTypes.Symbol
+  title: EntryFieldTypes.RichText
   text?: EntryFieldTypes.Symbol
   link?: EntryFieldTypes.EntryLink<TypeExternalUrlSkeleton>
   image?: EntryFieldTypes.AssetLink
