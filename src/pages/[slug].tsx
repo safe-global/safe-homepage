@@ -15,6 +15,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const landingPageEntries = await client.getEntries<TypeLandingPageSkeleton>({
     content_type: 'landingPage',
     'fields.slug': slug,
+    include: 3,
   })
 
   const landingPage = landingPageEntries.items[0]
