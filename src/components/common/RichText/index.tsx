@@ -44,6 +44,10 @@ const options: Options = {
         </Typography>
       )
     },
+    [BLOCKS.HEADING_5]: (node: Heading3) => {
+      const text = node.content.find(isText)?.value
+      return <Typography variant="h5">{text}</Typography>
+    },
     [BLOCKS.EMBEDDED_ASSET]: (node: Node) => {
       const { title, description, file } = node.data.target.fields
 

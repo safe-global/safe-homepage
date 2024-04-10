@@ -1,11 +1,8 @@
 import { Box, Container, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
-import type { TypeBaseBlockSkeleton } from '@/contentful/types'
-import type { Entry } from 'contentful'
+import { type BaseBlockEntry } from '@/components/Home/types'
 import RichText from '@/components/common/RichText'
 import css from './styles.module.css'
-
-type BaseBlockEntry = Entry<TypeBaseBlockSkeleton, undefined, string>
 
 const CenteredTextBlock = (props: BaseBlockEntry) => {
   const { caption, title, text } = props.fields

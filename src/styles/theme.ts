@@ -92,7 +92,8 @@ export const theme = createTheme({
       },
     },
     h5: {
-      fontSize: '16px',
+      fontSize: '24px',
+      lineHeight: '32px',
     },
     body1: {
       fontSize: '16px',
