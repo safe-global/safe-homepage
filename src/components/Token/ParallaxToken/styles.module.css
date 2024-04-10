@@ -10,49 +10,85 @@
   height: 240px;
 }
 
-.stepZero {
+.movingBox {
   position: absolute;
-  bottom: 149px;
-  left: 36px;
-  width: 41px;
+  border: 1px solid var(--mui-palette-primary-main);
+  border-radius: 8px;
+  padding: 8px;
+  min-width: 100px;
+  width: auto;
+  background-color: var(--mui-palette-background-default);
+}
+
+.shadow {
+  border-radius: 8px;
+  width: calc(100% + 2px);
+  position: absolute;
+  left: -1px;
+  background-color: var(--mui-palette-background-default);
+  border: 1px solid;
+}
+
+.first {
+  height: 16px;
+  border-color: var(--mui-palette-border-main);
+  z-index: -1;
+}
+
+.second {
+  height: 24px;
+  border-color: var(--mui-palette-border-light);
+  z-index: -2;
+}
+
+.stepZero {
+  bottom: 168px;
 }
 
 .stepOne {
-  position: absolute;
-  bottom: 72px;
-  left: 130px;
-  width: 41px;
+  bottom: 146px;
+  left: 122px;
 }
 
 .stepTwo {
-  position: absolute;
-  bottom: 164px;
-  left: 262px;
-  width: 41px;
+  bottom: 235px;
+  left: 218px;
 }
 
 .stepFour {
-  position: absolute;
-  /* bottom: 149px; */
-  /* left: 36px; */
-  width: 41px;
+  bottom: 56px;
 }
 
 .stepFive {
-  position: absolute;
-  /* bottom: 72px;
-  left: 130px; */
-  width: 41px;
+  bottom: 26px;
+  left: 146px;
 }
 
 .stepSix {
-  position: absolute;
-  /* bottom: 164px;
-  left: 262px; */
-  width: 41px;
+  left: 236px;
+  bottom: 100px;
 }
 
 @media (min-width: 600px) {
+  .movingBox {
+    border-radius: 16px;
+    padding: 24px;
+    width: auto;
+    min-width: 158px;
+  }
+
+  .shadow {
+    border-radius: 16px;
+  }
+
+  .first {
+    height: 36px;
+  }
+
+  .second {
+    height: 48px;
+  }
+
   .parallaxWrapper {
     width: 570px;
   }
@@ -90,34 +126,4 @@
     bottom: 130px;
     left: 423px;
   }
-}
-
-.movingBox {
-  border: 1px solid var(--mui-palette-primary-main);
-  border-radius: 16px;
-  padding: 24px;
-  width: auto;
-  min-width: 158px;
-  background-color: var(--mui-palette-background-default);
-}
-
-.shadow {
-  border-radius: 16px;
-  width: calc(100% + 2px);
-  position: absolute;
-  left: -1px;
-  background-color: var(--mui-palette-background-default);
-  border: 1px solid;
-}
-
-.first {
-  height: 36px;
-  border-color: var(--mui-palette-border-main);
-  z-index: -1;
-}
-
-.second {
-  height: 48px;
-  border-color: var(--mui-palette-border-light);
-  z-index: -2;
 }
