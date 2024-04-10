@@ -89,37 +89,23 @@ export const theme = createTheme({
     h4: {
       fontSize: '32px',
       lineHeight: '36px',
-
-      '@media (min-width:600px)': {
-        fontSize: '32px',
-        lineHeight: '36px',
-      },
     },
     h5: {
       fontSize: '24px',
       lineHeight: '32px',
-
-      '@media (min-width:600px)': {
-        fontSize: '24px',
-        lineHeight: '32px',
-      },
     },
     body1: {
       fontSize: '20px',
       lineHeight: '28px',
-
-      '@media (min-width:600px)': {
-        fontSize: '20px',
-        lineHeight: '28px',
-      },
     },
     body2: {
       fontSize: '15px',
       lineHeight: '24px',
     },
     caption: {
-      fontSize: '12px',
+      fontSize: '14px',
       lineHeight: '24px',
+      letterSpacing: '0.1em',
       fontWeight: 500,
       textTransform: 'uppercase',
       color: palette.primary.light,
