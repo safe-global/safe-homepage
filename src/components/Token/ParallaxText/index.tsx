@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { Container, Grid, Typography } from '@mui/material'
+import { Container, Grid } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 import type { BaseBlockEntry } from '@/components/Home/types'
@@ -14,7 +14,7 @@ export type ParallaxTextProps = BaseBlockEntry & {
 }
 
 const ParallaxText = (props: ParallaxTextProps) => {
-  const { caption, title, text, buttons } = props.fields
+  const { title, buttons } = props.fields
   const { variant, children } = props
 
   const buttonsList = buttons?.filter(isEntryTypeButton) || []
@@ -27,14 +27,8 @@ const ParallaxText = (props: ParallaxTextProps) => {
         spacing={{ xs: 6, md: '30px', xl: '50px' }}
         justifyContent="space-between"
       >
-        <Grid item xs={12} md={5} display="flex" flexDirection="column" justifyContent="center" gap={{ xs: 3, md: 4 }}>
-          {caption && (
-            <Typography variant="caption" component="div">
-              {caption}
-            </Typography>
-          )}
+        <Grid item xs={12} md={5} display="flex" flexDirection="column" justifyContent="center">
           <RichText {...title} />
-          <Typography className={css.textBlock}>{text}</Typography>
           <ButtonsWrapper buttons={buttonsList} />
         </Grid>
         <Grid item xs={12} md={6} display="flex" alignItems="center">
