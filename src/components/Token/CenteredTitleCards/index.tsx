@@ -25,9 +25,7 @@ const CardIconLink = (props: BaseBlockEntry) => {
 
         {link && isEntryTypeExternalURL(link) ? (
           <SafeLink href={link.fields.url}>
-            <LinkButton underline={false} fullSize>
-              {link.fields.title}
-            </LinkButton>
+            <LinkButton underline={false}>{link.fields.title}</LinkButton>
           </SafeLink>
         ) : undefined}
       </div>

@@ -12,10 +12,10 @@ const CenteredTextBlock = (props: BaseBlockEntry) => {
       <Typography variant="caption" textAlign="center">
         {caption}
       </Typography>
-      <Box textAlign="center" mt={2}>
+      <Box textAlign="center">
         <RichText {...title} />
       </Box>
-      <Typography textAlign="center" mb={3}>
+      <Typography textAlign="center" mb={3} maxWidth="725px" marginX="auto">
         {text}
       </Typography>
     </Container>

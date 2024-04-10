@@ -33,9 +33,7 @@ const ParallaxText = (props: ParallaxTextProps) => {
               {caption}
             </Typography>
           )}
-          <Typography variant="h2">
-            <RichText {...title} />
-          </Typography>
+          <RichText {...title} />
           <Typography className={css.textBlock}>{text}</Typography>
           <ButtonsWrapper buttons={buttonsList} />
         </Grid>
