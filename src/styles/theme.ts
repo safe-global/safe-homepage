@@ -60,18 +60,17 @@ export const theme = createTheme({
   typography: {
     fontFamily: 'Citerne, sans-serif',
     h1: {
-      fontSize: '56px',
-      lineHeight: '60px',
-      fontWeight: 400,
+      fontSize: '50px',
+      lineHeight: '56px',
 
       '@media (min-width:600px)': {
-        fontSize: '80px',
-        lineHeight: '82px',
+        fontSize: '90px',
+        lineHeight: '100px',
       },
     },
     h2: {
-      fontSize: '40px',
-      lineHeight: '44px',
+      fontSize: '44px',
+      lineHeight: '56px',
 
       '@media (min-width:600px)': {
         fontSize: '60px',
@@ -79,38 +78,48 @@ export const theme = createTheme({
       },
     },
     h3: {
-      fontSize: '32px',
-      lineHeight: '36px',
+      fontSize: '40px',
+      lineHeight: '44px',
+
+      '@media (min-width:600px)': {
+        fontSize: '48px',
+        lineHeight: '56px',
+      },
     },
     h4: {
-      fontSize: '20px',
-      lineHeight: '30px',
+      fontSize: '32px',
+      lineHeight: '36px',
+
+      '@media (min-width:600px)': {
+        fontSize: '32px',
+        lineHeight: '36px',
+      },
+    },
+    h5: {
+      fontSize: '24px',
+      lineHeight: '32px',
 
       '@media (min-width:600px)': {
         fontSize: '24px',
         lineHeight: '32px',
       },
     },
-    h5: {
-      fontSize: '16px',
-    },
     body1: {
-      fontSize: '16px',
-      lineHeight: '24px',
+      fontSize: '20px',
+      lineHeight: '28px',
 
       '@media (min-width:600px)': {
-        fontSize: '18px',
+        fontSize: '20px',
         lineHeight: '28px',
       },
     },
     body2: {
-      fontSize: '14px',
+      fontSize: '15px',
       lineHeight: '24px',
     },
     caption: {
       fontSize: '12px',
       lineHeight: '24px',
-      letterSpacing: '0.1em',
       fontWeight: 500,
       textTransform: 'uppercase',
       color: palette.primary.light,
