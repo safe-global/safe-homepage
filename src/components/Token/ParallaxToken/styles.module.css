@@ -10,7 +10,7 @@
   height: 240px;
 }
 
-.movingBox {
+.movingElement {
   position: absolute;
   border: 1px solid var(--mui-palette-primary-main);
   border-radius: 8px;
@@ -55,22 +55,22 @@
   left: 218px;
 }
 
-.stepFour {
+.stepThree {
   bottom: 56px;
 }
 
-.stepFive {
+.stepFour {
   bottom: 26px;
   left: 146px;
 }
 
-.stepSix {
+.stepFive {
   left: 236px;
   bottom: 100px;
 }
 
 @media (min-width: 600px) {
-  .movingBox {
+  .movingElement {
     border-radius: 16px;
     padding: 24px;
     width: auto;
@@ -98,7 +98,7 @@
   }
 
   .stepZero {
-    bottom: 253px;
+    bottom: 298px;
     left: 36px;
   }
 
@@ -112,18 +112,18 @@
     left: 370px;
   }
 
-  .stepFour {
-    bottom: 83px;
+  .stepThree {
+    bottom: 128px;
     left: 36px;
   }
 
-  .stepFive {
-    bottom: -20px;
+  .stepFour {
+    bottom: 25px;
     left: 255px;
   }
 
-  .stepSix {
-    bottom: 130px;
+  .stepFive {
+    bottom: 175px;
     left: 423px;
   }
 }

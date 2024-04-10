@@ -3,6 +3,7 @@ import type { TypeButtonSkeleton } from './TypeButton'
 import type { TypeExternalUrlSkeleton } from './TypeExternalUrl'
 
 export interface TypeBaseBlockFields {
+  component?: EntryFieldTypes.Symbol
   caption?: EntryFieldTypes.Symbol
   title: EntryFieldTypes.RichText
   text?: EntryFieldTypes.Symbol
@@ -10,7 +11,6 @@ export interface TypeBaseBlockFields {
   link?: EntryFieldTypes.EntryLink<TypeExternalUrlSkeleton>
   image?: EntryFieldTypes.AssetLink
   items?: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeBaseBlockSkeleton>>
-  component: EntryFieldTypes.Symbol
 }
 
 export type TypeBaseBlockSkeleton = EntrySkeletonType<TypeBaseBlockFields, 'baseBlock'>
