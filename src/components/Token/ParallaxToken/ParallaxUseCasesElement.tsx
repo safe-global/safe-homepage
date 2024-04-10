@@ -1,5 +1,6 @@
 import FrameImage from '@/public/images/Governance/Parallaxes/GovernanceProcess/background.svg'
 import ParallaxWrapper from '@/components/common/ParallaxWrapper'
+import { Typography } from '@mui/material'
 import css from './styles.module.css'
 
 const TrailingShadow = () => (
@@ -15,7 +16,7 @@ const ParallaxGovernanceProcessElement = () => {
       <FrameImage className={css.baseImage} />
       <ParallaxWrapper translateX={0} translateY={0} depth={2} direction={-1}>
         <div className={`${css.movingBox} ${css.stepZero}`}>
-          Payments
+          <Typography>Payments</Typography>
           <TrailingShadow />
         </div>
       </ParallaxWrapper>
