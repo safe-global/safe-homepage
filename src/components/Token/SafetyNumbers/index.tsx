@@ -2,10 +2,13 @@ import RichText from '@/components/common/RichText'
 import { type BaseBlockEntry } from '@/components/Home/types'
 import { Container, Grid, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
-import Marquee from '@/components/Pressroom/Marquee'
+import Marquee from '@/components/common/Marquee'
+import { isEntryTypeBaseBlock } from '@/lib/typeGuards'
 
 const SafetyNumbers = (props: BaseBlockEntry) => {
-  const { title, text } = props.fields
+  const { title, text, items } = props.fields
+
+  const numbersList = items?.filter(isEntryTypeBaseBlock) || []
 
   return (
     <>
@@ -20,13 +23,7 @@ const SafetyNumbers = (props: BaseBlockEntry) => {
         </Grid>
       </Container>
 
-      {/* 
-        total transactions
-        safe accounts deployed
-        fundraised
-        value stored
-      */}
-      <Marquee items={[]} />
+      <Marquee items={numbersList} />
     </>
   )
 }

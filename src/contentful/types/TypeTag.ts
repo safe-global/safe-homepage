@@ -13,6 +13,7 @@ export interface TypeTagFields {
     | 'NFT'
     | 'New Feature'
     | 'Press'
+    | 'Safe'
     | 'Safe{Core}'
     | 'Safe{DAO}'
     | 'Safe{Wallet}'
