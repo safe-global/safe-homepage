@@ -1,0 +1,93 @@
+.heroContainer {
+  position: absolute;
+  width: 100%;
+  min-height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.tokenContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tokenCircle1 {
+  border-radius: 50%;
+  position: absolute;
+  transform: rotate(180deg);
+  z-index: 20;
+  width: 286px;
+  height: 286px;
+  background: linear-gradient(180deg, rgba(18, 255, 128, 0.04) 0%, rgba(115, 115, 115, 0) 100%);
+}
+
+.tokenCircle2 {
+  border-radius: 50%;
+  position: absolute;
+  z-index: 20;
+  width: 518px;
+  height: 518px;
+  background: linear-gradient(180deg, rgba(18, 255, 128, 0.04) 0%, rgba(115, 115, 115, 0) 100%);
+}
+
+.tokenCircle3 {
+  border-radius: 50%;
+  position: absolute;
+  z-index: 10;
+  width: 331.19px;
+  height: 331.19px;
+  background: rgba(18, 255, 128, 0.3);
+  filter: blur(100px);
+}
+
+.tokenImage {
+  z-index: 20;
+}
+
+.label {
+  position: absolute;
+  z-index: 30;
+  margin-top: 264px;
+}
+
+.orbitRingsContainer {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.orbitRing1 {
+  width: 300px;
+  height: 300px;
+}
+
+.orbitRing2 {
+  position: absolute;
+  width: 588px;
+  height: 588px;
+}
+
+.orbitRing3 {
+  position: absolute;
+  width: 730px;
+  height: 730px;
+}
+
+.orbitRing4 {
+  position: absolute;
+  width: 900px;
+  height: 900px;
+}
+
+.orbitRing5 {
+  position: absolute;
+  width: 1090px;
+  height: 1090px;
+}
