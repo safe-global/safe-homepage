@@ -32,17 +32,23 @@ const options: Options = {
       return <Typography variant="h1">{text}</Typography>
     },
     [BLOCKS.HEADING_2]: (node: Heading2) => {
-      const content = node.content.filter(isText).map((node) => {
+      const content = node.content.filter(isText).map((node, index) => {
         const isBold = node.marks.some((mark) => mark.type === 'bold')
-        return isBold ? <b>{node.value}</b> : <span>{node.value}</span>
+        return isBold ? <b key={index}>{node.value}</b> : <span key={index}>{node.value}</span>
       })
 
       return <Typography variant="h2">{content}</Typography>
     },
     [BLOCKS.HEADING_3]: (node: Heading3) => {
-      const content = node.content.filter(isText).map((node) => {
+      const content = node.content.filter(isText).map((node, index) => {
         const isBold = node.marks.some((mark) => mark.type === 'bold')
-        return isBold ? <b>{node.value}</b> : <span id={kebabCase(node.value)}>{node.value}</span>
+        return isBold ? (
+          <b key={index}>{node.value}</b>
+        ) : (
+          <span key={index} id={kebabCase(node.value)}>
+            {node.value}
+          </span>
+        )
       })
 
       return <Typography variant="h3">{content}</Typography>

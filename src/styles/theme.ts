@@ -105,11 +105,11 @@ export const theme = createTheme({
       },
     },
     body2: {
-      fontSize: '14px',
+      fontSize: '15px',
       lineHeight: '24px',
     },
     caption: {
-      fontSize: '12px',
+      fontSize: '14px',
       lineHeight: '24px',
       letterSpacing: '0.1em',
       fontWeight: 500,
