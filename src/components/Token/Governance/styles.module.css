@@ -4,6 +4,8 @@
   overflow: auto;
 }
 
-.container {
-  margin-bottom: 140px;
+@media (min-width: 600px) {
+  .container {
+    margin-bottom: 140px;
+  }
 }
