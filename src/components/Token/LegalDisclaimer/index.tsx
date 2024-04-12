@@ -7,7 +7,7 @@ const LegalDisclaimer = (props: BaseBlockEntry) => {
   const { caption, title } = props.fields
 
   return (
-    <Container className={layoutCss.containerMedium}>
+    <Container className={layoutCss.containerShort}>
       <Typography variant="caption">{caption}</Typography>
       <Typography variant="body2" color="primary.light" component="div">
         <RichText {...title} />

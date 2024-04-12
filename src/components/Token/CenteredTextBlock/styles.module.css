@@ -16,3 +16,7 @@
   margin: 24px auto 0;
   max-width: 725px;
 }
+
+.text p {
+  margin: 0;
+}

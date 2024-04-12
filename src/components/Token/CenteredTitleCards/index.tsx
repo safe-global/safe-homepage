@@ -1,4 +1,4 @@
-import { Container, Grid, Typography } from '@mui/material'
+import { Box, Container, Grid } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import { type BaseBlockEntry } from '@/components/Home/types'
 import RichText from '@/components/common/RichText'
@@ -20,7 +20,11 @@ const CardIconLink = (props: BaseBlockEntry) => {
         <div>
           <RichText {...title} />
 
-          <Typography color="primary.light">{text}</Typography>
+          {text && (
+            <Box color="primary.light">
+              <RichText {...text} />
+            </Box>
+          )}
         </div>
 
         {link && isEntryTypeExternalURL(link) ? (
@@ -43,7 +47,7 @@ const CenteredTitleCards = (props: BaseBlockEntry) => {
       <div className={css.textBlockContainer}>
         <RichText {...title} />
 
-        <Typography>{text}</Typography>
+        {text && <RichText {...text} />}
       </div>
 
       <Grid container columnSpacing="30px" rowGap="16px" mt={{ xs: '40px', md: '80px' }}>

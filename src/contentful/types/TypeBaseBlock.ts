@@ -6,7 +6,7 @@ export interface TypeBaseBlockFields {
   component?: EntryFieldTypes.Symbol
   caption?: EntryFieldTypes.Symbol
   title: EntryFieldTypes.RichText
-  text?: EntryFieldTypes.Symbol
+  text?: EntryFieldTypes.RichText
   buttons?: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeButtonSkeleton>>
   link?: EntryFieldTypes.EntryLink<TypeExternalUrlSkeleton>
   image?: EntryFieldTypes.AssetLink

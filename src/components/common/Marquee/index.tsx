@@ -2,6 +2,7 @@ import { Typography } from '@mui/material'
 import clsx from 'clsx'
 import { type BaseBlockEntry } from '@/components/Home/types'
 import css from './styles.module.css'
+import RichText from '@/components/common/RichText'
 
 const Row = ({ items }: { items: BaseBlockEntry[] }) => (
   <div className={css.rowWrapper}>
@@ -10,7 +11,11 @@ const Row = ({ items }: { items: BaseBlockEntry[] }) => (
 
       return (
         <div key={`${caption}_${i}`}>
-          <p className={css.value}>{text}</p>
+          {text && (
+            <div className={css.value}>
+              <RichText {...text} />
+            </div>
+          )}
           <Typography variant="caption">{caption}</Typography>
         </div>
       )
