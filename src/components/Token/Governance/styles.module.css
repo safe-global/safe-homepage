@@ -1,0 +1,9 @@
+.bg {
+  background-position: center top 180px;
+  background-repeat: no-repeat;
+  overflow: auto;
+}
+
+.container {
+  margin-bottom: 140px;
+}
