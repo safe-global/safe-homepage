@@ -44,6 +44,10 @@
   color: transparent;
 }
 
+.value p {
+  margin: 0;
+}
+
 .gradientBase {
   position: absolute;
   width: var(--items-gap);
