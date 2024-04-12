@@ -9,7 +9,7 @@ const LegalDisclaimer = (props: BaseBlockEntry) => {
   return (
     <Container className={layoutCss.containerMedium}>
       <Typography variant="caption">{caption}</Typography>
-      <Typography variant="body2" color="primary.light">
+      <Typography variant="body2" color="primary.light" component="div">
         <RichText {...title} />
       </Typography>
     </Container>
