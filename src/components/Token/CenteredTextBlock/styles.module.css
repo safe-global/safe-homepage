@@ -3,3 +3,16 @@
   flex-direction: column;
   justify-content: center;
 }
+
+.centeredContent > * {
+  text-align: center;
+}
+
+.title {
+  margin-top: 16px;
+}
+
+.text {
+  margin: 24px auto 0;
+  max-width: 725px;
+}

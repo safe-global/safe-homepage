@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from '@mui/material'
+import { Container, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import { type BaseBlockEntry } from '@/components/Home/types'
 import RichText from '@/components/common/RichText'
@@ -9,15 +9,13 @@ const CenteredTextBlock = (props: BaseBlockEntry) => {
 
   return (
     <Container className={`${layoutCss.container} ${css.centeredContent}`}>
-      <Typography variant="caption" textAlign="center">
-        {caption}
-      </Typography>
-      <Box textAlign="center">
+      <Typography variant="caption">{caption}</Typography>
+      <div className={css.title}>
         <RichText {...title} />
-      </Box>
-      <Typography textAlign="center" mb={3} maxWidth="725px" marginX="auto">
-        {text}
-      </Typography>
+      </div>
+      <div className={css.text}>
+        <Typography>{text}</Typography>
+      </div>
     </Container>
   )
 }

@@ -16,10 +16,10 @@ const Governance = (props: BaseBlockEntry) => {
   return (
     <div className={css.bg} style={{ backgroundImage: `url(${backgroundUrl})` }}>
       <Container className={`${layoutCss.containerMedium} ${css.container}`}>
-        <Grid container columnSpacing={2} rowGap="30px">
+        <Grid container columnSpacing={2} rowGap="20px">
           <Grid item xs={12} md={6}>
             <Typography variant="caption">{caption}</Typography>
-            <Box mt="48px">
+            <Box mt={{ xs: '20px', md: '48px' }}>
               <RichText {...title} />
             </Box>
           </Grid>
@@ -28,7 +28,7 @@ const Governance = (props: BaseBlockEntry) => {
           </Grid>
         </Grid>
 
-        <Grid container columnSpacing={2} rowGap="30px" mt="80px">
+        <Grid container columnSpacing={2} rowGap="30px" mt={{ xs: '40px', md: '80px' }}>
           {itemsList.map((item, index) => (
             <Grid key={index} item xs={12} md={4}>
               <LinkCard {...item} />
