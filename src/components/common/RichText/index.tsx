@@ -8,6 +8,7 @@ import {
   type Heading1,
   type Heading2,
   type Heading3,
+  type Heading5,
 } from '@contentful/rich-text-types'
 import css from './styles.module.css'
 import { Typography } from '@mui/material'
@@ -51,7 +52,7 @@ const options: Options = {
         </Typography>
       )
     },
-    [BLOCKS.HEADING_5]: (node: Heading3) => {
+    [BLOCKS.HEADING_5]: (node: Heading5) => {
       const text = node.content.find(isText)?.value
       return <Typography variant="h5">{text}</Typography>
     },
