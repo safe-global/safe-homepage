@@ -11,6 +11,7 @@ export interface TypeBaseBlockFields {
   link?: EntryFieldTypes.EntryLink<TypeExternalUrlSkeleton>
   image?: EntryFieldTypes.AssetLink
   items?: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeBaseBlockSkeleton>>
+  bgImage?: EntryFieldTypes.AssetLink
 }
 
 export type TypeBaseBlockSkeleton = EntrySkeletonType<TypeBaseBlockFields, 'baseBlock'>
