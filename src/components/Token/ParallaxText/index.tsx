@@ -35,6 +35,7 @@ const ParallaxText = (props: ParallaxTextProps) => {
           </div>
           <ButtonsWrapper buttons={buttonsList} />
         </Grid>
+
         <Grid item xs={12} md={6} display="flex" alignItems="center">
           {children}
         </Grid>
