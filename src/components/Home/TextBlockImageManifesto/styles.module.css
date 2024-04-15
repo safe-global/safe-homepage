@@ -6,8 +6,12 @@
   height: 100%;
 }
 
+.bgImage {
+  max-width: 540px;
+}
+
 .image {
   position: absolute;
   width: 90%;
-  top: calc(50 - 150px);
+  max-width: 440px;
 }

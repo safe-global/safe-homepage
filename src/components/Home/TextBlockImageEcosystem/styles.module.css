@@ -8,10 +8,11 @@
 
 .bgImage {
   margin-left: -10%;
+  max-width: 540px;
 }
 
 .image {
   position: absolute;
   width: 100%;
-  top: calc(50 - 150px);
+  max-width: 675px;
 }
