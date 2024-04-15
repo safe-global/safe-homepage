@@ -1,0 +1,13 @@
+.imageWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.image {
+  position: absolute;
+  width: 90%;
+  top: calc(50 - 150px);
+}

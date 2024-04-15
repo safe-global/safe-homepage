@@ -38,7 +38,26 @@
       "alt": "Hands holding code brackets"
     },
     "mobileVariant": "text-image",
-    "component": "common/TextBlockImage"
+    "component": "Home/TextBlockImageManifesto"
+  },
+  {
+    "caption": "Ecosystem",
+    "variant": "image-text",
+    "title": "Research & discover real projects powered by <i><b>Safe</i></b>",
+    "text": "200+ ecosystem projects are built on the Safe smart account standard.",
+    "buttons": [
+      {
+        "text": "Explore ecosystem",
+        "href": "https://safe.global/ecosystem",
+        "variant": "button"
+      }
+    ],
+    "image": {
+      "src": "/images/Home/ecosystem-partners.png",
+      "alt": "Hands holding code brackets"
+    },
+    "mobileVariant": "text-image",
+    "component": "Home/TextBlockImageEcosystem"
   },
   {
     "caption": "Safe at scale",

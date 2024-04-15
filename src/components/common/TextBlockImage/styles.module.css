@@ -12,22 +12,6 @@
   flex-direction: column;
 }
 
-.imageWrapper {
-  position: relative;
-}
-
-.bgImage {
-  width: 100%;
-  height: auto;
-}
-
-.image {
-  position: absolute;
-  width: 305px;
-  bottom: 28px;
-  left: 22px;
-}
-
 @media (min-width: 600px) {
   .textFirst {
     flex-direction: row;
@@ -35,11 +19,5 @@
 
   .imageFirst {
     flex-direction: row-reverse;
-  }
-
-  .image {
-    width: 440px;
-    bottom: 75px;
-    left: 60px;
   }
 }
