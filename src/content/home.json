@@ -23,6 +23,24 @@
     "component": "Home/Intro"
   },
   {
+    "caption": "Ethereum's transition to Smart Accounts",
+    "variant": "text-image",
+    "title": "Safe envisions a future where every onchain account is a <b>smart account</b>",
+    "buttons": [
+      {
+        "text": "Read our vision & roadmap",
+        "href": "https://safe.global/blog/future-of-safe",
+        "variant": "link"
+      }
+    ],
+    "image": {
+      "src": "/images/Home/manifesto-hands.png",
+      "alt": "Hands holding code brackets"
+    },
+    "mobileVariant": "text-image",
+    "component": "common/TextBlockImage"
+  },
+  {
     "caption": "Safe at scale",
     "title": "<i>Safe</i> accounts hold and protect billions of $$$ in assets",
     "text": "Previously called Gnosis Safe, <i>Safe</i> spun out with a mission to build a better standard for ownership with smart accounts",
