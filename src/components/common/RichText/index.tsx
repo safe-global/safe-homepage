@@ -42,16 +42,14 @@ const options: Options = {
     [BLOCKS.HEADING_3]: (node: Heading3) => {
       const content = node.content.filter(isText).map((node, index) => {
         const isBold = node.marks.some((mark) => mark.type === 'bold')
-        return isBold ? (
-          <b key={index}>{node.value}</b>
-        ) : (
-          <span key={index} id={kebabCase(node.value)}>
-            {node.value}
-          </span>
-        )
+        return isBold ? <b key={index}>{node.value}</b> : <span key={index}>{node.value}</span>
       })
 
-      return <Typography variant="h3">{content}</Typography>
+      return (
+        <Typography variant="h3" id={kebabCase(node.content.find(isText)?.value)}>
+          {content}
+        </Typography>
+      )
     },
     [BLOCKS.HEADING_5]: (node: Heading3) => {
       const text = node.content.find(isText)?.value
