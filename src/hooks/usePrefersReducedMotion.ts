@@ -7,7 +7,6 @@ const usePrefersReducedMotion = (): boolean => {
 
   useEffect(() => {
     const mediaQueryList = window.matchMedia(QUERY)
-    console.log(`Initial reduced motion preference: ${mediaQueryList.matches}`)
     setPrefersReducedMotion(mediaQueryList.matches)
 
     const listener = (event: MediaQueryListEvent) => {
