@@ -7,7 +7,7 @@ interface OrbitPathProps {
   children?: React.ReactNode
 }
 
-const OrbitPath: React.FC<OrbitPathProps> = ({ diameter, duration, direction, children }) => {
+const OrbitPath = ({ diameter, duration, direction, children }: OrbitPathProps) => {
   const rotateValue = direction === 'normal' ? 360 : [0, -360]
 
   return (
