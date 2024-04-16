@@ -26,7 +26,10 @@ const Floater: React.FC<FloaterProps> = ({ radius, angle, size, speed, direction
     }
     const deltaTime = time - lastFrameTime.current
     lastFrameTime.current = time
-    setCurrentAngle((prevAngle) => (prevAngle + (speed * speedMultiplierRef.current * deltaTime) / 1000) % 360)
+    setCurrentAngle((prevAngle) => {
+      const adjustedSpeed = direction === 'reverse' ? -speed : speed
+      return (prevAngle + (adjustedSpeed * speedMultiplierRef.current * deltaTime) / 1000) % 360
+    })
     requestRef.current = requestAnimationFrame(animate)
   }
 
