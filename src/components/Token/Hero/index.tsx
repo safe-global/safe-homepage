@@ -1,13 +1,20 @@
 import css from './styles.module.css'
 import { motion } from 'framer-motion'
-import { Button, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import OrbitRingsList from '@/components/Token/Hero/token-hero-rings.json'
 import OrbitPath from '@/components/Token/OrbitPath'
 import Floater from '@/components/Token/Floaters'
 import PulsingLogo from '@/components/Token/PulsingLogo'
-import { WALLET_LINK } from '@/config/constants'
+import { type BaseBlockEntry } from '@/components/Home/types'
+import RichText from '@/components/common/RichText'
+import ButtonsWrapper from '@/components/Token/ButtonsWrapper'
+import { isAsset, isEntryTypeButton } from '@/lib/typeGuards'
 
-const Hero = () => {
+const Hero = (props: BaseBlockEntry) => {
+  const { caption, title, buttons, image } = props.fields
+
+  const buttonsList = buttons?.filter(isEntryTypeButton) || []
+
   return (
     <div className={css.heroSpacer}>
       {/* Token Backgroud Gradients */}
@@ -25,21 +32,21 @@ const Hero = () => {
             repeat: Infinity,
             repeatType: 'loop',
           }}
-          className={css.tokenImage}
         >
-          <img width={180} src="/images/Token/token.png" alt="Safe Token" />
+          {isAsset(image) && image.fields.file?.url ? (
+            <img src={image.fields.file.url} alt={image.fields.title ?? ''} />
+          ) : null}
         </motion.div>
 
         {/* Token Hero Content */}
         <div className={css.container}>
-          <Typography variant="h4">SAFE Token</Typography>
-          <Typography variant="h2" className={css.title}>
-            Participate in the
-            <span> Ownership Revolution</span>
-          </Typography>
-          <Button className={css.button} variant="contained" size="large" href={WALLET_LINK}>
-            Go to acitivity app
-          </Button>
+          <Typography variant="h5">{caption}</Typography>
+          <Box className={css.title}>
+            <RichText {...title} />
+          </Box>
+
+          <ButtonsWrapper buttons={buttonsList} />
+
           <Typography variant="caption" className={css.scroll}>
             Scroll
           </Typography>

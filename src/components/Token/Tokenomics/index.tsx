@@ -5,6 +5,7 @@ import { type BaseBlockEntry } from '@/components/Home/types'
 import css from './styles.module.css'
 import LinkButton from '@/components/common/LinkButton'
 import { isAsset, isEntryTypeBaseBlock, isEntryTypeExternalURL } from '@/lib/typeGuards'
+import { motion } from 'framer-motion'
 
 const CardEntry = (props: BaseBlockEntry) => {
   const { title, text } = props.fields
@@ -35,9 +36,20 @@ const Tokenomics = (props: BaseBlockEntry) => {
       <Container className={`${layoutCss.containerMedium} ${css.container}`}>
         <Grid container columnSpacing={2} rowGap="30px">
           <Grid item xs={12} md={6} className={css.tokenWrapper}>
-            {isAsset(image) && image.fields.file?.url ? (
-              <img src={image.fields.file.url} alt={image.fields.title ?? ''} />
-            ) : null}
+            {/*SAFE Token Logo */}
+            <motion.div
+              animate={{ y: ['0%', '-5%', '0%'], rotateY: [0, -35, 0] }}
+              transition={{
+                duration: 6,
+                ease: 'easeInOut',
+                repeat: Infinity,
+                repeatType: 'loop',
+              }}
+            >
+              {isAsset(image) && image.fields.file?.url ? (
+                <img src={image.fields.file.url} alt={image.fields.title ?? ''} />
+              ) : null}
+            </motion.div>
 
             <RichText {...title} />
           </Grid>
