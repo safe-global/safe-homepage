@@ -4,7 +4,8 @@
     "component": "common/MetaTags"
   },
   {
-    "component": "Home/Hero"
+    "titleLines": ["Smart Accounts to", "Own the Internet"],
+    "component": "Home/HeroVideo"
   },
   {
     "caption": "Ethereum's transition to Smart Accounts",
