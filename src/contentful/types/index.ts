@@ -1,4 +1,5 @@
 export type { TypeAuthor, TypeAuthorFields, TypeAuthorSkeleton } from './TypeAuthor'
+export type { TypeBaseBlock, TypeBaseBlockFields, TypeBaseBlockSkeleton } from './TypeBaseBlock'
 export type { TypeBlogHome, TypeBlogHomeFields, TypeBlogHomeSkeleton } from './TypeBlogHome'
 export type { TypeButton, TypeButtonFields, TypeButtonSkeleton } from './TypeButton'
 export type { TypeCardGridItem, TypeCardGridItemFields, TypeCardGridItemSkeleton } from './TypeCardGridItem'
@@ -6,6 +7,7 @@ export type { TypeExternalUrl, TypeExternalUrlFields, TypeExternalUrlSkeleton } 
 export type { TypeFaq, TypeFaqFields, TypeFaqSkeleton } from './TypeFaq'
 export type { TypeFaqEntry, TypeFaqEntryFields, TypeFaqEntrySkeleton } from './TypeFaqEntry'
 export type { TypeHero, TypeHeroFields, TypeHeroSkeleton } from './TypeHero'
+export type { TypeLandingPage, TypeLandingPageFields, TypeLandingPageSkeleton } from './TypeLandingPage'
 export type { TypeMetaTags, TypeMetaTagsFields, TypeMetaTagsSkeleton } from './TypeMetaTags'
 export type { TypePage, TypePageFields, TypePageSkeleton } from './TypePage'
 export type { TypePost, TypePostFields, TypePostSkeleton } from './TypePost'

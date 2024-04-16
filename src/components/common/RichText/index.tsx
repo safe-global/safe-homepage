@@ -32,17 +32,28 @@ const options: Options = {
       return <Typography variant="h1">{text}</Typography>
     },
     [BLOCKS.HEADING_2]: (node: Heading2) => {
-      const text = node.content.find(isText)?.value
-      return <Typography variant="h2">{text}</Typography>
+      const content = node.content.filter(isText).map((node, index) => {
+        const isBold = node.marks.some((mark) => mark.type === 'bold')
+        return isBold ? <b key={index}>{node.value}</b> : <span key={index}>{node.value}</span>
+      })
+
+      return <Typography variant="h2">{content}</Typography>
     },
     [BLOCKS.HEADING_3]: (node: Heading3) => {
-      const text = node.content.find(isText)?.value
+      const content = node.content.filter(isText).map((node, index) => {
+        const isBold = node.marks.some((mark) => mark.type === 'bold')
+        return isBold ? <b key={index}>{node.value}</b> : <span key={index}>{node.value}</span>
+      })
 
       return (
-        <Typography id={kebabCase(text)} variant="h3" mt="60px">
-          {text}
+        <Typography variant="h3" id={kebabCase(node.content.find(isText)?.value)}>
+          {content}
         </Typography>
       )
+    },
+    [BLOCKS.HEADING_5]: (node: Heading3) => {
+      const text = node.content.find(isText)?.value
+      return <Typography variant="h5">{text}</Typography>
     },
     [BLOCKS.EMBEDDED_ASSET]: (node: Node) => {
       const { title, description, file } = node.data.target.fields
