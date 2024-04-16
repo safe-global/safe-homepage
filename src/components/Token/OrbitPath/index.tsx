@@ -4,7 +4,7 @@ interface OrbitPathProps {
   diameter: number
   duration: number
   direction: 'normal' | 'reverse'
-  children?: React.ReactNode
+  children: React.ReactNode
 }
 
 const OrbitPath = ({ diameter, duration, direction, children }: OrbitPathProps) => {

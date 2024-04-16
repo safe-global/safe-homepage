@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef, useState, useEffect, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import usePrefersReducedMotion from '@/hooks/usePrefersReducedMotion'
 
@@ -11,7 +11,7 @@ interface FloaterProps {
   speed: number
 }
 
-const Floater: React.FC<FloaterProps> = ({ radius, angle, size, speed, direction }) => {
+const Floater = ({ radius, angle, size, speed, direction }: FloaterProps) => {
   const prefersReducedMotion = usePrefersReducedMotion()
   const [currentAngle, setCurrentAngle] = useState(angle)
   const requestRef = useRef<number>()
@@ -20,18 +20,22 @@ const Floater: React.FC<FloaterProps> = ({ radius, angle, size, speed, direction
   // Use a ref to store the last timestamp when the animation frame was called
   const lastFrameTime = useRef<number>(0)
 
-  const animate = (time: number) => {
-    if (!lastFrameTime.current) {
+  // TODO: move to a separate hook
+  const animate = useCallback(
+    (time: number) => {
+      if (!lastFrameTime.current) {
+        lastFrameTime.current = time
+      }
+      const deltaTime = time - lastFrameTime.current
       lastFrameTime.current = time
-    }
-    const deltaTime = time - lastFrameTime.current
-    lastFrameTime.current = time
-    setCurrentAngle((prevAngle) => {
-      const adjustedSpeed = direction === 'reverse' ? -speed : speed
-      return (prevAngle + (adjustedSpeed * speedMultiplierRef.current * deltaTime) / 1000) % 360
-    })
-    requestRef.current = requestAnimationFrame(animate)
-  }
+      setCurrentAngle((prevAngle) => {
+        const adjustedSpeed = direction === 'reverse' ? -speed : speed
+        return (prevAngle + (adjustedSpeed * speedMultiplierRef.current * deltaTime) / 1000) % 360
+      })
+      requestRef.current = requestAnimationFrame(animate)
+    },
+    [speed, direction, speedMultiplierRef],
+  )
 
   useEffect(() => {
     speedMultiplierRef.current = prefersReducedMotion ? 0.5 : 2
@@ -41,7 +45,7 @@ const Floater: React.FC<FloaterProps> = ({ radius, angle, size, speed, direction
         cancelAnimationFrame(requestRef.current)
       }
     }
-  }, [speed, prefersReducedMotion])
+  }, [speed, prefersReducedMotion, animate])
 
   const angleInRadians = (currentAngle * Math.PI) / 180
   const x = radius * Math.cos(angleInRadians)

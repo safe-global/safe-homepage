@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
 interface PulsingLogoProps {
@@ -8,7 +8,6 @@ interface PulsingLogoProps {
 }
 
 const PulsingLogo = ({ angle, radius, imgUrl }: PulsingLogoProps) => {
-  const [screenSize, setScreenSize] = useState({ width: 0, height: 0 })
   const circleDiameter = 55
   const [isAnimating, setIsAnimating] = useState(false)
 

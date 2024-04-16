@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react'
 
-const QUERY = '(prefers-reduced-motion: reduce)'
+const REDUCED_MOTION_MEDIA_QUERY = '(prefers-reduced-motion: reduce)'
 
 const usePrefersReducedMotion = (): boolean => {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState<boolean>(false)
 
   useEffect(() => {
-    const mediaQueryList = window.matchMedia(QUERY)
+    const mediaQueryList = window.matchMedia(REDUCED_MOTION_MEDIA_QUERY)
     setPrefersReducedMotion(mediaQueryList.matches)
 
     const listener = (event: MediaQueryListEvent) => {
