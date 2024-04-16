@@ -7,7 +7,7 @@ interface PulsingLogoProps {
   imgUrl: string
 }
 
-const PulsingLogo: React.FC<PulsingLogoProps> = ({ angle, radius, imgUrl }) => {
+const PulsingLogo = ({ angle, radius, imgUrl }: PulsingLogoProps) => {
   const [screenSize, setScreenSize] = useState({ width: 0, height: 0 })
   const circleDiameter = 55
   const [isAnimating, setIsAnimating] = useState(false)
