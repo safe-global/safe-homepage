@@ -99,7 +99,15 @@
   margin: auto;
 }
 
-.container .scroll {
+.container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 220px;
+}
+
+.scroll {
   opacity: 0;
   transition: opacity 0.5s ease-in;
 }

@@ -5,8 +5,9 @@ import OrbitRingsList from '@/content/token-hero-rings.json'
 import OrbitPath from '@/components/Token/OrbitPath'
 import Floater from '@/components/Token/Floaters'
 import PulsingLogo from '@/components/Token/PulsingLogo'
+import { WALLET_LINK } from '@/config/constants'
 
-const  Hero = () => {
+const Hero = () => {
   return (
     <div className={css.heroSpacer}>
       {/* Token Backgroud Gradients */}
@@ -30,19 +31,8 @@ const  Hero = () => {
         </motion.div>
 
         {/* Token Hero Content */}
-        <div
-          className={css.container}
-          style={{
-            position: 'absolute',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            top: '220px',
-          }}
-        >
-          <Typography variant="h4">
-            SAFE Token
-          </Typography>
+        <div className={css.container}>
+          <Typography variant="h4">SAFE Token</Typography>
           <Typography variant="h2" className={css.title}>
             Participate in the
             <span> Ownership Revolution</span>
