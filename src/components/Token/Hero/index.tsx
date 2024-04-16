@@ -47,7 +47,7 @@ const  Hero = () => {
             Participate in the
             <span> Ownership Revolution</span>
           </Typography>
-          <Button className={css.button} variant="contained" size="large">
+          <Button className={css.button} variant="contained" size="large" href={WALLET_LINK}>
             Go to acitivity app
           </Button>
           <Typography variant="caption" className={css.scroll}>
