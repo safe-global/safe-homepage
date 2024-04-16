@@ -13,18 +13,6 @@ const PulsingLogo = ({ angle, radius, imgUrl }: PulsingLogoProps) => {
   const [isAnimating, setIsAnimating] = useState(false)
 
   useEffect(() => {
-    setScreenSize({ width: window.innerWidth, height: window.innerHeight })
-    function handleResize() {
-      setScreenSize({ width: window.innerWidth, height: window.innerHeight })
-    }
-    handleResize() // Set initial size
-    window.addEventListener('resize', handleResize)
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  }, [])
-
-  useEffect(() => {
     function triggerAnimation() {
       setIsAnimating(true)
       setTimeout(() => {
