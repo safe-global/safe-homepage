@@ -4,23 +4,8 @@
     "component": "common/MetaTags"
   },
   {
-    "title": "Accelerating <br/> the transition to Smart Accounts",
-    "text": "<i>Safe</i> is the account abstraction leader on Ethereum and the EVM with the most secure smart wallet infrastructure and platform",
-    "buttons": [
-      {
-        "text": "Build on Core",
-        "href": "https://safe.global/core",
-        "variant": "button",
-        "color": "background"
-      },
-      {
-        "text": "Use Wallet",
-        "href": "https://app.safe.global",
-        "variant": "button",
-        "color": "secondary"
-      }
-    ],
-    "component": "Home/Intro"
+    "titleLines": ["Smart Accounts to", "Own the Internet"],
+    "component": "Home/HeroVideo"
   },
   {
     "caption": "Ethereum's transition to Smart Accounts",
