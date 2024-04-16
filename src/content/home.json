@@ -104,7 +104,33 @@
     "component": "Home/TitleCardGrid"
   },
   {
-    "component": "Home/Governance"
+    "component": "Home/Governance",
+    "caption": "Governance",
+    "title": "<b>Safe <u>DAO</u></b> governs the future of Safe",
+    "text": "Safe is governed by SafeDAO, a decentralized collective of core contributors, backers, GnosisDAO, users, and ecosystem contributors i.e Safe{Guardians}.",
+    "items": [
+      {
+        "caption": "Be part of a community",
+        "title": "Safe Token",
+        "link": {
+          "href": "https://forum.safe.global/"
+        }
+      },
+      {
+        "caption": "Join the discussion",
+        "title": "Latest Proposals",
+        "link": {
+          "href": "https://snapshot.org/#/safe.eth"
+        }
+      },
+      {
+        "caption": "Learn more",
+        "title": "Governance Hub",
+        "link": {
+          "href": "https://gov.safe.global/"
+        }
+      }
+    ]
   },
   {
     "title": "Want to reach the Core Contributors?",
