@@ -40,7 +40,7 @@ const  Hero = () => {
             top: '220px',
           }}
         >
-          <Typography className={css.label} variant="h4">
+          <Typography variant="h4">
             SAFE Token
           </Typography>
           <Typography variant="h2" className={css.title}>
