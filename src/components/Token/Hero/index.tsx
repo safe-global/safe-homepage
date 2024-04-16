@@ -6,7 +6,7 @@ import OrbitPath from '@/components/Token/OrbitPath'
 import Floater from '@/components/Token/Floaters'
 import PulsingLogo from '@/components/Token/PulsingLogo'
 
-export default function Hero() {
+const  Hero = () => {
   return (
     <div className={css.heroSpacer}>
       {/* Token Backgroud Gradients */}
