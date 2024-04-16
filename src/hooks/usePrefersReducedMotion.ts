@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const REDUCED_MOTION_MEDIA_QUERY = '(prefers-reduced-motion: reduce)'
+const QUERY = '(prefers-reduced-motion: reduce)'
 
 const usePrefersReducedMotion = (): boolean => {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState<boolean>(false)

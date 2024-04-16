@@ -1,7 +1,7 @@
 import css from './styles.module.css'
 import { motion } from 'framer-motion'
 import { Button, Typography } from '@mui/material'
-import OrbitRingsList from '@/content/token-hero-rings.json'
+import OrbitRingsList from '@/components/Token/token-hero-rings.json'
 import OrbitPath from '@/components/Token/OrbitPath'
 import Floater from '@/components/Token/Floaters'
 import PulsingLogo from '@/components/Token/PulsingLogo'
@@ -79,3 +79,5 @@ const Hero = () => {
     </div>
   )
 }
+
+export default Hero
