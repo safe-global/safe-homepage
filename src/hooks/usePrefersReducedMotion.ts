@@ -10,7 +10,6 @@ const usePrefersReducedMotion = (): boolean => {
     setPrefersReducedMotion(mediaQueryList.matches)
 
     const listener = (event: MediaQueryListEvent) => {
-      console.log(`Reduced motion preference changed: ${event.matches}`)
       setPrefersReducedMotion(event.matches)
     }
 
