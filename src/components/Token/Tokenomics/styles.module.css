@@ -1,6 +1,6 @@
 .bg {
   background-position: center top 180px;
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   overflow: auto;
 }
 
