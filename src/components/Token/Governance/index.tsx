@@ -1,6 +1,6 @@
 import { Box, Container, Grid, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
-import { type BaseBlockEntry } from '@/components/Home/types'
+import { type BaseBlockEntry } from '@/config/types'
 import RichText from '@/components/common/RichText'
 import LinkCard from '@/components/Token/LinkCard'
 import { isAsset, isEntryTypeBaseBlock } from '@/lib/typeGuards'

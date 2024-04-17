@@ -1,5 +1,5 @@
 import { Container, Typography } from '@mui/material'
-import { type BaseBlockEntry } from '@/components/Home/types'
+import { type BaseBlockEntry } from '@/config/types'
 import RichText from '@/components/common/RichText'
 import css from './styles.module.css'
 

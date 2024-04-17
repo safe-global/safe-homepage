@@ -1,6 +1,6 @@
 import { Typography } from '@mui/material'
 import clsx from 'clsx'
-import { type BaseBlockEntry } from '@/components/Home/types'
+import { type BaseBlockEntry } from '@/config/types'
 import css from './styles.module.css'
 import RichText from '@/components/common/RichText'
 
