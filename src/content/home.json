@@ -79,7 +79,40 @@
     "component": "Home/BigIconsCardGrid"
   },
   {
-    "component": "Home/CompactGridSpacedCards"
+    "component": "Home/TextItemGridSpacedCards",
+    "title": "Full stack Account Abstraction",
+    "compactItems": [
+      { "title": "Stealth security" },
+      { "title": "Easy onramps" },
+      { "title": "Simplified login" },
+      { "title": "Sponsored gas" }
+    ],
+    "items": [
+      {
+        "caption": "Protocol Kit",
+        "title": "Safe Smart Account",
+        "text": "Use the most secure and modular Smart Account",
+        "link": {
+          "href": "https://docs.safe.global/sdk/protocol-kit"
+        }
+      },
+      {
+        "caption": "Explore the docs",
+        "title": "4337 Safe Module",
+        "text": "Build with the audited and formally verified ERC-4337 Module",
+        "link": {
+          "href": "https://docs.safe.global/home/4337-safe"
+        }
+      },
+      {
+        "caption": "SDK",
+        "title": "Safe{CORE} SDK",
+        "text": "Get out-of-the-box integrations with 3rd party apps",
+        "link": {
+          "href": "https://docs.safe.global/sdk/overview"
+        }
+      }
+    ]
   },
   {
     "component": "Home/TexBlockImageIcons"

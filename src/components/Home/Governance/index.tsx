@@ -1,35 +1,8 @@
 import { Box, Button, Container, Grid, Typography } from '@mui/material'
 import { type BaseBlock } from '@/components/Home/types'
 import layoutCss from '@/components/common/styles.module.css'
+import LinkCard from '@/components/Home/LinkCard'
 import css from './styles.module.css'
-import LinkButton from '@/components/common/LinkButton'
-import ArrowIcon from '@/public/images/arrow-out-icon.svg'
-
-const LinkCard = ({ caption, title, link }: Partial<BaseBlock>) => (
-  <div className={css.cardWrapper}>
-    <div className={css.outline}>
-      <div className={css.card}>
-        <div className={css.cardHeader}>
-          {caption ? <Typography variant="caption">{caption}</Typography> : undefined}
-        </div>
-
-        <div className={css.cardBody}>
-          <Typography variant="h3" className={css.title}>
-            {title}
-          </Typography>
-
-          {link ? (
-            <LinkButton underline={false} fullSize>
-              {link.title}
-            </LinkButton>
-          ) : undefined}
-        </div>
-
-        <ArrowIcon className={css.arrow} />
-      </div>
-    </div>
-  </div>
-)
 
 const Governance = ({ caption, title, text, items, link }: BaseBlock) => {
   return (
