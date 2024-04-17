@@ -8,6 +8,7 @@ import {
   type Heading1,
   type Heading2,
   type Heading3,
+  type Heading5,
 } from '@contentful/rich-text-types'
 import css from './styles.module.css'
 import { Typography } from '@mui/material'
@@ -16,6 +17,13 @@ import kebabCase from 'lodash/kebabCase'
 import { isTwitterUrl, isYouTubeUrl } from '@/lib/urlPatterns'
 import MediaPlayer from '@/components/common/MediaPlayer'
 import Twitter from '@/components/Blog/Twitter'
+
+const generateTextContent = (node: Heading1 | Heading2 | Heading3 | Heading5) => {
+  return node.content.filter(isText).map((node, index) => {
+    const isBold = node.marks.some((mark) => mark.type === 'bold')
+    return isBold ? <b key={index}>{node.value}</b> : <span key={index}>{node.value}</span>
+  })
+}
 
 const options: Options = {
   renderNode: {
@@ -28,22 +36,15 @@ const options: Options = {
       )
     },
     [BLOCKS.HEADING_1]: (node: Heading1) => {
-      const text = node.content.find(isText)?.value
-      return <Typography variant="h1">{text}</Typography>
+      const content = generateTextContent(node)
+      return <Typography variant="h1">{content}</Typography>
     },
     [BLOCKS.HEADING_2]: (node: Heading2) => {
-      const content = node.content.filter(isText).map((node, index) => {
-        const isBold = node.marks.some((mark) => mark.type === 'bold')
-        return isBold ? <b key={index}>{node.value}</b> : <span key={index}>{node.value}</span>
-      })
-
+      const content = generateTextContent(node)
       return <Typography variant="h2">{content}</Typography>
     },
     [BLOCKS.HEADING_3]: (node: Heading3) => {
-      const content = node.content.filter(isText).map((node, index) => {
-        const isBold = node.marks.some((mark) => mark.type === 'bold')
-        return isBold ? <b key={index}>{node.value}</b> : <span key={index}>{node.value}</span>
-      })
+      const content = generateTextContent(node)
 
       return (
         <Typography variant="h3" id={kebabCase(node.content.find(isText)?.value)}>
@@ -51,9 +52,9 @@ const options: Options = {
         </Typography>
       )
     },
-    [BLOCKS.HEADING_5]: (node: Heading3) => {
-      const text = node.content.find(isText)?.value
-      return <Typography variant="h5">{text}</Typography>
+    [BLOCKS.HEADING_5]: (node: Heading5) => {
+      const content = generateTextContent(node)
+      return <Typography variant="h5">{content}</Typography>
     },
     [BLOCKS.EMBEDDED_ASSET]: (node: Node) => {
       const { title, description, file } = node.data.target.fields
