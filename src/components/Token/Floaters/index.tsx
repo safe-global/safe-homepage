@@ -16,9 +16,10 @@ interface FloaterProps {
 
 const Floater = ({ radius, angle, size, speed, direction }: FloaterProps) => {
   const prefersReducedMotion = usePrefersReducedMotion()
+  const speedMultiplier = prefersReducedMotion ? 0.5 : 2
+  const adjustedSpeed = direction === 'reverse' ? -speed : speed
   const [currentAngle, setCurrentAngle] = useState(angle)
   const requestRef = useRef<number>()
-  const speedMultiplierRef = useRef<number>(prefersReducedMotion ? 0.5 : 2)
 
   // Use a ref to store the last timestamp when the animation frame was called
   const lastFrameTime = useRef<number>(0)
@@ -26,22 +27,30 @@ const Floater = ({ radius, angle, size, speed, direction }: FloaterProps) => {
   // TODO: move to a separate hook
   const animate = useCallback(
     (time: number) => {
-      if (!lastFrameTime.current) {
-        lastFrameTime.current = time
-      }
+      // If it's the first frame, initialize lastFrameTime to the current time
+      if (!lastFrameTime.current) lastFrameTime.current = time
+
+      // Time since the last frame
       const deltaTime = time - lastFrameTime.current
+
+      // Update the lastFrameTime
       lastFrameTime.current = time
+
       setCurrentAngle((prevAngle) => {
-        const adjustedSpeed = direction === 'reverse' ? -speed : speed
-        return (prevAngle + (adjustedSpeed * speedMultiplierRef.current * deltaTime) / 1000) % 360
+        const angleChange = (adjustedSpeed * speedMultiplier * deltaTime) / 1000
+
+        // Add the angle change to the previous angle and ensure the result stays within the range of 0 to 359 degrees
+        const newAngle = (prevAngle + angleChange) % 360
+
+        return newAngle
       })
+
       requestRef.current = requestAnimationFrame(animate)
     },
-    [speed, direction, speedMultiplierRef],
+    [adjustedSpeed, speedMultiplier],
   )
 
   useEffect(() => {
-    speedMultiplierRef.current = prefersReducedMotion ? 0.5 : 2
     requestRef.current = requestAnimationFrame(animate)
     return () => {
       if (requestRef.current) {
