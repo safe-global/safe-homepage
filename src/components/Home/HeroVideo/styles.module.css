@@ -31,11 +31,11 @@
   text-align: center;
   text-wrap: nowrap;
   margin-top: 30px;
+}
 
-  & .hl {
-    color: var(--mui-palette-primary-main);
-    display: block;
-  }
+.hl {
+  color: var(--mui-palette-primary-main);
+  display: block;
 }
 
 .title {
