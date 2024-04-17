@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect, useCallback } from 'react'
 import usePrefersReducedMotion from '@/hooks/usePrefersReducedMotion'
 import { motion } from 'framer-motion'
+import { palette } from '@/styles/palette'
 
 export type AnimationDirection = 'normal' | 'reverse'
 
@@ -69,7 +70,7 @@ const Floater = ({ radius, angle, size, speed, direction }: FloaterProps) => {
         position: 'absolute',
         left: `calc(50% + ${x}px - ${size / 2}px)`,
         top: `calc(250px + ${y}px - ${size / 2}px)`,
-        background: '#12FF80',
+        background: `${palette.primary.main}`,
       }}
     />
   )

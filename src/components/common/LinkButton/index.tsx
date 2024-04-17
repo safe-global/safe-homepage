@@ -22,7 +22,7 @@ const LinkButton = ({
         <div className={css.arrow}>
           <AngleIcon />
         </div>
-      ) : undefined}
+      ) : null}
     </ButtonBase>
   )
 }

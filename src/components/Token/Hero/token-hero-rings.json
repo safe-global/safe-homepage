@@ -1,110 +1,104 @@
 [
-    {
-      "id": "Ring1",
-      "duration": 20,
-      "direction": "normal",
-      "diameter":300,
-      "src": "/images/Token/Hero/Orbit-Ring-1.svg",
-      "floaters": [
-        
-      ],
-      "logos": [
-        
-      ]
-    },
-    {
-      "id": "Ring2",
-      "duration": 30,
-      "direction": "reverse",
-      "diameter":550,
-      "src": "/images/Token/Hero/Orbit-Ring-2.svg",
-      "floaters": [
-        {"angle": 20, "size":5, "speed": 1},
-        {"angle": 150, "size": 5, "speed": 3},
-        {"angle": -150, "size": 5, "speed": 5},
-        {"angle": -60, "size": 5, "speed": 2},
-        {"angle": -50, "size": 5, "speed": 1},
-        {"angle": -25, "size": 5, "speed": 4}
-      ],
-      "logos": [
-        { "angle": 170, "imgUrl": "/Logo-1.png" },
-        { "angle": 225, "imgUrl": "/Logo-2.png" },
-        { "angle": 0, "imgUrl": "/Logo-3.png" }
-      ]
-    },
-    {
-      "id": "Ring3",
-      "duration": 50,
-      "direction": "normal",
-      "diameter":735,
-      "src": "/images/Token/Hero/Orbit-Ring-3.svg",
-      "floaters": [
-        {"angle": 4, "size": 5, "speed": 5},
-        {"angle": 22, "size": 5, "speed": 10},
-        {"angle": 28, "size": 8, "speed": 7},
-        {"angle": 30, "size": 5, "speed": 6},
-        {"angle": 40, "size": 5, "speed": 9},
-        {"angle": 140, "size": 5, "speed": 5},
-        {"angle": 165, "size": 5, "speed": 7},
-        {"angle": 175, "size": 5, "speed": 8},
-        {"angle": -160, "size": 5, "speed": 8},
-        {"angle": -150, "size": 5, "speed": 10},
-        {"angle": -142, "size": 8, "speed": 5},
-        {"angle": -135, "size": 5, "speed": 9},
-        {"angle": -55, "size": 5, "speed": 6},
-        {"angle": -50, "size": 8, "speed": 5},
-        {"angle": -47, "size": 5, "speed": 8}
-      ],
-      "logos": [
-        { "angle": -30, "imgUrl": "/Logo-4.png" }
-      ]
-    },
-    {
-      "id": "Ring4",
-      "duration": 70,
-      "direction": "reverse",
-      "diameter":905,
-      "src": "/images/Token/Hero/Orbit-Ring-4.svg",
-      "floaters": [
-        {"angle": 20, "size": 5, "speed": 5},
-        {"angle": 10, "size": 5, "speed": 10},
-        {"angle": 5, "size": 5, "speed": 13},
-        {"angle": 2, "size": 5, "speed": 15},
-        {"angle": 175, "size": 5, "speed": 7},
-        {"angle": 165, "size": 8, "speed": 10},
-        {"angle": 160, "size": 5, "speed": 8},
-        {"angle": 195, "size": 8, "speed": 15}
-      ],
-      "logos": [
-        { "angle": 185, "imgUrl": "/Logo-5.png" },
-        { "angle": 5, "imgUrl": "/Logo-6.png" }
-      ]
-    },
-    {
-      "id": "Ring5",
-      "duration": 20,
-      "direction": "normal",
-      "diameter":1084,
-      "src": "/images/Token/Hero/Orbit-Ring-5.svg",
-      "floaters": [
-        {"angle": 0, "size": 8, "speed": 10},
-        {"angle": 10, "size": 5, "speed": 15},
-        {"angle": 30, "size": 5, "speed": 20},
-        {"angle": 50, "size": 5, "speed": 12},
-        {"angle": 135, "size": 5, "speed": 17},
-        {"angle": 145, "size": 8, "speed": 11},
-        {"angle": 175, "size": 5, "speed": 12},
-        {"angle": 185, "size": 8, "speed": 19},
-        {"angle": 200, "size": 5, "speed": 16},
-        {"angle": 205, "size": 5, "speed": 15}
-      ],
-      "logos": [
-        { "angle": -15, "imgUrl": "/Logo-7.png" },
-        { "angle": 15, "imgUrl": "/Logo-8.png" },
-        {  "angle": 35, "imgUrl": "/Logo-9.png" },
-        {  "angle": 135, "imgUrl": "/Logo-10.png" },
-        { "angle": 150, "imgUrl": "/Logo-11.png" },
-        { "angle": 200, "imgUrl": "/Logo-12.png" }
-      ]
-    }
-  ]
+  {
+    "id": "Ring1",
+    "duration": 20,
+    "direction": "normal",
+    "diameter": 300,
+    "src": "/images/Token/Hero/Orbit-Ring-1.svg",
+    "floaters": [],
+    "logos": []
+  },
+  {
+    "id": "Ring2",
+    "duration": 30,
+    "direction": "reverse",
+    "diameter": 550,
+    "src": "/images/Token/Hero/Orbit-Ring-2.svg",
+    "floaters": [
+      { "angle": 20, "size": 5, "speed": 1 },
+      { "angle": 150, "size": 5, "speed": 3 },
+      { "angle": -150, "size": 5, "speed": 5 },
+      { "angle": -60, "size": 5, "speed": 2 },
+      { "angle": -50, "size": 5, "speed": 1 },
+      { "angle": -25, "size": 5, "speed": 4 }
+    ],
+    "logos": [
+      { "angle": 170, "imgUrl": "/Logo-1.png" },
+      { "angle": 225, "imgUrl": "/Logo-2.png" },
+      { "angle": 0, "imgUrl": "/Logo-3.png" }
+    ]
+  },
+  {
+    "id": "Ring3",
+    "duration": 50,
+    "direction": "normal",
+    "diameter": 735,
+    "src": "/images/Token/Hero/Orbit-Ring-3.svg",
+    "floaters": [
+      { "angle": 4, "size": 5, "speed": 5 },
+      { "angle": 22, "size": 5, "speed": 10 },
+      { "angle": 28, "size": 8, "speed": 7 },
+      { "angle": 30, "size": 5, "speed": 6 },
+      { "angle": 40, "size": 5, "speed": 9 },
+      { "angle": 140, "size": 5, "speed": 5 },
+      { "angle": 165, "size": 5, "speed": 7 },
+      { "angle": 175, "size": 5, "speed": 8 },
+      { "angle": -160, "size": 5, "speed": 8 },
+      { "angle": -150, "size": 5, "speed": 10 },
+      { "angle": -142, "size": 8, "speed": 5 },
+      { "angle": -135, "size": 5, "speed": 9 },
+      { "angle": -55, "size": 5, "speed": 6 },
+      { "angle": -50, "size": 8, "speed": 5 },
+      { "angle": -47, "size": 5, "speed": 8 }
+    ],
+    "logos": [{ "angle": -30, "imgUrl": "/Logo-4.png" }]
+  },
+  {
+    "id": "Ring4",
+    "duration": 70,
+    "direction": "reverse",
+    "diameter": 905,
+    "src": "/images/Token/Hero/Orbit-Ring-4.svg",
+    "floaters": [
+      { "angle": 20, "size": 5, "speed": 5 },
+      { "angle": 10, "size": 5, "speed": 10 },
+      { "angle": 5, "size": 5, "speed": 13 },
+      { "angle": 2, "size": 5, "speed": 15 },
+      { "angle": 175, "size": 5, "speed": 7 },
+      { "angle": 165, "size": 8, "speed": 10 },
+      { "angle": 160, "size": 5, "speed": 8 },
+      { "angle": 195, "size": 8, "speed": 15 }
+    ],
+    "logos": [
+      { "angle": 185, "imgUrl": "/Logo-5.png" },
+      { "angle": 5, "imgUrl": "/Logo-6.png" }
+    ]
+  },
+  {
+    "id": "Ring5",
+    "duration": 20,
+    "direction": "normal",
+    "diameter": 1084,
+    "src": "/images/Token/Hero/Orbit-Ring-5.svg",
+    "floaters": [
+      { "angle": 0, "size": 8, "speed": 10 },
+      { "angle": 10, "size": 5, "speed": 15 },
+      { "angle": 30, "size": 5, "speed": 20 },
+      { "angle": 50, "size": 5, "speed": 12 },
+      { "angle": 135, "size": 5, "speed": 17 },
+      { "angle": 145, "size": 8, "speed": 11 },
+      { "angle": 175, "size": 5, "speed": 12 },
+      { "angle": 185, "size": 8, "speed": 19 },
+      { "angle": 200, "size": 5, "speed": 16 },
+      { "angle": 205, "size": 5, "speed": 15 }
+    ],
+    "logos": [
+      { "angle": -15, "imgUrl": "/Logo-7.png" },
+      { "angle": 15, "imgUrl": "/Logo-8.png" },
+      { "angle": 35, "imgUrl": "/Logo-9.png" },
+      { "angle": 135, "imgUrl": "/Logo-10.png" },
+      { "angle": 150, "imgUrl": "/Logo-11.png" },
+      { "angle": 200, "imgUrl": "/Logo-12.png" }
+    ]
+  }
+]

@@ -7,7 +7,7 @@ import css from './styles.module.css'
 type ButtonsWrapperProps = { buttons: ButtonEntry[] }
 
 const ButtonsWrapper = ({ buttons }: ButtonsWrapperProps) => {
-  if (!buttons || buttons.length === 0) return null
+  if (buttons.length === 0) return null
 
   return (
     <div className={css.wrapper}>

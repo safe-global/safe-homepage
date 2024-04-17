@@ -17,7 +17,7 @@ const Hero = (props: BaseBlockEntry) => {
 
   return (
     <div className={css.heroSpacer}>
-      {/* Token Backgroud Gradients */}
+      {/* Token Background Gradients */}
       <div className={css.tokenCircle1}></div>
       <div className={css.tokenCircle2}></div>
       <div className={css.tokenCircle3}></div>
