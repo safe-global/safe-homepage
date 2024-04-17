@@ -55,25 +55,31 @@ const Hero = (props: BaseBlockEntry) => {
 
       {OrbitRingsList.map((orbitRing, orbitIndex) => (
         <div key={orbitRing.id} className={css[orbitRing.id]}>
-          {/* Display All Logos */}
+          {/* Display ecosystem Logos */}
           {orbitRing.logos.map((logo, logoIndex) => (
             <PulsingLogo key={logoIndex} angle={logo.angle} radius={orbitRing.diameter / 2} imgUrl={logo.imgUrl} />
           ))}
 
-          {/* Display All Floaters */}
-          {orbitRing.floaters.map((floater, floaterIndex) => (
-            <Floater
-              key={floaterIndex}
-              radius={orbitRing.diameter / 2}
-              angle={floater.angle}
-              size={floater.size}
-              direction={orbitRing.direction as AnimationDirection}
-              duration={orbitRing.duration}
-              speed={360 / orbitRing.duration + floater.speed / 70}
-            />
-          ))}
+          {/* Display all floater dots*/}
+          {orbitRing.floaters.map((floater, floaterIndex) => {
+            const radius = orbitRing.diameter / 2
+            const angularVelocity = 360 / orbitRing.duration
+            const floaterSpeed = floater.speed / 70 // Reduce floaters speed by a factor of 70
 
-          {/* Display Orbit Path */}
+            return (
+              <Floater
+                key={floaterIndex}
+                radius={radius}
+                angle={floater.angle}
+                size={floater.size}
+                direction={orbitRing.direction as AnimationDirection}
+                duration={orbitRing.duration}
+                speed={angularVelocity + floaterSpeed}
+              />
+            )
+          })}
+
+          {/* Display orbit path */}
           <OrbitPath
             duration={orbitRing.duration}
             diameter={orbitRing.diameter}
