@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography } from '@mui/material'
+import { Box, Button, Container, Grid, Typography } from '@mui/material'
 import { type BaseBlock } from '@/components/Home/types'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
@@ -31,7 +31,7 @@ const LinkCard = ({ caption, title, link }: Partial<BaseBlock>) => (
   </div>
 )
 
-const Governance = ({ caption, title, text, items }: BaseBlock) => {
+const Governance = ({ caption, title, text, items, link }: BaseBlock) => {
   return (
     <div className={css.gradient}>
       <div className={css.bg}>
@@ -60,6 +60,19 @@ const Governance = ({ caption, title, text, items }: BaseBlock) => {
                 </Grid>
               )
             })}
+          </Grid>
+
+          <Grid container className={css.footerWrapper}>
+            <Grid item md={6} textAlign="center">
+              <Typography variant="h4" mb={5}>
+                Want to reach the Core Contributors?
+              </Typography>
+              {link ? (
+                <Button href={link.href} target="_blank" rel="noreferrer" variant="contained" size="large">
+                  {link.title}
+                </Button>
+              ) : undefined}
+            </Grid>
           </Grid>
         </Container>
       </div>
