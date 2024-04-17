@@ -1,12 +1,12 @@
 import type { ReactNode } from 'react'
 import { Container, Grid } from '@mui/material'
-import layoutCss from '@/components/common/styles.module.css'
-import css from './styles.module.css'
+import clsx from 'clsx'
 import { type BaseBlockEntry } from '@/config/types'
 import RichText from '@/components/common/RichText'
-import clsx from 'clsx'
 import ButtonsWrapper from '@/components/Token/ButtonsWrapper'
 import { isEntryTypeButton } from '@/lib/typeGuards'
+import layoutCss from '@/components/common/styles.module.css'
+import css from './styles.module.css'
 
 export type ParallaxTextProps = BaseBlockEntry & {
   variant: 'image-text' | 'text-image'
@@ -31,6 +31,7 @@ const ParallaxText = (props: ParallaxTextProps) => {
           <RichText {...title} />
           <ButtonsWrapper buttons={buttonsList} />
         </Grid>
+
         <Grid item xs={12} md={6} display="flex" alignItems="center">
           {children}
         </Grid>
