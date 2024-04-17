@@ -16,12 +16,10 @@ const Governance = (props: BaseBlockEntry) => {
   return (
     <div className={css.bg} style={{ backgroundImage: `url(${backgroundUrl})` }}>
       <Container className={`${layoutCss.containerMedium} ${css.container}`}>
-        <Grid container columnSpacing={2} rowGap="20px">
+        <Typography variant="caption">{caption}</Typography>
+        <Grid container columnSpacing={2} rowGap="20px" mt={{ xs: '20px', md: '48px' }}>
           <Grid item xs={12} md={6}>
-            <Typography variant="caption">{caption}</Typography>
-            <Box mt={{ xs: '20px', md: '48px' }}>
-              <RichText {...title} />
-            </Box>
+            <RichText {...title} />
           </Grid>
           <Grid item xs={12} md={6} display="flex" alignItems="center">
             {text && (

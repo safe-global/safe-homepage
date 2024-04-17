@@ -1,5 +1,5 @@
 import LinkButton from '@/components/common/LinkButton'
-import ArrowIcon from '@/public/images/arrow-out-icon.svg'
+import ArrowIcon from '@/public/images/arrow-out-square-corner.svg'
 import { type BaseBlockEntry } from '@/config/types'
 import css from './styles.module.css'
 import RichText from '@/components/common/RichText'

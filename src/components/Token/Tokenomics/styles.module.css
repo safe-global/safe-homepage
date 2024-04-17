@@ -41,7 +41,7 @@
   border: 1px solid var(--mui-palette-border-light);
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
-  padding: 16px 32px;
+  padding: 16px;
 }
 
 @media (min-width: 600px) {
