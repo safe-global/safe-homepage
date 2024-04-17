@@ -42,25 +42,8 @@
   {
     "items": [
       {
-        "caption": "Developers",
-        "title": "WIP",
-        "text": "Safe <u>CORE</u>",
-        "titleIcon": {
-          "src": "/images/safe-core-500.svg",
-          "alt": "Safe Core green background"
-        },
-        "image": {
-          "src": "/images/code.svg",
-          "alt": "Greater than sign, forward slash, less than sign"
-        },
-        "link": {
-          "title": "Learn more",
-          "href": "/core"
-        }
-      },
-      {
-        "caption": "Users",
-        "title": "WIP",
+        "caption": "User",
+        "title": "Use the most secure </br> multi-sig wallet in web3",
         "titleIcon": {
           "src": "/images/safe-wallet-500.svg",
           "alt": "Safe Wallet green background"
@@ -73,6 +56,23 @@
         "link": {
           "title": "Learn more",
           "href": "/wallet"
+        }
+      },
+      {
+        "caption": "Developer",
+        "title": "Protect your assets always, with the most secure smart wallet",
+        "text": "Safe <u>CORE</u>",
+        "titleIcon": {
+          "src": "/images/safe-core-500.svg",
+          "alt": "Safe Core green background"
+        },
+        "image": {
+          "src": "/images/code.svg",
+          "alt": "Greater than sign, forward slash, less than sign"
+        },
+        "link": {
+          "title": "Learn more",
+          "href": "/core"
         }
       }
     ],
