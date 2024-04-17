@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { Box, Typography } from '@mui/material'
 import OrbitRingsList from '@/components/Token/Hero/token-hero-rings.json'
 import OrbitPath from '@/components/Token/OrbitPath'
-import Floater from '@/components/Token/Floaters'
+import Floater, { type AnimationDirection } from '@/components/Token/Floaters'
 import PulsingLogo from '@/components/Token/PulsingLogo'
 import { type BaseBlockEntry } from '@/config/types'
 import RichText from '@/components/common/RichText'
@@ -67,7 +67,7 @@ const Hero = (props: BaseBlockEntry) => {
               radius={orbitRing.diameter / 2}
               angle={floater.angle}
               size={floater.size}
-              direction={orbitRing.direction as 'normal' | 'reverse'}
+              direction={orbitRing.direction as AnimationDirection}
               duration={orbitRing.duration}
               speed={360 / orbitRing.duration + floater.speed / 70}
             />
@@ -77,7 +77,7 @@ const Hero = (props: BaseBlockEntry) => {
           <OrbitPath
             duration={orbitRing.duration}
             diameter={orbitRing.diameter}
-            direction={orbitRing.direction as 'normal' | 'reverse'}
+            direction={orbitRing.direction as AnimationDirection}
           >
             <img src={orbitRing.src} alt={`Orbit Ring ${orbitIndex + 1}`} />
           </OrbitPath>

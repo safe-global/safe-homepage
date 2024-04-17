@@ -1,12 +1,14 @@
-import React, { useRef, useState, useEffect, useCallback } from 'react'
-import { motion } from 'framer-motion'
+import { useRef, useState, useEffect, useCallback } from 'react'
 import usePrefersReducedMotion from '@/hooks/usePrefersReducedMotion'
+import { motion } from 'framer-motion'
+
+export type AnimationDirection = 'normal' | 'reverse'
 
 interface FloaterProps {
   radius: number
   angle: number
   size: number
-  direction: 'normal' | 'reverse'
+  direction: AnimationDirection
   duration: number
   speed: number
 }
