@@ -1,12 +1,22 @@
-import { Box, Container, Typography } from '@mui/material'
+import { type BaseBlock } from '@/components/Home/types'
+import { Container, Typography } from '@mui/material'
+import layoutCss from '@/components/common/styles.module.css'
+import css from './styles.module.css'
 
-const SafeAtScale = () => {
+const SafeAtScale = ({ caption, title }: BaseBlock) => {
   return (
-    <Container>
-      <Box height="100vh" display="flex" alignItems="center" justifyContent="center">
-        <Typography variant="h1">Safe at scale</Typography>
-      </Box>
-    </Container>
+    <div className={css.gradient}>
+      <div className={css.bg}>
+        <Container className={`${layoutCss.containerMedium} ${layoutCss.centeredContent}`}>
+          <Typography variant="caption" className={css.caption}>
+            {caption}
+          </Typography>
+          <Typography variant="h2" className={css.title}>
+            {title}
+          </Typography>
+        </Container>
+      </div>
+    </div>
   )
 }
 

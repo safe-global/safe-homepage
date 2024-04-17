@@ -26,7 +26,9 @@
     "component": "Home/TextBlockImageManifesto"
   },
   {
-    "component": "Home/SafeAtScale"
+    "component": "Home/SafeAtScale",
+    "caption": "Entrusted to keep your assets safe",
+    "title": "Safe Smart Accounts are battle tested and used more than any other"
   },
   {
     "title": "Trusted by the best",
