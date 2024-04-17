@@ -10,15 +10,17 @@ const CenteredTextBlock = (props: BaseBlockEntry) => {
     <Container className={css.centeredContent}>
       <Typography variant="caption">{caption}</Typography>
 
-      <div className={css.title}>
-        <RichText {...title} />
-      </div>
-
-      {text && (
-        <div className={css.text}>
-          <RichText {...text} />
+      <div>
+        <div className={css.title}>
+          <RichText {...title} />
         </div>
-      )}
+
+        {text && (
+          <div className={css.text}>
+            <RichText {...text} />
+          </div>
+        )}
+      </div>
     </Container>
   )
 }

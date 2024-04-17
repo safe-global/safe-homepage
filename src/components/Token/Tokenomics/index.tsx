@@ -36,7 +36,7 @@ const Tokenomics = (props: BaseBlockEntry) => {
       <Container className={`${layoutCss.containerMedium} ${css.container}`}>
         <Grid container columnSpacing={2} rowGap="30px">
           <Grid item xs={12} md={6} className={css.tokenWrapper}>
-            {/*SAFE Token Logo */}
+            {/* SAFE Token Logo */}
             <motion.div
               animate={{ y: ['0%', '-5%', '0%'], rotateY: [0, -35, 0] }}
               transition={{

@@ -16,7 +16,8 @@ const pulsingAnimationTransition = {
 
 const imageScaleAnimationKeyframes = [1, 1.2, 1]
 
-const CIRCLE_DIAMETER = 50
+const CIRCLE_SIZE = 70
+const LOGO_SIZE = 50
 
 const PulsingLogo = ({ angle, radius, imgUrl }: PulsingLogoProps) => {
   const [isAnimating, setIsAnimating] = useState(false)
@@ -41,11 +42,11 @@ const PulsingLogo = ({ angle, radius, imgUrl }: PulsingLogoProps) => {
   const x = radius * Math.cos(angleInRadians)
   const y = radius * Math.sin(angleInRadians)
 
-  const circleDiameterString = `${CIRCLE_DIAMETER}px`
+  const circleDiameterString = `${CIRCLE_SIZE}px`
 
   // Calculate the position of the circle
-  const circleHorizontalPosition = `calc(50% + ${x}px - ${CIRCLE_DIAMETER / 2}px)`
-  const circleVerticalPosition = `calc(250px + ${y}px - ${CIRCLE_DIAMETER / 2}px)`
+  const circleHorizontalPosition = `calc(50% + ${x}px - ${CIRCLE_SIZE / 2}px)`
+  const circleVerticalPosition = `calc(250px + ${y}px - ${CIRCLE_SIZE / 2}px)`
 
   return (
     <motion.div
@@ -101,7 +102,7 @@ const PulsingLogo = ({ angle, radius, imgUrl }: PulsingLogoProps) => {
         }
         transition={pulsingAnimationTransition}
         src={`/images/Token/Hero/Logos/${imgUrl}`}
-        width={35}
+        width={LOGO_SIZE}
         style={{
           zIndex: 30,
         }}
