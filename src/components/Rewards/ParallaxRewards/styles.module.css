@@ -16,8 +16,8 @@
 
 @media (min-width: 600px) {
   .movingElement {
-    width: 570px;
-    bottom: 60px;
-    left: 54px;
+    width: 470px;
+    bottom: 120px;
+    left: 90px;
   }
 }

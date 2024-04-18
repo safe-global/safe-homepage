@@ -26,6 +26,13 @@
   overflow: hidden;
 }
 
+.extra {
+  width: 100%;
+  margin-top: 40px;
+  text-align: center;
+  color: var(--mui-palette-primary-light);
+}
+
 @media (min-width: 600px) {
   .card {
     gap: 40px;
