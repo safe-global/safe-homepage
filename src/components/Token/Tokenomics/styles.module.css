@@ -52,4 +52,8 @@
   .cardBody {
     padding: 32px;
   }
+
+  .cardFooter {
+    padding: 16px 32px;
+  }
 }

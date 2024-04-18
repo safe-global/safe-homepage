@@ -20,7 +20,7 @@ const ParallaxGovernanceProcessElement = ({ items }: { items: Entry<TypeBaseBloc
     <FrameImage className={css.baseImage} />
 
     {items.map((_, index) => {
-      const className = blockClassNames[index] || ''
+      const className = blockClassNames[index]
       const depth = depths[index % 2]
 
       return (

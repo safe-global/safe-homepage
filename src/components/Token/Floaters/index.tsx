@@ -28,7 +28,7 @@ const Floater = ({ radius, angle, size, speed, direction }: FloaterProps) => {
   const animate = useCallback(
     (time: number) => {
       // If it's the first frame, initialize lastFrameTime to the current time
-      if (!lastFrameTime.current) lastFrameTime.current = time
+      if (lastFrameTime.current === 0) lastFrameTime.current = time
 
       // Time since the last frame
       const deltaTime = time - lastFrameTime.current
