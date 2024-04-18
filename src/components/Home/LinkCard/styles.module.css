@@ -1,6 +1,11 @@
 /* Card */
 .cardWrapper {
   position: relative;
+  height: 100%;
+}
+
+.outline {
+  height: 100%;
 }
 
 .outline::before {
@@ -31,6 +36,7 @@
   transition-duration: var(--transition-duration);
   height: auto;
   background-color: var(--mui-palette-background-default);
+  height: 100%;
 }
 
 .cardHeader {
