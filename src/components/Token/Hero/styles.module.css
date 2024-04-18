@@ -2,9 +2,6 @@
   position: relative;
   height: 1085.84px;
   overflow-x: hidden;
-  overflow-y: visible;
-  justify-items: center;
-  align-items: center;
 }
 
 .tokenContainer {
@@ -108,10 +105,6 @@
 }
 
 @media (max-width: 768px) {
-  .heroSpacer {
-    height: 900px;
-  }
-
   .title {
     width: 90vw;
   }
