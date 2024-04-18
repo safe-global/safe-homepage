@@ -1,0 +1,35 @@
+.imageWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.bgImage {
+  margin-left: -10%;
+  max-width: 540px;
+  width: 100%;
+}
+
+.image {
+  position: absolute;
+  width: 100%;
+  max-width: 305px;
+}
+
+.list {
+  background-color: var(--mui-palette-background-main);
+  margin-right: auto;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.entry {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}

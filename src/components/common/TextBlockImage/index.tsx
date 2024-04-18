@@ -11,7 +11,16 @@ export type TextBlockImageProps = BaseBlock & {
   children: React.ReactNode
 }
 
-const TextBlockImage = ({ caption, title, text, buttons, variant, mobileVariant, children }: TextBlockImageProps) => {
+const TextBlockImage = ({
+  caption,
+  title,
+  text,
+  buttons,
+  items,
+  variant,
+  mobileVariant,
+  children,
+}: TextBlockImageProps) => {
   return (
     <Container>
       <Grid
@@ -21,7 +30,7 @@ const TextBlockImage = ({ caption, title, text, buttons, variant, mobileVariant,
           variant === 'image-text' ? css.imageFirst : css.textFirst,
           mobileVariant === 'text-image' ? css.textFirstMobile : null,
         )}
-        spacing={{ xs: '30px', xl: '50px' }}
+        spacing="60px"
         justifyContent="space-between"
       >
         <Grid item xs={12} md={6} display="flex" flexDirection="column" justifyContent="center" gap={{ xs: 3, md: 4 }}>
@@ -34,6 +43,15 @@ const TextBlockImage = ({ caption, title, text, buttons, variant, mobileVariant,
           <Typography variant="h5" className={css.textBlock}>
             {text}
           </Typography>
+
+          {/* Logos */}
+          {items ? (
+            <div className={css.logos}>
+              {items.map(({ image }, index) => (
+                <img key={index} src={image?.src || ''} alt={image?.alt || ''} className={css.logo} />
+              ))}
+            </div>
+          ) : undefined}
           <ButtonsWrapper buttons={buttons} />
         </Grid>
 

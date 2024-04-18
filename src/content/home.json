@@ -117,7 +117,49 @@
     ]
   },
   {
-    "component": "Home/TexBlockImageIcons"
+    "component": "Home/TextBlockImageSecurity",
+    "caption": "Security",
+    "variant": "image-text",
+    "title": "Safe Smart Accounts are the <b>most audited</b> and <b>battle-tested</b>",
+    "text": "Since 2018, our smart contracts have passed the highest possible security standards in the industry including formal verification.",
+    "items": [
+      {
+        "image": {
+          "src": "/images/Home/Security/certora-logo.png",
+          "alt": "Certora"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/Home/Security/runtime-verification-logo.png",
+          "alt": "Runtime Verification"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/Home/Security/openzeppelin-logo.png",
+          "alt": "Open Zeppelin"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/Home/Security/ackee-logo.png",
+          "alt": "Ackee"
+        }
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Start bug hunting",
+        "href": "https://www.notion.so/safe-global/Safe-Contract-Audits-f9757c9ffab24ffdac43221b9a970ebc",
+        "variant": "link"
+      }
+    ],
+    "image": {
+      "src": "/images/Home/audited-shield.png",
+      "alt": "Safe Smart Account shield"
+    },
+    "mobileVariant": "image-text"
   },
   {
     "caption": "Ecosystem",
