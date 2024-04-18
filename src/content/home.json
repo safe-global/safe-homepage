@@ -181,7 +181,68 @@
     "component": "Home/TextBlockImageEcosystem"
   },
   {
-    "component": "Home/TitleCardGrid"
+    "component": "Home/Blog",
+    "caption": "Blog",
+    "title": "Follow as Safe embeds <b>ownership</b> across use-cases",
+    "buttons": [
+      {
+        "text": "Read the latest",
+        "href": "https://safe.global/blog",
+        "variant": "button"
+      }
+    ],
+    "mainCard": {
+      "title": "AI",
+      "link": {
+        "href": "https://safe.global/blog/the-safe-case-ai-smart-accounts-crypto"
+      },
+      "image": {
+        "src": "/images/Home/UseCases/ai-big-icon.svg",
+        "alt": "Integrated chip icon"
+      }
+    },
+    "items": [
+      {
+        "title": "Restaking",
+        "link": {
+          "href": "https://safe.global/blog/the-safe-case-staking-and-restaking"
+        },
+        "image": {
+          "src": "/images/Home/UseCases/restaking-big-icon.svg",
+          "alt": "Diamond icon"
+        }
+      },
+      {
+        "title": "Payments & Wallets",
+        "link": {
+          "href": "https://safe.global/blog/safe-case-2-digital-ownership-in-your-pocket"
+        },
+        "image": {
+          "src": "/images/Home/UseCases/payments-big-icon.svg",
+          "alt": "Wallet icon"
+        }
+      },
+      {
+        "title": "Institutional",
+        "link": {
+          "href": "https://safe.global/blog/the-safe-case-infrastructure-for-institutional-crypto-self-custody"
+        },
+        "image": {
+          "src": "/images/Home/UseCases/institutions-big-icon.svg",
+          "alt": "Institutions icon"
+        }
+      },
+      {
+        "title": "Social & Identity",
+        "link": {
+          "href": "https://safe.global/blog/safe-case-decentralized-social-id"
+        },
+        "image": {
+          "src": "/images/Home/UseCases/social-big-icon.svg",
+          "alt": "Social icon"
+        }
+      }
+    ]
   },
   {
     "component": "Home/Governance",
