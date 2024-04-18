@@ -1,14 +1,13 @@
 import LinkButton from '@/components/common/LinkButton'
 import { Button } from '@mui/material'
-import css from './styles.module.css'
 import SafeLink from '@/components/common/SafeLink'
-import { type Entry } from 'contentful'
-import { type TypeButtonSkeleton } from '@/contentful/types'
+import { type ButtonEntry } from '@/config/types'
+import css from './styles.module.css'
 
-type ButtonsWrapperProps = { buttons: Entry<TypeButtonSkeleton, undefined, string>[] }
+type ButtonsWrapperProps = { buttons: ButtonEntry[] }
 
 const ButtonsWrapper = ({ buttons }: ButtonsWrapperProps) => {
-  if (!buttons || buttons.length === 0) return null
+  if (buttons.length === 0) return null
 
   return (
     <div className={css.wrapper}>

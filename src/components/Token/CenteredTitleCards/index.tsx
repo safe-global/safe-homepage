@@ -1,6 +1,6 @@
 import { Box, Container, Grid } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
-import { type BaseBlockEntry } from '@/components/Home/types'
+import { type BaseBlockEntry } from '@/config/types'
 import RichText from '@/components/common/RichText'
 import { isAsset, isEntryTypeBaseBlock, isEntryTypeExternalURL } from '@/lib/typeGuards'
 import css from './styles.module.css'
@@ -51,7 +51,7 @@ const CenteredTitleCards = (props: BaseBlockEntry) => {
       </div>
 
       <Grid container columnSpacing="30px" rowGap="16px" mt={{ xs: '40px', md: '80px' }}>
-        {itemsList?.map((item, index) => (
+        {itemsList.map((item, index) => (
           <Grid key={index} item xs={12} md={4}>
             <CardIconLink {...item} />
           </Grid>

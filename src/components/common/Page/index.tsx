@@ -1,10 +1,7 @@
 import getComponentByName from '@/lib/getComponentByName'
-import type { Entry } from 'contentful'
-import { type TypeLandingPageSkeleton } from '@/contentful/types'
 import { isEntryType, isEntryTypeBaseBlock } from '@/lib/typeGuards'
 import MetaTags from '@/components/common/MetaTagsContentful'
-
-export type LandingPageEntry = Entry<TypeLandingPageSkeleton, undefined, string>
+import { type LandingPageEntry } from '@/config/types'
 
 const Page = ({ landingPage }: { landingPage: LandingPageEntry }) => {
   const { metaTags, content } = landingPage.fields

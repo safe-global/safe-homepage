@@ -1,7 +1,8 @@
 import type { GetStaticPaths, GetStaticProps } from 'next'
 import client from '@/lib/contentful'
 import { type TypeLandingPageSkeleton } from '@/contentful/types'
-import Page, { type LandingPageEntry } from '@/components/common/Page'
+import Page from '@/components/common/Page'
+import { type LandingPageEntry } from '@/config/types'
 
 const LandingPage = (props: { landingPage: LandingPageEntry }) => {
   if (!props.landingPage) return null

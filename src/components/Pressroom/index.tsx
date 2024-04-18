@@ -37,7 +37,7 @@ export type PressRoomProps = {
 const PressRoom = ({ pressRoom, allPosts, totalAssets }: PressRoomProps) => {
   const { metaTags, featured, numbers, investors, timeline, news, podcasts, videos } = pressRoom.fields
 
-  const numbersList = numbers.filter(isEntryTypeBaseBlock) || []
+  const numbersList = numbers.filter(isEntryTypeBaseBlock)
   const investorsList = investors.filter(isAsset)
   const timelineList = timeline.filter(isEntryTypeSimpleBaseBlock)
   const newsList = news.filter(isEntryTypeExternalURL)

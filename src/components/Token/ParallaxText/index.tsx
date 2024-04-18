@@ -1,12 +1,12 @@
 import type { ReactNode } from 'react'
-import { Container, Grid, Typography } from '@mui/material'
-import layoutCss from '@/components/common/styles.module.css'
-import css from './styles.module.css'
-import type { BaseBlockEntry } from '@/components/Home/types'
-import RichText from '@/components/common/RichText'
+import { Container, Grid } from '@mui/material'
 import clsx from 'clsx'
+import { type BaseBlockEntry } from '@/config/types'
+import RichText from '@/components/common/RichText'
 import ButtonsWrapper from '@/components/Token/ButtonsWrapper'
 import { isEntryTypeButton } from '@/lib/typeGuards'
+import layoutCss from '@/components/common/styles.module.css'
+import css from './styles.module.css'
 
 export type ParallaxTextProps = BaseBlockEntry & {
   variant: 'image-text' | 'text-image'
@@ -14,7 +14,7 @@ export type ParallaxTextProps = BaseBlockEntry & {
 }
 
 const ParallaxText = (props: ParallaxTextProps) => {
-  const { caption, title, text, buttons } = props.fields
+  const { title, buttons } = props.fields
   const { variant, children } = props
 
   const buttonsList = buttons?.filter(isEntryTypeButton) || []
@@ -27,12 +27,8 @@ const ParallaxText = (props: ParallaxTextProps) => {
         spacing={{ xs: 6, md: '30px', xl: '50px' }}
         justifyContent="space-between"
       >
-        <Grid item xs={12} md={5} display="flex" flexDirection="column" justifyContent="center" gap="40px">
-          {caption && <Typography variant="caption">{caption}</Typography>}
-          <div>
-            <RichText {...title} />
-            {text && <RichText {...text} />}
-          </div>
+        <Grid item xs={12} md={5} display="flex" flexDirection="column" justifyContent="center">
+          <RichText {...title} />
           <ButtonsWrapper buttons={buttonsList} />
         </Grid>
 

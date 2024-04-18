@@ -50,6 +50,8 @@
   top: 24px;
   right: 24px;
   transition: transform var(--transition-duration);
+  width: 24px;
+  height: 24px;
 }
 
 /* Outline */
