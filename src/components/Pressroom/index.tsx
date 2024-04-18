@@ -11,13 +11,14 @@ import MediaKit from '@/components/Pressroom/MediaKit'
 import News from '@/components/Pressroom/News'
 import Podcasts from '@/components/Pressroom/Podcasts'
 import PressReleases from '@/components/Pressroom/PressReleases'
-import Marquee from '@/components/Pressroom/Marquee'
+import Marquee from '@/components/common/Marquee'
 import Timeline from '@/components/Pressroom/Timeline'
 import { type TypePressRoomSkeleton } from '@/contentful/types'
 import { containsTag, PRESS_RELEASE_TAG } from '@/lib/containsTag'
 import {
   isAsset,
   isEntryType,
+  isEntryTypeBaseBlock,
   isEntryTypeExternalURL,
   isEntryTypePost,
   isEntryTypeSimpleBaseBlock,
@@ -36,7 +37,7 @@ export type PressRoomProps = {
 const PressRoom = ({ pressRoom, allPosts, totalAssets }: PressRoomProps) => {
   const { metaTags, featured, numbers, investors, timeline, news, podcasts, videos } = pressRoom.fields
 
-  const numbersList = numbers.filter(isEntryTypeSimpleBaseBlock)
+  const numbersList = numbers.filter(isEntryTypeBaseBlock)
   const investorsList = investors.filter(isAsset)
   const timelineList = timeline.filter(isEntryTypeSimpleBaseBlock)
   const newsList = news.filter(isEntryTypeExternalURL)
