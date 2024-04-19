@@ -42,7 +42,7 @@ const CenteredTitleReadonlyCards = (props: BaseBlockEntry) => {
       </div>
 
       <Grid container mt={{ xs: '40px', md: '80px' }} className={css.roundCorners}>
-        {itemsList?.map((item, index) => (
+        {itemsList.map((item, index) => (
           <Card key={index} {...item} />
         ))}
       </Grid>
