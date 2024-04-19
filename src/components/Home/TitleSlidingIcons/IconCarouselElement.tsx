@@ -1,10 +1,31 @@
 import css from './styles.module.css'
 import clsx from 'clsx'
-import IconChip from './IconChip'
+import { Typography } from '@mui/material'
+
+type Icon = {
+  name: string
+  src: string
+  new?: boolean
+}
+
+export type Carousel = {
+  icons: Icon[]
+  reverse?: boolean
+}
+
+const IconChip = ({ icon }: { icon: Icon }) => (
+  <div className={css.wrapper}>
+    <div className={css.icon}>
+      <img src={icon.src} alt={icon.name} width={64} height={64} />
+    </div>
+    <Typography>{icon.name}</Typography>
+    {icon.new && <div className={css.newBadge}>New</div>}
+  </div>
+)
 
 const IconRow = ({ icons }: Carousel) => (
   <>
-    {icons.map((icon, i) => (
+    {icons.map((icon) => (
       <IconChip icon={icon} key={icon.name} />
     ))}
   </>
