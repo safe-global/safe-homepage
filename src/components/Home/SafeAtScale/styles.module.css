@@ -1,0 +1,50 @@
+.bg {
+  background-image: url('/images/Home/bg-circuits.png');
+  background-position: center top 150px;
+  background-repeat: no-repeat;
+  overflow: auto;
+  background-size: cover;
+  height: 100vh;
+}
+
+.gradient {
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient:before,
+.gradient:after {
+  content: '';
+  left: 0;
+  display: block;
+  width: 100%;
+  position: absolute;
+  height: 20%;
+  pointer-events: none;
+}
+
+.gradient:before {
+  background: linear-gradient(
+    180deg,
+    var(--mui-palette-background-main) 0%,
+    var(--mui-palette-background-main) 10%,
+    rgba(18, 19, 18, 0) 100%
+  );
+  top: 150px;
+}
+
+.gradient:after {
+  background: linear-gradient(0deg, var(--mui-palette-background-main) 0%, rgba(18, 19, 18, 0) 100%);
+  bottom: 0;
+}
+
+.caption {
+  text-align: center;
+  z-index: 1;
+}
+
+.title {
+  text-align: center;
+  max-width: 80%;
+  margin: 24px auto 0;
+}

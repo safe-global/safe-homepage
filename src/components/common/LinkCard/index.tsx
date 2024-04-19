@@ -6,6 +6,7 @@ import css from './styles.module.css'
 import type { DetailedHTMLProps, ImgHTMLAttributes } from 'react'
 
 export type CardProps = {
+  caption?: string
   title: string | JSX.Element
   image?: DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>
   link?: {
@@ -16,9 +17,12 @@ export type CardProps = {
   highlight?: boolean
 }
 
-const LinkCard = ({ title, image, link, icon, highlight }: CardProps) => (
+const LinkCard = ({ caption, title, image, link, icon, highlight }: CardProps) => (
   <div className={`${css.card} ${highlight ? css.highlight : css.outline}`}>
-    <div className={css.cardHeader}>{image ? <img src={image.src} alt={image.alt} /> : icon ?? undefined}</div>
+    <div className={css.cardHeader}>
+      {caption ? <Typography variant="caption">{caption}</Typography> : undefined}
+      {image ? <img src={image.src} alt={image.alt} /> : icon ?? undefined}
+    </div>
 
     <div className={css.cardBody}>
       <Typography variant="h3" className={css.title}>

@@ -1,0 +1,88 @@
+/* Card */
+.cardWrapper {
+  position: relative;
+  height: 100%;
+}
+
+.outline {
+  height: 100%;
+}
+
+.outline::before {
+  content: '';
+  position: absolute;
+  border-radius: 16px;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: linear-gradient(to bottom left, #12ff80, #5fddff);
+  opacity: 0;
+}
+
+.outline:hover::before {
+  opacity: 1;
+  box-shadow: 10px 10px 25px 0 rgba(18, 255, 128, 0.2);
+}
+
+.card {
+  box-shadow: inset 0 0 0 1px var(--mui-palette-border-light);
+  position: relative;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  border-radius: 16px;
+  transition-duration: var(--transition-duration);
+  height: auto;
+  background-color: var(--mui-palette-background-default);
+  height: 100%;
+}
+
+.cardHeader {
+  height: 24px;
+}
+
+.cardHeader img {
+  height: 100%;
+  width: auto;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-grow: 1;
+  gap: 16px;
+}
+
+.caption {
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  flex-shrink: 0;
+  /* margin-top: auto; */
+  margin-top: 80px;
+}
+
+.card:hover .arrow path {
+  fill: var(--mui-palette-primary-main);
+}
+
+.card:hover .arrow {
+  transform: rotate(45deg);
+}
+
+.arrow {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  transition: transform var(--transition-duration);
+}

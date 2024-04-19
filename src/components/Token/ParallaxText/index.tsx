@@ -27,9 +27,9 @@ const ParallaxText = (props: ParallaxTextProps) => {
         spacing={{ xs: 6, md: '30px', xl: '50px' }}
         justifyContent="space-between"
       >
-        <Grid item xs={12} md={5} className={css.textBlockWrapper}>
+        <Grid item xs={12} md={6} className={css.textBlockWrapper}>
           {caption && (
-            <Typography variant="caption" component="div">
+            <Typography variant="caption" component="div" mb="32px">
               {caption}
             </Typography>
           )}

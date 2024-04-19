@@ -1,251 +1,54 @@
 [
   {
-    "pageTitle": "Safe — Ethereum Smart Accounts",
+    "pageTitle": "Ethereum Smart Accounts",
+    "description": "Own the Internet. Ethereum Smart Accounts to safeguard your digital assets and build the future of ownership.",
+    "image": "/images/Home/meta-image-homepage.jpg",
     "component": "common/MetaTags"
   },
   {
-    "title": "Accelerating <br/> the transition to Smart Accounts",
-    "text": "<i>Safe</i> is the account abstraction leader on Ethereum and the EVM with the most secure smart wallet infrastructure and platform",
-    "buttons": [
-      {
-        "text": "Build on Core",
-        "href": "https://safe.global/core",
-        "variant": "button",
-        "color": "background"
-      },
-      {
-        "text": "Use Wallet",
-        "href": "https://app.safe.global",
-        "variant": "button",
-        "color": "secondary"
-      }
-    ],
-    "component": "Home/Intro"
+    "component": "Home/HeroVideo",
+    "title": "Smart Accounts to<br/><b>Own the Internet</b>",
+    "link": {
+      "href": "/videos/Home/safe-2024-hero.mp4"
+    }
   },
   {
-    "caption": "Safe at scale",
-    "title": "<i>Safe</i> accounts hold and protect billions of $$$ in assets",
-    "text": "Previously called Gnosis Safe, <i>Safe</i> spun out with a mission to build a better standard for ownership with smart accounts",
-    "items": [
+    "caption": "Ethereum's transition to Smart Accounts",
+    "variant": "text-image",
+    "title": "Safe envisions a future where every onchain account is a <b>smart account</b>",
+    "buttons": [
       {
-        "title": "39M",
-        "text": "Total transactions",
-        "link": {
-          "href": "https://dune.com/queries/2093960/3449499"
-        }
-      },
-      {
-        "title": "$100B+",
-        "text": "Total assets stored",
-        "link": {
-          "href": ""
-        }
-      },
-      {
-        "title": "7.6M",
-        "text": "Safe accounts deployed",
-        "link": {
-          "href": "https://dune.com/queries/2459401/4044167"
-        }
+        "text": "Read our vision & roadmap",
+        "href": "https://safe.global/blog/future-of-safe",
+        "variant": "link"
       }
     ],
-    "component": "Home/Stats"
+    "image": {
+      "src": "/images/Home/manifesto-hands.png",
+      "alt": "Hands holding code brackets"
+    },
+    "mobileVariant": "text-image",
+    "component": "Home/TextBlockImageManifesto"
+  },
+  {
+    "component": "Home/SafeAtScale",
+    "caption": "Entrusted to keep your assets safe",
+    "title": "Safe Smart Accounts are battle tested and used more than any other"
+  },
+  {
+    "title": "Trusted by the best",
+    "component": "Home/TitleSlidingIcons"
   },
   {
     "title": "Available on 14+ networks",
     "text": "including testnets",
-    "networks": [
-      {
-        "name": "Ethereum Mainnet",
-        "icon": {
-          "src": "/images/chainsLogos/EthereumLogo.png",
-          "alt": "Ethereum logo"
-        }
-      },
-      {
-        "name": "BNB Smart Chain",
-        "icon": {
-          "src": "/images/chainsLogos/BNBLogo.png",
-          "alt": "BNB Chain logo"
-        }
-      },
-      {
-        "name": "Optimism",
-        "icon": {
-          "src": "/images/chainsLogos/OptimismLogo.png",
-          "alt": "Optimism logo"
-        }
-      },
-      {
-        "name": "Arbitrum",
-        "icon": {
-          "src": "/images/chainsLogos/ArbitrumLogo.png",
-          "alt": "Arbitrum logo"
-        }
-      },
-      {
-        "name": "zkSync Era Mainnet",
-        "icon": {
-          "src": "/images/chainsLogos/ZkSyncEraLogo.png",
-          "alt": "zkSync Era logo"
-        },
-        "textColor": "#000000",
-        "backgroundColor": "#FFFFFF",
-        "isNew": true
-      },
-      {
-        "name": "Polygon",
-        "icon": {
-          "src": "/images/chainsLogos/PolygonLogo.png",
-          "alt": "Polygon logo"
-        }
-      },
-      {
-        "name": "Avalanche",
-        "icon": {
-          "src": "/images/chainsLogos/AvalancheLogo.png",
-          "alt": "Avalanche logo"
-        }
-      },
-      {
-        "name": "Gnosis Chain",
-        "icon": {
-          "src": "/images/chainsLogos/GnosisChainLogo.png",
-          "alt": "Gnosis Chain logo"
-        }
-      },
-      {
-        "name": "Aurora",
-        "icon": {
-          "src": "/images/chainsLogos/AuroraLogo.png",
-          "alt": "Aurora logo"
-        }
-      },
-      {
-        "name": "Arbitrum",
-        "icon": {
-          "src": "/images/chainsLogos/ArbitrumLogo.png",
-          "alt": "Arbitrum logo"
-        }
-      },
-      {
-        "name": "Polygon zkEVM",
-        "icon": {
-          "src": "/images/chainsLogos/PolygonZkEVMLogo.png",
-          "alt": "Polygon zkEVM logo"
-        },
-        "isNew": true
-      },
-      {
-        "name": "Celo",
-        "icon": {
-          "src": "/images/chainsLogos/CeloLogo.png",
-          "alt": "Celo logo"
-        }
-      }
-    ],
-    "component": "common/Networks"
-  },
-  {
-    "title": "Trusted by the best",
-    "items": [
-      {
-        "image": {
-          "src": "/images/1inch.svg",
-          "alt": "1inch"
-        }
-      },
-      {
-        "image": {
-          "src": "/images/maker.svg",
-          "alt": "MakerDAO"
-        }
-      },
-      {
-        "image": {
-          "src": "/images/ens.svg",
-          "alt": "Ethereum Name Service"
-        }
-      },
-      {
-        "image": {
-          "src": "/images/zapper.svg",
-          "alt": "Zapper"
-        }
-      },
-      {
-        "image": {
-          "src": "/images/aave-logo.svg",
-          "alt": "Aave"
-        }
-      },
-      {
-        "image": {
-          "src": "/images/balancer.svg",
-          "alt": "Balancer DeFi"
-        }
-      },
-      {
-        "image": {
-          "src": "/images/vitalik.png",
-          "alt": "Vitalik"
-        }
-      },
-      {
-        "image": {
-          "src": "/images/punk.png",
-          "alt": "Punk 6529"
-        }
-      },
-      {
-        "image": {
-          "src": "/images/shopify.svg",
-          "alt": "Shopify"
-        }
-      },
-      {
-        "image": {
-          "src": "/images/stripe.svg",
-          "alt": "Stripe"
-        }
-      },
-      {
-        "image": {
-          "src": "/images/polygon.svg",
-          "alt": "Polygon"
-        }
-      },
-      {
-        "image": {
-          "src": "/images/chainlink.svg",
-          "alt": "Chainlink"
-        }
-      }
-    ],
-    "component": "common/TitleLogos"
+    "component": "Home/TitleSlidingIcons"
   },
   {
     "items": [
       {
-        "caption": "Developers",
-        "title": "Build on the <i>Safest</i> account abstraction stack",
-        "text": "Safe <u>CORE</u>",
-        "titleIcon": {
-          "src": "/images/safe-core-500.svg",
-          "alt": "Safe Core green background"
-        },
-        "image": {
-          "src": "/images/code.svg",
-          "alt": "Greater than sign, forward slash, less than sign"
-        },
-        "link": {
-          "title": "Learn more",
-          "href": "/core"
-        }
-      },
-      {
-        "caption": "Users",
-        "title": "Use the most secure<br/>multi-sig wallet in web3",
+        "caption": "User",
+        "title": "Use the most secure </br> multi-sig wallet in web3",
         "titleIcon": {
           "src": "/images/safe-wallet-500.svg",
           "alt": "Safe Wallet green background"
@@ -259,71 +62,223 @@
           "title": "Learn more",
           "href": "/wallet"
         }
+      },
+      {
+        "caption": "Developer",
+        "title": "Protect your assets always, with the most secure smart wallet",
+        "text": "Safe <u>CORE</u>",
+        "titleIcon": {
+          "src": "/images/safe-core-500.svg",
+          "alt": "Safe Core green background"
+        },
+        "image": {
+          "src": "/images/code.svg",
+          "alt": "Greater than sign, forward slash, less than sign"
+        },
+        "link": {
+          "title": "Learn more",
+          "href": "/core"
+        }
       }
     ],
     "component": "Home/BigIconsCardGrid"
   },
   {
-    "title": "Safe <u>CORE</u> <b>powers 190+ ecosystem projects</b><br/>in every corner of web3",
-    "text": "including projects building DAO tools, DeFi, NFT collectives and institutional custody",
-    "component": "Home/BannerTextCard"
-  },
-  {
-    "variant": "image-text",
-    "caption": "Security",
-    "title": "Our contracts are<br /><b>the most<br />battle-tested</b>",
-    "text": "Since 2018, our smart contracts have passed the highest possible security standards in the industry including Formal Verification",
-    "buttons": [
+    "component": "Home/TextItemGridSpacedCards",
+    "title": "Full stack Account Abstraction",
+    "compactItems": [
+      { "title": "Stealth security" },
+      { "title": "Easy onramps" },
+      { "title": "Simplified login" },
+      { "title": "Sponsored gas" }
+    ],
+    "items": [
       {
-        "text": "Read report",
-        "href": "https://github.com/safe-global/safe-contracts/blob/78494bcdbc61b3db52308a25f0556c42cf656ab1/docs/Gnosis_Safe_Formal_Verification_Report_1_0_0.pdf",
-        "variant": "button"
+        "caption": "Protocol Kit",
+        "title": "Safe Smart Account",
+        "text": "Use the most secure and modular Smart Account",
+        "link": {
+          "href": "https://docs.safe.global/sdk/protocol-kit"
+        }
       },
       {
+        "caption": "Explore the docs",
+        "title": "4337 Safe Module",
+        "text": "Build with the audited and formally verified ERC-4337 Module",
+        "link": {
+          "href": "https://docs.safe.global/home/4337-safe"
+        }
+      },
+      {
+        "caption": "SDK",
+        "title": "Safe{CORE} SDK",
+        "text": "Get out-of-the-box integrations with 3rd party apps",
+        "link": {
+          "href": "https://docs.safe.global/sdk/overview"
+        }
+      }
+    ]
+  },
+  {
+    "component": "Home/TextBlockImageSecurity",
+    "caption": "Security",
+    "variant": "image-text",
+    "title": "Safe Smart Accounts are the <b>most audited</b> and <b>battle-tested</b>",
+    "text": "Since 2018, our smart contracts have passed the highest possible security standards in the industry including formal verification.",
+    "items": [
+      {
+        "image": {
+          "src": "/images/Home/Security/certora-logo.png",
+          "alt": "Certora"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/Home/Security/runtime-verification-logo.png",
+          "alt": "Runtime Verification"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/Home/Security/openzeppelin-logo.png",
+          "alt": "Open Zeppelin"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/Home/Security/ackee-logo.png",
+          "alt": "Ackee"
+        }
+      }
+    ],
+    "buttons": [
+      {
         "text": "Start bug hunting",
-        "href": "https://docs.safe.global/safe-core-protocol/security/bug-bounty-program",
+        "href": "https://www.notion.so/safe-global/Safe-Contract-Audits-f9757c9ffab24ffdac43221b9a970ebc",
         "variant": "link"
       }
     ],
-    "component": "Home/ContractParallax"
+    "image": {
+      "src": "/images/Home/audited-shield.png",
+      "alt": "Safe Smart Account shield"
+    },
+    "mobileVariant": "image-text"
   },
   {
-    "caption": "Governance",
-    "title": "Safe <u>DAO</u> <b>governs</b> the future of <i>Safe</i>",
-    "text": "<i>Safe</i> is governed by SafeDAO, a decentralized  collective of core contributors, backers, GnosisDAO, users and ecosystem contributors i.e Safe Guardians",
-    "items": [
+    "caption": "Ecosystem",
+    "variant": "image-text",
+    "title": "Research & discover real projects powered by <i><b>Safe</i></b>",
+    "text": "200+ ecosystem projects are built on the Safe smart account standard.",
+    "buttons": [
       {
-        "title": "Forum",
-        "caption": "Join community",
-        "link": {
-          "href": "https://forum.safe.global"
-        }
-      },
-      {
-        "title": "Latest<br/>Proposals",
-        "caption": "Follow DAO decisions",
-        "link": {
-          "href": "https://forum.safe.global/c/proposals/seps/33"
-        }
-      },
-      {
-        "title": "Safe<br/>Guardians",
-        "caption": "Ecosystem contributors",
-        "link": {
-          "href": "https://guardians.safe.global"
-        }
+        "text": "Explore ecosystem",
+        "href": "https://safe.global/ecosystem",
+        "variant": "button"
       }
     ],
-    "component": "Home/TitleTextLinkedCardGrid"
+    "image": {
+      "src": "/images/Home/ecosystem-partners.png",
+      "alt": "Hands holding code brackets"
+    },
+    "mobileVariant": "text-image",
+    "component": "Home/TextBlockImageEcosystem"
   },
   {
-    "title": "Want to reach the core contributors?",
-    "text": "",
+    "component": "Home/Blog",
+    "caption": "Blog",
+    "title": "Follow as Safe embeds <b>ownership</b> across use-cases",
+    "buttons": [
+      {
+        "text": "Read the latest",
+        "href": "https://safe.global/blog",
+        "variant": "button"
+      }
+    ],
+    "mainCard": {
+      "title": "AI",
+      "link": {
+        "href": "https://safe.global/blog/the-safe-case-ai-smart-accounts-crypto"
+      },
+      "image": {
+        "src": "/images/Home/UseCases/ai-big-icon.svg",
+        "alt": "Integrated chip icon"
+      }
+    },
+    "items": [
+      {
+        "title": "Restaking",
+        "link": {
+          "href": "https://safe.global/blog/the-safe-case-staking-and-restaking"
+        },
+        "image": {
+          "src": "/images/Home/UseCases/restaking-big-icon.svg",
+          "alt": "Diamond icon"
+        }
+      },
+      {
+        "title": "Payments & Wallets",
+        "link": {
+          "href": "https://safe.global/blog/safe-case-2-digital-ownership-in-your-pocket"
+        },
+        "image": {
+          "src": "/images/Home/UseCases/payments-big-icon.svg",
+          "alt": "Wallet icon"
+        }
+      },
+      {
+        "title": "Institutional",
+        "link": {
+          "href": "https://safe.global/blog/the-safe-case-infrastructure-for-institutional-crypto-self-custody"
+        },
+        "image": {
+          "src": "/images/Home/UseCases/institutions-big-icon.svg",
+          "alt": "Institutions icon"
+        }
+      },
+      {
+        "title": "Social & Identity",
+        "link": {
+          "href": "https://safe.global/blog/safe-case-decentralized-social-id"
+        },
+        "image": {
+          "src": "/images/Home/UseCases/social-big-icon.svg",
+          "alt": "Social icon"
+        }
+      }
+    ]
+  },
+  {
+    "component": "Home/Governance",
+    "caption": "Governance",
+    "title": "<b>Safe <u>DAO</u></b> governs the future of Safe",
+    "text": "Safe is governed by SafeDAO, a decentralized collective of core contributors, backers, GnosisDAO, users, and ecosystem contributors i.e Safe{Guardians}.",
     "link": {
       "title": "Contact us",
       "href": "https://ecosystem-contact.safe.global"
     },
-    "component": "Home/TitleButton"
+    "items": [
+      {
+        "caption": "Be part of a community",
+        "title": "Safe Token",
+        "link": {
+          "href": "https://forum.safe.global/"
+        }
+      },
+      {
+        "caption": "Join the discussion",
+        "title": "Latest Proposals",
+        "link": {
+          "href": "https://snapshot.org/#/safe.eth"
+        }
+      },
+      {
+        "caption": "Learn more",
+        "title": "Governance Hub",
+        "link": {
+          "href": "https://gov.safe.global/"
+        }
+      }
+    ]
   },
   {
     "component": "common/TextBlockBanner"
