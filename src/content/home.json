@@ -33,7 +33,30 @@
   {
     "component": "Home/SafeAtScale",
     "caption": "Entrusted to keep your assets safe",
-    "title": "Safe Smart Accounts are battle tested and used more than any other"
+    "title": "Safe Smart Accounts are battle tested <br> and used more than any other",
+    "items": [
+      {
+        "title": "46M",
+        "text": "Total transactions",
+        "link": {
+          "href": "https://dune.com/queries/2093960/3449499"
+        }
+      },
+      {
+        "title": "$100B+",
+        "text": "Total assets stored",
+        "link": {
+          "href": ""
+        }
+      },
+      {
+        "title": "8.2M",
+        "text": "Total accounts deployed",
+        "link": {
+          "href": "https://dune.com/queries/2459401/4044167"
+        }
+      }
+    ]
   },
   {
     "title": "Trusted by the best",

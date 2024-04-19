@@ -1,15 +1,17 @@
 .bg {
-  background-image: url('/images/Home/bg-circuits.png');
+  background-image: url('/images/Home/bg-circuits-portrait.png');
   background-position: center top 150px;
   background-repeat: no-repeat;
-  overflow: auto;
+  overflow: hidden;
   background-size: cover;
-  height: 100vh;
+  padding-bottom: 50px;
+  z-index: -1;
 }
 
 .gradient {
   position: relative;
   overflow: hidden;
+  margin-bottom: 150px;
 }
 
 .gradient:before,
@@ -38,13 +40,206 @@
   bottom: 0;
 }
 
-.caption {
-  text-align: center;
+.content {
+  align-content: center;
+}
+
+.content * {
   z-index: 1;
 }
 
+.caption {
+  text-align: left;
+}
+
 .title {
+  text-align: left;
+  /* max-width: 100%; */
+  margin-top: 24px;
+  text-wrap: balance;
+}
+
+.title br {
+  display: none;
+}
+
+.metricsWrapper {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 80px;
+  margin: 80px 40px 0px 40px;
+
+  --bracket-width: 90.5px;
+  --bracket-height: 300px;
+  --bracket-gap: 95px;
+
+  --open-duration: 0.8s;
+  --metrics-stagger: 0.2s;
+  --metrics-show-delay: 0.25s;
+  --metrics-fade-time: 0.75s;
+}
+
+.metricsInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 80px;
   text-align: center;
-  max-width: 80%;
-  margin: 24px auto 0;
+  position: relative;
+}
+
+
+.metricsWrapper *, .metricsInner * {
+  margin: 0 1.5vw;
+}
+
+.metric {
+  transition: opacity var(--metrics-fade-time) ease calc(var(--metrics-show-delay) + var(--i) * var(--metrics-stagger));
+  opacity: 1;
+  width: fit-content;
+  position: relative;
+}
+
+.closed .metric {
+  opacity: 0;
+  transition-delay: 0s;
+}
+
+.metric span {
+  margin: 0;
+}
+
+.metric .value {
+  transition: color var(--transition-duration) ease;
+}
+
+.metric:hover .value {
+  color: var(--mui-palette-primary-main);
+}
+
+.value {
+  margin: 0;
+  font-size: 64px;
+  line-height: 64px;
+}
+
+.bracketSpacer {
+  display: block;
+  width: var(--bracket-height);
+  height: var(--bracket-width);
+}
+
+.brackets {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  transition: height var(--open-duration) ease;
+  margin: 0;
+}
+
+.closed .brackets {
+  height: calc(var(--bracket-width) * 2 + var(--bracket-gap));
+  transition-delay: 0.5s;
+}
+
+.brackets .l, .brackets .r {
+  width: var(--bracket-height);
+  height: var(--bracket-width);
+  margin: 0;
+}
+
+.brackets .video {
+  width: var(--bracket-width);
+  height: var(--bracket-height);
+  rotate: 90deg;
+  position: relative;
+  left: calc(50% - var(--bracket-width) * 0.5);
+  top: calc(50% - var(--bracket-height) * 0.5);
+  margin: 0;
+}
+
+.brackets .metricsSpacer {
+  flex: 1 1 auto;
+}
+
+@media (min-width: 600px) {
+  .value {
+    font-size: 80px;
+    line-height: 100px;
+  }
+}
+
+@media (min-width: 900px) {
+  .bg {
+    background-image: url('/images/Home/bg-circuits.png');
+  }
+
+  .caption {
+    text-wrap: nowrap;
+    white-space: nowrap;
+  }
+
+  .title {
+    text-align: center;
+    margin: 24px auto;
+  }
+
+  .value {
+    font-size: min(6vw, 80px);
+    line-height: min(7vw, 100px);
+  }
+
+  .metricsWrapper {
+    flex-direction: row;
+    gap: unset;
+    margin: 40px 40px 0px 40px;
+  }
+
+  .metricsInner {
+    flex-direction: row;
+    gap: unset;
+    text-wrap: nowrap;
+  }
+
+  .bracketSpacer {
+    width: var(--bracket-width);
+    height: var(--bracket-height);
+  }
+
+  .brackets {
+    flex-direction: row;
+    width: 100%;
+    transition: width var(--open-duration) ease;
+  }
+
+  .closed .brackets {
+    width: calc(var(--bracket-width) * 2 + var(--bracket-gap));
+  }
+
+  .brackets .l, .brackets .r {
+    width: var(--bracket-width);
+    height: var(--bracket-height);  
+  }
+
+  .brackets .video {
+    rotate: none;
+    position: initial;
+  }
+}
+
+@media (min-width: 1200px) {
+  .metricsWrapper *, .metricsInner * {
+    margin: 0 16px;
+  }  
+
+  .title br {
+    display: inherit;
+  }
 }
