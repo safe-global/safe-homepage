@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { palette } from '@/styles/palette'
 
 export default function OrbitLines() {
   return (
@@ -60,10 +61,10 @@ const OrbitLine1 = () => {
             y2="360.602"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#12FF80" />
-            <stop offset="0.331457" stopColor="#5FDDFF" />
+            <stop stopColor={palette.primary.main} />
+            <stop offset="0.331457" stopColor={palette.info.main} />
             <stop offset="0.885267" stopColor="#35EFBA" stopOpacity="0" />
-            <stop offset="1" stopColor="#12FF80" stopOpacity="0" />
+            <stop offset="1" stopColor={palette.primary.main} stopOpacity="0" />
           </linearGradient>
         </defs>
       </svg>
@@ -123,9 +124,9 @@ const OrbitLine2 = () => {
             y2="304.387"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stopColor="#12FF80" />
+            <stop stopColor={palette.primary.main} />
             <stop offset="0.770581" stopColor="#35EFBA" stopOpacity="0" />
-            <stop offset="1" stopColor="#12FF80" stopOpacity="0" />
+            <stop offset="1" stopColor={palette.primary.main} stopOpacity="0" />
           </linearGradient>
         </defs>
       </svg>

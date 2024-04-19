@@ -1,8 +1,12 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { motion, useMotionValue, useTransform } from 'framer-motion'
+import { type BaseBlockEntry } from '@/config/types'
+import { isAsset } from '@/lib/typeGuards'
 import css from './styles.module.css'
 
-export default function Card() {
+const Card = (props: BaseBlockEntry) => {
+  const { image } = props.fields
+
   // Initialize motion values for rotation and background position
   const rotateXDeg = useMotionValue(0) //No rotation by default
   const rotateYDeg = useMotionValue(0) //No rotation by default
@@ -10,7 +14,6 @@ export default function Card() {
   const backgroundPosY = useMotionValue(50) // Center by default
 
   useEffect(() => {
-    // Event handler to rotate card and move background on mouse movement
     const handleMouseMove = (event: MouseEvent) => {
       const { clientX, clientY } = event
       // Calculate rotation values based on mouse position
@@ -52,9 +55,9 @@ export default function Card() {
         transformPerspective: 800,
       }}
     >
-      {/* Card image */}
-      <img src="/images/Rewards/Card.png" width={300} className={css.card} />
-      {/* Sheen effect overlay */}
+      {isAsset(image) && image.fields.file?.url ? (
+        <img src={image.fields.file.url} alt={image.fields.title ?? ''} width={300} className={css.card} />
+      ) : null}
       <motion.div
         className={css.sheen}
         style={{
@@ -64,3 +67,5 @@ export default function Card() {
     </motion.div>
   )
 }
+
+export default Card

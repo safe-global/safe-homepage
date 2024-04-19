@@ -1,10 +1,10 @@
 .container {
-    width: 512px;
-    margin: auto;
-    height: 570px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+  width: 512px;
+  margin: auto;
+  height: 570px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
