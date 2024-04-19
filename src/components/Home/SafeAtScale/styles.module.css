@@ -184,6 +184,7 @@
   .caption {
     text-wrap: nowrap;
     white-space: nowrap;
+    text-align: center;
   }
 
   .title {
