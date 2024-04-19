@@ -20,10 +20,6 @@
         "variant": "link"
       }
     ],
-    "image": {
-      "src": "/images/Home/manifesto-hands.png",
-      "alt": "Hands holding code brackets"
-    },
     "mobileVariant": "text-image",
     "component": "Home/TextBlockImageManifesto"
   },
