@@ -1,6 +1,11 @@
-.textBlock a {
-  text-decoration: underline;
-  color: var(--mui-palette-primary-main);
+.textBlockWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.textBlockWrapper p {
+  margin: 40px 0;
 }
 
 .textFirst,
