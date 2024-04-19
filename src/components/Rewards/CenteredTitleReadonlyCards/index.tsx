@@ -2,7 +2,7 @@ import { Box, Container, Grid, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import { type BaseBlockEntry } from '@/config/types'
 import RichText from '@/components/common/RichText'
-import { isAsset, isEntryTypeBaseBlock } from '@/lib/typeGuards'
+import { isAsset, isEntryTypeBaseBlock, isEntryTypeExternalURL } from '@/lib/typeGuards'
 import css from './styles.module.css'
 
 const Card = (props: BaseBlockEntry) => {
@@ -29,12 +29,18 @@ const Card = (props: BaseBlockEntry) => {
 
 // The cards are readonly. Cards are displayed in a grid.
 const CenteredTitleReadonlyCards = (props: BaseBlockEntry) => {
-  const { caption, title, text, items } = props.fields
+  const { caption, title, text, items, link } = props.fields
 
   const itemsList = items?.filter(isEntryTypeBaseBlock) ?? []
 
   return (
     <Container className={layoutCss.containerMedium}>
+      {caption && (
+        <Typography variant="caption" component="div" mb="32px" textAlign="center">
+          {caption}
+        </Typography>
+      )}
+
       <div className={css.textBlockContainer}>
         <RichText {...title} />
 
@@ -47,7 +53,9 @@ const CenteredTitleReadonlyCards = (props: BaseBlockEntry) => {
         ))}
       </Grid>
 
-      <Typography className={css.extra}>{caption}</Typography>
+      {link && isEntryTypeExternalURL(link) ? (
+        <Typography className={css.extra}>{link.fields.title}</Typography>
+      ) : undefined}
     </Container>
   )
 }
