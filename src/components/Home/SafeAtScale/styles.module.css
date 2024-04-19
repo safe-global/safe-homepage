@@ -54,7 +54,6 @@
 
 .title {
   text-align: left;
-  /* max-width: 100%; */
   margin-top: 24px;
   text-wrap: balance;
 }
@@ -92,8 +91,8 @@
   position: relative;
 }
 
-
-.metricsWrapper *, .metricsInner * {
+.metricsWrapper *,
+.metricsInner * {
   margin: 0 1.5vw;
 }
 
@@ -149,7 +148,8 @@
   transition-delay: 0.5s;
 }
 
-.brackets .l, .brackets .r {
+.brackets .l,
+.brackets .r {
   width: var(--bracket-height);
   height: var(--bracket-width);
   margin: 0;
@@ -223,9 +223,10 @@
     width: calc(var(--bracket-width) * 2 + var(--bracket-gap));
   }
 
-  .brackets .l, .brackets .r {
+  .brackets .l,
+  .brackets .r {
     width: var(--bracket-width);
-    height: var(--bracket-height);  
+    height: var(--bracket-height);
   }
 
   .brackets .video {
@@ -235,9 +236,10 @@
 }
 
 @media (min-width: 1200px) {
-  .metricsWrapper *, .metricsInner * {
+  .metricsWrapper *,
+  .metricsInner * {
     margin: 0 16px;
-  }  
+  }
 
   .title br {
     display: inherit;

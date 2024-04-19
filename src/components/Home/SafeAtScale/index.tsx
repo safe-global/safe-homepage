@@ -17,7 +17,7 @@ const SafeAtScale = ({ caption, title, items }: BaseBlock) => {
   const visibleInViewport = useScrollReveal(containerRef, 50, true)
 
   return (
-    <div className={`${css.gradient}`}>
+    <div className={css.gradient}>
       <div className={css.bg}>
         <Container ref={containerRef}>
           <Grid container className={`${css.content} ${layoutCss.containerMedium} ${layoutCss.centeredContent}`}>
@@ -32,7 +32,7 @@ const SafeAtScale = ({ caption, title, items }: BaseBlock) => {
                 visibleInViewport ? css.open : css.closed
               }`}
             >
-              <div className={`${css.brackets}`}>
+              <div className={css.brackets}>
                 <div className={css.l}>
                   <video autoPlay muted playsInline loop className={css.video}>
                     <source src="/videos/Home/brackets-left-hevc.mov" type="video/quicktime; codecs=hvc1" />

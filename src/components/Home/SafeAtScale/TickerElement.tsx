@@ -2,6 +2,22 @@ import css from './Ticker.module.css'
 import { useEffect, useState, type CSSProperties } from 'react'
 import { isNumber } from 'lodash'
 
+type Ticker = {
+  run: boolean
+  toValue: string | number
+  rollDurationSecs?: number
+  delayTimeMs?: number
+  staggerMs?: number
+  className?: string
+}
+
+type Digit = {
+  value: number
+  index: number
+  rollDurationSecs: number
+  delay: number
+}
+
 const Digit = ({ value, index, rollDurationSecs, delay }: Digit) => {
   return (
     <span
