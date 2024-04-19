@@ -89,9 +89,11 @@
           "alt": "Safe Wallet green background"
         },
         "text": "Safe <u>WALLET</u>",
-        "image": {
-          "src": "/images/lock.svg",
-          "alt": "Padlock"
+        "video": {
+          "sources": [
+            { "src": "/videos/Home/safe-lock-hevc.mov", "type": "video/quicktime; codecs=hvc1" },
+            { "src": "/videos/Home/safe-lock-vp9.webm", "type": "video/webm" }
+          ]
         },
         "link": {
           "title": "Learn more",
@@ -106,9 +108,11 @@
           "src": "/images/safe-core-500.svg",
           "alt": "Safe Core green background"
         },
-        "image": {
-          "src": "/images/code.svg",
-          "alt": "Greater than sign, forward slash, less than sign"
+        "video": {
+          "sources": [
+            { "src": "/videos/Home/safe-code-hevc.mov", "type": "video/quicktime; codecs=hvc1" },
+            { "src": "/videos/Home/safe-code-vp9.webm", "type": "video/webm" }
+          ]
         },
         "link": {
           "title": "Learn more",
