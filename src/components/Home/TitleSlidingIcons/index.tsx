@@ -1,15 +1,20 @@
 import { type BaseBlock } from '@/components/Home/types'
-import { Box, Container, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
+import IconCarouselElement from './IconCarouselElement'
 
-const TitleSlidingIcons = ({ title, text }: BaseBlock) => {
+const TitleSlidingIcons = ({ title, text, icons, reverse = false }: BaseBlock & Carousel) => {
   return (
-    <Container>
-      <Box height="25vh" display="flex" flexDirection="column" alignItems="center" justifyContent="center">
-        <Typography variant="h1">Title Sliding Icons</Typography>
+    <>
+      <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center">
         <Typography variant="h3">{title}</Typography>
-        <Typography color="primary.light">{text}</Typography>
+        {text && (
+          <Typography color="primary.light" marginTop={4}>
+            {text}
+          </Typography>
+        )}
       </Box>
-    </Container>
+      <IconCarouselElement icons={icons} reverse={reverse} />
+    </>
   )
 }
 
