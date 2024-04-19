@@ -12,34 +12,33 @@ const BigIconsCardGrid = ({ items }: BaseBlock): ReactElement => {
   return (
     <Container className={layoutCss.containerMedium}>
       <Grid container spacing={{ xs: '30px', xl: '50px' }}>
-        {items &&
-          items.map((item, index) => (
-            <Grid key={index} item xs={12} md={6}>
-              <div className={css.card}>
-                <Typography variant="caption" mb={3}>
-                  {item.caption}
-                </Typography>
+        {items?.map((item, index) => (
+          <Grid key={index} item xs={12} md={6}>
+            <div className={css.card}>
+              <Typography variant="caption" mb={3}>
+                {item.caption}
+              </Typography>
 
-                <img {...item.image} />
+              <img {...item.image} />
 
-                <div className={css.tag}>{item.text}</div>
+              <div className={css.tag}>{item.text}</div>
 
-                <Typography variant="h3" mb={5} mt={2}>
-                  {item.title}
-                </Typography>
+              <Typography variant="h3" mb={5} mt={2}>
+                {item.title}
+              </Typography>
 
-                {item.link && (
-                  <Link href={item.link.href} passHref>
-                    <LinkButton sx={{ mt: 'auto' }} fullSize>
-                      {item.link.title}
-                    </LinkButton>
-                  </Link>
-                )}
+              {item.link && (
+                <Link href={item.link.href} passHref>
+                  <LinkButton sx={{ mt: 'auto' }} fullSize>
+                    {item.link.title}
+                  </LinkButton>
+                </Link>
+              )}
 
-                <ArrowIcon className={css.icon} />
-              </div>
-            </Grid>
-          ))}
+              <ArrowIcon className={css.icon} />
+            </div>
+          </Grid>
+        ))}
       </Grid>
     </Container>
   )

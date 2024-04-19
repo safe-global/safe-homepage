@@ -6,8 +6,11 @@
     "component": "common/MetaTags"
   },
   {
-    "titleLines": ["Smart Accounts to", "Own the Internet"],
-    "component": "Home/HeroVideo"
+    "component": "Home/HeroVideo",
+    "title": "Smart Accounts to<br/><b>Own the Internet</b>",
+    "link": {
+      "href": "/videos/Home/safe-2024-hero.mp4"
+    }
   },
   {
     "caption": "Ethereum's transition to Smart Accounts",

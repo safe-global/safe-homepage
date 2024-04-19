@@ -11,11 +11,6 @@ type BaseBlock = {
   items?: Array<Partial<BaseBlock>>
 }
 
-type HeroVideoBlock = {
-  titleLines: [string | JSX.Element, string | JSX.ELement]
-  items?: Array<Partial<BaseBlock>>
-}
-
 type Link = {
   title?: string
   href: string
