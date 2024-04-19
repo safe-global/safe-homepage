@@ -7,10 +7,7 @@
   },
   {
     "component": "Home/HeroVideo",
-    "title": "Smart Accounts to<br/><b>Own the Internet</b>",
-    "link": {
-      "href": "/videos/Home/safe-2024-hero.mp4"
-    }
+    "title": "Smart Accounts to<br/><b>Own the Internet</b>"
   },
   {
     "caption": "Ethereum's transition to Smart Accounts",

@@ -4,7 +4,7 @@ import TextBlockImage, { type TextBlockImageProps } from '@/components/common/Te
 const TextBlockImageManifesto = (props: TextBlockImageProps) => {
   return (
     <TextBlockImage {...props}>
-      <ManifestoElement image={props.image} />
+      <ManifestoElement />
     </TextBlockImage>
   )
 }
