@@ -3,12 +3,16 @@ import { type BaseBlockEntry } from '@/config/types'
 import RichText from '@/components/common/RichText'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
+import ButtonsWrapper from '@/components/Token/ButtonsWrapper'
+import { isEntryTypeButton } from '@/lib/typeGuards'
 
 const CenteredTextBlock = (props: BaseBlockEntry) => {
-  const { caption, title, text } = props.fields
+  const { caption, title, text, buttons } = props.fields
+
+  const buttonsList = buttons?.filter(isEntryTypeButton) || []
 
   return (
-    <Container className={`${layoutCss.containerTiny} ${css.centeredContent}`}>
+    <Container className={`${layoutCss.containerShort} ${css.centeredContent}`}>
       <Typography variant="caption">{caption}</Typography>
 
       <div>
@@ -21,6 +25,10 @@ const CenteredTextBlock = (props: BaseBlockEntry) => {
             <RichText {...text} />
           </div>
         )}
+      </div>
+
+      <div className={css.centeredContent}>
+        <ButtonsWrapper buttons={buttonsList} />
       </div>
     </Container>
   )
