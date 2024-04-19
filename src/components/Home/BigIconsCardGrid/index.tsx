@@ -1,4 +1,4 @@
-import type { ReactElement } from 'react'
+import type { DetailedHTMLProps, ReactElement, SourceHTMLAttributes } from 'react'
 import { Container, Grid, Typography } from '@mui/material'
 
 import LinkButton from '@/components/common/LinkButton'
@@ -8,7 +8,11 @@ import ArrowIcon from '@/public/images/arrow-out-icon.svg'
 import type { BaseBlock } from '@/components/Home/types'
 import Link from 'next/link'
 
-const BigIconsCardGrid = ({ items }: BaseBlock): ReactElement => {
+type VideoEmbed = {
+  sources: Array<DetailedHTMLProps<SourceHTMLAttributes<HTMLSourceElement>, HTMLSourceElement>>
+}
+
+const BigIconsCardGrid = ({ items }: { items: Array<Partial<BaseBlock> & { video?: VideoEmbed }> }): ReactElement => {
   return (
     <Container className={layoutCss.containerMedium}>
       <Grid container spacing={{ xs: '30px', xl: '50px' }}>
@@ -19,7 +23,13 @@ const BigIconsCardGrid = ({ items }: BaseBlock): ReactElement => {
                 {item.caption}
               </Typography>
 
-              <img {...item.image} />
+              {item.video && (
+                <video autoPlay muted playsInline loop className={css.video}>
+                  {item.video.sources.map((s, i) => (
+                    <source key={i} {...s} />
+                  ))}
+                </video>
+              )}
 
               <div className={css.tag}>{item.text}</div>
 

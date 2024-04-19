@@ -39,6 +39,10 @@
   fill: var(--mui-palette-primary-main);
 }
 
+.video {
+  width: 288px;
+}
+
 .tag {
   background: var(--mui-palette-primary-main);
   padding: 4px 8px;
