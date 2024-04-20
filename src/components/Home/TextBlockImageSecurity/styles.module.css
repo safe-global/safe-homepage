@@ -8,15 +8,15 @@
 }
 
 .bgImage {
-  margin-left: -10%;
   max-width: 540px;
   width: 100%;
 }
 
 .image {
   position: absolute;
-  width: 100%;
+  width: 75%;
   max-width: 305px;
+  top: 35px;
 }
 
 .list {
@@ -32,4 +32,11 @@
   display: flex;
   gap: 16px;
   align-items: center;
+}
+
+@media (min-width: 600px) {
+  .image {
+    width: 100%;
+    top: 120px;
+  }
 }

@@ -102,7 +102,7 @@
       },
       {
         "caption": "Developer",
-        "title": "Protect your assets always, with the most secure smart wallet",
+        "title": "The most battle-tested Account Abstraction Stack",
         "text": "Safe <u>CORE</u>",
         "titleIcon": {
           "src": "/images/safe-core-500.svg",
@@ -192,7 +192,7 @@
     ],
     "buttons": [
       {
-        "text": "Start bug hunting",
+        "text": "View audits",
         "href": "https://www.notion.so/safe-global/Safe-Contract-Audits-f9757c9ffab24ffdac43221b9a970ebc",
         "variant": "link"
       }
