@@ -30,7 +30,7 @@
 }
 
 .animation {
-  animation: slide 70s linear infinite;
+  animation: slide 35s linear infinite;
   display: flex;
   width: max-content;
 }
@@ -106,5 +106,9 @@
 
   .gradientFlipped {
     width: 351px;
+  }
+
+  .animation {
+    animation-duration: 70s;
   }
 }
