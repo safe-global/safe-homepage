@@ -63,7 +63,9 @@ const Tokenomics = (props: BaseBlockEntry) => {
               </div>
               <div className={css.cardFooter}>
                 {link && isEntryTypeExternalURL(link) ? (
-                  <LinkButton underline={false}>{link.fields.title}</LinkButton>
+                  <LinkButton href={link.fields.url} underline={false}>
+                    {link.fields.title}
+                  </LinkButton>
                 ) : undefined}
               </div>
             </div>
