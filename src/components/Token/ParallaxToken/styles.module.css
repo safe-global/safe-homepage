@@ -99,6 +99,38 @@
 
   .stepZero {
     bottom: 298px;
+    left: -22px;
+  }
+
+  .stepOne {
+    bottom: 251px;
+    left: 177px;
+  }
+
+  .stepTwo {
+    bottom: 380px;
+    left: 274px;
+  }
+
+  .stepThree {
+    bottom: 128px;
+    left: 271px;
+  }
+
+  .stepFour {
+    bottom: 25px;
+    left: 197px;
+  }
+
+  .stepFive {
+    bottom: 143px;
+    left: 5px;
+  }
+}
+/* 58 */
+@media (min-width: 1200px) {
+  .stepZero {
+    bottom: 298px;
     left: 36px;
   }
 
