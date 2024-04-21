@@ -195,6 +195,11 @@
       {
         "text": "View audits",
         "href": "https://www.notion.so/safe-global/Safe-Contract-Audits-f9757c9ffab24ffdac43221b9a970ebc",
+        "variant": "button"
+      },
+      {
+        "text": "Start bug hunting",
+        "href": "https://github.com/5afe/safe-core-protocol",
         "variant": "link"
       }
     ],
