@@ -6,48 +6,50 @@ import css from './styles.module.css'
 
 const Governance = ({ caption, title, text, items, link }: BaseBlock) => {
   return (
-    <div className={css.gradient}>
-      <div className={css.bg}>
-        <Container className={`${layoutCss.containerMedium} ${css.container}`}>
-          <Grid container columnSpacing={2} rowGap="20px">
-            <Grid item xs={12} md={6}>
-              <Typography variant="caption" className={css.caption}>
-                {caption}
-              </Typography>
-              <Box mt={{ xs: '20px', md: '48px' }}>
-                <Typography variant="h2">{title}</Typography>
-              </Box>
+    <div className={css.gradientHorizontal}>
+      <div className={`${css.gradient}`}>
+        <div className={css.bg}>
+          <Container className={`${layoutCss.containerMedium} ${css.container}`}>
+            <Grid container columnSpacing={2} rowGap="20px">
+              <Grid item xs={12} md={6}>
+                <Typography variant="caption" className={css.caption}>
+                  {caption}
+                </Typography>
+                <Box mt={{ xs: '20px', md: '48px' }}>
+                  <Typography variant="h2">{title}</Typography>
+                </Box>
+              </Grid>
+              <Grid item xs={12} md={6} display="flex" alignItems="center">
+                <Typography color="primary.light">{text}</Typography>
+              </Grid>
             </Grid>
-            <Grid item xs={12} md={6} display="flex" alignItems="center">
-              <Typography color="primary.light">{text}</Typography>
+
+            <Grid container columnSpacing={2} rowGap="30px" mt={{ xs: '40px', md: '80px' }}>
+              {items?.map(({ caption, title, link }, index) => {
+                if (!caption || !title || !link) return null
+
+                return (
+                  <Grid key={index} item xs={12} md={4}>
+                    <LinkCard caption={caption} title={title} link={link} />
+                  </Grid>
+                )
+              })}
             </Grid>
-          </Grid>
 
-          <Grid container columnSpacing={2} rowGap="30px" mt={{ xs: '40px', md: '80px' }}>
-            {items?.map(({ caption, title, link }, index) => {
-              if (!caption || !title || !link) return null
-
-              return (
-                <Grid key={index} item xs={12} md={4}>
-                  <LinkCard caption={caption} title={title} link={link} />
-                </Grid>
-              )
-            })}
-          </Grid>
-
-          <Grid container className={css.footerWrapper}>
-            <Grid item md={6} textAlign="center">
-              <Typography variant="h4" mb={5}>
-                Want to reach the Core Contributors?
-              </Typography>
-              {link ? (
-                <Button href={link.href} target="_blank" rel="noreferrer" variant="contained" size="large">
-                  {link.title}
-                </Button>
-              ) : undefined}
+            <Grid container className={css.footerWrapper}>
+              <Grid item md={6} textAlign="center">
+                <Typography variant="h4" mb={5}>
+                  Want to reach the Core Contributors?
+                </Typography>
+                {link ? (
+                  <Button href={link.href} target="_blank" rel="noreferrer" variant="contained" size="large">
+                    {link.title}
+                  </Button>
+                ) : undefined}
+              </Grid>
             </Grid>
-          </Grid>
-        </Container>
+          </Container>
+        </div>
       </div>
     </div>
   )
