@@ -20,8 +20,8 @@ const SafeAtScale = ({ caption, title, items }: BaseBlock) => {
     <div className={css.gradient}>
       <div className={css.bg}>
         <Container ref={containerRef}>
-          <Grid container className={`${css.content} ${layoutCss.containerMedium} ${layoutCss.centeredContent}`}>
-            <Grid item xs={12}>
+          <Grid container className={layoutCss.containerMedium}>
+            <Grid item xs={12} className={layoutCss.centeredContent}>
               <Typography variant="caption" className={css.caption}>
                 {caption}
               </Typography>

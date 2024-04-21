@@ -7,7 +7,8 @@
   },
   {
     "component": "Home/HeroVideo",
-    "title": "Smart Accounts to<br/><b>Own the Internet</b>"
+    "title": "Smart Accounts to",
+    "text": "Own the Internet"
   },
   {
     "caption": "Ethereum's transition to Smart Accounts",
@@ -194,6 +195,11 @@
       {
         "text": "View audits",
         "href": "https://www.notion.so/safe-global/Safe-Contract-Audits-f9757c9ffab24ffdac43221b9a970ebc",
+        "variant": "button"
+      },
+      {
+        "text": "Start bug hunting",
+        "href": "https://github.com/5afe/safe-core-protocol",
         "variant": "link"
       }
     ],
