@@ -40,16 +40,9 @@
   bottom: 0;
 }
 
-.content {
-  align-content: center;
-}
-
-.content * {
-  z-index: 1;
-}
-
 .caption {
   text-align: left;
+  z-index: 1;
 }
 
 .title {
@@ -173,6 +166,10 @@
   .value {
     font-size: 80px;
     line-height: 100px;
+  }
+
+  .caption {
+    text-align: center;
   }
 }
 

@@ -7,7 +7,8 @@
   },
   {
     "component": "Home/HeroVideo",
-    "title": "Smart Accounts to<br/><b>Own the Internet</b>"
+    "title": "Smart Accounts to",
+    "text": "Own the Internet"
   },
   {
     "caption": "Ethereum's transition to Smart Accounts",
