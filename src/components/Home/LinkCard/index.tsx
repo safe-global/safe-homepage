@@ -20,7 +20,7 @@ const LinkCard = ({ caption, title, text, link }: Partial<BaseBlock>) => (
           {text ? <Typography mb="auto">{text}</Typography> : undefined}
 
           {link ? (
-            <LinkButton underline={false} fullSize>
+            <LinkButton underline={false} fullSize href={link.href}>
               {link.title}
             </LinkButton>
           ) : undefined}
