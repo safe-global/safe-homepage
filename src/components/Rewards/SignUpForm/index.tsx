@@ -4,6 +4,8 @@ import { type BaseBlockEntry } from '@/config/types'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 
+const PUSHWOOSH_ENDPOINT = 'https://api.pushwoosh.com/json/1.3/registerEmail'
+
 const SignUpForm = (props: BaseBlockEntry) => {
   const { title, text } = props.fields
 
@@ -14,7 +16,7 @@ const SignUpForm = (props: BaseBlockEntry) => {
       email: { value: string }
     }
 
-    fetch('https://api.pushwoosh.com/json/1.3/registerEmail', {
+    fetch(PUSHWOOSH_ENDPOINT, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

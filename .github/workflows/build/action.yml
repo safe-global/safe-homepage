@@ -24,3 +24,4 @@ runs:
         DUNE_API_KEY: ${{ fromJSON(inputs.secrets).DUNE_API_KEY }}
         CONTENTFUL_SPACE_ID: ${{ fromJSON(inputs.secrets).CONTENTFUL_SPACE_ID }}
         CONTENTFUL_ACCESS_TOKEN: ${{ fromJSON(inputs.secrets).CONTENTFUL_ACCESS_TOKEN }}
+        PUSHWOOSH_APPLICATION_CODE: ${{ fromJSON(inputs.secrets).PUSHWOOSH_APPLICATION_CODE }}
