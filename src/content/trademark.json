@@ -1,0 +1,11 @@
+[
+  {
+    "pageTitle": "Safe – Trademark",
+    "component": "common/MetaTags"
+  },
+  {
+    "title": "Safe Trademark Policy",
+    "component": "common/TextBlock",
+    "text": "<p style=\"text-align: center;\">Last update: April 2024</p><i>The Safe Ecosystem Foundation (“SEF” also referred to as “Trademark Owner”) is the owner of various trademarks. To ensure the integrity and protection of the Safe Trademarks (as defined below), to regulate the use of the Safe Trademarks, and to protect users SEF has defined this trademark policy (\"Policy\"). This Policy sets out the conditions and requirements under which the Safe Trademarks may be used. This Policy does not provide or amend any licenses applicable totechnology published by SEF.</i>"
+  }
+]
