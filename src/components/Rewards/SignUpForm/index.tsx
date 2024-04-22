@@ -5,6 +5,25 @@ import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 
 const PUSHWOOSH_ENDPOINT = 'https://api.pushwoosh.com/json/1.3/registerEmail'
+const FIELD_NAME = 'email'
+
+const registerEmail = (email: string) => {
+  fetch(PUSHWOOSH_ENDPOINT, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      email,
+      application: process.env.NEXT_PUBLIC_PUSHWOOSH_APPLICATION_CODE,
+      tags: {
+        marketing: 'true',
+      },
+    }),
+  }).catch((error) => {
+    console.error('Error:', error)
+  })
+}
 
 const SignUpForm = (props: BaseBlockEntry) => {
   const { title, text } = props.fields
@@ -12,30 +31,10 @@ const SignUpForm = (props: BaseBlockEntry) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
-    const target = e.target as typeof e.target & {
-      email: { value: string }
-    }
+    const data = new FormData(e.target as HTMLFormElement)
+    const email = data.get(FIELD_NAME)
 
-    fetch(PUSHWOOSH_ENDPOINT, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        email: target.email.value,
-        application: process.env.NEXT_PUBLIC_PUSHWOOSH_APPLICATION_CODE,
-      }),
-    })
-      .then((response) => {
-        if (response.ok) {
-          console.log('Email registered successfully.')
-        } else {
-          console.error('Failed to register email.')
-        }
-      })
-      .catch((error) => {
-        console.error('Error:', error)
-      })
+    registerEmail(email as string)
   }
 
   return (
