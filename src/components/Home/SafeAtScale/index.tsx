@@ -7,9 +7,6 @@ import { useSafeStats } from '@/hooks/useSafeStats'
 import useScrollReveal from '@/hooks/useScrollReveal'
 import TickerElement from './TickerElement'
 
-const jsxOrStringToString = (s: string | JSX.Element): string =>
-  s instanceof String ? s : (s as JSX.Element).props.content
-
 const SafeAtScale = ({ caption, title, items }: BaseBlock) => {
   const safeStats = useSafeStats()
 
@@ -54,9 +51,8 @@ const SafeAtScale = ({ caption, title, items }: BaseBlock) => {
                 <div className={css.bracketSpacer}></div>
                 <div className={css.metricsInner}>
                   {items?.map((item, index) => {
-                    const fallback = jsxOrStringToString(item.title ?? '0')
+                    const fallback = typeof item.title === 'string' ? item.title : item.title?.props.content
                     const value = safeStats[index] ?? fallback
-                    const key = jsxOrStringToString(item.text ?? index.toString())
 
                     return (
                       <Fragment key={`${item.text}_${index}`}>
