@@ -68,7 +68,10 @@ const TickerElement = ({
   }, [run, toValue, delayTimeMs])
 
   return (
-    <span className={`${className} ${css.wrapper} ${run ? css.run : ''}`}>
+    <span
+      className={`${className} ${css.wrapper} ${run ? css.run : ''}`}
+      style={{ '--len': chars.length } as CSSProperties}
+    >
       {chars.map((c, i) => {
         if (isNumber(c)) {
           return (

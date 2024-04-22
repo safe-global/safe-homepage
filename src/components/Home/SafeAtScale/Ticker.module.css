@@ -7,7 +7,7 @@
 
 .digit,
 .char {
-  color: color-mix(in oklab, var(--mui-palette-info-main) calc(var(--i) * 100%), var(--mui-palette-primary-main));
+  color: transparent;
 
   opacity: 0;
   transition: opacity 300ms ease calc(var(--i) * 600ms);
@@ -44,6 +44,23 @@
   justify-content: center;
   flex-direction: column;
   transition: transform var(--roll-duration) ease var(--roll-delay);
+}
+
+.scale > span,
+.char {
+  /*
+    construct gradient piecewise between chars 
+    since gradient clipping does not work for 
+    relative-positioned elements
+  */
+  --left-idx: calc((var(--len) - 1) * var(--i));
+  --right-idx: calc(var(--len) - var(--left-idx));
+  background: linear-gradient(
+    90deg,
+    var(--mui-palette-primary-main) calc(var(--left-idx) * -140%),
+    var(--mui-palette-info-main)    calc(var(--right-idx) * 140%)
+  );
+  background-clip: text;
 }
 
 .scale span {
@@ -88,7 +105,4 @@
 }
 [data-value='9'] .scale {
   transform: translateY(-90%);
-}
-[data-value='-'] .scale {
-  transform: translateY(-100%);
 }
