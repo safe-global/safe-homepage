@@ -131,6 +131,10 @@ const subFooterItems = [
     href: AppRoutes.imprint,
   },
   {
+    label: 'Trademark',
+    href: AppRoutes.trademark,
+  },
+  {
     label: 'Disclaimer',
     href: AppRoutes.disclaimer,
   },
