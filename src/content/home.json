@@ -74,6 +74,7 @@
       { "name": "Polygon zkEVM", "new": true, "src": "/images/Home/NetworkIcons/polygon-zkevm.svg" },
       { "name": "Celo", "src": "/images/Home/NetworkIcons/celo.svg" },
       { "name": "Optimism", "src": "/images/Home/NetworkIcons/optimism.svg" },
+      { "name": "Base", "src": "/images/Home/NetworkIcons/base.png" },
       { "name": "Arbitrum", "src": "/images/Home/NetworkIcons/arbitrum.svg" },
       { "name": "ZkSync Era Mainnet", "new": true, "src": "/images/Home/NetworkIcons/zksync-era-mainnet.svg" },
       { "name": "Avalanche", "src": "/images/Home/NetworkIcons/avalanche.svg" },
@@ -200,7 +201,7 @@
       },
       {
         "text": "Start bug hunting",
-        "href": "https://github.com/5afe/safe-core-protocol",
+        "href": "https://docs.safe.global/advanced/smart-account-bug-bounty",
         "variant": "link"
       }
     ],
@@ -252,7 +253,7 @@
     },
     "items": [
       {
-        "title": "Restaking",
+        "title": "Staking & Restaking",
         "link": {
           "href": "https://safe.global/blog/the-safe-case-staking-and-restaking"
         },
@@ -282,7 +283,7 @@
         }
       },
       {
-        "title": "Social & Identity",
+        "title": "Social &<br/>Identity",
         "link": {
           "href": "https://safe.global/blog/safe-case-decentralized-social-id"
         },
@@ -307,7 +308,7 @@
         "caption": "Be part of a community",
         "title": "Safe Token",
         "link": {
-          "href": "https://forum.safe.global/"
+          "href": "https://safe.global/token"
         }
       },
       {
