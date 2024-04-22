@@ -44,13 +44,9 @@ const safeProtocolItems = [
   },
 ]
 
-const communityItems = [
+const ecosystemItems = [
   {
-    label: 'Governance',
-    href: AppRoutes.governance,
-  },
-  {
-    label: 'Ecosystem',
+    label: 'Explore',
     href: AppRoutes.ecosystem,
     target: '_blank',
     rel: 'noreferrer',
@@ -60,6 +56,21 @@ const communityItems = [
     href: GRANTS_LINK,
     target: '_blank',
     rel: 'noreferrer',
+  },
+]
+
+const communityItems = [
+  {
+    label: 'Governance',
+    href: AppRoutes.governance,
+  },
+  {
+    label: 'Token',
+    href: AppRoutes.token,
+  },
+  {
+    label: 'Safe{Pass}',
+    href: AppRoutes.pass,
   },
   {
     label: 'Safe{Con}',
@@ -152,13 +163,13 @@ const Footer = () => {
   return (
     <Container className={css.wrapper}>
       <Grid container flexDirection={{ xs: 'column', sm: 'row' }}>
-        <Grid item xs={12} md={3} mb={{ xs: 4, md: 0 }}>
+        <Grid item xs={12} md={2.5} mb={{ xs: 4, md: 0 }}>
           <Link href={AppRoutes.index}>
             <Logo className={css.logo} />
           </Link>
         </Grid>
 
-        <Grid item sm={6} md={2}>
+        <Grid item xs={6} md={2}>
           <Typography variant="caption" color="text.primary">
             Developers
           </Typography>
@@ -173,7 +184,22 @@ const Footer = () => {
           </ul>
         </Grid>
 
-        <Grid item sm={6} md={2}>
+        <Grid item xs={6} md={2}>
+          <Typography variant="caption" color="text.primary">
+            Ecosystem
+          </Typography>
+          <ul className={css.list}>
+            {ecosystemItems.map((item) => (
+              <li className={css.listItem} key={item.href}>
+                <Link href={item.href} target="_blank" rel="noreferrer">
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Grid>
+
+        <Grid item xs={6} md={2}>
           <Typography variant="caption" color="text.primary">
             Community
           </Typography>
@@ -188,7 +214,7 @@ const Footer = () => {
           </ul>
         </Grid>
 
-        <Grid item sm={6} md={2}>
+        <Grid item xs={6} md={2}>
           <Typography variant="caption" color="text.primary">
             Resources
           </Typography>
@@ -215,7 +241,10 @@ const Footer = () => {
           </ul>
         </Grid>
 
-        <Grid item xs={12} md={3} mt={{ xs: 6, md: 0 }}>
+        <Grid item xs={6} md={1.5}>
+          <Typography variant="caption" color="text.primary">
+            Follow us
+          </Typography>
           <div className={css.socials}>
             {createFooterButton('X page', TWITTER_LINK, XIcon)}
             {createFooterButton('Discourse forum', FORUM_LINK, DiscourseIcon)}
