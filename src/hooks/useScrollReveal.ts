@@ -23,6 +23,7 @@ const useScrollReveal = (elementRef: RefObject<HTMLElement>, percentVisible: num
     }
 
     window.addEventListener('scroll', handleScroll)
+    handleScroll()
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
