@@ -33,7 +33,7 @@ const BigIconsCardGrid = ({ items }: { items: Array<Partial<BaseBlock> & { video
 
               <div className={css.tag}>{item.text}</div>
 
-              <Typography variant="h3" mb={5} mt={2}>
+              <Typography variant="h3" mb={5} mt={2} width="80%">
                 {item.title}
               </Typography>
 

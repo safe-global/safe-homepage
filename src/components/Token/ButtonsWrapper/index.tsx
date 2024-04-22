@@ -12,13 +12,13 @@ const ButtonsWrapper = ({ buttons }: ButtonsWrapperProps) => {
   return (
     <div className={css.wrapper}>
       {buttons.map((button, index) => {
-        const { text, href, variant } = button.fields
+        const { text, href, variant, isDisabled } = button.fields
         const isButton = variant === 'button'
 
         return (
-          <SafeLink key={index} href={href}>
+          <SafeLink key={index} href={href} isDisabled={!!isDisabled}>
             {isButton ? (
-              <Button variant="contained" size="large">
+              <Button variant="contained" size="large" disabled={!!isDisabled}>
                 {text}
               </Button>
             ) : (
