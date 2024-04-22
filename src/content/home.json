@@ -205,7 +205,7 @@
       }
     ],
     "image": {
-      "src": "/images/Home/audited-shield.png",
+      "src": "/images/Home/safe-shield.png",
       "alt": "Safe Smart Account shield"
     },
     "mobileVariant": "image-text"
