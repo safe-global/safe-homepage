@@ -21,7 +21,10 @@ const SignUpForm = (props: BaseBlockEntry) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ email: target.email.value, application: process.env.PUSHWOOSH_APPLICATION_CODE }),
+      body: JSON.stringify({
+        email: target.email.value,
+        application: process.env.NEXT_PUBLIC_PUSHWOOSH_APPLICATION_CODE,
+      }),
     })
       .then((response) => {
         if (response.ok) {
