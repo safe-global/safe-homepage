@@ -18,7 +18,8 @@
       {
         "text": "Read our vision & roadmap",
         "href": "https://safe.global/blog/future-of-safe",
-        "variant": "link"
+        "variant": "link",
+        "isDisabled": true
       }
     ],
     "mobileVariant": "text-image",

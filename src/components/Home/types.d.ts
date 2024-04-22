@@ -21,4 +21,5 @@ type Button = {
   href: string
   variant: 'button' | 'link'
   color?: ButtonProps['color']
+  isDisabled?: boolean
 }
