@@ -26,6 +26,16 @@ const safeConButton = (
   </div>
 )
 
+// const safePassButton = (
+//   <div className={css.externalLink}>
+//     Safe
+//     <u>PASS</u>
+//     <ArrowIcon />
+//   </div>
+// )
+
+// TODO: Enable button together with Safe{Pass}
+// const navItems: NavItemType[] = [...navItemsData, { label: safePassButton, href: AppRoutes.pass }]
 const navItems: NavItemType[] = [...navItemsData, { label: safeConButton, href: SAFECON_LINK, external: true }]
 
 const externalLinkAttrs = {
