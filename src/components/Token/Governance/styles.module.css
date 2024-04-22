@@ -1,0 +1,11 @@
+.bg {
+  background-position: center top 180px;
+  background-repeat: repeat-x;
+  overflow: auto;
+}
+
+@media (min-width: 600px) {
+  .container {
+    margin-bottom: 140px;
+  }
+}

@@ -1,0 +1,140 @@
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: calc(100vh - var(--header-height) * 2);
+  min-height: 300px;
+}
+
+/*
+  [fern] mobile browsers calculate vh units ignoring
+  the url/status bar, so we use svh where supported
+*/
+@supports (height: 100svh) {
+  .container {
+    height: calc(100svh - var(--header-height) * 2);
+  }
+}
+
+.container .scroll {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.container:hover .scroll {
+  opacity: 1;
+}
+
+.content {
+  flex-direction: column;
+  text-align: center;
+  text-wrap: nowrap;
+  margin-top: 30px;
+}
+
+.hl {
+  color: var(--mui-palette-primary-main);
+  display: block;
+}
+
+.title {
+  font-size: 40px;
+  line-height: 1.1em;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.video {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 0 2.5%;
+  object-fit: contain;
+  z-index: -1;
+}
+
+.video.ready {
+  transition: opacity 0.3s ease;
+  opacity: 1 !important;
+}
+
+.scroll {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 75vh;
+  font-size: 12px;
+  color: var(--mui-palette-text-primary);
+}
+
+@supports (height: 100svh) {
+  .scroll {
+    top: 75svh;
+  }
+}
+
+.scroll::after {
+  content: '';
+  display: block;
+  background-image: url('/images/angle-down.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+  margin: auto;
+}
+
+@media (min-width: 600px) {
+  .container {
+    aspect-ratio: 16 / 9;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .video {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .title {
+    font-size: 2.5em;
+  }  
+  
+  .content {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .title {
+    font-size: 4em;
+    line-height: 1em;
+  }
+
+  .container {
+    max-width: 900px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+
+  .video {
+    padding: 0 15%;
+  }
+}

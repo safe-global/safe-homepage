@@ -1,0 +1,19 @@
+.imageWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.bgImage {
+  margin-left: -10%;
+  max-width: 540px;
+  width: 100%;
+}
+
+.image {
+  position: absolute;
+  width: 100%;
+  max-width: 675px;
+}

@@ -1,0 +1,45 @@
+.textBlockContainer a {
+  color: var(--mui-palette-primary-main);
+  text-decoration: underline;
+}
+
+.card {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  border-left: 1px solid var(--mui-palette-border-light);
+  border-bottom: 1px solid var(--mui-palette-border-light);
+  margin-left: -1px;
+  margin-bottom: -1px;
+}
+
+.card img {
+  height: 50px;
+  width: auto;
+}
+
+.roundCorners {
+  border: 1px solid var(--mui-palette-border-light);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.extra {
+  width: 100%;
+  margin-top: 40px;
+  text-align: center;
+  color: var(--mui-palette-primary-light);
+}
+
+@media (min-width: 600px) {
+  .card {
+    gap: 40px;
+  }
+
+  .textBlockContainer {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
