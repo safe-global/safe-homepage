@@ -3,7 +3,7 @@ import css from '@/components/Home/HeroVideo/styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
 import { useEffect, useRef, useState } from 'react'
 
-const HeroVideo = ({ title }: BaseBlock) => {
+const HeroVideo = ({ title, text }: BaseBlock) => {
   const [ready, setReady] = useState(false)
 
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -16,6 +16,8 @@ const HeroVideo = ({ title }: BaseBlock) => {
         clearInterval(poll)
       }
     }, 100)
+
+    return () => clearInterval(poll)
   }, [])
 
   return (
@@ -40,6 +42,9 @@ const HeroVideo = ({ title }: BaseBlock) => {
           <Grid item>
             <Typography variant="h1" className={css.title}>
               {title}
+            </Typography>
+            <Typography variant="h1" className={css.title} color="primary.main">
+              {text}
             </Typography>
           </Grid>
         </Grid>

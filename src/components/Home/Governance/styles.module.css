@@ -3,6 +3,11 @@
   margin-top: 80px;
 }
 
+.caption {
+  position: relative;
+  z-index: 1;
+}
+
 @media (min-width: 600px) {
   .container {
     margin-bottom: 140px;
@@ -16,7 +21,8 @@
     background-size: cover;
   }
 
-  .gradient {
+  .gradient,
+  .gradientHorizontal {
     position: relative;
   }
 
@@ -44,5 +50,37 @@
   .gradient:after {
     background: linear-gradient(0deg, var(--mui-palette-background-main) 0%, rgba(18, 19, 18, 0) 100%);
     bottom: 0;
+  }
+
+  .gradientHorizontal:before,
+  .gradientHorizontal:after {
+    content: '';
+    top: 0;
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 20px;
+    pointer-events: none;
+  }
+
+  .gradientHorizontal:before {
+    background: linear-gradient(
+      90deg,
+      var(--mui-palette-background-main) 0%,
+      var(--mui-palette-background-main) 10%,
+      rgba(18, 19, 18, 0) 100%
+    );
+    left: 0;
+    z-index: 1;
+  }
+
+  .gradientHorizontal:after {
+    background: linear-gradient(
+      270deg,
+      var(--mui-palette-background-main) 0%,
+      var(--mui-palette-background-main) 10%,
+      rgba(18, 19, 18, 0) 100%
+    );
+    right: 0;
   }
 }

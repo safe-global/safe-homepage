@@ -40,16 +40,9 @@
   bottom: 0;
 }
 
-.content {
-  align-content: center;
-}
-
-.content * {
-  z-index: 1;
-}
-
 .caption {
   text-align: left;
+  z-index: 1;
 }
 
 .title {
@@ -148,8 +141,8 @@
   transition-delay: 0.5s;
 }
 
-.brackets .l,
-.brackets .r {
+.brackets .left,
+.brackets .right {
   width: var(--bracket-height);
   height: var(--bracket-width);
   margin: 0;
@@ -173,6 +166,10 @@
   .value {
     font-size: 80px;
     line-height: 100px;
+  }
+
+  .caption {
+    text-align: center;
   }
 }
 
@@ -224,8 +221,8 @@
     width: calc(var(--bracket-width) * 2 + var(--bracket-gap));
   }
 
-  .brackets .l,
-  .brackets .r {
+  .brackets .left,
+  .brackets .right {
     width: var(--bracket-width);
     height: var(--bracket-height);
   }

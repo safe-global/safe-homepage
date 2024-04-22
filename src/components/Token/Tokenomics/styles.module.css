@@ -1,3 +1,8 @@
+.gradient {
+  position: relative;
+  overflow: hidden;
+}
+
 .bg {
   background-position: center top 180px;
   background-repeat: repeat-x;
@@ -45,6 +50,32 @@
 }
 
 @media (min-width: 600px) {
+  .gradient {
+    overflow: hidden;
+  }
+
+  .gradient:before,
+  .gradient:after {
+    content: '';
+    top: 0;
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 5%;
+    pointer-events: none;
+  }
+
+  .gradient:before {
+    background: linear-gradient(90deg, var(--mui-palette-background-main) 0%, rgba(18, 19, 18, 0) 100%);
+    left: 0;
+    z-index: 1;
+  }
+
+  .gradient:after {
+    background: linear-gradient(270deg, var(--mui-palette-background-main) 0%, rgba(18, 19, 18, 0) 100%);
+    right: 0;
+  }
+
   .container {
     margin-bottom: 140px;
   }

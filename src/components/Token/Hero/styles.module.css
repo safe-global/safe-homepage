@@ -1,6 +1,6 @@
 .heroSpacer {
   position: relative;
-  height: 1085.84px;
+  height: 1085px;
   overflow-x: hidden;
 }
 
@@ -50,7 +50,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
-  width: 331.19px;
+  width: 331px;
   height: 331.19px;
   background: rgba(18, 255, 128, 0.3);
   filter: blur(100px);

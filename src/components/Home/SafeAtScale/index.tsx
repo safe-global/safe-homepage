@@ -7,9 +7,6 @@ import { useSafeStats } from '@/hooks/useSafeStats'
 import useScrollReveal from '@/hooks/useScrollReveal'
 import TickerElement from './TickerElement'
 
-const jsxOrStringToString = (s: string | JSX.Element): string =>
-  s instanceof String ? s : (s as JSX.Element).props.content
-
 const SafeAtScale = ({ caption, title, items }: BaseBlock) => {
   const safeStats = useSafeStats()
 
@@ -20,8 +17,8 @@ const SafeAtScale = ({ caption, title, items }: BaseBlock) => {
     <div className={css.gradient}>
       <div className={css.bg}>
         <Container ref={containerRef}>
-          <Grid container className={`${css.content} ${layoutCss.containerMedium} ${layoutCss.centeredContent}`}>
-            <Grid item xs={12}>
+          <Grid container className={layoutCss.containerMedium}>
+            <Grid item xs={12} className={layoutCss.centeredContent}>
               <Typography variant="caption" className={css.caption}>
                 {caption}
               </Typography>
@@ -37,14 +34,14 @@ const SafeAtScale = ({ caption, title, items }: BaseBlock) => {
                 }`}
               >
                 <div className={css.brackets}>
-                  <div className={css.l}>
+                  <div className={css.left}>
                     <video autoPlay muted playsInline loop className={css.video}>
                       <source src="/videos/Home/brackets-left-hevc.mov" type="video/quicktime; codecs=hvc1" />
                       <source src="/videos/Home/brackets-left-vp9.webm" type="video/webm" />
                     </video>
                   </div>
                   <div className={css.metricsSpacer}></div>
-                  <div className={css.r}>
+                  <div className={css.right}>
                     <video autoPlay muted playsInline loop className={css.video}>
                       <source src="/videos/Home/brackets-right-hevc.mov" type="video/quicktime; codecs=hvc1" />
                       <source src="/videos/Home/brackets-right-vp9.webm" type="video/webm" />
@@ -54,12 +51,11 @@ const SafeAtScale = ({ caption, title, items }: BaseBlock) => {
                 <div className={css.bracketSpacer}></div>
                 <div className={css.metricsInner}>
                   {items?.map((item, index) => {
-                    const fallback = jsxOrStringToString(item.title ?? '0')
+                    const fallback = typeof item.title === 'string' ? item.title : item.title?.props.content
                     const value = safeStats[index] ?? fallback
-                    const key = jsxOrStringToString(item.text ?? index.toString())
 
                     return (
-                      <Fragment key={key}>
+                      <Fragment key={`${item.text}_${index}`}>
                         <a
                           href={item.link?.href}
                           target="_blank"
@@ -74,7 +70,7 @@ const SafeAtScale = ({ caption, title, items }: BaseBlock) => {
                             toValue={value}
                             rollDurationSecs={1.5}
                             delayTimeMs={350 + 150 * index}
-                            key={key}
+                            key={index}
                           />
                           <Typography variant="caption" className={css.caption}>
                             {item.text}

@@ -5,7 +5,7 @@ import { Typography } from '@mui/material'
 type Icon = {
   name: string
   src: string
-  new?: boolean
+  isNew?: boolean
 }
 
 export type Carousel = {
@@ -19,7 +19,7 @@ const IconChip = ({ icon }: { icon: Icon }) => (
       <img src={icon.src} alt={icon.name} width={64} height={64} />
     </div>
     <Typography>{icon.name}</Typography>
-    {icon.new && <div className={css.newBadge}>New</div>}
+    {icon.isNew && <div className={css.newBadge}>New</div>}
   </div>
 )
 

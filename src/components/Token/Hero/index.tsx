@@ -57,7 +57,12 @@ const Hero = (props: BaseBlockEntry) => {
         <div key={orbitRing.id} className={css[orbitRing.id]}>
           {/* Display ecosystem Logos */}
           {orbitRing.logos.map((logo, logoIndex) => (
-            <PulsingLogo key={logoIndex} angle={logo.angle} radius={orbitRing.diameter / 2} imgUrl={logo.imgUrl} />
+            <PulsingLogo
+              key={`${logo.imgUrl}_${logoIndex}`}
+              angle={logo.angle}
+              radius={orbitRing.diameter / 2}
+              imgUrl={logo.imgUrl}
+            />
           ))}
 
           {/* Display all floater dots*/}
