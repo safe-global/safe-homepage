@@ -38,8 +38,8 @@ const Card = (props: BaseBlockEntry) => {
   // The `useTransform` hook is used here to dynamically generate a CSS background style
   // based on the current mouse position. It takes the motion values for the background
   // position (backgroundPosX and backgroundPosY) and transforms them into a CSS gradient
-  const backgroundStyle = useTransform([backgroundPosX, backgroundPosY], (latestValues) => {
-    const [x, y] = latestValues.map((value) => value as number)
+  const backgroundStyle = useTransform([backgroundPosX, backgroundPosY], (latestValues: number[]) => {
+    const [x, y] = latestValues.map((value) => value)
     // Construct the CSS gradient string with updated positions to create the dynamic sheen effect
     return `repeating-linear-gradient(45deg, rgba(255,255,255, 0.15) 0%, rgba(0,0,0,0.1) 20%,  rgba(0,0,0,0.1) 30%, rgba(255,255,255, 0.15) 50%, rgba(0,0,0,0.1) 70%, rgba(0,0,0,0.1) 80% ,rgba(255,255,255, 0.15) 100%) 
     ${x * 3}% 

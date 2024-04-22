@@ -16,6 +16,8 @@ const HeroVideo = ({ title, text }: BaseBlock) => {
         clearInterval(poll)
       }
     }, 100)
+
+    return () => clearInterval(poll)
   }, [])
 
   return (

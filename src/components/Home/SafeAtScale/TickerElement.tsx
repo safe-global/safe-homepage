@@ -54,14 +54,17 @@ const TickerElement = ({
       .split('')
       .map((c) => (isNaN(Number(c)) ? c : Number(c)))
 
+    let timeoutId: NodeJS.Timeout
     if (run) {
-      setTimeout(() => {
+      timeoutId = setTimeout(() => {
         setChars(toChars)
       }, delayTimeMs)
     } else {
       const fromChars = toChars.map((c) => (isNumber(c) ? (c === 0 ? Math.floor(Math.random() * 10) : 0) : c))
       setChars(fromChars)
     }
+
+    return () => clearTimeout(timeoutId)
   }, [run, toValue, delayTimeMs])
 
   return (

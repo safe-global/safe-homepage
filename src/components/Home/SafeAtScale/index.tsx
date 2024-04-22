@@ -37,14 +37,14 @@ const SafeAtScale = ({ caption, title, items }: BaseBlock) => {
                 }`}
               >
                 <div className={css.brackets}>
-                  <div className={css.l}>
+                  <div className={css.left}>
                     <video autoPlay muted playsInline loop className={css.video}>
                       <source src="/videos/Home/brackets-left-hevc.mov" type="video/quicktime; codecs=hvc1" />
                       <source src="/videos/Home/brackets-left-vp9.webm" type="video/webm" />
                     </video>
                   </div>
                   <div className={css.metricsSpacer}></div>
-                  <div className={css.r}>
+                  <div className={css.right}>
                     <video autoPlay muted playsInline loop className={css.video}>
                       <source src="/videos/Home/brackets-right-hevc.mov" type="video/quicktime; codecs=hvc1" />
                       <source src="/videos/Home/brackets-right-vp9.webm" type="video/webm" />
@@ -59,7 +59,7 @@ const SafeAtScale = ({ caption, title, items }: BaseBlock) => {
                     const key = jsxOrStringToString(item.text ?? index.toString())
 
                     return (
-                      <Fragment key={key}>
+                      <Fragment key={`${item.text}_${index}`}>
                         <a
                           href={item.link?.href}
                           target="_blank"
@@ -74,7 +74,7 @@ const SafeAtScale = ({ caption, title, items }: BaseBlock) => {
                             toValue={value}
                             rollDurationSecs={1.5}
                             delayTimeMs={350 + 150 * index}
-                            key={key}
+                            key={index}
                           />
                           <Typography variant="caption" className={css.caption}>
                             {item.text}

@@ -1,5 +1,6 @@
 .container {
-  width: 512px;
+  width: 100%;
+  max-width: 512px;
   margin: auto;
   height: 570px;
   position: relative;
@@ -7,4 +8,10 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+
+@media (min-width: 512px) {
+  .container {
+    width: 512px;
+  }
 }

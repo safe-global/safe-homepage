@@ -141,8 +141,8 @@
   transition-delay: 0.5s;
 }
 
-.brackets .l,
-.brackets .r {
+.brackets .left,
+.brackets .right {
   width: var(--bracket-height);
   height: var(--bracket-width);
   margin: 0;
@@ -221,8 +221,8 @@
     width: calc(var(--bracket-width) * 2 + var(--bracket-gap));
   }
 
-  .brackets .l,
-  .brackets .r {
+  .brackets .left,
+  .brackets .right {
     width: var(--bracket-width);
     height: var(--bracket-height);
   }

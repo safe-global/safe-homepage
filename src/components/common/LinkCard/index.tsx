@@ -21,7 +21,7 @@ const LinkCard = ({ caption, title, image, link, icon, highlight }: CardProps) =
   <div className={`${css.card} ${highlight ? css.highlight : css.outline}`}>
     <div className={css.cardHeader}>
       {caption ? <Typography variant="caption">{caption}</Typography> : undefined}
-      {image ? <img src={image.src} alt={image.alt} /> : icon ?? undefined}
+      {image ? <img src={image.src || ''} alt={image.alt || 'card icon'} /> : icon ?? undefined}
     </div>
 
     <div className={css.cardBody}>
