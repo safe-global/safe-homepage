@@ -41,14 +41,12 @@
 }
 
 .caption {
-  text-align: left;
   z-index: 1;
 }
 
 .title {
-  text-align: left;
+  z-index: 1;
   margin-top: 24px;
-  text-wrap: balance;
 }
 
 .title br {
@@ -167,10 +165,6 @@
     font-size: 80px;
     line-height: 100px;
   }
-
-  .caption {
-    text-align: center;
-  }
 }
 
 @media (min-width: 900px) {
@@ -181,11 +175,9 @@
   .caption {
     text-wrap: nowrap;
     white-space: nowrap;
-    text-align: center;
   }
 
   .title {
-    text-align: center;
     margin: 24px auto;
   }
 
