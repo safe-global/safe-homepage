@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 import { AppRoutes } from '@/config/routes'
 import Logo from '@/public/images/logo.svg'
-import { SAFECON_LINK, WALLET_LINK } from '@/config/constants'
+import { WALLET_LINK } from '@/config/constants'
 import css from './styles.module.css'
 import clsx from 'clsx'
 import { useRouter } from 'next/router'
@@ -18,25 +18,15 @@ type NavItemType = {
   external?: boolean
 }
 
-const safeConButton = (
+const safePassButton = (
   <div className={css.externalLink}>
     Safe
-    <u>CON</u>
+    <u>PASS</u>
     <ArrowIcon />
   </div>
 )
 
-// const safePassButton = (
-//   <div className={css.externalLink}>
-//     Safe
-//     <u>PASS</u>
-//     <ArrowIcon />
-//   </div>
-// )
-
-// TODO: Enable button together with Safe{Pass}
-// const navItems: NavItemType[] = [...navItemsData, { label: safePassButton, href: AppRoutes.pass }]
-const navItems: NavItemType[] = [...navItemsData, { label: safeConButton, href: SAFECON_LINK, external: true }]
+const navItems: NavItemType[] = [...navItemsData, { label: safePassButton, href: AppRoutes.pass }]
 
 const externalLinkAttrs = {
   target: '_blank',
