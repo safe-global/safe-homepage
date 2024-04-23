@@ -3,6 +3,7 @@ import { Button, Container, TextField } from '@mui/material'
 import { type BaseBlockEntry } from '@/config/types'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
+import { useState } from 'react'
 
 const PUSHWOOSH_ENDPOINT = 'https://api.pushwoosh.com/json/1.3/registerEmail'
 const FIELD_NAME = 'email'
@@ -26,6 +27,7 @@ const registerEmail = (email: string) => {
 }
 
 const SignUpForm = (props: BaseBlockEntry) => {
+  const [isSubmitted, setIsSubmitted] = useState(false)
   const { title, text } = props.fields
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -35,6 +37,7 @@ const SignUpForm = (props: BaseBlockEntry) => {
     const email = data.get(FIELD_NAME)
 
     registerEmail(email as string)
+    setIsSubmitted(true)
   }
 
   return (
@@ -51,8 +54,8 @@ const SignUpForm = (props: BaseBlockEntry) => {
             name="email"
             className={css.textField}
           />
-          <Button type="submit" variant="contained" size="large">
-            Sign Up
+          <Button type="submit" variant="contained" size="large" disabled={isSubmitted}>
+            {isSubmitted ? 'Submitted!' : 'Sign Up'}
           </Button>
         </form>
 
