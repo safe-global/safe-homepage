@@ -17,9 +17,8 @@
     "buttons": [
       {
         "text": "Read our vision & roadmap",
-        "href": "https://safe.global/blog/future-of-safe",
-        "variant": "link",
-        "isDisabled": true
+        "href": "https://safe.global/blog/future-of-safe-vision",
+        "variant": "link"
       }
     ],
     "mobileVariant": "text-image",
