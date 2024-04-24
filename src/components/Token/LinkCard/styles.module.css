@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  border-radius: 8px;
+  border-radius: 16px;
   transition-duration: var(--transition-duration);
   height: 300px;
   background-color: var(--mui-palette-background-default);
