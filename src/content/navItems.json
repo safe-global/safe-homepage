@@ -18,5 +18,9 @@
   {
     "label": "Blog",
     "href": "/blog"
+  },
+  {
+    "label": "SAFE Token",
+    "href": "/token"
   }
 ]

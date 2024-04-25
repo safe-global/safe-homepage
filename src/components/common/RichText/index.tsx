@@ -21,7 +21,14 @@ import Twitter from '@/components/Blog/Twitter'
 const generateTextContent = (node: Heading1 | Heading2 | Heading3 | Heading5) => {
   return node.content.filter(isText).map((node, index) => {
     const isBold = node.marks.some((mark) => mark.type === 'bold')
-    return isBold ? <b key={index}>{node.value}</b> : <span key={index}>{node.value}</span>
+    const isItalic = node.marks.some((mark) => mark.type === 'italic')
+    return isBold ? (
+      <b key={index}>{node.value}</b>
+    ) : isItalic ? (
+      <i key={index}>{node.value}</i>
+    ) : (
+      <span key={index}>{node.value}</span>
+    )
   })
 }
 

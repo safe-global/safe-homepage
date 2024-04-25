@@ -4,6 +4,7 @@ export interface TypeButtonFields {
   text: EntryFieldTypes.Symbol
   href: EntryFieldTypes.Symbol
   variant: EntryFieldTypes.Symbol<'button' | 'link'>
+  isDisabled?: EntryFieldTypes.Boolean
 }
 
 export type TypeButtonSkeleton = EntrySkeletonType<TypeButtonFields, 'button'>

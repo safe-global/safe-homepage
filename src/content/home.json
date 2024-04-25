@@ -13,11 +13,11 @@
   {
     "caption": "Ethereum's transition to Smart Accounts",
     "variant": "text-image",
-    "title": "Safe envisions a future where every onchain account is a <b>smart account</b>",
+    "title": "<i>Safe</i> envisions a future where every onchain account is a <b>smart account</b>",
     "buttons": [
       {
         "text": "Read our vision & roadmap",
-        "href": "https://safe.global/blog/future-of-safe",
+        "href": "https://safe.global/blog/future-of-safe-vision",
         "variant": "link"
       }
     ],
@@ -27,7 +27,7 @@
   {
     "component": "Home/SafeAtScale",
     "caption": "Entrusted to keep your assets safe",
-    "title": "Safe Smart Accounts are battle tested <br> and used more than any other",
+    "title": "<i>Safe</i> Smart Accounts are battle tested <br> and used more than any other",
     "items": [
       {
         "title": "46M",
@@ -73,6 +73,7 @@
       { "name": "Polygon zkEVM", "new": true, "src": "/images/Home/NetworkIcons/polygon-zkevm.svg" },
       { "name": "Celo", "src": "/images/Home/NetworkIcons/celo.svg" },
       { "name": "Optimism", "src": "/images/Home/NetworkIcons/optimism.svg" },
+      { "name": "Base", "src": "/images/Home/NetworkIcons/base.png" },
       { "name": "Arbitrum", "src": "/images/Home/NetworkIcons/arbitrum.svg" },
       { "name": "ZkSync Era Mainnet", "new": true, "src": "/images/Home/NetworkIcons/zksync-era-mainnet.svg" },
       { "name": "Avalanche", "src": "/images/Home/NetworkIcons/avalanche.svg" },
@@ -84,7 +85,7 @@
     "items": [
       {
         "caption": "User",
-        "title": "Use the most secure </br> multi-sig wallet in web3",
+        "title": "Use the most secure </br> multi-sig wallet",
         "titleIcon": {
           "src": "/images/safe-wallet-500.svg",
           "alt": "Safe Wallet green background"
@@ -135,15 +136,15 @@
     "items": [
       {
         "caption": "Protocol Kit",
-        "title": "Safe Smart Account",
+        "title": "<i>Safe</i> Smart Account",
         "text": "Use the most secure and modular Smart Account",
         "link": {
           "href": "https://docs.safe.global/sdk/protocol-kit"
         }
       },
       {
-        "caption": "Explore the docs",
-        "title": "4337 Safe Module",
+        "caption": "Explore docs",
+        "title": "4337 <i>Safe</i> Module",
         "text": "Build with the audited and formally verified ERC-4337 Module",
         "link": {
           "href": "https://docs.safe.global/home/4337-safe"
@@ -163,7 +164,7 @@
     "component": "Home/TextBlockImageSecurity",
     "caption": "Security",
     "variant": "image-text",
-    "title": "Safe Smart Accounts are the <b>most audited</b> and <b>battle-tested</b>",
+    "title": "<i>Safe</i> Smart Accounts are the <b>most audited</b> and <b>battle-tested</b>",
     "text": "Since 2018, our smart contracts have passed the highest possible security standards in the industry including formal verification.",
     "items": [
       {
@@ -199,12 +200,12 @@
       },
       {
         "text": "Start bug hunting",
-        "href": "https://github.com/5afe/safe-core-protocol",
+        "href": "https://docs.safe.global/advanced/smart-account-bug-bounty",
         "variant": "link"
       }
     ],
     "image": {
-      "src": "/images/Home/audited-shield.png",
+      "src": "/images/Home/safe-shield.png",
       "alt": "Safe Smart Account shield"
     },
     "mobileVariant": "image-text"
@@ -212,8 +213,8 @@
   {
     "caption": "Ecosystem",
     "variant": "image-text",
-    "title": "Research & discover real projects powered by <i><b>Safe</i></b>",
-    "text": "200+ ecosystem projects are built on the Safe smart account standard.",
+    "title": "Research & discover diverse projects powered by <i><b>Safe</i></b>",
+    "text": "200+ ecosystem projects are built on the <i>Safe</i> smart account standard.",
     "buttons": [
       {
         "text": "Explore ecosystem",
@@ -231,7 +232,7 @@
   {
     "component": "Home/Blog",
     "caption": "Blog",
-    "title": "Follow as Safe embeds <b>ownership</b> across use-cases",
+    "title": "Follow as <i>Safe</i> embeds <b>ownership</b> across use-cases",
     "buttons": [
       {
         "text": "Read the latest",
@@ -251,7 +252,7 @@
     },
     "items": [
       {
-        "title": "Restaking",
+        "title": "Staking & Restaking",
         "link": {
           "href": "https://safe.global/blog/the-safe-case-staking-and-restaking"
         },
@@ -281,7 +282,7 @@
         }
       },
       {
-        "title": "Social & Identity",
+        "title": "Social &<br/>Identity",
         "link": {
           "href": "https://safe.global/blog/safe-case-decentralized-social-id"
         },
@@ -295,8 +296,8 @@
   {
     "component": "Home/Governance",
     "caption": "Governance",
-    "title": "<b>Safe <u>DAO</u></b> governs the future of Safe",
-    "text": "Safe is governed by SafeDAO, a decentralized collective of core contributors, backers, GnosisDAO, users, and ecosystem contributors i.e Safe{Guardians}.",
+    "title": "<b>Safe <u>DAO</u></b> governs the future of <i>Safe</i>",
+    "text": "<i>Safe</i> is governed by SafeDAO, a decentralized collective of core contributors, backers, GnosisDAO, users, and ecosystem contributors i.e Safe{Guardians}.",
     "link": {
       "title": "Contact us",
       "href": "https://ecosystem-contact.safe.global"
@@ -304,9 +305,9 @@
     "items": [
       {
         "caption": "Be part of a community",
-        "title": "Safe Token",
+        "title": "SAFE Token",
         "link": {
-          "href": "https://forum.safe.global/"
+          "href": "https://safe.global/token"
         }
       },
       {

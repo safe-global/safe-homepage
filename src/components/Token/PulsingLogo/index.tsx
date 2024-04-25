@@ -101,7 +101,7 @@ const PulsingLogo = ({ angle, radius, imgUrl }: PulsingLogoProps) => {
             : {}
         }
         transition={pulsingAnimationTransition}
-        src={`/images/Token/Hero/Logos/${imgUrl}`}
+        src={`/images/Token/Hero/Logos${imgUrl}`}
         width={LOGO_SIZE}
         style={{
           zIndex: 30,

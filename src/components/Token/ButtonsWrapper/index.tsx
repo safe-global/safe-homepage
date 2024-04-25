@@ -1,6 +1,6 @@
 import LinkButton from '@/components/common/LinkButton'
 import { Button } from '@mui/material'
-import SafeLink from '@/components/common/SafeLink'
+import NextLink from 'next/link'
 import { type ButtonEntry } from '@/config/types'
 import css from './styles.module.css'
 
@@ -12,19 +12,19 @@ const ButtonsWrapper = ({ buttons }: ButtonsWrapperProps) => {
   return (
     <div className={css.wrapper}>
       {buttons.map((button, index) => {
-        const { text, href, variant } = button.fields
+        const { text, href, variant, isDisabled } = button.fields
         const isButton = variant === 'button'
 
         return (
-          <SafeLink key={index} href={href}>
+          <NextLink key={index} href={href} target="_blank" className={`${isDisabled ? css.disabled : ''}`}>
             {isButton ? (
-              <Button variant="contained" size="large">
+              <Button variant="contained" size="large" disabled={!!isDisabled}>
                 {text}
               </Button>
             ) : (
               <LinkButton>{text}</LinkButton>
             )}
-          </SafeLink>
+          </NextLink>
         )
       })}
     </div>
