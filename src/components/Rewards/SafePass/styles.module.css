@@ -48,6 +48,19 @@
   overflow: hidden;
 }
 
+.partnershipWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.partnerLogos {
+  display: flex;
+  flex-direction: row;
+}
+
 @media (min-width: 600px) {
   .container {
     margin-top: 150px;

@@ -2,17 +2,19 @@ import Card from '@/components/Rewards/Card'
 import PulsingCircles from '@/components/Rewards/PulsingCircles'
 import OrbitLines from '@/components/Rewards/OrbitLines'
 import { type BaseBlockEntry } from '@/config/types'
-import css from './styles.module.css'
 import RichText from '@/components/common/RichText'
 import ButtonsWrapper from '@/components/Token/ButtonsWrapper'
-import { isEntryTypeButton } from '@/lib/typeGuards'
+import { isEntryTypeBaseBlock, isEntryTypeButton } from '@/lib/typeGuards'
 import { Container, Typography } from '@mui/material'
 import StarGradientIcon from '@/public/images/star-gradient.svg'
+import IconRow from '@/components/Rewards/IconRow'
+import css from './styles.module.css'
 
 const SafePass = (props: BaseBlockEntry) => {
-  const { caption, title, buttons } = props.fields
+  const { caption, title, buttons, items } = props.fields
 
   const buttonsList = buttons?.filter(isEntryTypeButton) || []
+  const itemsList = items?.filter(isEntryTypeBaseBlock) || []
 
   return (
     <Container className={css.container}>
@@ -39,6 +41,13 @@ const SafePass = (props: BaseBlockEntry) => {
         <Card {...props} />
         <OrbitLines />
         <PulsingCircles />
+      </div>
+
+      <div className={css.partnershipWrapper}>
+        <Typography color="primary.light">in partnership with</Typography>
+        <div className={css.partnerLogos}>
+          <IconRow items={itemsList} />
+        </div>
       </div>
     </Container>
   )

@@ -41,26 +41,8 @@
   flex-wrap: wrap;
   justify-content: space-around;
   overflow: hidden;
-  font-size: 0;
   user-select: none;
   padding-bottom: 32px;
-}
-
-.wrapper {
-  padding: 8px 12px 8px 8px;
-  gap: 14px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-shrink: 0;
-  position: relative;
-  width: 200px;
-  text-align: center;
-}
-
-.icon img {
-  display: flex;
-  align-items: center;
 }
 
 @keyframes slide {
