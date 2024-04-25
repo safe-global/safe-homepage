@@ -1,14 +1,3 @@
-.centeredContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.centeredContent > * {
-  text-align: center;
-}
-
 .title {
   margin-top: 16px;
 }
@@ -20,4 +9,8 @@
 
 .text p {
   margin: 0;
+}
+
+.buttons {
+  margin-top: 40px;
 }

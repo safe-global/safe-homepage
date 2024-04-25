@@ -1,4 +1,42 @@
 .container {
+  margin-top: 70px;
+}
+
+.textBlock {
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.caption {
+  background: linear-gradient(260.13deg, #12ff80 1.24%, #5fddff 102.14%);
+  background-clip: text;
+  color: transparent;
+}
+
+.title {
+  margin-top: 16px;
+  width: 80%;
+  text-align: center;
+}
+
+.text p {
+  margin: 0;
+}
+
+.buttons {
+  margin-top: 24px;
+}
+
+.animationContainer {
   width: 100%;
   max-width: 512px;
   margin: auto;
@@ -10,8 +48,21 @@
   overflow: hidden;
 }
 
-@media (min-width: 512px) {
+@media (min-width: 600px) {
   .container {
+    margin-top: 150px;
+  }
+
+  .animationContainer {
     width: 512px;
+  }
+
+  .title {
+    max-width: 680px;
+    margin-top: 32px;
+  }
+
+  .buttons {
+    margin-top: 40px;
   }
 }
