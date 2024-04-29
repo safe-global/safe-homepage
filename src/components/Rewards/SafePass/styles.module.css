@@ -63,7 +63,39 @@
   row-gap: 32px;
 }
 
+.spot3 {
+  position: absolute;
+  z-index: -1;
+  width: 400px;
+  height: 400px;
+  background-image: radial-gradient(rgba(18, 255, 128, 0.6) 30%, rgba(246, 247, 248, 0) 70%);
+  filter: blur(50px);
+  left: calc(50% - 200px);
+}
+
 @media (min-width: 600px) {
+  .spot1 {
+    position: absolute;
+    left: -300px;
+    top: -150px;
+    z-index: -1;
+    width: 1000px;
+    height: 1000px;
+    background-image: radial-gradient(at top left, rgba(18, 255, 128, 0.4) 0%, rgba(246, 247, 248, 0) 80%);
+    filter: blur(70px);
+  }
+
+  .spot2 {
+    position: absolute;
+    z-index: -1;
+    right: -300px;
+    top: -100px;
+    width: 1000px;
+    height: 1200px;
+    background-image: radial-gradient(at right, rgba(41, 182, 246, 0.3) 0%, rgba(246, 247, 248, 0) 80%);
+    filter: blur(50px);
+  }
+
   .container {
     margin-top: 150px;
   }
@@ -79,5 +111,13 @@
 
   .buttons {
     margin-top: 40px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .spot1,
+  .spot2 {
+    width: 1200px;
+    height: 1200px;
   }
 }

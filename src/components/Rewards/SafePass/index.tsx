@@ -18,6 +18,8 @@ const SafePass = (props: BaseBlockEntry) => {
 
   return (
     <Container className={css.container}>
+      <div className={css.spot1} />
+      <div className={css.spot2} />
       <div className={css.textBlock}>
         <div className={css.headline}>
           <StarGradientIcon />
@@ -37,6 +39,7 @@ const SafePass = (props: BaseBlockEntry) => {
         )}
       </div>
 
+      <div className={css.spot3} />
       <div className={css.animationContainer}>
         <Card {...props} />
         <OrbitLines />
