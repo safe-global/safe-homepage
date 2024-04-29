@@ -1,40 +1,16 @@
 import { useState } from 'react'
 import { Button, ButtonBase } from '@mui/material'
 import Link from 'next/link'
+import clsx from 'clsx'
 
 import { AppRoutes } from '@/config/routes'
-import Logo from '@/public/images/logo.svg'
 import { WALLET_LINK } from '@/config/constants'
-import css from './styles.module.css'
-import clsx from 'clsx'
-import { useRouter } from 'next/router'
-import navItemsData from '@/content/navItems.json'
 import SafeLink from '@/components/common/SafeLink'
-import ArrowIcon from '@/public/images/arrow-out-square-corner.svg'
-
-type NavItemType = {
-  label: string | JSX.Element
-  href: string
-  external?: boolean
-}
-
-const safePassButton = (
-  <div className={css.externalLink}>
-    Safe
-    <u>PASS</u>
-    <ArrowIcon />
-  </div>
-)
-
-const navItems: NavItemType[] = [...navItemsData, { label: safePassButton, href: AppRoutes.pass }]
-
-const externalLinkAttrs = {
-  target: '_blank',
-  rel: 'noopener noreferrer',
-}
+import { navCategories } from '@/components/common/Header/navCategories'
+import Logo from '@/public/images/logo.svg'
+import css from './styles.module.css'
 
 const Header = () => {
-  const { asPath } = useRouter()
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
   const toggleNavigation = () => {
@@ -42,6 +18,7 @@ const Header = () => {
     document.body.classList.toggle('navOpen')
   }
 
+  // TODO: attach to the sub items click
   const closeNavigation = () => {
     setIsOpen(false)
     document.body.classList.remove('navOpen')
@@ -54,24 +31,20 @@ const Header = () => {
           <Logo />
         </Link>
       </div>
+
       <ButtonBase className={css.burger} onClick={toggleNavigation} aria-label="Toggle navigation" disableRipple>
         <span />
       </ButtonBase>
       <nav>
         <ul className={css.navigation}>
-          {navItems.map((item) => (
-            <li key={item.href}>
-              <Link
-                className={clsx(css.link, item.href === asPath && css.active)}
-                href={item.href}
-                onClick={closeNavigation}
-                {...(item.external ? externalLinkAttrs : {})}
-              >
-                {item.label}
-              </Link>
+          {navCategories.map((item) => (
+            <li key={item.category}>
+              <ButtonBase className={css.item} disableRipple>
+                {item.category}
+              </ButtonBase>
             </li>
           ))}
-          <li>
+          <li className={css.navWalletButton}>
             <SafeLink href={WALLET_LINK}>
               <Button className={css.button} variant="contained">
                 Launch Wallet
@@ -80,6 +53,14 @@ const Header = () => {
           </li>
         </ul>
       </nav>
+
+      <div className={css.outerWalletButton}>
+        <SafeLink href={WALLET_LINK}>
+          <Button className={css.button} variant="contained">
+            Launch Wallet
+          </Button>
+        </SafeLink>
+      </div>
     </div>
   )
 }

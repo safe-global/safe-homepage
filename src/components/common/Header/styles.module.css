@@ -25,6 +25,14 @@
   --transition-duration: var(--transition-duration);
 }
 
+.navigation li {
+  border-bottom: 1px solid var(--mui-palette-border-light);
+}
+
+.outerWalletButton {
+  display: none;
+}
+
 .burger {
   width: 40px;
   height: 40px;
@@ -57,48 +65,28 @@
   bottom: 11px;
 }
 
-.link {
+.item {
   font-size: 28px;
   line-height: 32px;
   display: block;
   color: white;
   text-decoration: none;
   padding: 24px 0;
-  border-bottom: 1px solid var(--mui-palette-border-light);
+
   transition: all var(--transition-duration);
 }
 
-.link:active {
+.item:active {
   opacity: 0.5;
 }
 
-.link.active,
-.link:hover {
+.item.active,
+.item:hover {
   color: var(--mui-palette-primary-light);
 }
 
-.link.active {
+.item.active {
   pointer-events: none;
-}
-
-.externalLink {
-  display: flex;
-  align-items: baseline;
-  transition: all var(--transition-duration);
-}
-
-.externalLink u {
-  white-space: nowrap;
-}
-
-.externalLink svg {
-  margin-left: 8px;
-  width: 24px;
-  height: 24px;
-}
-
-.externalLink:hover svg path {
-  fill: var(--mui-palette-primary-light);
 }
 
 .button {
@@ -156,16 +144,11 @@
     display: none;
   }
 
-  .link {
+  .item {
     font-size: 18px;
     line-height: 56px;
     padding: 0;
     border: 0;
-  }
-
-  .externalLink svg {
-    width: 16px;
-    height: 16px;
   }
 
   .button {
@@ -173,5 +156,9 @@
     line-height: 24px;
     padding: 6px 16px;
     margin: 0;
+  }
+
+  .walletButton {
+    display: block;
   }
 }
