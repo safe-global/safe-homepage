@@ -12,7 +12,7 @@ const CenteredTextBlock = (props: BaseBlockEntry) => {
   const buttonsList = buttons?.filter(isEntryTypeButton) || []
 
   return (
-    <Container className={`${layoutCss.containerShort} ${css.centeredContent}`}>
+    <Container className={`${layoutCss.containerShort} ${layoutCss.centeredContent}`}>
       <Typography variant="caption">{caption}</Typography>
 
       <div>
@@ -27,9 +27,11 @@ const CenteredTextBlock = (props: BaseBlockEntry) => {
         )}
       </div>
 
-      <div className={css.centeredContent}>
-        <ButtonsWrapper buttons={buttonsList} />
-      </div>
+      {buttonsList.length > 0 && (
+        <div className={css.buttons}>
+          <ButtonsWrapper buttons={buttonsList} />
+        </div>
+      )}
     </Container>
   )
 }
