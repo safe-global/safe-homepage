@@ -13,7 +13,7 @@ const IconCarousel = (props: BaseBlockEntry) => {
   const partnersLogos = items?.filter(isEntryTypeBaseBlock) || []
 
   return (
-    <Container className={`${layoutCss.containerShort} ${layoutCss.centeredContent}`}>
+    <Container className={`${layoutCss.containerShort} ${css.container}`}>
       <RichText {...title} />
 
       <div className={css.carouselWrapper}>

@@ -24,7 +24,7 @@
 
 .title {
   margin-top: 16px;
-  width: 80%;
+  max-width: 700px;
   text-align: center;
 }
 
@@ -59,6 +59,8 @@
 .partnerLogos {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 32px;
 }
 
 @media (min-width: 600px) {
