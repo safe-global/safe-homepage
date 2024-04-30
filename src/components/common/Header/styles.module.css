@@ -25,10 +25,6 @@
   --transition-duration: var(--transition-duration);
 }
 
-.navigation li {
-  border-bottom: 1px solid var(--mui-palette-border-light);
-}
-
 .outerWalletButton {
   display: none;
 }
@@ -100,6 +96,10 @@
 }
 
 @media (max-width: 599px) {
+  .navigation li {
+    border-bottom: 1px solid var(--mui-palette-border-light);
+  }
+
   .visible {
     background: var(--mui-palette-background-main);
   }
@@ -158,7 +158,11 @@
     margin: 0;
   }
 
-  .walletButton {
+  .navWalletButton {
+    display: none;
+  }
+
+  .outerWalletButton {
     display: block;
   }
 }

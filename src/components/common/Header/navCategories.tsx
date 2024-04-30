@@ -88,11 +88,11 @@ export const navCategories: NavCategory[] = [
         href: AppRoutes.blog.index,
       },
       {
-        label: `
+        label: (
           <>
             Careers <strong>Hiring</strong>
           </>
-        `,
+        ),
         href: AppRoutes.careers,
       },
       {

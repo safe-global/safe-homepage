@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Button, ButtonBase } from '@mui/material'
+import { Button, ButtonBase, Menu, MenuItem, Typography } from '@mui/material'
 import Link from 'next/link'
 import clsx from 'clsx'
 
@@ -12,6 +12,17 @@ import css from './styles.module.css'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
+
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
+  const [selectedMenuItem, setSelectedMenuItem] = useState<string | null>(null)
+
+  const handleMenuOpen = (event: React.MouseEvent<HTMLButtonElement>, menuItem: string) => {
+    setAnchorEl(event.currentTarget)
+    setSelectedMenuItem(menuItem)
+  }
+  const handleClose = () => {
+    setAnchorEl(null)
+  }
 
   const toggleNavigation = () => {
     setIsOpen((prev) => !prev)
@@ -37,13 +48,40 @@ const Header = () => {
       </ButtonBase>
       <nav>
         <ul className={css.navigation}>
-          {navCategories.map((item) => (
-            <li key={item.category}>
-              <ButtonBase className={css.item} disableRipple>
-                {item.category}
-              </ButtonBase>
-            </li>
-          ))}
+          {navCategories.map((item) => {
+            const open = selectedMenuItem === item.category && Boolean(anchorEl)
+
+            return (
+              <li key={item.category}>
+                <ButtonBase
+                  className={css.item}
+                  disableRipple
+                  id={`${item.category}-button`}
+                  aria-controls={open ? `${item.category}-menu` : undefined}
+                  aria-haspopup="true"
+                  aria-expanded={open ? 'true' : undefined}
+                  onClick={(e) => handleMenuOpen(e, item.category)}
+                >
+                  {item.category}
+                </ButtonBase>
+                <Menu
+                  id={`${item.category}-menu`}
+                  anchorEl={anchorEl}
+                  open={open}
+                  onClose={handleClose}
+                  MenuListProps={{
+                    'aria-labelledby': `${item.category}-button`,
+                  }}
+                >
+                  {item.items.map((subItem) => (
+                    <MenuItem key={subItem.href} onClick={handleClose}>
+                      <Typography>{subItem.label}</Typography>
+                    </MenuItem>
+                  ))}
+                </Menu>
+              </li>
+            )
+          })}
           <li className={css.navWalletButton}>
             <SafeLink href={WALLET_LINK}>
               <Button className={css.button} variant="contained">
