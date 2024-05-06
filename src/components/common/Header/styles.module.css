@@ -140,6 +140,14 @@
     display: flex;
   }
 
+  .navigation :global .MuiPopover-root {
+    z-index: -1;
+  }
+
+  .menu [role='menu'] {
+    min-width: 324px;
+  }
+
   .burger {
     display: none;
   }
@@ -164,5 +172,39 @@
 
   .outerWalletButton {
     display: block;
+  }
+
+  /* TODO: decide where to keep MenuItemContent */
+  .wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .wrapper:hover svg {
+    color: var(--mui-palette-primary-main);
+  }
+
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .title .tag {
+    border-radius: 50px;
+    background-color: #b0ffc9;
+    color: var(--mui-palette-text-dark);
+    height: 18px;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
   }
 }

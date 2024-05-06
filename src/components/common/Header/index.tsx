@@ -6,7 +6,7 @@ import clsx from 'clsx'
 import { AppRoutes } from '@/config/routes'
 import { WALLET_LINK } from '@/config/constants'
 import SafeLink from '@/components/common/SafeLink'
-import { navCategories } from '@/components/common/Header/navCategories'
+import { navCategories, type NavItem } from '@/components/common/Header/navCategories'
 import Logo from '@/public/images/logo.svg'
 import css from './styles.module.css'
 
@@ -72,10 +72,11 @@ const Header = () => {
                   MenuListProps={{
                     'aria-labelledby': `${item.category}-button`,
                   }}
+                  className={css.menu}
                 >
                   {item.items.map((subItem) => (
                     <MenuItem key={subItem.href} onClick={handleClose}>
-                      <Typography>{subItem.label}</Typography>
+                      <MenuItemContent subItem={subItem} />
                     </MenuItem>
                   ))}
                 </Menu>
@@ -104,3 +105,18 @@ const Header = () => {
 }
 
 export default Header
+
+const MenuItemContent = ({ subItem }: { subItem: NavItem }) => (
+  <div className={css.wrapper}>
+    {subItem.icon}
+    <div className={css.textContainer}>
+      <div className={css.title}>
+        <Typography>{subItem.label}</Typography>
+        {subItem.tag && <div className={css.tag}>{subItem.tag}</div>}
+      </div>
+      <Typography variant="body2" color="text.secondary">
+        {subItem.sublabel}
+      </Typography>
+    </div>
+  </div>
+)
