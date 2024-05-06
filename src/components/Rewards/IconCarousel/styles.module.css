@@ -1,0 +1,73 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carouselWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 8px 0;
+  margin: 48px auto;
+  width: 100%;
+}
+
+.gradientBase {
+  position: absolute;
+  width: 94px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(270deg, rgba(18, 19, 18, 0) 0%, var(--mui-palette-background-default) 100%);
+  z-index: 1;
+}
+
+.gradientFlipped {
+  left: auto;
+  right: 0;
+  width: 138px;
+  transform: scaleX(-1.005); /* prevent 1px gap glitch */
+}
+
+.animation {
+  animation: slide 70s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+.animationReverse {
+  animation-direction: reverse;
+}
+
+.slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow: hidden;
+  user-select: none;
+  padding-bottom: 32px;
+}
+
+@keyframes slide {
+  to {
+    transform: translate(-50%);
+  }
+}
+
+@media (min-width: 600px) {
+  .carouselWrapper {
+    gap: 24px;
+  }
+
+  .gradientBase {
+    width: 337px;
+  }
+
+  .gradientFlipped {
+    width: 351px;
+  }
+}

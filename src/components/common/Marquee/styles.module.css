@@ -1,0 +1,87 @@
+.wrapper {
+  --items-gap: 100px;
+  margin-top: 120px;
+  overflow: hidden;
+  position: relative;
+}
+
+.animation {
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  display: flex;
+  width: max-content;
+  min-width: 200%;
+  animation-duration: 100s;
+  animation-delay: 0s;
+  animation-play-state: running;
+  animation-name: slide;
+  gap: 8px;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  gap: var(--items-gap);
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  font-size: 0;
+}
+
+.rowWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: var(--items-gap);
+}
+
+.value {
+  margin: 0;
+  font-size: 64px;
+  line-height: 64px;
+  background: linear-gradient(90deg, rgba(15, 255, 128, 1) 0%, rgba(94, 221, 255, 1) 60%);
+  background-clip: text;
+  color: transparent;
+}
+
+.value p {
+  margin: 0;
+}
+
+.gradientBase {
+  position: absolute;
+  width: var(--items-gap);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(270deg, rgba(18, 19, 18, 0) 0%, var(--mui-palette-background-default) 100%);
+  z-index: 1;
+}
+
+.gradientFlipped {
+  left: auto;
+  right: 0;
+  width: var(--items-gap);
+  transform: scaleX(-1);
+}
+
+@keyframes slide {
+  to {
+    transform: translate(-50%);
+  }
+}
+
+@media (min-width: 600px) {
+  .value {
+    font-size: 80px;
+    line-height: 100px;
+  }
+
+  .gradientBase {
+    width: 120px;
+  }
+
+  .gradientFlipped {
+    width: 120px;
+  }
+}

@@ -13,6 +13,11 @@
   display: none;
 }
 
+.centeredContent {
+  display: flex;
+  flex-direction: column;
+}
+
 @media (min-width: 600px) {
   .hideMobile {
     display: block;
@@ -34,10 +39,9 @@
     margin-top: 150px;
     margin-bottom: 150px;
   }
-}
 
-.centeredContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  .centeredContent {
+    justify-content: center;
+    align-items: center;
+  }
 }

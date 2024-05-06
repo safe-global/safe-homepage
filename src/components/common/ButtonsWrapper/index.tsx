@@ -7,6 +7,7 @@ import SafeLink from '@/components/common/SafeLink'
 type ButtonsWrapperProps = {
   buttons?: ButtonType[]
   mobileDirection?: 'column' | 'row'
+  isDisabled?: boolean
 }
 
 const ButtonsWrapper = ({ buttons, mobileDirection }: ButtonsWrapperProps) => {
@@ -19,7 +20,7 @@ const ButtonsWrapper = ({ buttons, mobileDirection }: ButtonsWrapperProps) => {
         const isButton = variant === 'button'
 
         return (
-          <SafeLink key={index} href={href}>
+          <SafeLink key={index} href={href} isDisabled={!!button.isDisabled}>
             {isButton ? (
               <Button variant="contained" size="large" color={color}>
                 {text}

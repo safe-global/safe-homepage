@@ -1,0 +1,23 @@
+.parallaxWrapper {
+  position: relative;
+}
+
+.baseImage {
+  width: 100%;
+  height: auto;
+}
+
+.movingElement {
+  position: absolute;
+  width: 90%;
+  bottom: 122px;
+  left: 22px;
+}
+
+@media (min-width: 600px) {
+  .movingElement {
+    width: 100%;
+    bottom: 150px;
+    left: 0px;
+  }
+}
