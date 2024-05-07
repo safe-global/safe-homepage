@@ -1,5 +1,15 @@
 import { createRef, useEffect, useState } from 'react'
-import { Button, ButtonBase, Fade, Paper, Popper, Typography } from '@mui/material'
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Button,
+  ButtonBase,
+  Fade,
+  Paper,
+  Popper,
+  Typography,
+} from '@mui/material'
 import NextLink from 'next/link'
 import clsx from 'clsx'
 
@@ -9,6 +19,7 @@ import SafeLink from '@/components/common/SafeLink'
 import Menu from '@/components/common/Header/Menu'
 import { navCategories, type NavCategoriesType } from '@/components/common/Header/navCategories'
 import Logo from '@/public/images/logo.svg'
+import AngleDownIcon from '@/public/images/angle-down.svg'
 import css from './styles.module.css'
 
 const Header = () => {
@@ -64,13 +75,24 @@ const Header = () => {
               onBlur={toggleCategoryOpen(null)}
             >
               {href ? (
-                <NextLink className={css.item} href={href}>
-                  <Typography>{category}</Typography>
+                <NextLink href={href}>
+                  <div className={css.navLink}>{category}</div>
                 </NextLink>
               ) : (
                 <>
+                  {/* Mobile view */}
+                  <Accordion className={clsx(css.accordion, css.hideInLaptop)}>
+                    <AccordionSummary expandIcon={<AngleDownIcon />}>
+                      <div className={css.categoryTitle}>{category}</div>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Menu items={items ?? []} onItemClick={closeNavigation} />
+                    </AccordionDetails>
+                  </Accordion>
+
+                  {/* Desktop button */}
                   <ButtonBase
-                    className={clsx(css.item, { [css.active]: subMenuOpen === category })}
+                    className={clsx(css.navButton, css.hideInMobile, { [css.active]: subMenuOpen === category })}
                     disableRipple
                     id={`${category}-button`}
                     aria-haspopup
@@ -81,6 +103,7 @@ const Header = () => {
                     <Typography>{category}</Typography>
                   </ButtonBase>
                   <Popper
+                    className={css.hideInMobile}
                     id={`${category}-popper`}
                     open={subMenuOpen === category}
                     anchorEl={elRefs[index]?.current}

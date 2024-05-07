@@ -11,7 +11,7 @@ const Menu = ({ items, onItemClick }: { items: NavItem[]; onItemClick: () => voi
           {subItem.icon}
           <div className={css.textContainer}>
             <div className={css.title}>
-              <Typography>{subItem.label}</Typography>
+              <div className={css.subItemTitle}>{subItem.label}</div>
               {subItem.tag && <div className={css.tag}>{subItem.tag}</div>}
             </div>
             <Typography variant="body2" color="text.secondary">

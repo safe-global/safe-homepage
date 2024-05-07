@@ -52,7 +52,6 @@ export const navCategories: NavCategory[] = [
     items: [
       {
         label: 'Safe{Core}',
-        sublabel: 'Open-source and modular account abstraction stack',
         href: AppRoutes.core,
         icon: <SafeCoreIcon />,
       },
@@ -74,7 +73,6 @@ export const navCategories: NavCategory[] = [
     items: [
       {
         label: 'Projects',
-        sublabel: 'Explore 200+ ecosystem projects building with Safe',
         href: AppRoutes.ecosystem,
         icon: <ProjectsIcon />,
       },
