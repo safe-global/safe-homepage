@@ -1,17 +1,17 @@
 import { DOCS_LINK, GRANTS_LINK, HELP_LINK, SAFECON_LINK } from '@/config/constants'
 import { AppRoutes } from '@/config/routes'
-import BlogIcon from '@/public/images/Header/blog-icon-round-corners.svg'
-import SafeCoreIcon from '@/public/images/Header/safe-core-icon-round-corners.svg'
-import DocumentationIcon from '@/public/images/Header/documentation-icon-round-corners.svg'
-import ProjectsIcon from '@/public/images/Header/projects-icon-round-corners.svg'
-import GrantsIcon from '@/public/images/Header/grants-icon-round-corners.svg'
-import GovernanceIcon from '@/public/images/Header/governance-icon-round-corners.svg'
-import SafeTokenIcon from '@/public/images/Header/safe-token-icon-round-corners.svg'
-import SafePassIcon from '@/public/images/Header/safe-pass-icon-round-corners.svg'
-import SafeConIcon from '@/public/images/Header/safe-con-icon-round-corners.svg'
-import CareersIcon from '@/public/images/Header/careers-icon-round-corners.svg'
-import PressRoomIcon from '@/public/images/Header/press-room-icon-round-corners.svg'
-import HelpCenterIcon from '@/public/images/Header/help-center-icon-round-corners.svg'
+import BlogIcon from '@/public/images/Header/blog-icon.svg'
+import SafeCoreIcon from '@/public/images/Header/safe-core-icon.svg'
+import DocumentationIcon from '@/public/images/Header/documentation-icon.svg'
+import ProjectsIcon from '@/public/images/Header/projects-icon.svg'
+import GrantsIcon from '@/public/images/Header/grants-icon.svg'
+import GovernanceIcon from '@/public/images/Header/governance-icon.svg'
+import SafeTokenIcon from '@/public/images/Header/safe-token-icon.svg'
+import SafePassIcon from '@/public/images/Header/safe-pass-icon.svg'
+import SafeConIcon from '@/public/images/Header/safe-con-icon.svg'
+import CareersIcon from '@/public/images/Header/careers-icon.svg'
+import PressRoomIcon from '@/public/images/Header/press-room-icon.svg'
+import HelpCenterIcon from '@/public/images/Header/help-center-icon.svg'
 
 export type NavItem = {
   label: string
@@ -24,13 +24,24 @@ export type NavItem = {
 }
 
 type NavCategory = {
-  category: string
+  category: NavCategoriesType
   items: NavItem[]
 }
 
+// Navigation categories
+enum NavCategories {
+  Developers = 'Developers',
+  Wallet = 'Wallet',
+  Ecosystem = 'Ecosystem',
+  Community = 'Community',
+  Resources = 'Resources',
+}
+
+export type NavCategoriesType = keyof typeof NavCategories
+
 export const navCategories: NavCategory[] = [
   {
-    category: 'Developers',
+    category: NavCategories.Developers,
     items: [
       {
         label: 'Safe{Core}',
@@ -48,7 +59,7 @@ export const navCategories: NavCategory[] = [
     ],
   },
   {
-    category: 'Wallet',
+    category: NavCategories.Wallet,
     items: [
       {
         label: 'Safe{Wallet}',
@@ -57,7 +68,7 @@ export const navCategories: NavCategory[] = [
     ],
   },
   {
-    category: 'Ecosystem',
+    category: NavCategories.Ecosystem,
     items: [
       {
         label: 'Projects',
@@ -75,7 +86,7 @@ export const navCategories: NavCategory[] = [
     ],
   },
   {
-    category: 'Community',
+    category: NavCategories.Community,
     items: [
       {
         label: 'Governance',
@@ -102,7 +113,7 @@ export const navCategories: NavCategory[] = [
     ],
   },
   {
-    category: 'Resources',
+    category: NavCategories.Resources,
     items: [
       {
         label: 'Blog',

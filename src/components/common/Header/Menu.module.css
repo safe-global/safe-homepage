@@ -1,0 +1,51 @@
+@media (min-width: 600px) {
+  .menuList {
+    padding: 12px;
+    margin: 0;
+    border-radius: 8px;
+    list-style: none;
+    min-width: 324px;
+  }
+
+  .menuList li {
+    border-radius: 8px;
+  }
+
+  .menuList li:hover {
+    background-color: var(--mui-palette-secondary-background);
+  }
+
+  .menuList li:hover svg {
+    color: var(--mui-palette-primary-main);
+  }
+
+  .menuLink {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .tag {
+    border-radius: 50px;
+    background-color: #b0ffc9;
+    color: var(--mui-palette-text-dark);
+    height: 18px;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+  }
+}
