@@ -83,6 +83,16 @@
 }
 
 @media (max-width: 599px) {
+  .header {
+    border-bottom: 1px solid var(--mui-palette-border-light);
+    padding: 14px 16px;
+  }
+
+  .logo {
+    width: 94.5px;
+    height: 36px;
+  }
+
   .navigation li {
     border-bottom: 1px solid var(--mui-palette-border-light);
   }
@@ -121,6 +131,11 @@
 @media (min-width: 600px) {
   .header {
     padding: 0 30px;
+  }
+
+  .logo svg {
+    width: 131px;
+    height: 48px;
   }
 
   .navigation {

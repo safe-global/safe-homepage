@@ -12,10 +12,7 @@ import Logo from '@/public/images/logo.svg'
 import css from './styles.module.css'
 
 const Header = () => {
-  // const [isOpen, setIsOpen] = useState<boolean>(false)
-
-  const [selectedMenuItem, setSelectedMenuItem] = useState<string | null>(null)
-
+  const [isBurgerOpen, setIsBurgerOpen] = useState<boolean>(false)
   const [subMenuOpen, setSubMenuOpen] = useState<null | NavCategoriesType>(null)
   const [elRefs, setElRefs] = useState<(React.RefObject<HTMLButtonElement> | null)[]>([])
 
@@ -32,28 +29,26 @@ const Header = () => {
     setSubMenuOpen(value)
   }
 
-  // Burguer navigation
   const toggleNavigation = () => {
-    // setIsOpen((prev) => !prev)
+    setIsBurgerOpen((prev) => !prev)
     document.body.classList.toggle('navOpen')
   }
 
   const closeNavigation = () => {
-    // setIsOpen(false)
     document.body.classList.remove('navOpen')
+    setIsBurgerOpen(false)
+    setSubMenuOpen(null)
   }
-  //
 
   const isOpen = subMenuOpen !== null
 
   return (
-    // <div className={clsx(css.header, isOpen && css.visible)}>
-    <div className={clsx(css.header)}>
-      <div className={css.logo}>
-        <NextLink href={AppRoutes.index}>
+    <div className={clsx(css.header, isBurgerOpen && css.visible)}>
+      <NextLink href={AppRoutes.index}>
+        <div className={css.logo}>
           <Logo />
-        </NextLink>
-      </div>
+        </div>
+      </NextLink>
 
       <ButtonBase className={css.burger} onClick={toggleNavigation} aria-label="Toggle navigation" disableRipple>
         <span />
@@ -98,7 +93,7 @@ const Header = () => {
                     {({ TransitionProps }) => (
                       <Fade {...TransitionProps} timeout={350}>
                         <Paper className={css.menu}>
-                          <Menu items={items ?? []} onItemClick={() => setSubMenuOpen(null)} />
+                          <Menu items={items ?? []} onItemClick={closeNavigation} />
                         </Paper>
                       </Fade>
                     )}
