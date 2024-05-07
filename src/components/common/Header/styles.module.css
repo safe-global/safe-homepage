@@ -66,6 +66,7 @@
   padding: 24px 0;
 }
 
+.item:hover,
 .item.active {
   transition: color var(--transition-duration);
   color: white;

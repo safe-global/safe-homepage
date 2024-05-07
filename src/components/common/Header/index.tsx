@@ -60,43 +60,51 @@ const Header = () => {
       </ButtonBase>
       <nav>
         <ul className={css.navigation}>
-          {navCategories.map((item, index) => (
+          {navCategories.map(({ category, items, href }, index) => (
             <li
-              key={item.category}
-              onMouseEnter={toggleCategoryOpen(item.category)}
-              onFocus={toggleCategoryOpen(item.category)}
+              key={category}
+              onMouseEnter={toggleCategoryOpen(category)}
+              onFocus={toggleCategoryOpen(category)}
               onMouseLeave={toggleCategoryOpen(null)}
               onBlur={toggleCategoryOpen(null)}
             >
-              <ButtonBase
-                className={clsx(css.item, { [css.active]: subMenuOpen === item.category })}
-                disableRipple
-                id={`${item.category}-button`}
-                aria-haspopup
-                aria-controls={`${item.category}-popper`}
-                aria-expanded={isOpen}
-                ref={elRefs[index]}
-              >
-                <Typography>{item.category}</Typography>
-              </ButtonBase>
-              <Popper
-                id={`${item.category}-popper`}
-                open={subMenuOpen === item.category}
-                anchorEl={elRefs[index]?.current}
-                transition
-                placement="bottom-start"
-                style={{
-                  zIndex: 1200,
-                }}
-              >
-                {({ TransitionProps }) => (
-                  <Fade {...TransitionProps} timeout={350}>
-                    <Paper className={css.menu}>
-                      <Menu items={item.items} onItemClick={() => setSubMenuOpen(null)} />
-                    </Paper>
-                  </Fade>
-                )}
-              </Popper>
+              {href ? (
+                <NextLink className={css.item} href={href}>
+                  <Typography>{category}</Typography>
+                </NextLink>
+              ) : (
+                <>
+                  <ButtonBase
+                    className={clsx(css.item, { [css.active]: subMenuOpen === category })}
+                    disableRipple
+                    id={`${category}-button`}
+                    aria-haspopup
+                    aria-controls={`${category}-popper`}
+                    aria-expanded={isOpen}
+                    ref={elRefs[index]}
+                  >
+                    <Typography>{category}</Typography>
+                  </ButtonBase>
+                  <Popper
+                    id={`${category}-popper`}
+                    open={subMenuOpen === category}
+                    anchorEl={elRefs[index]?.current}
+                    transition
+                    placement="bottom-start"
+                    style={{
+                      zIndex: 1200,
+                    }}
+                  >
+                    {({ TransitionProps }) => (
+                      <Fade {...TransitionProps} timeout={350}>
+                        <Paper className={css.menu}>
+                          <Menu items={items ?? []} onItemClick={() => setSubMenuOpen(null)} />
+                        </Paper>
+                      </Fade>
+                    )}
+                  </Popper>
+                </>
+              )}
             </li>
           ))}
           <li className={css.navWalletButton}>

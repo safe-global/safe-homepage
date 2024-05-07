@@ -23,10 +23,17 @@ export type NavItem = {
   tag?: string
 }
 
-type NavCategory = {
-  category: NavCategoriesType
-  items: NavItem[]
-}
+type NavCategory =
+  | {
+      category: NavCategoriesType
+      items: NavItem[]
+      href?: never
+    }
+  | {
+      category: NavCategoriesType
+      items?: never
+      href: string
+    }
 
 // Navigation categories
 enum NavCategories {
@@ -60,12 +67,7 @@ export const navCategories: NavCategory[] = [
   },
   {
     category: NavCategories.Wallet,
-    items: [
-      {
-        label: 'Safe{Wallet}',
-        href: AppRoutes.wallet,
-      },
-    ],
+    href: AppRoutes.wallet,
   },
   {
     category: NavCategories.Ecosystem,
