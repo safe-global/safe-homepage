@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
   gap: 16px;
+  height: 48px;
 }
 
 .textContainer {
@@ -55,9 +56,5 @@
 
   .menuList li:hover svg {
     color: var(--mui-palette-primary-main);
-  }
-
-  .menuLink {
-    height: 48px;
   }
 }
