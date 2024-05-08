@@ -1,8 +1,7 @@
 import { DOCS_LINK, GRANTS_LINK, HELP_LINK, SAFECON_LINK } from '@/config/constants'
 import { AppRoutes } from '@/config/routes'
-import BlogIcon from '@/public/images/Header/blog-icon.svg'
+import PaperIcon from '@/public/images/Header/paper-icon.svg'
 import SafeCoreIcon from '@/public/images/Header/safe-core-icon.svg'
-import DocumentationIcon from '@/public/images/Header/documentation-icon.svg'
 import ProjectsIcon from '@/public/images/Header/projects-icon.svg'
 import GrantsIcon from '@/public/images/Header/grants-icon.svg'
 import GovernanceIcon from '@/public/images/Header/governance-icon.svg'
@@ -60,7 +59,7 @@ export const navCategories: NavCategory[] = [
         href: DOCS_LINK,
         target: '_blank',
         rel: 'noreferrer',
-        icon: <DocumentationIcon />,
+        icon: <PaperIcon />,
       },
     ],
   },
@@ -118,7 +117,7 @@ export const navCategories: NavCategory[] = [
       {
         label: 'Blog',
         href: AppRoutes.blog.index,
-        icon: <BlogIcon />,
+        icon: <PaperIcon />,
       },
       {
         label: 'Careers',
