@@ -22,7 +22,7 @@ export type NavItem = {
   tag?: string
 }
 
-type NavCategory =
+export type NavCategory =
   | {
       category: NavCategoriesType
       items: NavItem[]

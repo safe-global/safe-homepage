@@ -1,16 +1,5 @@
-import { createRef, useEffect, useState } from 'react'
-import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
-  Button,
-  ButtonBase,
-  Fade,
-  Paper,
-  Popper,
-  Typography,
-  useMediaQuery,
-} from '@mui/material'
+import { useState } from 'react'
+import { Accordion, AccordionDetails, AccordionSummary, Button, ButtonBase, useMediaQuery } from '@mui/material'
 import NextLink from 'next/link'
 import clsx from 'clsx'
 
@@ -22,21 +11,12 @@ import { navCategories, type NavCategoriesType } from '@/components/common/Heade
 import Logo from '@/public/images/logo.svg'
 import AngleDownIcon from '@/public/images/angle-down.svg'
 import css from './styles.module.css'
+import NavigationButton from '@/components/common/Header/NavigationButton'
 
 const Header = () => {
   const [isBurgerOpen, setIsBurgerOpen] = useState<boolean>(false)
   const [subMenuOpen, setSubMenuOpen] = useState<null | NavCategoriesType>(null)
-  const [elRefs, setElRefs] = useState<(React.RefObject<HTMLButtonElement> | null)[]>([])
   const isSmallScreen = useMediaQuery('(max-width:600px)')
-
-  // Initialize nav buttons refs
-  useEffect(() => {
-    if (elRefs.length > 0) return
-
-    for (let i = 0; i < navCategories.length; i++) {
-      setElRefs((prev) => [...prev, createRef()])
-    }
-  }, [elRefs.length])
 
   const toggleCategoryOpen = (value: typeof subMenuOpen) => () => {
     setSubMenuOpen(value)
@@ -52,8 +32,6 @@ const Header = () => {
     setIsBurgerOpen(false)
     setSubMenuOpen(null)
   }
-
-  const isOpen = subMenuOpen !== null
 
   return (
     <div className={clsx(css.header, isBurgerOpen && css.visible)}>
@@ -93,36 +71,12 @@ const Header = () => {
                   </Accordion>
                 ) : (
                   // Desktop button
-                  <ButtonBase
-                    className={clsx(css.navButton, css.hideInMobile, { [css.active]: subMenuOpen === category })}
-                    disableRipple
-                    id={`${category}-button`}
-                    aria-haspopup
-                    aria-controls={`${category}-popper`}
-                    aria-expanded={isOpen}
-                    ref={elRefs[index]}
-                  >
-                    <Typography>{category}</Typography>
-                    <Popper
-                      className={css.hideInMobile}
-                      id={`${category}-popper`}
-                      open={subMenuOpen === category}
-                      anchorEl={elRefs[index]?.current}
-                      transition
-                      placement="bottom-start"
-                      style={{
-                        zIndex: 1200,
-                      }}
-                    >
-                      {({ TransitionProps }) => (
-                        <Fade {...TransitionProps} timeout={350}>
-                          <Paper className={css.menu}>
-                            <Menu items={items ?? []} onItemClick={closeMobileNavigation} />
-                          </Paper>
-                        </Fade>
-                      )}
-                    </Popper>
-                  </ButtonBase>
+                  <NavigationButton
+                    category={category}
+                    items={items ?? []}
+                    subMenuOpen={subMenuOpen}
+                    onItemClick={closeMobileNavigation}
+                  />
                 )}
               </li>
             </>
