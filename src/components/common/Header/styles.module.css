@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px;
+  padding: 14px 16px;
   position: sticky;
   top: 0;
   height: var(--header-height);
@@ -15,6 +15,8 @@
 .logo {
   display: flex;
   align-items: center;
+  width: 94px;
+  height: 36px;
 }
 
 .navigation {
@@ -25,10 +27,17 @@
   --transition-duration: var(--transition-duration);
 }
 
-.outerWalletButton {
-  display: none;
+.button {
+  font-size: 18px;
+  line-height: 26px;
+  padding: 15px 0;
+  width: 100%;
+  margin-top: 24px;
+  display: flex;
+  align-items: baseline;
 }
 
+/* Burger navigation button */
 .burger {
   width: 40px;
   height: 40px;
@@ -61,25 +70,9 @@
   bottom: 11px;
 }
 
-.button {
-  font-size: 18px;
-  line-height: 26px;
-  padding: 15px 0;
-  width: 100%;
-  margin-top: 24px;
-  display: flex;
-  align-items: baseline;
-}
-
 @media (max-width: 599px) {
   .header {
     border-bottom: 1px solid var(--mui-palette-border-light);
-    padding: 14px 16px;
-  }
-
-  .logo {
-    width: 94.5px;
-    height: 36px;
   }
 
   .navigation > li:not(:nth-last-of-type(2)) {
@@ -142,10 +135,6 @@
 }
 
 @media (min-width: 600px) {
-  .hideInLaptop {
-    display: none;
-  }
-
   .header {
     padding: 0 30px;
   }
@@ -184,15 +173,11 @@
     margin: 0;
   }
 
-  .navWalletButton {
-    display: none;
-  }
-
-  .outerWalletButton {
-    display: block;
-  }
-
   .menu {
     margin-left: -16px;
+  }
+
+  .hideInLaptop {
+    display: none;
   }
 }

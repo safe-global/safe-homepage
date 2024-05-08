@@ -42,12 +42,12 @@ const Header = () => {
     setSubMenuOpen(value)
   }
 
-  const toggleNavigation = () => {
+  const toggleMobileNavigation = () => {
     setIsBurgerOpen((prev) => !prev)
     document.body.classList.toggle('navOpen')
   }
 
-  const closeNavigation = () => {
+  const closeMobileNavigation = () => {
     document.body.classList.remove('navOpen')
     setIsBurgerOpen(false)
     setSubMenuOpen(null)
@@ -63,7 +63,7 @@ const Header = () => {
         </div>
       </NextLink>
 
-      <ButtonBase className={css.burger} onClick={toggleNavigation} aria-label="Toggle navigation" disableRipple>
+      <ButtonBase className={css.burger} onClick={toggleMobileNavigation} aria-label="Toggle navigation" disableRipple>
         <span />
       </ButtonBase>
       <nav>
@@ -88,7 +88,7 @@ const Header = () => {
                       <div className={css.categoryTitle}>{category}</div>
                     </AccordionSummary>
                     <AccordionDetails>
-                      <Menu items={items ?? []} onItemClick={closeNavigation} />
+                      <Menu items={items ?? []} onItemClick={closeMobileNavigation} />
                     </AccordionDetails>
                   </Accordion>
                 ) : (
@@ -117,7 +117,7 @@ const Header = () => {
                       {({ TransitionProps }) => (
                         <Fade {...TransitionProps} timeout={350}>
                           <Paper className={css.menu}>
-                            <Menu items={items ?? []} onItemClick={closeNavigation} />
+                            <Menu items={items ?? []} onItemClick={closeMobileNavigation} />
                           </Paper>
                         </Fade>
                       )}
@@ -127,7 +127,7 @@ const Header = () => {
               </li>
             </>
           ))}
-          <li className={css.navWalletButton}>
+          <li className={css.hideInLaptop}>
             <SafeLink href={WALLET_LINK}>
               <Button className={css.button} variant="contained">
                 Launch Wallet
@@ -137,7 +137,7 @@ const Header = () => {
         </ul>
       </nav>
 
-      <div className={css.outerWalletButton}>
+      <div className={css.hideInMobile}>
         <SafeLink href={WALLET_LINK}>
           <Button className={css.button} variant="contained">
             Launch Wallet
