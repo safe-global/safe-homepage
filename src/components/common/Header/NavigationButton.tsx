@@ -1,4 +1,4 @@
-import { ButtonBase, Fade, Paper, Popper, Typography } from '@mui/material'
+import { ButtonBase, Fade, Paper, Popper } from '@mui/material'
 import { useRef } from 'react'
 import clsx from 'clsx'
 import type { NavCategoriesType, NavCategory, NavItem } from '@/components/common/Header/navCategories'
@@ -27,7 +27,7 @@ const NavigationButton = ({ category, items, subMenuOpen, onItemClick }: Navigat
       aria-expanded={isOpen}
       ref={buttonRef}
     >
-      <Typography>{category}</Typography>
+      <div className={css.navButton}>{category}</div>
       <Popper
         className={css.hideInMobile}
         id={`${category}-popper`}

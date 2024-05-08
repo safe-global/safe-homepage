@@ -57,4 +57,13 @@
   .menuList li:hover svg {
     color: var(--mui-palette-primary-main);
   }
+
+  .menuLink {
+    gap: 8px;
+  }
+
+  .subItemTitle {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

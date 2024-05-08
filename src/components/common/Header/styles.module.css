@@ -157,6 +157,8 @@
   .navLink {
     color: var(--mui-palette-primary-light);
     padding: 24px 0;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   .navButton:hover,
@@ -175,6 +177,7 @@
 
   .menu {
     margin-left: -16px;
+    margin-top: -32px;
   }
 
   .hideInLaptop {
