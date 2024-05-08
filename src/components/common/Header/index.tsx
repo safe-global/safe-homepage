@@ -9,6 +9,7 @@ import {
   Paper,
   Popper,
   Typography,
+  useMediaQuery,
 } from '@mui/material'
 import NextLink from 'next/link'
 import clsx from 'clsx'
@@ -26,6 +27,7 @@ const Header = () => {
   const [isBurgerOpen, setIsBurgerOpen] = useState<boolean>(false)
   const [subMenuOpen, setSubMenuOpen] = useState<null | NavCategoriesType>(null)
   const [elRefs, setElRefs] = useState<(React.RefObject<HTMLButtonElement> | null)[]>([])
+  const isSmallScreen = useMediaQuery('(max-width:600px)')
 
   // Initialize nav buttons refs
   useEffect(() => {
@@ -67,20 +69,20 @@ const Header = () => {
       <nav>
         <ul className={css.navigation}>
           {navCategories.map(({ category, items, href }, index) => (
-            <li
-              key={category}
-              onMouseEnter={toggleCategoryOpen(category)}
-              onFocus={toggleCategoryOpen(category)}
-              onMouseLeave={toggleCategoryOpen(null)}
-              onBlur={toggleCategoryOpen(null)}
-            >
-              {href ? (
-                <NextLink href={href}>
-                  <div className={css.navLink}>{category}</div>
-                </NextLink>
-              ) : (
-                <>
-                  {/* Mobile view */}
+            <>
+              <li
+                key={category}
+                onMouseEnter={toggleCategoryOpen(category)}
+                onFocus={toggleCategoryOpen(category)}
+                onMouseLeave={toggleCategoryOpen(null)}
+                onBlur={toggleCategoryOpen(null)}
+              >
+                {href ? (
+                  <NextLink href={href}>
+                    <div className={css.navLink}>{category}</div>
+                  </NextLink>
+                ) : isSmallScreen ? (
+                  // Mobile button
                   <Accordion className={clsx(css.accordion, css.hideInLaptop)}>
                     <AccordionSummary expandIcon={<AngleDownIcon />}>
                       <div className={css.categoryTitle}>{category}</div>
@@ -89,8 +91,8 @@ const Header = () => {
                       <Menu items={items ?? []} onItemClick={closeNavigation} />
                     </AccordionDetails>
                   </Accordion>
-
-                  {/* Desktop button */}
+                ) : (
+                  // Desktop button
                   <ButtonBase
                     className={clsx(css.navButton, css.hideInMobile, { [css.active]: subMenuOpen === category })}
                     disableRipple
@@ -101,29 +103,29 @@ const Header = () => {
                     ref={elRefs[index]}
                   >
                     <Typography>{category}</Typography>
+                    <Popper
+                      className={css.hideInMobile}
+                      id={`${category}-popper`}
+                      open={subMenuOpen === category}
+                      anchorEl={elRefs[index]?.current}
+                      transition
+                      placement="bottom-start"
+                      style={{
+                        zIndex: 1200,
+                      }}
+                    >
+                      {({ TransitionProps }) => (
+                        <Fade {...TransitionProps} timeout={350}>
+                          <Paper className={css.menu}>
+                            <Menu items={items ?? []} onItemClick={closeNavigation} />
+                          </Paper>
+                        </Fade>
+                      )}
+                    </Popper>
                   </ButtonBase>
-                  <Popper
-                    className={css.hideInMobile}
-                    id={`${category}-popper`}
-                    open={subMenuOpen === category}
-                    anchorEl={elRefs[index]?.current}
-                    transition
-                    placement="bottom-start"
-                    style={{
-                      zIndex: 1200,
-                    }}
-                  >
-                    {({ TransitionProps }) => (
-                      <Fade {...TransitionProps} timeout={350}>
-                        <Paper className={css.menu}>
-                          <Menu items={items ?? []} onItemClick={closeNavigation} />
-                        </Paper>
-                      </Fade>
-                    )}
-                  </Popper>
-                </>
-              )}
-            </li>
+                )}
+              </li>
+            </>
           ))}
           <li className={css.navWalletButton}>
             <SafeLink href={WALLET_LINK}>
