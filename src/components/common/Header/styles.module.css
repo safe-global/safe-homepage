@@ -178,6 +178,7 @@
   .menu {
     margin-left: -16px;
     margin-top: -32px;
+    background-color: var(--mui-palette-background-main);
   }
 
   .hideInLaptop {
