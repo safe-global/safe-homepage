@@ -7,7 +7,13 @@ const Menu = ({ items, onItemClick }: { items: NavItem[]; onItemClick: () => voi
   <ul className={css.menuList}>
     {items.map((subItem) => (
       <li key={subItem.href}>
-        <NextLink href={subItem.href} onClick={onItemClick} className={css.menuLink}>
+        <NextLink
+          href={subItem.href}
+          target={subItem.target}
+          rel={subItem.rel}
+          onClick={onItemClick}
+          className={css.menuLink}
+        >
           {subItem.icon}
           <div className={css.textContainer}>
             <div className={css.title}>
