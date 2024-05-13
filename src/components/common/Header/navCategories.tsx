@@ -142,7 +142,7 @@ export const navCategories: NavCategory[] = [
   {
     category: (
       <>
-        Safe
+        Safe{' '}
         <u>
           <i>PASS</i>
         </u>
