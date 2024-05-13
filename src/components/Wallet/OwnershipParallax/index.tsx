@@ -1,4 +1,4 @@
-import ParallaxText, { type ParallaxTextProps } from '@/components/common/ParallaxText'
+import ParallaxText, { type ParallaxTextProps } from '@/components/common/ParallaxTextOld'
 import OwnershipParallaxElement from '@/components/Wallet/OwnershipParallax/OwnershipParallaxElement'
 
 const OwnershipParallax = (props: ParallaxTextProps) => (

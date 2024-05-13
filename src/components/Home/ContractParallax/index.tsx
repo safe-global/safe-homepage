@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react'
 import ContractParallaxElement from './ContractParallaxElement'
-import ParallaxText, { type ParallaxTextProps } from '@/components/common/ParallaxText'
+import ParallaxText, { type ParallaxTextProps } from '@/components/common/ParallaxTextOld'
 import layoutCss from '@/components/common/styles.module.css'
 
 const ContractParallax = (props: ParallaxTextProps): ReactElement => {
