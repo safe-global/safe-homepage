@@ -33,8 +33,6 @@ const safeProtocolItems = [
   {
     label: 'Safe{Core}',
     href: AppRoutes.core,
-    target: '_blank',
-    rel: 'noreferrer',
   },
   {
     label: 'Docs',
@@ -48,8 +46,6 @@ const ecosystemItems = [
   {
     label: 'Explore',
     href: AppRoutes.ecosystem,
-    target: '_blank',
-    rel: 'noreferrer',
   },
   {
     label: 'Grants',
