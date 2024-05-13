@@ -7,7 +7,7 @@ import { AppRoutes } from '@/config/routes'
 import { WALLET_LINK } from '@/config/constants'
 import SafeLink from '@/components/common/SafeLink'
 import Menu from '@/components/common/Header/Menu'
-import { navCategories, type NavCategoriesType } from '@/components/common/Header/navCategories'
+import { navCategories, type NavCategory, type NavCategoriesType } from '@/components/common/Header/navCategories'
 import Logo from '@/public/images/logo.svg'
 import AngleDownIcon from '@/public/images/angle-down.svg'
 import css from './styles.module.css'
@@ -18,7 +18,9 @@ const Header = () => {
   const [subMenuOpen, setSubMenuOpen] = useState<null | NavCategoriesType>(null)
   const isSmallScreen = useMediaQuery('(max-width:600px)')
 
-  const toggleCategoryOpen = (value: typeof subMenuOpen) => () => {
+  const toggleCategoryOpen = (value: NavCategory['category'] | null) => () => {
+    if (typeof value !== 'string') return
+
     setSubMenuOpen(value)
   }
 
@@ -48,9 +50,9 @@ const Header = () => {
         <ul className={css.navigation}>
           {navCategories.map(({ category, items, href }) => (
             <li
-              key={typeof category === 'string' ? category : href}
-              onMouseEnter={toggleCategoryOpen(typeof category === 'string' ? category : null)}
-              onFocus={toggleCategoryOpen(typeof category === 'string' ? category : null)}
+              key={href}
+              onMouseEnter={toggleCategoryOpen(category)}
+              onFocus={toggleCategoryOpen(category)}
               onMouseLeave={toggleCategoryOpen(null)}
               onBlur={toggleCategoryOpen(null)}
             >

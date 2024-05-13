@@ -17,7 +17,7 @@ const NavigationButton = ({ category, items, subMenuOpen, onItemClick }: Navigat
 
   const isOpen = subMenuOpen === category
 
-  const categoryString = typeof category === 'string' ? category : 'unknown category'
+  const categoryString = typeof category === 'string' ? category : 'Unknown'
 
   return (
     <ButtonBase
