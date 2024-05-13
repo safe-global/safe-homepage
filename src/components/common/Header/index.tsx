@@ -46,40 +46,38 @@ const Header = () => {
       </ButtonBase>
       <nav>
         <ul className={css.navigation}>
-          {navCategories.map(({ category, items, href }, index) => (
-            <>
-              <li
-                key={category}
-                onMouseEnter={toggleCategoryOpen(category)}
-                onFocus={toggleCategoryOpen(category)}
-                onMouseLeave={toggleCategoryOpen(null)}
-                onBlur={toggleCategoryOpen(null)}
-              >
-                {href ? (
-                  <NextLink href={href}>
-                    <div className={css.navLink}>{category}</div>
-                  </NextLink>
-                ) : isSmallScreen ? (
-                  // Mobile button
-                  <Accordion className={clsx(css.accordion, css.hideInLaptop)}>
-                    <AccordionSummary expandIcon={<AngleDownIcon />}>
-                      <div className={css.categoryTitle}>{category}</div>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Menu items={items ?? []} onItemClick={closeMobileNavigation} />
-                    </AccordionDetails>
-                  </Accordion>
-                ) : (
-                  // Desktop button
-                  <NavigationButton
-                    category={category}
-                    items={items ?? []}
-                    subMenuOpen={subMenuOpen}
-                    onItemClick={closeMobileNavigation}
-                  />
-                )}
-              </li>
-            </>
+          {navCategories.map(({ category, items, href }) => (
+            <li
+              key={typeof category === 'string' ? category : href}
+              onMouseEnter={toggleCategoryOpen(typeof category === 'string' ? category : null)}
+              onFocus={toggleCategoryOpen(typeof category === 'string' ? category : null)}
+              onMouseLeave={toggleCategoryOpen(null)}
+              onBlur={toggleCategoryOpen(null)}
+            >
+              {href ? (
+                <NextLink href={href} onClick={closeMobileNavigation}>
+                  <div className={css.navLink}>{category}</div>
+                </NextLink>
+              ) : isSmallScreen ? (
+                // Mobile button
+                <Accordion className={clsx(css.accordion, css.hideInLaptop)}>
+                  <AccordionSummary expandIcon={<AngleDownIcon />}>
+                    <div className={css.categoryTitle}>{category}</div>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <Menu items={items ?? []} onItemClick={closeMobileNavigation} />
+                  </AccordionDetails>
+                </Accordion>
+              ) : (
+                // Desktop button
+                <NavigationButton
+                  category={category}
+                  items={items ?? []}
+                  subMenuOpen={subMenuOpen}
+                  onItemClick={closeMobileNavigation}
+                />
+              )}
+            </li>
           ))}
           <li className={css.hideInLaptop}>
             <SafeLink href={WALLET_LINK}>

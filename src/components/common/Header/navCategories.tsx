@@ -24,15 +24,17 @@ export type NavItem = {
 
 export type NavCategory =
   | {
-      category: NavCategoriesType
+      category: NavCategories
       items: NavItem[]
       href?: never
     }
   | {
-      category: NavCategoriesType
+      category: NavCategories | JSX.Element
       items?: never
       href: string
     }
+
+export type NavCategoriesType = NavCategories
 
 // Navigation categories
 enum NavCategories {
@@ -42,8 +44,6 @@ enum NavCategories {
   Community = 'Community',
   Resources = 'Resources',
 }
-
-export type NavCategoriesType = keyof typeof NavCategories
 
 export const navCategories: NavCategory[] = [
   {
@@ -138,5 +138,16 @@ export const navCategories: NavCategory[] = [
         icon: <HelpCenterIcon />,
       },
     ],
+  },
+  {
+    category: (
+      <>
+        Safe
+        <u>
+          <i>PASS</i>
+        </u>
+      </>
+    ),
+    href: AppRoutes.pass,
   },
 ]

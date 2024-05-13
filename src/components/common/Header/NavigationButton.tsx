@@ -17,20 +17,22 @@ const NavigationButton = ({ category, items, subMenuOpen, onItemClick }: Navigat
 
   const isOpen = subMenuOpen === category
 
+  const categoryString = typeof category === 'string' ? category : 'unknown category'
+
   return (
     <ButtonBase
       className={clsx(css.navButton, css.hideInMobile, { [css.active]: isOpen })}
       disableRipple
-      aria-label={category}
+      aria-label={categoryString}
       aria-haspopup
-      aria-controls={`${category}-popper`}
+      aria-controls={`${categoryString}-popper`}
       aria-expanded={isOpen}
       ref={buttonRef}
     >
       <div className={css.navButton}>{category}</div>
       <Popper
         className={css.hideInMobile}
-        id={`${category}-popper`}
+        id={`${categoryString}-popper`}
         open={isOpen}
         anchorEl={buttonRef?.current}
         transition
