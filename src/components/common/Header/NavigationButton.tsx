@@ -1,14 +1,14 @@
 import { ButtonBase, Fade, Paper, Popper } from '@mui/material'
 import { useRef } from 'react'
 import clsx from 'clsx'
-import type { NavCategoriesType, NavCategory, NavItem } from '@/components/common/Header/navCategories'
+import type { NavCategories, NavCategory, NavItem } from '@/components/common/Header/navCategories'
 import Menu from '@/components/common/Header/Menu'
 import css from './styles.module.css'
 
 type NavigationButtonProps = {
   category: NavCategory['category']
   items: NavItem[]
-  subMenuOpen: null | NavCategoriesType
+  subMenuOpen: null | NavCategories
   onItemClick: () => void
 }
 
