@@ -29,7 +29,7 @@ export type NavCategory =
       href?: never
     }
   | {
-      category: NavCategories | JSX.Element
+      category: NavCategories
       items?: never
       href: string
     }
@@ -43,6 +43,7 @@ enum NavCategories {
   Ecosystem = 'Ecosystem',
   Community = 'Community',
   Resources = 'Resources',
+  SafePass = 'Safe <u><i>PASS</i></u>',
 }
 
 export const navCategories: NavCategory[] = [
@@ -140,14 +141,7 @@ export const navCategories: NavCategory[] = [
     ],
   },
   {
-    category: (
-      <>
-        Safe{' '}
-        <u>
-          <i>PASS</i>
-        </u>
-      </>
-    ),
+    category: NavCategories.SafePass,
     href: AppRoutes.pass,
   },
 ]

@@ -7,7 +7,7 @@ import { AppRoutes } from '@/config/routes'
 import { WALLET_LINK } from '@/config/constants'
 import SafeLink from '@/components/common/SafeLink'
 import Menu from '@/components/common/Header/Menu'
-import { navCategories, type NavCategory, type NavCategoriesType } from '@/components/common/Header/navCategories'
+import { navCategories, type NavCategoriesType } from '@/components/common/Header/navCategories'
 import Logo from '@/public/images/logo.svg'
 import AngleDownIcon from '@/public/images/angle-down.svg'
 import css from './styles.module.css'
@@ -17,12 +17,6 @@ const Header = () => {
   const [isBurgerOpen, setIsBurgerOpen] = useState<boolean>(false)
   const [subMenuOpen, setSubMenuOpen] = useState<null | NavCategoriesType>(null)
   const isSmallScreen = useMediaQuery('(max-width:600px)')
-
-  const toggleCategoryOpen = (value: NavCategory['category'] | null) => () => {
-    if (typeof value !== 'string') return
-
-    setSubMenuOpen(value)
-  }
 
   const toggleMobileNavigation = () => {
     setIsBurgerOpen((prev) => !prev)
@@ -51,14 +45,14 @@ const Header = () => {
           {navCategories.map(({ category, items, href }) => (
             <li
               key={href}
-              onMouseEnter={toggleCategoryOpen(category)}
-              onFocus={toggleCategoryOpen(category)}
-              onMouseLeave={toggleCategoryOpen(null)}
-              onBlur={toggleCategoryOpen(null)}
+              onMouseEnter={() => setSubMenuOpen(category)}
+              onFocus={() => setSubMenuOpen(category)}
+              onMouseLeave={() => setSubMenuOpen(null)}
+              onBlur={() => setSubMenuOpen(null)}
             >
               {href ? (
                 <NextLink href={href} onClick={closeMobileNavigation}>
-                  <div className={css.navLink}>{category}</div>
+                  <span className={css.navLink} dangerouslySetInnerHTML={{ __html: category }} />
                 </NextLink>
               ) : isSmallScreen ? (
                 // Mobile button
