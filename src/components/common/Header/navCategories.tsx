@@ -24,26 +24,25 @@ export type NavItem = {
 
 export type NavCategory =
   | {
-      category: NavCategoriesType
+      category: NavCategories
       items: NavItem[]
       href?: never
     }
   | {
-      category: NavCategoriesType
+      category: NavCategories
       items?: never
       href: string
     }
 
 // Navigation categories
-enum NavCategories {
+export enum NavCategories {
   Developers = 'Developers',
   Wallet = 'Wallet',
   Ecosystem = 'Ecosystem',
   Community = 'Community',
   Resources = 'Resources',
+  SafePass = 'Safe <u><i>PASS</i></u>',
 }
-
-export type NavCategoriesType = keyof typeof NavCategories
 
 export const navCategories: NavCategory[] = [
   {
@@ -138,5 +137,9 @@ export const navCategories: NavCategory[] = [
         icon: <HelpCenterIcon />,
       },
     ],
+  },
+  {
+    category: NavCategories.SafePass,
+    href: AppRoutes.pass,
   },
 ]
