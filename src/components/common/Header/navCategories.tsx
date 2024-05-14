@@ -34,10 +34,8 @@ export type NavCategory =
       href: string
     }
 
-export type NavCategoriesType = NavCategories
-
 // Navigation categories
-enum NavCategories {
+export enum NavCategories {
   Developers = 'Developers',
   Wallet = 'Wallet',
   Ecosystem = 'Ecosystem',
