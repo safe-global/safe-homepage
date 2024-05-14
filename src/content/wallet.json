@@ -30,8 +30,8 @@
       }
     ],
     "image": {
-      "sm": "/images/Wallet/buoy-logo.png",
-      "md": "/images/Wallet/buoy-logo.png",
+      "sm": "/images/Wallet/swap-card.png",
+      "md": "/images/Wallet/swap-card.png",
       "alt": "Recovery buoy logo"
     },
     "footer": {
