@@ -19,11 +19,11 @@
     "component": "Wallet/Intro"
   },
   {
-    "title": "Introducing <br> Native Swaps",
+    "title": "Introducing<br>Native Swaps",
     "caption": "New feature",
     "buttons": [
       {
-        "text": "Enter Safe Wallet",
+        "text": "Enter Safe{Wallet}",
         "href": "https://app.safe.global",
         "variant": "button",
         "color": "secondary"
@@ -38,7 +38,7 @@
       "logos": [
         {
           "src": "/images/Wallet/powered-by-cow.png",
-          "alt": "CoW logo"
+          "alt": "CoW Swap logo"
         }
       ]
     },
