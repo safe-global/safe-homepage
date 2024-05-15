@@ -74,7 +74,7 @@ const Header = () => {
               </li>
             )
           })}
-          <li className={css.hideInLaptop}>
+          <li key={WALLET_LINK} className={css.hideInLaptop}>
             <SafeLink href={WALLET_LINK}>
               <Button className={css.button} variant="contained">
                 Launch Wallet
