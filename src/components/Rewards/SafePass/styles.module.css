@@ -66,7 +66,8 @@
 .spot3 {
   position: absolute;
   z-index: -1;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 400px;
   background-image: radial-gradient(rgba(18, 255, 128, 0.6) 30%, rgba(246, 247, 248, 0) 70%);
   filter: blur(50px);

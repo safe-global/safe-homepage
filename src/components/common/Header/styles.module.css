@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px;
+  padding: 14px 16px;
   position: sticky;
   top: 0;
   height: var(--header-height);
@@ -15,6 +15,8 @@
 .logo {
   display: flex;
   align-items: center;
+  width: 94px;
+  height: 36px;
 }
 
 .navigation {
@@ -25,6 +27,17 @@
   --transition-duration: var(--transition-duration);
 }
 
+.button {
+  font-size: 18px;
+  line-height: 26px;
+  padding: 15px 0;
+  width: 100%;
+  margin-top: 24px;
+  display: flex;
+  align-items: baseline;
+}
+
+/* Burger navigation button */
 .burger {
   width: 40px;
   height: 40px;
@@ -57,63 +70,36 @@
   bottom: 11px;
 }
 
-.link {
-  font-size: 28px;
-  line-height: 32px;
-  display: block;
-  color: white;
-  text-decoration: none;
-  padding: 24px 0;
-  border-bottom: 1px solid var(--mui-palette-border-light);
-  transition: all var(--transition-duration);
-}
-
-.link:active {
-  opacity: 0.5;
-}
-
-.link.active,
-.link:hover {
-  color: var(--mui-palette-primary-light);
-}
-
-.link.active {
-  pointer-events: none;
-}
-
-.externalLink {
-  display: flex;
-  align-items: baseline;
-  transition: all var(--transition-duration);
-}
-
-.externalLink u {
-  white-space: nowrap;
-}
-
-.externalLink svg {
-  margin-left: 8px;
-  width: 24px;
-  height: 24px;
-}
-
-.externalLink:hover svg path {
-  fill: var(--mui-palette-primary-light);
-}
-
-.button {
-  font-size: 18px;
-  line-height: 26px;
-  padding: 15px 0;
-  width: 100%;
-  margin-top: 24px;
-  display: flex;
-  align-items: baseline;
-}
-
 @media (max-width: 599px) {
-  .visible {
-    background: var(--mui-palette-background-main);
+  .header {
+    border-bottom: 1px solid var(--mui-palette-border-light);
+  }
+
+  .navigation > li:not(:nth-last-of-type(2)) {
+    border-bottom: 1px solid var(--mui-palette-border-light);
+  }
+
+  .accordion {
+    background-color: var(--mui-palette-background-main);
+    box-shadow: none;
+  }
+
+  .accordion :global .MuiAccordionSummary-root.Mui-expanded {
+    min-height: 0px;
+  }
+
+  .accordion :global .MuiAccordionDetails-root {
+    padding-top: 0px;
+  }
+
+  .categoryTitle,
+  .navLink {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .navLink {
+    padding: 12px 16px;
   }
 
   .visible .navigation {
@@ -125,7 +111,8 @@
     width: 100%;
     height: calc(100vh - var(--header-height));
     margin: 0;
-    padding: 0 16px;
+    padding: 0 16px 16px;
+    overflow-y: scroll;
   }
 
   .visible .burger span {
@@ -141,6 +128,10 @@
     transform: rotate(-45deg);
     bottom: 18px;
   }
+
+  .hideInMobile {
+    display: none;
+  }
 }
 
 @media (min-width: 600px) {
@@ -148,24 +139,33 @@
     padding: 0 30px;
   }
 
+  .logo svg {
+    width: 131px;
+    height: 48px;
+  }
+
   .navigation {
     display: flex;
+    margin: 0;
   }
 
   .burger {
     display: none;
   }
 
-  .link {
-    font-size: 18px;
-    line-height: 56px;
-    padding: 0;
-    border: 0;
+  .navButton,
+  .navLink {
+    color: var(--mui-palette-primary-light);
+    padding: 24px 0;
+    font-size: 16px;
+    line-height: 24px;
   }
 
-  .externalLink svg {
-    width: 16px;
-    height: 16px;
+  .navButton:hover,
+  .navLink:hover,
+  .navButton.active {
+    transition: color var(--transition-duration);
+    color: white;
   }
 
   .button {
@@ -173,5 +173,15 @@
     line-height: 24px;
     padding: 6px 16px;
     margin: 0;
+  }
+
+  .menu {
+    margin-left: -16px;
+    margin-top: -32px;
+    background-color: var(--mui-palette-background-main);
+  }
+
+  .hideInLaptop {
+    display: none;
   }
 }
