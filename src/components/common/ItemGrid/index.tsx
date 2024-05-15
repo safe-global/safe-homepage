@@ -21,7 +21,7 @@ const ItemGrid = ({ title, items, icon }: Partial<BaseBlock> & { icon?: React.Re
                   <div>
                     <div className={css.titleWrapper}>
                       {icon}
-                      <Typography variant="h4">{title}</Typography>
+                      <Typography variant="h5">{title}</Typography>
                     </div>
 
                     {text ? (
