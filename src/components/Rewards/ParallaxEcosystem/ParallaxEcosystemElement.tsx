@@ -1,5 +1,5 @@
 import ParallaxWrapper from '@/components/common/ParallaxWrapper'
-import { type ParallaxTextProps } from '@/components/Token/ParallaxText'
+import { type ParallaxTextProps } from '@/components/common/ParallaxText'
 import { isAsset } from '@/lib/typeGuards'
 import css from './styles.module.css'
 
