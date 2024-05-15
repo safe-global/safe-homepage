@@ -11,7 +11,7 @@ type HeaderCTAProps = BaseBlock & {
 
 const HeaderCTA = (props: HeaderCTAProps) => {
   return (
-    <Grid container mb={{ sm: 5, md: 7 }}>
+    <Grid container mb={{ xs: 5, md: 7 }}>
       <Grid item xs={12} md={!props.bigTitle ? 8 : undefined}>
         <Typography variant="h2" mb={3} className={`${props.bigTitle ? css.bigTitle : null}`}>
           {props.title}

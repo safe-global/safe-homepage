@@ -27,9 +27,9 @@ const ProposalRow = ({ title, state, href }: Omit<SnapshotProposal, 'id'> & { hr
 
   return (
     <a href={href} target="_blank" rel="noreferrer" className={css.proposalRow}>
-      <Typography variant="h4" maxWidth={{ sm: '.6' }}>
+      <Typography variant="h5" maxWidth={{ sm: '.6' }}>
         <Typography
-          variant="h4"
+          variant="h5"
           component="span"
           color="primary.light"
           marginRight={1}
