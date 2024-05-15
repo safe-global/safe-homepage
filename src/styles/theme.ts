@@ -97,10 +97,12 @@ export const theme = createTheme({
     body1: {
       fontSize: '20px',
       lineHeight: '28px',
+      fontWeight: 300,
     },
     body2: {
       fontSize: '15px',
       lineHeight: '24px',
+      fontWeight: 300,
     },
     caption: {
       fontSize: '14px',
@@ -109,12 +111,6 @@ export const theme = createTheme({
       fontWeight: 500,
       textTransform: 'uppercase',
       color: palette.primary.light,
-    },
-    overline: {
-      fontSize: '11px',
-      lineHeight: '14px',
-      textTransform: 'uppercase',
-      letterSpacing: '1px',
     },
   },
   components: {
