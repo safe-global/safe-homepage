@@ -12,7 +12,7 @@ const EcosystemIntro = ({ title, text }: BaseBlock) => {
           <Typography variant="h1" mb={4}>
             {title}
           </Typography>
-          <Typography variant="h4" component="div" mb={5}>
+          <Typography variant="h5" component="div" mb={5}>
             {text}
           </Typography>
         </Grid>
