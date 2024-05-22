@@ -150,7 +150,7 @@
     "component": "Wallet/ParallaxTxSimulation"
   },
   {
-    "title": "Available on 14+ networks",
+    "title": "Available on 15+ networks",
     "text": "including testnets",
     "networks": [
       {
@@ -182,14 +182,21 @@
         }
       },
       {
+        "name": "Scroll",
+        "icon": {
+          "src": "/images/chainsLogos/ScrollLogo.svg",
+          "alt": "Scroll logo"
+        },
+        "isNew": true
+      },
+      {
         "name": "zkSync Era Mainnet",
         "icon": {
           "src": "/images/chainsLogos/ZkSyncEraLogo.png",
           "alt": "zkSync Era logo"
         },
         "textColor": "#000000",
-        "backgroundColor": "#FFFFFF",
-        "isNew": true
+        "backgroundColor": "#FFFFFF"
       },
       {
         "name": "Polygon",
@@ -231,8 +238,7 @@
         "icon": {
           "src": "/images/chainsLogos/PolygonZkEVMLogo.png",
           "alt": "Polygon zkEVM logo"
-        },
-        "isNew": true
+        }
       },
       {
         "name": "Celo",
