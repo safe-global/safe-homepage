@@ -182,6 +182,13 @@
         }
       },
       {
+        "name": "Scroll",
+        "icon": {
+          "src": "/images/chainsLogos/ScrollLogo.svg",
+          "alt": "Scroll logo"
+        }
+      },
+      {
         "name": "zkSync Era Mainnet",
         "icon": {
           "src": "/images/chainsLogos/ZkSyncEraLogo.png",
