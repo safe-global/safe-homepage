@@ -23,6 +23,13 @@
   border-bottom-right-radius: 12px;
 }
 
+.titleWrapper {
+  display: flex;
+  gap: 16px;
+  flex-direction: row;
+  align-items: center;
+}
+
 @media (min-width: 600px) {
   .card:first-of-type {
     border-top-right-radius: 0px;

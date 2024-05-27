@@ -19,35 +19,26 @@
     "component": "Wallet/Intro"
   },
   {
-    "title": "Safe <u>RecoveryHub</u>",
-    "caption": "New",
+    "title": "Introducing<br>Native Swaps",
+    "caption": "New feature",
     "buttons": [
       {
-        "text": "Try now",
+        "text": "Enter Safe{Wallet}",
         "href": "https://app.safe.global",
         "variant": "button",
         "color": "secondary"
-      },
-      {
-        "text": "Read more",
-        "href": "https://safe.global/blog/introducing-saferecoveryhub-a-new-crypto-wallet-recovery-ecosystem",
-        "variant": "link"
       }
     ],
     "image": {
-      "sm": "/images/Wallet/buoy-logo.png",
-      "md": "/images/Wallet/buoy-logo.png",
+      "sm": "/images/Wallet/swap-card.png",
+      "md": "/images/Wallet/swap-card.png",
       "alt": "Recovery buoy logo"
     },
     "footer": {
       "logos": [
         {
-          "src": "/images/Wallet/Sygnum-logo.png",
-          "alt": "Sygnum logo"
-        },
-        {
-          "src": "/images/Wallet/Coincover-logo.png",
-          "alt": "Coincover logo"
+          "src": "/images/Wallet/powered-by-cow.png",
+          "alt": "CoW Swap logo"
         }
       ]
     },
@@ -159,7 +150,7 @@
     "component": "Wallet/ParallaxTxSimulation"
   },
   {
-    "title": "Available on 14+ networks",
+    "title": "Available on 15+ networks",
     "text": "including testnets",
     "networks": [
       {
@@ -191,14 +182,21 @@
         }
       },
       {
+        "name": "Scroll",
+        "icon": {
+          "src": "/images/chainsLogos/ScrollLogo.svg",
+          "alt": "Scroll logo"
+        },
+        "isNew": true
+      },
+      {
         "name": "zkSync Era Mainnet",
         "icon": {
           "src": "/images/chainsLogos/ZkSyncEraLogo.png",
           "alt": "zkSync Era logo"
         },
         "textColor": "#000000",
-        "backgroundColor": "#FFFFFF",
-        "isNew": true
+        "backgroundColor": "#FFFFFF"
       },
       {
         "name": "Polygon",
@@ -240,8 +238,7 @@
         "icon": {
           "src": "/images/chainsLogos/PolygonZkEVMLogo.png",
           "alt": "Polygon zkEVM logo"
-        },
-        "isNew": true
+        }
       },
       {
         "name": "Celo",

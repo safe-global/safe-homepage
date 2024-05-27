@@ -18,9 +18,11 @@ const LinkButton = ({
       disableRipple
     >
       {children}
-      <div className={css.arrow}>
-        <AngleIcon />
-      </div>
+      {children ? (
+        <div className={css.arrow}>
+          <AngleIcon />
+        </div>
+      ) : undefined}
     </ButtonBase>
   )
 }

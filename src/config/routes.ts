@@ -1,9 +1,12 @@
 export const AppRoutes = {
   '404': '/404',
   wallet: '/wallet',
+  trademark: '/trademark',
+  token: '/token',
   terms: '/terms',
   privacy: '/privacy',
   press: '/press',
+  pass: '/pass',
   index: '/',
   imprint: '/imprint',
   governance: '/governance',
@@ -11,9 +14,7 @@ export const AppRoutes = {
   disclaimer: '/disclaimer',
   core: '/core',
   cookie: '/cookie',
-  cla: {
-    index: '/cla',
-  },
+  cla: '/cla',
   careers: '/careers',
   blog: {
     index: '/blog',

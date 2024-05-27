@@ -1,0 +1,36 @@
+.card {
+  box-shadow: inset 0 0 0 1px var(--mui-palette-border-light);
+  height: 100%;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 16px;
+  align-items: flex-start;
+}
+
+.card img {
+  height: 50px;
+  width: auto;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+@media (min-width: 600px) {
+  .card {
+    gap: 40px;
+  }
+
+  .textBlockContainer {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+  }
+}

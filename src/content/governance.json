@@ -89,10 +89,10 @@
           "width": "50px"
         },
         "title": "What is the Safe{Token}",
-        "text": "The Safe token represents the growing value of the Safe ecosystem",
+        "text": "SAFE Token acts as your key to participate in web3’s transition to smart accounts. Token holders tap into a diverse and ever-evolving ecosystem and govern the future of Safe.",
         "link": {
           "title": "Learn more",
-          "href": "https://safe-global.notion.site/Safe-Token-d558d527aa1a47daab7837bdea60923d"
+          "href": "https://safe.global/token"
         }
       },
       {
@@ -253,7 +253,7 @@
     "buttons": [
       {
         "text": "Learn more",
-        "href": "https://grants.safe.global",
+        "href": "https://www.notion.so/safe-global/Safe-Funding-Programs-7a14a7403f1f44f0bfb236a7521dac91",
         "variant": "button",
         "color": "secondary"
       }

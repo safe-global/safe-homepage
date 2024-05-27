@@ -1,0 +1,10 @@
+.disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  color: var(--mui-palette-text-disabled);
+}
+
+.disabled * {
+  color: var(--mui-palette-text-disabled);
+  fill: var(--mui-palette-text-disabled);
+}

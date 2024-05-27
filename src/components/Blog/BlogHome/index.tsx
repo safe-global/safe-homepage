@@ -4,6 +4,7 @@ import Card from '@/components/Blog/Card'
 import FeaturedPost from '@/components/Blog/FeaturedPost'
 import { type BlogPostEntry } from '@/components/Blog/Post'
 import SearchFilterResults from '@/components/Blog/SearchFilterResults'
+import { containsTag, PRESS_RELEASE_TAG } from '@/lib/containsTag'
 
 const categories = ['Announcements', 'Ecosystem', 'Community', 'Insights', 'Build']
 
@@ -18,6 +19,8 @@ export type BlogHomeProps = {
 
 const BlogHome = (props: BlogHomeProps) => {
   const { featuredPost, mostPopular, allPosts, metaTags } = props
+
+  const nonPressReleases = allPosts.filter((post) => !containsTag(post.fields.tags, PRESS_RELEASE_TAG))
 
   return (
     <BlogLayout metaTags={metaTags}>
@@ -48,7 +51,7 @@ const BlogHome = (props: BlogHomeProps) => {
         </Grid>
 
         {/* All posts */}
-        <SearchFilterResults allPosts={allPosts} categories={categories} />
+        <SearchFilterResults allPosts={nonPressReleases} categories={categories} />
       </Container>
     </BlogLayout>
   )

@@ -1,0 +1,86 @@
+.footerWrapper {
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.caption {
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 600px) {
+  .container {
+    margin-bottom: 140px;
+  }
+
+  .bg {
+    background-image: url('/images/Home/bg-glass.png');
+    background-position: center top 180px;
+    background-repeat: no-repeat;
+    overflow: auto;
+    background-size: cover;
+  }
+
+  .gradient,
+  .gradientHorizontal {
+    position: relative;
+  }
+
+  .gradient:before,
+  .gradient:after {
+    content: '';
+    left: 0;
+    display: block;
+    width: 100%;
+    position: absolute;
+    height: 20%;
+    pointer-events: none;
+  }
+
+  .gradient:before {
+    background: linear-gradient(
+      180deg,
+      var(--mui-palette-background-main) 0%,
+      var(--mui-palette-background-main) 10%,
+      rgba(18, 19, 18, 0) 100%
+    );
+    top: 150px;
+  }
+
+  .gradient:after {
+    background: linear-gradient(0deg, var(--mui-palette-background-main) 0%, rgba(18, 19, 18, 0) 100%);
+    bottom: 0;
+  }
+
+  .gradientHorizontal:before,
+  .gradientHorizontal:after {
+    content: '';
+    top: 0;
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 20px;
+    pointer-events: none;
+  }
+
+  .gradientHorizontal:before {
+    background: linear-gradient(
+      90deg,
+      var(--mui-palette-background-main) 0%,
+      var(--mui-palette-background-main) 10%,
+      rgba(18, 19, 18, 0) 100%
+    );
+    left: 0;
+    z-index: 1;
+  }
+
+  .gradientHorizontal:after {
+    background: linear-gradient(
+      270deg,
+      var(--mui-palette-background-main) 0%,
+      var(--mui-palette-background-main) 10%,
+      rgba(18, 19, 18, 0) 100%
+    );
+    right: 0;
+  }
+}

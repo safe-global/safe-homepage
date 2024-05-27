@@ -1,7 +1,7 @@
 {
   "name": "safe-homepage",
   "homepage": "https://github.com/safe-global/safe-homepage",
-  "version": "1.4.11",
+  "version": "1.4.34",
   "scripts": {
     "build": "next build && next export",
     "lint": "tsc && next lint",
@@ -27,6 +27,7 @@
     "@mui/material": "^5.11.6",
     "@safe-global/safe-gateway-typescript-sdk": "^3.7.0",
     "contentful": "^10.6.1",
+    "framer-motion": "^11.0.25",
     "fuse.js": "^6.6.2",
     "isomorphic-dompurify": "^1.0.0",
     "lodash": "^4.17.21",

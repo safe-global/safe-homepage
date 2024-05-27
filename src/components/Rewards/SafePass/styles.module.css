@@ -1,0 +1,124 @@
+.container {
+  margin-top: 70px;
+}
+
+.textBlock {
+  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.caption {
+  background: linear-gradient(260.13deg, #12ff80 1.24%, #5fddff 102.14%);
+  background-clip: text;
+  color: transparent;
+}
+
+.title {
+  margin-top: 16px;
+  max-width: 700px;
+  text-align: center;
+}
+
+.text p {
+  margin: 0;
+}
+
+.buttons {
+  margin-top: 24px;
+}
+
+.animationContainer {
+  width: 100%;
+  max-width: 512px;
+  margin: auto;
+  height: 570px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.partnershipWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.partnerLogos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 32px;
+}
+
+.spot3 {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+  background-image: radial-gradient(rgba(18, 255, 128, 0.6) 30%, rgba(246, 247, 248, 0) 70%);
+  filter: blur(50px);
+  left: calc(50% - 200px);
+}
+
+@media (min-width: 600px) {
+  .spot1 {
+    position: absolute;
+    left: -300px;
+    top: -150px;
+    z-index: -1;
+    width: 1000px;
+    height: 1000px;
+    background-image: radial-gradient(at top left, rgba(18, 255, 128, 0.4) 0%, rgba(246, 247, 248, 0) 80%);
+    filter: blur(70px);
+  }
+
+  .spot2 {
+    position: absolute;
+    z-index: -1;
+    right: 0px;
+    top: -100px;
+    width: 1000px;
+    height: 1200px;
+    background-image: radial-gradient(at right, rgba(41, 182, 246, 0.3) 0%, rgba(246, 247, 248, 0) 80%);
+    filter: blur(50px);
+  }
+
+  .container {
+    margin-top: 150px;
+  }
+
+  .animationContainer {
+    width: 512px;
+  }
+
+  .title {
+    max-width: 680px;
+    margin-top: 32px;
+  }
+
+  .buttons {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .spot1,
+  .spot2 {
+    width: 1200px;
+    height: 1200px;
+  }
+}

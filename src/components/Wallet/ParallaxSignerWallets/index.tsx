@@ -1,5 +1,5 @@
 import ParallaxSignerWalletsElement from '@/components/Wallet/ParallaxSignerWallets/ParallaxSignerWalletsElement'
-import ParallaxText, { type ParallaxTextProps } from '@/components/common/ParallaxText'
+import ParallaxText, { type ParallaxTextProps } from '@/components/common/ParallaxTextOld'
 
 const ParallaxSignerWallets = (props: ParallaxTextProps) => {
   return (
