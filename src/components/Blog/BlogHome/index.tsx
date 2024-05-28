@@ -1,26 +1,49 @@
-import BlogLayout, { type MetaTagsEntry } from '@/components/Blog/Layout'
+import BlogLayout from '@/components/Blog/Layout'
 import { Container, Grid, Typography } from '@mui/material'
 import Card from '@/components/Blog/Card'
 import FeaturedPost from '@/components/Blog/FeaturedPost'
 import { type BlogPostEntry } from '@/components/Blog/Post'
 import SearchFilterResults from '@/components/Blog/SearchFilterResults'
 import { containsTag, PRESS_RELEASE_TAG } from '@/lib/containsTag'
+import { useEffect, useState } from 'react'
+import client from '@/lib/contentful'
+import { type TypeBlogHomeSkeleton } from '@/contentful/types'
+import { type Entry } from 'contentful'
+import { isEntryTypeBlogHome, isEntryTypePost } from '@/lib/typeGuards'
 
 const categories = ['Announcements', 'Ecosystem', 'Community', 'Insights', 'Build']
 
 const TRENDING_POSTS_COUNT = 3
 
+type BlogHomeEntry = Entry<TypeBlogHomeSkeleton, undefined, string>
+
 export type BlogHomeProps = {
-  metaTags: MetaTagsEntry
-  featuredPost: BlogPostEntry
-  mostPopular: BlogPostEntry[]
+  blogHome: BlogHomeEntry
   allPosts: BlogPostEntry[]
 }
 
-const BlogHome = (props: BlogHomeProps) => {
-  const { featuredPost, mostPopular, allPosts, metaTags } = props
+// TODO: move to utils
+const isPressRelease = (post: BlogPostEntry) => containsTag(post.fields.tags, PRESS_RELEASE_TAG)
+const isDraft = (post: BlogPostEntry) => post.fields.isDraft
 
-  const nonPressReleases = allPosts.filter((post) => !containsTag(post.fields.tags, PRESS_RELEASE_TAG))
+const BlogHome = ({ blogHome, allPosts }: BlogHomeProps) => {
+  const [localBlogHome, setLocalBlogHome] = useState<BlogHomeEntry>(blogHome)
+  const [localAllPosts, setLocalAllPosts] = useState<BlogPostEntry[]>(allPosts)
+
+  const { featured, metaTags, mostPopular } = localBlogHome.fields
+
+  useEffect(() => {
+    client
+      .getEntry(localBlogHome.sys.id)
+      .then((entry) => {
+        if (isEntryTypeBlogHome(entry)) {
+          setLocalBlogHome(entry)
+        }
+      })
+      .catch(console.error)
+  }, [localBlogHome.sys.id])
+
+  const visiblePosts = localAllPosts.filter((post) => !isPressRelease(post) && !isDraft(post))
 
   return (
     <BlogLayout metaTags={metaTags}>
@@ -37,21 +60,24 @@ const BlogHome = (props: BlogHomeProps) => {
           </Grid>
         </Grid>
 
-        <FeaturedPost {...featuredPost} />
+        {isEntryTypePost(featured) && <FeaturedPost {...featured} />}
 
         <Typography variant="h2" mt={{ xs: '60px', md: '100px' }}>
           Trending
         </Typography>
         <Grid container columnSpacing={2} rowGap="30px" mt="80px">
-          {mostPopular.slice(0, TRENDING_POSTS_COUNT).map((post) => (
-            <Grid key={post.fields.slug} item xs={12} md={4}>
-              <Card {...post} />
-            </Grid>
-          ))}
+          {mostPopular
+            .slice(0, TRENDING_POSTS_COUNT)
+            .filter(isEntryTypePost)
+            .map((post) => (
+              <Grid key={post.fields.slug} item xs={12} md={4}>
+                <Card {...post} />
+              </Grid>
+            ))}
         </Grid>
 
         {/* All posts */}
-        <SearchFilterResults allPosts={nonPressReleases} categories={categories} />
+        <SearchFilterResults allPosts={visiblePosts} categories={categories} />
       </Container>
     </BlogLayout>
   )

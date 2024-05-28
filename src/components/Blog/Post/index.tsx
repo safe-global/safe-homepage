@@ -29,6 +29,7 @@ const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
 
   const { title, excerpt, content, coverImage, authors, tags, category, date, relatedPosts, metaTags } = post.fields
 
+  // Hydrate the post content on rendering
   useEffect(() => {
     client
       .getEntry(blogPost.sys.id)
