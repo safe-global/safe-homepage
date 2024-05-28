@@ -25,8 +25,8 @@ export type BlogHomeProps = {
 const isDraft = (post: BlogPostEntry) => post.fields.isDraft
 
 const BlogHome = ({ blogHome, allPosts }: BlogHomeProps) => {
-  const { blogHome: localBlogHome } = useBlogHome(blogHome.sys.id, blogHome)
-  const { allPosts: localAllPosts } = useAllPosts(allPosts)
+  const { data: localBlogHome } = useBlogHome(blogHome.sys.id, blogHome)
+  const { data: localAllPosts } = useAllPosts(allPosts)
 
   const { featured, metaTags, mostPopular } = localBlogHome.fields
 
@@ -54,8 +54,8 @@ const BlogHome = ({ blogHome, allPosts }: BlogHomeProps) => {
         </Typography>
         <Grid container columnSpacing={2} rowGap="30px" mt="80px">
           {mostPopular
-            .slice(0, TRENDING_POSTS_COUNT)
             .filter(isEntryTypePost)
+            .slice(0, TRENDING_POSTS_COUNT)
             .map((post) => (
               <Grid key={post.fields.slug} item xs={12} md={4}>
                 <Card {...post} />

@@ -24,7 +24,7 @@ import { useBlogPost } from '@/hooks/useBlogPost'
 export type BlogPostEntry = Entry<TypePostSkeleton, undefined, string>
 
 const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
-  const { post } = useBlogPost(blogPost.sys.id, blogPost)
+  const { data: post } = useBlogPost(blogPost.sys.id, blogPost)
 
   const { title, excerpt, content, coverImage, authors, tags, category, date, relatedPosts, metaTags } = post.fields
 

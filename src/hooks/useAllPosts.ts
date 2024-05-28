@@ -11,10 +11,7 @@ const allPostsFetcher = () =>
     })
     .then((entry) => entry.items)
 
-export const useAllPosts = (initialData: BlogPostEntry[]) => {
-  const { data: allPosts, error } = useSWR('/blog', allPostsFetcher, {
-    fallbackData: initialData,
+export const useAllPosts = (fallbackData: BlogPostEntry[]) =>
+  useSWR('/blog', allPostsFetcher, {
+    fallbackData,
   })
-
-  return { allPosts, error }
-}

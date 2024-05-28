@@ -5,14 +5,7 @@ import { type TypeBlogHomeSkeleton } from '@/contentful/types'
 
 const blogHomeFetcher = (id: string) => client.getEntry<TypeBlogHomeSkeleton>(id)
 
-export const useBlogHome = (id: string, initialData: BlogHomeEntry): { blogHome: BlogHomeEntry } => {
-  const { data: blogHome, error } = useSWR(id, blogHomeFetcher, {
-    fallbackData: initialData,
+export const useBlogHome = (id: string, fallbackData: BlogHomeEntry) =>
+  useSWR(id, blogHomeFetcher, {
+    fallbackData,
   })
-
-  if (error) {
-    console.error(error.message)
-  }
-
-  return { blogHome }
-}
