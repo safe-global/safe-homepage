@@ -4,18 +4,18 @@ import Card from '@/components/Blog/Card'
 import FeaturedPost from '@/components/Blog/FeaturedPost'
 import { type BlogPostEntry } from '@/components/Blog/Post'
 import SearchFilterResults from '@/components/Blog/SearchFilterResults'
-import { useEffect, useState } from 'react'
-import client from '@/lib/contentful'
-import type { TypePostSkeleton, TypeBlogHomeSkeleton } from '@/contentful/types'
+import type { TypeBlogHomeSkeleton } from '@/contentful/types'
 import { type Entry } from 'contentful'
-import { isEntryTypeBlogHome, isEntryTypePost } from '@/lib/typeGuards'
+import { isEntryTypePost } from '@/lib/typeGuards'
 import { isPressReleasePost } from '@/lib/containsTag'
+import { useBlogHome } from '@/hooks/useBlogHome'
+import { useAllPosts } from '@/hooks/useAllPosts'
 
 const categories = ['Announcements', 'Ecosystem', 'Community', 'Insights', 'Build']
 
 const TRENDING_POSTS_COUNT = 3
 
-type BlogHomeEntry = Entry<TypeBlogHomeSkeleton, undefined, string>
+export type BlogHomeEntry = Entry<TypeBlogHomeSkeleton, undefined, string>
 
 export type BlogHomeProps = {
   blogHome: BlogHomeEntry
@@ -25,34 +25,10 @@ export type BlogHomeProps = {
 const isDraft = (post: BlogPostEntry) => post.fields.isDraft
 
 const BlogHome = ({ blogHome, allPosts }: BlogHomeProps) => {
-  const [localBlogHome, setLocalBlogHome] = useState<BlogHomeEntry>(blogHome)
-  const [localAllPosts, setLocalAllPosts] = useState<BlogPostEntry[]>(allPosts)
+  const { blogHome: localBlogHome } = useBlogHome(blogHome.sys.id, blogHome)
+  const { allPosts: localAllPosts } = useAllPosts(allPosts)
 
   const { featured, metaTags, mostPopular } = localBlogHome.fields
-
-  useEffect(() => {
-    client
-      .getEntry(localBlogHome.sys.id)
-      .then((entry) => {
-        if (isEntryTypeBlogHome(entry)) {
-          setLocalBlogHome(entry)
-        }
-      })
-      .catch(console.error)
-  }, [localBlogHome.sys.id])
-
-  // Hydrate all posts on rendering
-  useEffect(() => {
-    client
-      .getEntries<TypePostSkeleton>({
-        content_type: 'post',
-        order: ['-fields.date'],
-      })
-      .then((entry) => {
-        setLocalAllPosts(entry.items)
-      })
-      .catch(console.error)
-  }, [])
 
   const visiblePosts = localAllPosts.filter((post) => !isPressReleasePost(post) && !isDraft(post))
 

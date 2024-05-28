@@ -19,27 +19,14 @@ import { type Document as ContentfulDocument } from '@contentful/rich-text-types
 import css from '../styles.module.css'
 import { PRESS_RELEASE_TAG, containsTag } from '@/lib/containsTag'
 import { COMMS_EMAIL } from '@/config/constants'
-import { useEffect, useState } from 'react'
-import client from '@/lib/contentful'
+import { useBlogPost } from '@/hooks/useBlogPost'
 
 export type BlogPostEntry = Entry<TypePostSkeleton, undefined, string>
 
 const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
-  const [post, setPost] = useState<BlogPostEntry>(blogPost)
+  const { post } = useBlogPost(blogPost.sys.id, blogPost)
 
   const { title, excerpt, content, coverImage, authors, tags, category, date, relatedPosts, metaTags } = post.fields
-
-  // Hydrate the post content on rendering
-  useEffect(() => {
-    client
-      .getEntry(blogPost.sys.id)
-      .then((entry) => {
-        if (isEntryTypePost(entry)) {
-          setPost(entry)
-        }
-      })
-      .catch(console.error)
-  }, [blogPost.sys.id])
 
   const authorsList = authors.filter(isEntryTypeAuthor)
   const relatedPostsList = relatedPosts?.filter(isEntryTypePost)
