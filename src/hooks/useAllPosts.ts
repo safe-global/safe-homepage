@@ -1,17 +1,21 @@
-import useSWR from 'swr'
-import { type BlogPostEntry } from '@/components/Blog/Post'
 import { type TypePostSkeleton } from '@/contentful/types'
 import client from '@/lib/contentful'
+import { type EntryCollection } from 'contentful'
+import { useEffect, useState } from 'react'
 
-const allPostsFetcher = () =>
-  client
-    .getEntries<TypePostSkeleton>({
-      content_type: 'post',
-      order: ['-fields.date'],
-    })
-    .then((entry) => entry.items)
+export const useAllPosts = (fallbackData: EntryCollection<TypePostSkeleton, undefined, string>) => {
+  const [localAllPosts, setLocalAllPosts] = useState<EntryCollection<TypePostSkeleton, undefined, string>>(fallbackData)
 
-export const useAllPosts = (fallbackData: BlogPostEntry[]) =>
-  useSWR('/blog', allPostsFetcher, {
-    fallbackData,
-  })
+  useEffect(() => {
+    client
+      .getEntries<TypePostSkeleton>({
+        content_type: 'post',
+        order: ['-fields.date'],
+      })
+      .then((entry) => {
+        setLocalAllPosts(entry)
+      })
+  }, [])
+
+  return { localAllPosts }
+}

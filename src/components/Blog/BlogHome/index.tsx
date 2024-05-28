@@ -4,8 +4,8 @@ import Card from '@/components/Blog/Card'
 import FeaturedPost from '@/components/Blog/FeaturedPost'
 import { type BlogPostEntry } from '@/components/Blog/Post'
 import SearchFilterResults from '@/components/Blog/SearchFilterResults'
-import type { TypeBlogHomeSkeleton } from '@/contentful/types'
-import { type Entry } from 'contentful'
+import type { TypeBlogHomeSkeleton, TypePostSkeleton } from '@/contentful/types'
+import { type EntryCollection, type Entry } from 'contentful'
 import { isEntryTypePost } from '@/lib/typeGuards'
 import { isPressReleasePost } from '@/lib/containsTag'
 import { useBlogHome } from '@/hooks/useBlogHome'
@@ -19,18 +19,18 @@ export type BlogHomeEntry = Entry<TypeBlogHomeSkeleton, undefined, string>
 
 export type BlogHomeProps = {
   blogHome: BlogHomeEntry
-  allPosts: BlogPostEntry[]
+  allPosts: EntryCollection<TypePostSkeleton, undefined, string>
 }
 
 const isDraft = (post: BlogPostEntry) => post.fields.isDraft
 
 const BlogHome = ({ blogHome, allPosts }: BlogHomeProps) => {
   const { data: localBlogHome } = useBlogHome(blogHome.sys.id, blogHome)
-  const { data: localAllPosts } = useAllPosts(allPosts)
+  const { localAllPosts } = useAllPosts(allPosts)
 
   const { featured, metaTags, mostPopular } = localBlogHome.fields
 
-  const visiblePosts = localAllPosts.filter((post) => !isPressReleasePost(post) && !isDraft(post))
+  const visiblePosts = localAllPosts.items.filter((post) => !isPressReleasePost(post) && !isDraft(post))
 
   return (
     <BlogLayout metaTags={metaTags}>

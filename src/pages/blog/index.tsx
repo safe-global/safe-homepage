@@ -37,7 +37,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       blogHome,
-      allPosts: postsEntries.items,
+      allPosts: postsEntries,
     },
   }
 }
