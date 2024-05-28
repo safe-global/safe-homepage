@@ -4,12 +4,12 @@ import Card from '@/components/Blog/Card'
 import FeaturedPost from '@/components/Blog/FeaturedPost'
 import { type BlogPostEntry } from '@/components/Blog/Post'
 import SearchFilterResults from '@/components/Blog/SearchFilterResults'
-import { containsTag, PRESS_RELEASE_TAG } from '@/lib/containsTag'
 import { useEffect, useState } from 'react'
 import client from '@/lib/contentful'
 import { type TypeBlogHomeSkeleton } from '@/contentful/types'
 import { type Entry } from 'contentful'
 import { isEntryTypeBlogHome, isEntryTypePost } from '@/lib/typeGuards'
+import { isPressReleasePost } from '@/lib/containsTag'
 
 const categories = ['Announcements', 'Ecosystem', 'Community', 'Insights', 'Build']
 
@@ -22,13 +22,10 @@ export type BlogHomeProps = {
   allPosts: BlogPostEntry[]
 }
 
-// TODO: move to utils
-const isPressRelease = (post: BlogPostEntry) => containsTag(post.fields.tags, PRESS_RELEASE_TAG)
 const isDraft = (post: BlogPostEntry) => post.fields.isDraft
 
 const BlogHome = ({ blogHome, allPosts }: BlogHomeProps) => {
   const [localBlogHome, setLocalBlogHome] = useState<BlogHomeEntry>(blogHome)
-  const [localAllPosts, setLocalAllPosts] = useState<BlogPostEntry[]>(allPosts)
 
   const { featured, metaTags, mostPopular } = localBlogHome.fields
 
@@ -43,7 +40,7 @@ const BlogHome = ({ blogHome, allPosts }: BlogHomeProps) => {
       .catch(console.error)
   }, [localBlogHome.sys.id])
 
-  const visiblePosts = localAllPosts.filter((post) => !isPressRelease(post) && !isDraft(post))
+  const visiblePosts = allPosts.filter((post) => !isPressReleasePost(post) && !isDraft(post))
 
   return (
     <BlogLayout metaTags={metaTags}>
