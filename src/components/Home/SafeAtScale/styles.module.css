@@ -49,10 +49,6 @@
   margin-top: 24px;
 }
 
-.title br {
-  display: none;
-}
-
 .metricsWrapper {
   display: flex;
   position: relative;
@@ -179,6 +175,7 @@
 
   .title {
     margin: 24px auto;
+    text-align: center;
   }
 
   .value {

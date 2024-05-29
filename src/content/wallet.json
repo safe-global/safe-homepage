@@ -117,7 +117,7 @@
     "buttons": [
       {
         "text": "Get started",
-        "href": "https://app.safe.global/share/safe-app?appUrl=https%3A%2F%2Fapps.gnosis-safe.io%2Ftx-builder&chain=eth",
+        "href": "https://app.safe.global/share/safe-app?appUrl=https%3A%2F%2Fapps-portal.safe.global%2Ftx-builder&chain=eth",
         "variant": "link"
       }
     ],
