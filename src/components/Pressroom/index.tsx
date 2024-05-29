@@ -14,7 +14,7 @@ import PressReleases from '@/components/Pressroom/PressReleases'
 import Marquee from '@/components/common/Marquee'
 import Timeline from '@/components/Pressroom/Timeline'
 import { type TypePressRoomSkeleton } from '@/contentful/types'
-import { containsTag, PRESS_RELEASE_TAG } from '@/lib/containsTag'
+import { isPressReleasePost } from '@/lib/containsTag'
 import {
   isAsset,
   isEntryType,
@@ -43,7 +43,7 @@ const PressRoom = ({ pressRoom, allPosts, totalAssets }: PressRoomProps) => {
   const newsList = news.filter(isEntryTypeExternalURL)
   const podcastsList = podcasts.filter(isEntryTypeExternalURL)
   const videosList = videos.filter(isEntryTypeExternalURL)
-  const pressPosts = allPosts.filter((post) => containsTag(post.fields.tags, PRESS_RELEASE_TAG))
+  const pressPosts = allPosts.filter(isPressReleasePost)
 
   return (
     <>

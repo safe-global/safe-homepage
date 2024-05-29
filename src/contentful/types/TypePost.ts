@@ -6,6 +6,7 @@ import type { TypeTagSkeleton } from './TypeTag'
 export interface TypePostFields {
   metaTags: EntryFieldTypes.EntryLink<TypeMetaTagsSkeleton>
   title: EntryFieldTypes.Symbol
+  isDraft: EntryFieldTypes.Boolean
   slug: EntryFieldTypes.Symbol
   authors: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeAuthorSkeleton>>
   date: EntryFieldTypes.Date

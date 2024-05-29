@@ -36,10 +36,8 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      metaTags: blogHome.fields.metaTags,
-      featuredPost: blogHome.fields.featured,
-      mostPopular: blogHome.fields.mostPopular,
-      allPosts: postsEntries.items,
+      blogHome,
+      allPosts: postsEntries,
     },
   }
 }

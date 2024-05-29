@@ -1,6 +1,7 @@
 import type {
   TypeAuthorSkeleton,
   TypeBaseBlockSkeleton,
+  TypeBlogHomeSkeleton,
   TypeButtonSkeleton,
   TypeCardGridItemSkeleton,
   TypeExternalUrlSkeleton,
@@ -50,6 +51,10 @@ export const isEntryTypeSimpleBaseBlock = (obj: any): obj is Entry<TypeSimpleBas
 
 export const isEntryTypeBaseBlock = (obj: any): obj is Entry<TypeBaseBlockSkeleton, undefined, string> => {
   return getContentTypeSysId(obj) === 'baseBlock'
+}
+
+export const isEntryTypeBlogHome = (obj: any): obj is Entry<TypeBlogHomeSkeleton, undefined, string> => {
+  return getContentTypeSysId(obj) === 'blogHome'
 }
 
 export const isEntryType = (obj: any): obj is Entry => {
