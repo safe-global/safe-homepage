@@ -16,7 +16,6 @@ export const useAllPosts = (fallbackData: EntryCollection<TypePostSkeleton, unde
       .then((entry) => {
         setLocalAllPosts(entry)
       })
-      .catch(console.error)
   }, [])
 
   return { localAllPosts }
