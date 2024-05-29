@@ -1,4 +1,3 @@
-import type { BlogPostEntry } from '@/components/Blog/Post'
 import SearchBar from '@/components/Blog/SearchBar'
 import usePostsSearch from '@/components/Blog/usePostsSearch'
 import { Box, Grid, Typography } from '@mui/material'
@@ -11,23 +10,42 @@ import { scrollToElement } from '@/lib/scrollSmooth'
 import ShowMoreButton from '@/components/common/ShowMoreButton'
 import CategoryFilter from '@/components/common/CategoryFilter'
 import { getPage } from '@/lib/getPage'
+import type { TypePostSkeleton } from '@/contentful/types'
+import type { EntryCollection } from 'contentful'
+import { useAllPosts } from '@/hooks/useAllPosts'
+import { isPressReleasePost } from '@/lib/containsTag'
+import { isDraft } from '@/lib/contentful/isDraft'
+import { isSelectedCategory } from '@/lib/contentful/isSelectedCategory'
 
 const PAGE_LENGTH = 6
 
-const SearchFilterResults = ({ allPosts, categories }: { allPosts: BlogPostEntry[]; categories: string[] }) => {
+const SearchFilterResults = ({
+  allPosts,
+  categories,
+}: {
+  allPosts: EntryCollection<TypePostSkeleton, undefined, string>
+  categories: string[]
+}) => {
   const [searchQuery, setSearchQuery] = useState('')
   const router = useRouter()
   const selectedCategory = router.query.category
   const page = getPage(router.query)
 
+  const { localAllPosts } = useAllPosts(allPosts)
+
   const filteredPosts = useMemo(() => {
-    return !selectedCategory ? allPosts : allPosts.filter((post) => post.fields.category === selectedCategory)
-  }, [allPosts, selectedCategory])
+    const visiblePosts = localAllPosts.items.filter((post) => !isPressReleasePost(post) && !isDraft(post))
+
+    return typeof selectedCategory === 'string'
+      ? visiblePosts.filter((post) => isSelectedCategory(post, selectedCategory))
+      : visiblePosts
+  }, [localAllPosts, selectedCategory])
 
   const searchResults = usePostsSearch(filteredPosts, searchQuery)
   const visibleResults = searchResults.slice(0, PAGE_LENGTH * page)
   const shouldShowMoreButton = visibleResults.length < searchResults.length
 
+  // Scroll to results when navigating to the page with a category query param
   useEffect(() => {
     if (router.query.category) scrollToElement('#results', 250)
   })
