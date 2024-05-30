@@ -23,6 +23,7 @@ import {
 } from '@/lib/typeGuards'
 import { Container } from '@mui/material'
 import type { EntryCollection, Entry } from 'contentful'
+import { usePressRoom } from '@/hooks/usePressRoom'
 
 export type PressRoomEntry = Entry<TypePressRoomSkeleton, undefined, string>
 
@@ -33,7 +34,9 @@ export type PressRoomProps = {
 }
 
 const PressRoom = ({ pressRoom, allPosts, totalAssets }: PressRoomProps) => {
-  const { metaTags, featured, numbers, investors, timeline, news, podcasts, videos } = pressRoom.fields
+  const { data: localPressRoom } = usePressRoom(pressRoom.sys.id, pressRoom)
+
+  const { metaTags, featured, numbers, investors, timeline, news, podcasts, videos } = localPressRoom.fields
 
   const numbersList = numbers.filter(isEntryTypeBaseBlock)
   const investorsList = investors.filter(isAsset)
