@@ -1,26 +1,28 @@
-import BlogLayout, { type MetaTagsEntry } from '@/components/Blog/Layout'
+import BlogLayout from '@/components/Blog/Layout'
 import { Container, Grid, Typography } from '@mui/material'
 import Card from '@/components/Blog/Card'
 import FeaturedPost from '@/components/Blog/FeaturedPost'
-import { type BlogPostEntry } from '@/components/Blog/Post'
 import SearchFilterResults from '@/components/Blog/SearchFilterResults'
-import { containsTag, PRESS_RELEASE_TAG } from '@/lib/containsTag'
+import type { TypeBlogHomeSkeleton, TypePostSkeleton } from '@/contentful/types'
+import { type EntryCollection, type Entry } from 'contentful'
+import { isEntryTypePost } from '@/lib/typeGuards'
+import { useBlogHome } from '@/hooks/useBlogHome'
 
 const categories = ['Announcements', 'Ecosystem', 'Community', 'Insights', 'Build']
 
 const TRENDING_POSTS_COUNT = 3
 
+export type BlogHomeEntry = Entry<TypeBlogHomeSkeleton, undefined, string>
+
 export type BlogHomeProps = {
-  metaTags: MetaTagsEntry
-  featuredPost: BlogPostEntry
-  mostPopular: BlogPostEntry[]
-  allPosts: BlogPostEntry[]
+  blogHome: BlogHomeEntry
+  allPosts: EntryCollection<TypePostSkeleton, undefined, string>
 }
 
-const BlogHome = (props: BlogHomeProps) => {
-  const { featuredPost, mostPopular, allPosts, metaTags } = props
+const BlogHome = ({ blogHome, allPosts }: BlogHomeProps) => {
+  const { data: localBlogHome } = useBlogHome(blogHome.sys.id, blogHome)
 
-  const nonPressReleases = allPosts.filter((post) => !containsTag(post.fields.tags, PRESS_RELEASE_TAG))
+  const { featured, metaTags, mostPopular } = localBlogHome.fields
 
   return (
     <BlogLayout metaTags={metaTags}>
@@ -37,21 +39,24 @@ const BlogHome = (props: BlogHomeProps) => {
           </Grid>
         </Grid>
 
-        <FeaturedPost {...featuredPost} />
+        {isEntryTypePost(featured) && <FeaturedPost {...featured} />}
 
         <Typography variant="h2" mt={{ xs: '60px', md: '100px' }}>
           Trending
         </Typography>
         <Grid container columnSpacing={2} rowGap="30px" mt="80px">
-          {mostPopular.slice(0, TRENDING_POSTS_COUNT).map((post) => (
-            <Grid key={post.fields.slug} item xs={12} md={4}>
-              <Card {...post} />
-            </Grid>
-          ))}
+          {mostPopular
+            .filter(isEntryTypePost)
+            .slice(0, TRENDING_POSTS_COUNT)
+            .map((post) => (
+              <Grid key={post.fields.slug} item xs={12} md={4}>
+                <Card {...post} />
+              </Grid>
+            ))}
         </Grid>
 
         {/* All posts */}
-        <SearchFilterResults allPosts={nonPressReleases} categories={categories} />
+        <SearchFilterResults allPosts={allPosts} categories={categories} />
       </Container>
     </BlogLayout>
   )

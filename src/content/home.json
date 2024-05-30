@@ -27,7 +27,7 @@
   {
     "component": "Home/SafeAtScale",
     "caption": "Entrusted to keep your assets safe",
-    "title": "<i>Safe</i> Smart Accounts are battle tested <br> and used more than any other",
+    "title": "<i>Safe</i> Smart Accounts are battle-tested<br/>and used more than any other",
     "items": [
       {
         "title": "46M",
@@ -66,16 +66,17 @@
     "component": "Home/TitleSlidingIcons"
   },
   {
-    "title": "Available on 14+ networks",
+    "title": "Available on 15+ networks",
     "text": "including testnets",
     "reverse": true,
     "icons": [
-      { "name": "Polygon zkEVM", "new": true, "src": "/images/Home/NetworkIcons/polygon-zkevm.svg" },
+      { "name": "Scroll", "new": true, "src": "/images/Home/NetworkIcons/scroll.svg" },
+      { "name": "Polygon zkEVM", "src": "/images/Home/NetworkIcons/polygon-zkevm.svg" },
       { "name": "Celo", "src": "/images/Home/NetworkIcons/celo.svg" },
       { "name": "Optimism", "src": "/images/Home/NetworkIcons/optimism.svg" },
       { "name": "Base", "src": "/images/Home/NetworkIcons/base.png" },
       { "name": "Arbitrum", "src": "/images/Home/NetworkIcons/arbitrum.svg" },
-      { "name": "ZkSync Era Mainnet", "new": true, "src": "/images/Home/NetworkIcons/zksync-era-mainnet.svg" },
+      { "name": "ZkSync Era Mainnet", "src": "/images/Home/NetworkIcons/zksync-era-mainnet.svg" },
       { "name": "Avalanche", "src": "/images/Home/NetworkIcons/avalanche.svg" },
       { "name": "Gnosis Chain", "src": "/images/Home/NetworkIcons/gnosis-chain.svg" }
     ],

@@ -47,7 +47,7 @@ const Header = () => {
             const onLeave = () => setSubMenuOpen(null)
 
             return (
-              <li key={href} onMouseEnter={onEnter} onFocus={onEnter} onMouseLeave={onLeave} onBlur={onLeave}>
+              <li key={category} onMouseEnter={onEnter} onFocus={onEnter} onMouseLeave={onLeave} onBlur={onLeave}>
                 {href ? (
                   <NextLink href={href} onClick={closeMobileNavigation}>
                     <span className={css.navLink} dangerouslySetInnerHTML={{ __html: category }} />
@@ -74,7 +74,7 @@ const Header = () => {
               </li>
             )
           })}
-          <li className={css.hideInLaptop}>
+          <li key={WALLET_LINK} className={css.hideInLaptop}>
             <SafeLink href={WALLET_LINK}>
               <Button className={css.button} variant="contained">
                 Launch Wallet

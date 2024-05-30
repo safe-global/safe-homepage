@@ -14,9 +14,7 @@ export const AppRoutes = {
   disclaimer: '/disclaimer',
   core: '/core',
   cookie: '/cookie',
-  cla: {
-    index: '/cla',
-  },
+  cla: '/cla',
   careers: '/careers',
   blog: {
     index: '/blog',

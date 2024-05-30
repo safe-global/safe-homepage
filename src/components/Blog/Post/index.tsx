@@ -19,11 +19,14 @@ import { type Document as ContentfulDocument } from '@contentful/rich-text-types
 import css from '../styles.module.css'
 import { PRESS_RELEASE_TAG, containsTag } from '@/lib/containsTag'
 import { COMMS_EMAIL } from '@/config/constants'
+import { useBlogPost } from '@/hooks/useBlogPost'
 
 export type BlogPostEntry = Entry<TypePostSkeleton, undefined, string>
 
 const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
-  const { title, excerpt, content, coverImage, authors, tags, category, date, relatedPosts, metaTags } = blogPost.fields
+  const { data: post } = useBlogPost(blogPost.sys.id, blogPost)
+
+  const { title, excerpt, content, coverImage, authors, tags, category, date, relatedPosts, metaTags } = post.fields
 
   const authorsList = authors.filter(isEntryTypeAuthor)
   const relatedPostsList = relatedPosts?.filter(isEntryTypePost)

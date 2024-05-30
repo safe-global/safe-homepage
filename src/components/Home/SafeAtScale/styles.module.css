@@ -49,10 +49,6 @@
   margin-top: 24px;
 }
 
-.title br {
-  display: none;
-}
-
 .metricsWrapper {
   display: flex;
   position: relative;
