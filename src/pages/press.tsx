@@ -8,7 +8,7 @@ const PressroomPage = (props: PressRoomProps) => {
 }
 
 export const getStaticProps = async () => {
-  const postsEntries = await client.getEntries<TypePostSkeleton>({
+  const allPosts = await client.getEntries<TypePostSkeleton>({
     content_type: 'post',
     // order by date, most recent first
     order: ['-fields.date'],
@@ -23,18 +23,18 @@ export const getStaticProps = async () => {
 
   const pressRoom = pressRoomEntries.items[0]
 
-  if (!pressRoom || !postsEntries) {
+  if (!pressRoom || !allPosts) {
     return {
       notFound: true,
     }
   }
 
-  postsEntries.items.forEach((item: any) => delete item.fields.relatedPosts)
+  allPosts.items.forEach((item: any) => delete item.fields.relatedPosts)
 
   return {
     props: {
       pressRoom,
-      allPosts: postsEntries.items,
+      allPosts,
       totalAssets,
     },
   }
