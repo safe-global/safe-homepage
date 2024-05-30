@@ -1,5 +1,4 @@
 import FeaturedPost from '@/components/Blog/FeaturedPost'
-import { type BlogPostEntry } from '@/components/Blog/Post'
 import MetaTags from '@/components/common/MetaTagsContentful'
 import AboutUs from '@/components/Pressroom/AboutUs'
 import ContentsNavigation from '@/components/Pressroom/ContentsNavigation'
@@ -13,8 +12,7 @@ import Podcasts from '@/components/Pressroom/Podcasts'
 import PressReleases from '@/components/Pressroom/PressReleases'
 import Marquee from '@/components/common/Marquee'
 import Timeline from '@/components/Pressroom/Timeline'
-import { type TypePressRoomSkeleton } from '@/contentful/types'
-import { isPressReleasePost } from '@/lib/containsTag'
+import type { TypePostSkeleton, TypePressRoomSkeleton } from '@/contentful/types'
 import {
   isAsset,
   isEntryType,
@@ -24,13 +22,13 @@ import {
   isEntryTypeSimpleBaseBlock,
 } from '@/lib/typeGuards'
 import { Container } from '@mui/material'
-import { type Entry } from 'contentful'
+import type { EntryCollection, Entry } from 'contentful'
 
 export type PressRoomEntry = Entry<TypePressRoomSkeleton, undefined, string>
 
 export type PressRoomProps = {
   pressRoom: PressRoomEntry
-  allPosts: BlogPostEntry[]
+  allPosts: EntryCollection<TypePostSkeleton, undefined, string>
   totalAssets: number
 }
 
@@ -43,7 +41,6 @@ const PressRoom = ({ pressRoom, allPosts, totalAssets }: PressRoomProps) => {
   const newsList = news.filter(isEntryTypeExternalURL)
   const podcastsList = podcasts.filter(isEntryTypeExternalURL)
   const videosList = videos.filter(isEntryTypeExternalURL)
-  const pressPosts = allPosts.filter(isPressReleasePost)
 
   return (
     <>
@@ -57,7 +54,7 @@ const PressRoom = ({ pressRoom, allPosts, totalAssets }: PressRoomProps) => {
         <Founders />
         <Investors investors={investorsList} />
         <Timeline items={timelineList} />
-        <PressReleases allPosts={pressPosts} />
+        <PressReleases allPosts={allPosts} />
         <News news={newsList} />
         <Podcasts podcasts={podcastsList} />
         <FeaturedVideos videos={videosList} />

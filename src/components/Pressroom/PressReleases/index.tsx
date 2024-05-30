@@ -1,4 +1,3 @@
-import { type BlogPostEntry } from '@/components/Blog/Post'
 import { Box, Divider, Grid, Typography } from '@mui/material'
 import React, { useMemo } from 'react'
 import Card from '@/components/Blog/Card'
@@ -7,24 +6,31 @@ import ShowMoreButton from '@/components/common/ShowMoreButton'
 import SearchIcon from '@/public/images/search.svg'
 import CategoryFilter from '@/components/common/CategoryFilter'
 import { PressroomIds } from '@/components/Pressroom/ContentsNavigation'
-import { containsTag } from '@/lib/containsTag'
+import { containsTag, isPressReleasePost } from '@/lib/containsTag'
 import { getPage } from '@/lib/getPage'
+import { useAllPosts } from '@/hooks/useAllPosts'
+import type { EntryCollection } from 'contentful'
+import type { TypePostSkeleton } from '@/contentful/types'
 
 const categories = ['Safe{Core}', 'Safe{Wallet}', 'Safe{DAO}', 'Ecosystem', 'Institutional', 'Internal']
 
 const PAGE_LENGTH = 4
 
-const PressReleases = ({ allPosts }: { allPosts: BlogPostEntry[] }) => {
+const PressReleases = ({ allPosts }: { allPosts: EntryCollection<TypePostSkeleton, undefined, string> }) => {
   const router = useRouter()
   const selectedTag = router.query.category as string
   const page = getPage(router.query)
 
+  const { localAllPosts } = useAllPosts(allPosts)
+
   const filteredPosts = useMemo(() => {
-    return !selectedTag ? allPosts : allPosts.filter((post) => containsTag(post.fields.tags, selectedTag))
-  }, [allPosts, selectedTag])
+    const pressPosts = localAllPosts.items.filter(isPressReleasePost)
+
+    return !selectedTag ? pressPosts : pressPosts.filter((post) => containsTag(post.fields.tags, selectedTag))
+  }, [localAllPosts, selectedTag])
 
   const visibleResults = filteredPosts.slice(0, PAGE_LENGTH * page)
-  const shouldShowMoreButton = visibleResults.length < allPosts.length
+  const shouldShowMoreButton = visibleResults.length < filteredPosts.length
 
   return (
     <Box id={PressroomIds.PRESS_RELEASES} mt={{ xs: '80px', md: '250px' }}>
