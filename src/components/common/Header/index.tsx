@@ -50,7 +50,7 @@ const Header = () => {
               <li key={category} onMouseEnter={onEnter} onFocus={onEnter} onMouseLeave={onLeave} onBlur={onLeave}>
                 {href ? (
                   <NextLink href={href} onClick={closeMobileNavigation}>
-                    <span className={css.navLink} dangerouslySetInnerHTML={{ __html: category }} />
+                    <div className={css.navLink} dangerouslySetInnerHTML={{ __html: category }} />
                   </NextLink>
                 ) : isSmallScreen ? (
                   // Mobile button
