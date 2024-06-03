@@ -7,6 +7,8 @@ import { PRESS_LINK } from '@/config/constants'
 type NavItemType = {
   label: string
   href: string
+  target?: HTMLAnchorElement['target']
+  rel?: HTMLAnchorElement['rel']
 }
 
 export const enum PressroomIds {
@@ -20,30 +22,22 @@ const sections: NavItemType[] = [
   { label: 'Safe in the news', href: `#${PressroomIds.SAFE_IN_THE_NEWS}` },
   { label: 'Press releases', href: `#${PressroomIds.PRESS_RELEASES}` },
   { label: 'Blog', href: AppRoutes.blog.index },
-  { label: 'Media kit', href: PRESS_LINK },
+  { label: 'Media kit', href: PRESS_LINK, target: '_blank', rel: 'noopener noreferrer' },
 ]
 
 const ContentsNavigation = () => (
   <Box mt="140px">
     <Typography variant="h3">What are you looking for?</Typography>
     <Grid container columnSpacing="32px" rowGap="36px" mt="36px">
-      {sections.map((item) => {
-        const isAnchor = item.href.startsWith('#')
-
-        return (
-          <Grid item xs={12} md={4} key={item.href}>
-            <NextLink
-              href={item.href}
-              target={!isAnchor ? '_blank' : undefined}
-              rel={!isAnchor ? 'noopener noreferrer' : undefined}
-            >
-              <ButtonBase className={css.navButton}>
-                <Typography>{item.label}</Typography>
-              </ButtonBase>
-            </NextLink>
-          </Grid>
-        )
-      })}
+      {sections.map((item) => (
+        <Grid item xs={12} md={4} key={item.href}>
+          <NextLink {...item}>
+            <ButtonBase className={css.navButton}>
+              <Typography>{item.label}</Typography>
+            </ButtonBase>
+          </NextLink>
+        </Grid>
+      ))}
     </Grid>
   </Box>
 )

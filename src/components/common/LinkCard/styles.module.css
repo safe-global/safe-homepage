@@ -35,7 +35,6 @@
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   flex-shrink: 0;
-  margin-top: auto;
 }
 
 .card:hover .arrow path {
