@@ -23,7 +23,7 @@ import {
 } from '@/lib/typeGuards'
 import { Container } from '@mui/material'
 import type { EntryCollection, Entry } from 'contentful'
-import { usePressRoom } from '@/hooks/usePressRoom'
+import { useLandingPageContent } from '@/hooks/useLandingPageContent'
 
 export type PressRoomEntry = Entry<TypePressRoomSkeleton, undefined, string>
 
@@ -34,7 +34,10 @@ export type PressRoomProps = {
 }
 
 const PressRoom = ({ pressRoom, allPosts, totalAssets }: PressRoomProps) => {
-  const { data: localPressRoom } = usePressRoom(pressRoom.sys.id, pressRoom)
+  const { data: localPressRoom } = useLandingPageContent<TypePressRoomSkeleton, PressRoomEntry>(
+    pressRoom.sys.id,
+    pressRoom,
+  )
 
   const { metaTags, featured, numbers, investors, timeline, news, podcasts, videos } = localPressRoom.fields
 

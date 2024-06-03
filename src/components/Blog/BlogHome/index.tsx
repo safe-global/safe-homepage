@@ -6,7 +6,7 @@ import SearchFilterResults from '@/components/Blog/SearchFilterResults'
 import type { TypeBlogHomeSkeleton, TypePostSkeleton } from '@/contentful/types'
 import { type EntryCollection, type Entry } from 'contentful'
 import { isEntryTypePost } from '@/lib/typeGuards'
-import { useBlogHome } from '@/hooks/useBlogHome'
+import { useLandingPageContent } from '@/hooks/useLandingPageContent'
 
 const categories = ['Announcements', 'Ecosystem', 'Community', 'Insights', 'Build']
 
@@ -20,7 +20,7 @@ export type BlogHomeProps = {
 }
 
 const BlogHome = ({ blogHome, allPosts }: BlogHomeProps) => {
-  const { data: localBlogHome } = useBlogHome(blogHome.sys.id, blogHome)
+  const { data: localBlogHome } = useLandingPageContent<TypeBlogHomeSkeleton, BlogHomeEntry>(blogHome.sys.id, blogHome)
 
   const { featured, metaTags, mostPopular } = localBlogHome.fields
 
