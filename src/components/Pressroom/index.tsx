@@ -12,7 +12,7 @@ import Podcasts from '@/components/Pressroom/Podcasts'
 import PressReleases from '@/components/Pressroom/PressReleases'
 import Marquee from '@/components/common/Marquee'
 import Timeline from '@/components/Pressroom/Timeline'
-import type { TypePostSkeleton, TypePressRoomSkeleton } from '@/contentful/types'
+import type { TypePressRoomSkeleton } from '@/contentful/types'
 import {
   isAsset,
   isEntryType,
@@ -22,14 +22,15 @@ import {
   isEntryTypeSimpleBaseBlock,
 } from '@/lib/typeGuards'
 import { Container } from '@mui/material'
-import type { EntryCollection, Entry } from 'contentful'
+import type { Entry } from 'contentful'
 import { useLandingPageContent } from '@/hooks/useLandingPageContent'
+import type { PostEntryCollection } from '@/config/types'
 
 export type PressRoomEntry = Entry<TypePressRoomSkeleton, undefined, string>
 
 export type PressRoomProps = {
   pressRoom: PressRoomEntry
-  allPosts: EntryCollection<TypePostSkeleton, undefined, string>
+  allPosts: PostEntryCollection
   totalAssets: number
 }
 

@@ -9,14 +9,13 @@ import { PressroomIds } from '@/components/Pressroom/ContentsNavigation'
 import { containsTag, isPressReleasePost } from '@/lib/containsTag'
 import { getPage } from '@/lib/getPage'
 import { useAllPosts } from '@/hooks/useAllPosts'
-import type { EntryCollection } from 'contentful'
-import type { TypePostSkeleton } from '@/contentful/types'
+import type { PostEntryCollection } from '@/config/types'
 
 const categories = ['Safe{Core}', 'Safe{Wallet}', 'Safe{DAO}', 'Ecosystem', 'Institutional', 'Internal']
 
 const PAGE_LENGTH = 4
 
-const PressReleases = ({ allPosts }: { allPosts: EntryCollection<TypePostSkeleton, undefined, string> }) => {
+const PressReleases = ({ allPosts }: { allPosts: PostEntryCollection }) => {
   const router = useRouter()
   const selectedTag = router.query.category as string
   const page = getPage(router.query)
