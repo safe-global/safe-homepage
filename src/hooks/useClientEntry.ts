@@ -1,11 +1,12 @@
 import useSWR from 'swr'
 import client from '@/lib/contentful'
-import type { Entry, EntrySkeletonType } from 'contentful'
+import type { Entry, EntrySkeletonType, FixedQueryOptions } from 'contentful'
 
-const fetcher = <T extends EntrySkeletonType>(id: string) => client.getEntry<T>(id, { include: 3 })
+const fetcher = <T extends EntrySkeletonType>(id: string, depth: FixedQueryOptions['include'] = 3) =>
+  client.getEntry<T>(id, { include: depth })
 
 /**
- * useLandingPageContent is a custom hook for fetching Contentful entries.
+ * useClientEntry is a custom hook for fetching Contentful entries.
  *
  * @template T - The type of the Contentful entry. It must extend EntrySkeletonType.
  * @template U - The type of the fallback data. It must be an instance of Entry with T as the first type parameter.
@@ -15,10 +16,11 @@ const fetcher = <T extends EntrySkeletonType>(id: string) => client.getEntry<T>(
  *
  * @returns {useSWR.Response} - The response from useSWR, which includes the data and error (if any).
  */
-export const useLandingPageContent = <T extends EntrySkeletonType, U extends Entry<T, undefined, string>>(
+export const useClientEntry = <T extends EntrySkeletonType, U extends Entry<T, undefined, string>>(
   id: string,
   fallbackData: U,
+  depth?: FixedQueryOptions['include'],
 ) =>
-  useSWR(id, () => fetcher<T>(id), {
+  useSWR(id, () => fetcher<T>(id, depth), {
     fallbackData,
   })

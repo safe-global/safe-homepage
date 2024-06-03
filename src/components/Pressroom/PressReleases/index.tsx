@@ -26,7 +26,7 @@ const PressReleases = ({ allPosts }: { allPosts: PostEntryCollection }) => {
     const pressPosts = localAllPosts.items.filter(isPressReleasePost)
 
     return !selectedTag ? pressPosts : pressPosts.filter((post) => containsTag(post.fields.tags, selectedTag))
-  }, [localAllPosts, selectedTag])
+  }, [localAllPosts.items, selectedTag])
 
   const visibleResults = filteredPosts.slice(0, PAGE_LENGTH * page)
   const shouldShowMoreButton = visibleResults.length < filteredPosts.length
