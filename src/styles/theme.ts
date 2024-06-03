@@ -62,6 +62,7 @@ export const theme = createTheme({
     h1: {
       fontSize: '50px',
       lineHeight: '56px',
+      fontWeight: 400,
 
       '@media (min-width:600px)': {
         fontSize: '90px',
@@ -71,6 +72,7 @@ export const theme = createTheme({
     h2: {
       fontSize: '44px',
       lineHeight: '56px',
+      fontWeight: 400,
 
       '@media (min-width:600px)': {
         fontSize: '60px',
@@ -80,6 +82,7 @@ export const theme = createTheme({
     h3: {
       fontSize: '40px',
       lineHeight: '44px',
+      fontWeight: 400,
 
       '@media (min-width:600px)': {
         fontSize: '48px',
@@ -89,10 +92,12 @@ export const theme = createTheme({
     h4: {
       fontSize: '32px',
       lineHeight: '36px',
+      fontWeight: 400,
     },
     h5: {
       fontSize: '24px',
       lineHeight: '32px',
+      fontWeight: 400,
     },
     body1: {
       fontSize: '20px',
