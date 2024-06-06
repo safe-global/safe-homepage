@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Accordion, AccordionDetails, AccordionSummary, Button, ButtonBase, useMediaQuery } from '@mui/material'
+import { Accordion, AccordionDetails, AccordionSummary, Button, ButtonBase } from '@mui/material'
 import NextLink from 'next/link'
 import clsx from 'clsx'
 
@@ -12,11 +12,12 @@ import Logo from '@/public/images/logo.svg'
 import AngleDownIcon from '@/public/images/angle-down.svg'
 import css from './styles.module.css'
 import NavigationButton from '@/components/common/Header/NavigationButton'
+import { useIsSmallScreen } from '@/hooks/useIsSmallScreen'
 
 const Header = () => {
   const [isBurgerOpen, setIsBurgerOpen] = useState<boolean>(false)
   const [subMenuOpen, setSubMenuOpen] = useState<null | NavCategories>(null)
-  const isSmallScreen = useMediaQuery('(max-width:600px)')
+  const isSmallScreen = useIsSmallScreen()
 
   const toggleMobileNavigation = () => {
     setIsBurgerOpen((prev) => !prev)
