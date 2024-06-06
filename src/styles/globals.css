@@ -63,7 +63,7 @@ svg {
   display: inline-block;
 }
 
-@media (max-width: 599px) {
+@media (max-width: 899px) {
   .navOpen {
     overflow-y: hidden;
   }

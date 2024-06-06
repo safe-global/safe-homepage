@@ -74,7 +74,7 @@
     border-bottom: 1px solid var(--mui-palette-border-light);
   }
 
-  /* TODO: fix this */
+  /* Do not apply border-bottom in the last 2 elements of the mobile menu */
   .navList > li:not(:nth-last-of-type(2)) {
     border-bottom: 1px solid var(--mui-palette-border-light);
   }
