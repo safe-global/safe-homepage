@@ -75,24 +75,24 @@ const Header = () => {
             )
           })}
           <li key={WALLET_LINK} className={css.hideInLaptop}>
-            <SafeLink href={WALLET_LINK}>
-              <Button className={css.button} variant="contained">
-                Launch Wallet
-              </Button>
-            </SafeLink>
+            <WalletButton />
           </li>
         </ul>
       </nav>
 
       <div className={css.hideInMobile}>
-        <SafeLink href={WALLET_LINK}>
-          <Button className={css.button} variant="contained">
-            Launch Wallet
-          </Button>
-        </SafeLink>
+        <WalletButton />
       </div>
     </div>
   )
 }
+
+const WalletButton = () => (
+  <SafeLink href={WALLET_LINK}>
+    <Button className={css.button} variant="contained">
+      Launch Wallet
+    </Button>
+  </SafeLink>
+)
 
 export default Header

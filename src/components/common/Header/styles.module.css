@@ -24,9 +24,7 @@
   line-height: 26px;
   padding: 15px 0;
   width: 100%;
-  margin-top: 24px;
-  display: flex;
-  align-items: baseline;
+  margin-top: 16px;
 }
 
 /* Burger navigation button */
