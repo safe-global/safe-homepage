@@ -3,10 +3,11 @@ import { Container, Grid, Typography } from '@mui/material'
 import Card from '@/components/Blog/Card'
 import FeaturedPost from '@/components/Blog/FeaturedPost'
 import SearchFilterResults from '@/components/Blog/SearchFilterResults'
-import type { TypeBlogHomeSkeleton, TypePostSkeleton } from '@/contentful/types'
-import { type EntryCollection, type Entry } from 'contentful'
+import type { TypeBlogHomeSkeleton } from '@/contentful/types'
+import type { Entry } from 'contentful'
 import { isEntryTypePost } from '@/lib/typeGuards'
-import { useBlogHome } from '@/hooks/useBlogHome'
+import { useClientEntry } from '@/hooks/useClientEntry'
+import type { PostEntryCollection } from '@/config/types'
 
 const categories = ['Announcements', 'Ecosystem', 'Community', 'Insights', 'Build']
 
@@ -16,11 +17,11 @@ export type BlogHomeEntry = Entry<TypeBlogHomeSkeleton, undefined, string>
 
 export type BlogHomeProps = {
   blogHome: BlogHomeEntry
-  allPosts: EntryCollection<TypePostSkeleton, undefined, string>
+  allPosts: PostEntryCollection
 }
 
 const BlogHome = ({ blogHome, allPosts }: BlogHomeProps) => {
-  const { data: localBlogHome } = useBlogHome(blogHome.sys.id, blogHome)
+  const { data: localBlogHome } = useClientEntry<TypeBlogHomeSkeleton, BlogHomeEntry>(blogHome.sys.id, blogHome)
 
   const { featured, metaTags, mostPopular } = localBlogHome.fields
 
