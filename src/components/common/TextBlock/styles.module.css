@@ -18,3 +18,25 @@
 .block tr td {
   overflow-wrap: break-word;
 }
+
+.block ul {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.block ul li + li {
+  margin-top: 24px;
+}
+
+/* lists inside the collapsible elements */
+.block details {
+  font-style: italic;
+}
+
+.block details > ul {
+  padding-left: revert;
+}
+
+.block details > ul li + li {
+  margin-top: 0;
+}
