@@ -40,8 +40,8 @@ const Header = () => {
       <ButtonBase className={css.burger} onClick={toggleMobileNavigation} aria-label="Toggle navigation" disableRipple>
         <span />
       </ButtonBase>
-      <nav>
-        <ul className={css.navigation}>
+      <nav className={css.navigation}>
+        <ul className={css.navList}>
           {navCategories.map(({ category, items, href }) => {
             const onEnter = () => setSubMenuOpen(category)
             const onLeave = () => setSubMenuOpen(null)

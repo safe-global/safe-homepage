@@ -19,14 +19,6 @@
   height: 36px;
 }
 
-.navigation {
-  display: none;
-  align-items: center;
-  list-style: none;
-  gap: 32px;
-  --transition-duration: var(--transition-duration);
-}
-
 .button {
   font-size: 18px;
   line-height: 26px;
@@ -70,12 +62,21 @@
   bottom: 11px;
 }
 
+.navigation {
+  display: none;
+}
+
+.navList {
+  list-style: none;
+}
+
 @media (max-width: 599px) {
   .header {
     border-bottom: 1px solid var(--mui-palette-border-light);
   }
 
-  .navigation > li:not(:nth-last-of-type(2)) {
+  /* TODO: fix this */
+  .navList > li:not(:nth-last-of-type(2)) {
     border-bottom: 1px solid var(--mui-palette-border-light);
   }
 
@@ -104,6 +105,9 @@
 
   .visible .navigation {
     display: block;
+  }
+
+  .visible .navList {
     position: absolute;
     left: 0;
     top: var(--header-height);
@@ -145,8 +149,13 @@
   }
 
   .navigation {
+    display: block;
+  }
+
+  .navList {
     display: flex;
-    margin: 0;
+    align-items: center;
+    gap: 32px;
   }
 
   .burger {
@@ -177,7 +186,7 @@
 
   .menu {
     margin-left: -16px;
-    margin-top: -32px;
+    margin-top: -4px;
     background-color: var(--mui-palette-background-main);
   }
 
