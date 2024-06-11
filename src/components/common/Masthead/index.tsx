@@ -7,7 +7,7 @@ import css from './styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
 import ButtonsWrapper from '@/components/common/ButtonsWrapper'
 import { getImageSource, type ImageObj } from '@/lib/getImageSource'
-import { useIsMediumScreen } from '@/hooks/useScreenSizeHooks'
+import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 
 type FooterProps = {
   text: string

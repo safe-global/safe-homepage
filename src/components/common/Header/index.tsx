@@ -12,7 +12,7 @@ import Logo from '@/public/images/logo.svg'
 import AngleDownIcon from '@/public/images/angle-down.svg'
 import css from './styles.module.css'
 import NavigationButton from '@/components/common/Header/NavigationButton'
-import { useIsMediumScreen } from '@/hooks/useScreenSizeHooks'
+import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 
 const Header = () => {
   const [isBurgerOpen, setIsBurgerOpen] = useState<boolean>(false)

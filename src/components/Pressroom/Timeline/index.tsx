@@ -7,7 +7,7 @@ import FullCircleIcon from '@/public/images/circle-full.svg'
 import EmptyCircleIcon from '@/public/images/circle-empty.svg'
 import { type Entry } from 'contentful'
 import { type TypeSimpleBaseBlockSkeleton } from '@/contentful/types'
-import { useIsSmallScreen } from '@/hooks/useScreenSizeHooks'
+import { useIsSmallScreen } from '@/hooks/useMaxWidth'
 import css from './styles.module.css'
 
 const STEPS_PER_DOT_SM = 1
