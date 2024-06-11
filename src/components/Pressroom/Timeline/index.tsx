@@ -1,4 +1,4 @@
-import { Box, Button, Step, StepIcon, StepLabel, Stepper, type Theme, Typography, useMediaQuery } from '@mui/material'
+import { Box, Button, Step, StepIcon, StepLabel, Stepper, Typography } from '@mui/material'
 import MobileStepper from '@mui/material/MobileStepper'
 import { useState } from 'react'
 import LessThanIcon from '@/public/images/less-than.svg'
@@ -7,6 +7,7 @@ import FullCircleIcon from '@/public/images/circle-full.svg'
 import EmptyCircleIcon from '@/public/images/circle-empty.svg'
 import { type Entry } from 'contentful'
 import { type TypeSimpleBaseBlockSkeleton } from '@/contentful/types'
+import { useIsSmallScreen } from '@/hooks/useMaxWidth'
 import css from './styles.module.css'
 
 const STEPS_PER_DOT_SM = 1
@@ -25,7 +26,7 @@ type TimelineProps = { items: Entry<TypeSimpleBaseBlockSkeleton, undefined, stri
 
 const Timeline = ({ items }: TimelineProps) => {
   const [activeStep, setActiveStep] = useState(0)
-  const isSmallScreen = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'))
+  const isSmallScreen = useIsSmallScreen()
 
   const stepsPerDot = isSmallScreen ? STEPS_PER_DOT_SM : STEPS_PER_DOT_LG
   const stepsNumber = Math.ceil(items.length / stepsPerDot)

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Accordion, AccordionDetails, AccordionSummary, Button, ButtonBase, useMediaQuery } from '@mui/material'
+import { Accordion, AccordionDetails, AccordionSummary, Button, ButtonBase } from '@mui/material'
 import NextLink from 'next/link'
 import clsx from 'clsx'
 
@@ -12,11 +12,12 @@ import Logo from '@/public/images/logo.svg'
 import AngleDownIcon from '@/public/images/angle-down.svg'
 import css from './styles.module.css'
 import NavigationButton from '@/components/common/Header/NavigationButton'
+import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 
 const Header = () => {
   const [isBurgerOpen, setIsBurgerOpen] = useState<boolean>(false)
   const [subMenuOpen, setSubMenuOpen] = useState<null | NavCategories>(null)
-  const isSmallScreen = useMediaQuery('(max-width:600px)')
+  const isMediumScreen = useIsMediumScreen()
 
   const toggleMobileNavigation = () => {
     setIsBurgerOpen((prev) => !prev)
@@ -40,8 +41,8 @@ const Header = () => {
       <ButtonBase className={css.burger} onClick={toggleMobileNavigation} aria-label="Toggle navigation" disableRipple>
         <span />
       </ButtonBase>
-      <nav>
-        <ul className={css.navigation}>
+      <nav className={css.navigation}>
+        <ul className={css.navList}>
           {navCategories.map(({ category, items, href }) => {
             const onEnter = () => setSubMenuOpen(category)
             const onLeave = () => setSubMenuOpen(null)
@@ -52,7 +53,7 @@ const Header = () => {
                   <NextLink href={href} onClick={closeMobileNavigation}>
                     <div className={css.navLink} dangerouslySetInnerHTML={{ __html: category }} />
                   </NextLink>
-                ) : isSmallScreen ? (
+                ) : isMediumScreen ? (
                   // Mobile button
                   <Accordion className={clsx(css.accordion, css.hideInLaptop)}>
                     <AccordionSummary expandIcon={<AngleDownIcon />}>
@@ -75,24 +76,24 @@ const Header = () => {
             )
           })}
           <li key={WALLET_LINK} className={css.hideInLaptop}>
-            <SafeLink href={WALLET_LINK}>
-              <Button className={css.button} variant="contained">
-                Launch Wallet
-              </Button>
-            </SafeLink>
+            <WalletButton />
           </li>
         </ul>
       </nav>
 
       <div className={css.hideInMobile}>
-        <SafeLink href={WALLET_LINK}>
-          <Button className={css.button} variant="contained">
-            Launch Wallet
-          </Button>
-        </SafeLink>
+        <WalletButton />
       </div>
     </div>
   )
 }
+
+const WalletButton = () => (
+  <SafeLink href={WALLET_LINK}>
+    <Button className={css.button} variant="contained">
+      Launch Wallet
+    </Button>
+  </SafeLink>
+)
 
 export default Header

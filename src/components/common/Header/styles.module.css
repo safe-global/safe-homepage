@@ -19,22 +19,13 @@
   height: 36px;
 }
 
-.navigation {
-  display: none;
-  align-items: center;
-  list-style: none;
-  gap: 32px;
-  --transition-duration: var(--transition-duration);
-}
-
 .button {
   font-size: 18px;
   line-height: 26px;
   padding: 15px 0;
   width: 100%;
-  margin-top: 24px;
-  display: flex;
-  align-items: baseline;
+  margin-top: 16px;
+  white-space: nowrap;
 }
 
 /* Burger navigation button */
@@ -70,12 +61,21 @@
   bottom: 11px;
 }
 
-@media (max-width: 599px) {
+.navigation {
+  display: none;
+}
+
+.navList {
+  list-style: none;
+}
+
+@media (max-width: 899px) {
   .header {
     border-bottom: 1px solid var(--mui-palette-border-light);
   }
 
-  .navigation > li:not(:nth-last-of-type(2)) {
+  /* Do not apply border-bottom in the last 2 elements of the mobile menu */
+  .navList > li:not(:nth-last-of-type(2)) {
     border-bottom: 1px solid var(--mui-palette-border-light);
   }
 
@@ -104,6 +104,9 @@
 
   .visible .navigation {
     display: block;
+  }
+
+  .visible .navList {
     position: absolute;
     left: 0;
     top: var(--header-height);
@@ -112,7 +115,7 @@
     height: calc(100vh - var(--header-height));
     margin: 0;
     padding: 0 16px 16px;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   .visible .burger span {
@@ -134,7 +137,7 @@
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   .header {
     padding: 0 30px;
   }
@@ -145,8 +148,14 @@
   }
 
   .navigation {
+    display: block;
+  }
+
+  .navList {
     display: flex;
-    margin: 0;
+    align-items: center;
+    gap: 32px;
+    padding-left: 0;
   }
 
   .burger {
@@ -159,6 +168,7 @@
     padding: 24px 0;
     font-size: 16px;
     line-height: 24px;
+    white-space: nowrap;
   }
 
   .navButton:hover,
@@ -177,7 +187,7 @@
 
   .menu {
     margin-left: -16px;
-    margin-top: -32px;
+    margin-top: -4px;
     background-color: var(--mui-palette-background-main);
   }
 
