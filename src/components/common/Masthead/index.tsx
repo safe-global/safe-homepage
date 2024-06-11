@@ -7,7 +7,7 @@ import css from './styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
 import ButtonsWrapper from '@/components/common/ButtonsWrapper'
 import { getImageSource, type ImageObj } from '@/lib/getImageSource'
-import { useIsSmallScreen } from '@/hooks/useIsSmallScreen'
+import { useIsMediumScreen } from '@/hooks/useScreenSizeHooks'
 
 type FooterProps = {
   text: string
@@ -48,10 +48,10 @@ export const Masthead = ({
   backgroundImage: ImageObj
   footer: FooterProps
 }): ReactElement => {
-  const isSmallScreen = useIsSmallScreen()
+  const isMediumScreen = useIsMediumScreen()
 
-  const bgImage = getImageSource(isSmallScreen, backgroundImage)
-  const imageSrc = getImageSource(isSmallScreen, image)
+  const bgImage = getImageSource(isMediumScreen, backgroundImage)
+  const imageSrc = getImageSource(isMediumScreen, image)
 
   return (
     <Container className={layoutCss.containerShort} id="masthead">

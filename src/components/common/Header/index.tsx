@@ -12,12 +12,12 @@ import Logo from '@/public/images/logo.svg'
 import AngleDownIcon from '@/public/images/angle-down.svg'
 import css from './styles.module.css'
 import NavigationButton from '@/components/common/Header/NavigationButton'
-import { useIsSmallScreen } from '@/hooks/useIsSmallScreen'
+import { useIsMediumScreen } from '@/hooks/useScreenSizeHooks'
 
 const Header = () => {
   const [isBurgerOpen, setIsBurgerOpen] = useState<boolean>(false)
   const [subMenuOpen, setSubMenuOpen] = useState<null | NavCategories>(null)
-  const isSmallScreen = useIsSmallScreen()
+  const isMediumScreen = useIsMediumScreen()
 
   const toggleMobileNavigation = () => {
     setIsBurgerOpen((prev) => !prev)
@@ -53,7 +53,7 @@ const Header = () => {
                   <NextLink href={href} onClick={closeMobileNavigation}>
                     <div className={css.navLink} dangerouslySetInnerHTML={{ __html: category }} />
                   </NextLink>
-                ) : isSmallScreen ? (
+                ) : isMediumScreen ? (
                   // Mobile button
                   <Accordion className={clsx(css.accordion, css.hideInLaptop)}>
                     <AccordionSummary expandIcon={<AngleDownIcon />}>

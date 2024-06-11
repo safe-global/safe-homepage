@@ -7,7 +7,7 @@ import FullCircleIcon from '@/public/images/circle-full.svg'
 import EmptyCircleIcon from '@/public/images/circle-empty.svg'
 import { type Entry } from 'contentful'
 import { type TypeSimpleBaseBlockSkeleton } from '@/contentful/types'
-import { useIsExtraSmallScreen } from '@/hooks/useIsSmallScreen'
+import { useIsSmallScreen } from '@/hooks/useScreenSizeHooks'
 import css from './styles.module.css'
 
 const STEPS_PER_DOT_SM = 1
@@ -26,9 +26,9 @@ type TimelineProps = { items: Entry<TypeSimpleBaseBlockSkeleton, undefined, stri
 
 const Timeline = ({ items }: TimelineProps) => {
   const [activeStep, setActiveStep] = useState(0)
-  const isExtraSmallScreen = useIsExtraSmallScreen()
+  const isSmallScreen = useIsSmallScreen()
 
-  const stepsPerDot = isExtraSmallScreen ? STEPS_PER_DOT_SM : STEPS_PER_DOT_LG
+  const stepsPerDot = isSmallScreen ? STEPS_PER_DOT_SM : STEPS_PER_DOT_LG
   const stepsNumber = Math.ceil(items.length / stepsPerDot)
 
   const timelineItems = items.map(({ fields }) => fields)
