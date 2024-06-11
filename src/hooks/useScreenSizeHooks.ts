@@ -1,5 +1,7 @@
 import { useMediaQuery } from '@mui/material'
-import type { Theme } from '@mui/material'
+import type { Breakpoint, Theme } from '@mui/material'
 
-export const useIsSmallScreen = () => useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'))
-export const useIsMediumScreen = () => useMediaQuery((theme: Theme) => theme.breakpoints.down('md'))
+export const useMaxWidth = (key: number | Breakpoint) => useMediaQuery((theme: Theme) => theme.breakpoints.down(key))
+
+export const useIsSmallScreen = () => useMaxWidth('sm')
+export const useIsMediumScreen = () => useMaxWidth('md')
