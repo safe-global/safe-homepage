@@ -7,8 +7,8 @@ import ButtonsWrapper from '@/components/Token/ButtonsWrapper'
 import { isEntryTypeBaseBlock, isEntryTypeButton } from '@/lib/typeGuards'
 import { Container, Typography } from '@mui/material'
 import StarGradientIcon from '@/public/images/star-gradient.svg'
-import IconRow from '@/components/Rewards/IconRow'
 import css from './styles.module.css'
+import { IconCarouselElement } from '@/components/Rewards/IconCarousel'
 
 const SafePass = (props: BaseBlockEntry) => {
   const { caption, title, buttons, items } = props.fields
@@ -48,9 +48,7 @@ const SafePass = (props: BaseBlockEntry) => {
 
       <div className={css.partnershipWrapper}>
         <Typography color="primary.light">in partnership with</Typography>
-        <div className={css.partnerLogos}>
-          <IconRow items={itemsList} />
-        </div>
+        <IconCarouselElement items={itemsList} />
       </div>
     </Container>
   )
