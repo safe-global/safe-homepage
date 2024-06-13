@@ -2,7 +2,7 @@ name: Scheduled deployment
 
 on:
   schedule:
-    - cron: '38 9,13 * * *' # 9:38 AM and 1:38 PM UTC
+    - cron: '38 7,11 * * *' # 9:38 AM and 1:38 PM UTC
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
