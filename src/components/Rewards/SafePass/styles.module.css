@@ -56,13 +56,6 @@
   margin-top: 40px;
 }
 
-.partnerLogos {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  row-gap: 32px;
-}
-
 .spot3 {
   position: absolute;
   z-index: -1;

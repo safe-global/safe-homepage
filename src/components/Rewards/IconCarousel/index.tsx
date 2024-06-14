@@ -16,19 +16,23 @@ const IconCarousel = (props: BaseBlockEntry) => {
     <Container className={`${layoutCss.containerShort} ${css.container}`}>
       <RichText {...title} />
 
-      <div className={css.carouselWrapper}>
-        <div className={css.gradientBase} />
-        <div className={css.animation}>
-          <div className={css.slider}>
-            <IconRow items={partnersLogos} />
-            <IconRow items={partnersLogos} />
-            <IconRow items={partnersLogos} />
-          </div>
-        </div>
-        <div className={clsx(css.gradientBase, css.gradientFlipped)} />
-      </div>
+      <IconCarouselElement items={partnersLogos} />
     </Container>
   )
 }
+
+export const IconCarouselElement = ({ items }: { items: BaseBlockEntry[] }) => (
+  <div className={css.carouselWrapper}>
+    <div className={css.gradientBase} />
+    <div className={css.animation}>
+      <div className={css.slider}>
+        <IconRow items={items} />
+        <IconRow items={items} />
+        <IconRow items={items} />
+      </div>
+    </div>
+    <div className={clsx(css.gradientBase, css.gradientFlipped)} />
+  </div>
+)
 
 export default IconCarousel
