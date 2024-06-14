@@ -29,9 +29,8 @@ const NavigationButton = ({ category, items, subMenuOpen, onItemClick }: Navigat
       aria-expanded={isOpen}
       ref={buttonRef}
     >
-      <div className={css.navButton}>{category}</div>
+      {category}
       <Popper
-        className={css.hideInMobile}
         id={`${categoryString}-popper`}
         open={isOpen}
         anchorEl={buttonRef?.current}

@@ -1,0 +1,60 @@
+name: Scheduled deployment
+
+on:
+  schedule:
+    - cron: '38 7,11 * * *' # 9:38 AM and 1:38 PM UTC
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions: write-all
+
+    name: Deploy last release
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch all tags
+        run: git fetch --tags
+
+      - name: Set an output variable with the latest tag
+        id: latest_tag
+        shell: bash
+        run: echo "latest_tag=$(git describe --tags $(git rev-list --tags --max-count=1))" >> $GITHUB_OUTPUT
+
+      - name: Checkout latest tag
+        run: git checkout ${{ steps.latest_tag.outputs.latest_tag }}
+
+      - name: Install dependencies
+        uses: ./.github/workflows/yarn
+
+      - name: Build
+        uses: ./.github/workflows/build
+        with:
+          secrets: ${{ toJSON(secrets) }}
+          is-production: ${{ true }}
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v3
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      # Script to upload release files
+      - name: 'Upload release build files for production'
+        env:
+          #
+          BUCKET: s3://${{ secrets.AWS_STAGING_BUCKET_NAME }}/releases/${{ steps.latest_tag.outputs.latest_tag }}
+        run: bash ./scripts/github/s3_upload.sh
+
+      # Script to prepare production deployments
+      - name: 'Prepare production deployment'
+        run: bash ./scripts/github/prepare_production_deployment.sh
+        env:
+          PROD_DEPLOYMENT_HOOK_TOKEN: ${{ secrets.PROD_DEPLOYMENT_HOOK_TOKEN }}
+          PROD_DEPLOYMENT_HOOK_URL: ${{ secrets.PROD_DEPLOYMENT_HOOK_URL }}
+          VERSION_TAG: ${{ steps.latest_tag.outputs.latest_tag }}
