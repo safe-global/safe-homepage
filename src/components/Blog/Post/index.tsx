@@ -56,7 +56,7 @@ const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
           {title}
         </Typography>
 
-        <Typography variant="h4" className={css.excerpt}>
+        <Typography variant="h5" className={css.excerpt}>
           {excerpt}
         </Typography>
 
