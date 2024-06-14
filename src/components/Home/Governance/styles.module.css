@@ -3,13 +3,10 @@
   margin-top: 80px;
 }
 
-.caption {
-  position: relative;
-  z-index: 1;
-}
-
 @media (min-width: 600px) {
   .container {
+    position: relative;
+    z-index: 1;
     margin-bottom: 140px;
   }
 
