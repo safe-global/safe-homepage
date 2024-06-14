@@ -2,7 +2,7 @@ name: Scheduled deployment
 
 on:
   schedule:
-    - cron: '38 9,13,15 * * *' # Every day at 9:38, 13:38, 15:38 UTC
+    - cron: '38 7,11 * * *' # 9:38 AM and 1:38 PM UTC
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -50,3 +50,11 @@ jobs:
           #
           BUCKET: s3://${{ secrets.AWS_STAGING_BUCKET_NAME }}/releases/${{ steps.latest_tag.outputs.latest_tag }}
         run: bash ./scripts/github/s3_upload.sh
+
+      # Script to prepare production deployments
+      - name: 'Prepare production deployment'
+        run: bash ./scripts/github/prepare_production_deployment.sh
+        env:
+          PROD_DEPLOYMENT_HOOK_TOKEN: ${{ secrets.PROD_DEPLOYMENT_HOOK_TOKEN }}
+          PROD_DEPLOYMENT_HOOK_URL: ${{ secrets.PROD_DEPLOYMENT_HOOK_URL }}
+          VERSION_TAG: ${{ steps.latest_tag.outputs.latest_tag }}
