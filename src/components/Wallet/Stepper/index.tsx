@@ -30,8 +30,8 @@ const CustomStepper = ({ steps }: { steps: StepsType }) => (
         <StepContent className={clsx(css.stepContent, state === StepState.ACTIVE && css.activeBorder)}>
           <ul className={css.list}>
             {description?.map((item, index) => (
-              <li className={css.listItem} key={index}>
-                <Typography key={index} color="primary.light" marginTop="18px" display="inline">
+              <li key={index}>
+                <Typography color="primary.light" marginTop="18px" display="inline">
                   {item}
                 </Typography>
               </li>

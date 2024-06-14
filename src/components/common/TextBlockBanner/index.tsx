@@ -7,7 +7,7 @@ import { IOS_LINK, GPLAY_LINK } from '@/config/constants'
 const TextBlockBanner = () => (
   <div className={css.gradient}>
     <Container>
-      <Grid container flexDirection="column" alignItems="center" justifyContent="center">
+      <Grid container className={css.container}>
         <Grid item md={6} sx={{ textAlign: 'center' }} pt={12}>
           <Typography variant="h2" color="static.main" mb={3}>
             Use Safe <u>WALLET</u> anywhere
@@ -16,6 +16,7 @@ const TextBlockBanner = () => (
             Access your assets anywhere without compromising on security with our flagship interfaces built on Safe Core
           </Typography>
         </Grid>
+
         <Grid item md={8}>
           <Grid container gap={2} justifyContent="center">
             <Grid item>
@@ -31,6 +32,7 @@ const TextBlockBanner = () => (
           </Grid>
         </Grid>
       </Grid>
+
       <div className={css.bg} />
     </Container>
   </div>
