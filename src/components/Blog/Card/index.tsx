@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Box, Typography } from '@mui/material'
 import css from './styles.module.css'
-import blogCss from '../styles.module.css'
 import { calculateReadingTimeInMin } from '@/components/Blog/utils/calculateReadingTime'
 import Tags from '@/components/Blog/Tags'
 import CategoryIcon from '@/public/images/Blog/category-icon.svg'
@@ -29,15 +28,15 @@ const Card = (props: BlogPostEntry) => {
 
       <div className={css.cardBody}>
         <div className={css.meta}>
-          <Typography className={blogCss.category}>
-            <CategoryIcon />
+          <CategoryIcon />
+          <Typography variant="caption" color="text.primary">
             {category}
           </Typography>
           <Typography variant="caption">{calculateReadingTimeInMin(content)}</Typography>
         </div>
 
         <div className={css.title}>
-          <Typography variant="h4">{title}</Typography>
+          <Typography variant="h5">{title}</Typography>
         </div>
 
         <span style={{ flexGrow: 1 }} />

@@ -39,7 +39,7 @@
 .meta {
   display: flex;
   gap: 8px;
-  align-items: baseline;
+  align-items: center;
 }
 
 .title {

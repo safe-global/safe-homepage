@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Tags from '@/components/Blog/Tags'
 import { Box, Grid, Link, Typography } from '@mui/material'
 import css from './styles.module.css'
-import blogCss from '../styles.module.css'
 import { formatBlogDate } from '@/components/Blog/utils/formatBlogDate'
 import { calculateReadingTimeInMin } from '@/components/Blog/utils/calculateReadingTime'
 import { type BlogPostEntry } from '@/components/Blog/Post'
@@ -41,17 +40,22 @@ const FeaturedPost = (props: BlogPostEntry) => {
         <Grid item md={5} className={css.body}>
           <div className={css.meta}>
             <div className={css.metaStart}>
-              <Typography variant="h4" className={blogCss.category}>
-                <CategoryIcon />
+              <CategoryIcon />
+
+              <Typography variant="caption" color="text.primary">
                 {category}
               </Typography>
+
               <Typography variant="caption">{calculateReadingTimeInMin(content)}</Typography>
             </div>
+
             <Typography variant="caption">{formatBlogDate(date)}</Typography>
           </div>
+
           <Typography variant="h3" className={css.title}>
             <Link href={`${AppRoutes.blog.index}/${slug}`}>{title}</Link>
           </Typography>
+
           <Typography className={css.excerpt}>{excerpt}</Typography>
 
           <Box mt={2}>
