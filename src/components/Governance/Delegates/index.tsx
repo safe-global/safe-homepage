@@ -31,7 +31,7 @@ const DelegateCard = (props: Delegate) => (
       </Avatar>
 
       <div>
-        <Typography variant="h4" className={css.name}>
+        <Typography variant="h5" className={css.name}>
           {props.name}
         </Typography>
 
@@ -61,7 +61,7 @@ const Delegates = (props: BaseBlock & { footer: { text: string; highlight: strin
     <Container className={layoutCss.containerMedium}>
       <HeaderCTA {...props} />
 
-      <Grid container position="relative" className={css.cardGrid} spacing={{ xs: '16px', md: '30px', xl: '50px' }}>
+      <Grid container className={css.cardGrid} spacing={{ xs: '16px', md: '30px', xl: '50px' }}>
         {delegatesData.map((item, index) => (
           <Grid key={index} item xs={12} md={4}>
             <DelegateCard {...item} />

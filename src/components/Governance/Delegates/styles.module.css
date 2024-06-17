@@ -74,6 +74,10 @@
   text-underline-offset: 8px;
 }
 
+.cardGrid {
+  position: relative;
+}
+
 .cardGrid :global(.MuiGrid-item):nth-of-type(9) .socials {
   display: none;
 }

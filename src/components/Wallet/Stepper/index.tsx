@@ -23,7 +23,7 @@ const CustomStepper = ({ steps }: { steps: StepsType }) => (
     {steps.map(({ label, description, state }) => (
       <Step key={label}>
         <StepLabel sx={{ py: 0 }} icon={<CircleIcon className={clsx(css.icon, state && css.iconActive)} />}>
-          <Typography variant="h4" color="white">
+          <Typography variant="h5" color="white">
             {label}
           </Typography>
         </StepLabel>

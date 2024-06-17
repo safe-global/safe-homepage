@@ -28,13 +28,16 @@ const CoreIntro = ({ title, text, link, scroll }: BaseBlock & { scroll?: { title
             <img src="/images/Core/intro-chip.png" alt="Core Chip" />
           </video>
         </Grid>
+
         <Grid item md={6}>
           <Typography variant="h1" mb={4}>
             {title}
           </Typography>
-          <Typography variant="h4" component="div" mb={5}>
+
+          <Typography variant="h5" component="div" mb={5}>
             {text}
           </Typography>
+
           {link && (
             <Button key={link.href} href={link.href} target="_blank" rel="noreferrer" variant="contained" size="large">
               {link.title}

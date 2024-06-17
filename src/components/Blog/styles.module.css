@@ -15,21 +15,21 @@
 .meta {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   flex-wrap: wrap;
   margin-top: 32px;
 }
 
 .metaStart {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 14px;
 }
 
 .category {
   display: flex;
-  gap: 4px;
-  align-items: baseline;
+  gap: 8px;
+  align-items: center;
 }
 
 .title {

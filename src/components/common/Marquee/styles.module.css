@@ -39,6 +39,7 @@
   margin: 0;
   font-size: 64px;
   line-height: 64px;
+  font-weight: 400;
   background: linear-gradient(90deg, rgba(15, 255, 128, 1) 0%, rgba(94, 221, 255, 1) 60%);
   background-clip: text;
   color: transparent;

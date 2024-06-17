@@ -13,7 +13,7 @@ const LinkCard = ({ caption, title, text, link }: Partial<BaseBlock>) => (
         </div>
 
         <div className={css.cardBody}>
-          <Typography variant="h3" className={css.title}>
+          <Typography variant="h4" className={css.title}>
             {title}
           </Typography>
 

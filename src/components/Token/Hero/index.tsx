@@ -1,6 +1,6 @@
 import css from './styles.module.css'
 import { motion } from 'framer-motion'
-import { Box, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
 import OrbitRingsList from '@/components/Token/Hero/token-hero-rings.json'
 import OrbitPath from '@/components/Token/OrbitPath'
 import Floater, { type AnimationDirection } from '@/components/Token/Floaters'
@@ -41,9 +41,9 @@ const Hero = (props: BaseBlockEntry) => {
         {/* Token Hero Content */}
         <div className={css.container}>
           <Typography variant="h5">{caption}</Typography>
-          <Box className={css.title}>
+          <div className={css.title}>
             <RichText {...title} />
-          </Box>
+          </div>
 
           <ButtonsWrapper buttons={buttonsList} />
 

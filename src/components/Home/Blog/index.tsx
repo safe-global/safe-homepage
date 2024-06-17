@@ -24,7 +24,7 @@ const BlogCard = ({ title, link, image, isBig = false }: Partial<BaseBlock> & { 
             </Typography>
           </div>
 
-          <Typography variant="h3" className={clsx(css.title, { [css.main]: isBig })}>
+          <Typography variant="h4" className={clsx(css.title, { [css.main]: isBig })}>
             {title}
           </Typography>
         </div>

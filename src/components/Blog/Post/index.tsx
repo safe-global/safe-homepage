@@ -41,10 +41,12 @@ const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
 
         <div className={css.meta}>
           <div className={css.metaStart}>
-            <Typography className={css.category}>
+            <div className={css.category}>
               <CategoryIcon />
-              {category}
-            </Typography>
+              <Typography variant="caption" color="text.primary">
+                {category}
+              </Typography>
+            </div>
             <Typography variant="caption">{calculateReadingTimeInMin(content)}</Typography>
           </div>
           <Typography variant="caption">{formatBlogDate(date)}</Typography>
@@ -54,7 +56,7 @@ const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
           {title}
         </Typography>
 
-        <Typography variant="h4" className={css.excerpt}>
+        <Typography variant="h5" className={css.excerpt}>
           {excerpt}
         </Typography>
 

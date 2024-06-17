@@ -18,7 +18,7 @@ export const GridItem = ({
     <Grid item xs={12} md={width} className={css.gridItems}>
       <div>
         {image ? <img {...image} /> : null}
-        <Typography variant="h4" className={css.title}>
+        <Typography variant="h5" className={css.title}>
           {title}
         </Typography>
         <Typography color="primary.light">{text}</Typography>
