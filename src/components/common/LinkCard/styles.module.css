@@ -49,6 +49,8 @@
   position: absolute;
   top: 24px;
   right: 24px;
+  width: 16px;
+  height: 16px;
   transition: transform var(--transition-duration);
 }
 

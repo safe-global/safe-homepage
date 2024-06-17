@@ -3,7 +3,7 @@ import { Container } from '@mui/system'
 import clsx from 'clsx'
 import type { ReactElement } from 'react'
 
-import ArrowIcon from '@/public/images/arrow-out-icon.svg'
+import ArrowIcon from '@/public/images/arrow-out-square-corner.svg'
 
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'

@@ -29,6 +29,8 @@
 
 .icon {
   transition: transform var(--transition-duration);
+  width: 16px;
+  height: 16px;
 }
 
 .icon path {
