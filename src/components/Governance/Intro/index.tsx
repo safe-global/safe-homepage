@@ -7,7 +7,7 @@ const Intro = ({ title, buttons, image }: BaseBlock) => {
   return (
     <Container>
       <Grid container className={css.container} spacing={{ xs: 6, md: 1, xl: '50px' }}>
-        <Grid item md={6}>
+        <Grid item md={7}>
           <Typography variant="h1" mb={5}>
             {title}
           </Typography>
