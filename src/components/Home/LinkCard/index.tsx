@@ -1,5 +1,5 @@
 import LinkButton from '@/components/common/LinkButton'
-import ArrowIcon from '@/public/images/arrow-out-icon.svg'
+import ArrowIcon from '@/public/images/arrow-out-square-corner.svg'
 import { type BaseBlock } from '@/components/Home/types'
 import { Typography } from '@mui/material'
 import css from './styles.module.css'

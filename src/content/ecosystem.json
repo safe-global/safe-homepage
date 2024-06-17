@@ -25,7 +25,7 @@
       {
         "title": "Submit your Project",
         "image": {
-          "src": "/images/arrow-out-icon.svg",
+          "src": "/images/arrow-out-square-corner.svg",
           "alt": "Arrow angled"
         },
         "link": {
@@ -35,7 +35,7 @@
       {
         "title": "Ecosystem Careers",
         "image": {
-          "src": "/images/arrow-out-icon.svg",
+          "src": "/images/arrow-out-square-corner.svg",
           "alt": "Arrow angled"
         },
         "link": {
@@ -73,7 +73,7 @@
         "title": "Build on Safe",
         "text": "Create your own use case and UI/UX, powered by the security of the Safe contracts, using the <a href='https://docs.safe.global/safe-core-aa-sdk/protocol-kit' target='_blank' rel='noreferrer'>Protocol Kit</a> and the <a href='https://docs.safe.global/safe-core-aa-sdk' target='_blank' rel='noreferrer'>{Core}SDK</a>",
         "image": {
-          "src": "/images/arrow-out-icon.svg",
+          "src": "/images/arrow-out-square-corner.svg",
           "alt": "Arrow angled"
         }
       },
@@ -81,7 +81,7 @@
         "title": "Extend Safe Functionality",
         "text": "Add new features to the Safe protocol by building a module, or further secure your transactions by creating a guard",
         "image": {
-          "src": "/images/arrow-out-icon.svg",
+          "src": "/images/arrow-out-square-corner.svg",
           "alt": "Arrow angled"
         }
       }

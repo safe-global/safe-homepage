@@ -1,6 +1,6 @@
 import { Typography } from '@mui/material'
 import LinkButton from '@/components/common/LinkButton'
-import ArrowIcon from '@/public/images/arrow-out-icon.svg'
+import ArrowIcon from '@/public/images/arrow-out-square-corner.svg'
 import SafeLink from '@/components/common/SafeLink'
 import css from './styles.module.css'
 import type { DetailedHTMLProps, ImgHTMLAttributes } from 'react'

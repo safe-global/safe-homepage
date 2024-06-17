@@ -73,6 +73,11 @@
   text-align: center;
 }
 
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
 .icon path {
   fill: var(--mui-palette-primary-main);
 }

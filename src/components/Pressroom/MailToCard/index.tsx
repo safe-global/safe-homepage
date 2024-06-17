@@ -1,5 +1,5 @@
 import { Typography } from '@mui/material'
-import ArrowIcon from '@/public/images/arrow-out-icon.svg'
+import ArrowIcon from '@/public/images/arrow-out-square-corner.svg'
 import commonCss from '../styles.module.css'
 import { COMMS_EMAIL } from '@/config/constants'
 

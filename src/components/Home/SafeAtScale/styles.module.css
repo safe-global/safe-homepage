@@ -78,11 +78,6 @@
   position: relative;
 }
 
-.metricsWrapper *,
-.metricsInner * {
-  margin: 0 1.5vw;
-}
-
 .metric {
   transition: opacity var(--metrics-fade-time) ease calc(var(--metrics-show-delay) + var(--i) * var(--metrics-stagger));
   opacity: 1;
@@ -223,12 +218,7 @@
 }
 
 @media (min-width: 1200px) {
-  .metricsWrapper *,
-  .metricsInner * {
-    margin: 0 16px;
-  }
-
-  .title br {
-    display: inherit;
+  .metricsInner {
+    gap: 32px;
   }
 }

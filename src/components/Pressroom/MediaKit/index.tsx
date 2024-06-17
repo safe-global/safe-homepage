@@ -2,7 +2,7 @@ import { Container, Divider, Grid, Typography } from '@mui/material'
 import NextLink from 'next/link'
 import { PRESS_LINK } from '@/config/constants'
 import MailToCard from '@/components/Pressroom/MailToCard'
-import ArrowIcon from '@/public/images/arrow-out-icon.svg'
+import ArrowIcon from '@/public/images/arrow-out-square-corner.svg'
 import css from './styles.module.css'
 import commonCss from '../styles.module.css'
 

@@ -297,7 +297,7 @@
   {
     "component": "Home/Governance",
     "caption": "Governance",
-    "title": "<b>Safe <u>DAO</u></b> governs the future of <i>Safe</i>",
+    "title": "<b>Safe <u>DAO</u></b> governs<br/>the future of <i>Safe</i>",
     "text": "<i>Safe</i> is governed by SafeDAO, a decentralized collective of core contributors, backers, GnosisDAO, users, and ecosystem contributors i.e Safe{Guardians}.",
     "link": {
       "title": "Contact us",

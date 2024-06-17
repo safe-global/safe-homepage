@@ -4,7 +4,7 @@ import { Container, Grid, Typography } from '@mui/material'
 import LinkButton from '@/components/common/LinkButton'
 import css from './styles.module.css'
 import layoutCss from '@/components/common/styles.module.css'
-import ArrowIcon from '@/public/images/arrow-out-icon.svg'
+import ArrowIcon from '@/public/images/arrow-out-square-corner.svg'
 import type { BaseBlock } from '@/components/Home/types'
 import Link from 'next/link'
 

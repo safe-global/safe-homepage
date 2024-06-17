@@ -12,15 +12,13 @@ const Governance = ({ caption, title, text, items, link }: BaseBlock) => {
           <Container className={`${layoutCss.containerMedium} ${css.container}`}>
             <Grid container columnSpacing={2} rowGap="20px">
               <Grid item xs={12} md={6}>
-                <Typography variant="caption" className={css.caption}>
-                  {caption}
-                </Typography>
+                <Typography variant="caption">{caption}</Typography>
                 <Box mt={{ xs: '20px', md: '48px' }}>
                   <Typography variant="h2">{title}</Typography>
                 </Box>
               </Grid>
               <Grid item xs={12} md={6} display="flex" alignItems="center">
-                <Typography color="primary.light">{text}</Typography>
+                <Typography>{text}</Typography>
               </Grid>
             </Grid>
 
