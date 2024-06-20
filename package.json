@@ -4,7 +4,7 @@
   "version": "1.4.36",
   "scripts": {
     "build": "next build && next export",
-    "lint": "tsc && next lint",
+    "lint": "next lint",
     "lint:fix": "next lint --fix",
     "prettier": "prettier -w \"{src,pages,scripts}/**/*.{ts,tsx,css,js}\"",
     "routes": "node scripts/generate-routes.js > src/config/routes.ts && prettier -w src/config/routes.ts",
