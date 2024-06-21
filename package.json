@@ -26,7 +26,7 @@
     "@emotion/styled": "^11.10.5",
     "@mui/material": "^5.11.6",
     "@safe-global/safe-gateway-typescript-sdk": "^3.7.0",
-    "contentful": "^10.6.1",
+    "contentful": "^10.12.2",
     "framer-motion": "^11.0.25",
     "fuse.js": "^6.6.2",
     "isomorphic-dompurify": "^1.0.0",
@@ -42,14 +42,13 @@
     "@svgr/webpack": "^6.3.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
-    "@types/dompurify": "^2.4.0",
     "@types/jest": "^29.2.6",
     "@types/lodash": "^4.14.191",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
     "@typescript-eslint/eslint-plugin": "^5.49.0",
-    "cf-content-types-generator": "^2.12.9",
+    "cf-content-types-generator": "^2.15.3",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.5",
     "eslint-config-prettier": "^8.6.0",
@@ -59,5 +58,13 @@
     "jest-environment-jsdom": "^29.4.0",
     "prettier": "^2.8.8",
     "typescript": "4.9.4"
+  },
+  "resolutions": {
+    "@adobe/css-tools": "^4.3.2",
+    "@contentful/rich-text-types": "^16.3.0",
+    "contentful-export": "^7.19.145",
+    "follow-redirects": "^1.15.6",
+    "tough-cookie": "^4.1.4",
+    "word-wrap": "^1.2.4"
   }
 }
