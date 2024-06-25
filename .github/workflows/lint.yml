@@ -6,16 +6,20 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  eslint:
+  ESLint:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'yarn'
+
       - name: Install dependencies
-        uses: ./.github/workflows/yarn
+        run: yarn install --immutable
 
       - name: Run ESLint
-        uses: Maggi64/eslint-plus-action@master
-        with:
-          npmInstall: false
+        run: yarn lint
