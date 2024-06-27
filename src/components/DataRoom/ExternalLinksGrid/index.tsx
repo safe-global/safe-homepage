@@ -1,10 +1,11 @@
 import { Grid, Typography } from '@mui/material'
 import ExternalLinkCard from '@/components/common/Cards/ExternalLinkCard'
 import { type BaseBlock } from '@/components/Home/types'
+import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 
 const ExternalLinksGrid = ({ title, items }: Pick<BaseBlock, 'title' | 'items'>) => (
-  <Grid container className={css.container}>
+  <Grid container className={`${layoutCss.containerShort} ${css.container}`}>
     <Grid item md={4} className={css.title}>
       <Typography variant="h3">{title}</Typography>
     </Grid>

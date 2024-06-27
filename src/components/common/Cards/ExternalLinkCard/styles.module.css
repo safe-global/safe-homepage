@@ -11,7 +11,7 @@
 }
 
 .cardHeader {
-  height: 24px;
+  height: 32px;
 }
 
 .cardHeader img {
@@ -28,10 +28,16 @@
   margin-top: auto;
 }
 
+.link {
+  height: 0;
+}
+
 .icon {
   position: absolute;
   top: 24px;
   right: 24px;
+  width: 24px;
+  height: 24px;
 }
 
 .icon path {
