@@ -10,7 +10,7 @@ const ExternalLinksGrid = ({ title, items }: Pick<BaseBlock, 'title' | 'items'>)
       <Typography variant="h3">{title}</Typography>
     </Grid>
 
-    <Grid container item xs={12} md={8} columnSpacing={4} rowSpacing={3}>
+    <Grid container item xs={12} md={8} columnSpacing={4} rowSpacing={3} justifyContent="flex-end">
       {items?.map((item) => {
         const { title = '', image, link } = item
 
