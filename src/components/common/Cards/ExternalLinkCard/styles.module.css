@@ -1,0 +1,48 @@
+/* Card */
+.card {
+  position: relative;
+  padding: 24px;
+  border-radius: 16px;
+  height: 191px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: inset 0 0 0 1px var(--mui-palette-border-light);
+  transition: box-shadow var(--transition-duration);
+}
+
+.cardHeader {
+  height: 24px;
+}
+
+.cardHeader img {
+  height: 100%;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.title {
+  margin-top: auto;
+}
+
+.icon {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+.icon path {
+  transition: fill var(--transition-duration);
+}
+
+/* Hover */
+.card:hover {
+  box-shadow: inset 0 0 0 1px var(--mui-palette-primary-main);
+}
+
+.card:hover .icon path {
+  fill: var(--mui-palette-primary-main);
+}

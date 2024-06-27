@@ -1,0 +1,9 @@
+.container {
+  padding-inline: 28px;
+}
+
+@media (max-width: 900px) {
+  .title {
+    margin-bottom: 50px;
+  }
+}
