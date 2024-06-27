@@ -1,7 +1,7 @@
 import { Typography } from '@mui/material'
 import LinkButton from '@/components/common/LinkButton'
-import ExternalLinkIcon from '@/public/images/external-link.svg'
 import { type BaseBlock } from '@/components/Home/types'
+import ExternalLinkIcon from '@/public/images/external-link.svg'
 import css from './styles.module.css'
 
 const ExternalLinkCard = ({ title, image, link }: Pick<BaseBlock, 'title' | 'image' | 'link'>) => (
@@ -14,7 +14,9 @@ const ExternalLinkCard = ({ title, image, link }: Pick<BaseBlock, 'title' | 'ima
       </Typography>
     </div>
 
-    <LinkButton underline={false} fullSize href={link?.href} />
+    <a href={link?.href} target="_blank" rel="noreferrer">
+      <LinkButton underline={false} fullSize />
+    </a>
 
     <ExternalLinkIcon className={css.icon} />
   </div>

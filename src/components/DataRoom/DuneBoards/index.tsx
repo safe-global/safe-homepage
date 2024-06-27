@@ -12,7 +12,7 @@ const data: BaseBlock = {
         alt: 'Dune Analytics logo',
       },
       link: {
-        href: 'https://dune.com/queries/2459401/4044167',
+        href: 'https://dune.com/safe/all',
       },
     },
     {
@@ -22,7 +22,7 @@ const data: BaseBlock = {
         alt: 'Dune Analytics logo',
       },
       link: {
-        href: 'https://dune.com/queries/2459401/4044167',
+        href: 'https://dune.com/safe/smart-accounts',
       },
     },
   ],

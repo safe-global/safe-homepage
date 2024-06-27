@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   border-radius: 16px;
-  transition-duration: var(--transition-duration);
+  transition: all var(--transition-duration);
   height: 191px;
 }
 
@@ -32,7 +32,10 @@
   position: absolute;
   top: 24px;
   right: 24px;
-  transition: transform var(--transition-duration);
+}
+
+.icon path {
+  transition: fill var(--transition-duration);
 }
 
 /* Hover */

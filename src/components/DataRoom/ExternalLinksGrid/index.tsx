@@ -1,6 +1,6 @@
+import { Grid, Typography } from '@mui/material'
 import ExternalLinkCard from '@/components/common/Cards/ExternalLinkCard'
 import { type BaseBlock } from '@/components/Home/types'
-import { Grid, Typography } from '@mui/material'
 
 const ExternalLinksGrid = ({ title, items }: Pick<BaseBlock, 'title' | 'items'>) => (
   <Grid container>
