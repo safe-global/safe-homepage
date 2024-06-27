@@ -8,11 +8,11 @@ import TVLComparison from '@/components/DataRoom/TVLComparison'
 import USDCStorage from '@/components/DataRoom/USDCStorage'
 import VolumeTransferred from '@/components/DataRoom/VolumeTransferred'
 import WorldGDP from '@/components/DataRoom/WorldGDP'
-import { Container } from '@mui/material'
+import { Box } from '@mui/material'
 
 export const DataRoom = () => {
   return (
-    <Container>
+    <Box width={'95vw'} marginX={'auto'}>
       <Hero />
       <WorldGDP />
       <USDCStorage />
@@ -24,6 +24,6 @@ export const DataRoom = () => {
       <TVLComparison />
       <SeeMore />
       {/* <Links /> */}
-    </Container>
+    </Box>
   )
 }
