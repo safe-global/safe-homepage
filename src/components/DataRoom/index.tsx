@@ -1,6 +1,7 @@
 import CEXesComparison from '@/components/DataRoom/CEXesComparison'
 import CryptoPunks from '@/components/DataRoom/CryptoPunks'
 import DuneBoards from '@/components/DataRoom/DuneBoards'
+import ExternalReports from '@/components/DataRoom/ExternalReports'
 import Hero from '@/components/DataRoom/Hero'
 import IndustryComparison from '@/components/DataRoom/IndustryComparison'
 import SeeMore from '@/components/DataRoom/SeeMore'
@@ -23,6 +24,6 @@ export const DataRoom = () => (
     <TVLComparison />
     <SeeMore />
     <DuneBoards />
-    {/* <ExternalReports /> */}
+    <ExternalReports />
   </>
 )
