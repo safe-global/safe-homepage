@@ -20,7 +20,8 @@
   },
   {
     "component": "DataRoom/USDCStorage",
-    "title": "We store... <br /> <b>10% of all USDC</b>"
+    "title": "We store... <br/>",
+    "text": "<b>10%<br />of all USDC</b>"
   },
   {
     "component": "DataRoom/CryptoPunks",
