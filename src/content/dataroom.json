@@ -12,7 +12,11 @@
   },
   {
     "component": "DataRoom/WorldGDP",
-    "title": "<b><em>Safe</em> TVL</b> is ~.1% <br /> of World GDP at <b>$100+B</b>"
+    "title": "<b><em>Safe</em> TVL</b> is ~.1% <br /> of World GDP at <b>$100+B</b>",
+    "link": {
+      "title": "Dune dashboard",
+      "href": "https://dune.com/queries/3710102/6242478"
+    }
   },
   {
     "component": "DataRoom/USDCStorage",
