@@ -1,12 +1,7 @@
 import { Box, Container, Typography } from '@mui/material'
+import type { BaseBlock } from '@/components/Home/types'
 
-const title: JSX.Element = (
-  <>
-    We store... <br /> <b>10% of all USDC</b>
-  </>
-)
-
-const USDCStorage = () => (
+const USDCStorage = ({ title }: BaseBlock) => (
   <Container>
     <Box height="100vh" display="flex" flexDirection="column" alignItems="center" justifyContent="center">
       <Typography variant="h1" textAlign="center">

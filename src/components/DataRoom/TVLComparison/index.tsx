@@ -1,15 +1,7 @@
 import { Box, Container, Typography } from '@mui/material'
+import type { BaseBlock } from '@/components/Home/types'
 
-const title: JSX.Element = (
-  <>
-    <b>
-      <em>Safe</em>
-    </b>{' '}
-    TVL <b>x</b> TVL of <b>category leaders</b>
-  </>
-)
-
-const TVLComparison = () => (
+const TVLComparison = ({ title }: BaseBlock) => (
   <Container>
     <Box height="100vh" display="flex" flexDirection="column" alignItems="center" justifyContent="center">
       <Typography variant="h1" textAlign="center">

@@ -1,0 +1,133 @@
+[
+  {
+    "pageTitle": "Data Room",
+    "description": "Own the Internet. Ethereum Smart Accounts to safeguard your digital assets and build the future of ownership.",
+    "image": "/images/Home/meta-image-homepage.jpg",
+    "component": "common/MetaTags"
+  },
+  {
+    "component": "DataRoom/Hero",
+    "title": "Welcome to Safe Data Room",
+    "text": "Explore Mind Bending Sats from Safe Universe"
+  },
+  {
+    "component": "DataRoom/WorldGDP",
+    "title": "<b><em>Safe</em> TVL</b> is ~.1% <br /> of World GDP at <b>$100+B</b>"
+  },
+  {
+    "component": "DataRoom/USDCStorage",
+    "title": "We store... <br /> <b>10% of all USDC</b>"
+  },
+  {
+    "component": "DataRoom/CryptoPunks",
+    "title": "CryptoPunks",
+    "text": "14% of all CryptoPunks are in Safe"
+  },
+  {
+    "component": "DataRoom/VolumeTransferred",
+    "title": "With all time volume transferred...",
+    "text": "and counting"
+  },
+  {
+    "component": "DataRoom/TransactionsOnChain",
+    "title": "<b>1.75% transactions on chain</b> originate from a <b>Safe</b>"
+  },
+  {
+    "component": "DataRoom/IndustryComparison",
+    "title": "How we compare to other industry leaders"
+  },
+  {
+    "component": "DataRoom/CEXesComparison",
+    "title": "<em>Safe</em> has <b>more assets</b> secured than many Fintechs and CEXes"
+  },
+  {
+    "component": "DataRoom/TVLComparison",
+    "title": "<b><em>Safe</em></b> TVL <b>x</b> TVL of <b>category leaders</b>"
+  },
+  {
+    "component": "DataRoom/SeeMore",
+    "title": "Want to see more?"
+  },
+  {
+    "component": "DataRoom/DuneBoards",
+    "title": "Dune Boards",
+    "items": [
+      {
+        "title": "Safe on All chains",
+        "image": {
+          "src": "/images/dune-icon-name-logo.png",
+          "alt": "Dune Analytics logo"
+        },
+        "link": {
+          "href": "https://dune.com/safe/all"
+        }
+      },
+      {
+        "title": "Smart account landscape",
+        "image": {
+          "src": "/images/dune-icon-name-logo.png",
+          "alt": "Dune Analytics logo"
+        },
+        "link": {
+          "href": "https://dune.com/safe/smart-accounts"
+        }
+      }
+    ]
+  },
+  {
+    "component": "DataRoom/ExternalReports",
+    "title": "External Reports",
+    "items": [
+      {
+        "title": "Messari Q4 2023",
+        "image": {
+          "src": "/images/messari-logo.png",
+          "alt": "Messari logo"
+        },
+        "link": {
+          "href": "https://messari.io/report/state-of-safe-q1-2024"
+        }
+      },
+      {
+        "title": "Messari Q1 2024",
+        "image": {
+          "src": "/images/messari-logo.png",
+          "alt": "Messari logo"
+        },
+        "link": {
+          "href": "https://messari.io/report/safe-q3-2023-brief"
+        }
+      },
+      {
+        "title": "Nansen Report",
+        "image": {
+          "src": "/images/nansen-logo.png",
+          "alt": "Nansen logo"
+        },
+        "link": {
+          "href": "https://dune.com/safe/all"
+        }
+      },
+      {
+        "title": "Greenfield One Thesis Post",
+        "image": {
+          "src": "/images/green-field-logo.png",
+          "alt": "Greenfield logo"
+        },
+        "link": {
+          "href": "https://dune.com/safe/smart-accounts"
+        }
+      },
+      {
+        "title": "1kx Thesis Post",
+        "image": {
+          "src": "/images/1kx-logo.png",
+          "alt": "1kx logo"
+        },
+        "link": {
+          "href": "https://dune.com/safe/all"
+        }
+      }
+    ]
+  }
+]

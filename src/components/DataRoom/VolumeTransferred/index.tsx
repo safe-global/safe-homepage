@@ -1,9 +1,7 @@
 import { Box, Container, Typography } from '@mui/material'
+import type { BaseBlock } from '@/components/Home/types'
 
-const title = 'With all time volume transferred...'
-const text = 'and counting'
-
-const Hero = () => (
+const VolumeTransferred = ({ title, text }: BaseBlock) => (
   <Container>
     <Box height="100vh" display="flex" flexDirection="column" alignItems="center" justifyContent="center">
       <Typography variant="h1">{title}</Typography>
@@ -12,4 +10,4 @@ const Hero = () => (
   </Container>
 )
 
-export default Hero
+export default VolumeTransferred
