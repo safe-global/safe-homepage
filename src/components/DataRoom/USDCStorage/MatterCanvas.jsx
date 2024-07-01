@@ -3,17 +3,6 @@ import Matter from 'matter-js'
 
 const { Bodies, Engine, Events, Mouse, MouseConstraint, Render, Runner, World } = Matter
 
-function getRandom(range = 10, canBeNegative = true) {
-  let negativeMulti = 1
-  if (canBeNegative) {
-    negativeMulti = Math.random() > 0.5 ? -1 : 1
-  }
-  const finalAdd = range * Math.random() * negativeMulti
-
-  // console.log('--  finalAdd: ', finalAdd)
-  return finalAdd
-}
-
 export default function MatterCanvas({ spawnCoins, imgUrl }) {
   const canvas = useRef(null)
   const world = useRef(null)
@@ -153,7 +142,7 @@ export default function MatterCanvas({ spawnCoins, imgUrl }) {
 
         World.add(
           engine.world,
-          Bodies.circle(positionXY.x + getRandom(15) || dimensions.width / 2, 0, 50, {
+          Bodies.circle(positionXY.x + Math.random() * 15 || dimensions.width / 2, 0, 50, {
             restitution: 0.4,
             render: {
               sprite: {
