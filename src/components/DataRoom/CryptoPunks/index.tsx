@@ -33,20 +33,21 @@ const CryptoPunks = ({ title, text, link }: BaseBlock) => {
 }
 
 const LeftPanel = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) => {
-  const OPACITY = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.75], [0, 1, 1, 0])
-  const TRANSLATE_LTR = useTransform(scrollYProgress, [0.25, 0.75], ['-50%', '0%'])
-  const TRANSLATE_RTL = useTransform(scrollYProgress, [0.25, 0.75], ['0%', '-50%'])
-  const BG_TRANSLATE = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.75], ['-100%', '0%', '0%', '-100%'])
+  const opacity = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.75], [0, 1, 1, 0])
+  const translateLTR = useTransform(scrollYProgress, [0.25, 0.75], ['-50%', '0%'])
+  const translateRTL = useTransform(scrollYProgress, [0.25, 0.75], ['0%', '-50%'])
+  const bgTranslate = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.75], ['-100%', '0%', '0%', '-100%'])
+
   return (
     <motion.div
       style={{
-        x: BG_TRANSLATE,
-        opacity: OPACITY,
+        x: bgTranslate,
+        opacity: opacity,
       }}
       className={css.leftPanelContainer}
     >
       {Array.from({ length: CRYPTOPUNK_ROWS_NR }).map((_, outerIndex) => {
-        const getTranslate = (index: number) => (index % 2 === 1 ? TRANSLATE_LTR : TRANSLATE_RTL)
+        const getTranslate = (index: number) => (index % 2 === 1 ? translateLTR : translateRTL)
         return (
           <motion.div
             style={{ translateX: getTranslate(outerIndex) }}
@@ -79,14 +80,15 @@ const LeftPanel = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> }
 }
 
 const RightPanel = ({ scrollYProgress, children }: { scrollYProgress: MotionValue<number>; children: ReactNode }) => {
-  const OPACITY = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.75], [0, 1, 1, 0])
-  const BG_X_TRANSLATE = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.75], ['100%', '0%', '0%', '100%'])
+  const opacity = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.75], [0, 1, 1, 0])
+  const bgTranslate = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.75], ['100%', '0%', '0%', '100%'])
+
   return (
     <div className={css.rightPanelContainer}>
       <motion.div
         className={css.rightPanelContent}
         style={{
-          opacity: OPACITY,
+          opacity: opacity,
         }}
       >
         {children}
@@ -94,7 +96,7 @@ const RightPanel = ({ scrollYProgress, children }: { scrollYProgress: MotionValu
       <motion.div
         className={css.rightPanelBG}
         style={{
-          translateX: BG_X_TRANSLATE,
+          translateX: bgTranslate,
         }}
       ></motion.div>
     </div>
