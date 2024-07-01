@@ -61,6 +61,8 @@ const LeftPanel = ({ scrollYProgress, isMobile }: { scrollYProgress: MotionValue
 
   const translateDirection = (index: number) => (index % 2 === 1 ? translateLTR : translateRTL)
 
+  const translateDirection = (index: number) => (index % 2 === 1 ? translateLTR : translateRTL)
+
   return (
     <motion.div
       style={{
