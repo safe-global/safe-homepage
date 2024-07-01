@@ -1,0 +1,37 @@
+.sectionContainer {
+  height: 200vh;
+}
+
+.stickyContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+}
+
+.headerText {
+  margin-bottom: 150px;
+  margin-left: 150px;
+}
+
+.volumeTrailContainer {
+  white-space: nowrap;
+  align-items: baseline;
+  gap: 24px;
+  display: flex;
+}
+
+.volume {
+  color: '#12FF80';
+  font-size: 180px;
+  font-weight: 400;
+}
+
+.SlidingModule {
+  height: 200px;
+  margin-top: 50px;
+}
