@@ -1,0 +1,53 @@
+.sectionContainer {
+  height: 300vh;
+  display: flex;
+}
+
+.stickyContainer {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: sticky;
+  top: 0;
+}
+
+.RightPanelContainer {
+  width: 50%;
+  position: relative;
+  color: #121312;
+  overflow-x: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.RightPanelContent {
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 64px;
+}
+
+.RightPanelBG {
+  position: absolute;
+  inset: 0;
+  background-color: #12ff80;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.LeftPanelContainer {
+  width: 50%;
+  overflow-x: visible;
+  overflow-y: hidden;
+  color: #303033;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.CryptoPunkColumns {
+  display: flex;
+  gap: 24px;
+}
