@@ -7,6 +7,7 @@ import type { MotionValue } from 'framer-motion'
 import css from './styles.module.css'
 import LinksWrapper from '../LinksWrapper'
 import { getColor } from './utils'
+import CryptoPunk from '@/public/images/DataRoom/cryptopunk-silhouette.svg'
 
 const CRYPTOPUNK_ROWS_NR = 8
 const CRYPTOPUNK_COLUMNS_NR = 15
@@ -22,6 +23,7 @@ const CryptoPunks = ({ title, text, link }: BaseBlock) => {
     <div ref={backgroundRef} className={css.sectionContainer}>
       <div className={css.stickyContainer}>
         <LeftPanel scrollYProgress={scrollYProgress} />
+
         <RightPanel scrollYProgress={scrollYProgress}>
           <Typography variant="h2">{title}</Typography>
           <Typography variant="h2">{text}</Typography>
@@ -38,43 +40,40 @@ const LeftPanel = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> }
   const translateRTL = useTransform(scrollYProgress, [0.25, 0.75], ['0%', '-50%'])
   const bgTranslate = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.75], ['-100%', '0%', '0%', '-100%'])
 
+  const translateDirection = (index: number) => (index % 2 === 1 ? translateLTR : translateRTL)
+
   return (
     <motion.div
       style={{
         x: bgTranslate,
-        opacity: opacity,
+        opacity,
       }}
       className={css.leftPanelContainer}
     >
-      {Array.from({ length: CRYPTOPUNK_ROWS_NR }).map((_, outerIndex) => {
-        const getTranslate = (index: number) => (index % 2 === 1 ? translateLTR : translateRTL)
-        return (
-          <motion.div
-            style={{ translateX: getTranslate(outerIndex) }}
-            className={css.cryptoPunkColumns}
-            key={outerIndex}
-          >
-            {Array.from({ length: CRYPTOPUNK_COLUMNS_NR }).map((_, innerIndex) => {
-              return (
-                <motion.div
-                  key={innerIndex}
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{
-                    duration: 0.3,
-                  }}
-                  style={{
-                    transformOrigin: 'center',
-                    color: getColor(),
-                  }}
-                >
-                  <CryptoPunkSVG />
-                </motion.div>
-              )
-            })}
-          </motion.div>
-        )
-      })}
+      {Array.from({ length: CRYPTOPUNK_ROWS_NR }).map((_, outerIndex) => (
+        <motion.div
+          style={{ translateX: translateDirection(outerIndex) }}
+          className={css.cryptoPunkColumns}
+          key={outerIndex}
+        >
+          {Array.from({ length: CRYPTOPUNK_COLUMNS_NR }).map((_, innerIndex) => (
+            <motion.div
+              key={innerIndex}
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.3,
+              }}
+              style={{
+                transformOrigin: 'center',
+                color: getColor(),
+              }}
+            >
+              <CryptoPunk />
+            </motion.div>
+          ))}
+        </motion.div>
+      ))}
     </motion.div>
   )
 }
@@ -88,7 +87,7 @@ const RightPanel = ({ scrollYProgress, children }: { scrollYProgress: MotionValu
       <motion.div
         className={css.rightPanelContent}
         style={{
-          opacity: opacity,
+          opacity,
         }}
       >
         {children}
@@ -99,37 +98,6 @@ const RightPanel = ({ scrollYProgress, children }: { scrollYProgress: MotionValu
           translateX: bgTranslate,
         }}
       ></motion.div>
-    </div>
-  )
-}
-
-const CryptoPunkSVG = () => {
-  return (
-    <div>
-      <svg width="80" height="120" viewBox="0 0 80 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g opacity="0.6">
-          <rect x="12.7672" y="12.8345" width="6.11973" height="31.4438" fill="currentColor" />
-          <rect x="12.7672" y="69.9463" width="6.11973" height="50.0535" fill="currentColor" />
-          <rect x="6.6474" y="44.2783" width="6.11973" height="12.1925" fill="currentColor" />
-          <rect width="6.11973" height="6.41711" transform="matrix(1 0 0 -1 0.52771 62.8877)" fill="currentColor" />
-          <rect width="6.11973" height="6.41711" transform="matrix(1 0 0 -1 12.7672 62.8877)" fill="currentColor" />
-          <rect width="6.11973" height="6.41711" transform="matrix(1 0 0 -1 6.6474 69.3047)" fill="currentColor" />
-          <rect width="6.11973" height="6.41711" transform="matrix(1 0 0 -1 18.8869 12.8345)" fill="currentColor" />
-          <rect width="6.11973" height="12.8342" transform="matrix(1 0 0 -1 36.6342 120)" fill="currentColor" />
-          <rect width="6.11973" height="6.41711" transform="matrix(1 0 0 -1 67.2328 100.749)" fill="currentColor" />
-          <rect width="24.4789" height="6.41711" transform="matrix(1 0 0 -1 42.7538 107.166)" fill="currentColor" />
-          <rect width="6.11973" height="6.41711" transform="matrix(1 0 0 -1 67.2328 12.8345)" fill="currentColor" />
-          <rect
-            x="67.2328"
-            y="6.41699"
-            width="42.2262"
-            height="6.41711"
-            transform="rotate(180 67.2328 6.41699)"
-            fill="currentColor"
-          />
-          <rect x="73.3525" y="12.8345" width="6.11973" height="81.4973" fill="currentColor" />
-        </g>
-      </svg>
     </div>
   )
 }
