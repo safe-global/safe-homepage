@@ -28,7 +28,7 @@ const CryptoPunks = ({ title, text, link }: BaseBlock) => {
   )
 }
 
-function LeftPanel({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) {
+const LeftPanel = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) => {
   const OPACITY = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.75], [0, 1, 1, 0])
   const TRANSLATE_LTR = useTransform(scrollYProgress, [0.25, 0.75], ['-50%', '0%'])
   const TRANSLATE_RTL = useTransform(scrollYProgress, [0.25, 0.75], ['0%', '-50%'])
