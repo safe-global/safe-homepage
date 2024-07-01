@@ -1,5 +1,5 @@
 .sectionContainer {
-  height: 150vh;
+  height: 200vh;
 }
 
 .stickyContainer {
@@ -12,8 +12,20 @@
   top: 0;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+.linkContainer {
+  align-self: flex-end;
+  margin-top: 80px;
+  margin-right: 80px;
+}
+
 .counterContainer {
-  color: var(--mui-palette-text-primary);
+  color: var(--mui-palette-primary-main);
   font-size: 1.875rem;
   font-weight: 400;
   display: flex;
@@ -21,23 +33,23 @@
   translate: 50px 0;
 }
 
-.Box1 {
+.box1 {
   height: 100px;
   overflow: hidden;
 }
 
-.Box2 {
+.box2 {
   height: 150px;
   overflow: hidden;
 }
 
-.Digit {
+.digit {
   font-variant-numeric: tabular-nums;
   position: relative;
   width: 1ch;
 }
 
-.Number {
+.number {
   position: absolute;
   inset: 0px;
   display: flex;
@@ -45,11 +57,11 @@
   justify-content: center;
 }
 
-.Counter {
+.counter {
   display: flex;
   overflow: hidden;
 }
 
-.CounterSpan {
+.counterSpan {
   margin-top: 96px;
 }

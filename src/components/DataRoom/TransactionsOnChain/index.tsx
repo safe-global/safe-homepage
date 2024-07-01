@@ -1,24 +1,29 @@
-import { Box, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
 import type { BaseBlock } from '@/components/Home/types'
 import Counter from './Counter'
 import { useScroll, useTransform, motion } from 'framer-motion'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef } from 'react'
 import css from './styles.module.css'
+import { useCounterScroll } from './utils'
+import LinksWrapper from '../LinksWrapper'
 
-const TransactionsOnChain = ({ title, text }: BaseBlock) => {
-  const TRANSACTIONS_AMOUNT = 1.75
+const TRANSACTIONS_AMOUNT = 1.75
+
+const TransactionsOnChain = ({ text, link }: BaseBlock) => {
   return (
-    <Box className={css.sectionContainer}>
-      <Box className={css.stickyContainer}>
+    <div className={css.sectionContainer}>
+      <div className={css.stickyContainer}>
         <CounterContainer percentage={TRANSACTIONS_AMOUNT} />
-        <Typography variant="h1">{text}</Typography>
-      </Box>
-    </Box>
+        <div className={css.content}>
+          <Typography variant="h1">{text}</Typography>
+          <div className={css.linkContainer}>{link && <LinksWrapper {...link} />}</div>
+        </div>
+      </div>
+    </div>
   )
 }
 
 const CounterContainer = ({ percentage }: { percentage: number }) => {
-  const [value, setValue] = useState(0)
   const targetScrollRef = useRef<HTMLDivElement>(null)
 
   const { scrollYProgress } = useScroll({
@@ -26,37 +31,25 @@ const CounterContainer = ({ percentage }: { percentage: number }) => {
     offset: ['start end', 'end start'],
   })
 
-  const OPACITY = useTransform(scrollYProgress, [0, 0.5], [0.1, 1])
-  const Y_TRANSFORM = useTransform(scrollYProgress, [0, 0.5], [600, 0])
-
-  //useEffect To Update Counter Value Based On Scroll Position
-  useEffect(() => {
-    const unsubscribe = scrollYProgress.onChange((latest) => {
-      if (latest >= 0.11) {
-        setValue(percentage)
-      }
-      if (latest <= 0.1) {
-        setValue(0)
-      }
-    })
-    return () => unsubscribe()
-  }, [scrollYProgress, percentage])
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [0.1, 1])
+  const yTransform = useTransform(scrollYProgress, [0, 0.5], [600, 0])
+  const value = useCounterScroll(scrollYProgress, percentage)
 
   return (
     <motion.div
       style={{
-        opacity: OPACITY,
-        y: Y_TRANSFORM,
+        opacity: opacity,
+        y: yTransform,
       }}
       className={css.counterContainer}
       ref={targetScrollRef}
     >
-      <Box className={css.Box1}>
+      <div className={css.box1}>
         <Counter value={value} />
-      </Box>
-      <Box className={css.Box2}>
+      </div>
+      <div className={css.box2}>
         <Counter value={value} />
-      </Box>
+      </div>
       <div>
         <Counter value={value} />
       </div>

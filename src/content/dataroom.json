@@ -34,7 +34,11 @@
   },
   {
     "component": "DataRoom/TransactionsOnChain",
-    "text": "<b>transactions on chain</b> originate from a <b>Safe</b>"
+    "text": "<b>transactions on chain</b> originate from a <b>Safe</b>",
+    "link": {
+      "title": "Dune dashboard",
+      "href": "https://dune.com/queries/3710102/6242478"
+    }
   },
   {
     "component": "DataRoom/IndustryComparison",
