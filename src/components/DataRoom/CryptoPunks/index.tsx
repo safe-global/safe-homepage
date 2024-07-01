@@ -41,51 +41,43 @@ function LeftPanel({ scrollYProgress }: { scrollYProgress: MotionValue<number> }
       }}
       className={css.LeftPanelContainer}
     >
-      {Array.from({ length: 8 }).map((_, outerIndex) => (
-        <motion.div
-          style={{
-            // Columns with odd indices translate from left to right,
-            // while columns with even indices translate from right to left.
-            translateX: outerIndex % 2 === 1 ? TRANSLATE_LTR : TRANSLATE_RTL,
-          }}
-          className={css.CryptoPunkColumns}
-          key={outerIndex}
-        >
-          {Array.from({ length: 15 }).map((_, innerIndex) => {
-            // Generate a random number between 0 and 1
-            const CHANCE = Math.random()
-            // Determine if the color should be green (14% CHANCE)
-            const IS_GREEN = CHANCE <= 0.14
-            // Determine if the color should be dark green (3% CHANCE)
-            const IS_DARK_GREEN = CHANCE >= 0.14 && CHANCE <= 0.17
-            // Determine if the color should be darker green (3% CHANCE)
-            const IS_DARKER_GREEN = CHANCE > 0.17 && CHANCE <= 0.2
+      {Array.from({ length: 8 }).map((_, outerIndex) => {
+        const getTranslate = (index: number) => (index % 2 === 1 ? TRANSLATE_LTR : TRANSLATE_RTL)
+        return (
+          <motion.div
+            style={{ translateX: getTranslate(outerIndex) }}
+            className={css.CryptoPunkColumns}
+            key={outerIndex}
+          >
+            {Array.from({ length: 15 }).map((_, innerIndex) => {
+              function getColor() {
+                const CHANCE = Math.random()
+                if (CHANCE <= 0.14) return '#12FF80' // Green (14% CHANCE)
+                if (CHANCE <= 0.17) return '#12A154' // Dark Green (3% CHANCE)
+                if (CHANCE <= 0.2) return '#124228' // Darker Green (3% CHANCE)
+                return 'currentColor'
+              }
 
-            return (
-              <motion.div
-                key={innerIndex}
-                initial={{ opacity: 0, scale: 0.5 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{
-                  duration: 0.3,
-                }}
-                style={{
-                  transformOrigin: 'center',
-                  color: IS_GREEN
-                    ? '#12FF80'
-                    : IS_DARK_GREEN
-                    ? '#12A154'
-                    : IS_DARKER_GREEN
-                    ? '#124228'
-                    : 'currentColor',
-                }}
-              >
-                <CryptoPunkSVG />
-              </motion.div>
-            )
-          })}
-        </motion.div>
-      ))}
+              return (
+                <motion.div
+                  key={innerIndex}
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    duration: 0.3,
+                  }}
+                  style={{
+                    transformOrigin: 'center',
+                    color: getColor(),
+                  }}
+                >
+                  <CryptoPunkSVG />
+                </motion.div>
+              )
+            })}
+          </motion.div>
+        )
+      })}
     </motion.div>
   )
 }
