@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
 import type { BaseBlock } from '@/components/Home/types'
 import { useRef } from 'react'
 import { useScroll, motion, useTransform } from 'framer-motion'
@@ -6,6 +6,10 @@ import type { ReactNode } from 'react'
 import type { MotionValue } from 'framer-motion'
 import css from './styles.module.css'
 import LinksWrapper from '../LinksWrapper'
+import { getColor } from './utils'
+
+const CRYPTOPUNK_ROWS_NR = 8
+const CRYPTOPUNK_COLUMNS_NR = 15
 
 const CryptoPunks = ({ title, text, link }: BaseBlock) => {
   const backgroundRef = useRef<HTMLDivElement>(null)
@@ -15,16 +19,16 @@ const CryptoPunks = ({ title, text, link }: BaseBlock) => {
   })
 
   return (
-    <Box ref={backgroundRef} className={css.sectionContainer}>
-      <Box className={css.stickyContainer}>
+    <div ref={backgroundRef} className={css.sectionContainer}>
+      <div className={css.stickyContainer}>
         <LeftPanel scrollYProgress={scrollYProgress} />
         <RightPanel scrollYProgress={scrollYProgress}>
           <Typography variant="h2">{title}</Typography>
           <Typography variant="h2">{text}</Typography>
           {link && <LinksWrapper {...link} />}
         </RightPanel>
-      </Box>
-    </Box>
+      </div>
+    </div>
   )
 }
 
@@ -41,7 +45,7 @@ const LeftPanel = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> }
       }}
       className={css.LeftPanelContainer}
     >
-      {Array.from({ length: 8 }).map((_, outerIndex) => {
+      {Array.from({ length: CRYPTOPUNK_ROWS_NR }).map((_, outerIndex) => {
         const getTranslate = (index: number) => (index % 2 === 1 ? TRANSLATE_LTR : TRANSLATE_RTL)
         return (
           <motion.div
@@ -49,15 +53,7 @@ const LeftPanel = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> }
             className={css.CryptoPunkColumns}
             key={outerIndex}
           >
-            {Array.from({ length: 15 }).map((_, innerIndex) => {
-              function getColor() {
-                const CHANCE = Math.random()
-                if (CHANCE <= 0.14) return '#12FF80' // Green (14% CHANCE)
-                if (CHANCE <= 0.17) return '#12A154' // Dark Green (3% CHANCE)
-                if (CHANCE <= 0.2) return '#124228' // Darker Green (3% CHANCE)
-                return 'currentColor'
-              }
-
+            {Array.from({ length: CRYPTOPUNK_COLUMNS_NR }).map((_, innerIndex) => {
               return (
                 <motion.div
                   key={innerIndex}
