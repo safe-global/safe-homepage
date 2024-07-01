@@ -10,7 +10,7 @@ export default function MatterCanvas({ spawnCoins, imgUrl }) {
   const runnerRef = useRef(null)
   const [objectsCount, objectsCountSet] = useState(0)
   const [fps, fpsSet] = useState(0)
-  const [dimensions, setDimensions] = useState({ width: 1000, height: 700 })
+  const [dimensions, setDimensions] = useState({ width: 1000, height: 1000 })
 
   useEffect(() => {
     const debounce = (func, wait) => {
@@ -56,51 +56,36 @@ export default function MatterCanvas({ spawnCoins, imgUrl }) {
         },
       })
 
-      const wallBorderWidth = 25
-      const wallLength = 500
+      const WALL_BORDER_WIDTH = 25
+      const WALL_LENGTH = 500
 
       // walls
       World.add(engine.world, [
-        // celling
-        Bodies.rectangle(0, 0 - wallBorderWidth / 2, wallLength * 8, wallBorderWidth, {
-          isStatic: true,
-          render: { visible: false },
-        }),
-        // ground
-        //   Bodies.rectangle(0, dimensions.height - dimensions.height / 4, wallLength * 0.7, wallBorderWidth, {
-        //     isStatic: true,
-        //   }),
-
-        // ground 2
-        Bodies.rectangle(0, dimensions.height + wallBorderWidth / 2 - 15, dimensions.width * 9, wallBorderWidth, {
+        Bodies.rectangle(0, 0 - WALL_BORDER_WIDTH / 2, WALL_LENGTH * 8, WALL_BORDER_WIDTH, {
           isStatic: true,
           render: { visible: false },
         }),
 
-        Bodies.rectangle(0, dimensions.height - dimensions.height / 2, wallBorderWidth, wallLength * 8, {
+        Bodies.rectangle(0, dimensions.height + WALL_BORDER_WIDTH / 2 - 15, dimensions.width * 9, WALL_BORDER_WIDTH, {
           isStatic: true,
           render: { visible: false },
         }),
-        Bodies.rectangle(dimensions.width, dimensions.height - dimensions.height / 2, wallBorderWidth, wallLength * 8, {
-          isStatic: true,
-          render: { visible: false },
-        }),
-      ])
 
-      // MOUSE
-      const mouse = Mouse.create(render.canvas)
-      render.mouse = mouse
-      const mouseConstraint = MouseConstraint.create(engine, {
-        mouse,
-        constraint: {
-          stiffness: 0.5,
-          render: {
-            visible: true,
+        Bodies.rectangle(0, dimensions.height - dimensions.height / 2, WALL_BORDER_WIDTH, WALL_LENGTH * 8, {
+          isStatic: true,
+          render: { visible: false },
+        }),
+        Bodies.rectangle(
+          dimensions.width,
+          dimensions.height - dimensions.height / 2,
+          WALL_BORDER_WIDTH,
+          WALL_LENGTH * 8,
+          {
+            isStatic: true,
+            render: { visible: false },
           },
-        },
-      })
-
-      World.add(engine.world, mouseConstraint)
+        ),
+      ])
 
       // Generate 20 coins over 5 seconds if spawnCoins is true
       if (spawnCoins) {
@@ -118,11 +103,6 @@ export default function MatterCanvas({ spawnCoins, imgUrl }) {
         }, 5000 / 20) // 5 seconds divided by 20 Coins
       }
 
-      //
-      //
-      // After Update
-      //
-      //
       Events.on(engine, 'afterUpdate', (ev) => {
         // const time = engine.timing.timestamp
         objectsCountSet(ev.source.world.bodies.length)
