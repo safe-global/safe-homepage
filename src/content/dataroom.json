@@ -21,7 +21,15 @@
   {
     "component": "DataRoom/USDCStorage",
     "title": "We store... <br/>",
-    "text": "<b>10%<br />of all USDC</b>"
+    "text": "<b>of all USDC</b>",
+    "link": {
+      "title": "Dune dashboard",
+      "href": "https://dune.com/queries/3710102/6242478"
+    },
+    "image": {
+      "src": "/images/Dataroom/USDC.png",
+      "alt": "USDC Coin"
+    }
   },
   {
     "component": "DataRoom/CryptoPunks",

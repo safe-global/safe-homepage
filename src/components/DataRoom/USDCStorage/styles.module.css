@@ -12,6 +12,16 @@
   overflow: hidden;
 }
 
+.usdcPercentage {
+  font-size: 180px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.text {
+  margin-bottom: 70px;
+}
+
 .content {
   width: 50%;
   display: flex;
