@@ -1,0 +1,55 @@
+.sectionContainer {
+  height: 150vh;
+}
+
+.stickyContainer {
+  height: 100vh;
+  display: flex;
+  gap: 120px;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.counterContainer {
+  color: var(--mui-palette-text-primary);
+  font-size: 1.875rem;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  translate: 50px 0;
+}
+
+.Box1 {
+  height: 100px;
+  overflow: hidden;
+}
+
+.Box2 {
+  height: 150px;
+  overflow: hidden;
+}
+
+.Digit {
+  font-variant-numeric: tabular-nums;
+  position: relative;
+  width: 1ch;
+}
+
+.Number {
+  position: absolute;
+  inset: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Counter {
+  display: flex;
+  overflow: hidden;
+}
+
+.CounterSpan {
+  margin-top: 96px;
+}
