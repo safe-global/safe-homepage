@@ -11,7 +11,7 @@
   top: 0;
 }
 
-.RightPanelContainer {
+.rightPanelContainer {
   width: 50%;
   position: relative;
   color: #121312;
@@ -20,7 +20,7 @@
   align-items: flex-end;
 }
 
-.RightPanelContent {
+.rightPanelContent {
   z-index: 20;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@
   padding: 64px;
 }
 
-.RightPanelBG {
+.rightPanelBG {
   position: absolute;
   inset: 0;
   background-color: #12ff80;
@@ -37,7 +37,7 @@
   z-index: 10;
 }
 
-.LeftPanelContainer {
+.leftPanelContainer {
   width: 50%;
   overflow-x: visible;
   overflow-y: hidden;
@@ -47,7 +47,7 @@
   gap: 24px;
 }
 
-.CryptoPunkColumns {
+.cryptoPunkColumns {
   display: flex;
   gap: 24px;
 }

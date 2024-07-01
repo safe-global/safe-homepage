@@ -43,14 +43,14 @@ const LeftPanel = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> }
         x: BG_TRANSLATE,
         opacity: OPACITY,
       }}
-      className={css.LeftPanelContainer}
+      className={css.leftPanelContainer}
     >
       {Array.from({ length: CRYPTOPUNK_ROWS_NR }).map((_, outerIndex) => {
         const getTranslate = (index: number) => (index % 2 === 1 ? TRANSLATE_LTR : TRANSLATE_RTL)
         return (
           <motion.div
             style={{ translateX: getTranslate(outerIndex) }}
-            className={css.CryptoPunkColumns}
+            className={css.cryptoPunkColumns}
             key={outerIndex}
           >
             {Array.from({ length: CRYPTOPUNK_COLUMNS_NR }).map((_, innerIndex) => {
@@ -82,9 +82,9 @@ const RightPanel = ({ scrollYProgress, children }: { scrollYProgress: MotionValu
   const OPACITY = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.75], [0, 1, 1, 0])
   const BG_X_TRANSLATE = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.75], ['100%', '0%', '0%', '100%'])
   return (
-    <div className={css.RightPanelContainer}>
+    <div className={css.rightPanelContainer}>
       <motion.div
-        className={css.RightPanelContent}
+        className={css.rightPanelContent}
         style={{
           opacity: OPACITY,
         }}
@@ -92,7 +92,7 @@ const RightPanel = ({ scrollYProgress, children }: { scrollYProgress: MotionValu
         {children}
       </motion.div>
       <motion.div
-        className={css.RightPanelBG}
+        className={css.rightPanelBG}
         style={{
           translateX: BG_X_TRANSLATE,
         }}
