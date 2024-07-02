@@ -3,7 +3,7 @@
   overflow: hidden;
 }
 
-.animationSlider {
+.animation {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   width: max-content;
@@ -12,6 +12,13 @@
   animation-delay: 0s;
   animation-play-state: running;
   animation-name: slide;
+}
+
+.slider {
+  height: 40px;
+  display: flex;
+  gap: var(--items-gap);
+  align-items: center;
 }
 
 .item {
