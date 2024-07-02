@@ -1,0 +1,32 @@
+.wrapper {
+  --items-gap: 16px;
+  overflow: hidden;
+}
+
+.animationSlider {
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  width: max-content;
+  min-width: 200%;
+  animation-duration: 100s;
+  animation-delay: 0s;
+  animation-play-state: running;
+  animation-name: slide;
+}
+
+.item {
+  margin-left: var(--items-gap);
+  color: var(--mui-palette-primary-main);
+}
+
+.item::before {
+  content: '•';
+  color: var(--mui-palette-primary-main);
+  margin-right: var(--items-gap);
+}
+
+@keyframes slide {
+  to {
+    transform: translate(-50%);
+  }
+}
