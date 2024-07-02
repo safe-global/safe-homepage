@@ -1,4 +1,3 @@
-import { Box } from '@mui/material'
 import { motion, useSpring, useTransform } from 'framer-motion'
 import { useEffect } from 'react'
 import css from './styles.module.css'
@@ -18,22 +17,20 @@ type NumberProps = {
   number: number
 }
 
-const FONT_SIZE = 200
-const PADDING = 15
-const HEIGHT = FONT_SIZE + PADDING
+const DIGIT_HEIGHT = 215
 
 const Counter = ({ value }: CounterProps) => {
   const integerPart = Math.floor(value)
   const decimalPart = value % 1
 
   return (
-    <Box fontSize={FONT_SIZE} className={css.counter}>
+    <div className={css.counter}>
       <Digit place={1} value={integerPart} />
       <span className={css.counterSpan}>.</span>
       <Digit place={0.1} value={decimalPart} />
       <Digit place={0.01} value={decimalPart} />
       <span className={css.counterSpan}>%</span>
-    </Box>
+    </div>
   )
 }
 
@@ -49,16 +46,16 @@ const Digit = ({ place, value }: DigitProps) => {
   }, [animatedValue, valueRoundedToPlace])
 
   return (
-    <Box height={HEIGHT} className={css.digit}>
+    <div className={css.digit}>
       {Array.from({ length: 10 }, (_, i) => (
         <Number key={i} mv={animatedValue} number={i} />
       ))}
-    </Box>
+    </div>
   )
 }
 
 const Number = ({ mv, number }: NumberProps) => {
-  let yPosition = useTransform(mv, (latest: number) => calculateYPosition(latest, number, HEIGHT))
+  let yPosition = useTransform(mv, (latest: number) => calculateYPosition(latest, number, DIGIT_HEIGHT))
 
   return (
     <motion.span style={{ y: yPosition }} className={css.number}>

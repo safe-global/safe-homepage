@@ -26,7 +26,7 @@
 
 .counterContainer {
   color: var(--mui-palette-primary-main);
-  font-size: 1.875rem;
+  font-size: 30px;
   font-weight: 400;
   display: flex;
   flex-direction: column;
@@ -47,6 +47,7 @@
   font-variant-numeric: tabular-nums;
   position: relative;
   width: 1ch;
+  height: 215px;
 }
 
 .number {
@@ -60,6 +61,7 @@
 .counter {
   display: flex;
   overflow: hidden;
+  font-size: 200px;
 }
 
 .counterSpan {

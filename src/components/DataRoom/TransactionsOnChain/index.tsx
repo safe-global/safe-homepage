@@ -4,7 +4,7 @@ import Counter from './Counter'
 import { useScroll, useTransform, motion } from 'framer-motion'
 import React, { useRef } from 'react'
 import css from './styles.module.css'
-import { useCounterScroll } from './utils'
+import { useCounterScroll } from './useCounterScroll'
 import LinksWrapper from '../LinksWrapper'
 
 const TRANSACTIONS_AMOUNT = 1.75
@@ -38,7 +38,7 @@ const CounterContainer = ({ percentage }: { percentage: number }) => {
   return (
     <motion.div
       style={{
-        opacity: opacity,
+        opacity,
         y: yTransform,
       }}
       className={css.counterContainer}
