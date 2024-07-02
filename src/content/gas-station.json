@@ -1,0 +1,19 @@
+[
+  {
+    "pageTitle": "Safe Gas Station",
+    "description": "Get gas credits to make your app gasless",
+    "component": "common/MetaTags"
+  },
+  {
+    "component": "GasStation/Hero",
+    "title": "Get gas credits to make your app gasless",
+    "link": {
+      "title": "Get gas sponsorship",
+      "href": "#"
+    }
+  },
+  {
+    "component": "GasStation/Slider",
+    "text": "User should not pay gas for using your app"
+  }
+]

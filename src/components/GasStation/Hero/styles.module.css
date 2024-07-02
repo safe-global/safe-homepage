@@ -1,0 +1,28 @@
+.videoWrapper {
+  position: relative;
+}
+
+.video {
+  width: 100%;
+}
+
+.textContainer {
+  text-align: center;
+  padding: 0 16px;
+}
+
+@media (min-width: 900px) {
+  .textContainer {
+    position: absolute;
+    top: 210px;
+    left: calc(50% - 350px);
+    max-width: 700px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .videoWrapper {
+    margin-left: -104px;
+    margin-right: -104px;
+  }
+}
