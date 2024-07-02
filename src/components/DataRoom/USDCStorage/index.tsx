@@ -45,7 +45,6 @@ const USDCStorage = ({ title, text, link, image }: BaseBlock) => {
           <MotionTypography customDelay={0.5}>
             <Typography variant="h2">{title}</Typography>
           </MotionTypography>
-
           <MotionTypography customDelay={1.5}>
             <Typography className={css.usdcPercentage}>
               <b>{USDC_PERCENTAGE}</b>
