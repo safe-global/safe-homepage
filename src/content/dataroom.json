@@ -38,8 +38,8 @@
   },
   {
     "component": "DataRoom/VolumeTransferred",
-    "title": "With all time volume transferred...",
-    "text": "and counting"
+    "title": "With all time volume <br/> transferred",
+    "text": "and counting..."
   },
   {
     "component": "DataRoom/TransactionsOnChain",
