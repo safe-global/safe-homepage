@@ -225,7 +225,7 @@
     ],
     "image": {
       "src": "/images/Home/ecosystem-partners.png",
-      "alt": "Hands holding code brackets"
+      "alt": "Ecosystem partners cards"
     },
     "mobileVariant": "text-image",
     "component": "Home/TextBlockImageEcosystem"

@@ -15,5 +15,36 @@
   {
     "component": "GasStation/Slider",
     "text": "User should not pay gas for using your app"
+  },
+  {
+    "component": "GasStation/TextBlockImagePartners",
+    "variant": "image-text",
+    "title": "Why sponsor gas?",
+    "text": "ERC 4337 and smart accounts can make user experience completely gasless by sponsoring transactions.",
+    "items": [
+      {
+        "image": {
+          "src": "/images/pimlico-logo.png",
+          "alt": "Pimlico"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/gnosis-logo.png",
+          "alt": "Gnosis"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/polygon.svg",
+          "alt": "Polygon"
+        }
+      }
+    ],
+    "image": {
+      "src": "/images/GasStation/gas-sign.png",
+      "alt": "Sign pointing to gasless apps"
+    },
+    "mobileVariant": "text-image"
   }
 ]
