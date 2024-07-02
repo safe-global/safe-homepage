@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
 import { useScroll, useTransform, motion } from 'framer-motion'
 import css from './styles.module.css'
 import { useRef } from 'react'
@@ -13,24 +13,24 @@ const VolumeTransferred = ({ title, text }: BaseBlock) => {
     offset: ['start end', 'end start'],
   })
 
-  const X_LTR = useTransform(scrollYProgress, [0.25, 0.75], ['-100%', '120%'])
-  const X_RTL = useTransform(scrollYProgress, [0.25, 0.75], ['120%', '-140%'])
-  const OPACITY_LTR = useTransform(scrollYProgress, [0.25, 0.3, 0.7, 0.75], [0, 1, 1, 0])
-  const OPACITY_RTL = useTransform(scrollYProgress, [0.25, 0.3, 0.7, 0.75], [0, 1, 1, 0])
+  const transformLTR = useTransform(scrollYProgress, [0.25, 0.75], ['-100%', '120%'])
+  const transformRTL = useTransform(scrollYProgress, [0.25, 0.75], ['120%', '-140%'])
+  const opacityLTR = useTransform(scrollYProgress, [0.25, 0.3, 0.7, 0.75], [0, 1, 1, 0])
+  const opacityRTL = useTransform(scrollYProgress, [0.25, 0.3, 0.7, 0.75], [0, 1, 1, 0])
 
   return (
-    <Box ref={targetRef} className={css.sectionContainer}>
-      <Box className={css.stickyContainer}>
+    <div ref={targetRef} className={css.sectionContainer}>
+      <div className={css.stickyContainer}>
         <Typography className={css.headerText} variant="h2">
           {title}
         </Typography>
 
         <motion.div
           style={{
-            x: X_LTR,
-            opacity: OPACITY_LTR,
+            x: transformLTR,
+            opacity: opacityLTR,
           }}
-          className={css.SlidingModule}
+          className={css.slidingModule}
         >
           <Typography className={css.volume}>
             <b>{VOLUME_AMOUNT}</b>
@@ -39,20 +39,20 @@ const VolumeTransferred = ({ title, text }: BaseBlock) => {
 
         <motion.div
           style={{
-            x: X_RTL,
-            opacity: OPACITY_RTL,
+            x: transformRTL,
+            opacity: opacityRTL,
           }}
-          className={css.SlidingModule}
+          className={css.slidingModule}
         >
-          <Container className={css.volumeTrailContainer}>
+          <div className={css.volumeTrailContainer}>
             <Typography className={css.volume}>
               <b>{VOLUME_AMOUNT}</b>
             </Typography>
             <Typography variant="h2">{text}</Typography>
-          </Container>
+          </div>
         </motion.div>
-      </Box>
-    </Box>
+      </div>
+    </div>
   )
 }
 
