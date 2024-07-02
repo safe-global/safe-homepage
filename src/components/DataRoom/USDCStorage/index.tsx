@@ -53,7 +53,7 @@ const USDCStorage = ({ title, text, link, image }: BaseBlock) => {
             translateX: xTransformCanvas,
           }}
         >
-          <MatterCanvas scrollYProgress={scrollYProgress} imgUrl={image?.src} />
+          <MatterCanvas scrollYProgress={scrollYProgress} imgUrl={image?.src || ''} />
         </motion.div>
       </div>
     </div>
