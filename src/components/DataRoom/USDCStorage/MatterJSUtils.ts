@@ -3,10 +3,6 @@ const { Bodies, World } = Matter
 
 const WALL_BORDER_WIDTH = 25
 const WALL_LENGTH = 500
-const COIN_RADIUS = 50
-
-const IMG_TEXTURE_SIZE = 256 // Size Of The USDC.png Image In Pixels
-const IMG_SCALE = (COIN_RADIUS * 2) / IMG_TEXTURE_SIZE // Scale Factor To Match Image Texture Size With Coin Radius
 
 export type Dimensions = {
   width: number
@@ -37,7 +33,12 @@ export const addWallsToWorld = (engine: Matter.Engine, walls: any[]) => {
   )
 }
 
-export const createCoin = (dimensions: Dimensions, imgUrl: string) => {
+export const createCoin = (dimensions: Dimensions, imgUrl: string, isMobile: boolean) => {
+  const COIN_RADIUS = isMobile ? 35 : 50
+
+  const IMG_TEXTURE_SIZE = 256 // Size Of The USDC.png Image In Pixels
+  const IMG_SCALE = (COIN_RADIUS * 2) / IMG_TEXTURE_SIZE // Scale Factor To Match Image Texture Size With Coin Radius
+
   return Bodies.circle(Math.random() * dimensions.width * 0.5 + dimensions.width * 0.25, 0, COIN_RADIUS, {
     restitution: 0.4,
     render: {

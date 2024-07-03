@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material'
+import { Typography, useMediaQuery } from '@mui/material'
 import type { BaseBlock } from '@/components/Home/types'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import MatterCanvas from './MatterCanvas'
@@ -10,6 +10,7 @@ import MotionTypography from './MotionTypography'
 const USDC_PERCENTAGE = '10%'
 
 const USDCStorage = ({ title, text, link, image }: BaseBlock) => {
+  const isMobile = useMediaQuery('(max-width:768px)')
   const containerRef = useRef<HTMLDivElement>(null)
 
   // Initialize Tracking scrollYProgress
@@ -22,12 +23,17 @@ const USDCStorage = ({ title, text, link, image }: BaseBlock) => {
   const mapYProgress = useTransform(scrollYProgress, [0.25, 0.75], [0, 1])
 
   // Transform Properties
-  const xTransformContent = useTransform(mapYProgress, [0.8, 1], ['0%', '-100%'])
-  const xTransformCanvas = useTransform(mapYProgress, [0.8, 1], ['0%', '100%'])
+  const getTransformParams = (customTransform: string[]): string[] => {
+    return isMobile ? ['0%', '0%'] : customTransform
+  }
+
+  const xTransformContent = useTransform(mapYProgress, [0.8, 1], getTransformParams(['0%', '-100%']))
+  const xTransformCanvas = useTransform(mapYProgress, [0.8, 1], getTransformParams(['0%', '100%']))
+  const opacity = useTransform(scrollYProgress, [0.75, 1], [1, 0])
 
   return (
     <div ref={containerRef} className={css.sectionContainer}>
-      <div className={css.stickyContainer}>
+      <motion.div style={{ opacity }} className={css.stickyContainer}>
         <motion.div
           style={{
             translateX: xTransformContent,
@@ -55,7 +61,7 @@ const USDCStorage = ({ title, text, link, image }: BaseBlock) => {
         >
           <MatterCanvas scrollYProgress={scrollYProgress} imgUrl={image?.src || ''} />
         </motion.div>
-      </div>
+      </motion.div>
     </div>
   )
 }
