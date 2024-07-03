@@ -87,7 +87,7 @@
   gap: 24px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .sectionContainer {
     height: 400dvh;
   }
