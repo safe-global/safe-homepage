@@ -18,7 +18,7 @@ const CRYPTOPUNK_COLUMNS_NR = 24
 
 const CryptoPunks = ({ title, text, link }: BaseBlock) => {
   const backgroundRef = useRef<HTMLDivElement>(null)
-  const isMobile = useMediaQuery('(max-width:767px)')
+  const isMobile = useMediaQuery('(max-width:768px)')
   const { scrollYProgress } = useScroll({
     target: backgroundRef,
     offset: ['start end', 'end start'],
