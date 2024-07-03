@@ -31,7 +31,7 @@ const CounterContainer = ({ percentage }: { percentage: number }) => {
     offset: ['start end', 'end start'],
   })
 
-  const isMobile = useMediaQuery('(max-width:767px)')
+  const isMobile = useMediaQuery('(max-width:768px)')
   const opacity = useTransform(scrollYProgress, [0, 0.5], [0.1, 1])
   const yTransform = useTransform(scrollYProgress, [0, 0.5], isMobile ? [200, 0] : [600, 0])
   const value = useCounterScroll(scrollYProgress, percentage)

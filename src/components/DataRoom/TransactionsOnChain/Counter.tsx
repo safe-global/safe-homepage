@@ -54,7 +54,7 @@ const Digit = ({ place, value }: DigitProps) => {
 }
 
 const Number = ({ mv, number }: NumberProps) => {
-  const DIGIT_HEIGHT = useMediaQuery('(max-width:767px)') ? 120 : 215
+  const DIGIT_HEIGHT = useMediaQuery('(max-width:768px)') ? 120 : 215
   let yPosition = useTransform(mv, (latest: number) => calculateYPosition(latest, number, DIGIT_HEIGHT))
 
   return (
