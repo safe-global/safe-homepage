@@ -43,7 +43,7 @@
   right: 50px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .headerText {
     margin-bottom: 50px;
     margin-left: 30px;
