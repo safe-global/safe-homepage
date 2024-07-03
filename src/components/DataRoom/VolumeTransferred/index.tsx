@@ -3,10 +3,11 @@ import { useScroll, useTransform, motion } from 'framer-motion'
 import css from './styles.module.css'
 import { useRef } from 'react'
 import type { BaseBlock } from '@/components/Home/types'
+import LinksWrapper from '../LinksWrapper'
 
 const VOLUME_AMOUNT = '$611,127,712,666'
 
-const VolumeTransferred = ({ title, text }: BaseBlock) => {
+const VolumeTransferred = ({ title, text, link }: BaseBlock) => {
   const targetRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -51,6 +52,7 @@ const VolumeTransferred = ({ title, text }: BaseBlock) => {
             <Typography variant="h2">{text}</Typography>
           </div>
         </motion.div>
+        <div className={css.linksContainer}>{link && <LinksWrapper {...link} />}</div>
       </div>
     </div>
   )
