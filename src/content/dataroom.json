@@ -34,7 +34,11 @@
   {
     "component": "DataRoom/CryptoPunks",
     "title": "CryptoPunks",
-    "text": "14% <br/> 1369/10,000"
+    "text": "Some text thats changing<br/>Confirming the sources of the data<br/>Any other info regarding the stats",
+    "link": {
+      "title": "Dune dashboard",
+      "href": "https://dune.com/queries/3710102/6242478"
+    }
   },
   {
     "component": "DataRoom/VolumeTransferred",
