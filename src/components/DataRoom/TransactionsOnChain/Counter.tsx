@@ -2,6 +2,7 @@ import { motion, useSpring, useTransform } from 'framer-motion'
 import { useEffect } from 'react'
 import css from './styles.module.css'
 import { calculateYPosition } from './utils'
+import { useMediaQuery } from '@mui/material'
 
 type CounterProps = {
   value: number
@@ -16,8 +17,6 @@ type NumberProps = {
   mv: any
   number: number
 }
-
-const DIGIT_HEIGHT = 215
 
 const Counter = ({ value }: CounterProps) => {
   const integerPart = Math.floor(value)
@@ -55,6 +54,7 @@ const Digit = ({ place, value }: DigitProps) => {
 }
 
 const Number = ({ mv, number }: NumberProps) => {
+  const DIGIT_HEIGHT = useMediaQuery('(max-width:767px)') ? 120 : 215
   let yPosition = useTransform(mv, (latest: number) => calculateYPosition(latest, number, DIGIT_HEIGHT))
 
   return (

@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material'
+import { Typography, useMediaQuery } from '@mui/material'
 import type { BaseBlock } from '@/components/Home/types'
 import Counter from './Counter'
 import { useScroll, useTransform, motion } from 'framer-motion'
@@ -31,8 +31,9 @@ const CounterContainer = ({ percentage }: { percentage: number }) => {
     offset: ['start end', 'end start'],
   })
 
+  const isMobile = useMediaQuery('(max-width:767px)')
   const opacity = useTransform(scrollYProgress, [0, 0.5], [0.1, 1])
-  const yTransform = useTransform(scrollYProgress, [0, 0.5], [600, 0])
+  const yTransform = useTransform(scrollYProgress, [0, 0.5], isMobile ? [200, 0] : [600, 0])
   const value = useCounterScroll(scrollYProgress, percentage)
 
   return (

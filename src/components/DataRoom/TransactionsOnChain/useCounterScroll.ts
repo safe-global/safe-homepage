@@ -8,9 +8,9 @@ export function useCounterScroll(scrollYProgress: MotionValue<number>, percentag
   useEffect(() => {
     const checkScrollProgress = () => {
       const latest = scrollYProgress.get()
-      if (latest >= 0.11) {
+      if (latest >= 0.21) {
         setValue(percentage)
-      } else if (latest <= 0.1) {
+      } else if (latest <= 0.2) {
         setValue(0)
       }
     }
