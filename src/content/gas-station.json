@@ -9,7 +9,7 @@
     "title": "Get gas credits to make your app gasless",
     "link": {
       "title": "Get gas sponsorship",
-      "href": "#"
+      "href": "https://wn2n6ocviur.typeform.com/gasstationapp"
     }
   },
   {
@@ -55,5 +55,22 @@
       "md": "/images/GasStation/network-gas-pump-md.png",
       "alt": "Gnosis and Polygon gas pumps"
     }
+  },
+  {
+    "component": "GasStation/TextBlockImageYourStation",
+    "variant": "image-text",
+    "title": "Get your network<br/>on a gas station",
+    "buttons": [
+      {
+        "text": "Become a network partner",
+        "href": "https://wn2n6ocviur.typeform.com/to/fBPBSB8l",
+        "variant": "button"
+      }
+    ],
+    "image": {
+      "src": "/images/GasStation/your-tank.png",
+      "alt": "New network partner gas tank"
+    },
+    "mobileVariant": "text-image"
   }
 ]

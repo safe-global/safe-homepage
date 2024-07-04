@@ -40,9 +40,11 @@ const TextBlockImage = ({
             </Typography>
           )}
           <Typography variant="h2">{title}</Typography>
-          <Typography variant="h5" className={css.textBlock}>
-            {text}
-          </Typography>
+          {text && (
+            <Typography variant="h5" className={css.textBlock}>
+              {text}
+            </Typography>
+          )}
 
           {/* Logos */}
           {items ? (
