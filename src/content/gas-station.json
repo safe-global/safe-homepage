@@ -90,10 +90,10 @@
         }
       },
       {
-        "title": "How to integrate Safe",
+        "title": "How to integrate Safe{Core} Stack",
         "link": {
           "title": "View docs",
-          "href": "https://github.com/5afe/safe-core-protocol"
+          "href": "https://docs.safe.global/home/4337-guides/safe-sdk"
         }
       }
     ],

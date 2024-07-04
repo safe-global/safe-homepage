@@ -10,7 +10,7 @@ export type CardProps = {
 }
 
 const LinkCard = ({ title, link }: CardProps) => (
-  <div className={`${css.card} ${css.outline}`}>
+  <div className={css.card}>
     <div className={css.cardBody}>
       <Typography variant="h5" className={css.title}>
         {title}

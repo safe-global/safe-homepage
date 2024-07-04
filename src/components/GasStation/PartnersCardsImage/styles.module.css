@@ -12,14 +12,11 @@
   flex-direction: column;
 }
 
-.logos {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-
-.logo {
-  height: 24px;
+.gradientCaption {
+  background: linear-gradient(to left, #12ff80, #5fddff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @media (min-width: 600px) {
@@ -30,8 +27,4 @@
   .imageFirst {
     flex-direction: row-reverse;
   }
-}
-
-/* implement */
-.gradientCaption {
 }
