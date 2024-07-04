@@ -6,7 +6,7 @@ import { IconButton, SvgIcon } from '@mui/material'
 import css from '../styles.module.css'
 import { useEffect, useState } from 'react'
 
-const twitterSharingUrl = (currentUrl: string, sharingText: string) =>
+export const twitterSharingUrl = (currentUrl: string, sharingText: string) =>
   `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}&text=${encodeURIComponent(sharingText)}`
 
 const linkedInSharingUrl = (currentUrl: string) =>

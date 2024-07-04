@@ -102,5 +102,9 @@
       "alt": "Safe refrigerator"
     },
     "mobileVariant": "text-image"
+  },
+  {
+    "component": "GasStation/TwitterCTA",
+    "title": "Share and boost your chances to get gas"
   }
 ]
