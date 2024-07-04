@@ -2,6 +2,7 @@
   {
     "pageTitle": "Safe Gas Station",
     "description": "Get gas credits to make your app gasless",
+    "image": "https://safe.global/images/GasStation/gas-station.png",
     "component": "common/MetaTags"
   },
   {
