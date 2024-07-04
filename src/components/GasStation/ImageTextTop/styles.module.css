@@ -1,0 +1,13 @@
+.bg {
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-size: contain;
+  height: 90vh;
+  background-position: center top 150px;
+}
+
+@media (min-width: 900px) {
+  .bg {
+    background-position: center top;
+  }
+}
