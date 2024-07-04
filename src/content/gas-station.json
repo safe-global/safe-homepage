@@ -72,5 +72,35 @@
       "alt": "New network partner gas tank"
     },
     "mobileVariant": "text-image"
+  },
+  {
+    "component": "GasStation/PartnersCardsImage",
+    "variant": "text-image",
+    "caption": "Integrate to build gasless apps",
+    "partnersImage": {
+      "src": "/images/GasStation/safe-pimlico.png",
+      "alt": "Safe and Pimlico"
+    },
+    "items": [
+      {
+        "title": "Explore ERC 4337 + Safe",
+        "link": {
+          "title": "View docs",
+          "href": "https://docs.safe.global/home/4337-safe"
+        }
+      },
+      {
+        "title": "How to integrate Safe",
+        "link": {
+          "title": "View docs",
+          "href": "https://github.com/5afe/safe-core-protocol"
+        }
+      }
+    ],
+    "image": {
+      "src": "/images/GasStation/safe-refrigerator.png",
+      "alt": "Safe refrigerator"
+    },
+    "mobileVariant": "text-image"
   }
 ]
