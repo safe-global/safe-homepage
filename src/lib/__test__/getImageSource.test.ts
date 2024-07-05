@@ -1,4 +1,4 @@
-import { type ImageObj, getImageSource } from '@/lib/getImageSource'
+import { getImageSource, type ImageObj } from '@/hooks/useResponsiveImages'
 
 describe('getImageSource', () => {
   it('should return small image URL when image object exists and isSmall is true', () => {

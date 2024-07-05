@@ -1,0 +1,11 @@
+.image {
+  width: 100%;
+  max-width: 675px;
+  margin-top: -30px;
+}
+
+@media (min-width: 900px) {
+  .image {
+    margin-top: auto;
+  }
+}
