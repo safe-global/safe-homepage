@@ -6,7 +6,8 @@
   background-repeat: no-repeat;
   overflow: hidden;
   background-size: contain;
-  height: 90vh;
+  min-height: 650px;
+  max-height: 90vh;
   background-position: center top 150px;
 }
 
