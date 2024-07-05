@@ -8,7 +8,7 @@ import css from './styles.module.css'
 import LinksWrapper from '../LinksWrapper'
 import { getColor } from './utils'
 import CryptoPunk from '@/public/images/DataRoom/cryptopunk-silhouette.svg'
-import { useMediaQuery } from '@mui/material'
+import { useMaxWidth } from '@/hooks/useMaxWidth'
 
 const CRYPTOPUNKS_PERCENTAGE = '14%'
 const CRYPTOPUNKS_FRACTION = '1369/10,000'
@@ -18,7 +18,7 @@ const CRYPTOPUNK_COLUMNS_NR = 24
 
 const CryptoPunks = ({ title, text, link }: BaseBlock) => {
   const backgroundRef = useRef<HTMLDivElement>(null)
-  const isMobile = useMediaQuery('(max-width:768px)')
+  const isMobile = useMaxWidth(900)
   const { scrollYProgress } = useScroll({
     target: backgroundRef,
     offset: ['start end', 'end start'],
