@@ -22,7 +22,7 @@ const LinkCard = ({ title, link }: CardProps) => (
             {link.title}
           </LinkButton>
         </SafeLink>
-      ) : undefined}
+      ) : null}
     </div>
   </div>
 )
