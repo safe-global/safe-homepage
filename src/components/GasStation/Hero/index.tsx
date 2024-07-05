@@ -6,7 +6,8 @@ import { Button, Typography } from '@mui/material'
 const Hero = ({ title, text, link }: BaseBlock) => {
   return (
     <div className={css.videoWrapper}>
-      <video autoPlay muted playsInline loop className={css.video}>
+      <video autoPlay muted playsInline loop poster="/images/GasStation/gas-station.png" className={css.video}>
+        <source src="/videos/GasStation/gas-station.webm" type="video/webm" />
         <source src="/videos/GasStation/gas-station.mp4" type="video/mp4" />
         <img src="/images/GasStation/gas-station.png" alt="Safe Gas Station" />
       </video>
