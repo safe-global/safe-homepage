@@ -1,17 +1,8 @@
-import Matter from 'matter-js'
-const { Bodies, World } = Matter
+import { Bodies, World } from 'matter-js'
+import type { Dimensions } from './types'
 
 const WALL_BORDER_WIDTH = 25
 const WALL_LENGTH = 500
-const COIN_RADIUS = 50
-
-const IMG_TEXTURE_SIZE = 256 // Size Of The USDC.png Image In Pixels
-const IMG_SCALE = (COIN_RADIUS * 2) / IMG_TEXTURE_SIZE // Scale Factor To Match Image Texture Size With Coin Radius
-
-export type Dimensions = {
-  width: number
-  height: number
-}
 
 export const createWalls = (dimensions: Dimensions) => [
   { x: 0, y: -WALL_BORDER_WIDTH / 2, width: WALL_LENGTH * 8, height: WALL_BORDER_WIDTH },
@@ -35,17 +26,4 @@ export const addWallsToWorld = (engine: Matter.Engine, walls: any[]) => {
       }),
     ),
   )
-}
-
-export const createCoin = (dimensions: Dimensions, imgUrl: string) => {
-  return Bodies.circle(Math.random() * dimensions.width * 0.5 + dimensions.width * 0.25, 0, COIN_RADIUS, {
-    restitution: 0.4,
-    render: {
-      sprite: {
-        texture: imgUrl,
-        xScale: IMG_SCALE,
-        yScale: IMG_SCALE,
-      },
-    },
-  })
 }

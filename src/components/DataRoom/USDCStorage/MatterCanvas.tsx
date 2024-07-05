@@ -2,7 +2,10 @@ import React, { useCallback, useEffect, useRef, useState } from 'react'
 import Matter from 'matter-js'
 import { debounce } from 'lodash'
 import type { MotionValue } from 'framer-motion'
-import { addWallsToWorld, createCoin, createWalls, type Dimensions } from './MatterJSUtils'
+import type { Dimensions } from './utils/types'
+import { addWallsToWorld, createWalls } from './utils/addWallsToWorld'
+import { createCoin } from './utils/createCoin'
+import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 
 const { Engine, Render, Runner, World } = Matter
 
@@ -12,6 +15,7 @@ type MatterCanvasProps = {
 }
 
 export default function MatterCanvas({ imgUrl, scrollYProgress }: MatterCanvasProps) {
+  const isMobile = useIsMediumScreen()
   const canvas = useRef<HTMLCanvasElement>(null)
   const worldRef = useRef<Matter.World | null>(null)
   const engineRef = useRef<Matter.Engine | null>(null)
@@ -23,6 +27,7 @@ export default function MatterCanvas({ imgUrl, scrollYProgress }: MatterCanvasPr
     canvas: React.RefObject<HTMLCanvasElement>,
     engine: Matter.Engine,
     dimensions: Dimensions,
+    isMobile: boolean,
   ) => {
     return Render.create({
       canvas: canvas.current!,
@@ -30,7 +35,7 @@ export default function MatterCanvas({ imgUrl, scrollYProgress }: MatterCanvasPr
       options: {
         width: dimensions.width,
         height: dimensions.height,
-        background: '#121312',
+        background: isMobile ? '#0000' : '#121312',
         wireframes: false,
       },
     })
@@ -44,19 +49,20 @@ export default function MatterCanvas({ imgUrl, scrollYProgress }: MatterCanvasPr
             clearInterval(spawnInterval)
             return
           }
-          World.add(engine.world, createCoin(dimensions, imgUrl))
+          World.add(engine.world, createCoin(dimensions, imgUrl, isMobile))
         }, 250)
       }
     },
-    [],
+    [isMobile],
   )
 
   const createWorld = useCallback(() => {
     const engine = Engine.create()
     engineRef.current = engine
     worldRef.current = engine.world
+    engine.gravity.y = isMobile ? 1.5 : 1 // Speeds Up Coins For Mobile
 
-    const render = createRenderer(canvas, engine, dimensions)
+    const render = createRenderer(canvas, engine, dimensions, isMobile)
     const walls = createWalls(dimensions)
     addWallsToWorld(engine, walls)
     spawnCoinsInterval(engine, dimensions, imgUrl, spawnCoins)
@@ -64,12 +70,14 @@ export default function MatterCanvas({ imgUrl, scrollYProgress }: MatterCanvasPr
     Render.run(render)
     const runner = Runner.create()
     Runner.run(runner, engine)
-  }, [dimensions, imgUrl, spawnCoins, spawnCoinsInterval])
+  }, [dimensions, imgUrl, spawnCoins, isMobile, spawnCoinsInterval])
 
   //useEffect To Restart Canvas On Resize
   useEffect(() => {
     const handleResize = debounce(() => {
-      setDimensions({ width: window.innerWidth / 2, height: window.innerHeight })
+      isMobile
+        ? setDimensions({ width: window.innerWidth, height: window.innerHeight })
+        : setDimensions({ width: window.innerWidth / 2, height: window.innerHeight })
     }, 300)
 
     window.addEventListener('resize', handleResize)
@@ -78,7 +86,7 @@ export default function MatterCanvas({ imgUrl, scrollYProgress }: MatterCanvasPr
     return () => {
       window.removeEventListener('resize', handleResize)
     }
-  }, [])
+  }, [isMobile])
 
   //useEffect To Start/Restart Canvas When Scroll Into View
   useEffect(() => {
