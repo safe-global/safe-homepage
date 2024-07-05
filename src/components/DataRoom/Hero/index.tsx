@@ -3,7 +3,7 @@ import type { BaseBlock } from '@/components/Home/types'
 import { useRef } from 'react'
 import { useScroll, useTransform, motion } from 'framer-motion'
 import AsciiScene from './AsciiScene'
-import { useMaxWidth } from '@/hooks/useMaxWidth'
+import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 import css from './styles.module.css'
 
 const Hero = ({ title, text }: BaseBlock) => {
@@ -13,7 +13,7 @@ const Hero = ({ title, text }: BaseBlock) => {
     offset: ['start end', 'end start'],
   })
 
-  const isMobile = useMaxWidth(900)
+  const isMobile = useIsMediumScreen()
   const mapYProgress = useTransform(scrollYProgress, [0.25, 0.75], [0.5, 1])
   const opacity = useTransform(mapYProgress, [0, 0.5, 0.8, 1], [0, 1, 1, 0])
   const yTransform = useTransform(scrollYProgress, [0, 0.25, 0.6], [0, 0, 400])
@@ -33,7 +33,7 @@ const Hero = ({ title, text }: BaseBlock) => {
           </Typography>
         </motion.div>
         <div className={css.asciiContainer}>
-          <AsciiScene isMobile={isMobile} yPosition={yPosition} zoomLevel={zoomLevel} />
+          <AsciiScene yPosition={yPosition} zoomLevel={zoomLevel} />
         </div>
       </motion.div>
     </div>

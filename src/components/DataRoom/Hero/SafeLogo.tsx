@@ -1,21 +1,20 @@
-import { useGLTF } from '@react-three/drei'
-import { useFrame } from '@react-three/fiber'
-import { useRef, useEffect } from 'react'
-import type { RefObject } from 'react'
+import React, { useRef, useEffect } from 'react'
+import { useFrame, useLoader } from '@react-three/fiber'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import type { Group, Mesh } from 'three'
 import type { MotionValue } from 'framer-motion'
 
 type SafeLogoProps = {
   yPosition: MotionValue<number>
-  isMobile: boolean
   offset: number
 }
 
-export function SafeLogo({ isMobile, offset, yPosition }: SafeLogoProps) {
-  const { nodes } = useGLTF('/Safe_Logo.glb') as any
-  const groupRef: RefObject<Group> = useRef(null)
-  const meshRef: RefObject<Mesh> = useRef(null)
+export function SafeLogo({ offset, yPosition }: SafeLogoProps) {
+  const groupRef = useRef<Group>(null)
+  const meshRef = useRef<Mesh>(null)
+  const gltf = useLoader(GLTFLoader, '/Safe_Logo.glb')
 
+  // Center the mesh along the z-axis based on its bounding box
   useEffect(() => {
     if (meshRef.current) {
       meshRef.current.geometry.computeBoundingBox()
@@ -25,8 +24,10 @@ export function SafeLogo({ isMobile, offset, yPosition }: SafeLogoProps) {
         meshRef.current.position.z = zSize / 2
       }
     }
-  }, [])
+  }, [gltf])
 
+  // useFrame is a hook that runs on every frame render outside react's update cycle.
+  // Update the logo's vertical position and rotate it continuously
   useFrame(() => {
     if (groupRef.current) {
       groupRef.current.position.y = yPosition.get()
@@ -36,8 +37,8 @@ export function SafeLogo({ isMobile, offset, yPosition }: SafeLogoProps) {
   })
 
   return (
-    <group ref={groupRef} rotation={[offset, 0, 0]} position={[0, 0, 0]} scale={[35, 35, 70]} dispose={null}>
-      <mesh ref={meshRef} castShadow receiveShadow geometry={nodes.Safe_Logos_Symbol_Blacksvg.geometry}>
+    <group ref={groupRef} rotation={[offset, 0, 0]} scale={[35, 35, 70]}>
+      <mesh ref={meshRef} castShadow receiveShadow geometry={(gltf.scene.children[0] as Mesh).geometry}>
         <meshStandardMaterial color="#12FF80" roughness={1} metalness={0.5} />
       </mesh>
     </group>
