@@ -1,9 +1,9 @@
 import type { BaseBlock } from '@/components/Home/types'
-import { useIsMediumScreen } from '@/hooks/useMaxWidth'
-import { getImageSource, type ImageObj } from '@/lib/getImageSource'
+import type { ImageObj } from '@/lib/getImageSource'
 import { Container, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
+import useResponsiveImages from '@/hooks/useResponsiveImages'
 
 export const ImageTextTop = ({
   title,
@@ -11,9 +11,7 @@ export const ImageTextTop = ({
 }: BaseBlock & {
   backgroundImage: ImageObj
 }) => {
-  const isMediumScreen = useIsMediumScreen()
-
-  const bgImage = getImageSource(isMediumScreen, backgroundImage)
+  const { bgImage } = useResponsiveImages(backgroundImage, backgroundImage)
 
   return (
     <Container className={layoutCss.containerShort}>
