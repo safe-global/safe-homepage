@@ -15,6 +15,11 @@
   justify-content: center;
   gap: 8px;
 }
+.sliderWrapper {
+  width: 100%;
+  margin-top: 96px;
+  margin-bottom: -120px;
+}
 
 @media (min-width: 600px) {
   .title {

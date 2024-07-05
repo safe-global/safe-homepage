@@ -6,10 +6,11 @@ import { xSharingUrl } from '@/lib/xSharingUrl'
 import XIcon from '@/public/images/x-icon.svg'
 import useCurrentUrl from '@/hooks/useCurrentUrl'
 import css from './styles.module.css'
+import Slider from '@/components/GasStation/Slider'
 
 const socialMsg = 'Just applied to get gas credits from @safe Safe{Core} gas station ⛽️'
 
-const TwitterCTA = ({ title }: BaseBlock) => {
+const TwitterCTA = ({ title, text }: BaseBlock) => {
   const currentUrl = useCurrentUrl()
 
   const xUrl = xSharingUrl(currentUrl, socialMsg)
@@ -26,6 +27,10 @@ const TwitterCTA = ({ title }: BaseBlock) => {
           <SvgIcon component={XIcon} fontSize="inherit" inheritViewBox />
         </Button>
       </SafeLink>
+
+      <div className={css.sliderWrapper}>
+        <Slider text={text} />
+      </div>
     </Container>
   )
 }
