@@ -15,7 +15,7 @@
   },
   {
     "component": "GasStation/Slider",
-    "text": "User should not pay gas for using your app"
+    "text": "Users should not pay gas for using your app"
   },
   {
     "component": "GasStation/TextBlockImagePartners",
