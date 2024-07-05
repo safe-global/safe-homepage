@@ -1,5 +1,6 @@
 .videoWrapper {
   position: relative;
+  margin-top: calc(-1 * var(--header-height));
 }
 
 .video {
