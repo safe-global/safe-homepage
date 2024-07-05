@@ -8,12 +8,17 @@ import css from './styles.module.css'
 import LinksWrapper from '../LinksWrapper'
 import { getColor } from './utils'
 import CryptoPunk from '@/public/images/DataRoom/cryptopunk-silhouette.svg'
+import { useIsMediumScreen } from '@/hooks/useMaxWidth'
+
+const CRYPTOPUNKS_PERCENTAGE = '14%'
+const CRYPTOPUNKS_FRACTION = '1369/10,000'
 
 const CRYPTOPUNK_ROWS_NR = 8
-const CRYPTOPUNK_COLUMNS_NR = 15
+const CRYPTOPUNK_COLUMNS_NR = 24
 
 const CryptoPunks = ({ title, text, link }: BaseBlock) => {
   const backgroundRef = useRef<HTMLDivElement>(null)
+  const isMobile = useIsMediumScreen()
   const { scrollYProgress } = useScroll({
     target: backgroundRef,
     offset: ['start end', 'end start'],
@@ -22,11 +27,20 @@ const CryptoPunks = ({ title, text, link }: BaseBlock) => {
   return (
     <div ref={backgroundRef} className={css.sectionContainer}>
       <div className={css.stickyContainer}>
-        <LeftPanel scrollYProgress={scrollYProgress} />
-
-        <RightPanel scrollYProgress={scrollYProgress}>
+        <LeftPanel scrollYProgress={scrollYProgress} isMobile={isMobile} />
+        <RightPanel scrollYProgress={scrollYProgress} isMobile={isMobile}>
+          <Typography variant="h2" className={css.text}>
+            {text}
+          </Typography>
           <Typography variant="h2">{title}</Typography>
-          <Typography variant="h2">{text}</Typography>
+          <div className={css.statsContainer}>
+            <Typography variant="h1" className={css.percentage}>
+              {CRYPTOPUNKS_PERCENTAGE}
+            </Typography>
+            <Typography variant="h2" className={css.fraction}>
+              {CRYPTOPUNKS_FRACTION}
+            </Typography>
+          </div>
           {link && <LinksWrapper {...link} />}
         </RightPanel>
       </div>
@@ -34,18 +48,17 @@ const CryptoPunks = ({ title, text, link }: BaseBlock) => {
   )
 }
 
-const LeftPanel = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) => {
-  const opacity = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.75], [0, 1, 1, 0])
-  const translateLTR = useTransform(scrollYProgress, [0.25, 0.75], ['-50%', '0%'])
-  const translateRTL = useTransform(scrollYProgress, [0.25, 0.75], ['0%', '-50%'])
-  const bgTranslate = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.75], ['-100%', '0%', '0%', '-100%'])
+const LeftPanel = ({ scrollYProgress, isMobile }: { scrollYProgress: MotionValue<number>; isMobile: boolean }) => {
+  const translateParams = isMobile ? [0, 1] : [0.25, 0.75]
+  const opacity = useTransform(scrollYProgress, [0, 0.25, 0.7, 0.75], [0, 1, 1, 0])
+  const translateLTR = useTransform(scrollYProgress, translateParams, ['-50%', '0%'])
+  const translateRTL = useTransform(scrollYProgress, translateParams, ['0%', '-50%'])
 
   const translateDirection = (index: number) => (index % 2 === 1 ? translateLTR : translateRTL)
 
   return (
     <motion.div
       style={{
-        x: bgTranslate,
         opacity,
       }}
       className={css.leftPanelContainer}
@@ -69,7 +82,7 @@ const LeftPanel = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> }
                 color: getColor(),
               }}
             >
-              <CryptoPunk />
+              <CryptoPunk className={css.cryptopunk} />
             </motion.div>
           ))}
         </motion.div>
@@ -78,9 +91,19 @@ const LeftPanel = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> }
   )
 }
 
-const RightPanel = ({ scrollYProgress, children }: { scrollYProgress: MotionValue<number>; children: ReactNode }) => {
-  const opacity = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.75], [0, 1, 1, 0])
-  const bgTranslate = useTransform(scrollYProgress, [0, 0.25, 0.5, 0.75], ['100%', '0%', '0%', '100%'])
+const RightPanel = ({
+  scrollYProgress,
+  children,
+  isMobile,
+}: {
+  scrollYProgress: MotionValue<number>
+  children: ReactNode
+  isMobile: boolean
+}) => {
+  const opacityParams = isMobile ? [0.4, 0.45, 0.65, 0.66] : [0.25, 0.35, 0.65, 0.7]
+  const translateParams = isMobile ? [0.4, 0.45, 0.65, 0.7] : [0.25, 0.35, 0.65, 0.75]
+  const opacity = useTransform(scrollYProgress, opacityParams, [0, 1, 1, 0])
+  const bgTranslate = useTransform(scrollYProgress, translateParams, ['100%', '0%', '0%', '100%'])
 
   return (
     <div className={css.rightPanelContainer}>
