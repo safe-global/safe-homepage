@@ -42,8 +42,12 @@
   },
   {
     "component": "DataRoom/VolumeTransferred",
-    "title": "With all time volume <br/> transferred",
-    "text": "and counting..."
+    "title": "with all time volume <br/> transferred",
+    "text": "and counting...",
+    "link": {
+      "title": "Dune dashboard",
+      "href": "https://dune.com/queries/3710102/6242478"
+    }
   },
   {
     "component": "DataRoom/TransactionsOnChain",
