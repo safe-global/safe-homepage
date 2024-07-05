@@ -7,7 +7,7 @@ const Hero = ({ title, link }: BaseBlock) => {
     <div className={css.videoWrapper}>
       <video autoPlay muted playsInline loop className={css.video}>
         <source src="/videos/GasStation/gas-station.mp4" type="video/mp4" />
-        <img src="/images/GasStation/gas-station.png" alt="Safe gas station" />
+        <img src="/images/GasStation/gas-station.png" alt="Safe Gas Station" />
       </video>
 
       <div className={css.textContainer}>
