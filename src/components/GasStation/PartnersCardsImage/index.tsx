@@ -1,15 +1,14 @@
 import { Container, Grid, Typography } from '@mui/material'
 import clsx from 'clsx'
-import type { BaseBlock } from '@/components/Home/types'
+import type { BaseBlock, BlockWithVariant } from '@/components/Home/types'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 import LinkCard from '@/components/GasStation/LinkCard'
 
-export type PartnersCardsImageProps = BaseBlock & {
-  variant: 'image-text' | 'text-image'
-  mobileVariant?: 'image-text' | 'text-image'
-  partnersImage: BaseBlock['image']
-}
+export type PartnersCardsImageProps = BaseBlock &
+  BlockWithVariant & {
+    partnersImage: BaseBlock['image']
+  }
 
 const PartnersCardsImage = ({
   caption,

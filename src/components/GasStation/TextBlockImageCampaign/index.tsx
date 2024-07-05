@@ -1,14 +1,13 @@
 import { Container, Grid, Typography } from '@mui/material'
 import clsx from 'clsx'
-import type { BaseBlock } from '@/components/Home/types'
+import type { BaseBlock, BlockWithVariant } from '@/components/Home/types'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 
-export type TextBlockImageCampaignProps = BaseBlock & {
-  variant: 'image-text' | 'text-image'
-  mobileVariant?: 'image-text' | 'text-image'
-  children: React.ReactNode
-}
+export type TextBlockImageCampaignProps = BaseBlock &
+  BlockWithVariant & {
+    children: React.ReactNode
+  }
 
 const TextBlockImageCampaign = ({
   title,
