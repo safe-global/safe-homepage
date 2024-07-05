@@ -4,21 +4,14 @@ import { type Entry } from 'contentful'
 import { type TypeAuthorSkeleton } from '@/contentful/types'
 import { IconButton, SvgIcon } from '@mui/material'
 import css from '../styles.module.css'
-import { useEffect, useState } from 'react'
+import useCurrentUrl from '@/hooks/useCurrentUrl'
 import { xSharingUrl } from '@/lib/xSharingUrl'
 
 const linkedInSharingUrl = (currentUrl: string) =>
   `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`
 
 const Socials = ({ title, authors }: { title: string; authors: Entry<TypeAuthorSkeleton, undefined, string>[] }) => {
-  const [currentUrl, setCurrentUrl] = useState('')
-
-  useEffect(() => {
-    // Check if running in the browser environment
-    if (typeof window !== 'undefined') {
-      setCurrentUrl(window.location.href)
-    }
-  }, [])
+  const currentUrl = useCurrentUrl()
 
   const sharingText = `${title} by @${authors
     .map((author) => author.fields.name)

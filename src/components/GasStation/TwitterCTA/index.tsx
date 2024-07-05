@@ -10,14 +10,7 @@ import css from './styles.module.css'
 const socialMsg = 'Just applied to get gas credits from @safe Core gas station'
 
 const TwitterCTA = ({ title }: BaseBlock) => {
-  const [currentUrl, setCurrentUrl] = useState('')
-
-  useEffect(() => {
-    // Check if running in the browser environment
-    if (typeof window !== 'undefined') {
-      setCurrentUrl(window.location.href)
-    }
-  }, [])
+  const currentUrl = useCurrentUrl()
 
   const xUrl = xSharingUrl(currentUrl, socialMsg)
 
