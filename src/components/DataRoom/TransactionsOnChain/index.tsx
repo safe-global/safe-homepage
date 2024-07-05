@@ -6,6 +6,7 @@ import React, { useRef } from 'react'
 import css from './styles.module.css'
 import { useCounterScroll } from './useCounterScroll'
 import LinksWrapper from '../LinksWrapper'
+import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 
 const TRANSACTIONS_AMOUNT = 1.75
 
@@ -31,8 +32,9 @@ const CounterContainer = ({ percentage }: { percentage: number }) => {
     offset: ['start end', 'end start'],
   })
 
+  const isMobile = useIsMediumScreen()
   const opacity = useTransform(scrollYProgress, [0, 0.5], [0.1, 1])
-  const yTransform = useTransform(scrollYProgress, [0, 0.5], [600, 0])
+  const yTransform = useTransform(scrollYProgress, [0, 0.5], isMobile ? [200, 0] : [600, 0])
   const value = useCounterScroll(scrollYProgress, percentage)
 
   return (
