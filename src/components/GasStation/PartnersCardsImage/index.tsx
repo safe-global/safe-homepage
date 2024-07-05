@@ -44,9 +44,11 @@ const PartnersCardsImage = ({
           ))}
         </Grid>
 
-        <Grid item xs={12} md={6}>
-          {image ? <img src={image.src} alt={image.alt} className={css.image} /> : null}
-        </Grid>
+        {image ? (
+          <Grid item xs={12} md={6}>
+            <img src={image.src} alt={image.alt} className={css.image} />
+          </Grid>
+        ) : null}
       </Grid>
     </Container>
   )
