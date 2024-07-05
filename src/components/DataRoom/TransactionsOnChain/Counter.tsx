@@ -18,6 +18,9 @@ type NumberProps = {
   number: number
 }
 
+const DIGIT_HEIGHT_SM = 120
+const DIGIT_HEIGHT_MD = 215
+
 const Counter = ({ value }: CounterProps) => {
   const integerPart = Math.floor(value)
   const decimalPart = value % 1
@@ -54,8 +57,8 @@ const Digit = ({ place, value }: DigitProps) => {
 }
 
 const Number = ({ mv, number }: NumberProps) => {
-  const DIGIT_HEIGHT = useIsMediumScreen() ? 120 : 215
-  let yPosition = useTransform(mv, (latest: number) => calculateYPosition(latest, number, DIGIT_HEIGHT))
+  const height = useIsMediumScreen() ? DIGIT_HEIGHT_SM : DIGIT_HEIGHT_MD
+  let yPosition = useTransform(mv, (latest: number) => calculateYPosition(latest, number, height))
 
   return (
     <motion.span style={{ y: yPosition }} className={css.number}>
