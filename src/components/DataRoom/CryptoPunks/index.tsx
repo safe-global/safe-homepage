@@ -8,7 +8,7 @@ import css from './styles.module.css'
 import LinksWrapper from '../LinksWrapper'
 import { getColor } from './utils'
 import CryptoPunk from '@/public/images/DataRoom/cryptopunk-silhouette.svg'
-import { useMaxWidth } from '@/hooks/useMaxWidth'
+import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 
 const CRYPTOPUNKS_PERCENTAGE = '14%'
 const CRYPTOPUNKS_FRACTION = '1369/10,000'
