@@ -3,7 +3,7 @@ import { Button, Container, SvgIcon, Typography } from '@mui/material'
 import type { BaseBlock } from '@/components/Home/types'
 import layoutCss from '@/components/common/styles.module.css'
 import SafeLink from '@/components/common/SafeLink'
-import { twitterSharingUrl } from '@/components/Blog/Socials'
+import { xSharingUrl } from '@/lib/xSharingUrl'
 import XIcon from '@/public/images/x-icon.svg'
 import css from './styles.module.css'
 
@@ -19,7 +19,7 @@ const TwitterCTA = ({ title }: BaseBlock) => {
     }
   }, [])
 
-  const xUrl = twitterSharingUrl(currentUrl, socialMsg)
+  const xUrl = xSharingUrl(currentUrl, socialMsg)
 
   return (
     <Container className={`${layoutCss.containerShort} ${css.container}`}>
