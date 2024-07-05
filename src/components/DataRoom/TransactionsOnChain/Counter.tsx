@@ -2,7 +2,7 @@ import { motion, useSpring, useTransform } from 'framer-motion'
 import { useEffect } from 'react'
 import css from './styles.module.css'
 import { calculateYPosition } from './utils'
-import { useMediaQuery } from '@mui/material'
+import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 
 type CounterProps = {
   value: number
@@ -54,7 +54,7 @@ const Digit = ({ place, value }: DigitProps) => {
 }
 
 const Number = ({ mv, number }: NumberProps) => {
-  const DIGIT_HEIGHT = useMediaQuery('(max-width:768px)') ? 120 : 215
+  const DIGIT_HEIGHT = useIsMediumScreen() ? 120 : 215
   let yPosition = useTransform(mv, (latest: number) => calculateYPosition(latest, number, DIGIT_HEIGHT))
 
   return (

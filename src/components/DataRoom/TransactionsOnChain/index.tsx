@@ -1,4 +1,4 @@
-import { Typography, useMediaQuery } from '@mui/material'
+import { Typography } from '@mui/material'
 import type { BaseBlock } from '@/components/Home/types'
 import Counter from './Counter'
 import { useScroll, useTransform, motion } from 'framer-motion'
@@ -6,6 +6,7 @@ import React, { useRef } from 'react'
 import css from './styles.module.css'
 import { useCounterScroll } from './useCounterScroll'
 import LinksWrapper from '../LinksWrapper'
+import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 
 const TRANSACTIONS_AMOUNT = 1.75
 
@@ -31,7 +32,7 @@ const CounterContainer = ({ percentage }: { percentage: number }) => {
     offset: ['start end', 'end start'],
   })
 
-  const isMobile = useMediaQuery('(max-width:768px)')
+  const isMobile = useIsMediumScreen()
   const opacity = useTransform(scrollYProgress, [0, 0.5], [0.1, 1])
   const yTransform = useTransform(scrollYProgress, [0, 0.5], isMobile ? [200, 0] : [600, 0])
   const value = useCounterScroll(scrollYProgress, percentage)

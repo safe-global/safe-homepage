@@ -74,7 +74,7 @@
   margin-top: 44px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .sectionContainer {
     height: 200vh;
   }
