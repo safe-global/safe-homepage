@@ -1,13 +1,13 @@
-import { useEffect, useState } from 'react'
 import { Button, Container, SvgIcon, Typography } from '@mui/material'
 import type { BaseBlock } from '@/components/Home/types'
 import layoutCss from '@/components/common/styles.module.css'
 import SafeLink from '@/components/common/SafeLink'
 import { xSharingUrl } from '@/lib/xSharingUrl'
 import XIcon from '@/public/images/x-icon.svg'
+import useCurrentUrl from '@/hooks/useCurrentUrl'
 import css from './styles.module.css'
 
-const socialMsg = 'Just applied to get gas credits from @safe Core gas station'
+const socialMsg = 'Just applied to get gas credits from @safe Safe{Core} gas station ⛽️'
 
 const TwitterCTA = ({ title }: BaseBlock) => {
   const currentUrl = useCurrentUrl()
@@ -22,8 +22,8 @@ const TwitterCTA = ({ title }: BaseBlock) => {
 
       <SafeLink href={xUrl}>
         <Button variant="contained" size="large" className={css.button}>
+          Share on
           <SvgIcon component={XIcon} fontSize="inherit" inheritViewBox />
-          Share on X
         </Button>
       </SafeLink>
     </Container>
