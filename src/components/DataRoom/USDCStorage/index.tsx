@@ -1,4 +1,4 @@
-import { Typography, useMediaQuery } from '@mui/material'
+import { Typography } from '@mui/material'
 import type { BaseBlock } from '@/components/Home/types'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import MatterCanvas from './MatterCanvas'
@@ -6,11 +6,12 @@ import { useRef } from 'react'
 import LinksWrapper from '../LinksWrapper'
 import css from './styles.module.css'
 import MotionTypography from './MotionTypography'
+import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 
 const USDC_PERCENTAGE = '10%'
 
 const USDCStorage = ({ title, text, link, image }: BaseBlock) => {
-  const isMobile = useMediaQuery('(max-width:768px)')
+  const isMobile = useIsMediumScreen()
   const containerRef = useRef<HTMLDivElement>(null)
 
   // Initialize Tracking scrollYProgress

@@ -3,7 +3,7 @@ import Matter from 'matter-js'
 import { debounce } from 'lodash'
 import type { MotionValue } from 'framer-motion'
 import { addWallsToWorld, createCoin, createWalls, type Dimensions } from './MatterJSUtils'
-import { useMediaQuery } from '@mui/material'
+import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 
 const { Engine, Render, Runner, World } = Matter
 
@@ -13,7 +13,7 @@ type MatterCanvasProps = {
 }
 
 export default function MatterCanvas({ imgUrl, scrollYProgress }: MatterCanvasProps) {
-  const isMobile = useMediaQuery('(max-width:768px)')
+  const isMobile = useIsMediumScreen()
   const canvas = useRef<HTMLCanvasElement>(null)
   const worldRef = useRef<Matter.World | null>(null)
   const engineRef = useRef<Matter.Engine | null>(null)
