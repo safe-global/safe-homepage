@@ -2,7 +2,9 @@ import React, { useCallback, useEffect, useRef, useState } from 'react'
 import Matter from 'matter-js'
 import { debounce } from 'lodash'
 import type { MotionValue } from 'framer-motion'
-import { addWallsToWorld, createCoin, createWalls, type Dimensions } from './MatterJSUtils'
+import type { Dimensions } from './utils/types'
+import { addWallsToWorld, createWalls } from './utils/addWallsToWorld'
+import { createCoin } from './utils/createCoin'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 
 const { Engine, Render, Runner, World } = Matter
