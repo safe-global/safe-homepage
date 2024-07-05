@@ -1,9 +1,8 @@
 import type { BaseBlock } from '@/components/Home/types'
-import type { ImageObj } from '@/lib/getImageSource'
+import useResponsiveImages, { type ImageObj } from '@/hooks/useResponsiveImages'
 import { Container, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
-import useResponsiveImages from '@/hooks/useResponsiveImages'
 
 export const ImageTextTop = ({
   title,
@@ -11,7 +10,7 @@ export const ImageTextTop = ({
 }: BaseBlock & {
   backgroundImage: ImageObj
 }) => {
-  const { bgImage } = useResponsiveImages(backgroundImage, backgroundImage)
+  const [bgImage] = useResponsiveImages(backgroundImage)
 
   return (
     <Container className={layoutCss.containerShort}>

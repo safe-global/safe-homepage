@@ -6,8 +6,7 @@ import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 import type { BaseBlock } from '@/components/Home/types'
 import ButtonsWrapper from '@/components/common/ButtonsWrapper'
-import type { ImageObj } from '@/lib/getImageSource'
-import useResponsiveImages from '@/hooks/useResponsiveImages'
+import useResponsiveImages, { type ImageObj } from '@/hooks/useResponsiveImages'
 
 type FooterProps = {
   text: string
@@ -48,7 +47,7 @@ export const Masthead = ({
   backgroundImage: ImageObj
   footer: FooterProps
 }): ReactElement => {
-  const { bgImage, imageSrc } = useResponsiveImages(backgroundImage, image)
+  const [bgImage, imageSrc] = useResponsiveImages(backgroundImage, image)
 
   return (
     <Container className={layoutCss.containerShort} id="masthead">
