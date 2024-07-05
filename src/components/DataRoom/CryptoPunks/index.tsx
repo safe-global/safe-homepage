@@ -28,7 +28,6 @@ const CryptoPunks = ({ title, text, link }: BaseBlock) => {
     <div ref={backgroundRef} className={css.sectionContainer}>
       <div className={css.stickyContainer}>
         <LeftPanel scrollYProgress={scrollYProgress} isMobile={isMobile} />
-
         <RightPanel scrollYProgress={scrollYProgress} isMobile={isMobile}>
           <Typography variant="h2" className={css.text}>
             {text}
@@ -40,12 +39,10 @@ const CryptoPunks = ({ title, text, link }: BaseBlock) => {
             <Typography variant="h1" className={css.percentage}>
               {CRYPTOPUNKS_PERCENTAGE}
             </Typography>
-
             <Typography variant="h2" className={css.fraction}>
               {CRYPTOPUNKS_FRACTION}
             </Typography>
           </div>
-
           {link && <LinksWrapper {...link} />}
         </RightPanel>
       </div>
