@@ -1,3 +1,7 @@
+.container {
+  position: relative;
+}
+
 .bg {
   background-repeat: no-repeat;
   overflow: hidden;
@@ -9,5 +13,15 @@
 @media (min-width: 900px) {
   .bg {
     background-position: center top;
+  }
+
+  .spot1 {
+    position: absolute;
+    left: -300px;
+    z-index: -1;
+    width: 1000px;
+    height: 1000px;
+    background-image: radial-gradient(at left, rgba(18, 255, 128, 0.4) 0%, rgba(246, 247, 248, 0) 80%);
+    filter: blur(50px);
   }
 }

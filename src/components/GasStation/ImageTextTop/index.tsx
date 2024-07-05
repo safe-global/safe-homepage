@@ -13,7 +13,8 @@ export const ImageTextTop = ({
   const [bgImage] = useResponsiveImages(backgroundImage)
 
   return (
-    <Container className={layoutCss.containerShort}>
+    <Container className={`${layoutCss.containerShort} ${css.container}`}>
+      <div className={css.spot1} />
       <div className={css.bg} style={{ backgroundImage: `url(${bgImage})` }}>
         <Typography variant="h2">{title}</Typography>
       </div>
