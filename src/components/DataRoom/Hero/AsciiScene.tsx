@@ -1,34 +1,30 @@
-import { Canvas } from '@react-three/fiber'
 import { SafeLogo } from './SafeLogo'
 import type { MotionValue } from 'framer-motion'
-import { CameraController } from './utils'
+import { CameraController } from './utils/cameraController'
 import { EffectComposer } from '@react-three/postprocessing'
-import AsciiWrapper from './AsciiWrapper'
+import AsciiShader from './utils/asciiShader'
+import { useIsMediumScreen } from '@/hooks/useMaxWidth'
+import { Canvas } from '@react-three/fiber'
 
-const AsciiScene = ({
-  isMobile,
-  yPosition,
-  zoomLevel,
-}: {
-  isMobile: boolean
-  yPosition: MotionValue<number>
-  zoomLevel: MotionValue<number>
-}) => {
+const AsciiScene = ({ yPosition, zoomLevel }: { yPosition: MotionValue<number>; zoomLevel: MotionValue<number> }) => {
+  const isMobile = useIsMediumScreen()
   return (
     <Canvas orthographic camera={{ position: [0, 0, 10], zoom: isMobile ? 70 : 80 }}>
-      <CameraController zoomLevel={zoomLevel} isMobile={isMobile} />
+      {/* CameraController manages camera position and zoom based on scroll and device type */}
+      <CameraController zoomLevel={zoomLevel} />
+
       {!isMobile && (
         <>
           <group position={[-6, 0, 0]}>
-            <SafeLogo isMobile={false} offset={Math.PI / 2} yPosition={yPosition} />
+            <SafeLogo offset={Math.PI / 2} yPosition={yPosition} />
           </group>
           <group position={[6, 0, 0]}>
-            <SafeLogo isMobile={false} offset={-Math.PI / 2} yPosition={yPosition} />
+            <SafeLogo offset={-Math.PI / 2} yPosition={yPosition} />
           </group>
         </>
       )}
       <group position={[0, 0, 0]}>
-        <SafeLogo isMobile={isMobile} offset={0} yPosition={yPosition} />
+        <SafeLogo offset={0} yPosition={yPosition} />
       </group>
       <group>
         <directionalLight color="#aaa" intensity={8} position={[0, 5, -9]} />
@@ -36,8 +32,10 @@ const AsciiScene = ({
         <directionalLight color="#aaa" intensity={6} position={[-5, 0, 0]} />
         <directionalLight color="#FFF" intensity={2} position={[0, 0, 10]} />
       </group>
+
+      {/* EffectComposer applies post-processing effects, in this case an ASCII effect via AsciiWrapper */}
       <EffectComposer multisampling={8}>
-        <AsciiWrapper />
+        <AsciiShader />
       </EffectComposer>
     </Canvas>
   )

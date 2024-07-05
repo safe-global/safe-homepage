@@ -1,7 +1,4 @@
-import { useEffect, useRef } from 'react'
-import { useFrame } from '@react-three/fiber'
-import type { MotionValue } from 'framer-motion'
-import { easing } from 'maath'
+import { useEffect, useMemo } from 'react'
 import { Effect } from 'postprocessing'
 import { CanvasTexture, Color, NearestFilter, RepeatWrapping, Texture, Uniform } from 'three'
 
@@ -17,39 +14,9 @@ const SIZE = 1024
 const MAX_PER_ROW = 16
 const CELL = SIZE / MAX_PER_ROW
 
-export const CameraController = ({ zoomLevel, isMobile }: { zoomLevel: MotionValue<number>; isMobile: boolean }) => {
-  const mouse = useRef({ x: 0, y: 0 })
-
-  useEffect(() => {
-    const updateMouse = (event: MouseEvent) => {
-      mouse.current.x = (event.clientX / window.innerWidth) * 2 - 1
-      mouse.current.y = -(event.clientY / window.innerHeight) * 2 + 1
-    }
-    globalThis?.addEventListener('mousemove', updateMouse)
-    return () => globalThis?.removeEventListener('mousemove', updateMouse)
-  }, [])
-
-  useFrame((state, delta) => {
-    state.camera.zoom = zoomLevel.get()
-    state.camera.updateProjectionMatrix()
-
-    // Apply damping to camera position based on mouse movement on desktop
-    if (!isMobile) {
-      easing.damp3(
-        state.camera.position,
-        [1 - mouse.current.x * 2, 1 - mouse.current.y * 2, 20 + Math.atan(mouse.current.y * 4)],
-        0.3,
-        delta,
-      )
-    }
-
-    state.camera.position.set(state.camera.position.x, state.camera.position.y, 5)
-    state.camera.lookAt(0, 0, 0)
-  })
-
-  return null
-}
-
+// ASCII Effect Fragment Shader
+// This shader converts the input image to ASCII art by mapping pixel intensities to characters
+// and applying color, inversion, and pixelization effects.
 const fragmentShader = `
 uniform sampler2D uCharacters;
 uniform float uCharactersCount;
@@ -90,6 +57,10 @@ void mainImage(const in vec4 inputColor, const in vec2 uv, out vec4 outputColor)
     outputColor = asciiCharacter;
 }
 `
+
+// ASCIIEffect extends the Effect class from the postprocessing library.
+// Effect is a base class for custom postprocessing effects in Three.js.
+// By extending it, we create a specialized effect for rendering ASCII art.
 export class ASCIIEffect extends Effect {
   constructor({
     characters = ` .:,'-^=*+?!|0#X%WM@`,
@@ -108,43 +79,48 @@ export class ASCIIEffect extends Effect {
 
     super('ASCIIEffect', fragmentShader, { uniforms })
 
-    const charactersTextureUniform = this.uniforms.get('uCharacters')
-
-    if (charactersTextureUniform) {
-      charactersTextureUniform.value = this.createCharactersTexture(characters, fontSize)
-    }
+    this.createCharactersTexture(characters, fontSize)
   }
 
-  /** Draws the characters on a Canvas and returns a texture */
-  private createCharactersTexture(characters: string, fontSize: number): CanvasTexture {
+  private createCharactersTexture(characters: string, fontSize: number): void {
     const canvas = document.createElement('canvas')
-
     canvas.width = canvas.height = SIZE
 
-    const texture = new CanvasTexture(canvas, undefined, RepeatWrapping, RepeatWrapping, NearestFilter, NearestFilter)
-
     const context = canvas.getContext('2d')
+    if (!context) throw new Error('Context not available')
 
-    if (!context) {
-      throw new Error('Context not available')
-    }
-
-    context.clearRect(0, 0, SIZE, SIZE)
     context.font = `${fontSize}px Citerne`
     context.textAlign = 'center'
     context.textBaseline = 'middle'
     context.fillStyle = '#FFF'
 
-    for (let i = 0; i < characters.length; i++) {
-      const char = characters[i]
-      const x = i % MAX_PER_ROW
-      const y = Math.floor(i / MAX_PER_ROW)
+    characters.split('').forEach((char, i) => {
+      const x = (i % MAX_PER_ROW) * CELL + CELL / 2
+      const y = Math.floor(i / MAX_PER_ROW) * CELL + CELL / 2
+      context.fillText(char, x, y)
+    })
 
-      context.fillText(char, x * CELL + CELL / 2, y * CELL + CELL / 2)
-    }
-
+    const texture = new CanvasTexture(canvas)
+    texture.minFilter = NearestFilter
+    texture.magFilter = NearestFilter
+    texture.wrapS = texture.wrapT = RepeatWrapping
     texture.needsUpdate = true
 
-    return texture
+    const charactersTextureUniform = this.uniforms.get('uCharacters')
+    if (charactersTextureUniform) charactersTextureUniform.value = texture
   }
 }
+
+// This component wraps and manages the lifecycle of the ASCII effect,
+// It creates the effect, handles its disposal, and renders it as a primitive object.
+const AsciiShader = () => {
+  const effect = useMemo(() => new ASCIIEffect(), [])
+  useEffect(() => {
+    return () => {
+      effect.dispose?.()
+    }
+  }, [effect])
+  return <primitive object={effect} dispose={null} />
+}
+
+export default AsciiShader

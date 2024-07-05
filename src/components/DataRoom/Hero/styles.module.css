@@ -7,7 +7,7 @@
   background-color: #000;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 32px;
   text-align: center;
   justify-content: flex-end;
   position: sticky;
@@ -52,8 +52,8 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  margin-bottom: 3rem;
+  gap: 32px;
+  margin-bottom: 48px;
   z-index: 20;
 }
 
