@@ -1,3 +1,7 @@
+.container {
+  position: relative;
+}
+
 .textBlock a {
   text-decoration: underline;
   color: var(--mui-palette-primary-main);
@@ -26,5 +30,16 @@
 
   .imageFirst {
     flex-direction: row-reverse;
+  }
+
+  .spot1 {
+    position: absolute;
+    right: -200px;
+    top: -650px;
+    z-index: -1;
+    width: 1600px;
+    height: 1600px;
+    background-image: radial-gradient(at right, rgba(18, 255, 128, 0.3) 0%, rgba(246, 247, 248, 0) 50%);
+    filter: blur(70px);
   }
 }

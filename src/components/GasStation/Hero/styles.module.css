@@ -1,9 +1,14 @@
 .videoWrapper {
   position: relative;
+  margin-top: calc(-1 * var(--header-height));
 }
 
 .video {
   width: 100%;
+}
+
+.sliderWrapper {
+  margin-top: -6px;
 }
 
 .textContainer {

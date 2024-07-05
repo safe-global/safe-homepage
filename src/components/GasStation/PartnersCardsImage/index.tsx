@@ -19,7 +19,8 @@ const PartnersCardsImage = ({
   image,
 }: PartnersCardsImageProps) => {
   return (
-    <Container>
+    <Container className={css.container}>
+      <div className={css.spot1} />
       <Grid
         container
         className={clsx(

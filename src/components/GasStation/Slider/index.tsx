@@ -4,7 +4,7 @@ import css from './styles.module.css'
 
 const SLIDER_ITEMS = 7
 
-const Slider = ({ text }: BaseBlock) => (
+const Slider = ({ text }: Pick<BaseBlock, 'text'>) => (
   <div className={css.wrapper}>
     <div className={css.animation}>
       <div className={css.slider}>
