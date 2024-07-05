@@ -1,6 +1,7 @@
 .wrapper {
   --items-gap: 16px;
   overflow: hidden;
+  background-color: var(--mui-palette-background-main);
 }
 
 .animation {

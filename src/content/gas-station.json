@@ -8,14 +8,11 @@
   {
     "component": "GasStation/Hero",
     "title": "Get gas credits to make your app gasless",
+    "text": "Users should not pay gas for using your app",
     "link": {
       "title": "Get gas sponsorship",
       "href": "https://wn2n6ocviur.typeform.com/gasstationapp"
     }
-  },
-  {
-    "component": "GasStation/Slider",
-    "text": "Users should not pay gas for using your app"
   },
   {
     "component": "GasStation/TextBlockImagePartners",

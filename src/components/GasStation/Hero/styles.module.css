@@ -7,6 +7,10 @@
   width: 100%;
 }
 
+.sliderWrapper {
+  margin-top: -6px;
+}
+
 .textContainer {
   text-align: center;
   padding: 0 16px;

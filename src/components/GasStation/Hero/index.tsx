@@ -1,14 +1,19 @@
 import type { BaseBlock } from '@/components/Home/types'
+import Slider from '@/components/GasStation/Slider'
 import css from './styles.module.css'
 import { Button, Typography } from '@mui/material'
 
-const Hero = ({ title, link }: BaseBlock) => {
+const Hero = ({ title, text, link }: BaseBlock) => {
   return (
     <div className={css.videoWrapper}>
       <video autoPlay muted playsInline loop className={css.video}>
         <source src="/videos/GasStation/gas-station.mp4" type="video/mp4" />
         <img src="/images/GasStation/gas-station.png" alt="Safe Gas Station" />
       </video>
+
+      <div className={css.sliderWrapper}>
+        <Slider text={text} />
+      </div>
 
       <div className={css.textContainer}>
         <Typography variant="h2" mb={4}>
