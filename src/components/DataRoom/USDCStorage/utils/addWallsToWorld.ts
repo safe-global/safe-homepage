@@ -1,5 +1,4 @@
-import Matter from 'matter-js'
-const { Bodies, World } = Matter
+import { Bodies, World } from 'matter-js'
 import type { Dimensions } from './types'
 
 const WALL_BORDER_WIDTH = 25

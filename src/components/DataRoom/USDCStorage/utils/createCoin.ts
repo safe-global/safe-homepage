@@ -1,5 +1,4 @@
-import Matter from 'matter-js'
-const { Bodies } = Matter
+import { Bodies } from 'matter-js'
 import type { Dimensions } from './types'
 
 const IMG_TEXTURE_SIZE = 256 // Size Of The USDC.png Image In Pixels
