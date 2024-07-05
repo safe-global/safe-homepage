@@ -11,14 +11,6 @@
     "text": "Explore Mind Bending Sats from Safe Universe"
   },
   {
-    "component": "DataRoom/WorldGDP",
-    "title": "<b><em>Safe</em> TVL</b> is ~.1% <br /> of World GDP at <b>$100+B</b>",
-    "link": {
-      "title": "Dune dashboard",
-      "href": "https://dune.com/queries/3710102/6242478"
-    }
-  },
-  {
     "component": "DataRoom/USDCStorage",
     "title": "We store... <br/>",
     "text": "<b>of all USDC</b>",
@@ -56,22 +48,6 @@
       "title": "Dune dashboard",
       "href": "https://dune.com/queries/3710102/6242478"
     }
-  },
-  {
-    "component": "DataRoom/IndustryComparison",
-    "title": "How we compare to other industry leaders"
-  },
-  {
-    "component": "DataRoom/CEXesComparison",
-    "title": "<em>Safe</em> has <b>more assets</b> secured than many Fintechs and CEXes"
-  },
-  {
-    "component": "DataRoom/TVLComparison",
-    "title": "<b><em>Safe</em></b> TVL <b>x</b> TVL of <b>category leaders</b>"
-  },
-  {
-    "component": "DataRoom/SeeMore",
-    "title": "Want to see more?"
   },
   {
     "component": "DataRoom/DuneBoards",
