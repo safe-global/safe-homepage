@@ -1,3 +1,7 @@
+.container {
+  position: relative;
+}
+
 .textBlock {
   display: flex;
   flex-direction: column;
@@ -62,5 +66,27 @@
   .image {
     width: 100%;
     max-width: 405px;
+  }
+
+  .spot1 {
+    position: absolute;
+    left: -300px;
+    top: -150px;
+    z-index: -1;
+    width: 1000px;
+    height: 1000px;
+    background-image: radial-gradient(at top left, rgba(18, 255, 128, 0.3) 0%, rgba(246, 247, 248, 0) 50%);
+    filter: blur(70px);
+  }
+
+  .spot2 {
+    position: absolute;
+    right: -200px;
+    top: -250px;
+    z-index: -1;
+    width: 1000px;
+    height: 1000px;
+    background-image: radial-gradient(at top right, rgba(41, 182, 246, 0.3) 0%, rgba(246, 247, 248, 0) 50%);
+    filter: blur(70px);
   }
 }

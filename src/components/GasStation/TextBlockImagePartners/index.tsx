@@ -8,7 +8,9 @@ import css from './styles.module.css'
 export type TextBlockImagePartnersProps = BaseBlock & BlockWithVariant
 
 const TextBlockImagePartners = ({ title, text, items, image, variant, mobileVariant }: TextBlockImagePartnersProps) => (
-  <Container>
+  <Container className={css.container}>
+    <div className={css.spot1} />
+    <div className={css.spot2} />
     <Grid
       container
       className={clsx(
