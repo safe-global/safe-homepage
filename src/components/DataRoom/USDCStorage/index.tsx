@@ -37,7 +37,7 @@ const USDCStorage = ({ title, text, link, image }: BaseBlock) => {
   const opacity = useTransform(scrollYProgress, [0.75, 1], [1, 0])
 
   const value = usdcPercentageStored || USDC_PERCENTAGE_STORED_FALLBACK
-  const displayValue = toPercentage(value)
+  const displayValue = `${toPercentage(value)}$`
 
   return (
     <div ref={containerRef} className={css.sectionContainer}>

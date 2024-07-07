@@ -6,5 +6,5 @@
  * @returns {string} The converted number as a percentage string with the specified number of decimal places.
  */
 export const toPercentage = (num: number, decimalPlaces: number = 2): string => {
-  return `${(num * 100).toFixed(decimalPlaces)}%`
+  return (num * 100).toFixed(decimalPlaces)
 }

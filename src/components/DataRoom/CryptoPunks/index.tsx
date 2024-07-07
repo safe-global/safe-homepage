@@ -30,7 +30,7 @@ const CryptoPunks = ({ title, text, link }: BaseBlock) => {
   })
 
   const percentageValue = cryptoPunksStoredPercentage || CRYPTOPUNKS_PERCENTAGE_STORED_FALLBACK
-  const percentageToDisplay = toPercentage(percentageValue, 1)
+  const percentageToDisplay = `${toPercentage(percentageValue, 1)}%`
 
   const cryptoPunksStored = percentageValue * CRYPTOPUNKS_TOTAL
   const fractionToDisplay = `${cryptoPunksStored}/${CRYPTOPUNKS_TOTAL}`
