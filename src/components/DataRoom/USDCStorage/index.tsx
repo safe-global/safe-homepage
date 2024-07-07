@@ -10,7 +10,7 @@ import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 import { useSafeDataRoomStats } from '@/hooks/useSafeDataRoomStats'
 import { toPercentage } from '@/lib/toPercentage'
 
-const usdcPercentageStoredFallback = 0.0867
+const USDC_PERCENTAGE_STORED_FALLBACK = 0.0867
 
 const USDCStorage = ({ title, text, link, image }: BaseBlock) => {
   const { usdcPercentageStored } = useSafeDataRoomStats()
@@ -36,7 +36,7 @@ const USDCStorage = ({ title, text, link, image }: BaseBlock) => {
   const xTransformCanvas = useTransform(mapYProgress, [0.8, 1], getTransformParams(['0%', '100%']))
   const opacity = useTransform(scrollYProgress, [0.75, 1], [1, 0])
 
-  const value = usdcPercentageStored || usdcPercentageStoredFallback
+  const value = usdcPercentageStored || USDC_PERCENTAGE_STORED_FALLBACK
   const displayValue = toPercentage(value)
 
   return (

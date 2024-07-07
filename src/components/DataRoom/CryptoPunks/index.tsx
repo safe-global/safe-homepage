@@ -9,20 +9,31 @@ import LinksWrapper from '../LinksWrapper'
 import { getRandomColor } from '@/components/DataRoom/CryptoPunks/utils/getRandomColor'
 import CryptoPunk from '@/public/images/DataRoom/cryptopunk-silhouette.svg'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
+import { useSafeDataRoomStats } from '@/hooks/useSafeDataRoomStats'
+import { toPercentage } from '@/lib/toPercentage'
 
-const CRYPTOPUNKS_PERCENTAGE = '14%'
-const CRYPTOPUNKS_FRACTION = '1369/10,000'
+const CRYPTOPUNKS_TOTAL = 10000
+const CRYPTOPUNKS_PERCENTAGE_STORED_FALLBACK = 0.092
 
 const CRYPTOPUNK_ROWS_NR = 8
 const CRYPTOPUNK_COLUMNS_NR = 24
 
 const CryptoPunks = ({ title, text, link }: BaseBlock) => {
+  const { cryptoPunksStoredPercentage } = useSafeDataRoomStats()
+
   const backgroundRef = useRef<HTMLDivElement>(null)
   const isMobile = useIsMediumScreen()
+
   const { scrollYProgress } = useScroll({
     target: backgroundRef,
     offset: ['start end', 'end start'],
   })
+
+  const percentageValue = cryptoPunksStoredPercentage || CRYPTOPUNKS_PERCENTAGE_STORED_FALLBACK
+  const percentageToDisplay = toPercentage(percentageValue, 1)
+
+  const cryptoPunksStored = percentageValue * CRYPTOPUNKS_TOTAL
+  const fractionToDisplay = `${cryptoPunksStored}/${CRYPTOPUNKS_TOTAL}`
 
   return (
     <div ref={backgroundRef} className={css.sectionContainer}>
@@ -37,12 +48,13 @@ const CryptoPunks = ({ title, text, link }: BaseBlock) => {
 
           <div className={css.statsContainer}>
             <Typography variant="h1" className={css.percentage}>
-              {CRYPTOPUNKS_PERCENTAGE}
+              {percentageToDisplay}
             </Typography>
             <Typography variant="h2" className={css.fraction}>
-              {CRYPTOPUNKS_FRACTION}
+              {fractionToDisplay}
             </Typography>
           </div>
+
           {link && <LinksWrapper {...link} />}
         </RightPanel>
       </div>
