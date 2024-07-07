@@ -2,7 +2,6 @@ import { useContext } from 'react'
 import SafeDataRoomContext from '@/contexts/SafeDataRoomContext'
 import { DUNE_API_KEY } from '@/config/constants'
 import { duneQueryUrlBuilder } from '@/lib/duneQueryUrlBuilder'
-import { formatValue } from '@/lib/formatValue'
 
 type DuneDataRoomStats = {
   cex_tvl_binance: string
@@ -33,30 +32,6 @@ export const fetchDataRoomStats = async (): Promise<DuneDataRoomStats | null> =>
     .catch(() => null)
 }
 
-export const useSafeDataRoomStats = (): Record<string, string | null> => {
-  const {
-    tvlToGDPPercentage,
-    usdcPercentageStored,
-    cryptoPunksStoredPercentage,
-    totalVolumeTransfered,
-    onChainTransactionsPercentage,
-  } = useContext(SafeDataRoomContext)
-
-  const formattedTVLToGDPPercentage = tvlToGDPPercentage ? formatValue(tvlToGDPPercentage) : null
-  const formattedUSDCPercentageStored = usdcPercentageStored ? formatValue(usdcPercentageStored) : null
-  const formattedCryptoPunksStoredPercentage = cryptoPunksStoredPercentage
-    ? formatValue(cryptoPunksStoredPercentage)
-    : null
-  const formattedTotalVolumeTransfered = totalVolumeTransfered ? formatValue(totalVolumeTransfered) : null
-  const formattedOnChainTransactionsPercentage = onChainTransactionsPercentage
-    ? formatValue(onChainTransactionsPercentage)
-    : null
-
-  return {
-    formattedTVLToGDPPercentage,
-    formattedUSDCPercentageStored,
-    formattedCryptoPunksStoredPercentage,
-    formattedTotalVolumeTransfered,
-    formattedOnChainTransactionsPercentage,
-  }
+export const useSafeDataRoomStats = (): Record<string, number | null> => {
+  return useContext(SafeDataRoomContext)
 }

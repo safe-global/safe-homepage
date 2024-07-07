@@ -7,11 +7,14 @@ import LinksWrapper from '../LinksWrapper'
 import css from './styles.module.css'
 import MotionTypography from './MotionTypography'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
+import { useSafeDataRoomStats } from '@/hooks/useSafeDataRoomStats'
+import { toPercentage } from '@/lib/toPercentage'
 
-// Will be replaced with the actual value in a future PR
-const USDC_PERCENTAGE = '10%'
+const usdcPercentageStoredFallback = 0.0867
 
 const USDCStorage = ({ title, text, link, image }: BaseBlock) => {
+  const { usdcPercentageStored } = useSafeDataRoomStats()
+
   const isMobile = useIsMediumScreen()
   const containerRef = useRef<HTMLDivElement>(null)
 
@@ -33,6 +36,9 @@ const USDCStorage = ({ title, text, link, image }: BaseBlock) => {
   const xTransformCanvas = useTransform(mapYProgress, [0.8, 1], getTransformParams(['0%', '100%']))
   const opacity = useTransform(scrollYProgress, [0.75, 1], [1, 0])
 
+  const value = usdcPercentageStored || usdcPercentageStoredFallback
+  const displayValue = toPercentage(value)
+
   return (
     <div ref={containerRef} className={css.sectionContainer}>
       <motion.div style={{ opacity }} className={css.stickyContainer}>
@@ -47,7 +53,7 @@ const USDCStorage = ({ title, text, link, image }: BaseBlock) => {
           </MotionTypography>
           <MotionTypography customDelay={1.5}>
             <Typography className={css.usdcPercentage}>
-              <b>{USDC_PERCENTAGE}</b>
+              <b>{displayValue}</b>
             </Typography>
 
             <Typography variant="h2" className={css.text}>
