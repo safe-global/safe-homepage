@@ -16,22 +16,23 @@ const TwitterCTA = ({ title, text }: BaseBlock) => {
   const xUrl = xSharingUrl(currentUrl, socialMsg)
 
   return (
-    <Container className={`${layoutCss.containerShort} ${css.container}`}>
-      <Typography variant="h2" className={css.title}>
-        {title}
-      </Typography>
+    <>
+      <Container className={`${layoutCss.containerShort} ${css.container}`}>
+        <Typography variant="h2" className={css.title}>
+          {title}
+        </Typography>
 
-      <SafeLink href={xUrl}>
-        <Button variant="contained" size="large" className={css.button}>
-          Share on
-          <SvgIcon component={XIcon} fontSize="inherit" inheritViewBox />
-        </Button>
-      </SafeLink>
-
+        <SafeLink href={xUrl}>
+          <Button variant="contained" size="large" className={css.button}>
+            Share on
+            <SvgIcon component={XIcon} fontSize="inherit" inheritViewBox />
+          </Button>
+        </SafeLink>
+      </Container>
       <div className={css.sliderWrapper}>
         <Slider text={text} />
       </div>
-    </Container>
+    </>
   )
 }
 

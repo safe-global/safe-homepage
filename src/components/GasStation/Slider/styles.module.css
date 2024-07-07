@@ -23,7 +23,6 @@
 }
 
 .item {
-  margin-left: var(--items-gap);
   color: var(--mui-palette-primary-main);
 }
 

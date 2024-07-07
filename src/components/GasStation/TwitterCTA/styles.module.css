@@ -16,13 +16,23 @@
   gap: 8px;
 }
 .sliderWrapper {
-  width: 100%;
   margin-top: 96px;
-  margin-bottom: -120px;
+  margin-bottom: -80px;
 }
 
 @media (min-width: 600px) {
   .title {
     max-width: 800px;
+  }
+
+  .sliderWrapper {
+    margin-bottom: -120px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .sliderWrapper {
+    margin-left: -104px;
+    margin-right: -104px;
   }
 }
