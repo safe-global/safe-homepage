@@ -11,6 +11,15 @@
     "text": "Explore Mind Bending Sats from Safe Universe"
   },
   {
+    "component": "DataRoom/WorldGDP",
+    "title": "<b><em>Safe</em> TVL</b> is ~.1% of World GDP at",
+    "text": "Some text thats changing<br/>Confirming the sources of the data<br/>Any other info regarding the stats",
+    "link": {
+      "title": "Dune dashboard",
+      "href": "https://dune.com/queries/3710102/6242478"
+    }
+  },
+  {
     "component": "DataRoom/USDCStorage",
     "title": "We store...<br/>",
     "text": "<b>of all USDC</b>",
