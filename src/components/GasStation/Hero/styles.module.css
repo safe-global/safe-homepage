@@ -1,5 +1,6 @@
 .videoWrapper {
   position: relative;
+  z-index: -1;
 }
 
 .video {
@@ -16,15 +17,22 @@
 }
 
 @media (min-width: 900px) {
-  .gradient {
+  .gradientBase {
     position: absolute;
-    width: 138px;
+    width: 94px;
     top: 0;
-    right: 0;
-    bottom: 39px;
+    bottom: 38px;
+    left: 0;
     background: linear-gradient(270deg, rgba(18, 19, 18, 0) 0%, var(--mui-palette-background-default) 100%);
-    transform: scaleX(-1.005); /* prevent 1px gap glitch */
     z-index: 1;
+  }
+
+  .gradientFlipped {
+    left: auto;
+    right: 0;
+    bottom: 38px;
+    width: 138px;
+    transform: scaleX(-1);
   }
 
   .videoWrapper {
