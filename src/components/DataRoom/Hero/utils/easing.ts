@@ -1,13 +1,14 @@
 import { Vector3 } from 'three'
 
+const SMOOTH_TIME_DEFAULT = 0.5
+const MAX_SPEED_DEFAULT = Infinity
+const EPS_DEFAULT = 0.001
+const DAMPING_FACTOR = 0.0001
+
 export function damp(
   current: Vector3,
   target: number | [x: number, y: number, z: number] | Vector3,
-  smoothTime: number = 0.3,
   delta: number = 1 / 60,
-  maxSpeed: number = Infinity,
-  easing: (t: number) => number = (t) => t,
-  eps: number = 0.001,
 ): boolean {
   // Convert target to Vector3 if it's not already
   const targetVector =
@@ -18,20 +19,20 @@ export function damp(
   const diffLength = diff.length()
 
   // Check if we're already close enough
-  if (diffLength < eps) {
+  if (diffLength < EPS_DEFAULT) {
     current.copy(targetVector)
     return false
   }
 
-  // Apply easing
-  const t = easing(1 - Math.pow(0.001, delta / smoothTime))
+  // Apply linear easing
+  const t = 1 - Math.pow(DAMPING_FACTOR, delta / SMOOTH_TIME_DEFAULT)
 
   // Calculate step
   const step = diff.multiplyScalar(t)
 
   // Clamp to max speed
-  if (maxSpeed < Infinity) {
-    const maxStep = maxSpeed * delta
+  if (MAX_SPEED_DEFAULT < Infinity) {
+    const maxStep = MAX_SPEED_DEFAULT * delta
     if (step.length() > maxStep) {
       step.setLength(maxStep)
     }

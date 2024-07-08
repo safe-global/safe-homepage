@@ -33,7 +33,6 @@ export const CameraController = ({ zoomLevel }: { zoomLevel: MotionValue<number>
       damp(
         state.camera.position,
         [1 - mouse.current.x * 2, 1 - mouse.current.y * 2, 20 + Math.atan(mouse.current.y * 4)],
-        0.3,
         delta,
       )
     }
