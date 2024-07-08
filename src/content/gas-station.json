@@ -8,9 +8,9 @@
   {
     "component": "GasStation/Hero",
     "title": "Get gas credits to make your app gasless",
-    "text": "Users should not pay gas for using your app",
+    "text": "User should not pay gas for using your app",
     "link": {
-      "title": "Get gas sponsorship",
+      "title": "Get gas credits",
       "href": "https://wn2n6ocviur.typeform.com/gasstationapp"
     }
   },
@@ -18,7 +18,7 @@
     "component": "GasStation/TextBlockImagePartners",
     "variant": "image-text",
     "title": "Why sponsor gas?",
-    "text": "ERC 4337 and smart accounts can make user experience completely gasless by sponsoring transactions.",
+    "text": "ERC 4337 and smart accounts can make user experience completely gasless by sponsoring transactions",
     "items": [
       {
         "image": {
@@ -47,7 +47,7 @@
   },
   {
     "component": "GasStation/ImageTextTop",
-    "title": "Supported network<br/>gas pumps",
+    "title": "Network credits<br/>Available",
     "backgroundImage": {
       "sm": "/images/GasStation/network-gas-pump-sm.png",
       "md": "/images/GasStation/network-gas-pump-md.png",
@@ -57,7 +57,7 @@
   {
     "component": "GasStation/TextBlockImageYourStation",
     "variant": "image-text",
-    "title": "Get your network<br/>on a gas station",
+    "title": "Get your network<br/>on the gas station",
     "buttons": [
       {
         "text": "Become a network partner",
@@ -104,6 +104,6 @@
   {
     "component": "GasStation/TwitterCTA",
     "title": "Share and boost your chances to get gas",
-    "text": "Users should not pay gas for using your app"
+    "text": "User should not pay gas for using your app"
   }
 ]
