@@ -7,7 +7,7 @@
   },
   {
     "component": "GasStation/Hero",
-    "title": "Get gas credits to make your app gasless",
+    "title": "Multi-chain gas credits to make your app go gasless",
     "text": "User should not pay gas for using your app",
     "link": {
       "title": "Get gas credits",
