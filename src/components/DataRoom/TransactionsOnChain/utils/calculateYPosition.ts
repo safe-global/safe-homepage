@@ -1,6 +1,3 @@
-// This function calculates the Y position for individual digits in the counter animation.
-// It creates a smooth rolling effect from 0 to the targetNumber.
-
 /**
  * Calculates the Y position for individual digits in the counter animation
  * to create a smooth rolling effect from 0 to the targetNumber.
