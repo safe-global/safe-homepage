@@ -27,6 +27,7 @@ const Hero = ({ title, text, link }: BaseBlock) => {
           </Button>
         )}
       </div>
+      <div className={css.gradient} />
     </div>
   )
 }

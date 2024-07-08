@@ -7,7 +7,7 @@
 }
 
 .sliderWrapper {
-  margin-top: -6px;
+  margin-top: -8px;
 }
 
 .textContainer {
@@ -16,6 +16,17 @@
 }
 
 @media (min-width: 900px) {
+  .gradient {
+    position: absolute;
+    width: 138px;
+    top: 0;
+    right: 0;
+    bottom: 39px;
+    background: linear-gradient(270deg, rgba(18, 19, 18, 0) 0%, var(--mui-palette-background-default) 100%);
+    transform: scaleX(-1.005); /* prevent 1px gap glitch */
+    z-index: 1;
+  }
+
   .videoWrapper {
     margin-top: calc(-1 * var(--header-height));
   }
