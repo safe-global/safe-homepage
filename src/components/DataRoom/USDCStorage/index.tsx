@@ -8,6 +8,7 @@ import css from './styles.module.css'
 import MotionTypography from './MotionTypography'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 
+// Will be replaced with the actual value in a future PR
 const USDC_PERCENTAGE = '10%'
 
 const USDCStorage = ({ title, text, link, image }: BaseBlock) => {
@@ -44,16 +45,20 @@ const USDCStorage = ({ title, text, link, image }: BaseBlock) => {
           <MotionTypography customDelay={0.5}>
             <Typography variant="h2">{title}</Typography>
           </MotionTypography>
+
           <MotionTypography customDelay={1.5}>
             <Typography className={css.usdcPercentage}>
               <b>{USDC_PERCENTAGE}</b>
             </Typography>
+
             <Typography variant="h2" className={css.text}>
               {text}
             </Typography>
+
             {link && <LinksWrapper {...link} />}
           </MotionTypography>
         </motion.div>
+
         <motion.div
           className={css.canvas}
           style={{

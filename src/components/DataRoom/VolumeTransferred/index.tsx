@@ -5,6 +5,7 @@ import { useRef } from 'react'
 import type { BaseBlock } from '@/components/Home/types'
 import LinksWrapper from '../LinksWrapper'
 
+// Will be replaced with the actual value in a future PR
 const VOLUME_AMOUNT = '$611,127,712,666'
 
 const VolumeTransferred = ({ title, text, link }: BaseBlock) => {
@@ -49,6 +50,7 @@ const VolumeTransferred = ({ title, text, link }: BaseBlock) => {
             <Typography className={css.volume}>
               <b>{VOLUME_AMOUNT}</b>
             </Typography>
+
             <Typography variant="h2">{text}</Typography>
           </div>
         </motion.div>
