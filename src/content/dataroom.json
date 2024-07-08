@@ -50,7 +50,7 @@
     }
   },
   {
-    "component": "DataRoom/DuneBoards",
+    "component": "DataRoom/ExternalLinksGrid",
     "title": "Dune Boards",
     "items": [
       {
@@ -76,7 +76,7 @@
     ]
   },
   {
-    "component": "DataRoom/ExternalReports",
+    "component": "DataRoom/ExternalLinksGrid",
     "title": "External Reports",
     "items": [
       {
