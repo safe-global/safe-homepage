@@ -8,6 +8,7 @@ import { useCounterScroll } from './useCounterScroll'
 import LinksWrapper from '../LinksWrapper'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 
+// Will be replaced with the actual value in a future PR
 const TRANSACTIONS_AMOUNT = 1.75
 
 const TransactionsOnChain = ({ text, link }: BaseBlock) => {
@@ -15,8 +16,10 @@ const TransactionsOnChain = ({ text, link }: BaseBlock) => {
     <div className={css.sectionContainer}>
       <div className={css.stickyContainer}>
         <CounterContainer percentage={TRANSACTIONS_AMOUNT} />
+
         <div className={css.content}>
           <Typography variant="h1">{text}</Typography>
+
           <div className={css.linkContainer}>{link && <LinksWrapper {...link} />}</div>
         </div>
       </div>
@@ -49,9 +52,11 @@ const CounterContainer = ({ percentage }: { percentage: number }) => {
       <div className={css.box1}>
         <Counter value={value} />
       </div>
+
       <div className={css.box2}>
         <Counter value={value} />
       </div>
+
       <div>
         <Counter value={value} />
       </div>

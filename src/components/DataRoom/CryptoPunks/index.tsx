@@ -6,7 +6,7 @@ import type { ReactNode } from 'react'
 import type { MotionValue } from 'framer-motion'
 import css from './styles.module.css'
 import LinksWrapper from '../LinksWrapper'
-import { getColor } from './utils'
+import { getRandomColor } from '@/components/DataRoom/CryptoPunks/utils/getRandomColor'
 import CryptoPunk from '@/public/images/DataRoom/cryptopunk-silhouette.svg'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 
@@ -28,19 +28,24 @@ const CryptoPunks = ({ title, text, link }: BaseBlock) => {
     <div ref={backgroundRef} className={css.sectionContainer}>
       <div className={css.stickyContainer}>
         <LeftPanel scrollYProgress={scrollYProgress} isMobile={isMobile} />
+
         <RightPanel scrollYProgress={scrollYProgress} isMobile={isMobile}>
           <Typography variant="h2" className={css.text}>
             {text}
           </Typography>
+
           <Typography variant="h2">{title}</Typography>
+
           <div className={css.statsContainer}>
             <Typography variant="h1" className={css.percentage}>
               {CRYPTOPUNKS_PERCENTAGE}
             </Typography>
+
             <Typography variant="h2" className={css.fraction}>
               {CRYPTOPUNKS_FRACTION}
             </Typography>
           </div>
+
           {link && <LinksWrapper {...link} />}
         </RightPanel>
       </div>
@@ -79,7 +84,7 @@ const LeftPanel = ({ scrollYProgress, isMobile }: { scrollYProgress: MotionValue
               }}
               style={{
                 transformOrigin: 'center',
-                color: getColor(),
+                color: getRandomColor(),
               }}
             >
               <CryptoPunk className={css.cryptopunk} />

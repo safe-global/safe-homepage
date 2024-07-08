@@ -1,8 +1,8 @@
-import { motion, useSpring, useTransform } from 'framer-motion'
+import { motion, type MotionValue, useSpring, useTransform } from 'framer-motion'
 import { useEffect } from 'react'
-import css from './styles.module.css'
-import { calculateYPosition } from './utils'
+import { calculateYPosition } from '@/components/DataRoom/TransactionsOnChain/utils/calculateYPosition'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
+import css from './styles.module.css'
 
 type CounterProps = {
   value: number
@@ -14,7 +14,7 @@ type DigitProps = {
 }
 
 type NumberProps = {
-  mv: any
+  mv: MotionValue<number>
   number: number
 }
 
@@ -37,8 +37,8 @@ const Counter = ({ value }: CounterProps) => {
 }
 
 const Digit = ({ place, value }: DigitProps) => {
-  let valueRoundedToPlace = Math.floor(value / place) % 10
-  let animatedValue = useSpring(valueRoundedToPlace, {
+  const valueRoundedToPlace = Math.floor(value / place) % 10
+  const animatedValue = useSpring(valueRoundedToPlace, {
     damping: 5,
     stiffness: 15,
   })
@@ -58,7 +58,7 @@ const Digit = ({ place, value }: DigitProps) => {
 
 const Number = ({ mv, number }: NumberProps) => {
   const height = useIsMediumScreen() ? DIGIT_HEIGHT_SM : DIGIT_HEIGHT_MD
-  let yPosition = useTransform(mv, (latest: number) => calculateYPosition(latest, number, height))
+  const yPosition = useTransform(mv, (latest: number) => calculateYPosition(latest, number, height))
 
   return (
     <motion.span style={{ y: yPosition }} className={css.number}>
