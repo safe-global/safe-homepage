@@ -5,8 +5,9 @@ import SafeLink from '@/components/common/SafeLink'
 import { xSharingUrl } from '@/lib/xSharingUrl'
 import XIcon from '@/public/images/x-icon.svg'
 import useCurrentUrl from '@/hooks/useCurrentUrl'
-import css from './styles.module.css'
 import Slider from '@/components/GasStation/Slider'
+import clsx from 'clsx'
+import css from './styles.module.css'
 
 const socialMsg = 'Just applied to get gas credits from @safe Safe{Core} gas station ⛽️'
 
@@ -29,8 +30,13 @@ const TwitterCTA = ({ title, text }: BaseBlock) => {
           </Button>
         </SafeLink>
       </Container>
+
       <div className={css.sliderWrapper}>
+        <div className={css.gradientBase} />
+
         <Slider text={text} />
+
+        <div className={clsx(css.gradientBase, css.gradientFlipped)} />
       </div>
     </>
   )
