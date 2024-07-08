@@ -1,7 +1,7 @@
 import type { DetailedHTMLProps, ImgHTMLAttributes } from 'react'
 import type { ButtonProps } from '@mui/material'
 
-type BaseBlock = {
+export type BaseBlock = {
   title: string | JSX.Element
   text: string | JSX.Element
   caption?: string
@@ -11,15 +11,20 @@ type BaseBlock = {
   items?: Array<Partial<BaseBlock>>
 }
 
-type Link = {
+export type Link = {
   title?: string
   href: string
 }
 
-type Button = {
+export type Button = {
   text?: string
   href: string
   variant: 'button' | 'link'
   color?: ButtonProps['color']
   isDisabled?: boolean
+}
+
+export type BlockWithVariant = {
+  variant: 'image-text' | 'text-image'
+  mobileVariant?: 'image-text' | 'text-image'
 }

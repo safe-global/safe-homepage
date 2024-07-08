@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
-import Matter from 'matter-js'
+import { Engine, Render, Runner, World } from 'matter-js'
 import { debounce } from 'lodash'
 import type { MotionValue } from 'framer-motion'
 import type { Dimensions } from './utils/types'
@@ -7,13 +7,15 @@ import { addWallsToWorld, createWalls } from './utils/addWallsToWorld'
 import { createCoin } from './utils/createCoin'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 
-const { Engine, Render, Runner, World } = Matter
-
 type MatterCanvasProps = {
   imgUrl: string
   scrollYProgress: MotionValue<number>
 }
 
+const GRAVITY_Y_MOBILE = 1.5
+const GRAVITY_Y_DESKTOP = 1
+
+// TODO: Refactor this component to use the custom hooks and improve readability
 export default function MatterCanvas({ imgUrl, scrollYProgress }: MatterCanvasProps) {
   const isMobile = useIsMediumScreen()
   const canvas = useRef<HTMLCanvasElement>(null)
@@ -43,15 +45,15 @@ export default function MatterCanvas({ imgUrl, scrollYProgress }: MatterCanvasPr
 
   const spawnCoinsInterval = useCallback(
     (engine: Matter.Engine, dimensions: Dimensions, imgUrl: string, spawnCoins: boolean) => {
-      if (spawnCoins) {
-        const spawnInterval = setInterval(() => {
-          if (engine?.world.bodies.length >= 20) {
-            clearInterval(spawnInterval)
-            return
-          }
-          World.add(engine.world, createCoin(dimensions, imgUrl, isMobile))
-        }, 250)
-      }
+      if (!spawnCoins) return
+
+      const spawnInterval = setInterval(() => {
+        if (engine?.world.bodies.length >= 20) {
+          clearInterval(spawnInterval)
+          return
+        }
+        World.add(engine.world, createCoin(dimensions, imgUrl, isMobile))
+      }, 250)
     },
     [isMobile],
   )
@@ -60,7 +62,7 @@ export default function MatterCanvas({ imgUrl, scrollYProgress }: MatterCanvasPr
     const engine = Engine.create()
     engineRef.current = engine
     worldRef.current = engine.world
-    engine.gravity.y = isMobile ? 1.5 : 1 // Speeds Up Coins For Mobile
+    engine.gravity.y = isMobile ? GRAVITY_Y_MOBILE : GRAVITY_Y_DESKTOP // Speeds Up Coins For Mobile
 
     const render = createRenderer(canvas, engine, dimensions, isMobile)
     const walls = createWalls(dimensions)

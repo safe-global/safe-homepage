@@ -2,15 +2,12 @@ import type { ReactNode } from 'react'
 import { Container, Grid, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
-import type { BaseBlock } from '@/components/Home/types'
+import type { BaseBlock, BlockWithVariant } from '@/components/Home/types'
 import Stepper, { type StepsType } from '@/components/Wallet/Stepper'
 import clsx from 'clsx'
 import ButtonsWrapper from '@/components/common/ButtonsWrapper'
 
-export type ParallaxTextProps = BaseBlock & {
-  variant: 'image-text' | 'text-image'
-  mobileVariant?: 'image-text' | 'text-image'
-}
+export type ParallaxTextProps = BaseBlock & BlockWithVariant
 
 // TODO: This component should be deleted when every page content is fetched from the CMS rather than hardcoded in the /content folder
 const ParallaxText = ({

@@ -12,7 +12,7 @@
   },
   {
     "component": "DataRoom/USDCStorage",
-    "title": "We store... <br/>",
+    "title": "We store...<br/>",
     "text": "<b>of all USDC</b>",
     "link": {
       "title": "Dune dashboard",
@@ -34,7 +34,7 @@
   },
   {
     "component": "DataRoom/VolumeTransferred",
-    "title": "with all time volume <br/> transferred",
+    "title": "with all time volume<br/>transferred",
     "text": "and counting...",
     "link": {
       "title": "Dune dashboard",
@@ -43,7 +43,7 @@
   },
   {
     "component": "DataRoom/TransactionsOnChain",
-    "text": "<b>transactions on chain</b> originate from a <b>Safe</b>",
+    "text": "<b>transactions on chain</b> originate from a <b>Safe Account</b>",
     "link": {
       "title": "Dune dashboard",
       "href": "https://dune.com/queries/3710102/6242478"
@@ -54,7 +54,7 @@
     "title": "Dune Boards",
     "items": [
       {
-        "title": "Safe on All chains",
+        "title": "Safe on all chains",
         "image": {
           "src": "/images/dune-icon-name-logo.png",
           "alt": "Dune Analytics logo"
@@ -64,7 +64,7 @@
         }
       },
       {
-        "title": "Smart account landscape",
+        "title": "Smart Account landscape",
         "image": {
           "src": "/images/dune-icon-name-logo.png",
           "alt": "Dune Analytics logo"
