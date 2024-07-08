@@ -53,6 +53,7 @@
 
   .stickyContainer {
     justify-content: end;
+    padding-top: 72px;
   }
 
   .linksContainer {
