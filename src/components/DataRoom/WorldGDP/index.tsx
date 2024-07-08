@@ -13,7 +13,7 @@ const WorldGDP = ({ title, text, link }: BaseBlock) => (
       <div className={css.contentContainer}>
         <MotionContainer customDelay={0.2}>
           <div>
-            <video className={css.video} src="/videos/DataRoom/SafeLogo.mov" autoPlay muted loop />
+            <video className={css.video} src="/videos/DataRoom/SafeGlobe.mp4" autoPlay muted loop />
           </div>
         </MotionContainer>
         <MotionContainer customDelay={0.5}>
