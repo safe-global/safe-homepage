@@ -1,0 +1,61 @@
+.sectionContainer {
+  height: 300vh;
+}
+
+.stickyContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+}
+
+.usdcPercentage {
+  font-size: 180px;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.text {
+  margin-bottom: 70px;
+}
+
+.content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 128px;
+}
+
+.canvas {
+  width: 50%;
+  height: 100%;
+}
+
+@media (max-width: 900px) {
+  .stickyContainer {
+    padding-top: 72px;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .usdcPercentage {
+    font-size: 120px;
+  }
+
+  .content {
+    width: 100%;
+    padding: 30px;
+    height: 50%;
+  }
+
+  .canvas {
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+}

@@ -1,0 +1,24 @@
+<svg viewBox="0 0 80 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g opacity="0.6">
+    <rect x="12.7672" y="12.8345" width="6.11973" height="31.4438" fill="currentColor" />
+    <rect x="12.7672" y="69.9463" width="6.11973" height="50.0535" fill="currentColor" />
+    <rect x="6.6474" y="44.2783" width="6.11973" height="12.1925" fill="currentColor" />
+    <rect width="6.11973" height="6.41711" transform="matrix(1 0 0 -1 0.52771 62.8877)" fill="currentColor" />
+    <rect width="6.11973" height="6.41711" transform="matrix(1 0 0 -1 12.7672 62.8877)" fill="currentColor" />
+    <rect width="6.11973" height="6.41711" transform="matrix(1 0 0 -1 6.6474 69.3047)" fill="currentColor" />
+    <rect width="6.11973" height="6.41711" transform="matrix(1 0 0 -1 18.8869 12.8345)" fill="currentColor" />
+    <rect width="6.11973" height="12.8342" transform="matrix(1 0 0 -1 36.6342 120)" fill="currentColor" />
+    <rect width="6.11973" height="6.41711" transform="matrix(1 0 0 -1 67.2328 100.749)" fill="currentColor" />
+    <rect width="24.4789" height="6.41711" transform="matrix(1 0 0 -1 42.7538 107.166)" fill="currentColor" />
+    <rect width="6.11973" height="6.41711" transform="matrix(1 0 0 -1 67.2328 12.8345)" fill="currentColor" />
+    <rect
+      x="67.2328"
+      y="6.41699"
+      width="42.2262"
+      height="6.41711"
+      transform="rotate(180 67.2328 6.41699)"
+      fill="currentColor"
+    />
+    <rect x="73.3525" y="12.8345" width="6.11973" height="81.4973" fill="currentColor" />
+  </g>
+</svg>

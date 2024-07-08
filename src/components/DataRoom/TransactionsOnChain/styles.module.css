@@ -1,0 +1,132 @@
+.sectionContainer {
+  height: 150vh;
+}
+
+.stickyContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-left: 30px;
+  position: sticky;
+  top: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.linkContainer {
+  align-self: auto;
+  margin-top: 0;
+  margin-right: 0;
+}
+
+.counterContainer {
+  color: var(--mui-palette-primary-main);
+  font-size: 30px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.box1 {
+  height: 50px;
+  overflow: hidden;
+}
+
+.box2 {
+  height: 70px;
+  overflow: hidden;
+}
+
+.digit {
+  font-variant-numeric: tabular-nums;
+  position: relative;
+  width: 0.8ch;
+  height: 120px;
+}
+
+.number {
+  position: absolute;
+  inset: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter {
+  display: flex;
+  overflow: hidden;
+  font-size: 120px;
+}
+
+.counterSpan {
+  margin-top: 44px;
+}
+
+@media (min-width: 900px) {
+  .sectionContainer {
+    height: 200vh;
+  }
+
+  .content {
+    width: auto;
+    margin-top: 80px;
+    align-items: flex-start;
+  }
+
+  .digit {
+    width: 1ch;
+  }
+
+  .linkContainer {
+    align-self: flex-end;
+    margin-top: 80px;
+    margin-right: 80px;
+  }
+
+  .counterContainer {
+    gap: 0;
+  }
+
+  .box1 {
+    height: 100px;
+  }
+
+  .box2 {
+    height: 150px;
+  }
+
+  .stickyContainer {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 120px;
+  }
+
+  .counterContainer {
+    translate: 50px 0;
+  }
+
+  .digit {
+    height: 215px;
+  }
+
+  .counter {
+    font-size: 200px;
+  }
+
+  .counterSpan {
+    margin-top: 96px;
+  }
+}

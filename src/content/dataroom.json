@@ -1,0 +1,134 @@
+[
+  {
+    "pageTitle": "Safe Data Room - Key Insights into the Safe Ecosystem",
+    "description": "Uncover the impact of the Safe ecosystem in crypto. Explore detailed metrics on USDC storage, CryptoPunks holdings, and transaction volumes. Access comprehensive reports from Dune Analytics, Messari, Nansen, and more.",
+    "image": "/images/Home/meta-image-homepage.jpg",
+    "component": "common/MetaTags"
+  },
+  {
+    "component": "DataRoom/Hero",
+    "title": "Welcome to Safe Data Room",
+    "text": "Explore Mind Bending Sats from Safe Universe"
+  },
+  {
+    "component": "DataRoom/USDCStorage",
+    "title": "We store...<br/>",
+    "text": "<b>of all USDC</b>",
+    "link": {
+      "title": "Dune dashboard",
+      "href": "https://dune.com/queries/3710102/6242478"
+    },
+    "image": {
+      "src": "/images/Dataroom/USDC.png",
+      "alt": "USDC Coin"
+    }
+  },
+  {
+    "component": "DataRoom/CryptoPunks",
+    "title": "CryptoPunks",
+    "text": "Some text thats changing<br/>Confirming the sources of the data<br/>Any other info regarding the stats",
+    "link": {
+      "title": "Dune dashboard",
+      "href": "https://dune.com/queries/3710102/6242478"
+    }
+  },
+  {
+    "component": "DataRoom/VolumeTransferred",
+    "title": "with all time volume<br/>transferred",
+    "text": "and counting...",
+    "link": {
+      "title": "Dune dashboard",
+      "href": "https://dune.com/queries/3710102/6242478"
+    }
+  },
+  {
+    "component": "DataRoom/TransactionsOnChain",
+    "text": "<b>transactions on chain</b> originate from a <b>Safe Account</b>",
+    "link": {
+      "title": "Dune dashboard",
+      "href": "https://dune.com/queries/3710102/6242478"
+    }
+  },
+  {
+    "component": "DataRoom/ExternalLinksGrid",
+    "title": "Dune Boards",
+    "items": [
+      {
+        "title": "Safe on all chains",
+        "image": {
+          "src": "/images/dune-icon-name-logo.png",
+          "alt": "Dune Analytics logo"
+        },
+        "link": {
+          "href": "https://dune.com/safe/all"
+        }
+      },
+      {
+        "title": "Smart Account landscape",
+        "image": {
+          "src": "/images/dune-icon-name-logo.png",
+          "alt": "Dune Analytics logo"
+        },
+        "link": {
+          "href": "https://dune.com/safe/smart-accounts"
+        }
+      }
+    ]
+  },
+  {
+    "component": "DataRoom/ExternalLinksGrid",
+    "title": "External Reports",
+    "items": [
+      {
+        "title": "Messari Q4 2023",
+        "image": {
+          "src": "/images/messari-logo.svg",
+          "alt": "Messari logo"
+        },
+        "link": {
+          "href": "https://messari.io/report/state-of-safe-q1-2024"
+        }
+      },
+      {
+        "title": "Messari Q1 2024",
+        "image": {
+          "src": "/images/messari-logo.svg",
+          "alt": "Messari logo"
+        },
+        "link": {
+          "href": "https://messari.io/report/safe-q3-2023-brief"
+        }
+      },
+      {
+        "title": "Nansen Report",
+        "image": {
+          "src": "/images/nansen-logo.png",
+          "alt": "Nansen logo"
+        },
+        "link": {
+          "href": "https://dune.com/safe/all"
+        }
+      },
+      {
+        "title": "Greenfield One Thesis Post",
+        "image": {
+          "src": "/images/green-field-logo.svg",
+          "alt": "Greenfield logo"
+        },
+        "link": {
+          "href": "https://dune.com/safe/smart-accounts"
+        }
+      },
+      {
+        "title": "1kx Thesis Post",
+        "image": {
+          "src": "/images/1kx-logo.svg",
+          "alt": "1kx logo"
+        },
+        "link": {
+          "href": "https://dune.com/safe/all"
+        }
+      }
+    ]
+  }
+]
