@@ -1,6 +1,6 @@
 .videoWrapper {
   position: relative;
-  margin-top: calc(-1 * var(--header-height));
+  z-index: -1;
 }
 
 .video {
@@ -8,7 +8,7 @@
 }
 
 .sliderWrapper {
-  margin-top: -6px;
+  margin-top: -8px;
 }
 
 .textContainer {
@@ -17,9 +17,31 @@
 }
 
 @media (min-width: 900px) {
+  .gradientBase {
+    position: absolute;
+    width: 94px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(270deg, rgba(18, 19, 18, 0) 0%, var(--mui-palette-background-default) 100%);
+    z-index: 1;
+  }
+
+  .gradientFlipped {
+    left: auto;
+    right: 0;
+    bottom: 0;
+    width: 138px;
+    transform: scaleX(-1);
+  }
+
+  .videoWrapper {
+    margin-top: calc(-1 * var(--header-height));
+  }
+
   .textContainer {
     position: absolute;
-    top: 35%;
+    top: 32%;
     left: calc(50% - 350px);
     max-width: 700px;
   }

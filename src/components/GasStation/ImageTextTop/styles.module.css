@@ -6,13 +6,14 @@
   background-repeat: no-repeat;
   overflow: hidden;
   background-size: contain;
-  min-height: 650px;
+  min-height: 500px;
   max-height: 90vh;
-  background-position: center top 150px;
+  background-position: center top 190px;
 }
 
 @media (min-width: 900px) {
   .bg {
+    min-height: 650px;
     background-position: center top;
   }
 

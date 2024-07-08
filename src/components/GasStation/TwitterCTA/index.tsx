@@ -5,8 +5,9 @@ import SafeLink from '@/components/common/SafeLink'
 import { xSharingUrl } from '@/lib/xSharingUrl'
 import XIcon from '@/public/images/x-icon.svg'
 import useCurrentUrl from '@/hooks/useCurrentUrl'
-import css from './styles.module.css'
 import Slider from '@/components/GasStation/Slider'
+import clsx from 'clsx'
+import css from './styles.module.css'
 
 const socialMsg = 'Just applied to get gas credits from @safe Safe{Core} gas station ⛽️'
 
@@ -16,22 +17,28 @@ const TwitterCTA = ({ title, text }: BaseBlock) => {
   const xUrl = xSharingUrl(currentUrl, socialMsg)
 
   return (
-    <Container className={`${layoutCss.containerShort} ${css.container}`}>
-      <Typography variant="h2" className={css.title}>
-        {title}
-      </Typography>
+    <>
+      <Container className={`${layoutCss.containerShort} ${css.container}`}>
+        <Typography variant="h2" className={css.title}>
+          {title}
+        </Typography>
 
-      <SafeLink href={xUrl}>
-        <Button variant="contained" size="large" className={css.button}>
-          Share on
-          <SvgIcon component={XIcon} fontSize="inherit" inheritViewBox />
-        </Button>
-      </SafeLink>
+        <SafeLink href={xUrl}>
+          <Button variant="contained" size="large" className={css.button}>
+            Share on
+            <SvgIcon component={XIcon} fontSize="inherit" inheritViewBox />
+          </Button>
+        </SafeLink>
+      </Container>
 
       <div className={css.sliderWrapper}>
+        <div className={css.gradientBase} />
+
         <Slider text={text} />
+
+        <div className={clsx(css.gradientBase, css.gradientFlipped)} />
       </div>
-    </Container>
+    </>
   )
 }
 

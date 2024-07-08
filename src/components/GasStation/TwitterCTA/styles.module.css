@@ -16,13 +16,42 @@
   gap: 8px;
 }
 .sliderWrapper {
-  width: 100%;
   margin-top: 96px;
-  margin-bottom: -120px;
+  margin-bottom: -80px;
 }
 
 @media (min-width: 600px) {
+  .gradientBase {
+    position: absolute;
+    width: 94px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(270deg, rgba(18, 19, 18, 0) 0%, var(--mui-palette-background-default) 100%);
+    z-index: 1;
+  }
+
+  .gradientFlipped {
+    left: auto;
+    right: 0;
+    bottom: 0;
+    width: 138px;
+    transform: scaleX(-1);
+  }
+
   .title {
     max-width: 800px;
+  }
+
+  .sliderWrapper {
+    position: relative;
+    margin-bottom: -120px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .sliderWrapper {
+    margin-left: -104px;
+    margin-right: -104px;
   }
 }
