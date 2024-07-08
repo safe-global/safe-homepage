@@ -2,7 +2,7 @@ import type { BaseBlock } from '@/components/Home/types'
 import { Typography } from '@mui/material'
 import css from './styles.module.css'
 
-const SLIDER_ITEMS = 7
+const SLIDER_ITEMS = 10
 
 const Slider = ({ text }: Pick<BaseBlock, 'text'>) => (
   <div className={css.wrapper}>
