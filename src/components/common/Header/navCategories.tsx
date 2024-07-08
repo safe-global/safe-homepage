@@ -11,6 +11,7 @@ import SafeConIcon from '@/public/images/Header/safe-con-icon.svg'
 import CareersIcon from '@/public/images/Header/careers-icon.svg'
 import PressRoomIcon from '@/public/images/Header/press-room-icon.svg'
 import HelpCenterIcon from '@/public/images/Header/help-center-icon.svg'
+import GasStationIcon from '@/public/images/Header/gas-station-icon.svg'
 
 export type NavItem = {
   label: string
@@ -59,6 +60,11 @@ export const navCategories: NavCategory[] = [
         target: '_blank',
         rel: 'noreferrer',
         icon: <PaperIcon />,
+      },
+      {
+        label: 'Gas Station',
+        href: AppRoutes.gasStation,
+        icon: <GasStationIcon />,
       },
     ],
   },

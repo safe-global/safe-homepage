@@ -10,6 +10,7 @@ export const AppRoutes = {
   index: '/',
   imprint: '/imprint',
   governance: '/governance',
+  gasStation: '/gas-station',
   ecosystem: '/ecosystem',
   disclaimer: '/disclaimer',
   core: '/core',

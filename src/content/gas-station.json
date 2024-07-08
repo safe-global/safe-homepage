@@ -1,0 +1,109 @@
+[
+  {
+    "pageTitle": "Safe Gas Station",
+    "description": "Get gas credits to make your app gasless",
+    "image": "https://safe.global/images/GasStation/gas-station.png",
+    "component": "common/MetaTags"
+  },
+  {
+    "component": "GasStation/Hero",
+    "title": "Multi-chain gas credits to make your app go gasless",
+    "text": "User should not pay gas for using your app",
+    "link": {
+      "title": "Get gas credits",
+      "href": "https://wn2n6ocviur.typeform.com/gasstationapp"
+    }
+  },
+  {
+    "component": "GasStation/TextBlockImagePartners",
+    "variant": "image-text",
+    "title": "Why sponsor gas?",
+    "text": "ERC 4337 and smart accounts can make user experience completely gasless by sponsoring transactions",
+    "items": [
+      {
+        "image": {
+          "src": "/images/pimlico-logo.png",
+          "alt": "Pimlico"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/gnosis-logo.png",
+          "alt": "Gnosis"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/polygon.svg",
+          "alt": "Polygon"
+        }
+      }
+    ],
+    "image": {
+      "src": "/images/GasStation/gas-sign.png",
+      "alt": "Sign pointing to gasless apps"
+    },
+    "mobileVariant": "text-image"
+  },
+  {
+    "component": "GasStation/ImageTextTop",
+    "title": "Network credits<br/>Available",
+    "backgroundImage": {
+      "sm": "/images/GasStation/network-gas-pump-sm.png",
+      "md": "/images/GasStation/network-gas-pump-md.png",
+      "alt": "Gnosis and Polygon gas pumps"
+    }
+  },
+  {
+    "component": "GasStation/TextBlockImageYourStation",
+    "variant": "image-text",
+    "title": "Get your network<br/>on the gas station",
+    "buttons": [
+      {
+        "text": "Become a network partner",
+        "href": "https://wn2n6ocviur.typeform.com/to/fBPBSB8l",
+        "variant": "button"
+      }
+    ],
+    "image": {
+      "src": "/images/GasStation/your-tank.png",
+      "alt": "New network partner gas tank"
+    },
+    "mobileVariant": "text-image"
+  },
+  {
+    "component": "GasStation/PartnersCardsImage",
+    "variant": "text-image",
+    "caption": "Integrate to build gasless apps",
+    "partnersImage": {
+      "src": "/images/GasStation/safe-pimlico.png",
+      "alt": "Safe and Pimlico"
+    },
+    "items": [
+      {
+        "title": "Explore ERC 4337 + Safe",
+        "link": {
+          "title": "View docs",
+          "href": "https://docs.safe.global/home/4337-safe"
+        }
+      },
+      {
+        "title": "How to integrate Safe{Core} Stack",
+        "link": {
+          "title": "View docs",
+          "href": "https://docs.safe.global/home/4337-guides/safe-sdk"
+        }
+      }
+    ],
+    "image": {
+      "src": "/images/GasStation/safe-refrigerator.png",
+      "alt": "Safe refrigerator"
+    },
+    "mobileVariant": "text-image"
+  },
+  {
+    "component": "GasStation/TwitterCTA",
+    "title": "Share and boost your chances to get gas",
+    "text": "User should not pay gas for using your app"
+  }
+]
