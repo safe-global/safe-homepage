@@ -82,7 +82,7 @@
       {
         "title": "Messari Q4 2023",
         "image": {
-          "src": "/images/messari-logo.png",
+          "src": "/images/messari-logo.svg",
           "alt": "Messari logo"
         },
         "link": {
@@ -92,7 +92,7 @@
       {
         "title": "Messari Q1 2024",
         "image": {
-          "src": "/images/messari-logo.png",
+          "src": "/images/messari-logo.svg",
           "alt": "Messari logo"
         },
         "link": {
@@ -112,7 +112,7 @@
       {
         "title": "Greenfield One Thesis Post",
         "image": {
-          "src": "/images/green-field-logo.png",
+          "src": "/images/green-field-logo.svg",
           "alt": "Greenfield logo"
         },
         "link": {
@@ -122,7 +122,7 @@
       {
         "title": "1kx Thesis Post",
         "image": {
-          "src": "/images/1kx-logo.png",
+          "src": "/images/1kx-logo.svg",
           "alt": "1kx logo"
         },
         "link": {
