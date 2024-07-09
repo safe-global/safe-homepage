@@ -9,7 +9,7 @@ import Slider from '@/components/GasStation/Slider'
 import clsx from 'clsx'
 import css from './styles.module.css'
 
-const socialMsg = 'Just applied to get gas credits from @safe Safe{Core} gas station ⛽️'
+const socialMsg = 'Just checked out the @safe {Core} Gas Station ⛽️ with gas credits worth $250k'
 
 const TwitterCTA = ({ title, text }: BaseBlock) => {
   const currentUrl = useCurrentUrl()
