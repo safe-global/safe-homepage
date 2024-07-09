@@ -8,7 +8,7 @@
   {
     "component": "GasStation/Hero",
     "title": "Multi-chain gas credits to make your app go gasless",
-    "text": "User should not pay gas for using your app",
+    "text": "Users should not pay gas for using your app",
     "link": {
       "title": "Get gas credits",
       "href": "https://wn2n6ocviur.typeform.com/gasstationapp"
@@ -18,7 +18,7 @@
     "component": "GasStation/TextBlockImagePartners",
     "variant": "image-text",
     "title": "Why sponsor gas?",
-    "text": "ERC 4337 and smart accounts can make user experience completely gasless by sponsoring transactions",
+    "text": "ERC 4337 and smart accounts can make your user experience completely gasless by sponsoring transactions",
     "items": [
       {
         "image": {
@@ -47,7 +47,7 @@
   },
   {
     "component": "GasStation/ImageTextTop",
-    "title": "Network credits<br/>Available",
+    "title": "Network credits<br/>available",
     "backgroundImage": {
       "sm": "/images/GasStation/network-gas-pump-sm.png",
       "md": "/images/GasStation/network-gas-pump-md.png",
@@ -104,6 +104,6 @@
   {
     "component": "GasStation/TwitterCTA",
     "title": "Share and boost your chances to get gas",
-    "text": "User should not pay gas for using your app"
+    "text": "Users should not pay gas for using your app"
   }
 ]
