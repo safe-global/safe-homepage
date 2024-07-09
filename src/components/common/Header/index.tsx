@@ -10,6 +10,7 @@ import Menu from '@/components/common/Header/Menu'
 import { navCategories, type NavCategories } from '@/components/common/Header/navCategories'
 import Logo from '@/public/images/logo.svg'
 import AngleDownIcon from '@/public/images/angle-down.svg'
+import ArrowIcon from '@/public/images/arrow-out-square-corner.svg'
 import css from './styles.module.css'
 import NavigationButton from '@/components/common/Header/NavigationButton'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
@@ -92,6 +93,7 @@ const WalletButton = () => (
   <SafeLink href={WALLET_LINK}>
     <Button className={css.button} variant="contained">
       Launch Wallet
+      <ArrowIcon className={css.icon} />
     </Button>
   </SafeLink>
 )
