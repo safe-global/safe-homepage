@@ -79,9 +79,8 @@
   }
 
   .content {
-    width: auto;
     margin-top: 80px;
-    align-items: flex-start;
+    margin-right: 80px;
   }
 
   .digit {
@@ -91,7 +90,7 @@
   .linkContainer {
     align-self: flex-end;
     margin-top: 80px;
-    margin-right: 80px;
+    /* margin-right: 80px; */
   }
 
   .counterContainer {
