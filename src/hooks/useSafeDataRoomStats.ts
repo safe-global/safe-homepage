@@ -27,8 +27,14 @@ const QUERY_ID_DATAROOM_STATS = 3864414
 
 export const fetchDataRoomStats = async (): Promise<DuneDataRoomStats | null> => {
   return fetch(duneQueryUrlBuilder(QUERY_ID_DATAROOM_STATS, DUNE_API_KEY))
-    .then((res) => res.json())
-    .then((data) => data.result.rows[0])
+    .then((res) => {
+      if (res.ok) {
+        return res.json()
+      } else {
+        throw new Error('Response error')
+      })
+    // Validate response instead of casting
+    .then((data) => data.result.rows[0] as DuneDataRoomStats)
     .catch(() => null)
 }
 
