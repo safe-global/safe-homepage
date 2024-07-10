@@ -5,7 +5,7 @@ import { useRef } from 'react'
 import type { BaseBlock } from '@/components/Home/types'
 import LinksWrapper from '../LinksWrapper'
 import { useSafeDataRoomStats } from '@/hooks/useSafeDataRoomStats'
-import { formatNumberWithThousandSeparators } from '@/lib/formatNumberWithThousandSeparators'
+import { formatCurrency } from '@/lib/formatCurrency'
 
 const VOLUME_TRANSFERRED_FALLBACK = 611_127_712_666
 
@@ -24,7 +24,7 @@ const VolumeTransferred = ({ title, text, link }: BaseBlock) => {
   const opacityRTL = useTransform(scrollYProgress, [0.25, 0.3, 0.7, 0.75], [0, 1, 1, 0])
 
   const volumeTransferred = totalVolumeTransfered || VOLUME_TRANSFERRED_FALLBACK
-  const displayValue = formatNumberWithThousandSeparators(volumeTransferred)
+  const displayValue = formatCurrency(volumeTransferred, 0)
 
   return (
     <div ref={targetRef} className={css.sectionContainer}>
