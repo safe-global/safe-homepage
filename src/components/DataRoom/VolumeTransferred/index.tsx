@@ -24,7 +24,7 @@ const VolumeTransferred = ({ title, text, link }: BaseBlock) => {
   const opacityRTL = useTransform(scrollYProgress, [0.25, 0.3, 0.7, 0.75], [0, 1, 1, 0])
 
   const volumeTransferred = totalVolumeTransfered || VOLUME_TRANSFERRED_FALLBACK
-  const displayValue = `$${formatNumberWithThousandSeparators(volumeTransferred)}`
+  const displayValue = formatNumberWithThousandSeparators(volumeTransferred)
 
   return (
     <div ref={targetRef} className={css.sectionContainer}>

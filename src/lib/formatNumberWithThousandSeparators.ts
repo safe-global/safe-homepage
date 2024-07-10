@@ -10,5 +10,10 @@
 export const formatNumberWithThousandSeparators = (num: number): string => {
   const integerPart = Math.floor(num) // Discard the decimal part
 
-  return new Intl.NumberFormat('en-US').format(integerPart)
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 0,
+  }).format(integerPart)
 }
