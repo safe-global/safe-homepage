@@ -7,15 +7,21 @@ import css from './styles.module.css'
 import { useCounterScroll } from './useCounterScroll'
 import LinksWrapper from '../LinksWrapper'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
+import { useSafeDataRoomStats } from '@/hooks/useSafeDataRoomStats'
 
-// Will be replaced with the actual value in a future PR
-const TRANSACTIONS_AMOUNT = 1.75
+const TRANSACTIONS_ON_CHAIN_PERCENTAGE_FALLBACK = 1.75
 
 const TransactionsOnChain = ({ text, link }: BaseBlock) => {
+  const { onChainTransactionsPercentage } = useSafeDataRoomStats()
+
+  const value = onChainTransactionsPercentage || TRANSACTIONS_ON_CHAIN_PERCENTAGE_FALLBACK
+  // Converts to percentage with 2 decimal place
+  const percentageValue = +(value * 100).toFixed(2)
+
   return (
     <div className={css.sectionContainer}>
       <div className={css.stickyContainer}>
-        <CounterContainer percentage={TRANSACTIONS_AMOUNT} />
+        <CounterContainer percentage={percentageValue} />
 
         <div className={css.content}>
           <Typography variant="h1">{text}</Typography>
