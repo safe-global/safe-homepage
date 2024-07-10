@@ -8,7 +8,6 @@ import css from './styles.module.css'
 import MotionTypography from './MotionTypography'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 import { useSafeDataRoomStats } from '@/hooks/useSafeDataRoomStats'
-import { decimalToPercentage } from '@/lib/decimalToPercentage'
 
 const USDC_PERCENTAGE_STORED_FALLBACK = 0.0867
 
@@ -37,7 +36,8 @@ const USDCStorage = ({ title, text, link, image }: BaseBlock) => {
   const opacity = useTransform(scrollYProgress, [0.75, 1], [1, 0])
 
   const value = usdcPercentageStored || USDC_PERCENTAGE_STORED_FALLBACK
-  const displayValue = decimalToPercentage(value, 1)
+  // Converts to percentage with 1 decimal place
+  const displayValue = (value * 100).toFixed(1) + '%'
 
   return (
     <div ref={containerRef} className={css.sectionContainer}>

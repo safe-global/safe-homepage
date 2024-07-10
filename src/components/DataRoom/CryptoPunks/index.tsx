@@ -10,7 +10,6 @@ import { getRandomColor } from '@/components/DataRoom/CryptoPunks/utils/getRando
 import CryptoPunk from '@/public/images/DataRoom/cryptopunk-silhouette.svg'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 import { useSafeDataRoomStats } from '@/hooks/useSafeDataRoomStats'
-import { decimalToPercentage } from '@/lib/decimalToPercentage'
 
 const CRYPTOPUNKS_TOTAL = 10000
 const CRYPTOPUNKS_PERCENTAGE_STORED_FALLBACK = 0.092
@@ -30,7 +29,8 @@ const CryptoPunks = ({ title, text, link }: BaseBlock) => {
   })
 
   const percentageValue = cryptoPunksStoredPercentage || CRYPTOPUNKS_PERCENTAGE_STORED_FALLBACK
-  const percentageToDisplay = decimalToPercentage(percentageValue, 1, false)
+  // Converts to percentage with 2 decimal places
+  const percentageToDisplay = (percentageValue * 100).toFixed(2) + '%'
 
   const cryptoPunksStored = percentageValue * CRYPTOPUNKS_TOTAL
   const fractionToDisplay = `${cryptoPunksStored}/${CRYPTOPUNKS_TOTAL}`
