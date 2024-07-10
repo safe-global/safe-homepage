@@ -8,7 +8,7 @@ import { useCounterScroll } from './useCounterScroll'
 import LinksWrapper from '../LinksWrapper'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 import { useSafeDataRoomStats } from '@/hooks/useSafeDataRoomStats'
-import { toPercentage } from '@/lib/toPercentage'
+import { decimalToPercentage } from '@/lib/decimalToPercentage'
 
 const TRANSACTIONS_ON_CHAIN_PERCENTAGE_FALLBACK = 1.75
 
@@ -16,12 +16,13 @@ const TransactionsOnChain = ({ text, link }: BaseBlock) => {
   const { onChainTransactionsPercentage } = useSafeDataRoomStats()
 
   const value = onChainTransactionsPercentage || TRANSACTIONS_ON_CHAIN_PERCENTAGE_FALLBACK
-  const displayValue = Number(toPercentage(value))
+  const displayValue = decimalToPercentage(value)
 
   return (
     <div className={css.sectionContainer}>
       <div className={css.stickyContainer}>
-        <CounterContainer percentage={displayValue} />
+        <CounterContainer percentage={Number(displayValue)} />
+
         <div className={css.content}>
           <Typography variant="h1">{text}</Typography>
 
