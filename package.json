@@ -25,6 +25,8 @@
     "@emotion/server": "^11.10.0",
     "@emotion/styled": "^11.10.5",
     "@mui/material": "^5.11.6",
+    "@react-three/fiber": "^8.16.8",
+    "@react-three/postprocessing": "^2.16.2",
     "@safe-global/safe-gateway-typescript-sdk": "^3.7.0",
     "contentful": "^10.6.1",
     "framer-motion": "^11.0.25",
@@ -37,7 +39,8 @@
     "react-dom": "18.2.0",
     "react-ga4": "^2.0.0",
     "react-twitter-embed": "^4.0.4",
-    "swr": "^2.0.3"
+    "swr": "^2.0.3",
+    "three": "^0.166.1"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.3.1",
@@ -51,6 +54,7 @@
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
+    "@types/three": "^0.166.0",
     "@typescript-eslint/eslint-plugin": "^5.49.0",
     "cf-content-types-generator": "^2.12.9",
     "eslint": "8.32.0",
