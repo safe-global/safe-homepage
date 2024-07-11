@@ -1,9 +1,10 @@
 import { useEffect, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import type { MotionValue } from 'framer-motion'
-import { damp } from './easing'
+import { damp } from './utils/easing'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 
+// This component is not a Hook because R3F Hooks need to be used inside the <Canvas> component.
 export const CameraController = ({ zoomLevel }: { zoomLevel: MotionValue<number> }) => {
   const mouse = useRef({ x: 0, y: 0 })
   const isMobile = useIsMediumScreen()

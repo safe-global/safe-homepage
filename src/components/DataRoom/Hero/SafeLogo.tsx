@@ -21,13 +21,11 @@ export function SafeLogo({ offset, yPosition }: SafeLogoProps) {
     if (!meshRef.current) {
       return
     }
-    if (meshRef.current) {
-      meshRef.current.geometry.computeBoundingBox()
-      const boundingBox = meshRef.current.geometry.boundingBox
-      if (boundingBox) {
-        const zSize = boundingBox.max.z - boundingBox.min.z
-        meshRef.current.position.z = zSize / 2
-      }
+    meshRef.current.geometry.computeBoundingBox()
+    const boundingBox = meshRef.current.geometry.boundingBox
+    if (boundingBox) {
+      const zSize = boundingBox.max.z - boundingBox.min.z
+      meshRef.current.position.z = zSize / 2
     }
   }, [gltf])
 

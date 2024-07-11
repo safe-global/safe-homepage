@@ -1,8 +1,8 @@
 import { SafeLogo } from './SafeLogo'
 import type { MotionValue } from 'framer-motion'
-import { CameraController } from './utils/cameraController'
+import { CameraController } from './CameraController'
 import { EffectComposer } from '@react-three/postprocessing'
-import AsciiShader from './utils/asciiShader'
+import AsciiShader from './AsciiShader'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 import { Canvas } from '@react-three/fiber'
 
