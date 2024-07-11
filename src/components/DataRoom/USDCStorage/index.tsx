@@ -60,7 +60,7 @@ const USDCStorage = ({ title, text, link, image }: BaseBlock) => {
               {text}
             </Typography>
 
-            {link && <LinksWrapper {...link} />}
+            {link && <LinksWrapper link={link} />}
           </MotionTypography>
         </motion.div>
 

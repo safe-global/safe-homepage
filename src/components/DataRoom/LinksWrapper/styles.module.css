@@ -8,3 +8,20 @@
 .wrapper .socials {
   height: fit-content;
 }
+
+.wrapper.dark {
+  color: var(--mui-palette-text-dark);
+}
+
+.sameColor:hover {
+  color: var(--mui-palette-text-dark) !important;
+  border-color: var(--mui-palette-text-dark) !important;
+}
+
+.sameColor:hover > div:after {
+  background: var(--mui-palette-text-dark) !important;
+}
+
+.sameColor:hover path {
+  fill: var(--mui-palette-text-dark) !important;
+}
