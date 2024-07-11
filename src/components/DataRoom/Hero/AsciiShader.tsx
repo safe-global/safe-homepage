@@ -1,5 +1,5 @@
 import { useEffect, useMemo } from 'react'
-import { ASCIIEffect } from './utils/AsciiEffect'
+import { ASCIIEffect } from './utils/AsciiEffects'
 
 // This component wraps and manages the lifecycle of the ASCII effect,
 // It creates the effect, handles its disposal, and renders it as a primitive object.
