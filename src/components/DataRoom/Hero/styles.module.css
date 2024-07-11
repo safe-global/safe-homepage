@@ -39,15 +39,6 @@
   margin: auto;
 }
 
-@media (max-width: 900px) {
-  .stickyContainer {
-    top: 80px;
-    width: 100%;
-    max-width: calc(100dvw - 30px);
-    height: calc(100dvh - 95px);
-  }
-}
-
 .content {
   width: 100%;
   display: flex;
@@ -68,4 +59,13 @@
 .text {
   width: 70%;
   margin: auto;
+}
+
+@media (max-width: 900px) {
+  .stickyContainer {
+    top: 80px;
+    width: 100%;
+    max-width: calc(100dvw - 30px);
+    height: calc(100dvh - 95px);
+  }
 }

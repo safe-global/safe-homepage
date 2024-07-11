@@ -11,14 +11,16 @@ export const CameraController = ({ zoomLevel }: { zoomLevel: MotionValue<number>
   // This useEffect sets up a mouse movement listener
   // It updates the mouse position relative to the window size
   useEffect(() => {
+    if (typeof window === 'undefined') return
+
     const updateMouse = (event: MouseEvent) => {
       mouse.current.x = (event.clientX / window.innerWidth) * 2 - 1
       mouse.current.y = -(event.clientY / window.innerHeight) * 2 + 1
     }
-    globalThis?.addEventListener('mousemove', updateMouse)
-    return () => globalThis?.removeEventListener('mousemove', updateMouse)
-  }, [])
 
+    window.addEventListener('mousemove', updateMouse)
+    return () => window.removeEventListener('mousemove', updateMouse)
+  }, [])
   // useFrame is a hook that runs on every frame render outside react's update cycle.
   // It updates the camera zoom based on the current zoomLevel value.
   // For non-mobile devices, it applies a damping effect to the camera position based on mouse movement,

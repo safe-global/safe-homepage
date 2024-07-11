@@ -9,6 +9,8 @@ type SafeLogoProps = {
   offset: number
 }
 
+const DEFAULT_ROTATION = 0.005
+
 export function SafeLogo({ offset, yPosition }: SafeLogoProps) {
   const groupRef = useRef<Group>(null)
   const meshRef = useRef<Mesh>(null)
@@ -16,6 +18,9 @@ export function SafeLogo({ offset, yPosition }: SafeLogoProps) {
 
   // Center the mesh along the z-axis based on its bounding box
   useEffect(() => {
+    if (!meshRef.current) {
+      return
+    }
     if (meshRef.current) {
       meshRef.current.geometry.computeBoundingBox()
       const boundingBox = meshRef.current.geometry.boundingBox
@@ -31,8 +36,8 @@ export function SafeLogo({ offset, yPosition }: SafeLogoProps) {
   useFrame(() => {
     if (groupRef.current) {
       groupRef.current.position.y = yPosition.get()
-      groupRef.current.rotation.y += 0.005
-      groupRef.current.rotation.x += 0.005
+      groupRef.current.rotation.y += DEFAULT_ROTATION
+      groupRef.current.rotation.x += DEFAULT_ROTATION
     }
   })
 
