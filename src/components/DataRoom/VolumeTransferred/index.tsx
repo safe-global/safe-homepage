@@ -4,11 +4,14 @@ import css from './styles.module.css'
 import { useRef } from 'react'
 import type { BaseBlock } from '@/components/Home/types'
 import LinksWrapper from '../LinksWrapper'
+import { useSafeDataRoomStats } from '@/hooks/useSafeDataRoomStats'
+import { formatCurrency } from '@/lib/formatCurrency'
 
-// Will be replaced with the actual value in a future PR
-const VOLUME_AMOUNT = '$611,127,712,666'
+const VOLUME_TRANSFERRED_FALLBACK = 611_127_712_666
 
 const VolumeTransferred = ({ title, text, link }: BaseBlock) => {
+  const { totalVolumeTransfered } = useSafeDataRoomStats()
+
   const targetRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -19,6 +22,9 @@ const VolumeTransferred = ({ title, text, link }: BaseBlock) => {
   const transformRTL = useTransform(scrollYProgress, [0.25, 0.75], ['120%', '-140%'])
   const opacityLTR = useTransform(scrollYProgress, [0.25, 0.3, 0.7, 0.75], [0, 1, 1, 0])
   const opacityRTL = useTransform(scrollYProgress, [0.25, 0.3, 0.7, 0.75], [0, 1, 1, 0])
+
+  const volumeTransferred = totalVolumeTransfered || VOLUME_TRANSFERRED_FALLBACK
+  const displayValue = formatCurrency(volumeTransferred, 0)
 
   return (
     <div ref={targetRef} className={css.sectionContainer}>
@@ -35,7 +41,7 @@ const VolumeTransferred = ({ title, text, link }: BaseBlock) => {
           className={css.slidingModule}
         >
           <Typography className={css.volume}>
-            <b>{VOLUME_AMOUNT}</b>
+            <b>{displayValue}</b>
           </Typography>
         </motion.div>
 
@@ -48,7 +54,7 @@ const VolumeTransferred = ({ title, text, link }: BaseBlock) => {
         >
           <div className={css.volumeTrailContainer}>
             <Typography className={css.volume}>
-              <b>{VOLUME_AMOUNT}</b>
+              <b>{displayValue}</b>
             </Typography>
 
             <Typography variant="h2">{text}</Typography>

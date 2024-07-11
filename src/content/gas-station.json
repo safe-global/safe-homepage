@@ -1,24 +1,24 @@
 [
   {
-    "pageTitle": "Safe Gas Station",
-    "description": "Get gas credits to make your app gasless",
+    "pageTitle": "Safe Gas Station - Making Your App Gasless with Multi-Chain Gas Credits",
+    "description": "Discover how Safe Gas Station can make your app gasless with multi-chain gas credits. Learn about ERC 4337, Smart Accounts, and how to sponsor transactions. Join our network of partners including Pimlico, Gnosis, and Polygon.",
     "image": "https://safe.global/images/GasStation/gas-station.png",
     "component": "common/MetaTags"
   },
   {
     "component": "GasStation/Hero",
     "title": "Multi-chain gas credits to make your app go gasless",
-    "text": "User should not pay gas for using your app",
+    "text": "Users should not pay gas for using your app",
     "link": {
-      "title": "Get gas credits",
-      "href": "https://wn2n6ocviur.typeform.com/gasstationapp"
+      "title": "Get Notified",
+      "href": "https://wn2n6ocviur.typeform.com/to/U1Uw0eCj"
     }
   },
   {
     "component": "GasStation/TextBlockImagePartners",
     "variant": "image-text",
     "title": "Why sponsor gas?",
-    "text": "ERC 4337 and smart accounts can make user experience completely gasless by sponsoring transactions",
+    "text": "ERC 4337 and smart accounts can make your user experience completely gasless by sponsoring transactions",
     "items": [
       {
         "image": {
@@ -47,7 +47,7 @@
   },
   {
     "component": "GasStation/ImageTextTop",
-    "title": "Network credits<br/>Available",
+    "title": "Network credits<br/>available",
     "backgroundImage": {
       "sm": "/images/GasStation/network-gas-pump-sm.png",
       "md": "/images/GasStation/network-gas-pump-md.png",
@@ -104,6 +104,6 @@
   {
     "component": "GasStation/TwitterCTA",
     "title": "Share and boost your chances to get gas",
-    "text": "User should not pay gas for using your app"
+    "text": "Users should not pay gas for using your app"
   }
 ]

@@ -20,12 +20,25 @@
 }
 
 .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   font-size: 18px;
   line-height: 26px;
   padding: 15px 0;
   width: 100%;
   margin-top: 16px;
   white-space: nowrap;
+}
+
+.icon {
+  width: 12px;
+  height: 12px;
+}
+
+.icon path {
+  fill: var(--mui-palette-text-dark);
 }
 
 /* Burger navigation button */

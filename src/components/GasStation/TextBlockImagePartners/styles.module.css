@@ -70,6 +70,7 @@
 
   .spot1 {
     position: absolute;
+    z-index: 1;
     left: -300px;
     top: -200px;
     width: 1000px;
@@ -80,6 +81,7 @@
 
   .spot2 {
     position: absolute;
+    z-index: 1;
     right: -50px;
     top: -250px;
     width: 1000px;
