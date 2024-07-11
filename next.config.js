@@ -36,7 +36,14 @@ const nextConfig = {
         },
       ],
     })
-
+    // New rule for .glb files
+    config.module.rules.push({
+      test: /\.glb$/,
+      type: 'asset/resource',
+      generator: {
+        filename: 'static/media/[hash][ext][query]',
+      },
+    })
     return config
   },
 }
