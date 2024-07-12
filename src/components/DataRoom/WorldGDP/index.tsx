@@ -10,7 +10,7 @@ type ExtendedBaseBlock = BaseBlock & {
   subtitle: string
 }
 
-const VALUE_LOCKED_FALLBACK = 10000000000
+const VALUE_LOCKED_FALLBACK = 100000000000
 const PERCENTAGE_FALLBACK = 0.001
 
 const WorldGDP = ({ title, subtitle, text, link }: ExtendedBaseBlock) => {
