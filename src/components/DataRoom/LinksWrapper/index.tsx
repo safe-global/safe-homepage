@@ -31,7 +31,7 @@ const LinksWrapper = ({ link, variant = 'light' }: { link: Link; variant?: 'ligh
   return (
     <div className={`${css.wrapper} ${variant === 'dark' ? css.dark : ''}`}>
       <SafeLink href={href}>
-        <LinkButton className={css.sameColor}>{title}</LinkButton>
+        <LinkButton className={`${variant === 'dark' ? css.sameColor : ''}`}>{title}</LinkButton>
       </SafeLink>
 
       <SocialIcons items={items} />
