@@ -271,6 +271,11 @@
     "component": "Wallet/MobileAppParallax"
   },
   {
+    "component": "Wallet/LegalDisclaimer",
+    "caption": "Legal Disclaimer",
+    "text": "<p>Safe{Wallet} stands as the leading wallet for Safe Smart Accounts and technology, provided as free open-source software under the GNU General Public License, Version 3.</p><p>For a comprehensive list of attribution notices for third-party software that may be contained in portions of the Safe{Wallet}, please visit <a href=\"https://app.safe.global/licenses\">Licenses</a>. The <a href=\"https://app.safe.global/\">website</a> is operated by Core Contributors GmbH, Berlin, Germany. Safe{Wallet} is a registered trademark owned by the Safe Ecosystem Foundation. The Safe Ecosystem Foundation does not operate any implementations of Safe{Wallet}. Third parties may hold licenses for the Safe trademark and operate implementations of Safe{Wallet} under the foundation's trademark policy available at <a href=\"https://safe.global/trademark\">Trademark</a> and/or other license agreements. Please note that the use of and access to the Safe{Wallet} is subject to terms and conditions provided by Core Contributors GmbH. The Safe Ecosystem Foundation makes no representations, warranties and/or covenants with respect to the Safe Technology (or any implementations of the Safe{Wallet} and/or Safe Smart Accounts) or any third party DeFi protocols, as to their technical properties and/or characteristics or performance, or their actual or potential usefulness or suitability for any particular purpose.</p>"
+  },
+  {
     "component": "common/TextBlockBanner"
   }
 ]

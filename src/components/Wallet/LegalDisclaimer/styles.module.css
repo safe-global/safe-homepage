@@ -1,0 +1,8 @@
+.container .caption {
+  margin-bottom: 16px;
+}
+
+.container a {
+  color: var(--mui-palette-primary-main);
+  text-decoration: underline;
+}
