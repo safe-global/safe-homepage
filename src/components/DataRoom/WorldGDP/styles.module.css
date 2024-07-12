@@ -28,7 +28,6 @@
   font-size: 64px;
   line-height: 64px;
   text-align: center;
-  margin-top: 24px;
   font-weight: 400;
 }
 
@@ -37,6 +36,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.percentContainer {
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
 }
 
 .linksContainer {
@@ -61,10 +66,16 @@
     align-self: flex-start;
   }
 
+  .percentContainer {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
   .title {
     font-size: 48px;
     line-height: 48px;
-    margin-top: 12px;
   }
   .video {
     width: 300px;
