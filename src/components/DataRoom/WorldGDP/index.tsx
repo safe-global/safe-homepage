@@ -10,8 +10,8 @@ type ExtendedBaseBlock = BaseBlock & {
   subtitle: string
 }
 
-const VALUE_LOCKED_FALLBACK = 100000000000
-const PERCENTAGE_FALLBACK = 0.001
+const VALUE_LOCKED_FALLBACK = 68583703689
+const PERCENTAGE_FALLBACK = 0.000679
 
 const WorldGDP = ({ title, subtitle, text, link }: ExtendedBaseBlock) => {
   const { tvlToGDPPercentage, totalValueLocked } = useSafeDataRoomStats()
@@ -44,7 +44,7 @@ const WorldGDP = ({ title, subtitle, text, link }: ExtendedBaseBlock) => {
             </Typography>
           </MotionContainer>
         </div>
-        <div className={css.linksContainer}>{link && <LinksWrapper {...link} />}</div>
+        <div className={css.linksContainer}>{link && <LinksWrapper variant="light" link={link} />}</div>
       </div>
     </div>
   )
