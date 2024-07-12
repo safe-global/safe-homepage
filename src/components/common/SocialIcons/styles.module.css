@@ -1,0 +1,9 @@
+.socials {
+  display: flex;
+  gap: 16px;
+}
+
+.socials svg {
+  width: 24px;
+  height: 24px;
+}

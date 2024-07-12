@@ -2,13 +2,10 @@ import XIcon from '@/public/images/x-icon.svg'
 import LinkedInIcon from '@/public/images/linkedin-icon.svg'
 import { type Entry } from 'contentful'
 import { type TypeAuthorSkeleton } from '@/contentful/types'
-import { IconButton, SvgIcon } from '@mui/material'
-import css from '../styles.module.css'
 import useCurrentUrl from '@/hooks/useCurrentUrl'
 import { xSharingUrl } from '@/lib/xSharingUrl'
-
-const linkedInSharingUrl = (currentUrl: string) =>
-  `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`
+import { linkedInSharingUrl } from '@/lib/linkedInSharingUrl'
+import SocialIcons, { type SocialsIconProps } from '@/components/common/SocialIcons'
 
 const Socials = ({ title, authors }: { title: string; authors: Entry<TypeAuthorSkeleton, undefined, string>[] }) => {
   const currentUrl = useCurrentUrl()
@@ -21,19 +18,20 @@ const Socials = ({ title, authors }: { title: string; authors: Entry<TypeAuthorS
   const xUrl = xSharingUrl(currentUrl, sharingText)
   const linkedInUrl = linkedInSharingUrl(currentUrl)
 
-  return (
-    <div className={css.socials}>
-      {/* X */}
-      <IconButton aria-label="Share on X" href={xUrl} target="_blank" rel="noreferrer" size="small">
-        <SvgIcon component={XIcon} fontSize="inherit" color="inherit" inheritViewBox />
-      </IconButton>
+  const items: SocialsIconProps[] = [
+    {
+      label: 'X',
+      url: xUrl,
+      icon: XIcon,
+    },
+    {
+      label: 'LinkedIn',
+      url: linkedInUrl,
+      icon: LinkedInIcon,
+    },
+  ]
 
-      {/* LinkedIn */}
-      <IconButton aria-label="Share on Linkedin" href={linkedInUrl} target="_blank" rel="noreferrer" size="small">
-        <SvgIcon component={LinkedInIcon} fontSize="inherit" color="inherit" inheritViewBox />
-      </IconButton>
-    </div>
-  )
+  return <SocialIcons items={items} />
 }
 
 export default Socials

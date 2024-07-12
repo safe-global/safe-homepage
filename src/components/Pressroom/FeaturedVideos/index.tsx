@@ -10,7 +10,7 @@ const VideoCard = ({ title, url }: { title?: string; url: string }) => (
   <div className={css.card}>
     <MediaPlayer url={url} />
     <div className={css.cardBody}>
-      {title ? <Typography variant="h3">{title}</Typography> : null}
+      {title ? <Typography variant="h4">{title}</Typography> : null}
       <SafeLink href={url}>
         <LinkButton>Watch now</LinkButton>
       </SafeLink>
