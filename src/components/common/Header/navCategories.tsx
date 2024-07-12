@@ -12,6 +12,7 @@ import CareersIcon from '@/public/images/Header/careers-icon.svg'
 import PressRoomIcon from '@/public/images/Header/press-room-icon.svg'
 import HelpCenterIcon from '@/public/images/Header/help-center-icon.svg'
 import GasStationIcon from '@/public/images/Header/gas-station-icon.svg'
+import DataRoomIcon from '@/public/images/Header/data-room-icon.svg'
 
 export type NavItem = {
   label: string
@@ -134,6 +135,11 @@ export const navCategories: NavCategory[] = [
         label: 'Press room',
         href: AppRoutes.press,
         icon: <PressRoomIcon />,
+      },
+      {
+        label: 'Data room',
+        href: AppRoutes.dataroom,
+        icon: <DataRoomIcon />,
       },
       {
         label: 'Help center',
