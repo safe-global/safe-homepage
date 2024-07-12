@@ -55,7 +55,7 @@ const CryptoPunks = ({ title, text, link }: BaseBlock) => {
             </Typography>
           </div>
 
-          {link && <LinksWrapper {...link} />}
+          {link && <LinksWrapper link={link} variant="dark" />}
         </RightPanel>
       </div>
     </div>

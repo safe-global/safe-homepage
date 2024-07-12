@@ -60,7 +60,7 @@ const VolumeTransferred = ({ title, text, link }: BaseBlock) => {
             <Typography variant="h2">{text}</Typography>
           </div>
         </motion.div>
-        <div className={css.linksContainer}>{link && <LinksWrapper {...link} />}</div>
+        <div className={css.linksContainer}>{link && <LinksWrapper link={link} />}</div>
       </div>
     </div>
   )

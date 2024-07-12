@@ -102,17 +102,6 @@
   margin-bottom: 8px;
 }
 
-.socials {
-  display: flex;
-  gap: 16px;
-}
-
-.socials svg {
-  width: 24px;
-  height: 24px;
-  color: var(--mui-palette-text-primary);
-}
-
 .questionBox {
   margin-top: 40px;
   padding: 40px 32px;

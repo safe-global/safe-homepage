@@ -15,8 +15,8 @@
     "title": "We store...<br/>",
     "text": "<b>of all USDC</b>",
     "link": {
-      "title": "Dune dashboard",
-      "href": "https://dune.com/queries/3710102/6242478"
+      "title": "Dune",
+      "href": "https://dune.com/queries/3867647"
     },
     "image": {
       "src": "/images/Dataroom/USDC.png",
@@ -29,7 +29,7 @@
     "text": "Some text thats changing<br/>Confirming the sources of the data<br/>Any other info regarding the stats",
     "link": {
       "title": "Dune dashboard",
-      "href": "https://dune.com/queries/3710102/6242478"
+      "href": "https://dune.com/safe/ethereum-nfts"
     }
   },
   {
@@ -38,15 +38,15 @@
     "text": "and counting...",
     "link": {
       "title": "Dune dashboard",
-      "href": "https://dune.com/queries/3710102/6242478"
+      "href": "https://dune.com/safe/all"
     }
   },
   {
     "component": "DataRoom/TransactionsOnChain",
     "text": "<b>transactions on chain</b> originate from a <b>Safe Account</b>",
     "link": {
-      "title": "Dune dashboard",
-      "href": "https://dune.com/queries/3710102/6242478"
+      "title": "Dune",
+      "href": "https://dune.com/queries/3737066"
     }
   },
   {
