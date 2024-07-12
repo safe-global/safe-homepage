@@ -4,10 +4,8 @@ import { type Entry } from 'contentful'
 import { type TypeAuthorSkeleton } from '@/contentful/types'
 import useCurrentUrl from '@/hooks/useCurrentUrl'
 import { xSharingUrl } from '@/lib/xSharingUrl'
+import { linkedInSharingUrl } from '@/lib/linkedInSharingUrl'
 import SocialIcons, { type SocialsIconProps } from '@/components/common/SocialIcons'
-
-const linkedInSharingUrl = (currentUrl: string) =>
-  `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`
 
 const Socials = ({ title, authors }: { title: string; authors: Entry<TypeAuthorSkeleton, undefined, string>[] }) => {
   const currentUrl = useCurrentUrl()
