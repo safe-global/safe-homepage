@@ -50,6 +50,10 @@
     }
   },
   {
+    "component": "DataRoom/IndustryComparison",
+    "title": "How we compare<br/>to others industry leaders"
+  },
+  {
     "component": "DataRoom/ExternalLinksGrid",
     "title": "Dune Boards",
     "items": [
