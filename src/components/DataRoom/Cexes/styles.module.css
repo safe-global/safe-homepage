@@ -1,0 +1,103 @@
+.sectionContainer {
+  height: 200vh;
+  display: flex;
+}
+
+.stickyContainer {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  padding: 200px 128px 256px;
+}
+
+.label {
+  padding-bottom: 60px;
+  color: var(--mui-palette-primary-light);
+}
+
+.title {
+  margin-top: 100px;
+  text-align: right;
+  width: 100%;
+}
+
+.cexesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cex {
+  display: flex;
+  direction: row;
+  align-items: center;
+}
+
+.cexGrid {
+  display: flex;
+  direction: row;
+  column-gap: 8px;
+  align-items: center;
+}
+
+.cexGridItem {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+}
+
+.cexName {
+  font-size: 32px;
+  line-height: 48px;
+  margin-left: 24px;
+  margin-right: 16px;
+}
+
+.cexLabelContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cexMessage {
+  white-space: nowrap;
+  color: var(--mui-palette-primary-light);
+}
+
+@media (max-width: 1000px) {
+  .stickyContainer {
+    padding: 30px;
+    overflow: hidden;
+    padding-top: 72px;
+    justify-content: space-between;
+  }
+
+  .label {
+    padding-bottom: 32px;
+  }
+
+  .cex {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .cexName {
+    margin-left: 0px;
+  }
+
+  .cexLabelContainer {
+    margin-top: 8px;
+  }
+
+  .cexesContainer {
+    gap: 32px;
+  }
+
+  .title {
+    margin-top: 20px;
+    text-align: left;
+  }
+}

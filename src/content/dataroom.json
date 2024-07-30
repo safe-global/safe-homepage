@@ -50,6 +50,32 @@
     }
   },
   {
+    "component": "DataRoom/Cexes",
+    "label": "CEX",
+    "cexes": [
+      {
+        "name": "OKX",
+        "boxes": 7,
+        "boxColor": "var(--mui-palette-primary-light)",
+        "message": "$19.6B as of 9 May"
+      },
+      {
+        "name": "Safe",
+        "boxes": 24,
+        "boxColor": "var(--mui-palette-primary-main)",
+        "message": "$110.9B as of 9 May"
+      },
+      {
+        "name": "Binance",
+        "boxes": 26,
+        "boxColor": "var(--mui-palette-primary-light)",
+        "message": "$116.5B as of 9 May"
+      }
+    ],
+    "title": "Safe has more <b>assets secured</b>",
+    "text": "than many Fintechs and CEXs"
+  },
+  {
     "component": "DataRoom/ExternalLinksGrid",
     "title": "Dune Boards",
     "items": [
