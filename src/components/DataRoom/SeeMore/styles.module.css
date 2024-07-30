@@ -1,0 +1,83 @@
+.sectionContainer {
+  height: 200vh;
+}
+
+.stickyContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.text {
+  z-index: 50;
+}
+
+.gradientBox {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    #121312 0%,
+    rgba(18, 19, 18, 0.8) 40%,
+    rgba(18, 19, 18, 0.4) 70%,
+    transparent 100%
+  );
+  z-index: 40;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.wave1 {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  right: 0;
+  z-index: 30;
+}
+
+.wave2 {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  right: 0;
+  z-index: 20;
+}
+
+.wave3 {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  right: 0;
+  z-index: 10;
+}
+
+@media (max-width: 900px) {
+  .text {
+    padding: 60px;
+    margin-top: 120px;
+    text-align: center;
+  }
+  .stickyContainer {
+    justify-content: start;
+  }
+
+  .wave1 {
+    transform: translateY(-25%);
+  }
+
+  .wave2 {
+    transform: translateY(-25%);
+  }
+
+  .wave3 {
+    transform: translateY(-25%);
+  }
+}

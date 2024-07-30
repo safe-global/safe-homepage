@@ -50,6 +50,10 @@
     }
   },
   {
+    "component": "DataRoom/SeeMore",
+    "text": "Want to see more?"
+  },
+  {
     "component": "DataRoom/ExternalLinksGrid",
     "title": "Dune Boards",
     "items": [
