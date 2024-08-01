@@ -1,9 +1,10 @@
 import type { MotionValue } from 'framer-motion'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState, useCallback } from 'react'
 import { createDots } from './utils/createDots'
 import { updateCanvasDimensions } from './utils/updateCanvasDimensions'
 import { drawDots } from './utils/drawDots'
 import { lerp } from './utils/lerp'
+import { getContainerDimensions } from './utils/getContainerDimensions'
 
 export default function DotGrid({
   containerRef,
@@ -15,50 +16,54 @@ export default function DotGrid({
   scrollYProgress?: MotionValue<number>
 }) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
+  const dimensions = getContainerDimensions(containerRef)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [lerpedMousePosition, setLerpedMousePosition] = useState({ x: 0, y: 0 })
 
   const dots = useMemo(() => createDots(dimensions, isMobile), [dimensions, isMobile])
 
-  useEffect(() => {
-    const updateDimensions = () => {
-      const newDimensions = updateCanvasDimensions(canvasRef, containerRef)
-      setDimensions(newDimensions)
-    }
+  const updateDimensions = useCallback(() => {
+    updateCanvasDimensions(canvasRef, dimensions.width, dimensions.height)
+  }, [dimensions.width, dimensions.height])
 
-    const handleMouseMove = (e: MouseEvent) => {
+  const handleMouseMove = useCallback(
+    (e: MouseEvent) => {
       if (canvasRef.current && containerRef.current) {
         const rect = containerRef.current.getBoundingClientRect()
         setMousePosition({ x: e.clientX - rect.left, y: e.clientY - rect.top })
       }
-    }
+    },
+    [containerRef],
+  )
 
-    const updateMobileMousePosition = () => {
-      if (scrollYProgress && isMobile && containerRef.current) {
-        const progress = scrollYProgress.get()
-        const { height } = containerRef.current.getBoundingClientRect()
-        setMousePosition({ x: dimensions.width - dimensions.width / 8, y: progress * height })
-      }
+  const updateMobileMousePosition = useCallback(() => {
+    if (scrollYProgress && isMobile && containerRef.current) {
+      const progress = scrollYProgress.get()
+      const { height } = containerRef.current.getBoundingClientRect()
+      setMousePosition({ x: dimensions.width - dimensions.width / 8, y: progress * height })
     }
+  }, [scrollYProgress, isMobile, containerRef, dimensions.width])
 
-    const lerpMousePosition = () => {
-      setLerpedMousePosition((prev) => ({
-        x: lerp(prev.x, mousePosition.x),
-        y: lerp(prev.y, mousePosition.y),
-      }))
-      requestAnimationFrame(lerpMousePosition)
-    }
+  const lerpMousePosition = useCallback(() => {
+    setLerpedMousePosition((prev) => ({
+      x: lerp(prev.x, mousePosition.x),
+      y: lerp(prev.y, mousePosition.y),
+    }))
+    return requestAnimationFrame(lerpMousePosition)
+  }, [mousePosition.x, mousePosition.y])
 
+  useEffect(() => {
     updateDimensions()
     window.addEventListener('resize', updateDimensions)
     const container = containerRef.current
+
     if (isMobile && scrollYProgress) {
       scrollYProgress.onChange(updateMobileMousePosition)
     } else {
       container?.addEventListener('mousemove', handleMouseMove)
     }
-    lerpMousePosition()
+
+    const animationFrameId = lerpMousePosition()
 
     return () => {
       window.removeEventListener('resize', updateDimensions)
@@ -67,8 +72,17 @@ export default function DotGrid({
       } else {
         container?.removeEventListener('mousemove', handleMouseMove)
       }
+      cancelAnimationFrame(animationFrameId)
     }
-  }, [mousePosition.x, mousePosition.y, containerRef, isMobile, scrollYProgress, dimensions.width])
+  }, [
+    updateDimensions,
+    handleMouseMove,
+    updateMobileMousePosition,
+    lerpMousePosition,
+    containerRef,
+    isMobile,
+    scrollYProgress,
+  ])
 
   useEffect(() => {
     const canvas = canvasRef.current
@@ -80,7 +94,7 @@ export default function DotGrid({
     let animationFrameId: number
 
     const animate = () => {
-      drawDots(ctx, dots, dimensions, lerpedMousePosition, isMobile)
+      drawDots(ctx, dots, dimensions, mousePosition, lerpedMousePosition, isMobile)
       animationFrameId = requestAnimationFrame(animate)
     }
 
@@ -89,7 +103,7 @@ export default function DotGrid({
     return () => {
       cancelAnimationFrame(animationFrameId)
     }
-  }, [dots, dimensions, lerpedMousePosition, isMobile])
+  }, [dots, dimensions, mousePosition, lerpedMousePosition, isMobile])
 
   return (
     <canvas

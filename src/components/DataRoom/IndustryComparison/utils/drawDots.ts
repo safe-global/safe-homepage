@@ -1,3 +1,5 @@
+import { lerp } from './lerp'
+
 const MAX_SCALE_DISTANCE = 15
 const MAX_POSITION_DISTANCE = 100
 const MOBILE_MAX_SCALE = 8
@@ -8,6 +10,7 @@ export const drawDots = (
   ctx: CanvasRenderingContext2D,
   dots: { x: number; y: number }[],
   dimensions: { width: number; height: number },
+  mousePosition: { x: number; y: number },
   lerpedMousePosition: { x: number; y: number },
   isMobile: boolean,
 ) => {
@@ -16,6 +19,10 @@ export const drawDots = (
   const maxScale = isMobile ? MOBILE_MAX_SCALE : DESKTOP_MAX_SCALE
 
   ctx.fillStyle = DOT_COLOR
+
+  // Update lerpedMousePosition
+  lerpedMousePosition.x = lerp(lerpedMousePosition.x, mousePosition.x)
+  lerpedMousePosition.y = lerp(lerpedMousePosition.y, mousePosition.y)
 
   dots.forEach((dot) => {
     const dx = lerpedMousePosition.x - dot.x
@@ -32,4 +39,6 @@ export const drawDots = (
     ctx.arc(dot.x, dot.y, 1 * scale, 0, 2 * Math.PI)
     ctx.fill()
   })
+
+  return lerpedMousePosition
 }
