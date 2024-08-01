@@ -1,5 +1,5 @@
 import css from './styles.module.css'
-import { motion } from 'framer-motion'
+import { motion, type MotionProps } from 'framer-motion'
 import { Typography } from '@mui/material'
 
 export type CEX = {
@@ -9,7 +9,7 @@ export type CEX = {
   message: string
 }
 
-const textMotionProps = {
+const textMotionProps: MotionProps = {
   initial: { opacity: 0, y: -10 },
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true },
@@ -20,7 +20,7 @@ const textMotionProps = {
   },
 }
 
-const gridMotionProps = {
+const gridMotionProps: MotionProps = {
   initial: { scale: 0, x: -10 },
   whileInView: { scale: 1, x: 0 },
   viewport: { once: true },
@@ -34,7 +34,7 @@ const gridMotionProps = {
 export const Cex = ({ boxes, boxColor, name, message }: CEX) => (
   <div className={css.cex}>
     <div className={css.cexGrid}>
-      {[...Array(boxes)].map((_, index) => (
+      {Array.from({ length: boxes }).map((_, index) => (
         <motion.div
           key={index}
           className={css.cexGridItem}
