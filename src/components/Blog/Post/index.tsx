@@ -83,7 +83,9 @@ const BlogPost = ({ blogPost }: { blogPost: BlogPostEntry }) => {
 
             <Sidebar content={content} title={title} authors={authorsList} isPressRelease={isPressRelease} showInXs />
 
-            <RichText {...content} />
+            <div className={css.postBody}>
+              <RichText {...content} />
+            </div>
           </Grid>
         </Grid>
 
@@ -111,6 +113,7 @@ const Sidebar = ({
   <Grid item xs={12} md={4} className={showInXs ? css.showInXs : css.showInMd}>
     <aside className={css.sidebar}>
       <ContentsTable content={content} />
+
       <Socials title={title} authors={authors} />
 
       {isPressRelease ? (
