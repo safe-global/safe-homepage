@@ -25,6 +25,7 @@ import { Container } from '@mui/material'
 import type { Entry } from 'contentful'
 import { useClientEntry } from '@/hooks/useClientEntry'
 import type { PostEntryCollection } from '@/config/types'
+import { isPressReleasePost } from '@/lib/containsTag'
 
 export type PressRoomEntry = Entry<TypePressRoomSkeleton, undefined, string>
 
@@ -46,12 +47,15 @@ const PressRoom = ({ pressRoom, allPosts, totalAssets }: PressRoomProps) => {
   const podcastsList = podcasts.filter(isEntryTypeExternalURL)
   const videosList = videos.filter(isEntryTypeExternalURL)
 
+  const latestPressRelease = allPosts.items.find(isPressReleasePost)
+  const featuredPressRelease = !!latestPressRelease ? latestPressRelease : featured
+
   return (
     <>
       {isEntryType(metaTags) && <MetaTags {...metaTags} />}
       <Container>
         <Hero />
-        {isEntryTypePost(featured) && <FeaturedPost {...featured} />}
+        {isEntryTypePost(featuredPressRelease) && <FeaturedPost post={featuredPressRelease} />}
         <ContentsNavigation />
         <AboutUs totalAssets={totalAssets} />
         <Marquee items={numbersList} />

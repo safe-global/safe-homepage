@@ -10,8 +10,8 @@ import CategoryIcon from '@/public/images/Blog/category-icon.svg'
 import { AppRoutes } from '@/config/routes'
 import { containsTag, PRESS_RELEASE_TAG } from '@/lib/containsTag'
 
-const FeaturedPost = (props: BlogPostEntry) => {
-  const { slug, coverImage, category, date, title, excerpt, tags, content } = props.fields
+const FeaturedPost = ({ post }: { post: BlogPostEntry }) => {
+  const { slug, coverImage, category, date, title, excerpt, tags, content } = post.fields
 
   const isPressRelease = containsTag(tags, PRESS_RELEASE_TAG)
 
