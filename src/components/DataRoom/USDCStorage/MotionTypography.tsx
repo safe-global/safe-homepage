@@ -1,12 +1,20 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const MotionTypography = ({ customDelay, children }: { customDelay: number; children: React.ReactNode }) => {
+const MotionTypography = ({
+  customDelay,
+  children,
+  animateYFrom,
+}: {
+  customDelay: number
+  children: React.ReactNode
+  animateYFrom: number
+}) => {
   // Define Animation Variants For Content
   const variants = {
     initial: {
       opacity: 0,
-      y: 50,
+      y: animateYFrom,
     },
     animate: (custom: number) => ({
       opacity: 1,
@@ -16,13 +24,7 @@ const MotionTypography = ({ customDelay, children }: { customDelay: number; chil
   }
 
   return (
-    <motion.div
-      variants={variants}
-      initial="initial"
-      custom={customDelay}
-      whileInView="animate"
-      viewport={{ once: true }}
-    >
+    <motion.div variants={variants} initial="initial" custom={customDelay} whileInView="animate">
       {children}
     </motion.div>
   )
