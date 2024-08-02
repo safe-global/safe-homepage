@@ -18,7 +18,6 @@ import {
   isEntryType,
   isEntryTypeBaseBlock,
   isEntryTypeExternalURL,
-  isEntryTypePost,
   isEntryTypeSimpleBaseBlock,
 } from '@/lib/typeGuards'
 import { Container } from '@mui/material'
@@ -26,6 +25,7 @@ import type { Entry } from 'contentful'
 import { useClientEntry } from '@/hooks/useClientEntry'
 import type { PostEntryCollection } from '@/config/types'
 import { isPressReleasePost } from '@/lib/containsTag'
+import { isDraft } from '@/lib/contentful/isDraft'
 
 export type PressRoomEntry = Entry<TypePressRoomSkeleton, undefined, string>
 
@@ -38,7 +38,8 @@ export type PressRoomProps = {
 const PressRoom = ({ pressRoom, allPosts, totalAssets }: PressRoomProps) => {
   const { data: localPressRoom } = useClientEntry<TypePressRoomSkeleton, PressRoomEntry>(pressRoom.sys.id, pressRoom)
 
-  const { metaTags, featured, numbers, investors, timeline, news, podcasts, videos } = localPressRoom.fields
+  console.log(localPressRoom.fields)
+  const { metaTags, numbers, investors, timeline, news, podcasts, videos } = localPressRoom.fields
 
   const numbersList = numbers.filter(isEntryTypeBaseBlock)
   const investorsList = investors.filter(isAsset)
@@ -47,15 +48,14 @@ const PressRoom = ({ pressRoom, allPosts, totalAssets }: PressRoomProps) => {
   const podcastsList = podcasts.filter(isEntryTypeExternalURL)
   const videosList = videos.filter(isEntryTypeExternalURL)
 
-  const latestPressRelease = allPosts.items.find(isPressReleasePost)
-  const featuredPressRelease = !!latestPressRelease ? latestPressRelease : featured
+  const latestPressRelease = allPosts.items.find((post) => isPressReleasePost(post) && !isDraft(post))
 
   return (
     <>
       {isEntryType(metaTags) && <MetaTags {...metaTags} />}
       <Container>
         <Hero />
-        {isEntryTypePost(featuredPressRelease) && <FeaturedPost post={featuredPressRelease} />}
+        {latestPressRelease && <FeaturedPost post={latestPressRelease} />}
         <ContentsNavigation />
         <AboutUs totalAssets={totalAssets} />
         <Marquee items={numbersList} />
