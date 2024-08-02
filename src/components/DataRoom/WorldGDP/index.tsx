@@ -4,12 +4,12 @@ import LinksWrapper from '@/components/DataRoom/LinksWrapper'
 import css from './styles.module.css'
 import { useSafeDataRoomStats } from '@/hooks/useSafeDataRoomStats'
 import { formatCurrency } from '@/lib/formatCurrency'
-import MotionTypography from '../USDCStorage/MotionTypography'
+import MotionTypography from '@/components/common/MotionTypography'
 
 const VALUE_LOCKED_FALLBACK = 68_583_703_689
 const PERCENTAGE_FALLBACK = 0.000679
 
-const WorldGDP = ({ title, subtitle, text, link }: BaseBlock & { subtitle: string }) => {
+const WorldGDP = ({ title, subtitle, link }: BaseBlock & { subtitle: string }) => {
   const { tvlToGDPPercentage, totalValueLocked } = useSafeDataRoomStats()
   const valueLocked = totalValueLocked || VALUE_LOCKED_FALLBACK
   const percentageValue = tvlToGDPPercentage || PERCENTAGE_FALLBACK
@@ -20,7 +20,8 @@ const WorldGDP = ({ title, subtitle, text, link }: BaseBlock & { subtitle: strin
   return (
     <div className={css.sectionContainer}>
       <div className={css.stickyContainer}>
-        <Typography className={css.text}>{text}</Typography>
+        {/* This element is commented out as we are waiting on the final copy*/}
+        {/* <Typography className={css.text}>{text}</Typography> */}
 
         <div className={css.contentContainer}>
           <MotionTypography animateYFrom={-30} customDelay={0.2}>
@@ -32,15 +33,9 @@ const WorldGDP = ({ title, subtitle, text, link }: BaseBlock & { subtitle: strin
           <MotionTypography animateYFrom={-30} customDelay={0.5}>
             <div className={css.percentContainer}>
               <Typography variant="h2" align="center">
-                {title}
-              </Typography>
-              <Typography variant="h2" align="center">
-                {percentageToDisplay}
+                {title} {percentageToDisplay} {subtitle}
               </Typography>
             </div>
-            <Typography variant="h2" align="center">
-              {subtitle}
-            </Typography>
           </MotionTypography>
 
           <MotionTypography animateYFrom={-30} customDelay={0.7}>

@@ -5,7 +5,7 @@ import MatterCanvas from './MatterCanvas'
 import { useRef } from 'react'
 import LinksWrapper from '../LinksWrapper'
 import css from './styles.module.css'
-import MotionTypography from './MotionTypography'
+import MotionTypography from '@/components/common/MotionTypography'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 import { useSafeDataRoomStats } from '@/hooks/useSafeDataRoomStats'
 
