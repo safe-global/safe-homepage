@@ -28,6 +28,7 @@ export async function getStaticProps() {
     props: {
       safeDataRoomStats: {
         tvlToGDPPercentage: tvl_perc_world_gdp,
+        totalValueLocked: safe_tvl,
         usdcPercentageStored: total_usdc_share,
         // This is a temp workaround. The received value should be a number.
         cryptoPunksStoredPercentage: Number(crypto_punks_perc),
