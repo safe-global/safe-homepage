@@ -6,6 +6,9 @@ type SafeDataRoomStats = {
   cryptoPunksStoredPercentage: number | null
   totalVolumeTransfered: number | null
   onChainTransactionsPercentage: number | null
+  tvlRobinhood: number | null
+  tvlOKX: number | null
+  tvlBinance: number | null
 }
 
 const SafeDataRoomContext = createContext<SafeDataRoomStats>({
@@ -14,6 +17,9 @@ const SafeDataRoomContext = createContext<SafeDataRoomStats>({
   cryptoPunksStoredPercentage: null,
   totalVolumeTransfered: null,
   onChainTransactionsPercentage: null,
+  tvlRobinhood: null,
+  tvlOKX: null,
+  tvlBinance: null,
 })
 
 export default SafeDataRoomContext

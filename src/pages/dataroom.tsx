@@ -11,8 +11,16 @@ export async function getStaticProps() {
 
   if (!dataRoomStats) return null
 
-  const { tvl_perc_world_gdp, total_usdc_share, crypto_punks_perc, total_transfer_volume, transaction_share } =
-    dataRoomStats
+  const {
+    tvl_perc_world_gdp,
+    total_usdc_share,
+    crypto_punks_perc,
+    total_transfer_volume,
+    transaction_share,
+    cex_tvl_robinhood,
+    cex_tvl_okx,
+    cex_tvl_binance,
+  } = dataRoomStats
 
   return {
     props: {
@@ -23,6 +31,9 @@ export async function getStaticProps() {
         cryptoPunksStoredPercentage: Number(crypto_punks_perc),
         totalVolumeTransfered: total_transfer_volume,
         onChainTransactionsPercentage: transaction_share,
+        tvlRobinhood: Number(cex_tvl_robinhood),
+        tvlOKX: Number(cex_tvl_okx),
+        tvlBinance: Number(cex_tvl_binance),
       },
     },
   }

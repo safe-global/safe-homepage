@@ -5,8 +5,13 @@ import { useRef } from 'react'
 import { motion } from 'framer-motion'
 import { Typography } from '@mui/material'
 import { Cex, type CEX } from './Cex'
+import { useSafeDataRoomStats } from '@/hooks/useSafeDataRoomStats'
 
 const Cexes = ({ title, text, label, cexes }: BaseBlock & { cexes: CEX[]; label: string }) => {
+  const { tvlRobinhood, tvlOKX, tvlBinance } = useSafeDataRoomStats()
+  // delete this line
+  console.log('Dune data', tvlRobinhood, tvlOKX, tvlBinance)
+
   const backgroundRef = useRef<HTMLDivElement>(null)
 
   const { scrollYProgress } = useScroll({
