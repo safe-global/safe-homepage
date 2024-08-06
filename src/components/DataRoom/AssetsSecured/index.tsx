@@ -6,14 +6,23 @@ import { motion } from 'framer-motion'
 import { Typography } from '@mui/material'
 import { Cex, type CEX } from './Cex'
 import { useSafeDataRoomStats } from '@/hooks/useSafeDataRoomStats'
+import { getNormalizationFactor } from './utils/getNormalizationFactor'
+import { getTvlValue } from './utils/getTvlValue'
 
-const Cexes = ({ title, text, label, cexes }: BaseBlock & { cexes: CEX[]; label: string }) => {
-  const { tvlRobinhood, tvlOKX, tvlBinance } = useSafeDataRoomStats()
-  // delete this line
-  console.log('Dune data', tvlRobinhood, tvlOKX, tvlBinance)
+const LAST_UPDATED_FALLBACK = 1722946836.34
+
+const Cexes = ({ title, text, caption, cexes }: BaseBlock & { cexes: CEX[] }) => {
+  const { tvlRobinhood, tvlOKX, tvlBinance, tvlSafe, lastUpdated } = useSafeDataRoomStats()
+
+  const timestamp = lastUpdated || LAST_UPDATED_FALLBACK
+  const formattedDate = new Date(timestamp * 1000).toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'short',
+  })
+
+  const normalizationFactor = getNormalizationFactor(cexes, tvlRobinhood, tvlOKX, tvlBinance, tvlSafe)
 
   const backgroundRef = useRef<HTMLDivElement>(null)
-
   const { scrollYProgress } = useScroll({
     target: backgroundRef,
     offset: ['start end', 'end start'],
@@ -34,7 +43,7 @@ const Cexes = ({ title, text, label, cexes }: BaseBlock & { cexes: CEX[]; label:
           }}
           className={css.label}
         >
-          <Typography variant="h5">{label}</Typography>
+          <Typography variant="h5">{caption}</Typography>
         </motion.div>
         <motion.div
           style={{
@@ -43,9 +52,20 @@ const Cexes = ({ title, text, label, cexes }: BaseBlock & { cexes: CEX[]; label:
           }}
           className={css.cexesContainer}
         >
-          {cexes.map((cex, index) => (
-            <Cex key={index} boxes={cex.boxes} boxColor={cex.boxColor} name={cex.name} message={cex.message} />
-          ))}
+          {cexes.map((cex, index) => {
+            const cexTvl = getTvlValue(cexes, tvlRobinhood, tvlOKX, tvlBinance, tvlSafe, cex.id)
+            return (
+              <Cex
+                key={index}
+                id={cex.id}
+                tvl={cexTvl}
+                boxColor={cex.boxColor}
+                name={cex.name}
+                normalizationFactor={normalizationFactor}
+                date={formattedDate}
+              />
+            )
+          })}
         </motion.div>
         <motion.div
           style={{

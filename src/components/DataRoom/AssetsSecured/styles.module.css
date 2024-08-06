@@ -27,7 +27,7 @@
 .cexesContainer {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 32px;
 }
 
 .cex {
@@ -50,8 +50,6 @@
 }
 
 .cexName {
-  font-size: 32px;
-  line-height: 48px;
   margin-left: 24px;
   margin-right: 16px;
 }
@@ -85,6 +83,7 @@
   }
 
   .cexName {
+    font-size: 24px;
     margin-left: 0px;
   }
 
@@ -92,12 +91,12 @@
     margin-top: 8px;
   }
 
-  .cexesContainer {
-    gap: 32px;
-  }
-
   .title {
     margin-top: 20px;
     text-align: left;
+  }
+
+  .cexMessage {
+    font-size: 20px;
   }
 }

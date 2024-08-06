@@ -50,26 +50,32 @@
     }
   },
   {
-    "component": "DataRoom/Cexes",
-    "label": "CEX",
+    "component": "DataRoom/AssetsSecured",
+    "caption": "CEX",
     "cexes": [
       {
+        "id": "Robinhood",
+        "name": "Robinhood CEX",
+        "boxColor": "var(--mui-palette-primary-light)",
+        "tvl": 11884403168.737804
+      },
+      {
+        "id": "OKX",
         "name": "OKX",
-        "boxes": 7,
         "boxColor": "var(--mui-palette-primary-light)",
-        "message": "$19.6B as of 9 May"
+        "tvl": 17505106456.55226
       },
       {
+        "id": "Safe",
         "name": "Safe",
-        "boxes": 24,
         "boxColor": "var(--mui-palette-primary-main)",
-        "message": "$110.9B as of 9 May"
+        "tvl": 62468973126.503235
       },
       {
+        "id": "Binance",
         "name": "Binance",
-        "boxes": 26,
         "boxColor": "var(--mui-palette-primary-light)",
-        "message": "$116.5B as of 9 May"
+        "tvl": 100360813869.09479
       }
     ],
     "title": "Safe has more <b>assets secured</b>",

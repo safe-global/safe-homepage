@@ -17,9 +17,11 @@ export async function getStaticProps() {
     crypto_punks_perc,
     total_transfer_volume,
     transaction_share,
+    safe_tvl,
     cex_tvl_robinhood,
     cex_tvl_okx,
     cex_tvl_binance,
+    last_updated,
   } = dataRoomStats
 
   return {
@@ -31,9 +33,11 @@ export async function getStaticProps() {
         cryptoPunksStoredPercentage: Number(crypto_punks_perc),
         totalVolumeTransfered: total_transfer_volume,
         onChainTransactionsPercentage: transaction_share,
+        tvlSafe: Number(safe_tvl),
         tvlRobinhood: Number(cex_tvl_robinhood),
         tvlOKX: Number(cex_tvl_okx),
         tvlBinance: Number(cex_tvl_binance),
+        lastUpdated: Number(last_updated),
       },
     },
   }
