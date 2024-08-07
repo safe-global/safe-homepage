@@ -13,6 +13,7 @@ export const AppRoutes = {
   gasStation: '/gas-station',
   ecosystem: '/ecosystem',
   disclaimer: '/disclaimer',
+  dataroom: '/dataroom',
   core: '/core',
   cookie: '/cookie',
   cla: '/cla',
