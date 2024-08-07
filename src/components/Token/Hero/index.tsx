@@ -1,5 +1,4 @@
 import css from './styles.module.css'
-import { motion } from 'framer-motion'
 import { Typography } from '@mui/material'
 import OrbitRingsList from '@/components/Token/Hero/token-hero-rings.json'
 import OrbitPath from '@/components/Token/OrbitPath'
@@ -9,6 +8,9 @@ import { type BaseBlockEntry } from '@/config/types'
 import RichText from '@/components/common/RichText'
 import ButtonsWrapper from '@/components/Token/ButtonsWrapper'
 import { isAsset, isEntryTypeButton } from '@/lib/typeGuards'
+import dynamic from 'next/dynamic'
+
+const FloatingToken = dynamic(() => import('./FloatingToken'))
 
 const Hero = (props: BaseBlockEntry) => {
   const { caption, title, buttons, image } = props.fields
@@ -24,19 +26,7 @@ const Hero = (props: BaseBlockEntry) => {
 
       <div className={css.tokenContainer}>
         {/*SAFE Token Logo */}
-        <motion.div
-          animate={{ y: ['0%', '-5%', '0%'], rotateY: [0, -35, 0] }}
-          transition={{
-            duration: 6,
-            ease: 'easeInOut',
-            repeat: Infinity,
-            repeatType: 'loop',
-          }}
-        >
-          {isAsset(image) && image.fields.file?.url ? (
-            <img src={image.fields.file.url} alt={image.fields.title ?? ''} />
-          ) : null}
-        </motion.div>
+        {isAsset(image) ? <FloatingToken image={image} /> : null}
 
         {/* Token Hero Content */}
         <div className={css.container}>
