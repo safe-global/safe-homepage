@@ -1,16 +1,18 @@
 import css from './styles.module.css'
 import { Typography } from '@mui/material'
 import OrbitRingsList from '@/components/Token/Hero/token-hero-rings.json'
-import OrbitPath from '@/components/Token/OrbitPath'
-import Floater, { type AnimationDirection } from '@/components/Token/Floaters'
-import PulsingLogo from '@/components/Token/PulsingLogo'
+import { type AnimationDirection } from '@/components/Token/Hero/FloaterDot'
 import { type BaseBlockEntry } from '@/config/types'
 import RichText from '@/components/common/RichText'
 import ButtonsWrapper from '@/components/Token/ButtonsWrapper'
 import { isAsset, isEntryTypeButton } from '@/lib/typeGuards'
 import dynamic from 'next/dynamic'
 
+// Client-side only imports. Framer Motion components are not SSR compatible.
 const FloatingToken = dynamic(() => import('./FloatingToken'))
+const PulsingLogo = dynamic(() => import('./PulsingLogo'))
+const FloaterDot = dynamic(() => import('./FloaterDot'))
+const OrbitPath = dynamic(() => import('./OrbitPath'))
 
 const Hero = (props: BaseBlockEntry) => {
   const { caption, title, buttons, image } = props.fields
@@ -25,7 +27,7 @@ const Hero = (props: BaseBlockEntry) => {
       <div className={css.tokenCircle3}></div>
 
       <div className={css.tokenContainer}>
-        {/*SAFE Token Logo */}
+        {/* SAFE Token Logo */}
         {isAsset(image) ? <FloatingToken image={image} /> : null}
 
         {/* Token Hero Content */}
@@ -62,7 +64,7 @@ const Hero = (props: BaseBlockEntry) => {
             const floaterSpeed = floater.speed / 70 // Reduce floaters speed by a factor of 70
 
             return (
-              <Floater
+              <FloaterDot
                 key={floaterIndex}
                 radius={radius}
                 angle={floater.angle}

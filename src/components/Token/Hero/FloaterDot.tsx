@@ -5,7 +5,7 @@ import { palette } from '@/styles/palette'
 
 export type AnimationDirection = 'normal' | 'reverse'
 
-interface FloaterProps {
+interface FloaterDotProps {
   radius: number
   angle: number
   size: number
@@ -14,7 +14,7 @@ interface FloaterProps {
   speed: number
 }
 
-const Floater = ({ radius, angle, size, speed, direction }: FloaterProps) => {
+const FloaterDot = ({ radius, angle, size, speed, direction }: FloaterDotProps) => {
   const prefersReducedMotion = usePrefersReducedMotion()
   const speedMultiplier = prefersReducedMotion ? 0.5 : 2
   const adjustedSpeed = direction === 'reverse' ? -speed : speed
@@ -60,8 +60,8 @@ const Floater = ({ radius, angle, size, speed, direction }: FloaterProps) => {
   }, [speed, prefersReducedMotion, animate])
 
   const angleInRadians = (currentAngle * Math.PI) / 180
-  const x = radius * Math.cos(angleInRadians)
-  const y = radius * Math.sin(angleInRadians)
+  const x = (radius * Math.cos(angleInRadians)).toFixed(1)
+  const y = (radius * Math.sin(angleInRadians)).toFixed(1)
 
   return (
     <motion.div
@@ -85,4 +85,4 @@ const Floater = ({ radius, angle, size, speed, direction }: FloaterProps) => {
   )
 }
 
-export default Floater
+export default FloaterDot
