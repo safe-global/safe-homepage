@@ -9,7 +9,7 @@ import { isAsset, isEntryTypeButton } from '@/lib/typeGuards'
 import dynamic from 'next/dynamic'
 
 // Client-side only imports. Framer Motion components are not SSR compatible.
-const FloatingToken = dynamic(() => import('./FloatingToken'))
+const FloatingToken = dynamic(() => import('../FloatingToken'))
 const PulsingLogo = dynamic(() => import('./PulsingLogo'))
 const FloaterDot = dynamic(() => import('./FloaterDot'))
 const OrbitPath = dynamic(() => import('./OrbitPath'))

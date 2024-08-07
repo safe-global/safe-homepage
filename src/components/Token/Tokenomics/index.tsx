@@ -5,7 +5,7 @@ import { type BaseBlockEntry } from '@/config/types'
 import css from './styles.module.css'
 import LinkButton from '@/components/common/LinkButton'
 import { isAsset, isEntryTypeBaseBlock, isEntryTypeExternalURL } from '@/lib/typeGuards'
-import { motion } from 'framer-motion'
+import dynamic from 'next/dynamic'
 
 const CardEntry = (props: BaseBlockEntry) => {
   const { title, text } = props.fields
@@ -24,6 +24,9 @@ const CardEntry = (props: BaseBlockEntry) => {
   )
 }
 
+// Client-side only imports. Framer Motion components are not SSR compatible.
+const FloatingToken = dynamic(() => import('../FloatingToken'))
+
 const Tokenomics = (props: BaseBlockEntry) => {
   const { title, link, image, items, bgImage } = props.fields
 
@@ -38,19 +41,7 @@ const Tokenomics = (props: BaseBlockEntry) => {
           <Grid container columnSpacing={2} rowGap="30px">
             <Grid item xs={12} md={6} className={css.tokenWrapper}>
               {/* SAFE Token Logo */}
-              <motion.div
-                animate={{ y: ['0%', '-5%', '0%'], rotateY: [0, -35, 0] }}
-                transition={{
-                  duration: 6,
-                  ease: 'easeInOut',
-                  repeat: Infinity,
-                  repeatType: 'loop',
-                }}
-              >
-                {isAsset(image) && image.fields.file?.url ? (
-                  <img src={image.fields.file.url} alt={image.fields.title ?? ''} />
-                ) : null}
-              </motion.div>
+              {isAsset(image) ? <FloatingToken image={image} /> : null}
 
               <RichText {...title} />
             </Grid>
