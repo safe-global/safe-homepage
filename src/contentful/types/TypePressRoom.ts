@@ -2,12 +2,10 @@ import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleC
 import type { TypeBaseBlockSkeleton } from './TypeBaseBlock'
 import type { TypeExternalUrlSkeleton } from './TypeExternalUrl'
 import type { TypeMetaTagsSkeleton } from './TypeMetaTags'
-import type { TypePostSkeleton } from './TypePost'
 import type { TypeSimpleBaseBlockSkeleton } from './TypeSimpleBaseBlock'
 
 export interface TypePressRoomFields {
   metaTags: EntryFieldTypes.EntryLink<TypeMetaTagsSkeleton>
-  featured: EntryFieldTypes.EntryLink<TypePostSkeleton>
   numbers: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeBaseBlockSkeleton>>
   investors: EntryFieldTypes.Array<EntryFieldTypes.AssetLink>
   timeline: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeSimpleBaseBlockSkeleton>>
