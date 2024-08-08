@@ -13,7 +13,6 @@
   {
     "component": "DataRoom/WorldGDP",
     "title": "<b><em>Safe</em> TVL</b> is",
-    "subtitle": "of World GDP at",
     "text": "Some text thats changing<br/>Confirming the sources of the data<br/>Any other info regarding the stats",
     "link": {
       "title": "Dune dashboard",
