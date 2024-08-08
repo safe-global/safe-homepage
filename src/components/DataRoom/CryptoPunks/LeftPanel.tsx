@@ -8,11 +8,11 @@ import css from './styles.module.css'
 const CRYPTOPUNK_ROWS_NR = 8
 const CRYPTOPUNK_COLUMNS_NR = 24
 
-const LeftPanel = ({ backgroundRef }: { backgroundRef: RefObject<HTMLDivElement> }) => {
+const LeftPanel = ({ backgroundRef: containerRef }: { backgroundRef: RefObject<HTMLDivElement> }) => {
   const isMobile = useIsMediumScreen()
 
   const { scrollYProgress } = useScroll({
-    target: backgroundRef,
+    target: containerRef,
     offset: ['start end', 'end start'],
   })
 

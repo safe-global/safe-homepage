@@ -3,11 +3,17 @@ import type { RefObject, ReactNode } from 'react'
 import css from './styles.module.css'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 
-const RightPanel = ({ backgroundRef, children }: { backgroundRef: RefObject<HTMLDivElement>; children: ReactNode }) => {
+const RightPanel = ({
+  backgroundRef: containerRef,
+  children,
+}: {
+  backgroundRef: RefObject<HTMLDivElement>
+  children: ReactNode
+}) => {
   const isMobile = useIsMediumScreen()
 
   const { scrollYProgress } = useScroll({
-    target: backgroundRef,
+    target: containerRef,
     offset: ['start end', 'end start'],
   })
 

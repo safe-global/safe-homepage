@@ -28,6 +28,7 @@ const CryptoPunks = ({ title, text, link }: BaseBlock) => {
     <div ref={backgroundRef} className={css.sectionContainer}>
       <div className={css.stickyContainer}>
         <LeftPanel backgroundRef={backgroundRef} />
+
         <RightPanel backgroundRef={backgroundRef}>
           <Typography variant="h2" className={css.text}>
             {text}
