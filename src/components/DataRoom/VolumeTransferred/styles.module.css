@@ -27,9 +27,7 @@
 }
 
 .volume {
-  color: var(--mui-palette-primary-main);
   font-size: 180px;
-  font-weight: 400;
 }
 
 .slidingModule {

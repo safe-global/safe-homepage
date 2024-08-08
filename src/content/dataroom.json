@@ -8,12 +8,11 @@
   {
     "component": "DataRoom/Hero",
     "title": "Welcome to Safe Data Room",
-    "text": "Explore Mind Bending Sats from Safe Universe"
+    "text": "Explore Mind Bending Stats from Safe Universe"
   },
   {
     "component": "DataRoom/WorldGDP",
     "title": "<b><em>Safe</em> TVL</b> is",
-    "subtitle": "of World GDP at",
     "text": "Some text thats changing<br/>Confirming the sources of the data<br/>Any other info regarding the stats",
     "link": {
       "title": "Dune dashboard",
@@ -45,7 +44,6 @@
   {
     "component": "DataRoom/VolumeTransferred",
     "title": "with all time volume<br/>transferred",
-    "text": "and counting...",
     "link": {
       "title": "Dune dashboard",
       "href": "https://dune.com/safe/all"
