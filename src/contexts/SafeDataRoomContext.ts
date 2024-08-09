@@ -7,7 +7,7 @@ type SafeDataRoomStats = {
   totalVolumeTransfered: number | null
   onChainTransactionsPercentage: number | null
   tvlSafe: number | null
-  tvlRobinhood: number | null
+  tvlRobinhoodCEX: number | null
   tvlOKX: number | null
   tvlBinance: number | null
   lastUpdated: number | null
@@ -20,7 +20,7 @@ const SafeDataRoomContext = createContext<SafeDataRoomStats>({
   totalVolumeTransfered: null,
   onChainTransactionsPercentage: null,
   tvlSafe: null,
-  tvlRobinhood: null,
+  tvlRobinhoodCEX: null,
   tvlOKX: null,
   tvlBinance: null,
   lastUpdated: null,

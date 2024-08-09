@@ -34,7 +34,7 @@ export async function getStaticProps() {
         totalVolumeTransfered: total_transfer_volume,
         onChainTransactionsPercentage: transaction_share,
         tvlSafe: Number(safe_tvl),
-        tvlRobinhood: Number(cex_tvl_robinhood),
+        tvlRobinhoodCEX: Number(cex_tvl_robinhood),
         tvlOKX: Number(cex_tvl_okx),
         tvlBinance: Number(cex_tvl_binance),
         lastUpdated: Number(last_updated),

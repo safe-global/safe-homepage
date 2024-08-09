@@ -7,18 +7,33 @@ import { Typography } from '@mui/material'
 import { Cex, type CEX } from './Cex'
 import { useSafeDataRoomStats } from '@/hooks/useSafeDataRoomStats'
 import { getNormalizationFactor } from './utils/getNormalizationFactor'
-import { getTvlValue } from './utils/getTvlValue'
 import { formatDate } from '@/lib/formatDate'
 
 const LAST_UPDATED_FALLBACK = 1722946836.34
 
 const Cexes = ({ title, caption, cexes }: BaseBlock & { cexes: CEX[] }) => {
-  const { tvlRobinhood, tvlOKX, tvlBinance, tvlSafe, lastUpdated } = useSafeDataRoomStats()
+  const { tvlRobinhoodCEX, tvlOKX, tvlBinance, tvlSafe, lastUpdated } = useSafeDataRoomStats()
+
+  // Create a mapping object for TVL values
+  const tvlMapping: Record<string, number | null> = {
+    tvlRobinhoodCEX,
+    tvlOKX,
+    tvlBinance,
+    tvlSafe,
+  }
+
+  // Get the TVL values for each CEX
+  const dynamicTvl = cexes.map(({ name, tvl: tvlFallback }) => {
+    // get the varibale name of the dynamic TVL
+    const dynamicTvlString = `tvl${name.replace(' ', '')}`
+
+    return { name, tvl: tvlMapping[dynamicTvlString] || tvlFallback }
+  })
 
   const timestamp = lastUpdated || LAST_UPDATED_FALLBACK
   const formattedDate = formatDate(timestamp)
 
-  const normalizationFactor = getNormalizationFactor(cexes, tvlRobinhood, tvlOKX, tvlBinance, tvlSafe)
+  const normalizationFactor = getNormalizationFactor(dynamicTvl.map((cex) => cex.tvl))
   const squareRatio = normalizationFactor / 1000000000
 
   const backgroundRef = useRef<HTMLDivElement>(null)
@@ -53,11 +68,12 @@ const Cexes = ({ title, caption, cexes }: BaseBlock & { cexes: CEX[] }) => {
           className={css.cexesContainer}
         >
           {cexes.map((cex, index) => {
-            const cexTvl = getTvlValue(cexes, tvlRobinhood, tvlOKX, tvlBinance, tvlSafe, cex.name)
+            const tvl = dynamicTvl.find((item) => item.name === cex.name)?.tvl || cex.tvl
+
             return (
               <Cex
                 key={index}
-                tvl={cexTvl}
+                tvl={tvl}
                 boxColor={cex.boxColor}
                 name={cex.name}
                 normalizationFactor={normalizationFactor}

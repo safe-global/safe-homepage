@@ -50,6 +50,11 @@
   width: 16px;
   height: 16px;
   border-radius: 3px;
+  background-color: var(--mui-palette-primary-light);
+}
+
+.cexGridItemMain {
+  background-color: var(--mui-palette-primary-main);
 }
 
 .cexName {

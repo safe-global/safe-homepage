@@ -65,22 +65,19 @@
     "cexes": [
       {
         "name": "Robinhood CEX",
-        "boxColor": "light",
         "tvl": 11884403168.737804
       },
       {
         "name": "OKX",
-        "boxColor": "light",
         "tvl": 17505106456.55226
       },
       {
         "name": "Safe",
-        "boxColor": "main",
-        "tvl": 62468973126.503235
+        "tvl": 62468973126.503235,
+        "boxColor": "main"
       },
       {
         "name": "Binance",
-        "boxColor": "light",
         "tvl": 100360813869.09479
       }
     ],

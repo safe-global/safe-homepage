@@ -42,11 +42,7 @@ export const Cex = ({ boxColor, name, normalizationFactor, tvl, date }: CEX) => 
         {Array.from({ length: boxes }).map((_, index) => (
           <motion.div
             key={index}
-            className={css.cexGridItem}
-            style={{
-              backgroundColor:
-                boxColor === 'main' ? 'var(--mui-palette-primary-main)' : 'var(--mui-palette-primary-light)',
-            }}
+            className={`${css.cexGridItem} ${boxColor === 'main' && css.cexGridItemMain}`}
             {...gridMotionProps}
             transition={{ ...gridMotionProps.transition, delay: index * 0.04 }}
           />
