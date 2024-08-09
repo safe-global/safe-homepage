@@ -36,7 +36,7 @@ const Cexes = ({ title, caption, cexes }: BaseBlock & { cexes: CEX[] }) => {
   const formattedDate = formatDate(timestamp)
 
   const normalizationFactor = getNormalizationFactor(
-    viewportWidth * 0.5,
+    viewportWidth * 0.4,
     dynamicTvl.map((cex) => cex.tvl),
   )
   const squareRatio = normalizationFactor / 1000000000
