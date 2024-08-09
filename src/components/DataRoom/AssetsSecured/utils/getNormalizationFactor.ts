@@ -11,8 +11,11 @@ export const getNormalizationFactor = (
   tvlBinance: number | null,
   tvlSafe: number | null,
 ): number => {
-  const maxTvl = Math.max(...cexes.map((cex) => getTvlValue(cexes, tvlRobinhood, tvlOKX, tvlBinance, tvlSafe, cex.id)))
+  const maxTvl = Math.max(
+    ...cexes.map((cex) => getTvlValue(cexes, tvlRobinhood, tvlOKX, tvlBinance, tvlSafe, cex.name)),
+  )
   const maxSquares = MAX_WIDTH / SQUARE_WIDTH
-  const normalizationFactor = maxSquares / maxTvl
+  console.log(maxTvl / maxSquares)
+  const normalizationFactor = maxTvl / maxSquares
   return normalizationFactor
 }

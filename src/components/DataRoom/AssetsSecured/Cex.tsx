@@ -4,7 +4,6 @@ import { Typography } from '@mui/material'
 import { formatValue } from '@/lib/formatValue'
 
 export type CEX = {
-  id: string
   name: string
   boxColor: string
   tvl: number
@@ -35,7 +34,7 @@ const gridMotionProps: MotionProps = {
 }
 
 export const Cex = ({ boxColor, name, normalizationFactor, tvl, date }: CEX) => {
-  const boxes = Math.round(tvl * normalizationFactor)
+  const boxes = Math.round(tvl / normalizationFactor)
 
   return (
     <div className={css.cex}>
@@ -44,7 +43,10 @@ export const Cex = ({ boxColor, name, normalizationFactor, tvl, date }: CEX) => 
           <motion.div
             key={index}
             className={css.cexGridItem}
-            style={{ backgroundColor: boxColor }}
+            style={{
+              backgroundColor:
+                boxColor === 'main' ? 'var(--mui-palette-primary-main)' : 'var(--mui-palette-primary-light)',
+            }}
             {...gridMotionProps}
             transition={{ ...gridMotionProps.transition, delay: index * 0.04 }}
           />

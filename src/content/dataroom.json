@@ -64,32 +64,27 @@
     "caption": "CEX",
     "cexes": [
       {
-        "id": "Robinhood",
         "name": "Robinhood CEX",
-        "boxColor": "var(--mui-palette-primary-light)",
+        "boxColor": "light",
         "tvl": 11884403168.737804
       },
       {
-        "id": "OKX",
         "name": "OKX",
-        "boxColor": "var(--mui-palette-primary-light)",
+        "boxColor": "light",
         "tvl": 17505106456.55226
       },
       {
-        "id": "Safe",
         "name": "Safe",
-        "boxColor": "var(--mui-palette-primary-main)",
+        "boxColor": "main",
         "tvl": 62468973126.503235
       },
       {
-        "id": "Binance",
         "name": "Binance",
-        "boxColor": "var(--mui-palette-primary-light)",
+        "boxColor": "light",
         "tvl": 100360813869.09479
       }
     ],
-    "title": "Safe has more <b>assets secured</b>",
-    "text": "than many Fintechs and CEXs"
+    "title": "Safe has more <b>assets secured</b> <br/>than many Fintechs and CEXes"
   },
   {
     "component": "DataRoom/ExternalLinksGrid",

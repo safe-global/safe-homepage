@@ -6,13 +6,13 @@ export const getTvlValue = (
   tvlOKX: number | null,
   tvlBinance: number | null,
   tvlSafe: number | null,
-  id: string,
+  name: string,
 ) => {
-  const cex = cexes.find((c) => c.id === id)
+  const cex = cexes.find((c) => c.name === name)
   if (!cex) return 0
 
-  switch (id) {
-    case 'Robinhood':
+  switch (name) {
+    case 'Robinhood CEX':
       return tvlRobinhood ?? cex.tvl
     case 'OKX':
       return tvlOKX ?? cex.tvl

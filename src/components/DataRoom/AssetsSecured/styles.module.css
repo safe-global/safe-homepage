@@ -14,6 +14,9 @@
 }
 
 .label {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
   padding-bottom: 60px;
   color: var(--mui-palette-primary-light);
 }
@@ -32,13 +35,13 @@
 
 .cex {
   display: flex;
-  direction: row;
+  flex-direction: row;
   align-items: center;
 }
 
 .cexGrid {
   display: flex;
-  direction: row;
+  flex-direction: row;
   column-gap: 8px;
   align-items: center;
 }

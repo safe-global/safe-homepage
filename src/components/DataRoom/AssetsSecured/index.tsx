@@ -8,19 +8,18 @@ import { Cex, type CEX } from './Cex'
 import { useSafeDataRoomStats } from '@/hooks/useSafeDataRoomStats'
 import { getNormalizationFactor } from './utils/getNormalizationFactor'
 import { getTvlValue } from './utils/getTvlValue'
+import { formatDate } from '@/lib/formatDate'
 
 const LAST_UPDATED_FALLBACK = 1722946836.34
 
-const Cexes = ({ title, text, caption, cexes }: BaseBlock & { cexes: CEX[] }) => {
+const Cexes = ({ title, caption, cexes }: BaseBlock & { cexes: CEX[] }) => {
   const { tvlRobinhood, tvlOKX, tvlBinance, tvlSafe, lastUpdated } = useSafeDataRoomStats()
 
   const timestamp = lastUpdated || LAST_UPDATED_FALLBACK
-  const formattedDate = new Date(timestamp * 1000).toLocaleDateString('en-GB', {
-    day: 'numeric',
-    month: 'short',
-  })
+  const formattedDate = formatDate(timestamp)
 
   const normalizationFactor = getNormalizationFactor(cexes, tvlRobinhood, tvlOKX, tvlBinance, tvlSafe)
+  const squareRatio = normalizationFactor / 1000000000
 
   const backgroundRef = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
@@ -44,6 +43,7 @@ const Cexes = ({ title, text, caption, cexes }: BaseBlock & { cexes: CEX[] }) =>
           className={css.label}
         >
           <Typography variant="h5">{caption}</Typography>
+          <Typography variant="h5">1 square - ${squareRatio.toFixed(2)}B</Typography>
         </motion.div>
         <motion.div
           style={{
@@ -53,11 +53,10 @@ const Cexes = ({ title, text, caption, cexes }: BaseBlock & { cexes: CEX[] }) =>
           className={css.cexesContainer}
         >
           {cexes.map((cex, index) => {
-            const cexTvl = getTvlValue(cexes, tvlRobinhood, tvlOKX, tvlBinance, tvlSafe, cex.id)
+            const cexTvl = getTvlValue(cexes, tvlRobinhood, tvlOKX, tvlBinance, tvlSafe, cex.name)
             return (
               <Cex
                 key={index}
-                id={cex.id}
                 tvl={cexTvl}
                 boxColor={cex.boxColor}
                 name={cex.name}
@@ -74,9 +73,7 @@ const Cexes = ({ title, text, caption, cexes }: BaseBlock & { cexes: CEX[] }) =>
           }}
           className={css.title}
         >
-          <Typography variant="h2">
-            {title} <br /> {text}
-          </Typography>
+          <Typography variant="h2">{title}</Typography>
         </motion.div>
       </div>
     </div>
