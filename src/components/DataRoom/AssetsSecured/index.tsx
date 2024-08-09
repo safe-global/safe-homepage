@@ -1,7 +1,7 @@
 import type { BaseBlock } from '@/components/Home/types'
 import { useScroll, useTransform } from 'framer-motion'
 import css from './styles.module.css'
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 import { motion } from 'framer-motion'
 import { Typography } from '@mui/material'
 import { Cex, type CEX } from './Cex'
