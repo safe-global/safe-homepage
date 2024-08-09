@@ -1,18 +1,20 @@
 import type { BaseBlock } from '@/components/Home/types'
 import { useScroll, useTransform } from 'framer-motion'
 import css from './styles.module.css'
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import { Typography } from '@mui/material'
 import { Cex, type CEX } from './Cex'
 import { useSafeDataRoomStats } from '@/hooks/useSafeDataRoomStats'
 import { getNormalizationFactor } from './utils/getNormalizationFactor'
 import { formatDate } from '@/lib/formatDate'
+import useViewportWidth from '@/hooks/useViewportWidth'
 
 const LAST_UPDATED_FALLBACK = 1722946836.34
 
 const Cexes = ({ title, caption, cexes }: BaseBlock & { cexes: CEX[] }) => {
   const { tvlRobinhoodCEX, tvlOKX, tvlBinance, tvlSafe, lastUpdated } = useSafeDataRoomStats()
+  const { viewportWidth } = useViewportWidth()
 
   // Create a mapping object for TVL values
   const tvlMapping: Record<string, number | null> = {
@@ -33,7 +35,10 @@ const Cexes = ({ title, caption, cexes }: BaseBlock & { cexes: CEX[] }) => {
   const timestamp = lastUpdated || LAST_UPDATED_FALLBACK
   const formattedDate = formatDate(timestamp)
 
-  const normalizationFactor = getNormalizationFactor(dynamicTvl.map((cex) => cex.tvl))
+  const normalizationFactor = getNormalizationFactor(
+    viewportWidth * 0.5,
+    dynamicTvl.map((cex) => cex.tvl),
+  )
   const squareRatio = normalizationFactor / 1000000000
 
   const backgroundRef = useRef<HTMLDivElement>(null)

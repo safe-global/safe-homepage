@@ -1,10 +1,9 @@
-const MAX_WIDTH = 648
 const SQUARE_WIDTH = 24
 
-export const getNormalizationFactor = (tvls: number[]): number => {
-  const maxSquares = MAX_WIDTH / SQUARE_WIDTH
-
+export const getNormalizationFactor = (viewportWidth: number, tvls: number[]): number => {
   const maxTvl = Math.max(...tvls)
+  const maxSquares = viewportWidth / SQUARE_WIDTH
+
   const normalizationFactor = maxTvl / maxSquares
 
   return normalizationFactor
