@@ -51,7 +51,9 @@ export const Cex = ({ boxColor, name, normalizationFactor, tvl, date }: CEX) => 
 
       <div className={css.labelContainer}>
         <motion.div {...textMotionProps} transition={{ ...textMotionProps.transition, delay: 0.2 }}>
-          <Typography variant="h4">{name}</Typography>
+          <Typography className={css.cexTitle} variant="h4">
+            {name}
+          </Typography>
         </motion.div>
 
         <motion.div {...textMotionProps} transition={{ ...textMotionProps.transition, delay: 0.4 }}>

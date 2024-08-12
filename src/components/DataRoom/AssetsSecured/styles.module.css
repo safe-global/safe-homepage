@@ -79,8 +79,20 @@
     justify-content: space-between;
   }
 
+  .cexTitle {
+    font-size: 24px;
+  }
+
   .label {
     padding-bottom: 32px;
+  }
+
+  .labelCaption {
+    font-size: 22px;
+  }
+
+  .labelContainer {
+    gap: 12px;
   }
 
   .cexEntry {

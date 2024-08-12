@@ -9,8 +9,12 @@ import { useSafeDataRoomStats } from '@/hooks/useSafeDataRoomStats'
 import { getNormalizationFactor } from './utils/getNormalizationFactor'
 import { formatDate } from '@/lib/formatDate'
 import useViewportWidth from '@/hooks/useViewportWidth'
+import { useIsMediumScreen } from '@/hooks/useMaxWidth'
+import { formatValue } from '@/lib/formatValue'
 
 const LAST_UPDATED_FALLBACK = 1722946836.34
+const MOBILE_VIEWPORT_FRACTION = 0.8
+const DESKTOP_VIEWPORT_FRACTION = 0.4
 
 export default function SlidingContent({
   title,
@@ -20,6 +24,7 @@ export default function SlidingContent({
 }: Omit<BaseBlock, 'text'> & { cexes: CEX[]; containerRef: RefObject<HTMLDivElement> }) {
   const { tvlRobinhoodCEX, tvlOKX, tvlBinance, tvlSafe, lastUpdated } = useSafeDataRoomStats()
   const { viewportWidth } = useViewportWidth()
+  const isMobile = useIsMediumScreen()
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start end', 'end start'],
@@ -45,10 +50,11 @@ export default function SlidingContent({
   const formattedDate = formatDate(timestamp)
 
   const normalizationFactor = getNormalizationFactor(
-    viewportWidth * 0.4,
+    viewportWidth * (isMobile ? MOBILE_VIEWPORT_FRACTION : DESKTOP_VIEWPORT_FRACTION),
     dynamicTvl.map((cex) => cex.tvl),
   )
-  const squareRatio = normalizationFactor / 1000000000
+
+  const squareRatio = formatValue(normalizationFactor)
 
   const transformLTR = useTransform(scrollYProgress, [0.5, 0.75], ['0%', '100%'])
   const transformRTL = useTransform(scrollYProgress, [0.5, 0.75], ['0', '-100%'])
@@ -67,7 +73,7 @@ export default function SlidingContent({
       >
         <div className={css.label}>
           <Typography variant="h5">{caption}</Typography>
-          <Typography variant="h5">1 square - ${squareRatio.toFixed(2)}B</Typography>
+          <Typography variant="h5">1 square - ${squareRatio}</Typography>
         </div>
 
         {cexes.map((cex, index) => {
