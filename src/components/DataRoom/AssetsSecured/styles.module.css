@@ -33,42 +33,40 @@
   gap: 32px;
 }
 
-.cex {
+.cexEntry {
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 22px;
 }
 
-.cexGrid {
+.squareGrid {
   display: flex;
   flex-direction: row;
   column-gap: 8px;
   align-items: center;
 }
 
-.cexGridItem {
+.gridItem {
   width: 16px;
   height: 16px;
   border-radius: 3px;
   background-color: var(--mui-palette-primary-light);
 }
 
-.cexGridItemMain {
+.gridItemMain {
   background-color: var(--mui-palette-primary-main);
 }
 
-.cexName {
-  margin-left: 24px;
-  margin-right: 16px;
-}
-
-.cexLabelContainer {
+.labelContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
+  gap: 22px;
 }
 
-.cexMessage {
+.labelCaption {
   white-space: nowrap;
   color: var(--mui-palette-primary-light);
 }
@@ -85,18 +83,10 @@
     padding-bottom: 32px;
   }
 
-  .cex {
+  .cexEntry {
     flex-direction: column;
     align-items: start;
-  }
-
-  .cexName {
-    font-size: 24px;
-    margin-left: 0px;
-  }
-
-  .cexLabelContainer {
-    margin-top: 8px;
+    gap: 8px;
   }
 
   .title {

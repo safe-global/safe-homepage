@@ -37,25 +37,25 @@ export const Cex = ({ boxColor, name, normalizationFactor, tvl, date }: CEX) => 
   const boxes = Math.round(tvl / normalizationFactor)
 
   return (
-    <div className={css.cex}>
-      <div className={css.cexGrid}>
+    <div className={css.cexEntry}>
+      <div className={css.squareGrid}>
         {Array.from({ length: boxes }).map((_, index) => (
           <motion.div
             key={index}
-            className={`${css.cexGridItem} ${boxColor === 'main' && css.cexGridItemMain}`}
+            className={`${css.gridItem} ${boxColor === 'main' && css.gridItemMain}`}
             {...gridMotionProps}
             transition={{ ...gridMotionProps.transition, delay: index * 0.04 }}
           />
         ))}
       </div>
-      <div className={css.cexLabelContainer}>
+
+      <div className={css.labelContainer}>
         <motion.div {...textMotionProps} transition={{ ...textMotionProps.transition, delay: 0.2 }}>
-          <Typography variant="h4" className={css.cexName}>
-            {name}
-          </Typography>
+          <Typography variant="h4">{name}</Typography>
         </motion.div>
+
         <motion.div {...textMotionProps} transition={{ ...textMotionProps.transition, delay: 0.4 }}>
-          <Typography className={css.cexMessage} variant="h5">
+          <Typography className={css.labelCaption} variant="h5">
             {'$' + formatValue(tvl) + ' as of ' + date}
           </Typography>
         </motion.div>

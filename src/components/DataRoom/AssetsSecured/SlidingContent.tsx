@@ -57,16 +57,7 @@ export default function SlidingContent({
 
   return (
     <>
-      <motion.div
-        style={{
-          x: transformRTL,
-          opacity: opacityRTL,
-        }}
-        className={css.label}
-      >
-        <Typography variant="h5">{caption}</Typography>
-        <Typography variant="h5">1 square - ${squareRatio.toFixed(2)}B</Typography>
-      </motion.div>
+      {/* Sliding data */}
       <motion.div
         style={{
           x: transformRTL,
@@ -74,6 +65,11 @@ export default function SlidingContent({
         }}
         className={css.cexesContainer}
       >
+        <div className={css.label}>
+          <Typography variant="h5">{caption}</Typography>
+          <Typography variant="h5">1 square - ${squareRatio.toFixed(2)}B</Typography>
+        </div>
+
         {cexes.map((cex, index) => {
           const tvl = dynamicTvl.find((item) => item.name === cex.name)?.tvl || cex.tvl
 
@@ -89,6 +85,8 @@ export default function SlidingContent({
           )
         })}
       </motion.div>
+
+      {/* Sliding Text */}
       <motion.div
         style={{
           x: transformLTR,
