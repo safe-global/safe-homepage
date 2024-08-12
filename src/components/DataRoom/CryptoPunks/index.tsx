@@ -32,7 +32,7 @@ const CryptoPunks = ({ title, text, link }: BaseBlock) => {
   // Converts to percentage with 1 decimal place
   const percentageToDisplay = (percentageValue * 100).toFixed(1) + '%'
 
-  const cryptoPunksStored = percentageValue * CRYPTOPUNKS_TOTAL
+  const cryptoPunksStored = (percentageValue * CRYPTOPUNKS_TOTAL).toFixed(0)
   const fractionToDisplay = `${cryptoPunksStored}/${CRYPTOPUNKS_TOTAL}`
 
   return (

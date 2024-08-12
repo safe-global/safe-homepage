@@ -10,8 +10,8 @@ const VALUE_LOCKED_FALLBACK = 68_583_703_689
 const PERCENTAGE_FALLBACK = 0.000679
 
 const WorldGDP = ({ title, subtitle, link }: BaseBlock & { subtitle: string }) => {
-  const { tvlToGDPPercentage, totalValueLocked } = useSafeDataRoomStats()
-  const valueLocked = totalValueLocked || VALUE_LOCKED_FALLBACK
+  const { tvlToGDPPercentage, tvlSafe } = useSafeDataRoomStats()
+  const valueLocked = tvlSafe || VALUE_LOCKED_FALLBACK
   const percentageValue = tvlToGDPPercentage || PERCENTAGE_FALLBACK
 
   const displayTVLValue = formatCurrency(valueLocked, 0)
