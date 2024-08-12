@@ -5,6 +5,7 @@ import { useMemo } from 'react'
 import { scrollToElement } from '@/lib/scrollSmooth'
 import { Typography } from '@mui/material'
 import Link from 'next/link'
+import css from '../styles.module.css'
 
 const ContentsTable = ({ content }: { content: ContentfulDocument }) => {
   const handleContentTableClick = (e: React.MouseEvent<HTMLAnchorElement>, target: string) => {
@@ -25,7 +26,7 @@ const ContentsTable = ({ content }: { content: ContentfulDocument }) => {
   )
 
   return (
-    <ul>
+    <ul className={css.contentsTable}>
       {headings.map((heading) => {
         const headingKey = kebabCase(heading.id)
 
