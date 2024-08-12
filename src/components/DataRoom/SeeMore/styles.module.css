@@ -32,31 +32,24 @@
   transform: translateY(-50%);
 }
 
-.wave1 {
+.wave {
   position: absolute;
   top: 50%;
   width: 100%;
   transform: translateY(-50%);
   right: 0;
-  z-index: 30;
+  --wave-index: 30;
+  z-index: calc(var(--wave-index) - (var(--n) * 10));
 }
 
-.wave2 {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  transform: translateY(-50%);
-  right: 0;
-  z-index: 20;
+.wave:nth-child(1) {
+  --n: 0;
 }
-
-.wave3 {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  transform: translateY(-50%);
-  right: 0;
-  z-index: 10;
+.wave:nth-child(2) {
+  --n: 1;
+}
+.wave:nth-child(3) {
+  --n: 2;
 }
 
 @media (max-width: 900px) {
@@ -69,15 +62,7 @@
     justify-content: start;
   }
 
-  .wave1 {
-    transform: translateY(-25%);
-  }
-
-  .wave2 {
-    transform: translateY(-25%);
-  }
-
-  .wave3 {
+  .wave {
     transform: translateY(-25%);
   }
 }
