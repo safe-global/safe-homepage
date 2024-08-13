@@ -34,14 +34,17 @@ const Wave = ({
       if (!startTime) startTime = time
       const elapsed = time - startTime
 
-      const path = Array.from({ length: width + 1 }, (_, i) => {
-        const y = height / 2 + amplitude * Math.sin((i / width) * 2 * Math.PI * frequency + (elapsed * speed) / 1000)
-        return `${i},${y}`
-      }).join(' L')
+      // Only create the path if width is valid
+      if (width > 0) {
+        const path = Array.from({ length: width + 1 }, (_, i) => {
+          const y = height / 2 + amplitude * Math.sin((i / width) * 2 * Math.PI * frequency + (elapsed * speed) / 1000)
+          return `${i},${y}`
+        }).join(' L')
 
-      const pathElement = containerRef.current?.querySelector('path')
-      if (pathElement) {
-        pathElement.setAttribute('d', `M${path}`)
+        const pathElement = containerRef.current?.querySelector('path')
+        if (pathElement) {
+          pathElement.setAttribute('d', `M${path}`)
+        }
       }
 
       animationFrameId = requestAnimationFrame(animate)
@@ -53,9 +56,11 @@ const Wave = ({
 
   return (
     <div ref={containerRef} style={{ width: '100%' }}>
-      <svg width={width} height={height}>
-        <path fill="none" stroke={color} strokeWidth={STROKE_WIDTH} />
-      </svg>
+      {width > 0 && (
+        <svg width={width} height={height}>
+          <path fill="none" stroke={color} strokeWidth={STROKE_WIDTH} />
+        </svg>
+      )}
     </div>
   )
 }
