@@ -52,17 +52,18 @@
   }
 
   .spot1 {
-    top: -150px;
-    width: 1000px;
-    height: 1000px;
+    left: -100px;
+    top: 100px;
+    width: 700px;
+    height: 700px;
   }
 
   .spot2 {
     position: absolute;
     right: 0px;
-    top: -100px;
-    width: 1000px;
-    height: 1200px;
+    top: 150px;
+    width: 800px;
+    height: 800px;
     background-image: radial-gradient(at right, rgba(41, 182, 246, 0.3) 0%, rgba(246, 247, 248, 0) 80%);
     filter: blur(50px);
   }
