@@ -1,9 +1,10 @@
 .bg {
   background-position-x: center;
   background-repeat: no-repeat;
-  overflow: hidden;
+  overflow: visible;
   background-size: cover;
-  z-index: -2;
+  position: relative;
+  /* margin-right: -20px; */
 }
 
 .spot1 {
@@ -47,10 +48,6 @@
 }
 
 @media (min-width: 900px) {
-  .bg {
-    background-size: contain;
-  }
-
   .spot1 {
     left: -100px;
     top: 100px;
@@ -61,10 +58,10 @@
   .spot2 {
     position: absolute;
     right: 0px;
-    top: 150px;
+    top: 50px;
     width: 800px;
     height: 800px;
-    background-image: radial-gradient(at right, rgba(41, 182, 246, 0.3) 0%, rgba(246, 247, 248, 0) 80%);
+    background-image: radial-gradient(at right, rgba(41, 182, 246, 0.4) 0%, rgba(246, 247, 248, 0) 80%);
     filter: blur(50px);
   }
 
@@ -72,16 +69,37 @@
     background-repeat: no-repeat;
     overflow: hidden;
     background-size: contain;
-    background-position: center top 180px;
+    background-position: center top 140px;
     position: relative;
     z-index: 1;
+  }
+
+  .gradientHorizontal:before,
+  .gradientHorizontal:after {
+    content: '';
+    top: 0;
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 30px;
+    pointer-events: none;
+  }
+
+  .gradientHorizontal:before {
+    background: linear-gradient(-90deg, rgba(18, 19, 18, 0) 0%, rgb(20, 20, 20) 100%);
+  }
+
+  .gradientHorizontal:after {
+    width: 1px;
+    background: linear-gradient(270deg, rgba(18, 19, 18, 0.1) 0%, rgba(18, 19, 18, 0) 100%);
+    right: 0px;
   }
 }
 
 @media (min-width: 1536px) {
   .spot1,
   .spot2 {
-    width: 1200px;
-    height: 1200px;
+    width: 1000px;
+    height: 1000px;
   }
 }

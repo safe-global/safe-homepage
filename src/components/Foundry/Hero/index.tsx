@@ -17,30 +17,32 @@ const Hero = (props: BaseBlockEntry) => {
 
   return (
     <div className={css.bg} style={{ backgroundImage: `url(${bgImageURL})` }}>
-      <div className={css.spot1} />
-      <div className={css.spot2} />
+      <div className={css.gradientHorizontal}>
+        <div className={css.spot1} />
+        <div className={css.spot2} />
 
-      {/* Networks image does not show in smaller resolutions */}
-      <div className={css.image} style={{ backgroundImage: `url(${!isMediumScreen ? imageURL : ''})` }}>
-        <Container className={css.container}>
-          <div className={css.textBlock}>
-            <Typography variant="h1" className={css.title}>
-              <RichText {...title} />
-            </Typography>
+        {/* Networks image does not show in smaller resolutions */}
+        <div className={css.image} style={{ backgroundImage: `url(${!isMediumScreen ? imageURL : ''})` }}>
+          <Container className={css.container}>
+            <div className={css.textBlock}>
+              <Typography variant="h1" className={css.title}>
+                <RichText {...title} />
+              </Typography>
 
-            {text && (
-              <div className={css.text}>
-                <RichText {...text} />
-              </div>
-            )}
+              {text && (
+                <div className={css.text}>
+                  <RichText {...text} />
+                </div>
+              )}
 
-            {buttonsList.length > 0 && (
-              <div className={css.buttons}>
-                <ButtonsWrapper buttons={buttonsList} />
-              </div>
-            )}
-          </div>
-        </Container>
+              {buttonsList.length > 0 && (
+                <div className={css.buttons}>
+                  <ButtonsWrapper buttons={buttonsList} />
+                </div>
+              )}
+            </div>
+          </Container>
+        </div>
       </div>
     </div>
   )
