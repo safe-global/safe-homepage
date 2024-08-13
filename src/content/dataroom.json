@@ -60,6 +60,30 @@
     }
   },
   {
+    "component": "DataRoom/AssetsSecured",
+    "caption": "CEX",
+    "cexes": [
+      {
+        "name": "Robinhood CEX",
+        "tvl": 11884403168.737804
+      },
+      {
+        "name": "OKX",
+        "tvl": 17505106456.55226
+      },
+      {
+        "name": "Safe",
+        "tvl": 62468973126.503235,
+        "boxColor": "main"
+      },
+      {
+        "name": "Binance",
+        "tvl": 100360813869.09479
+      }
+    ],
+    "title": "Safe has more <b>assets secured</b> <br/>than many Fintechs and CEXes"
+  },
+  {
     "component": "DataRoom/SeeMore",
     "text": "Want to see more?"
   },
