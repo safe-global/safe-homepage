@@ -25,7 +25,7 @@ const IndustryComparison = ({ title }: BaseBlock) => {
           <Typography className={css.title} variant="h1">
             {title}
           </Typography>
-          <DotGrid containerRef={gridContainerRef} isMobile={isMobile} scrollYProgress={scrollYProgress} />
+          <DotGrid containerRef={gridContainerRef} scrollYProgress={scrollYProgress} />
         </RightPanel>
       </div>
     </div>
