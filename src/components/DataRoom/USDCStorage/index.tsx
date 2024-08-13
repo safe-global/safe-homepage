@@ -5,7 +5,7 @@ import MatterCanvas from './MatterCanvas'
 import { useRef } from 'react'
 import LinksWrapper from '../LinksWrapper'
 import css from './styles.module.css'
-import MotionTypography from './MotionTypography'
+import MotionTypography from '@/components/common/MotionTypography'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 import { useSafeDataRoomStats } from '@/hooks/useSafeDataRoomStats'
 
@@ -48,10 +48,10 @@ const USDCStorage = ({ title, text, link, image }: BaseBlock) => {
           }}
           className={css.content}
         >
-          <MotionTypography customDelay={0.5}>
+          <MotionTypography animateYFrom={50} customDelay={0.5}>
             <Typography variant="h2">{title}</Typography>
           </MotionTypography>
-          <MotionTypography customDelay={1.5}>
+          <MotionTypography animateYFrom={50} customDelay={1.5}>
             <Typography className={css.usdcPercentage}>
               <b>{displayValue}</b>
             </Typography>
