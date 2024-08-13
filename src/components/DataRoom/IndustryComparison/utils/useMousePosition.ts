@@ -2,6 +2,17 @@ import { useState, useEffect } from 'react'
 import type { MotionValue } from 'framer-motion'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 
+/**
+ * Custom hook to track mouse position or simulate it based on scroll progress.
+ * @param containerRef - Reference to the container element.
+ * @param canvasRef - Reference to the canvas element.
+ * @param dimensions - Object containing width and height of the container.
+ * @param scrollYProgress - MotionValue for scroll progress, used on mobile devices.
+ * @returns An object with x and y coordinates representing either:
+ *          - Actual mouse position relative to the canvas (on desktop)
+ *          - Simulated position based on scroll progress (on mobile)
+ */
+
 export default function useMousePosition(
   containerRef: React.RefObject<HTMLDivElement>,
   canvasRef: React.RefObject<HTMLCanvasElement>,
