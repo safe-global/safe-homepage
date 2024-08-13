@@ -18,7 +18,7 @@ export default function DotGrid({
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const isMobile = useIsMediumScreen()
   const dimensions = useContainerSize(containerRef)
-  const mousePosition = useMousePosition(containerRef, canvasRef, dimensions, scrollYProgress)
+  const mousePosition = useMousePosition(canvasRef, dimensions, scrollYProgress)
 
   useEffect(() => {
     const canvas = canvasRef.current

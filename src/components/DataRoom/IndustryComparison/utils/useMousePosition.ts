@@ -4,7 +4,6 @@ import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 
 /**
  * Custom hook to track mouse position or simulate it based on scroll progress.
- * @param containerRef - Reference to the container element.
  * @param canvasRef - Reference to the canvas element.
  * @param dimensions - Object containing width and height of the container.
  * @param scrollYProgress - MotionValue for scroll progress, used on mobile devices.
@@ -14,7 +13,6 @@ import { useIsMediumScreen } from '@/hooks/useMaxWidth'
  */
 
 export default function useMousePosition(
-  containerRef: React.RefObject<HTMLDivElement>,
   canvasRef: React.RefObject<HTMLCanvasElement>,
   dimensions: { width: number; height: number },
   scrollYProgress?: MotionValue<number>,
@@ -23,26 +21,24 @@ export default function useMousePosition(
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
   useEffect(() => {
-    const container = containerRef.current
-
     if (isMobile && scrollYProgress) {
       const updatePositionMobile = () => {
         const progress = scrollYProgress.get()
-        const height = container?.getBoundingClientRect().height || 0
-        setMousePosition({ x: dimensions.width - dimensions.width / 8, y: progress * height })
+        setMousePosition({ x: dimensions.width - dimensions.width / 8, y: progress * dimensions.height })
       }
       return scrollYProgress.on('change', updatePositionMobile)
     } else {
+      const canvas = canvasRef.current
       const updatePositionDesktop = (e: MouseEvent) => {
-        const rect = canvasRef.current?.getBoundingClientRect()
+        const rect = canvas?.getBoundingClientRect()
         if (rect) {
           setMousePosition({ x: e.clientX - rect.left, y: e.clientY - rect.top })
         }
       }
-      container?.addEventListener('mousemove', updatePositionDesktop)
-      return () => container?.removeEventListener('mousemove', updatePositionDesktop)
+      canvas?.addEventListener('mousemove', updatePositionDesktop)
+      return () => canvas?.removeEventListener('mousemove', updatePositionDesktop)
     }
-  }, [containerRef, canvasRef, isMobile, scrollYProgress, dimensions.width])
+  }, [canvasRef, isMobile, scrollYProgress, dimensions])
 
   return mousePosition
 }
