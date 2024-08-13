@@ -1,0 +1,86 @@
+.bg {
+  background-position-x: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-size: cover;
+  z-index: -2;
+}
+
+.spot1 {
+  position: absolute;
+  left: -300px;
+  top: 200px;
+  width: 600px;
+  height: 600px;
+  background-image: radial-gradient(at top left, rgba(18, 255, 128, 0.4) 0%, rgba(246, 247, 248, 0) 80%);
+  filter: blur(70px);
+}
+
+.container {
+  margin-top: 70px;
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.title {
+  max-width: 950px;
+  text-align: center;
+}
+
+.title p {
+  margin: 0;
+}
+
+.text p {
+  margin: 0;
+}
+
+@media (min-width: 600px) {
+  .container {
+    margin-top: 150px;
+  }
+}
+
+@media (min-width: 900px) {
+  .bg {
+    background-size: contain;
+  }
+
+  .spot1 {
+    top: -150px;
+    width: 1000px;
+    height: 1000px;
+  }
+
+  .spot2 {
+    position: absolute;
+    right: 0px;
+    top: -100px;
+    width: 1000px;
+    height: 1200px;
+    background-image: radial-gradient(at right, rgba(41, 182, 246, 0.3) 0%, rgba(246, 247, 248, 0) 80%);
+    filter: blur(50px);
+  }
+
+  .image {
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: contain;
+    background-position: center top 180px;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 1536px) {
+  .spot1,
+  .spot2 {
+    width: 1200px;
+    height: 1200px;
+  }
+}
