@@ -1,26 +1,16 @@
-.bg {
-  margin-top: 200px;
-  margin-left: -20px;
-  width: 250px;
-}
-
 .gridContainer {
   position: relative;
 }
 
 .spot {
   position: absolute;
-  left: -300px;
-  top: -150px;
+  left: -370px;
+  top: -330px;
   z-index: -1;
   width: 800px;
   height: 800px;
   background-image: radial-gradient(rgba(18, 255, 128, 0.5), rgba(18, 19, 18, 1) 80%);
   filter: blur(50px);
-}
-
-.title {
-  text-align: center;
 }
 
 .accordion {
@@ -29,12 +19,10 @@
   border-bottom: 1px solid var(--mui-palette-border-main);
 }
 
-.accordion::before {
-  display: none;
-}
-
 .accordion :global .MuiAccordionSummary-root {
   padding: 0;
+  display: flex;
+  gap: 40px;
 }
 
 .accordion :global .MuiAccordionSummary-content {
@@ -45,23 +33,19 @@
   padding: 0 0 32px;
 }
 
+.details :global .MuiAccordionDetails-root a {
+  text-decoration: underline;
+}
+
+/* Resets the paragraph margins on accordion's summary and details */
+.accordion :global .MuiAccordionSummary-content p {
+  margin: 0;
+}
+
 .details p:first-of-type {
   margin-top: 0;
 }
 
 .details p:last-of-type {
   margin-bottom: 0;
-}
-
-.details a {
-  text-decoration: underline;
-}
-
-@media (min-width: 900px) {
-  .bg {
-    position: absolute;
-    left: -35px;
-    width: 300px;
-    margin-top: 440px;
-  }
 }

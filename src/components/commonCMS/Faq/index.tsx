@@ -19,6 +19,7 @@ import css from './styles.module.css'
 const Faq = (props: BaseBlockEntry) => {
   const { title, items } = props.fields
 
+  // Tracks which accordion is open
   const [openMap, setOpenMap] = useState<Record<number, boolean>>()
 
   const itemsList = items?.filter(isEntryTypeBaseBlock) ?? []
@@ -27,13 +28,10 @@ const Faq = (props: BaseBlockEntry) => {
     <Container className={layoutCss.container}>
       <Grid container className={css.gridContainer}>
         <div className={css.spot} />
-        <Grid item md={1} />
 
-        <Grid item md={2} width="100%">
+        <Grid item md={5} width="100%">
           <RichText {...title} />
         </Grid>
-
-        <Grid item md={2} />
 
         <Grid item md={7}>
           {itemsList.map((item, index) => {
@@ -58,14 +56,7 @@ const Faq = (props: BaseBlockEntry) => {
                 <AccordionSummary
                   expandIcon={openMap?.[index] ? <MinusIcon /> : <PlusIcon />}
                   onClick={() => {
-                    // fire event only when accordion is expanded
                     !openMap?.[index]
-                    // TODO: check if it's necessary to track
-                    // &&
-                    // trackEvent({
-                    //   ...SOCIAL_LOGIN_EVENTS.FAQ_QUESTION_EXPAND,
-                    //   label: `${item.slug}`,
-                    // })
                   }}
                 >
                   <Typography variant="h4">
