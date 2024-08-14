@@ -72,5 +72,11 @@
 .buttons {
   margin-top: 32px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+@media (min-width: 900px) {
+  .buttons {
+    justify-content: center;
+  }
 }
