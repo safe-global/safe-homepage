@@ -1,22 +1,17 @@
-import { ButtonBase, Typography } from '@mui/material'
+import { Typography } from '@mui/material'
 import RichText from '@/components/common/RichText'
 import ButtonsWrapper from '@/components/Token/ButtonsWrapper'
 import { isAsset, isEntryTypeButton, isEntryTypeExternalURL } from '@/lib/typeGuards'
 import { type BaseBlockEntry } from '@/config/types'
 import GithubIcon from '@/public/images/github-icon.svg'
 import css from './styles.module.css'
+import SafeLink from '@/components/common/SafeLink'
 
 const Card = (props: BaseBlockEntry) => {
   const { caption, title, text, link, image, buttons } = props.fields
 
-  const buttonBaseAttributes = {
-    disableRipple: true,
-    target: '_blank',
-    rel: 'noreferrer',
-  }
-
   const buttonsList = buttons?.filter(isEntryTypeButton) || []
-  const linkURL = isEntryTypeExternalURL(link) ? link.fields.url : undefined
+  const linkURL = isEntryTypeExternalURL(link) ? link.fields.url : ''
 
   return (
     <div className={css.card}>
@@ -25,9 +20,9 @@ const Card = (props: BaseBlockEntry) => {
           <RichText {...title} />
         </Typography>
 
-        <ButtonBase {...buttonBaseAttributes} aria-label="Github URL" href={linkURL}>
+        <SafeLink href={linkURL}>
           <GithubIcon />
-        </ButtonBase>
+        </SafeLink>
       </div>
 
       <div className={css.cardBody}>
