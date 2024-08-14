@@ -43,20 +43,21 @@ const Faq = (props: BaseBlockEntry) => {
                 [index]: expanded,
               }))
             }
+            const expanded = openMap?.[index] ?? false
 
             return (
               <Accordion
                 className={css.accordion}
-                expanded={openMap?.[index] ?? false}
+                expanded={expanded}
                 onChange={handleChange}
                 key={index}
                 disableGutters
                 square
               >
                 <AccordionSummary
-                  expandIcon={openMap?.[index] ? <MinusIcon /> : <PlusIcon />}
+                  expandIcon={expanded ? <MinusIcon /> : <PlusIcon />}
                   onClick={() => {
-                    !openMap?.[index]
+                    !expanded
                   }}
                 >
                   <Typography variant="h4">
