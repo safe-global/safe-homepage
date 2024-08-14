@@ -12,8 +12,8 @@ const Hero = (props: BaseBlockEntry) => {
 
   const buttonsList = buttons?.filter(isEntryTypeButton) || []
 
-  const imageURL = isAsset(image) && image?.fields.file?.url ? image?.fields.file?.url : ''
-  const bgImageURL = isAsset(bgImage) && bgImage?.fields.file?.url ? bgImage?.fields.file?.url : ''
+  const imageURL = isAsset(image) && image.fields.file?.url ? image.fields.file.url : ''
+  const bgImageURL = isAsset(bgImage) && bgImage.fields.file?.url ? bgImage.fields.file.url : ''
 
   return (
     <div className={css.bg} style={{ backgroundImage: `url(${bgImageURL})` }}>
