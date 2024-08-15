@@ -1,14 +1,13 @@
+const ROWS = 30
+const MOBILE_COLS = 15
+const DESKTOP_COLS = 60
+
 /**
  * Creates an array of dot coordinates based on given dimensions and device type.
  * @param dimensions - The width and height of the container.
  * @param isMobile - Boolean indicating if the device is mobile.
  * @returns An array of objects containing x and y coordinates for each dot.
  */
-
-const ROWS = 30
-const MOBILE_COLS = 15
-const DESKTOP_COLS = 60
-
 export const createDots = (dimensions: { width: number; height: number }, isMobile: boolean) => {
   const cols = isMobile ? MOBILE_COLS : DESKTOP_COLS
   const newDots = []

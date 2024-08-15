@@ -11,7 +11,6 @@ import { useIsMediumScreen } from '@/hooks/useMaxWidth'
  *          - Actual mouse position relative to the canvas (on desktop)
  *          - Simulated position based on scroll progress (on mobile)
  */
-
 export default function useMousePosition(
   canvasRef: React.RefObject<HTMLCanvasElement>,
   dimensions: { width: number; height: number },

@@ -18,8 +18,10 @@ const Content = ({
 }) => {
   const isMobile = useIsMediumScreen()
 
-  const opacityParams = [0.25, 0.35, 0.65, 0.75]
-  const opacity = useTransform(scrollYProgress, opacityParams, [0, 1, 1, 0])
+  const scrollParams = [0.25, 0.35, 0.65, 0.75]
+  const opacityParams = [0, 1, 1, 0]
+  const opacity = useTransform(scrollYProgress, scrollParams, opacityParams)
+
   return (
     <motion.div
       className={css.slidingPanelContent}

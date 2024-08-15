@@ -1,5 +1,5 @@
 import type { MotionValue } from 'framer-motion'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useCallback } from 'react'
 import { createDots } from './utils/createDots'
 import { drawDots } from './utils/drawDots'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
@@ -20,31 +20,41 @@ export default function DotGrid({
   const dimensions = useContainerSize(containerRef)
   const mousePosition = useMousePosition(canvasRef, dimensions, scrollYProgress)
 
-  useEffect(() => {
+  const prevRenderStateRef = useRef({ dimensions, mousePosition, isMobile })
+  const dotsRef = useRef<ReturnType<typeof createDots> | null>(null)
+  const animationFrameId = useRef<number>()
+
+  const renderFrame = useCallback(() => {
     const canvas = canvasRef.current
-    if (!canvas) return
+    const ctx = canvas?.getContext('2d')
+    if (!canvas || !ctx || dimensions.width <= 0 || dimensions.height <= 0) return
 
-    const ctx = canvas.getContext('2d')
-    if (!ctx) return
+    const currentRenderState = { dimensions, mousePosition, isMobile }
+    const prevRenderState = prevRenderStateRef.current
 
-    const dots = createDots(dimensions, isMobile)
-    updateCanvas(canvas, ctx, dimensions.width, dimensions.height)
-
-    let animationFrameId: number
-
-    const animate = () => {
-      if (dimensions.width > 0 && dimensions.height > 0) {
-        drawDots(ctx, dots, dimensions, mousePosition, isMobile)
-      }
-      animationFrameId = requestAnimationFrame(animate)
+    if (
+      !dotsRef.current ||
+      currentRenderState.dimensions !== prevRenderState.dimensions ||
+      currentRenderState.isMobile !== prevRenderState.isMobile
+    ) {
+      dotsRef.current = createDots(dimensions, isMobile)
+      updateCanvas(canvas, ctx, dimensions.width, dimensions.height)
     }
 
-    animate()
+    const isAnimationComplete = drawDots(ctx, dotsRef.current, dimensions, mousePosition, isMobile)
+    prevRenderStateRef.current = currentRenderState
 
-    return () => {
-      cancelAnimationFrame(animationFrameId)
+    if (!isAnimationComplete) {
+      animationFrameId.current = requestAnimationFrame(renderFrame)
     }
   }, [dimensions, mousePosition, isMobile])
+
+  useEffect(() => {
+    renderFrame()
+    return () => {
+      if (animationFrameId.current) cancelAnimationFrame(animationFrameId.current)
+    }
+  }, [renderFrame])
 
   return <canvas ref={canvasRef} className={css.canvasStyles} />
 }
