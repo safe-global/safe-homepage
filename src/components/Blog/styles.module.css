@@ -77,11 +77,13 @@
   font-weight: bold;
 }
 
-.content a {
+.postBody a,
+.contentsTable a {
   color: var(--mui-palette-primary-main);
 }
 
-.content a:hover {
+.postBody a:hover,
+.contentsTable a:hover {
   text-decoration: underline;
 }
 
