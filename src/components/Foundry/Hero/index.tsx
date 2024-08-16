@@ -3,8 +3,8 @@ import RichText from '@/components/common/RichText'
 import ButtonsWrapper from '@/components/Token/ButtonsWrapper'
 import { isAsset, isEntryTypeButton } from '@/lib/typeGuards'
 import { Container, Typography } from '@mui/material'
-import css from './styles.module.css'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
+import css from './styles.module.css'
 
 const Hero = (props: BaseBlockEntry) => {
   const isMediumScreen = useIsMediumScreen()
@@ -24,6 +24,8 @@ const Hero = (props: BaseBlockEntry) => {
         {/* Networks image does not show in smaller resolutions */}
         <div className={css.image} style={{ backgroundImage: `url(${!isMediumScreen ? imageURL : ''})` }}>
           <Container className={css.container}>
+            <img src="/images/safe-foundry-logo.png" alt="Safe Foundry logo" className={css.logo} />
+
             <div className={css.textBlock}>
               <Typography variant="h1" className={css.title}>
                 <RichText {...title} />

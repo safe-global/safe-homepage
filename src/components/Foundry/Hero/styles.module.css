@@ -18,6 +18,9 @@
 
 .container {
   margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .textBlock {
@@ -35,6 +38,11 @@
 .title p,
 .text p {
   margin: 0;
+}
+
+.logo {
+  height: 32px;
+  margin-bottom: 16px;
 }
 
 @media (min-width: 600px) {
@@ -94,6 +102,10 @@
   .text {
     text-align: center;
     max-width: 780px;
+  }
+
+  .logo {
+    height: 40px;
   }
 }
 

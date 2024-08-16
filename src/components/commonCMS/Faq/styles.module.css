@@ -49,3 +49,9 @@
 .details p:last-of-type {
   margin-bottom: 0;
 }
+
+@media (max-width: 600px) {
+  .spot {
+    width: 700px;
+  }
+}

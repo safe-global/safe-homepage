@@ -23,15 +23,15 @@ const POCs = (props: BaseBlockEntry) => {
         </div>
       )}
 
-      <Grid container columnSpacing={2} rowGap="30px" mt={{ xs: '40px', md: '80px' }} className={css.gridContainer}>
+      <Grid container columnSpacing={2} rowGap="30px" className={css.gridContainer}>
         {itemsList.map((item, index) => (
-          <Grid key={index} item xs={12} md={5} height="100%">
+          <Grid key={index} item xs={12} md={5}>
             <Card key={item.fields.caption} {...item} />
           </Grid>
         ))}
       </Grid>
 
-      <Typography mt="80px">{caption}</Typography>
+      <Typography className={css.caption}>{caption}</Typography>
     </Container>
   )
 }

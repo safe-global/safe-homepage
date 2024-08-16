@@ -2,11 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .text {
   margin: 16px auto 0;
   max-width: 725px;
+  text-align: center;
 }
 
 .title p,
@@ -14,11 +16,13 @@
   margin: 0;
 }
 
-.gridContainer {
-  justify-content: center;
+.caption {
+  margin-top: 80px;
+  text-align: center;
 }
 
-.buttons {
+.gridContainer {
+  justify-content: center;
   margin-top: 40px;
 }
 
@@ -36,7 +40,8 @@
 
 .cardHeader p,
 .cardBody p {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: auto;
 }
 
 .cardHeader svg {
@@ -49,10 +54,6 @@
   border: 1px solid var(--mui-palette-border-light);
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
-}
-
-.cardBody > p {
-  height: 84px;
 }
 
 .cardBody a {
@@ -86,5 +87,21 @@
 @media (min-width: 900px) {
   .buttons {
     justify-content: center;
+  }
+
+  .gridContainer {
+    margin-top: 80px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .cardBody {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
   }
 }
