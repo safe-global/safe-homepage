@@ -32,10 +32,7 @@
   text-align: center;
 }
 
-.title p {
-  margin: 0;
-}
-
+.title p,
 .text p {
   margin: 0;
 }
@@ -92,6 +89,11 @@
     width: 1px;
     background: linear-gradient(270deg, rgba(18, 19, 18, 0.1) 0%, rgba(18, 19, 18, 0) 100%);
     right: 0px;
+  }
+
+  .text {
+    text-align: center;
+    max-width: 780px;
   }
 }
 

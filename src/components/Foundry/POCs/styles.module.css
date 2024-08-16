@@ -51,6 +51,15 @@
   border-bottom-right-radius: 16px;
 }
 
+.cardBody > p {
+  height: 84px;
+}
+
+.cardBody a {
+  text-decoration: underline;
+  color: var(--mui-palette-primary-main);
+}
+
 .extraText {
   margin-top: 24px;
 }
