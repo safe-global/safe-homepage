@@ -39,14 +39,16 @@ export default function DotGrid({
     ) {
       dotsRef.current = createDots(dimensions, isMobile)
       updateCanvas(canvas, ctx, dimensions.width, dimensions.height)
+      // Draw dots immediately after creating or updating them
+      // This draw call ensure dots are already visible when canvas scrolls into view
+      drawDots(ctx, dotsRef.current, dimensions, mousePosition, isMobile)
+    } else if (currentRenderState.mousePosition !== prevRenderState.mousePosition) {
+      drawDots(ctx, dotsRef.current, dimensions, mousePosition, isMobile)
     }
 
-    const isAnimationComplete = drawDots(ctx, dotsRef.current, dimensions, mousePosition, isMobile)
     prevRenderStateRef.current = currentRenderState
 
-    if (!isAnimationComplete) {
-      animationFrameId.current = requestAnimationFrame(renderFrame)
-    }
+    animationFrameId.current = requestAnimationFrame(renderFrame)
   }, [dimensions, mousePosition, isMobile])
 
   useEffect(() => {

@@ -17,7 +17,7 @@ export const drawDots = (
   const maxScale = isMobile ? MOBILE_MAX_SCALE : DESKTOP_MAX_SCALE
   const updatedRadius = MAX_SCALE_DISTANCE * maxScale
 
-  // Clear only the previously updated area and the new updated area
+  // Clear the previously updated area
   if (lastUpdatedArea) {
     ctx.clearRect(
       lastUpdatedArea.x - lastUpdatedArea.radius,
@@ -26,6 +26,7 @@ export const drawDots = (
       lastUpdatedArea.radius * 2,
     )
   }
+  // Clear the new (to be updated) area
   ctx.clearRect(mousePosition.x - updatedRadius, mousePosition.y - updatedRadius, updatedRadius * 2, updatedRadius * 2)
 
   ctx.fillStyle = DOT_COLOR
