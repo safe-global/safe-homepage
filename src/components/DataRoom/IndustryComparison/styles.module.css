@@ -31,11 +31,6 @@
   margin-top: 72px;
 }
 
-.title {
-  z-index: 30;
-  pointer-events: none;
-}
-
 @media (max-width: 900px) {
   .slidingPanelContent {
     padding-left: 32px;

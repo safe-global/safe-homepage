@@ -29,9 +29,7 @@ const Content = ({
         opacity: isMobile ? 1 : opacity,
       }}
     >
-      <Typography className={css.title} variant="h1">
-        {title}
-      </Typography>
+      <Typography variant="h1">{title}</Typography>
       <DotGrid containerRef={containerRef} scrollYProgress={scrollYProgress} />
     </motion.div>
   )
