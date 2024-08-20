@@ -10,7 +10,6 @@ let lastUpdatedArea: { x: number; y: number; radius: number } | null = null
 export const drawDots = (
   ctx: CanvasRenderingContext2D,
   dots: Position[],
-  dimensions: { width: number; height: number },
   mousePosition: Position,
   isMobile: boolean,
 ) => {

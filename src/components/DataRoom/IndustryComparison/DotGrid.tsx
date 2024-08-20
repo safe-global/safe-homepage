@@ -41,9 +41,9 @@ export default function DotGrid({
       updateCanvas(canvas, ctx, dimensions.width, dimensions.height)
       // Draw dots immediately after creating or updating them
       // This draw call ensure dots are already visible when canvas scrolls into view
-      drawDots(ctx, dotsRef.current, dimensions, mousePosition, isMobile)
+      drawDots(ctx, dotsRef.current, mousePosition, isMobile)
     } else if (currentRenderState.mousePosition !== prevRenderState.mousePosition) {
-      drawDots(ctx, dotsRef.current, dimensions, mousePosition, isMobile)
+      drawDots(ctx, dotsRef.current, mousePosition, isMobile)
     }
 
     prevRenderStateRef.current = currentRenderState
