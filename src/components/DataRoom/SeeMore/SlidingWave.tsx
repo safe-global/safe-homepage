@@ -20,10 +20,8 @@ export default function SlidingWave({
   const translate = useTransform(scrollYProgress, [0, 0.2, 0.55, 0.75], ['-250px', '0px', '0px', '250px'])
 
   return (
-    <>
-      <motion.div style={{ opacity: textOpacity, translateY: translate }} className={css.text}>
-        <Typography variant="h1">{text}</Typography>
-      </motion.div>
-    </>
+    <motion.div style={{ opacity: textOpacity, translateY: translate }} className={css.text}>
+      <Typography variant="h1">{text}</Typography>
+    </motion.div>
   )
 }
