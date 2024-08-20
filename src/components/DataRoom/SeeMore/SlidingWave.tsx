@@ -30,13 +30,7 @@ export default function SlidingWave({
       </motion.div>
       <div className={css.gradientBox}></div>
       <motion.div style={{ opacity }} className={css.wave}>
-        <Wave color="#12FF80" amplitude={isMobile ? 100 : 200} />
-      </motion.div>
-      <motion.div style={{ opacity }} className={css.wave}>
-        <Wave color="#008A40" amplitude={isMobile ? 90 : 170} />
-      </motion.div>
-      <motion.div style={{ opacity }} className={css.wave}>
-        <Wave color="#003C1C" amplitude={isMobile ? 80 : 140} />
+        <Wave colors={['#003C1C', '#008A40', '#12FF80']} amplitude={isMobile ? 100 : 200} />
       </motion.div>
     </>
   )

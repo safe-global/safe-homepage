@@ -38,18 +38,7 @@
   width: 100%;
   transform: translateY(-50%);
   right: 0;
-  --wave-index: 30;
-  z-index: calc(var(--wave-index) - (var(--n) * 10));
-}
-
-.wave:nth-child(1) {
-  --n: 0;
-}
-.wave:nth-child(2) {
-  --n: 1;
-}
-.wave:nth-child(3) {
-  --n: 2;
+  z-index: 30;
 }
 
 @media (max-width: 900px) {
