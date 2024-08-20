@@ -1,0 +1,20 @@
+.sectionContainer {
+  height: 200vh;
+}
+
+.stickyContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+@media (max-width: 900px) {
+  .text {
+    padding: 60px;
+    text-align: center;
+  }
+}
