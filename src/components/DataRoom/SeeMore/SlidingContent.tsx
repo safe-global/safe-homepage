@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion'
 import type { RefObject } from 'react'
 import css from './styles.module.css'
 
-export default function SlidingWave({
+export default function SlidingContent({
   text,
   containerRef,
 }: {
