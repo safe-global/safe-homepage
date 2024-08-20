@@ -4,7 +4,6 @@ import { Typography } from '@mui/material'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import type { RefObject } from 'react'
 import css from './styles.module.css'
-import Wave from './Wave'
 
 export default function SlidingWave({
   text,
@@ -28,16 +27,9 @@ export default function SlidingWave({
       <motion.div style={{ opacity: textOpacity, translateY: translate }} className={css.text}>
         <Typography variant="h1">{text}</Typography>
       </motion.div>
-      <div className={css.gradientBox}></div>
-      <motion.div style={{ opacity }} className={css.wave}>
-        <Wave color="#12FF80" amplitude={isMobile ? 100 : 200} />
-      </motion.div>
-      <motion.div style={{ opacity }} className={css.wave}>
-        <Wave color="#008A40" amplitude={isMobile ? 90 : 170} />
-      </motion.div>
-      <motion.div style={{ opacity }} className={css.wave}>
-        <Wave color="#003C1C" amplitude={isMobile ? 80 : 140} />
-      </motion.div>
+      {
+        //Moved the wave animation to PR #441
+      }
     </>
   )
 }
