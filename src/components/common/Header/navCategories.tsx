@@ -12,6 +12,7 @@ import CareersIcon from '@/public/images/Header/careers-icon.svg'
 import PressRoomIcon from '@/public/images/Header/press-room-icon.svg'
 import HelpCenterIcon from '@/public/images/Header/help-center-icon.svg'
 import GasStationIcon from '@/public/images/Header/gas-station-icon.svg'
+import SafeFoundryIcon from '@/public/images/Header/safe-foundry-icon.svg'
 
 export type NavItem = {
   label: string
@@ -65,6 +66,11 @@ export const navCategories: NavCategory[] = [
         label: 'Gas Station',
         href: AppRoutes.gasStation,
         icon: <GasStationIcon />,
+      },
+      {
+        label: 'Safe{Foundry}',
+        href: AppRoutes.foundry,
+        icon: <SafeFoundryIcon />,
       },
     ],
   },
