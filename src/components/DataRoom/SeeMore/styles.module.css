@@ -12,17 +12,9 @@
   top: 0;
 }
 
-.text {
-  z-index: 50;
-}
-
 @media (max-width: 900px) {
   .text {
     padding: 60px;
-    margin-top: 120px;
     text-align: center;
-  }
-  .stickyContainer {
-    justify-content: start;
   }
 }
