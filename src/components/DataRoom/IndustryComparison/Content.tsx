@@ -30,7 +30,7 @@ const Content = ({
       }}
     >
       <Typography variant="h1">{title}</Typography>
-      <DotGrid containerRef={containerRef} scrollYProgress={scrollYProgress} />
+      <DotGrid containerRef={containerRef} />
     </motion.div>
   )
 }
