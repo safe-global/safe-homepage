@@ -1,11 +1,10 @@
 import { type RefObject } from 'react'
 import { useScroll, useTransform, motion } from 'framer-motion'
-// import { Typography } from '@mui/material'
+import { Typography } from '@mui/material'
 import AsciiScene from './AsciiScene'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 import type { BaseBlock } from '@/components/Home/types'
 import css from './styles.module.css'
-import { Typography } from '@mui/material'
 
 type HeroAnimationProps = {
   containerRef: RefObject<HTMLDivElement>
