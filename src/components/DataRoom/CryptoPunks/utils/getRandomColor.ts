@@ -1,3 +1,5 @@
+export type CryptoPunkIconColor = '#12FF80' | '#12A154' | '#124228' | 'currentColor'
+
 /**
  * Generates a random color code based on predefined probabilities.
  *
@@ -10,12 +12,12 @@
  *
  * @returns {string} A string representing the color code or 'currentColor'.
  */
-export function getRandomColor() {
+export function getRandomColor(): CryptoPunkIconColor {
   const chance = Math.random()
 
-  if (chance <= 0.24) return '#12FF80' // Green (14% CHANCE)
   if (chance <= 0.17) return '#12A154' // Dark Green (3% CHANCE)
   if (chance <= 0.2) return '#124228' // Darker Green (3% CHANCE)
+  if (chance <= 0.24) return '#12FF80' // Green (14% CHANCE)
 
   return 'currentColor'
 }
