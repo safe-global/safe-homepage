@@ -1,5 +1,5 @@
 import type { BaseBlock } from '@/components/Home/types'
-import { useScroll, useTransform } from 'framer-motion'
+import { useTransform } from 'framer-motion'
 import css from './styles.module.css'
 import type { RefObject } from 'react'
 import { motion } from 'framer-motion'
@@ -11,6 +11,7 @@ import { formatDate } from '@/lib/formatDate'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 import { formatValue } from '@/lib/formatValue'
 import useContainerSize from '@/hooks/useContainerSize'
+import useScrollProgress from '@/hooks/useScrollProgress'
 
 const LAST_UPDATED_FALLBACK = 1722946836.34
 const MOBILE_VIEWPORT_FRACTION = 0.8
@@ -26,10 +27,7 @@ export default function SlidingContent({
   const { width: viewportWidth } = useContainerSize(containerRef)
 
   const isMobile = useIsMediumScreen()
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start end', 'end start'],
-  })
+  const { scrollYProgress } = useScrollProgress(containerRef)
 
   // Create a mapping object for TVL values
   const tvlMapping: Record<string, number | null> = {

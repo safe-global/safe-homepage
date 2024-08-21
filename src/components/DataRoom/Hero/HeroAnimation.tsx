@@ -1,8 +1,9 @@
 import { type RefObject } from 'react'
-import { useScroll, useTransform, motion } from 'framer-motion'
+import { useTransform, motion } from 'framer-motion'
 import { Typography } from '@mui/material'
 import AsciiScene from './AsciiScene'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
+import useScrollProgress from '@/hooks/useScrollProgress'
 import type { BaseBlock } from '@/components/Home/types'
 import css from './styles.module.css'
 
@@ -13,10 +14,7 @@ type HeroAnimationProps = {
 }
 
 const HeroAnimation = ({ containerRef, title, text }: HeroAnimationProps) => {
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start end', 'end start'],
-  })
+  const { scrollYProgress } = useScrollProgress(containerRef)
 
   const isMobile = useIsMediumScreen()
   const mapYProgress = useTransform(scrollYProgress, [0.25, 0.75], [0.5, 1])

@@ -1,7 +1,8 @@
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, useTransform } from 'framer-motion'
 import MatterCanvas from './MatterCanvas'
 import { type RefObject } from 'react'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
+import useScrollProgress from '@/hooks/useScrollProgress'
 import { type BaseBlock } from '@/components/Home/types'
 import css from './styles.module.css'
 
@@ -12,10 +13,7 @@ type SlidingMatterCanvasProps = {
 
 const SlidingMatterCanvas = ({ containerRef, image }: SlidingMatterCanvasProps) => {
   const isMobile = useIsMediumScreen()
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start end', 'end start'],
-  })
+  const { scrollYProgress } = useScrollProgress(containerRef)
 
   const mapYProgress = useTransform(scrollYProgress, [0.25, 0.75], [0, 1])
   const transformParams = isMobile ? ['0%', '0%'] : ['0%', '100%']

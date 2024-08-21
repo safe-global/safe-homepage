@@ -1,18 +1,15 @@
-import type { BaseBlock } from '@/components/Home/types'
-import { Typography } from '@mui/material'
-import { motion, useScroll, useTransform } from 'framer-motion'
-import DotGrid from './DotGrid'
-import css from './styles.module.css'
-import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 import type { RefObject } from 'react'
+import { Typography } from '@mui/material'
+import { motion, useTransform } from 'framer-motion'
+import DotGrid from './DotGrid'
+import { useIsMediumScreen } from '@/hooks/useMaxWidth'
+import useScrollProgress from '@/hooks/useScrollProgress'
+import type { BaseBlock } from '@/components/Home/types'
+import css from './styles.module.css'
 
 const Content = ({ containerRef, title }: { containerRef: RefObject<HTMLDivElement>; title: BaseBlock['title'] }) => {
   const isMobile = useIsMediumScreen()
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start end', 'end start'],
-  })
+  const { scrollYProgress } = useScrollProgress(containerRef)
 
   const scrollParams = [0.25, 0.35, 0.65, 0.75]
   const opacityParams = [0, 1, 1, 0]

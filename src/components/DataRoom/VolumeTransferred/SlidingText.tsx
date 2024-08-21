@@ -1,19 +1,16 @@
 import { type RefObject } from 'react'
-import { useScroll, useTransform, motion } from 'framer-motion'
+import { useTransform, motion } from 'framer-motion'
+import { Typography } from '@mui/material'
 import { useSafeDataRoomStats } from '@/hooks/useSafeDataRoomStats'
+import useScrollProgress from '@/hooks/useScrollProgress'
 import { formatCurrency } from '@/lib/formatCurrency'
 import css from './styles.module.css'
-import { Typography } from '@mui/material'
 
 const VOLUME_TRANSFERRED_FALLBACK = 611_127_712_666
 
 const SlidingText = ({ containerRef }: { containerRef: RefObject<HTMLDivElement> }) => {
   const { totalVolumeTransfered } = useSafeDataRoomStats()
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start end', 'end start'],
-  })
+  const { scrollYProgress } = useScrollProgress(containerRef)
 
   const transformLTR = useTransform(scrollYProgress, [0.25, 0.75], ['-100%', '120%'])
   const transformRTL = useTransform(scrollYProgress, [0.25, 0.75], ['120%', '-140%'])
