@@ -1,6 +1,6 @@
-import { useEffect, useState, type RefObject } from 'react'
+import { type RefObject } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { type CryptoPunkIconColor, getRandomColor } from '@/components/DataRoom/CryptoPunks/utils/getRandomColor'
+import { getRandomColor } from '@/components/DataRoom/CryptoPunks/utils/getRandomColor'
 import CryptoPunk from '@/public/images/DataRoom/cryptopunk-silhouette.svg'
 import css from './styles.module.css'
 
@@ -8,8 +8,6 @@ const CRYPTOPUNK_ROWS_NR = 8
 const CRYPTOPUNK_COLUMNS_NR = 24
 
 const PunksGrid = ({ containerRef, isMobile }: { containerRef: RefObject<HTMLDivElement>; isMobile: boolean }) => {
-  const [gridColors, setGridColors] = useState<Array<CryptoPunkIconColor>>([])
-
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start end', 'end start'],
@@ -21,11 +19,6 @@ const PunksGrid = ({ containerRef, isMobile }: { containerRef: RefObject<HTMLDiv
   const translateRTL = useTransform(scrollYProgress, translateParams, ['0%', '-50%'])
 
   const translateDirection = (index: number) => (index % 2 === 1 ? translateLTR : translateRTL)
-
-  // The color randomization should occurs only on client side
-  useEffect(() => {
-    setGridColors(Array.from({ length: CRYPTOPUNK_ROWS_NR * CRYPTOPUNK_COLUMNS_NR }).map(getRandomColor))
-  }, [])
 
   return (
     <motion.div
@@ -50,7 +43,7 @@ const PunksGrid = ({ containerRef, isMobile }: { containerRef: RefObject<HTMLDiv
               }}
               style={{
                 transformOrigin: 'center',
-                color: gridColors[outerIndex * CRYPTOPUNK_COLUMNS_NR + innerIndex],
+                color: getRandomColor(),
               }}
             >
               <CryptoPunk className={css.cryptopunk} />

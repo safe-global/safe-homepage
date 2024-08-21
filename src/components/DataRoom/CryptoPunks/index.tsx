@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic'
 import { useRef } from 'react'
 import css from './styles.module.css'
 
-const PunksGrid = dynamic(() => import('./PunksGrid'))
+const PunksGrid = dynamic(() => import('./PunksGrid'), { ssr: false })
 const Content = dynamic(() => import('./Content'))
 const SlidingPanel = dynamic(() => import('@/components/common/SlidingPanel'))
 
