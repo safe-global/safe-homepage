@@ -1,4 +1,4 @@
-import { Badge, ButtonBase, Container, Divider, Grid, Typography } from '@mui/material'
+import { Badge, ButtonBase, Container, Divider, Grid, SvgIcon, Typography } from '@mui/material'
 import type { ComponentType, SyntheticEvent } from 'react'
 
 import { AppRoutes } from '@/config/routes'
@@ -26,6 +26,7 @@ import {
 import { useCookieBannerContext } from '@/contexts/CookieBannerContext'
 import Logo from '@/public/images/logo.svg'
 import { useOpenPositions } from '@/hooks/useOpenPositions'
+import packageJson from 'package.json'
 
 const COOKIE_PREFERENCES = '#cookies'
 
@@ -276,6 +277,14 @@ const Footer = () => {
                 </li>
               )
             })}
+
+            {/* Package version */}
+            <li className={css.subListItem}>
+              <a href={`${packageJson.homepage}/releases/tag/v${packageJson.version}`} target="_blank" rel="noreferrer">
+                <SvgIcon component={GithubIcon} inheritViewBox fontSize="inherit" sx={{ mr: 0.5 }} />v
+                {packageJson.version}
+              </a>
+            </li>
           </ul>
         </Grid>
 
