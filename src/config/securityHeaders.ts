@@ -5,7 +5,7 @@ export const ContentSecurityPolicy = `
  connect-src 'self' https://api.ashbyhq.com/posting-api/job-board/safe.global/ https://ecosystem-database.staging.5afe.dev/data.json https://hub.snapshot.org/graphql https://cdn.contentful.com/spaces/1i5gc724wjeu/ https://metrics.hotjar.io/;
  script-src 'self' ${
    IS_PRODUCTION ? '' : "'unsafe-eval'"
- } 'unsafe-inline' https://static.hotjar.com/c/hotjar-3603830.js https://www.googletagmanager.com;
+ } 'unsafe-inline' https://script.hotjar.com https://static.hotjar.com https://www.googletagmanager.com;
  style-src 'self' 'unsafe-inline';
  font-src 'self';
  object-src 'none';
