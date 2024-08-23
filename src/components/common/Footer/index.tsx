@@ -30,16 +30,24 @@ import packageJson from 'package.json'
 
 const COOKIE_PREFERENCES = '#cookies'
 
-const safeProtocolItems = [
+const developersItems = [
   {
     label: 'Safe{Core}',
     href: AppRoutes.core,
   },
   {
-    label: 'Docs',
+    label: 'Documentation',
     href: DOCS_LINK,
     target: '_blank',
     rel: 'noreferrer',
+  },
+  {
+    label: 'Gas station',
+    href: AppRoutes.gasStation,
+  },
+  {
+    label: 'Safe{Foundry}',
+    href: AppRoutes.foundry,
   },
 ]
 
@@ -79,22 +87,22 @@ const communityItems = [
 
 const resourcesItems = [
   {
-    label: 'Help Center',
-    href: HELP_LINK,
-    target: '_blank',
-    rel: 'noreferrer',
+    label: 'Careers',
+    href: AppRoutes.careers,
   },
   {
     label: 'Press Room',
     href: AppRoutes.press,
   },
   {
-    label: 'Careers',
-    href: AppRoutes.careers,
-  },
-  {
     label: 'Brand Kit',
     href: PRESS_LINK,
+    target: '_blank',
+    rel: 'noreferrer',
+  },
+  {
+    label: 'Help Center',
+    href: HELP_LINK,
     target: '_blank',
     rel: 'noreferrer',
   },
@@ -175,7 +183,7 @@ const Footer = () => {
             Developers
           </Typography>
           <ul className={css.list}>
-            {safeProtocolItems.map((item) => (
+            {developersItems.map((item) => (
               <li className={css.listItem} key={item.href}>
                 <Link href={item.href} target="_blank" rel="noreferrer">
                   {item.label}
