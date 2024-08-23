@@ -9,7 +9,7 @@ import { IS_PRODUCTION } from '@/config/constants'
  */
 export const ContentSecurityPolicy = `
  default-src 'self';
- connect-src 'self' https://api.ashbyhq.com/posting-api/job-board/safe.global/ https://ecosystem-database.staging.5afe.dev/data.json https://hub.snapshot.org/graphql https://cdn.contentful.com/spaces/1i5gc724wjeu/ https://metrics.hotjar.io/;
+ connect-src 'self' https://api.ashbyhq.com/posting-api/job-board/safe.global/ https://ecosystem-database.staging.5afe.dev/data.json https://hub.snapshot.org/graphql https://cdn.contentful.com/spaces/1i5gc724wjeu/ https://metrics.hotjar.io/ https://content.hotjar.io/ wss://ws.hotjar.com;
  script-src 'self' ${
    IS_PRODUCTION ? '' : "'unsafe-eval'"
  } 'unsafe-inline' https://script.hotjar.com https://static.hotjar.com https://www.googletagmanager.com;
