@@ -69,7 +69,8 @@
   }
 
   .subList {
-    gap: 32px;
+    column-gap: 32px;
+    row-gap: 0;
   }
 
   .subListItem {

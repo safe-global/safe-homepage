@@ -264,9 +264,9 @@ const Footer = () => {
         </Grid>
       </Grid>
 
-      <Divider sx={{ mt: 5, mb: { xs: 3, md: 0 } }} />
+      <Divider sx={{ mt: 5 }} />
 
-      <Grid container alignItems="center" justifyContent="space-between" gap="8px">
+      <Grid container alignItems="center" justifyContent="space-between">
         <Grid item>
           <ul className={css.subList}>
             {subFooterItems.map((item) => {
@@ -289,7 +289,7 @@ const Footer = () => {
             {/* Package version */}
             <li className={css.subListItem}>
               <a href={`${packageJson.homepage}/releases/tag/v${packageJson.version}`} target="_blank" rel="noreferrer">
-                <SvgIcon component={GithubIcon} inheritViewBox fontSize="inherit" sx={{ mr: 0.5 }} />v
+                <SvgIcon component={GithubIcon} inheritViewBox fontSize="inherit" sx={{ mr: 1 }} />v
                 {packageJson.version}
               </a>
             </li>
