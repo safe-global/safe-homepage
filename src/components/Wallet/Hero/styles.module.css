@@ -1,0 +1,100 @@
+.bg {
+  background-position-x: center;
+  background-repeat: no-repeat;
+  overflow: visible;
+  background-size: cover;
+  position: relative;
+}
+
+.container {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: visible;
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.caption {
+  background: linear-gradient(260.13deg, #12ff80 1.24%, #5fddff 102.14%);
+  background-clip: text;
+  color: transparent;
+}
+
+.title,
+.text {
+  max-width: 1170px;
+  text-align: center;
+}
+
+.title p,
+.text p {
+  margin: 0;
+}
+
+.logosWrapper {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.logosWrapper img {
+  height: 42px;
+}
+
+.video {
+  border-radius: 8px;
+  width: 90%;
+}
+
+.watchDemo {
+  margin-top: 50px;
+}
+
+.videoContainer {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 600px) {
+  .spot1 {
+    position: absolute;
+    left: -300px;
+    top: -150px;
+    z-index: -1;
+    width: 1000px;
+    height: 1000px;
+    background-image: radial-gradient(at top left, rgba(18, 255, 128, 0.4) 0%, rgba(246, 247, 248, 0) 80%);
+    filter: blur(70px);
+  }
+
+  .spot2 {
+    position: absolute;
+    z-index: -1;
+    right: 0px;
+    top: -100px;
+    width: 1000px;
+    height: 1200px;
+    background-image: radial-gradient(at right, rgba(41, 182, 246, 0.3) 0%, rgba(246, 247, 248, 0) 80%);
+    filter: blur(50px);
+  }
+
+  .logosWrapper {
+    flex-direction: row;
+  }
+
+  .video {
+    width: 70%;
+  }
+}
