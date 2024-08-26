@@ -8,11 +8,12 @@ import css from './styles.module.css'
 
 const Hero = (props: BaseBlockEntry) => {
   const isMediumScreen = useIsMediumScreen()
-  const { caption, title, text, buttons, items, bgImage } = props.fields
+  const { caption, title, text, buttons, items, image, bgImage } = props.fields
 
   const buttonsList = buttons?.filter(isEntryTypeButton) || []
   const itemsList = items?.filter(isEntryTypeBaseBlock) ?? []
 
+  const imageURL = isAsset(image) && image.fields.file?.url ? image.fields.file.url : ''
   const bgImageURL = isAsset(bgImage) && bgImage.fields.file?.url ? bgImage.fields.file.url : ''
 
   return (
@@ -44,7 +45,13 @@ const Hero = (props: BaseBlockEntry) => {
         {/* Networks image does not show in smaller resolutions */}
         <div className={css.bg} style={{ backgroundImage: `url(${!isMediumScreen ? bgImageURL : ''})` }}>
           <div className={css.videoContainer}>
-            <video controls className={css.video}>
+            <div className={css.playButton}>
+              <img src="/images/Wallet/play-button.png" alt="Play button" />
+
+              <Typography color>Watch demo</Typography>
+            </div>
+
+            <video controls poster={imageURL} className={css.video}>
               <source src="/videos/Wallet/wallet-hero-video.mp4" type="video/mp4" />
             </video>
           </div>

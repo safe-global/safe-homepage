@@ -67,6 +67,20 @@
   justify-content: center;
 }
 
+.playButton {
+  position: absolute;
+  top: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.playButton img {
+  width: 64px;
+}
+
 @media (min-width: 600px) {
   .spot1 {
     position: absolute;
