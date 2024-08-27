@@ -60,6 +60,7 @@
 
 .watchDemo {
   margin-top: 50px;
+  position: relative;
 }
 
 .videoContainer {
@@ -120,5 +121,15 @@
 
   .video {
     width: 70%;
+  }
+
+  .gradient {
+    position: absolute;
+    height: 70%;
+    width: 70%;
+    bottom: 0;
+    left: 15%;
+    background: linear-gradient(180deg, rgba(18, 19, 18, 0) 0%, var(--mui-palette-background-default) 100%);
+    z-index: 1;
   }
 }

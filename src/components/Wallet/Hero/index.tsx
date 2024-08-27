@@ -62,11 +62,13 @@ const Hero = (props: BaseBlockEntry) => {
               <Typography>Watch demo</Typography>
             </div>
 
-            <video ref={videoRef} controls poster={imageURL} className={css.video}>
+            <video ref={videoRef} controls={isPlaying} poster={imageURL} className={css.video}>
               <source src="/videos/Wallet/wallet-hero-video.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
+
+        {!isPlaying && <div className={css.gradient} />}
       </div>
 
       <Container className={css.container}>
