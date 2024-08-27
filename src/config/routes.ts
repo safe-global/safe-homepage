@@ -1,6 +1,6 @@
 export const AppRoutes = {
   '404': '/404',
-  wallet: '/wallet',
+  wallet: '/wallet-new',
   trademark: '/trademark',
   token: '/token',
   terms: '/terms',
