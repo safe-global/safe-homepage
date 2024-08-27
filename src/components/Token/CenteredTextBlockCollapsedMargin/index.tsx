@@ -1,13 +1,11 @@
-import CenteredTextBlock from '@/components/Token/CenteredTextBlock'
-import { type BaseBlockEntry } from '@/config/types'
 import { Box } from '@mui/material'
+import CenteredTextBlock from '@/components/commonCMS/CenteredTextBlock'
+import { type BaseBlockEntry } from '@/config/types'
 
-const CenteredTextBlockCollapsedMargin = (props: BaseBlockEntry) => {
-  return (
-    <Box mt="-250px">
-      <CenteredTextBlock {...props} />
-    </Box>
-  )
-}
+const CenteredTextBlockCollapsedMargin = (props: BaseBlockEntry) => (
+  <Box mt="-250px">
+    <CenteredTextBlock {...props} />
+  </Box>
+)
 
 export default CenteredTextBlockCollapsedMargin
