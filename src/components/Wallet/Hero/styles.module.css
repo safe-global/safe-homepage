@@ -69,6 +69,7 @@
 
 .playButton {
   position: absolute;
+  z-index: 10;
   top: 200px;
   display: flex;
   flex-direction: column;
@@ -79,6 +80,15 @@
 
 .playButton img {
   width: 64px;
+}
+
+.playButton img:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.playButton.hidden {
+  display: none;
 }
 
 @media (min-width: 600px) {

@@ -1,4 +1,5 @@
-import { Container, Typography } from '@mui/material'
+import { useRef, useState } from 'react'
+import { ButtonBase, Container, Typography } from '@mui/material'
 import { type BaseBlockEntry } from '@/config/types'
 import RichText from '@/components/common/RichText'
 import ButtonsWrapper from '@/components/Token/ButtonsWrapper'
@@ -8,13 +9,21 @@ import css from './styles.module.css'
 
 const Hero = (props: BaseBlockEntry) => {
   const isMediumScreen = useIsMediumScreen()
+  const [isPlaying, setIsPlaying] = useState(false)
+  const videoRef = useRef<HTMLVideoElement>(null)
+
   const { caption, title, text, buttons, items, image, bgImage } = props.fields
 
-  const buttonsList = buttons?.filter(isEntryTypeButton) || []
+  const buttonsList = buttons?.filter(isEntryTypeButton) ?? []
   const itemsList = items?.filter(isEntryTypeBaseBlock) ?? []
 
   const imageURL = isAsset(image) && image.fields.file?.url ? image.fields.file.url : ''
   const bgImageURL = isAsset(bgImage) && bgImage.fields.file?.url ? bgImage.fields.file.url : ''
+
+  const playVideo = () => {
+    videoRef.current?.play()
+    setIsPlaying(true)
+  }
 
   return (
     <>
@@ -45,13 +54,15 @@ const Hero = (props: BaseBlockEntry) => {
         {/* Networks image does not show in smaller resolutions */}
         <div className={css.bg} style={{ backgroundImage: `url(${!isMediumScreen ? bgImageURL : ''})` }}>
           <div className={css.videoContainer}>
-            <div className={css.playButton}>
-              <img src="/images/Wallet/play-button.png" alt="Play button" />
+            <div className={`${css.playButton} ${isPlaying ? css.hidden : ''}`}>
+              <ButtonBase onClick={playVideo}>
+                <img src="/images/Wallet/play-button.png" alt="Play button" />
+              </ButtonBase>
 
-              <Typography color>Watch demo</Typography>
+              <Typography>Watch demo</Typography>
             </div>
 
-            <video controls poster={imageURL} className={css.video}>
+            <video ref={videoRef} controls poster={imageURL} className={css.video}>
               <source src="/videos/Wallet/wallet-hero-video.mp4" type="video/mp4" />
             </video>
           </div>
