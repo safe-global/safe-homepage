@@ -7,7 +7,7 @@ import GithubIcon from '@/public/images/github-icon.svg'
 import css from './styles.module.css'
 
 const Card = (props: BaseBlockEntry) => {
-  const { caption, title, text, link, image, buttons } = props.fields
+  const { caption, title, text, image, buttons } = props.fields
 
   const buttonsList = buttons?.filter(isEntryTypeButton) || []
 
