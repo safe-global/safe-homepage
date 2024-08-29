@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
 import { ButtonBase, Container, Grid, Typography } from '@mui/material'
 import RichText from '@/components/common/RichText'
-import { isAsset, isEntryTypeBaseBlock } from '@/lib/typeGuards'
+import { isEntryTypeBaseBlock } from '@/lib/typeGuards'
 import type { BaseBlockEntry } from '@/config/types'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
+import { extractContentfulImageProps } from '@/lib/contentful/extractContentfulImageProps'
 
 const VerticalSlide = (props: BaseBlockEntry) => {
   const [selectedIndex, setSelectedIndex] = useState(0)
@@ -27,6 +28,8 @@ const VerticalSlide = (props: BaseBlockEntry) => {
     return () => clearInterval(interval) // Cleanup interval on component unmount
   }, [itemsList.length])
 
+  const imageProps = extractContentfulImageProps(itemsImages[selectedIndex])
+
   return (
     <Container className={layoutCss.containerShort}>
       <div className={css.title}>
@@ -36,12 +39,7 @@ const VerticalSlide = (props: BaseBlockEntry) => {
       <Grid container spacing="40px" justifyContent="flex-end">
         <Grid item md={7} className={css.imageItem}>
           <div className={css.imageWrapper}>
-            {isAsset(itemsImages[selectedIndex]) && itemsImages[selectedIndex].fields.file?.url ? (
-              <img
-                src={itemsImages[selectedIndex].fields.file.url}
-                alt={itemsImages[selectedIndex].fields.title ?? ''}
-              />
-            ) : null}
+            {imageProps ? <img src={imageProps.src} alt={imageProps.alt} /> : null}
           </div>
         </Grid>
 
