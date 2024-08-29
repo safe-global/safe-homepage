@@ -1,14 +1,31 @@
+import { useEffect, useState } from 'react'
 import { ButtonBase, Container, Grid, Typography } from '@mui/material'
 import RichText from '@/components/common/RichText'
-import { isEntryTypeBaseBlock } from '@/lib/typeGuards'
+import { isAsset, isEntryTypeBaseBlock } from '@/lib/typeGuards'
 import type { BaseBlockEntry } from '@/config/types'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 
 const VerticalSlide = (props: BaseBlockEntry) => {
+  const [selectedIndex, setSelectedIndex] = useState(0)
+
   const { title, items } = props.fields
 
   const itemsList = items?.filter(isEntryTypeBaseBlock) ?? []
+  const itemsImages = itemsList.map((item) => item.fields.image)
+
+  const handleCardClick = (index: number) => {
+    setSelectedIndex(index)
+  }
+
+  // Change index every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSelectedIndex((prevIndex) => (prevIndex + 1) % itemsList.length)
+    }, 5000)
+
+    return () => clearInterval(interval) // Cleanup interval on component unmount
+  }, [itemsList.length])
 
   return (
     <Container className={layoutCss.containerShort}>
@@ -16,27 +33,44 @@ const VerticalSlide = (props: BaseBlockEntry) => {
         <RichText {...title} />
       </div>
 
-      <Grid container justifyContent="flex-end">
-        <Grid item xs={5} className={css.cardWrapper}>
-          {itemsList.map((item, index) => {
-            const { title, text } = item.fields
+      <Grid container spacing="40px" justifyContent="flex-end">
+        <Grid item md={7} className={css.imageItem}>
+          <div className={css.imageWrapper}>
+            {isAsset(itemsImages[selectedIndex]) && itemsImages[selectedIndex].fields.file?.url ? (
+              <img
+                src={itemsImages[selectedIndex].fields.file.url}
+                alt={itemsImages[selectedIndex].fields.title ?? ''}
+              />
+            ) : null}
+          </div>
+        </Grid>
 
-            return (
-              <Grid item key={index} xs={12}>
-                <ButtonBase onClick={() => console.log('change')} disableRipple className={css.card}>
-                  <Typography variant="h5">
-                    <RichText {...title} />
-                  </Typography>
+        <Grid item xs={12} md={5}>
+          <div className={css.cardWrapper}>
+            {itemsList.map((item, index) => {
+              const { title, text } = item.fields
 
-                  {text && (
-                    <Typography color="primary.light" component="div">
-                      <RichText {...text} />
+              return (
+                <Grid item key={index} xs={12}>
+                  <ButtonBase
+                    onClick={() => handleCardClick(index)}
+                    disableRipple
+                    className={`${css.card} ${index === selectedIndex ? css.selected : ''}`}
+                  >
+                    <Typography variant="h5">
+                      <RichText {...title} />
                     </Typography>
-                  )}
-                </ButtonBase>
-              </Grid>
-            )
-          })}
+
+                    {text && (
+                      <Typography color="primary.light" component="div">
+                        <RichText {...text} />
+                      </Typography>
+                    )}
+                  </ButtonBase>
+                </Grid>
+              )
+            })}
+          </div>
         </Grid>
       </Grid>
     </Container>
