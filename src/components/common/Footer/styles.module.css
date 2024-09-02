@@ -40,6 +40,12 @@
   color: var(--mui-palette-primary-light);
 }
 
+.subListItemContent {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
 .socials {
   display: flex;
   flex-wrap: wrap;

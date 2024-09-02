@@ -289,8 +289,9 @@ const Footer = () => {
             {/* Package version */}
             <li className={css.subListItem}>
               <a href={`${packageJson.homepage}/releases/tag/v${packageJson.version}`} target="_blank" rel="noreferrer">
-                <SvgIcon component={GithubIcon} inheritViewBox fontSize="inherit" sx={{ mr: 1 }} />v
-                {packageJson.version}
+                <div className={css.subListItemContent}>
+                  <SvgIcon component={GithubIcon} inheritViewBox fontSize="inherit" />v{packageJson.version}
+                </div>
               </a>
             </li>
           </ul>
