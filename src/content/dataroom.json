@@ -52,6 +52,25 @@
     }
   },
   {
+    "component": "DataRoom/FeesEarned",
+    "title": "Safe{Wallet} annualized<br/><b>fees earned</b>",
+    "fees": [
+      {
+        "label": "SWAPS",
+        "isLocked": false,
+        "feeAmount": 2438440.737804
+      },
+      {
+        "label": "STAKING",
+        "isLocked": true
+      },
+      {
+        "label": "FUTURE FEES",
+        "isLocked": true
+      }
+    ]
+  },
+  {
     "component": "DataRoom/TransactionsOnChain",
     "text": "<b>transactions on chain</b> originate from a <b>Safe Account</b>",
     "link": {

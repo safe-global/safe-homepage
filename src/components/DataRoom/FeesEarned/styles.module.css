@@ -1,0 +1,64 @@
+.sectionContainer {
+  height: 100vh;
+  display: flex;
+}
+
+.stickyContainer {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.feeContainer {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  margin-top: 32px;
+}
+
+.fee {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.feeAmount {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-grow: 1;
+}
+
+.barsContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+}
+
+.bar {
+  height: 36px;
+  width: 100%;
+  margin-bottom: 5px;
+  transform: scaleY(-1);
+  border: 2px solid var(--mui-palette-primary-main);
+}
+
+.lockedBar {
+  height: 36px;
+  width: 100%;
+  margin-bottom: 5px;
+  transform: scaleY(-1);
+  border: 2px solid var(--mui-palette-border-main);
+}
+
+.fill {
+  background-color: var(--mui-palette-primary-main);
+  height: 100%;
+}
