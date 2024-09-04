@@ -1,5 +1,5 @@
 .sectionContainer {
-  height: 100vh;
+  height: 200vh;
   display: flex;
 }
 
@@ -11,6 +11,9 @@
   display: flex;
   flex-direction: column;
   align-items: end;
+  justify-content: center;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 .feeContainer {
@@ -40,6 +43,7 @@
   display: flex;
   flex-direction: column-reverse;
   width: 100%;
+  position: relative;
 }
 
 .bar {
@@ -58,7 +62,37 @@
   border: 2px solid var(--mui-palette-border-main);
 }
 
+.lock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .fill {
   background-color: var(--mui-palette-primary-main);
   height: 100%;
+}
+
+@media (max-width: 900px) {
+  .stickyContainer {
+    padding-top: 80px;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .feeContainer {
+    justify-content: start;
+    width: 300%;
+    overflow: hidden;
+    gap: 32px;
+    padding: 16px;
+  }
+
+  .fee {
+    width: 100%;
+  }
 }

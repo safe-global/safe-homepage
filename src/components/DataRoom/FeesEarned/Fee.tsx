@@ -11,19 +11,12 @@ export type FeeType = {
 
 const Fee = ({ totalBars, feeAmount, isLocked, label }: FeeType & { totalBars: number }) => {
   const fillAmount = feeAmount / 1000000
-  // const targetScrollRef = useRef<HTMLDivElement>(null)
-  // const { scrollYProgress } = useScroll({
-  //   target: targetScrollRef,
-  //   offset: ['start end', 'end start'],
-  // })
-
-  // const value = useCounterScroll(scrollYProgress, fillAmount)
 
   const containerVariants = {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.3,
+        staggerChildren: 0.5,
       },
     },
   }
@@ -32,7 +25,7 @@ const Fee = ({ totalBars, feeAmount, isLocked, label }: FeeType & { totalBars: n
     hidden: { height: 0 },
     visible: (custom: number) => ({
       height: `${Math.min(100, (fillAmount - custom) * 100)}%`,
-      transition: { duration: 0.3, ease: 'easeOut' },
+      transition: { duration: 0.5, ease: 'easeOut' },
     }),
   }
 
@@ -44,10 +37,9 @@ const Fee = ({ totalBars, feeAmount, isLocked, label }: FeeType & { totalBars: n
             Coming Soon
           </Typography>
         ) : (
-          <Typography variant="h2">
+          <Typography variant="h1">
             <b>{'$' + formatValue(feeAmount)}</b>
           </Typography>
-          // <Counter value={value} />
         )}
       </div>
       <motion.div
@@ -62,6 +54,11 @@ const Fee = ({ totalBars, feeAmount, isLocked, label }: FeeType & { totalBars: n
             {!isLocked && <motion.div className={css.fill} variants={barVariants} custom={index} />}
           </div>
         ))}
+        {isLocked && (
+          <div className={css.lock}>
+            <img src="/images/DataRoom/lock-icon.png" alt="Lock" width={60} height={60} />
+          </div>
+        )}
       </motion.div>
       <Typography variant="h5">{label}</Typography>
     </div>

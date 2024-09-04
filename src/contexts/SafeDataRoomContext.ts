@@ -11,6 +11,7 @@ type SafeDataRoomStats = {
   tvlOKX: number | null
   tvlBinance: number | null
   lastUpdated: number | null
+  annualSwapFees: number | null
 }
 
 const SafeDataRoomContext = createContext<SafeDataRoomStats>({
@@ -24,6 +25,7 @@ const SafeDataRoomContext = createContext<SafeDataRoomStats>({
   tvlOKX: null,
   tvlBinance: null,
   lastUpdated: null,
+  annualSwapFees: null,
 })
 
 export default SafeDataRoomContext

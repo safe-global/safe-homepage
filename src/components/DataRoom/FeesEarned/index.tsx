@@ -2,20 +2,23 @@ import { Typography } from '@mui/material'
 import { type BaseBlock } from '@/components/Home/types'
 import css from './styles.module.css'
 import type { FeeType } from './Fee'
-import Fee from './Fee'
+import dynamic from 'next/dynamic'
+import { useRef } from 'react'
+import { useIsMediumScreen } from '@/hooks/useMaxWidth'
+
+const SlidingContent = dynamic(() => import('./SlidingContext'))
 
 const FeesEarned = ({ title, fees }: BaseBlock & { fees: FeeType[] }) => {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const isMobile = useIsMediumScreen()
+
   return (
-    <div className={css.sectionContainer}>
+    <div ref={containerRef} className={css.sectionContainer}>
       <div className={css.stickyContainer}>
-        <Typography variant="h2" align="right">
+        <Typography variant="h2" align={isMobile ? 'center' : 'right'}>
           {title}
         </Typography>
-        <div className={css.feeContainer}>
-          {fees.map((fee, index) => (
-            <Fee key={index} totalBars={10} feeAmount={fee.feeAmount || 0} isLocked={fee.isLocked} label={fee.label} />
-          ))}
-        </div>
+        <SlidingContent fees={fees} containerRef={containerRef} />
       </div>
     </div>
   )
