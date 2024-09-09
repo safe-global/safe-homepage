@@ -23,7 +23,7 @@ const SlidingContent = ({ fees, containerRef }: { fees: FeeType[]; containerRef:
     offset: ['start end', 'end start'],
   })
 
-  const transformLTR = useTransform(scrollYProgress, [0.35, 0.65], ['66.66%', '0%'])
+  const transformLTR = useTransform(scrollYProgress, [0.35, 0.65], ['33.33%', '-33.33%'])
   const displaySwapFees = annualSwapFees ? annualSwapFees : ANNUAL_SWAP_FEES_FALLBACK
   const feesMap = [displaySwapFees]
 

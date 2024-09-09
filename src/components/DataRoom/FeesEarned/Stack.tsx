@@ -40,7 +40,7 @@ const Stack = ({ totalBars, value, isLocked, label }: StackProps) => {
     <div className={css.fee}>
       <div className={css.feeAmount}>
         {isLocked ? (
-          <Typography variant="h5" color="#686868">
+          <Typography variant="h5" color="text.disabled">
             Coming Soon
           </Typography>
         ) : (
@@ -63,7 +63,7 @@ const Stack = ({ totalBars, value, isLocked, label }: StackProps) => {
         ))}
         {isLocked && (
           <div className={css.lock}>
-            <img src="/images/DataRoom/lock-icon.png" alt="Lock" width={60} height={60} />
+            <img src="/images/DataRoom/lock-icon.png" alt="Lock" className={css.lockImage} />
           </div>
         )}
       </motion.div>
