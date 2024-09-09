@@ -1,22 +1,23 @@
+import { type RefObject } from 'react'
 import { Typography } from '@mui/material'
-import type { BaseBlock } from '@/components/Home/types'
-import type { MotionValue } from 'framer-motion'
-import { motion, useTransform } from 'framer-motion'
-import dynamic from 'next/dynamic'
+import { motion, useScroll, useTransform } from 'framer-motion'
 import LinksWrapper from '../LinksWrapper'
-import css from './styles.module.css'
 import { useSafeDataRoomStats } from '@/hooks/useSafeDataRoomStats'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
-
-const PunksGrid = dynamic(() => import('./PunksGrid'))
-const SlidingPanel = dynamic(() => import('@/components/common/SlidingPanel'))
+import type { BaseBlock } from '@/components/Home/types'
+import css from './styles.module.css'
 
 const CRYPTOPUNKS_TOTAL = 10000
 const CRYPTOPUNKS_PERCENTAGE_STORED_FALLBACK = 0.092
 
-const Content = ({ scrollYProgress, title, text, link }: BaseBlock & { scrollYProgress: MotionValue<number> }) => {
+const Content = ({ containerRef, title, text, link }: BaseBlock & { containerRef: RefObject<HTMLDivElement> }) => {
   const { cryptoPunksStoredPercentage } = useSafeDataRoomStats()
   const isMobile = useIsMediumScreen()
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ['start end', 'end start'],
+  })
 
   const opacityParams = isMobile ? [0.4, 0.45, 0.65, 0.66] : [0.25, 0.35, 0.65, 0.7]
   const opacity = useTransform(scrollYProgress, opacityParams, [0, 1, 1, 0])

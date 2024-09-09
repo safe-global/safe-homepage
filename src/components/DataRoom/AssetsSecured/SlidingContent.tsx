@@ -8,9 +8,9 @@ import { Cex, type CEX } from './Cex'
 import { useSafeDataRoomStats } from '@/hooks/useSafeDataRoomStats'
 import { getNormalizationFactor } from './utils/getNormalizationFactor'
 import { formatDate } from '@/lib/formatDate'
-import useViewportWidth from '@/hooks/useViewportWidth'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 import { formatValue } from '@/lib/formatValue'
+import useContainerSize from '@/hooks/useContainerSize'
 
 const LAST_UPDATED_FALLBACK = 1722946836.34
 const MOBILE_VIEWPORT_FRACTION = 0.8
@@ -23,7 +23,8 @@ export default function SlidingContent({
   containerRef,
 }: Omit<BaseBlock, 'text'> & { cexes: CEX[]; containerRef: RefObject<HTMLDivElement> }) {
   const { tvlRobinhoodCEX, tvlOKX, tvlBinance, tvlSafe, lastUpdated } = useSafeDataRoomStats()
-  const { viewportWidth } = useViewportWidth()
+  const { width: viewportWidth } = useContainerSize(containerRef)
+
   const isMobile = useIsMediumScreen()
   const { scrollYProgress } = useScroll({
     target: containerRef,
