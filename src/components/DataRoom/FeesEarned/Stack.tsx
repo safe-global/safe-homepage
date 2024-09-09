@@ -9,8 +9,12 @@ export type StackProps = FeeType & {
   totalBars: number
 }
 
+const PER_BAR_AMOUNT = 1000000
+
 const Stack = ({ totalBars, value, isLocked, label }: StackProps) => {
-  const fillAmount = value / 1000000
+  // fillAmount represents how many bars will be filled
+  // based on the ratio of the current value to the PER_BAR_AMOUNT ($1M)
+  const fillAmount = value / PER_BAR_AMOUNT
 
   const containerVariants = {
     hidden: {},
@@ -24,6 +28,9 @@ const Stack = ({ totalBars, value, isLocked, label }: StackProps) => {
   const barVariants = {
     hidden: { height: 0 },
     visible: (custom: number) => ({
+      // Calculate the height percentage for each bar, capped at 100%
+      // 'custom' represents the index of the current bar
+      // subtracting it from fillAmount gives the correct fill level for each bar
       height: `${Math.min(100, (fillAmount - custom) * 100)}%`,
       transition: { duration: 0.5, ease: 'easeOut' },
     }),
