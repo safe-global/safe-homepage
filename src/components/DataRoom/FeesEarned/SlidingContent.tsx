@@ -3,7 +3,8 @@ import { useSafeDataRoomStats } from '@/hooks/useSafeDataRoomStats'
 import dynamic from 'next/dynamic'
 import type { RefObject } from 'react'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
-import { useScroll, motion, useTransform } from 'framer-motion'
+import { motion, useTransform } from 'framer-motion'
+import useScrollProgress from '@/hooks/useScrollProgress'
 
 const Stack = dynamic(() => import('./Stack'))
 
@@ -18,10 +19,8 @@ const TOTAL_BARS = 10
 const SlidingContent = ({ fees, containerRef }: { fees: FeeType[]; containerRef: RefObject<HTMLDivElement> }) => {
   const { annualSwapFees } = useSafeDataRoomStats()
   const isMobile = useIsMediumScreen()
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start end', 'end start'],
-  })
+
+  const { scrollYProgress } = useScrollProgress(containerRef)
 
   const transformLTR = useTransform(scrollYProgress, [0.35, 0.65], ['33.33%', '-33.33%'])
   const displaySwapFees = annualSwapFees ? annualSwapFees : ANNUAL_SWAP_FEES_FALLBACK
