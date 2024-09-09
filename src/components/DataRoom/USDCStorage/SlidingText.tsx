@@ -1,11 +1,12 @@
-import { Typography } from '@mui/material'
-import { motion, useScroll, useTransform } from 'framer-motion'
 import { type RefObject } from 'react'
-import { useIsMediumScreen } from '@/hooks/useMaxWidth'
-import { type BaseBlock } from '@/components/Home/types'
+import { Typography } from '@mui/material'
+import { motion, useTransform } from 'framer-motion'
 import MotionTypography from '@/components/common/MotionTypography'
-import { useSafeDataRoomStats } from '@/hooks/useSafeDataRoomStats'
 import LinksWrapper from '../LinksWrapper'
+import { useIsMediumScreen } from '@/hooks/useMaxWidth'
+import { useSafeDataRoomStats } from '@/hooks/useSafeDataRoomStats'
+import useScrollProgress from '@/hooks/useScrollProgress'
+import { type BaseBlock } from '@/components/Home/types'
 import css from './styles.module.css'
 
 const USDC_PERCENTAGE_STORED_FALLBACK = 0.0867
@@ -21,10 +22,7 @@ const SlidingText = ({ containerRef, title, text, link }: SlidingTextProps) => {
   const { usdcPercentageStored } = useSafeDataRoomStats()
 
   const isMobile = useIsMediumScreen()
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start end', 'end start'],
-  })
+  const { scrollYProgress } = useScrollProgress(containerRef)
   const mapYProgress = useTransform(scrollYProgress, [0.25, 0.75], [0, 1])
   const transformParams = isMobile ? ['0%', '0%'] : ['0%', '-100%']
 

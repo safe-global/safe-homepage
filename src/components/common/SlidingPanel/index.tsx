@@ -1,5 +1,6 @@
 import type { ReactNode, RefObject } from 'react'
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, useTransform } from 'framer-motion'
+import useScrollProgress from '@/hooks/useScrollProgress'
 import css from './styles.module.css'
 
 const SlidingPanel = ({
@@ -15,11 +16,7 @@ const SlidingPanel = ({
   translateParams: string[]
   panelWidth?: string
 }) => {
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start end', 'end start'],
-  })
-
+  const { scrollYProgress } = useScrollProgress(containerRef)
   const bgTranslate = useTransform(scrollYProgress, scrollParams, translateParams)
 
   return (
