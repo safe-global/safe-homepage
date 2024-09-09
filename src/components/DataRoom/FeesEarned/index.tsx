@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic'
 import { useRef } from 'react'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 
-const SlidingContent = dynamic(() => import('./SlidingContext'))
+const SlidingContent = dynamic(() => import('./SlidingContent'))
 
 const FeesEarned = ({ title, fees }: BaseBlock & { fees: FeeType[] }) => {
   const containerRef = useRef<HTMLDivElement>(null)
