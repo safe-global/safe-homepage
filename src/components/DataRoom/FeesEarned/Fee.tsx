@@ -6,10 +6,9 @@ import { formatValue } from '@/lib/formatValue'
 export type FeeType = {
   label: string
   isLocked: boolean
-  feeAmount: number
 }
 
-const Fee = ({ totalBars, feeAmount, isLocked, label }: FeeType & { totalBars: number }) => {
+const Fee = ({ totalBars, feeAmount, isLocked, label }: FeeType & { feeAmount: number; totalBars: number }) => {
   const fillAmount = feeAmount / 1000000
 
   const containerVariants = {

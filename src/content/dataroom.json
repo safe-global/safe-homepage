@@ -57,8 +57,7 @@
     "fees": [
       {
         "label": "SWAPS",
-        "isLocked": false,
-        "feeAmount": 2438440.737804
+        "isLocked": false
       },
       {
         "label": "STAKING",
