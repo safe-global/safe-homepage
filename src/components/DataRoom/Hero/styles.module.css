@@ -21,6 +21,19 @@
   margin: auto;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 48px;
+  z-index: 20;
+}
+
+.text {
+  width: 70%;
+  margin: auto;
+}
+
 .scroll {
   margin: -10px auto 0;
   text-align: center;
@@ -39,26 +52,12 @@
   margin: auto;
 }
 
-.content {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  margin-bottom: 48px;
-  z-index: 20;
-}
-
 .asciiContainer {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.text {
-  width: 70%;
-  margin: auto;
 }
 
 @media (max-width: 900px) {

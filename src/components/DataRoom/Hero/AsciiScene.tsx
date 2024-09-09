@@ -8,6 +8,7 @@ import { Canvas } from '@react-three/fiber'
 
 const AsciiScene = ({ yPosition, zoomLevel }: { yPosition: MotionValue<number>; zoomLevel: MotionValue<number> }) => {
   const isMobile = useIsMediumScreen()
+
   return (
     <Canvas orthographic camera={{ position: [0, 0, 10], zoom: isMobile ? 70 : 80 }}>
       {/* CameraController manages camera position and zoom based on scroll and device type */}
