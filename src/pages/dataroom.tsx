@@ -22,6 +22,7 @@ export async function getStaticProps() {
     cex_tvl_okx,
     cex_tvl_binance,
     last_updated,
+    annual_swap_fees,
   } = dataRoomStats
 
   return {
@@ -38,6 +39,7 @@ export async function getStaticProps() {
         tvlOKX: Number(cex_tvl_okx),
         tvlBinance: Number(cex_tvl_binance),
         lastUpdated: Number(last_updated),
+        annualSwapFees: Number(annual_swap_fees),
       },
     },
   }

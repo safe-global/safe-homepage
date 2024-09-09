@@ -22,6 +22,7 @@ type DuneDataRoomStats = {
   tvl_perc_world_gdp: number
   usdc_in_safes: number
   last_updated: number
+  annual_swap_fees: number
 }
 
 const QUERY_ID_DATAROOM_STATS = 3864414

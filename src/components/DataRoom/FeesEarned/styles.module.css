@@ -1,0 +1,104 @@
+.sectionContainer {
+  height: 200vh;
+  display: flex;
+}
+
+.stickyContainer {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.feeContainer {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  margin-top: 32px;
+}
+
+.fee {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.feeAmount {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-grow: 1;
+}
+
+.barsContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  position: relative;
+}
+
+.bar {
+  height: 36px;
+  width: 100%;
+  margin-bottom: 5px;
+  transform: scaleY(-1);
+  border: 2px solid var(--mui-palette-primary-main);
+}
+
+.lockedBar {
+  height: 36px;
+  width: 100%;
+  margin-bottom: 5px;
+  transform: scaleY(-1);
+  border: 2px solid var(--mui-palette-border-main);
+}
+
+.lock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.lock img {
+  width: 60px;
+  height: 60px;
+}
+
+.fill {
+  background-color: var(--mui-palette-primary-main);
+  height: 100%;
+}
+
+@media (max-width: 900px) {
+  .stickyContainer {
+    padding-top: 80px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .feeContainer {
+    justify-content: flex-start;
+    width: 300%;
+    overflow: hidden;
+    gap: 32px;
+    padding: 16px;
+  }
+
+  .fee {
+    width: 100%;
+  }
+}
