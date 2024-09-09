@@ -21,6 +21,7 @@ const Stack = ({ totalBars, value, isLocked, label }: StackProps) => {
     visible: {
       transition: {
         staggerChildren: 0.5,
+        delayChildren: 1,
       },
     },
   }
