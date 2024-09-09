@@ -18,6 +18,7 @@ const FeesEarned = ({ title, fees }: BaseBlock & { fees: FeeType[] }) => {
         <Typography variant="h2" align={isMobile ? 'center' : 'right'}>
           {title}
         </Typography>
+
         <SlidingContent fees={fees} containerRef={containerRef} />
       </div>
     </div>

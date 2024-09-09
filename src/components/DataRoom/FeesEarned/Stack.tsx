@@ -9,12 +9,11 @@ export type StackProps = FeeType & {
   totalBars: number
 }
 
-const PER_BAR_AMOUNT = 1000000
+// TODO: decide how to normalize the fee values to show growth potential
+const VALUE_PER_BAR = 1_000_000
 
 const Stack = ({ totalBars, value, isLocked, label }: StackProps) => {
-  // fillAmount represents how many bars will be filled
-  // based on the ratio of the current value to the PER_BAR_AMOUNT ($1M)
-  const fillAmount = value / PER_BAR_AMOUNT
+  const filledBars = value / VALUE_PER_BAR
 
   const containerVariants = {
     hidden: {},
@@ -31,8 +30,8 @@ const Stack = ({ totalBars, value, isLocked, label }: StackProps) => {
     visible: (custom: number) => ({
       // Calculate the height percentage for each bar, capped at 100%
       // 'custom' represents the index of the current bar
-      // subtracting it from fillAmount gives the correct fill level for each bar
-      height: `${Math.min(100, (fillAmount - custom) * 100)}%`,
+      // subtracting it from filledBars gives the correct fill level for each bar
+      height: `${Math.min(100, (filledBars - custom) * 100)}%`,
       transition: { duration: 0.5, ease: 'easeOut' },
     }),
   }
@@ -50,6 +49,7 @@ const Stack = ({ totalBars, value, isLocked, label }: StackProps) => {
           </Typography>
         )}
       </div>
+
       <motion.div
         className={css.barsContainer}
         variants={containerVariants}
@@ -62,12 +62,14 @@ const Stack = ({ totalBars, value, isLocked, label }: StackProps) => {
             {!isLocked && <motion.div className={css.fill} variants={barVariants} custom={index} />}
           </div>
         ))}
+
         {isLocked && (
           <div className={css.lock}>
-            <img src="/images/DataRoom/lock-icon.png" alt="Lock" className={css.lockImage} />
+            <img src="/images/DataRoom/lock-icon.png" alt="Lock" />
           </div>
         )}
       </motion.div>
+
       <Typography variant="h5">{label}</Typography>
     </div>
   )
