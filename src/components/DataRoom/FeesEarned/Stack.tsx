@@ -2,14 +2,15 @@ import { motion } from 'framer-motion'
 import css from './styles.module.css'
 import { Typography } from '@mui/material'
 import { formatValue } from '@/lib/formatValue'
+import type { FeeType } from './SlidingContent'
 
-export type FeeType = {
-  label: string
-  isLocked: boolean
+export type StackProps = FeeType & {
+  value: number
+  totalBars: number
 }
 
-const Fee = ({ totalBars, feeAmount, isLocked, label }: FeeType & { feeAmount: number; totalBars: number }) => {
-  const fillAmount = feeAmount / 1000000
+const Stack = ({ totalBars, value, isLocked, label }: StackProps) => {
+  const fillAmount = value / 1000000
 
   const containerVariants = {
     hidden: {},
@@ -37,7 +38,7 @@ const Fee = ({ totalBars, feeAmount, isLocked, label }: FeeType & { feeAmount: n
           </Typography>
         ) : (
           <Typography variant="h1">
-            <b>{'$' + formatValue(feeAmount)}</b>
+            <b>{'$' + formatValue(value)}</b>
           </Typography>
         )}
       </div>
@@ -64,4 +65,4 @@ const Fee = ({ totalBars, feeAmount, isLocked, label }: FeeType & { feeAmount: n
   )
 }
 
-export default Fee
+export default Stack

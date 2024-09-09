@@ -1,10 +1,10 @@
 import { Typography } from '@mui/material'
 import { type BaseBlock } from '@/components/Home/types'
 import css from './styles.module.css'
-import type { FeeType } from './Fee'
 import dynamic from 'next/dynamic'
 import { useRef } from 'react'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
+import type { FeeType } from './SlidingContent'
 
 const SlidingContent = dynamic(() => import('./SlidingContent'))
 
