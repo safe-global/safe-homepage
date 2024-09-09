@@ -8,7 +8,16 @@
   {
     "component": "DataRoom/Hero",
     "title": "Welcome to Safe Data Room",
-    "text": "Explore Mind Bending Sats from Safe Universe"
+    "text": "Explore Mind Bending Stats from Safe Universe"
+  },
+  {
+    "component": "DataRoom/WorldGDP",
+    "title": "<b><em>Safe</em> TVL</b> is",
+    "text": "Some text thats changing<br/>Confirming the sources of the data<br/>Any other info regarding the stats",
+    "link": {
+      "title": "Dune dashboard",
+      "href": "https://dune.com/queries/3710102/6242478"
+    }
   },
   {
     "component": "DataRoom/USDCStorage",
@@ -35,11 +44,28 @@
   {
     "component": "DataRoom/VolumeTransferred",
     "title": "with all time volume<br/>transferred",
-    "text": "and counting...",
     "link": {
       "title": "Dune dashboard",
       "href": "https://dune.com/safe/all"
     }
+  },
+  {
+    "component": "DataRoom/FeesEarned",
+    "title": "Safe{Wallet} annualized<br/><b>fees earned</b>",
+    "fees": [
+      {
+        "label": "SWAPS",
+        "isLocked": false
+      },
+      {
+        "label": "STAKING",
+        "isLocked": true
+      },
+      {
+        "label": "FUTURE FEES",
+        "isLocked": true
+      }
+    ]
   },
   {
     "component": "DataRoom/TransactionsOnChain",
@@ -48,6 +74,38 @@
       "title": "Dune",
       "href": "https://dune.com/queries/3737066"
     }
+  },
+  {
+    "component": "DataRoom/IndustryComparison",
+    "title": "How we compare<br/>to others industry leaders"
+  },
+  {
+    "component": "DataRoom/AssetsSecured",
+    "caption": "CEX",
+    "cexes": [
+      {
+        "name": "Robinhood CEX",
+        "tvl": 11884403168.737804
+      },
+      {
+        "name": "OKX",
+        "tvl": 17505106456.55226
+      },
+      {
+        "name": "Safe",
+        "tvl": 62468973126.503235,
+        "boxColor": "main"
+      },
+      {
+        "name": "Binance",
+        "tvl": 100360813869.09479
+      }
+    ],
+    "title": "Safe has more <b>assets secured</b> <br/>than many Fintechs and CEXes"
+  },
+  {
+    "component": "DataRoom/SeeMore",
+    "text": "Want to see more?"
   },
   {
     "component": "DataRoom/ExternalLinksGrid",

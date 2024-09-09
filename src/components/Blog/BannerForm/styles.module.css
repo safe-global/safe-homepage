@@ -12,6 +12,7 @@
 
 .container iframe {
   border: 0;
+  position: relative;
   z-index: 1000;
   width: 100%;
 }

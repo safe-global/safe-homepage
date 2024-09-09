@@ -11,6 +11,7 @@ export const AppRoutes = {
   imprint: '/imprint',
   governance: '/governance',
   gasStation: '/gas-station',
+  foundry: '/foundry',
   ecosystem: '/ecosystem',
   disclaimer: '/disclaimer',
   dataroom: '/dataroom',

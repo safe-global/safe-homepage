@@ -1,0 +1,31 @@
+.slidingPanelContainer {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  color: var(--mui-palette-text-dark);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding-top: 64px;
+}
+
+.slidingPanelBG {
+  position: absolute;
+  inset: 0;
+  background-color: var(--mui-palette-primary-main);
+  z-index: 10;
+  margin-top: 72px;
+}
+
+@media (max-width: 900px) {
+  .slidingPanelContainer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .slidingPanelBG {
+    margin-top: 0px;
+  }
+}
