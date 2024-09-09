@@ -13,7 +13,7 @@
   {
     "component": "DataRoom/WorldGDP",
     "title": "<b><em>Safe</em> TVL</b> is",
-    "text": "Some text thats changing<br/>Confirming the sources of the data<br/>Any other info regarding the stats",
+    "text": "Secure, as a significant component of global crypto activity within the world’s GDP.",
     "link": {
       "title": "Dune dashboard",
       "href": "https://dune.com/queries/3710102/6242478"
@@ -35,7 +35,7 @@
   {
     "component": "DataRoom/CryptoPunks",
     "title": "CryptoPunks",
-    "text": "Some text thats changing<br/>Confirming the sources of the data<br/>Any other info regarding the stats",
+    "text": "Safe has proven to be one of the most reliable storage solutions for protecting and managing your NFTs.",
     "link": {
       "title": "Dune dashboard",
       "href": "https://dune.com/safe/ethereum-nfts"
