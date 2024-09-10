@@ -1,46 +1,42 @@
 import { motion, type MotionValue, useSpring, useTransform } from 'framer-motion'
 import { useEffect } from 'react'
-import { calculateYPosition } from '@/components/DataRoom/TransactionsOnChain/utils/calculateYPosition'
-import { useIsMediumScreen } from '@/hooks/useMaxWidth'
-import css from './styles.module.css'
 
-type CounterProps = {
-  value: number
-}
-
-type DigitProps = {
-  place: number
-  value: number
-}
-
-type NumberProps = {
-  mv: MotionValue<number>
-  number: number
-}
-
-const DIGIT_HEIGHT_SM = 120
-const DIGIT_HEIGHT_MD = 215
-
-const Counter = ({ value }: CounterProps) => {
-  const integerPart = Math.floor(value)
-  const decimalPart = value % 1
-
+function Counter({ value }: { value: number }) {
   return (
-    <div className={css.counter}>
-      <Digit place={1} value={integerPart} />
-      <span className={css.counterSpan}>.</span>
-      <Digit place={0.1} value={decimalPart} />
-      <Digit place={0.01} value={decimalPart} />
-      <span className={css.counterSpan}>%</span>
+    <div
+      style={{
+        display: 'flex',
+        overflow: 'hidden',
+        lineHeight: 1,
+        color: 'white',
+      }}
+    >
+      <Digit place={1} value={value} />
+      <div style={{ position: 'relative', width: '0.5ch', fontVariantNumeric: 'tabular-nums', height: '1.25ch' }}>
+        <div
+          style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+        >
+          .
+        </div>
+      </div>
+      <Digit place={0.1} value={value} />
+      <Digit place={0.01} value={value} />
+      <div style={{ position: 'relative', width: '1.3ch', fontVariantNumeric: 'tabular-nums', height: '1.25ch' }}>
+        <div
+          style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+        >
+          %
+        </div>
+      </div>
     </div>
   )
 }
 
-const Digit = ({ place, value }: DigitProps) => {
-  const valueRoundedToPlace = Math.floor(value / place) % 10
-  const animatedValue = useSpring(valueRoundedToPlace, {
-    damping: 5,
-    stiffness: 15,
+function Digit({ place, value }: { place: number; value: number }) {
+  let valueRoundedToPlace = Math.floor(value / place) % 10
+  let animatedValue = useSpring(valueRoundedToPlace, {
+    stiffness: 50,
+    damping: 15,
   })
 
   useEffect(() => {
@@ -48,7 +44,7 @@ const Digit = ({ place, value }: DigitProps) => {
   }, [animatedValue, valueRoundedToPlace])
 
   return (
-    <div className={css.digit}>
+    <div style={{ position: 'relative', width: '0.8ch', fontVariantNumeric: 'tabular-nums', height: '1.25ch' }}>
       {Array.from({ length: 10 }, (_, i) => (
         <Number key={i} mv={animatedValue} number={i} />
       ))}
@@ -56,12 +52,24 @@ const Digit = ({ place, value }: DigitProps) => {
   )
 }
 
-const Number = ({ mv, number }: NumberProps) => {
-  const height = useIsMediumScreen() ? DIGIT_HEIGHT_SM : DIGIT_HEIGHT_MD
-  const yPosition = useTransform(mv, (latest: number) => calculateYPosition(latest, number, height))
+function Number({ mv, number }: { mv: MotionValue<number>; number: number }) {
+  let y = useTransform(mv, (latest) => {
+    let placeValue = latest % 10
+    let offset = (10 + number - placeValue) % 10
+
+    let memo = offset * 1.5 // Use 1.5em instead of fixed height
+
+    if (offset > 5) {
+      memo -= 10 * 1.5
+    }
+
+    return `${memo}em`
+  })
 
   return (
-    <motion.span style={{ y: yPosition }} className={css.number}>
+    <motion.span
+      style={{ y, position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+    >
       {number}
     </motion.span>
   )
