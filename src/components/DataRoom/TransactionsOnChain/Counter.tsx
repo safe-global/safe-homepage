@@ -1,32 +1,19 @@
 import { motion, type MotionValue, useSpring, useTransform } from 'framer-motion'
 import { useEffect } from 'react'
+import css from './styles.module.css'
+import { calculateYPosition } from './utils/calculateYPosition'
 
 function Counter({ value }: { value: number }) {
   return (
-    <div
-      style={{
-        display: 'flex',
-        overflow: 'hidden',
-        lineHeight: 1,
-        color: 'white',
-      }}
-    >
+    <div className={css.counter}>
       <Digit place={1} value={value} />
-      <div style={{ position: 'relative', width: '0.5ch', fontVariantNumeric: 'tabular-nums', height: '1.25ch' }}>
-        <div
-          style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-        >
-          .
-        </div>
+      <div className={css.dot}>
+        <div className={css.number}>.</div>
       </div>
       <Digit place={0.1} value={value} />
       <Digit place={0.01} value={value} />
-      <div style={{ position: 'relative', width: '1.3ch', fontVariantNumeric: 'tabular-nums', height: '1.25ch' }}>
-        <div
-          style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-        >
-          %
-        </div>
+      <div className={css.percentage}>
+        <div className={css.number}>%</div>
       </div>
     </div>
   )
@@ -44,7 +31,7 @@ function Digit({ place, value }: { place: number; value: number }) {
   }, [animatedValue, valueRoundedToPlace])
 
   return (
-    <div style={{ position: 'relative', width: '0.8ch', fontVariantNumeric: 'tabular-nums', height: '1.25ch' }}>
+    <div className={css.digit}>
       {Array.from({ length: 10 }, (_, i) => (
         <Number key={i} mv={animatedValue} number={i} />
       ))}
@@ -53,23 +40,10 @@ function Digit({ place, value }: { place: number; value: number }) {
 }
 
 function Number({ mv, number }: { mv: MotionValue<number>; number: number }) {
-  let y = useTransform(mv, (latest) => {
-    let placeValue = latest % 10
-    let offset = (10 + number - placeValue) % 10
-
-    let memo = offset * 1.5 // Use 1.5em instead of fixed height
-
-    if (offset > 5) {
-      memo -= 10 * 1.5
-    }
-
-    return `${memo}em`
-  })
+  let y = useTransform(mv, (latest) => calculateYPosition(latest, number))
 
   return (
-    <motion.span
-      style={{ y, position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
-    >
+    <motion.span style={{ y }} className={css.number}>
       {number}
     </motion.span>
   )

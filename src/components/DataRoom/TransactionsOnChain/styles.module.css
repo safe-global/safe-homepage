@@ -5,27 +5,27 @@
 .stickyContainer {
   height: 100vh;
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  justify-content: space-around;
   align-items: flex-start;
-  padding-left: 30px;
   position: sticky;
   padding-left: 15px;
   padding-right: 15px;
+  width: 100%;
+  gap: 60px;
   top: 0;
 }
 
 .content {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: flex-start;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
 }
 
 .linkContainer {
-  align-self: auto;
-  margin-top: 0;
-  margin-right: 0;
+  align-self: flex-end;
+  padding-left: 0px;
 }
 
 .counterContainer {
@@ -33,128 +33,109 @@
   font-size: 30px;
   font-weight: 400;
   display: flex;
+  overflow: visible;
   flex-direction: column;
   justify-content: flex-start;
   gap: 30px;
-}
-
-.box1 {
-  height: 50px;
-  overflow: hidden;
-}
-
-.box2 {
-  height: 70px;
-  overflow: hidden;
-}
-
-.digit {
-  font-variant-numeric: tabular-nums;
-  position: relative;
-  width: 0.8ch;
-  height: 120px;
-}
-
-.number {
-  position: absolute;
-  inset: 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 50%;
+  padding-top: 16px;
 }
 
 .counter {
   display: flex;
   overflow: hidden;
-  font-size: 120px;
+  line-height: 1;
+  justify-content: center;
 }
 
-.counterSpan {
-  margin-top: 44px;
+.text {
+  width: 50%;
+  font-size: 80px;
+  padding-left: 0px;
 }
 
-.counterNEW2 {
-  font-size: 100px;
+.digit {
+  position: relative;
+  width: 1ch;
+  font-variant-numeric: tabular-nums;
+  height: 1.25ch;
+}
+
+.dot {
+  position: relative;
+  width: 0.2ch;
+  font-variant-numeric: tabular-nums;
+  height: 1.25ch;
+}
+
+.percentage {
+  position: relative;
+  width: 1.25ch;
+  font-variant-numeric: tabular-nums;
+  height: 1.25ch;
+}
+
+.number {
+  width: fit-content;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counterPartial,
+.counterFull {
+  width: 100%;
+  font-size: 150px;
+}
+
+.counterPartial {
   height: 0.7ch;
   overflow: hidden;
 }
 
-.counterNEW3 {
-  font-size: 100px;
-}
-
-@media (min-width: 900px) {
-  .sectionContainer {
-    height: 150vh;
-  }
-
-  .digit {
-    width: 1ch;
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 60px;
   }
 
   .linkContainer {
-    align-self: flex-end;
-    margin-top: 80px;
-    /* margin-right: 80px; */
+    align-self: auto;
+    margin-top: 0;
+    margin-right: 0;
+    padding-left: 15px;
   }
 
   .counterContainer {
-    gap: 0;
-  }
-
-  .box1 {
-    height: 100px;
-  }
-
-  .box2 {
-    height: 150px;
-  }
-
-  .stickyContainer {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .counterContainer {
-    min-width: 40%;
-  }
-
-  .digit {
-    height: 215px;
+    width: 100%;
   }
 
   .counter {
-    font-size: 200px;
+    justify-content: flex-start;
   }
 
-  .counterSpan {
-    margin-top: 96px;
-  }
-
-  .counterNEW3 {
+  .text {
     width: 100%;
-    font-size: 150px;
+    font-size: 50px;
+    padding-left: 15px;
   }
 
-  .counterNEW2 {
-    width: 100%;
-    font-size: 150px;
+  .counterPartial,
+  .counterFull {
+    font-size: 120px;
   }
 }
 
-@media (min-width: 1100px) {
-  .counterNEW3 {
-    width: 100%;
+@media (min-width: 1150px) {
+  .counterPartial,
+  .counterFull {
     font-size: 200px;
   }
 
-  .counterNEW2 {
-    width: 100%;
-    font-size: 200px;
-  }
-
-  .content {
-    width: 50%;
+  .text {
+    font-size: 90px;
   }
 }

@@ -1,19 +1,23 @@
 /**
- * Calculates the Y position for individual digits in the counter animation
- * to create a smooth rolling effect from 0 to the targetNumber.
+ * Calculates the vertical position for a number in a rolling counter animation.
  *
- * @returns {number} The calculated Y position.
+ * @param {number} latest - The current value of the counter.
+ * @param {number} number - The number for which to calculate the position.
+ * @returns {string} The calculated vertical position as a CSS em value.
+ *
+ * This function determines the offset between the current counter value and the
+ * given number, then calculates an appropriate vertical position. The result
+ * is used to create a rolling number effect in the counter animation.
  */
-export function calculateYPosition(latest: number, targetNumber: number, digitHeight: number): number {
-  const currentDigit = latest % 10
-  const digitDifference = (10 + targetNumber - currentDigit) % 10
+export function calculateYPosition(latest: number, number: number): string {
+  let placeValue = latest % 10
+  let offset = (10 + number - placeValue) % 10
 
-  let yOffset = digitDifference * digitHeight
+  let memo = offset * 1.5
 
-  // Adjust for shortest path (up or down)
-  if (digitDifference > 5) {
-    yOffset -= 10 * digitHeight
+  if (offset > 5) {
+    memo -= 10 * 1.5
   }
 
-  return yOffset
+  return `${memo}em`
 }

@@ -27,15 +27,15 @@ const CounterContainer = ({ percentage }: { percentage: number }) => {
       className={css.counterContainer}
       ref={targetScrollRef}
     >
-      <div className={css.counterNEW2}>
+      <div className={css.counterPartial}>
         <Counter value={value} />
       </div>
 
-      <div className={css.counterNEW2}>
+      <div className={css.counterPartial}>
         <Counter value={value} />
       </div>
 
-      <div className={css.counterNEW3}>
+      <div className={css.counterFull}>
         <Counter value={value} />
       </div>
     </motion.div>

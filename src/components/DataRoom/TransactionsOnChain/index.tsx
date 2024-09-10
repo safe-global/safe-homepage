@@ -19,13 +19,14 @@ const TransactionsOnChain = ({ text, link }: BaseBlock) => {
   return (
     <div className={css.sectionContainer}>
       <div className={css.stickyContainer}>
-        <CounterContainer percentage={percentageValue} />
-
         <div className={css.content}>
-          <Typography variant="h1">{text}</Typography>
-
-          <div className={css.linkContainer}>{link && <LinksWrapper link={link} />}</div>
+          <CounterContainer percentage={percentageValue} />
+          <Typography className={css.text} variant="h1">
+            {text}
+          </Typography>
         </div>
+
+        <div className={css.linkContainer}>{link && <LinksWrapper link={link} />}</div>
       </div>
     </div>
   )
