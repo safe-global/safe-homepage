@@ -4,7 +4,7 @@
 }
 
 .stickyContainer {
-  background-color: #000;
+  background-color: var(--mui-palette-background-default);
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -24,7 +24,7 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 16px;
   margin-bottom: 48px;
   z-index: 20;
 }
@@ -32,6 +32,8 @@
 .text {
   width: 70%;
   margin: auto;
+  color: var(--mui-palette-primary-light);
+  padding-bottom: 16px;
 }
 
 .scroll {
