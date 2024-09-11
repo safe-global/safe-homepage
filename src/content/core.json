@@ -26,6 +26,25 @@
     "component": "Core/Intro"
   },
   {
+    "title": "Trusted by the best",
+    "icons": [
+      { "name": "Gnosis Pay", "src": "/images/projectsLogos/gnosis-pay.png" },
+      { "name": "Sygnum", "src": "/images/projectsLogos/sygnum.png" },
+      { "name": "Worldcoin", "src": "/images/projectsLogos/worldcoin.png" },
+      { "name": "Circles UBI", "src": "/images/projectsLogos/circles.png" },
+      { "name": "Den", "src": "/images/projectsLogos/den.jpeg" },
+      { "name": "Cobo", "src": "/images/projectsLogos/cobo.png" },
+      { "name": "Brahma", "src": "/images/projectsLogos/brahma.jpeg" },
+      { "name": "DefiSaver", "src": "/images/projectsLogos/defi-saver.svg" },
+      { "name": "Olas", "src": "/images/projectsLogos/olas.png" },
+      { "name": "Drakula", "src": "/images/projectsLogos/drakula.png" },
+      { "name": "Fluidkey", "src": "/images/projectsLogos/fluidkey.png" },
+      { "name": "Nest", "src": "/images/projectsLogos/nest.png" },
+      { "name": "Zeal", "src": "/images/projectsLogos/zeal.png" }
+    ],
+    "component": "Home/TitleSlidingIcons"
+  },
+  {
     "title": "Our Account Abstraction stack",
     "items": [
       {

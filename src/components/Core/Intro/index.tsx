@@ -48,7 +48,7 @@ const CoreIntro = ({ title, text, buttons, scroll }: BaseBlock & { scroll?: { ti
           </a>
         )}
       </Grid>
-      <Divider />
+      <Divider sx={{ marginBottom: '80px' }} />
     </Container>
   )
 }
