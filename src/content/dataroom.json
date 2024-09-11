@@ -105,7 +105,7 @@
   },
   {
     "component": "DataRoom/SeeMore",
-    "text": "Want to see more?"
+    "text": "Want to see <b>more?</b>"
   },
   {
     "component": "DataRoom/ExternalLinksGrid",
