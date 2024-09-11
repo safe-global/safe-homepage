@@ -14,15 +14,18 @@ const AASdk = ({ title, caption, text, link }: BaseBlock) => {
     <Container>
       <Grid container className={layoutCss.containerMedium}>
         <Grid item md={8} display="flex" flexDirection="column" justifyContent="center" gap={{ xs: 3, md: 4 }} mb={5}>
-          <Chip
-            label={
-              <Typography variant="caption" color="primary.main">
-                {caption}
-              </Typography>
-            }
-            className={css.chip}
-            variant="outlined"
-          />
+          {caption && (
+            <Chip
+              label={
+                <Typography variant="caption" color="primary.main">
+                  {caption}
+                </Typography>
+              }
+              className={css.chip}
+              variant="outlined"
+            />
+          )}
+
           <Typography variant="h2">{title}</Typography>
           {text && <Typography>{text}</Typography>}
           {link && (

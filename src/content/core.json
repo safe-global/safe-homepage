@@ -63,37 +63,6 @@
     "component": "Wallet/ParallaxAppStore"
   },
   {
-    "title": "Our Account Abstraction stack",
-    "items": [
-      {
-        "title": "Safe <u>CORE</u> AA SDK",
-        "text": "Easily level up your application and empower your users with the most advanced account abstraction SDK.",
-        "link": {
-          "title": "",
-          "href": "https://docs.safe.global/safe-core-aa-sdk"
-        }
-      },
-      {
-        "title": "Safe <u>CORE</u> API",
-        "text": "Power your interface with all Safe account related information.",
-        "link": {
-          "title": "",
-          "href": "https://docs.safe.global/safe-core-api"
-        }
-      },
-      {
-        "title": "Safe <u>CORE</u> PROTOCOL",
-        "text": "Discover, integrate and build on Safe’s robust and battle-tested smart contract account standard and programmable modules.",
-        "link": {
-          "title": "",
-          "href": "https://github.com/5afe/safe-core-protocol"
-        }
-      }
-    ],
-    "component": "Core/LinkedCardGrid"
-  },
-  {
-    "caption": "Safe Core AA SDK",
     "title": "Get started with Safe <u>CORE</u> Account Abstraction SDK",
     "link": {
       "title": "View documentation",
