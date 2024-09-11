@@ -139,5 +139,54 @@
       }
     ],
     "component": "Core/Tweets"
+  },
+  {
+    "variant": "3-columns",
+    "title": "Build with Safe. We’ve got your back.",
+    "items": [
+      {
+        "image": {
+          "src": "/images/Wallet/shield.svg",
+          "alt": "Shield with a checkmark"
+        },
+        "title": "Product and commercial expertise"
+      },
+      {
+        "image": {
+          "src": "/images/Wallet/people.svg",
+          "alt": "Group of owners"
+        },
+        "title": "Support during development phase"
+      },
+      {
+        "image": {
+          "src": "/images/Wallet/key.svg",
+          "alt": "Ownership key"
+        },
+        "title": "Built in monetization opportunities"
+      },
+      {
+        "image": {
+          "src": "/images/Wallet/shield.svg",
+          "alt": "Shield with a checkmark"
+        },
+        "title": "Collaboration on new features"
+      },
+      {
+        "image": {
+          "src": "/images/Wallet/people.svg",
+          "alt": "Group of owners"
+        },
+        "title": "Co-marketing of product and partnership"
+      },
+      {
+        "image": {
+          "src": "/images/Wallet/key.svg",
+          "alt": "Ownership key"
+        },
+        "title": "Access to our Gas Station program"
+      }
+    ],
+    "component": "common/UspBlock"
   }
 ]
