@@ -5,10 +5,22 @@
     "component": "common/MetaTags"
   },
   {
-    "title": "Safe <u>CORE</u><br/>Smart Wallet Infrastructure",
-    "text": "Full-stack. Battle-tested. Open-source.",
+    "title": "Build the Most Secure Onchain Apps",
+    "text": "Leverage the most battle-tested smart account stack, securing over $100 billion in assets.",
+    "buttons": [
+      {
+        "text": "Explore documentation",
+        "href": "https://docs.safe.global",
+        "variant": "button"
+      },
+      {
+        "text": "Get in Touch",
+        "href": "https://safe.global/core",
+        "variant": "link"
+      }
+    ],
     "link": {
-      "title": "View documentation",
+      "title": "Explore documentation",
       "href": "https://docs.safe.global"
     },
     "component": "Core/Intro"

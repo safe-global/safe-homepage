@@ -1,9 +1,10 @@
-import { Button, Container, Divider, Grid, Typography } from '@mui/material'
-import css from './styles.module.css'
-import type { BaseBlock } from '@/components/Home/types'
+import { Container, Divider, Grid, Typography } from '@mui/material'
+import ButtonsWrapper from '@/components/common/ButtonsWrapper'
 import { scrollToElement } from '@/lib/scrollSmooth'
+import type { BaseBlock } from '@/components/Home/types'
+import css from './styles.module.css'
 
-const CoreIntro = ({ title, text, link, scroll }: BaseBlock & { scroll?: { title: string; target: string } }) => {
+const CoreIntro = ({ title, text, buttons, scroll }: BaseBlock & { scroll?: { title: string; target: string } }) => {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, target: string) => {
     e.preventDefault()
 
@@ -38,12 +39,9 @@ const CoreIntro = ({ title, text, link, scroll }: BaseBlock & { scroll?: { title
             {text}
           </Typography>
 
-          {link && (
-            <Button key={link.href} href={link.href} target="_blank" rel="noreferrer" variant="contained" size="large">
-              {link.title}
-            </Button>
-          )}
+          <ButtonsWrapper buttons={buttons} />
         </Grid>
+
         {scroll && (
           <a onClick={(e) => handleClick(e, scroll.target)} className={css.scroll}>
             <Typography variant="caption">{scroll.title}</Typography>
