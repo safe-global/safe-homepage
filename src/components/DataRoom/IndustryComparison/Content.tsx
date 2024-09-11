@@ -11,18 +11,20 @@ const Content = ({ containerRef, title }: { containerRef: RefObject<HTMLDivEleme
   const isMobile = useIsMediumScreen()
   const { scrollYProgress } = useScrollProgress(containerRef)
 
-  const scrollParams = [0.25, 0.35, 0.65, 0.75]
+  const scrollParams = [0, 0.25, 0.75, 1.0]
   const opacityParams = [0, 1, 1, 0]
   const opacity = useTransform(scrollYProgress, scrollParams, opacityParams)
 
   return (
     <motion.div
-      className={css.slidingPanelContent}
+      className={css.content}
       style={{
         opacity: isMobile ? 1 : opacity,
       }}
     >
-      <Typography variant="h1">{title}</Typography>
+      <Typography align="center" variant="h1">
+        {title}
+      </Typography>
       <DotGrid containerRef={containerRef} />
     </motion.div>
   )
