@@ -34,7 +34,10 @@
 }
 
 .textContainer {
-  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 64px;
+  gap: 8px;
 }
 
 .linksContainer {
@@ -58,6 +61,7 @@
   }
 
   .textContainer {
+    display: block;
     margin-top: 12px;
   }
 
