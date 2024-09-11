@@ -74,36 +74,16 @@
     "title": "What's in there",
     "items": [
       {
-        "title": "Protocol Kit",
-        "text": "<ul><li>Modular and customizable smart contract accounts</li><li>Battle-tested security</li><li>Transaction Batching</li></ul>",
-        "link": {
-          "title": "Read more",
-          "href": "https://docs.safe.global/safe-core-aa-sdk/protocol-kit"
-        }
+        "title": "Smart Contracts",
+        "text": "<ul><li>Multi-signature standard to enforce security and flexibility</li><li>Modular and customizable smart accounts</li><li>Manage owners, transaction thresholds, delegate calls and much more</li></ul>"
       },
       {
-        "title": "Auth Kit",
-        "text": "<ul><li>Easy on-boarding using Web3Auth</li><li>Social and wallet logins</li><li>Get users started without a wallet</li></ul>",
-        "link": {
-          "title": "Read more",
-          "href": "https://docs.safe.global/safe-core-aa-sdk/auth-kit"
-        }
+        "title": "SDK",
+        "text": "<ul><li>Safe Starter Kit: Unified interface for all Safe Smart Account functionalities.</li><li>Protocol Kit: Create, configure, and manage Safe Smart Accounts.</li><li>API Kit: Interact with Safe Transaction Service API and account data.</li><li>Relay Kit: Enables ERC-4337 for flexible transaction fee payments.</li></ul>"
       },
       {
-        "title": "Relay Kit",
-        "text": "<ul><li>Gas-less experiences using Gelato</li><li>Sponsored transaction</li><li>Pay fees in ERC-20 tokens</li></ul>",
-        "link": {
-          "title": "Read more",
-          "href": "https://docs.safe.global/safe-core-aa-sdk/relay-kit"
-        }
-      },
-      {
-        "title": "Onramp Kit",
-        "text": "<ul><li>Seamless Fiat on-ramping using Stripe</li><li>Pay using a credit card</li></ul>",
-        "link": {
-          "title": "Read more",
-          "href": "https://docs.safe.global/safe-core-aa-sdk/onramp-kit"
-        }
+        "title": "Infrastructure",
+        "text": "<ul><li>Safe Transaction Service: An API to track and manage Safe Smart Account transactions</li><li>Safe Event Service: Indexes Safe events and delivers them via webhooks.</li></ul>"
       }
     ],
     "component": "common/ItemGrid"
