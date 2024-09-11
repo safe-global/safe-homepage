@@ -45,6 +45,24 @@
     "component": "Home/TitleSlidingIcons"
   },
   {
+    "variant": "text-image",
+    "title": "Add Multi-Factor Security to Your Apps",
+    "text": "Safe{core} lets you integrate robust on-chain multi-factor authentication.Give your users the peace of mind they deserve with secure, customizable logins.",
+    "component": "Wallet/ParallaxAppStore"
+  },
+  {
+    "variant": "image-text",
+    "title": "Empower Your Users with Secure Account Recovery",
+    "text": "Don't let lost keys jeopardize user experience and trust. Safe {Core} provides seamless onchain recovery solutions that enhance security without compromising control.",
+    "component": "Wallet/ParallaxAppStore"
+  },
+  {
+    "variant": "text-image",
+    "title": "Build for the Future, Escape Lock-In",
+    "text": "Gone are the day of building for a specific standard only to have the landscape shift beneath you. Build your apps with the Safe{Core} future-proof approach standard.",
+    "component": "Wallet/ParallaxAppStore"
+  },
+  {
     "title": "Our Account Abstraction stack",
     "items": [
       {
