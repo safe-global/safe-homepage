@@ -103,32 +103,6 @@
     "component": "common/ItemGrid"
   },
   {
-    "caption": "Safe Core API",
-    "title": "Immediate access to all account information to power your applications",
-    "link": {
-      "title": "Get started",
-      "href": "https://docs.safe.global/safe-core-api"
-    },
-    "grid": {
-      "title": "Benefits",
-      "items": [
-        {
-          "title": "Decode all actions of Safe accounts"
-        },
-        {
-          "title": "Monitor all interactions with the <i>Safe</i>"
-        },
-        {
-          "title": "Easy-to-use API with extensive information"
-        },
-        {
-          "title": "Available across 15+ networks"
-        }
-      ]
-    },
-    "component": "Core/TextGrid"
-  },
-  {
     "caption": "Safe ecosystem builders",
     "title": "See what web3’s best builders have to say",
     "items": [
@@ -179,24 +153,5 @@
       }
     ],
     "component": "Core/Tweets"
-  },
-  {
-    "title": "Hacking on<br />Safe <u>CORE</u>?",
-    "caption": "Hackathon",
-    "buttons": [
-      {
-        "text": "Use our Hackathon Guide",
-        "href": "https://safe-global.notion.site/Safe-d6c6ed61389041e28f5c7c925f653701",
-        "variant": "button",
-        "color": "secondary"
-      },
-      {
-        "text": "March for AA Hackathon",
-        "href": "https://dorahacks.io/hackathon/safe",
-        "variant": "link"
-      }
-    ],
-    "backgroundImage": "/images/robot.png",
-    "component": "common/BannerCta"
   }
 ]
