@@ -144,7 +144,17 @@
           "alt": "Messari logo"
         },
         "link": {
-          "href": "https://messari.io/report/state-of-safe-q1-2024"
+          "href": "https://messari.io/report/safe-q3-2023-brief"
+        }
+      },
+      {
+        "title": "Messari Q2 2024",
+        "image": {
+          "src": "/images/messari-logo.svg",
+          "alt": "Messari logo"
+        },
+        "link": {
+          "href": "https://messari.io/report/state-of-safe-q2-2024"
         }
       },
       {
@@ -154,7 +164,7 @@
           "alt": "Messari logo"
         },
         "link": {
-          "href": "https://messari.io/report/safe-q3-2023-brief"
+          "href": "https://messari.io/report/state-of-safe-q1-2024"
         }
       },
       {
