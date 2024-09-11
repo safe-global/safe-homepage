@@ -43,7 +43,7 @@
   },
   {
     "component": "DataRoom/VolumeTransferred",
-    "title": "with all time volume<br/>transferred",
+    "title": "All time asset <b>volume<br/>transferred</b>",
     "link": {
       "title": "Dune dashboard",
       "href": "https://dune.com/safe/all"
