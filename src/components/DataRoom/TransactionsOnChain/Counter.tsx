@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import css from './styles.module.css'
 import { calculateYPosition } from './utils/calculateYPosition'
 
-function Counter({ value }: { value: number }) {
+const Counter = ({ value }: { value: number }) => {
   return (
     <div className={css.counter}>
       <Digit place={1} value={value} />
@@ -19,9 +19,9 @@ function Counter({ value }: { value: number }) {
   )
 }
 
-function Digit({ place, value }: { place: number; value: number }) {
-  let valueRoundedToPlace = Math.floor(value / place) % 10
-  let animatedValue = useSpring(valueRoundedToPlace, {
+const Digit = ({ place, value }: { place: number; value: number }) => {
+  const valueRoundedToPlace = Math.floor(value / place) % 10
+  const animatedValue = useSpring(valueRoundedToPlace, {
     stiffness: 50,
     damping: 15,
   })
@@ -39,8 +39,8 @@ function Digit({ place, value }: { place: number; value: number }) {
   )
 }
 
-function Number({ mv, number }: { mv: MotionValue<number>; number: number }) {
-  let y = useTransform(mv, (latest) => calculateYPosition(latest, number))
+const Number = ({ mv, number }: { mv: MotionValue<number>; number: number }) => {
+  const y = useTransform(mv, (latest) => calculateYPosition(latest, number))
 
   return (
     <motion.span style={{ y }} className={css.number}>
