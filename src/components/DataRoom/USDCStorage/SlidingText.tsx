@@ -44,7 +44,7 @@ const SlidingText = ({ containerRef, title, text, link }: SlidingTextProps) => {
       <MotionTypography animateYFrom={50} customDelay={0.5}>
         <Typography variant="h2">{title}</Typography>
       </MotionTypography>
-      <MotionTypography animateYFrom={50} customDelay={1.5}>
+      <MotionTypography animateYFrom={50} customDelay={0.5}>
         <Typography className={css.usdcPercentage}>
           <b>{displayValue}</b>
         </Typography>

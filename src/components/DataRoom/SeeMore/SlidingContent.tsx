@@ -14,8 +14,8 @@ export default function SlidingContent({
 }) {
   const { scrollYProgress } = useScrollProgress(containerRef)
 
-  const textOpacity = useTransform(scrollYProgress, [0, 0.3, 0.5, 0.65], [0, 1, 1, 0])
-  const translate = useTransform(scrollYProgress, [0, 0.2, 0.55, 0.75], ['-250px', '0px', '0px', '250px'])
+  const textOpacity = useTransform(scrollYProgress, [0, 0.3, 0.6, 0.85], [0, 1, 1, 0])
+  const translate = useTransform(scrollYProgress, [0, 0.85], ['0px', '400px'])
 
   return (
     <motion.div style={{ opacity: textOpacity, translateY: translate }} className={css.text}>
