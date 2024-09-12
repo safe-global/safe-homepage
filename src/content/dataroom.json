@@ -35,7 +35,7 @@
   {
     "component": "DataRoom/CryptoPunks",
     "title": "CryptoPunks",
-    "text": "Some text thats changing<br/>Confirming the sources of the data<br/>Any other info regarding the stats",
+    "text": "Safe has proven to be one of the most reliable storage solutions for protecting and managing your NFTs.",
     "link": {
       "title": "Dune dashboard",
       "href": "https://dune.com/safe/ethereum-nfts"
@@ -105,7 +105,7 @@
   },
   {
     "component": "DataRoom/SeeMore",
-    "text": "Want to see <b>more?</b>"
+    "text": "Want to see <b>more</b>?"
   },
   {
     "component": "DataRoom/ExternalLinksGrid",
