@@ -1,22 +1,22 @@
 [
   {
-    "pageTitle": "Safe{Core} — Modular Ethereum Smart Account Infrastructure | Safe",
-    "description": "Embrace limitless possibilities with Safe{Core}'s modular Smart Account infrastructure, tailored for all account abstraction use cases, including ERC-4337.",
+    "pageTitle": "Safe{Core} — The #1 Smart Account Infrastructure across EVM | Safe",
+    "description": "Discover the potential of Safe{Core}’s modular Smart Accounts, optimized for security, flexibility and enhanced user experiences through account abstraction, and ERC-4337.",
     "component": "common/MetaTags"
   },
   {
     "title": "Build the Most Secure Onchain Apps",
-    "text": "Leverage the most battle-tested smart account stack, securing over $100 billion in assets.",
+    "text": "Leverage the world’s leading open-source technology toolkit for smart accounts, securing over $100b in assets.",
     "buttons": [
+      {
+        "text": "Get in Touch",
+        "href": "https://noteforms.com/forms/get-in-touch-with-the-safe-ecosystem-foundation?notionforms=1",
+        "variant": "button"
+      },
       {
         "text": "Explore documentation",
         "href": "https://docs.safe.global",
         "variant": "button"
-      },
-      {
-        "text": "Get in Touch",
-        "href": "https://safe.global/core",
-        "variant": "link"
       }
     ],
     "link": {
@@ -29,10 +29,12 @@
     "title": "Trusted by the best",
     "icons": [
       { "name": "Gnosis Pay", "src": "/images/projectsLogos/gnosis-pay.png" },
+      { "name": "BasedApp", "src": "/images/projectsLogos/basedapp.png" },
       { "name": "Sygnum", "src": "/images/projectsLogos/sygnum.png" },
       { "name": "Worldcoin", "src": "/images/projectsLogos/worldcoin.png" },
       { "name": "Circles UBI", "src": "/images/projectsLogos/circles.png" },
-      { "name": "Den", "src": "/images/projectsLogos/den.jpeg" },
+      { "name": "Coinshift", "src": "/images/projectsLogos/coinshift.jpeg" },
+      { "name": "Den", "src": "/images/projectsLogos/den.png" },
       { "name": "Cobo", "src": "/images/projectsLogos/cobo.png" },
       { "name": "Brahma", "src": "/images/projectsLogos/brahma.jpeg" },
       { "name": "DefiSaver", "src": "/images/projectsLogos/defi-saver.svg" },
@@ -63,7 +65,7 @@
     "component": "Wallet/ParallaxAppStore"
   },
   {
-    "title": "Get started with Safe <u>CORE</u> Account Abstraction SDK",
+    "title": "Get started with Safe <u>CORE</u>",
     "link": {
       "title": "View documentation",
       "href": "https://docs.safe.global/safe-core-aa-sdk"
@@ -75,15 +77,15 @@
     "items": [
       {
         "title": "Smart Contracts",
-        "text": "<ul><li>Multi-signature standard to enforce security and flexibility</li><li>Modular and customizable smart accounts</li><li>Manage owners, transaction thresholds, delegate calls and much more</li></ul>"
+        "text": "<ul><li>Multi-signature standard enforces security</li><li>Modular and flexible smart accounts</li><li>Transaction thresholds, delegate calls and more</li></ul>"
       },
       {
         "title": "SDK",
-        "text": "<ul><li>Safe Starter Kit: Unified interface for all Safe Smart Account functionalities.</li><li>Protocol Kit: Create, configure, and manage Safe Smart Accounts.</li><li>API Kit: Interact with Safe Transaction Service API and account data.</li><li>Relay Kit: Enables ERC-4337 for flexible transaction fee payments.</li></ul>"
+        "text": "<ul><li>Unified interface for all Safe Smart Account functionalities</li><li>Create, configure, and manage Safe Smart Accounts</li><li>Enable ERC-4337 for flexible transaction fee payments</li></ul>"
       },
       {
         "title": "Infrastructure",
-        "text": "<ul><li>Safe Transaction Service: An API to track and manage Safe Smart Account transactions</li><li>Safe Event Service: Indexes Safe events and delivers them via webhooks.</li></ul>"
+        "text": "<ul><li>Track and manage Safe Smart Account transactions</li><li>Index Safe events and deliver them via webhooks</li><li>Interact with Safe Transaction Service API and account data</li></ul>"
       }
     ],
     "component": "common/ItemGrid"
