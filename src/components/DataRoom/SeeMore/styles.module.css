@@ -1,20 +1,13 @@
 .sectionContainer {
-  height: 200vh;
-}
-
-.stickyContainer {
-  height: 100vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  position: sticky;
-  top: 0;
 }
 
 @media (max-width: 900px) {
   .text {
-    padding: 60px;
-    text-align: center;
+    padding: 0px 28px;
   }
 }

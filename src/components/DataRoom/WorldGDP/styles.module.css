@@ -30,11 +30,13 @@
   font-size: 16px;
   line-height: 24px;
   align-self: flex-start;
-  margin-left: 36px;
 }
 
 .textContainer {
-  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 64px;
+  gap: 8px;
 }
 
 .linksContainer {
@@ -45,7 +47,7 @@
 
 @media (max-width: 900px) {
   .stickyContainer {
-    padding: 72px 30px 0;
+    padding: 72px 20px 0;
     align-items: center;
   }
 
@@ -58,6 +60,7 @@
   }
 
   .textContainer {
+    display: block;
     margin-top: 12px;
   }
 
