@@ -28,9 +28,7 @@ const HeroAnimation = ({ containerRef, title, text }: HeroAnimationProps) => {
       <motion.div style={{ opacity, y: yTransform }} className={css.content}>
         <Typography variant="h1">{title}</Typography>
 
-        <Typography className={css.text} variant="body">
-          {text}
-        </Typography>
+        <Typography className={css.text}>{text}</Typography>
 
         <Typography variant="caption" className={css.scroll}>
           Scroll
