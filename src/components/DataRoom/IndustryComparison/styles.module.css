@@ -20,6 +20,7 @@
   padding: 64px;
   height: 100%;
   gap: 30px;
+  color: var(--mui-palette-text-dark);
   background-color: var(--mui-palette-primary-main);
 }
 
