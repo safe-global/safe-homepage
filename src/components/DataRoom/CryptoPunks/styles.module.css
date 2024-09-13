@@ -27,9 +27,10 @@
 }
 
 .text {
+  width: 265px;
   font-size: 16px;
   line-height: 24px;
-  align-self: flex-start;
+  align-self: flex-end;
   margin-bottom: auto;
 }
 
