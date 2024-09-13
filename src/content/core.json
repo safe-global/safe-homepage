@@ -1,7 +1,7 @@
 [
   {
     "pageTitle": "Safe{Core} — The #1 Smart Account Infrastructure across EVM | Safe",
-    "description": "Discover the potential of Safe{Core}’s modular Smart Accounts, optimized for security, flexibility and enhanced user experiences through account abstraction, and ERC-4337.",
+    "description": "Discover the potential of Safe{Core}’s modular Smart Accounts, optimized for security, flexibility and enhanced user experiences through account abstraction.",
     "component": "common/MetaTags"
   },
   {
@@ -56,9 +56,9 @@
   },
   {
     "variant": "text-image",
-    "title": "Add Multi-Factor Security to Your Apps",
-    "text": "Safe{core} lets you integrate robust on-chain multi-factor authentication.Give your users the peace of mind they deserve with secure, customizable logins.",
-    "component": "Wallet/ParallaxAppStore"
+    "title": "Add <b>Multi-Factor</b> Security to Your Apps",
+    "text": "Safe{core} lets you integrate robust on-chain multi-factor authentication. Give your users the peace of mind they deserve with secure, customizable logins.",
+    "component": "Wallet/OwnershipParallax"
   },
   {
     "variant": "image-text",
@@ -69,7 +69,7 @@
   {
     "variant": "text-image",
     "title": "Build for the Future, Escape Lock-In",
-    "text": "Gone are the day of building for a specific standard only to have the landscape shift beneath you. Build your apps with the Safe{Core} future-proof approach standard.",
+    "text": "Gone are the days of building for a specific standard only to have the landscape shift beneath you. Build your apps with the Safe{Core} future-proof approach standard.",
     "component": "Wallet/ParallaxAppStore"
   },
   {

@@ -5,7 +5,7 @@ import css from './styles.module.css'
 import LinkButton from '@/components/common/LinkButton'
 import clsx from 'clsx'
 import Link from 'next/link'
-import { ONRAMP_KIT_LINK, AUTH_KIT_LINK, PROTOCOL_KIT_LINK } from '@/config/constants'
+import { DOCS_SDK, DOCS_INFRASTRUCTURE, DOCS_SMART_CONTRACTS } from '@/config/constants'
 
 const AASdk = ({ title, caption, text, link }: BaseBlock) => {
   const isSmallScreen = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'))
@@ -40,26 +40,23 @@ const AASdk = ({ title, caption, text, link }: BaseBlock) => {
               src={isSmallScreen ? '/videos/Core/aa-sdk-mobile.webm' : '/videos/Core/aa-sdk.webm'}
               type="video/webm"
             /> */}
-            <source
-              src={isSmallScreen ? '/videos/Core/aa-sdk-mobile.hevc.mp4' : '/videos/Core/safe-core.mp4'}
-              type="video/mp4"
-            />
+            <source src="/videos/Core/safe-core.mp4" type="video/mp4" />
             <img src="/images/Core/aa-sdk.png" alt="AA SDK Overview" />
           </video>
           <a
             className={clsx(css.videoLink, css.smartContractsLink)}
-            href={AUTH_KIT_LINK}
+            href={DOCS_SMART_CONTRACTS}
             target="_blank"
             rel="noreferrer"
           >
             Smart Contracts
           </a>
-          <a className={clsx(css.videoLink, css.sdkLink)} href={ONRAMP_KIT_LINK} target="_blank" rel="noreferrer">
+          <a className={clsx(css.videoLink, css.sdkLink)} href={DOCS_SDK} target="_blank" rel="noreferrer">
             SDK
           </a>
           <a
             className={clsx(css.videoLink, css.infrastructureLink)}
-            href={PROTOCOL_KIT_LINK}
+            href={DOCS_INFRASTRUCTURE}
             target="_blank"
             rel="noreferrer"
           >
