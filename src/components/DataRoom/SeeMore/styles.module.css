@@ -7,6 +7,10 @@
 }
 
 @media (max-width: 900px) {
+  .sectionContainer {
+    height: 60lvh;
+  }
+
   .text {
     padding: 0px 28px;
   }
