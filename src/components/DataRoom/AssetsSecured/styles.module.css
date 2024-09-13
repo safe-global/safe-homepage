@@ -73,23 +73,33 @@
 }
 
 @media (max-width: 1000px) {
+  .sectionContainer {
+    height: 200lvh;
+  }
+
   .stickyContainer {
     padding: 30px;
     overflow: hidden;
     padding-top: 72px;
-    justify-content: space-between;
+    height: 100lvh;
+    justify-content: center;
+  }
+
+  .cexesContainer {
+    gap: 24px;
   }
 
   .cexTitle {
-    font-size: 24px;
+    font-size: 18px;
   }
 
   .label {
-    padding-bottom: 32px;
+    font-size: 18px;
+    padding-bottom: 12px;
   }
 
   .labelCaption {
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .labelContainer {
@@ -103,8 +113,10 @@
   }
 
   .title {
-    margin-top: 20px;
+    margin-top: 40px;
     text-align: left;
+    font-size: 40px;
+    line-height: 48px;
   }
 
   .cexMessage {

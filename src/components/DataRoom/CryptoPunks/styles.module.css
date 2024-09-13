@@ -73,6 +73,7 @@
   }
   .stickyContainer {
     flex-direction: column-reverse;
+    height: 100lvh;
   }
 
   .punksGrid {
