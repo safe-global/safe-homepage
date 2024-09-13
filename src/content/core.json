@@ -5,7 +5,7 @@
     "component": "common/MetaTags"
   },
   {
-    "title": "Build the Most Secure Onchain Apps",
+    "title": "Build the</br><b>Most Secure</b></br>Onchain Apps",
     "text": "Leverage the world’s leading open-source technology toolkit for smart accounts, securing over $100b in assets.",
     "buttons": [
       {
@@ -48,47 +48,47 @@
   },
   {
     "variant": "3-columns",
-    "title": "Build with Safe. We’ve got your back.",
+    "title": "Build with <b><em>Safe</em></b>. We’ve got your back.",
     "items": [
       {
         "image": {
-          "src": "/images/Wallet/shield.svg",
-          "alt": "Shield with a checkmark"
+          "src": "/images/target-gradient.svg",
+          "alt": "Target with arrow"
         },
         "title": "Product and commercial expertise"
       },
       {
         "image": {
-          "src": "/images/Wallet/people.svg",
-          "alt": "Group of owners"
+          "src": "/images/headset-gradient.svg",
+          "alt": "Headset"
         },
         "title": "Support during development phase"
       },
       {
         "image": {
-          "src": "/images/Wallet/key.svg",
-          "alt": "Ownership key"
+          "src": "/images/coin-gradient.svg",
+          "alt": "Coin"
         },
         "title": "Built in monetization opportunities"
       },
       {
         "image": {
-          "src": "/images/Wallet/shield.svg",
-          "alt": "Shield with a checkmark"
+          "src": "/images/users-gradient.svg",
+          "alt": "Users"
         },
         "title": "Collaboration on new features"
       },
       {
         "image": {
-          "src": "/images/Wallet/people.svg",
-          "alt": "Group of owners"
+          "src": "/images/antenna-gradient.svg",
+          "alt": "Antenna"
         },
         "title": "Co-marketing of product and partnership"
       },
       {
         "image": {
-          "src": "/images/Wallet/key.svg",
-          "alt": "Ownership key"
+          "src": "/images/pump-gradient.svg",
+          "alt": "Gas pump"
         },
         "title": "Access to our Gas Station program"
       }
