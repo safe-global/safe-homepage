@@ -47,102 +47,6 @@
     "component": "Home/TitleSlidingIcons"
   },
   {
-    "title": "Get started with Safe <u>CORE</u>",
-    "link": {
-      "title": "View documentation",
-      "href": "https://docs.safe.global/safe-core-aa-sdk"
-    },
-    "component": "Core/AASdk"
-  },
-  {
-    "variant": "text-image",
-    "title": "Add <b>Multi-Factor</b> Security to Your Apps",
-    "text": "Safe{core} lets you integrate robust on-chain multi-factor authentication. Give your users the peace of mind they deserve with secure, customizable logins.",
-    "component": "Wallet/OwnershipParallax"
-  },
-  {
-    "variant": "image-text",
-    "title": "Empower Your Users with Secure Account Recovery",
-    "text": "Don't let lost keys jeopardize user experience and trust. Safe {Core} provides seamless onchain recovery solutions that enhance security without compromising control.",
-    "component": "Wallet/ParallaxAppStore"
-  },
-  {
-    "variant": "text-image",
-    "title": "Build for the Future, Escape Lock-In",
-    "text": "Gone are the days of building for a specific standard only to have the landscape shift beneath you. Build your apps with the Safe{Core} future-proof approach standard.",
-    "component": "Wallet/ParallaxAppStore"
-  },
-  {
-    "title": "What's in there",
-    "items": [
-      {
-        "title": "Smart Contracts",
-        "text": "<ul><li>Multi-signature standard enforces security</li><li>Modular and flexible smart accounts</li><li>Transaction thresholds, delegate calls and more</li></ul>"
-      },
-      {
-        "title": "SDK",
-        "text": "<ul><li>Unified interface for all Safe Smart Account functionalities</li><li>Create, configure, and manage Safe Smart Accounts</li><li>Enable ERC-4337 for flexible transaction fee payments</li></ul>"
-      },
-      {
-        "title": "Infrastructure",
-        "text": "<ul><li>Track and manage Safe Smart Account transactions</li><li>Index Safe events and deliver them via webhooks</li><li>Interact with Safe Transaction Service API and account data</li></ul>"
-      }
-    ],
-    "component": "common/ItemGrid"
-  },
-  {
-    "caption": "Safe ecosystem builders",
-    "title": "See what web3’s best builders have to say",
-    "items": [
-      {
-        "image": {
-          "src": "/images/Core/tweets/onchainden.png",
-          "alt": "Tweet from OnchainDen"
-        },
-        "link": {
-          "href": "https://twitter.com/OnChainDen/status/1615363435059118080"
-        }
-      },
-      {
-        "image": {
-          "src": "/images/Core/tweets/tribes_xyz.png",
-          "alt": "Tweet from Tribes"
-        },
-        "link": {
-          "href": "https://twitter.com/tribes_xyz/status/1617555624962969603"
-        }
-      },
-      {
-        "image": {
-          "src": "/images/Core/tweets/tarungupta.png",
-          "alt": "Tweet from tarungupta.eth"
-        },
-        "link": {
-          "href": "https://twitter.com/tarungupta1475/status/1567088924224557062"
-        }
-      },
-      {
-        "image": {
-          "src": "/images/Core/tweets/aaveaave.png",
-          "alt": "Tweet from Aave"
-        },
-        "link": {
-          "href": "https://twitter.com/AaveAave/status/1278718273933246464"
-        }
-      },
-      {
-        "image": {
-          "src": "/images/Core/tweets/ittaisvidler.png",
-          "alt": "Tweet from ittai.eth"
-        },
-        "link": {
-          "href": "https://twitter.com/IttaiSvidler/status/1592541969137676288"
-        }
-      }
-    ],
-    "component": "Core/Tweets"
-  },
-  {
     "variant": "3-columns",
     "title": "Build with Safe. We’ve got your back.",
     "items": [
@@ -190,5 +94,102 @@
       }
     ],
     "component": "common/UspBlock"
+  },
+  {
+    "variant": "text-image",
+    "title": "Add <b>Multi-Factor Security</b> to Your Apps",
+    "text": "Safe{core} lets you integrate robust on-chain multi-factor authentication. Give your users the peace of mind they deserve with secure, customizable logins.",
+    "component": "Wallet/OwnershipParallax"
+  },
+  {
+    "variant": "image-text",
+    "title": "Empower Your Users with Secure Account Recovery",
+    "text": "Don't let lost keys jeopardize user experience and trust. Safe {Core} provides seamless onchain recovery solutions that enhance security without compromising control.",
+    "component": "Wallet/ParallaxAppStore"
+  },
+  {
+    "variant": "text-image",
+    "title": "Build for the Future, Escape Lock-In",
+    "text": "Gone are the days of building for a specific standard only to have the landscape shift beneath you. Build your apps with the Safe{Core} future-proof approach standard.",
+    "component": "Wallet/ParallaxAppStore"
+  },
+  {
+    "variant": "image-text",
+    "caption": "200+ projects",
+    "title": "<em>Safe</em> Smart Accounts power over <b>200 projects across 15+ networks</b>",
+    "buttons": [
+      {
+        "text": "Explore ecosystem",
+        "href": "https://safe.global/ecosystem",
+        "variant": "button"
+      },
+      {
+        "text": "Case studies",
+        "href": "https://safe.global/blog?category=Insights",
+        "variant": "link"
+      }
+    ],
+    "items": [
+      {
+        "title": "Payments",
+        "link": {
+          "href": "https://safe.global/blog/safe-case-2-digital-ownership-in-your-pocket"
+        }
+      },
+      {
+        "title": "DAOs"
+      },
+      {
+        "title": "Restaking",
+        "link": {
+          "href": "https://safe.global/blog/the-safe-case-staking-and-restaking"
+        }
+      },
+      {
+        "title": "AI",
+        "link": {
+          "href": "https://safe.global/blog/the-safe-case-ai-smart-accounts-crypto"
+        }
+      },
+      {
+        "title": "Social & ID",
+        "link": {
+          "href": "https://safe.global/blog/safe-case-decentralized-social-id"
+        }
+      },
+      {
+        "title": "Institution",
+        "link": {
+          "href": "https://safe.global/blog/the-safe-case-infrastructure-for-institutional-crypto-self-custody"
+        }
+      }
+    ],
+    "component": "Core/ParallaxCaseStudies"
+  },
+  {
+    "title": "Get started with Safe <u>CORE</u>",
+    "link": {
+      "title": "View documentation",
+      "href": "https://docs.safe.global/safe-core-aa-sdk"
+    },
+    "component": "Core/AASdk"
+  },
+  {
+    "title": "What's in there",
+    "items": [
+      {
+        "title": "Smart Contracts",
+        "text": "<ul><li>Multi-signature standard enforces security</li><li>Modular and flexible smart accounts</li><li>Transaction thresholds, delegate calls and more</li></ul>"
+      },
+      {
+        "title": "SDK",
+        "text": "<ul><li>Unified interface for all Safe Smart Account functionalities</li><li>Create, configure, and manage Safe Smart Accounts</li><li>Enable ERC-4337 for flexible transaction fee payments</li></ul>"
+      },
+      {
+        "title": "Infrastructure",
+        "text": "<ul><li>Track and manage Safe Smart Account transactions</li><li>Index Safe events and deliver them via webhooks</li><li>Interact with Safe Transaction Service API and account data</li></ul>"
+      }
+    ],
+    "component": "common/ItemGrid"
   }
 ]
