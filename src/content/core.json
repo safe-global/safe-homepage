@@ -172,10 +172,7 @@
       "title": "View documentation",
       "href": "https://docs.safe.global/safe-core-aa-sdk"
     },
-    "component": "Core/AASdk"
-  },
-  {
-    "title": "What's in there",
+    "caption": "What's in there",
     "items": [
       {
         "title": "Smart Contracts",
@@ -190,6 +187,6 @@
         "text": "<ul><li>Track and manage Safe Smart Account transactions</li><li>Index Safe events and deliver them via webhooks</li><li>Interact with Safe Transaction Service API and account data</li></ul>"
       }
     ],
-    "component": "common/ItemGrid"
+    "component": "Core/AASdk"
   }
 ]

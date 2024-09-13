@@ -1,31 +1,20 @@
 import type { BaseBlock } from '@/components/Home/types'
-import { Chip, Container, Grid, type Theme, Typography, useMediaQuery } from '@mui/material'
+import { Container, Grid, type Theme, Typography, useMediaQuery } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 import LinkButton from '@/components/common/LinkButton'
 import clsx from 'clsx'
 import Link from 'next/link'
 import { DOCS_SDK, DOCS_INFRASTRUCTURE, DOCS_SMART_CONTRACTS } from '@/config/constants'
+import ItemGrid from '@/components/common/ItemGrid'
 
-const AASdk = ({ title, caption, text, link }: BaseBlock) => {
+const AASdk = ({ caption, title, text, link, items }: BaseBlock) => {
   const isSmallScreen = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'))
 
   return (
     <Container>
       <Grid container className={layoutCss.containerMedium}>
         <Grid item md={8} display="flex" flexDirection="column" justifyContent="center" gap={{ xs: 3, md: 4 }} mb={5}>
-          {caption && (
-            <Chip
-              label={
-                <Typography variant="caption" color="primary.main">
-                  {caption}
-                </Typography>
-              }
-              className={css.chip}
-              variant="outlined"
-            />
-          )}
-
           <Typography variant="h2">{title}</Typography>
           {text && <Typography>{text}</Typography>}
           {link && (
@@ -64,6 +53,8 @@ const AASdk = ({ title, caption, text, link }: BaseBlock) => {
           </a>
         </div>
       </Grid>
+
+      <ItemGrid title={caption} items={items} />
     </Container>
   )
 }
