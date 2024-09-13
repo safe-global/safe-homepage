@@ -1,5 +1,5 @@
 import type { BaseBlock } from '@/components/Home/types'
-import { Container, Grid, type Theme, Typography, useMediaQuery } from '@mui/material'
+import { Container, Grid, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 import LinkButton from '@/components/common/LinkButton'
@@ -8,55 +8,47 @@ import Link from 'next/link'
 import { DOCS_SDK, DOCS_INFRASTRUCTURE, DOCS_SMART_CONTRACTS } from '@/config/constants'
 import ItemGrid from '@/components/common/ItemGrid'
 
-const AASdk = ({ caption, title, text, link, items }: BaseBlock) => {
-  const isSmallScreen = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'))
-
-  return (
-    <Container>
-      <Grid container className={layoutCss.containerMedium}>
-        <Grid item md={8} display="flex" flexDirection="column" justifyContent="center" gap={{ xs: 3, md: 4 }} mb={5}>
-          <Typography variant="h2">{title}</Typography>
-          {text && <Typography>{text}</Typography>}
-          {link && (
-            <Link href={link.href} target="_blank" rel="noreferrer" passHref>
-              <LinkButton sx={{ width: 'fit-content' }}>{link?.title}</LinkButton>
-            </Link>
-          )}
-        </Grid>
-        <div className={css.videoWrapper}>
-          <video autoPlay muted playsInline loop className={css.video}>
-            {/* <source
-              src={isSmallScreen ? '/videos/Core/aa-sdk-mobile.webm' : '/videos/Core/aa-sdk.webm'}
-              type="video/webm"
-            /> */}
-            <source src="/videos/Core/safe-core.mp4" type="video/mp4" />
-            <img src="/images/Core/aa-sdk.png" alt="AA SDK Overview" />
-          </video>
-          <a
-            className={clsx(css.videoLink, css.smartContractsLink)}
-            href={DOCS_SMART_CONTRACTS}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Smart Contracts
-          </a>
-          <a className={clsx(css.videoLink, css.sdkLink)} href={DOCS_SDK} target="_blank" rel="noreferrer">
-            SDK
-          </a>
-          <a
-            className={clsx(css.videoLink, css.infrastructureLink)}
-            href={DOCS_INFRASTRUCTURE}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Infrastructure
-          </a>
-        </div>
+const AASdk = ({ caption, title, text, link, items }: BaseBlock) => (
+  <Container>
+    <Grid container className={layoutCss.containerMedium}>
+      <Grid item md={8} display="flex" flexDirection="column" justifyContent="center" gap={{ xs: 3, md: 4 }} mb={5}>
+        <Typography variant="h2">{title}</Typography>
+        {text && <Typography>{text}</Typography>}
+        {link && (
+          <Link href={link.href} target="_blank" rel="noreferrer" passHref>
+            <LinkButton sx={{ width: 'fit-content' }}>{link?.title}</LinkButton>
+          </Link>
+        )}
       </Grid>
+      <div className={css.videoWrapper}>
+        <video autoPlay muted playsInline loop className={css.video}>
+          <source src="/videos/Core/safe-core.mp4" type="video/mp4" />
+          <img src="/images/Core/aa-sdk.png" alt="AA SDK Overview" />
+        </video>
+        <a
+          className={clsx(css.videoLink, css.smartContractsLink)}
+          href={DOCS_SMART_CONTRACTS}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Smart Contracts
+        </a>
+        <a className={clsx(css.videoLink, css.sdkLink)} href={DOCS_SDK} target="_blank" rel="noreferrer">
+          SDK
+        </a>
+        <a
+          className={clsx(css.videoLink, css.infrastructureLink)}
+          href={DOCS_INFRASTRUCTURE}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Infrastructure
+        </a>
+      </div>
+    </Grid>
 
-      <ItemGrid title={caption} items={items} />
-    </Container>
-  )
-}
+    <ItemGrid title={caption} items={items} />
+  </Container>
+)
 
 export default AASdk

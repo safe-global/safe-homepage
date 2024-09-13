@@ -30,13 +30,14 @@
     "icons": [
       { "name": "Gnosis Pay", "src": "/images/projectsLogos/gnosis-pay.png" },
       { "name": "BasedApp", "src": "/images/projectsLogos/basedapp.png" },
+      { "name": "Polymarket", "src": "/images/projectsLogos/polymarket.png" },
       { "name": "Sygnum", "src": "/images/projectsLogos/sygnum.png" },
       { "name": "Worldcoin", "src": "/images/projectsLogos/worldcoin.png" },
       { "name": "Circles UBI", "src": "/images/projectsLogos/circles.png" },
-      { "name": "Coinshift", "src": "/images/projectsLogos/coinshift.jpeg" },
+      { "name": "Coinshift", "src": "/images/projectsLogos/coinshift.png" },
       { "name": "Den", "src": "/images/projectsLogos/den.png" },
       { "name": "Cobo", "src": "/images/projectsLogos/cobo.png" },
-      { "name": "Brahma", "src": "/images/projectsLogos/brahma.jpeg" },
+      { "name": "Brahma", "src": "/images/projectsLogos/brahma.png" },
       { "name": "DefiSaver", "src": "/images/projectsLogos/defi-saver.svg" },
       { "name": "Olas", "src": "/images/projectsLogos/olas.png" },
       { "name": "Drakula", "src": "/images/projectsLogos/drakula.png" },
@@ -98,13 +99,13 @@
   {
     "variant": "text-image",
     "title": "Add <b>Multi-Factor Security</b> to Your Apps",
-    "text": "Safe{core} lets you integrate robust on-chain multi-factor authentication. Give your users the peace of mind they deserve with secure, customizable logins.",
+    "text": "Safe{Core} lets you integrate robust on-chain multi-factor authentication. Give your users the peace of mind they deserve with secure, customizable logins.",
     "component": "Wallet/OwnershipParallax"
   },
   {
     "variant": "image-text",
     "title": "Empower Your Users with Secure Account Recovery",
-    "text": "Don't let lost keys jeopardize user experience and trust. Safe {Core} provides seamless onchain recovery solutions that enhance security without compromising control.",
+    "text": "Don't let lost keys jeopardize user experience and trust. Safe{Core} provides seamless onchain recovery solutions that enhance security without compromising control.",
     "component": "Wallet/ParallaxAppStore"
   },
   {
