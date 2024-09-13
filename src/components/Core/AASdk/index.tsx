@@ -5,7 +5,7 @@ import css from './styles.module.css'
 import LinkButton from '@/components/common/LinkButton'
 import clsx from 'clsx'
 import Link from 'next/link'
-import { RELAY_KIT_LINK, ONRAMP_KIT_LINK, AUTH_KIT_LINK, PROTOCOL_KIT_LINK } from '@/config/constants'
+import { ONRAMP_KIT_LINK, AUTH_KIT_LINK, PROTOCOL_KIT_LINK } from '@/config/constants'
 
 const AASdk = ({ title, caption, text, link }: BaseBlock) => {
   const isSmallScreen = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'))
@@ -36,32 +36,34 @@ const AASdk = ({ title, caption, text, link }: BaseBlock) => {
         </Grid>
         <div className={css.videoWrapper}>
           <video autoPlay muted playsInline loop className={css.video}>
-            <source
+            {/* <source
               src={isSmallScreen ? '/videos/Core/aa-sdk-mobile.webm' : '/videos/Core/aa-sdk.webm'}
               type="video/webm"
-            />
+            /> */}
             <source
-              src={isSmallScreen ? '/videos/Core/aa-sdk-mobile.hevc.mp4' : '/videos/Core/aa-sdk.hevc.mp4'}
+              src={isSmallScreen ? '/videos/Core/aa-sdk-mobile.hevc.mp4' : '/videos/Core/safe-core.mp4'}
               type="video/mp4"
             />
             <img src="/images/Core/aa-sdk.png" alt="AA SDK Overview" />
           </video>
-          <a className={clsx(css.videoLink, css.authKitLink)} href={AUTH_KIT_LINK} target="_blank" rel="noreferrer">
-            Auth Kit
+          <a
+            className={clsx(css.videoLink, css.smartContractsLink)}
+            href={AUTH_KIT_LINK}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Smart Contracts
           </a>
-          <a className={clsx(css.videoLink, css.onRampKitLink)} href={ONRAMP_KIT_LINK} target="_blank" rel="noreferrer">
-            Onramp Kit
-          </a>
-          <a className={clsx(css.videoLink, css.relayKitLink)} href={RELAY_KIT_LINK} target="_blank" rel="noreferrer">
-            Relay Kit
+          <a className={clsx(css.videoLink, css.sdkLink)} href={ONRAMP_KIT_LINK} target="_blank" rel="noreferrer">
+            SDK
           </a>
           <a
-            className={clsx(css.videoLink, css.protocolKitLink)}
+            className={clsx(css.videoLink, css.infrastructureLink)}
             href={PROTOCOL_KIT_LINK}
             target="_blank"
             rel="noreferrer"
           >
-            Protocol Kit
+            Infrastructure
           </a>
         </div>
       </Grid>

@@ -47,6 +47,14 @@
     "component": "Home/TitleSlidingIcons"
   },
   {
+    "title": "Get started with Safe <u>CORE</u>",
+    "link": {
+      "title": "View documentation",
+      "href": "https://docs.safe.global/safe-core-aa-sdk"
+    },
+    "component": "Core/AASdk"
+  },
+  {
     "variant": "text-image",
     "title": "Add Multi-Factor Security to Your Apps",
     "text": "Safe{core} lets you integrate robust on-chain multi-factor authentication.Give your users the peace of mind they deserve with secure, customizable logins.",
@@ -63,14 +71,6 @@
     "title": "Build for the Future, Escape Lock-In",
     "text": "Gone are the day of building for a specific standard only to have the landscape shift beneath you. Build your apps with the Safe{Core} future-proof approach standard.",
     "component": "Wallet/ParallaxAppStore"
-  },
-  {
-    "title": "Get started with Safe <u>CORE</u>",
-    "link": {
-      "title": "View documentation",
-      "href": "https://docs.safe.global/safe-core-aa-sdk"
-    },
-    "component": "Core/AASdk"
   },
   {
     "title": "What's in there",
