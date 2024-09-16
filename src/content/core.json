@@ -19,10 +19,6 @@
         "variant": "link"
       }
     ],
-    "link": {
-      "title": "Explore Documentation",
-      "href": "https://docs.safe.global"
-    },
     "component": "Core/Intro"
   },
   {
@@ -179,7 +175,7 @@
     "title": "Get Started with Safe <u>CORE</u>",
     "link": {
       "title": "View Documentation",
-      "href": "https://docs.safe.global/safe-core-aa-sdk"
+      "href": "https://docs.safe.global"
     },
     "caption": "What's in there",
     "items": [
