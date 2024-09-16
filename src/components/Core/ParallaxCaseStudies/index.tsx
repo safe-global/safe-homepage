@@ -4,7 +4,7 @@ import ParallaxText, { type ParallaxTextProps } from '@/components/common/Parall
 const ParallaxCaseStudies = (props: ParallaxTextProps) => {
   return (
     <ParallaxText {...props} variant="image-text">
-      <ParallaxUseCasesElement items={props.items ?? []} />
+      {props.items ? <ParallaxUseCasesElement items={props.items} /> : null}
     </ParallaxText>
   )
 }
