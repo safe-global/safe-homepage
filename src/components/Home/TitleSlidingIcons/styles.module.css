@@ -63,6 +63,12 @@
   text-align: center;
 }
 
+.icon {
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
 .icon img {
   display: flex;
   align-items: center;
