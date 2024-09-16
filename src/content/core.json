@@ -16,7 +16,7 @@
       {
         "text": "Explore Documentation",
         "href": "https://docs.safe.global",
-        "variant": "button"
+        "variant": "link"
       }
     ],
     "link": {
@@ -104,7 +104,7 @@
       "src": "/images/Core/multi-factor.png",
       "alt": "Multi-factor security"
     },
-    "component": "Core/TextBlockImageMultiFactor"
+    "component": "Core/ParallaxMultiFactor"
   },
   {
     "variant": "image-text",
@@ -114,7 +114,7 @@
       "src": "/images/Core/account-recovery.png",
       "alt": "Account recovery"
     },
-    "component": "Core/TextBlockImageAccountRecovery"
+    "component": "Core/TextRadialAnimation"
   },
   {
     "variant": "text-image",
