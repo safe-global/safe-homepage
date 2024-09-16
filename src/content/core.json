@@ -6,7 +6,7 @@
   },
   {
     "title": "Build the</br><b>Most Secure</b></br>Onchain Apps",
-    "text": "Leverage the world’s leading open-source technology toolkit for smart accounts, securing over $100b in assets.",
+    "text": "Leverage the world’s leading open-source stack for smart accounts, securing over $100B+ in assets.",
     "buttons": [
       {
         "text": "Get in Touch",
@@ -49,7 +49,7 @@
   },
   {
     "variant": "3-columns",
-    "title": "Build with <b><em>Safe</em></b>. We’ve got your back.",
+    "title": "Build with <b><em>Safe</em></b>. Find Support. Get Incentives.",
     "items": [
       {
         "image": {
@@ -70,7 +70,7 @@
           "src": "/images/coin-gradient.svg",
           "alt": "Coin"
         },
-        "title": "Built in monetization opportunities"
+        "title": "Built-in monetisation opportunities"
       },
       {
         "image": {
