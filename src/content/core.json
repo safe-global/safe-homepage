@@ -99,7 +99,7 @@
   {
     "variant": "text-image",
     "title": "Add <b>Multi-Factor Security</b> to Your Apps",
-    "text": "Safe{Core} lets you integrate robust on-chain multi-factor authentication. Give your users the peace of mind they deserve with secure, customizable logins.",
+    "text": "Safe{Core} lets you integrate robust onchain multi-factor authentication. Give your users the peace of mind they deserve with secure, customizable logins.",
     "image": {
       "src": "/images/Core/multi-factor.png",
       "alt": "Multi-factor security"

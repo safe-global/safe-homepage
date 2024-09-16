@@ -14,9 +14,9 @@ const AASdk = ({ caption, title, text, link, items }: BaseBlock) => (
       <Grid item md={8} display="flex" flexDirection="column" justifyContent="center" gap={{ xs: 3, md: 4 }} mb={5}>
         <Typography variant="h2">{title}</Typography>
         {text && <Typography>{text}</Typography>}
-        {link && (
+        {link?.title && (
           <Link href={link.href} target="_blank" rel="noreferrer" passHref>
-            <LinkButton sx={{ width: 'fit-content' }}>{link?.title}</LinkButton>
+            <LinkButton sx={{ width: 'fit-content' }}>{link.title}</LinkButton>
           </Link>
         )}
       </Grid>

@@ -6,7 +6,7 @@ import LinkButton from '@/components/common/LinkButton'
 import type { BaseBlock } from '@/components/Home/types'
 
 const blockClassNames = ['stepZero', 'stepOne', 'stepTwo', 'stepThree', 'stepFour', 'stepFive', 'stepSix']
-const depths = [0, 1, 2] as const
+const depths = [0, 1] as const
 
 const trailingShadow = (
   <>
