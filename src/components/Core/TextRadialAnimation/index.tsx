@@ -12,8 +12,12 @@ const TextRadialAnimation = ({ title, text, link }: BaseBlock) => {
         container
         className={layoutCss.containerShort}
         spacing={{ xs: 6, md: '30px', xl: '50px' }}
-        flexDirection={{ xs: 'column-reverse', md: 'row' }}
+        flexDirection={{ xs: 'column', md: 'row' }}
       >
+        <Grid item md={6}>
+          <RadialAnimation />
+        </Grid>
+        <Grid item md={1} display={{ xs: 'none', md: 'block' }} />
         <Grid item md={5}>
           <Typography variant="h2" mb={{ xs: 2, md: 4 }}>
             {title}
@@ -24,10 +28,6 @@ const TextRadialAnimation = ({ title, text, link }: BaseBlock) => {
               <LinkButton>{link.title}</LinkButton>
             </SafeLink>
           )}
-        </Grid>
-        <Grid item md={1} display={{ xs: 'none', md: 'block' }} />
-        <Grid item md={6}>
-          <RadialAnimation />
         </Grid>
       </Grid>
     </Container>

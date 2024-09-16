@@ -1,4 +1,4 @@
-import { Container, Divider, Grid, Typography } from '@mui/material'
+import { Container, Grid, Typography } from '@mui/material'
 import ButtonsWrapper from '@/components/common/ButtonsWrapper'
 import { scrollToElement } from '@/lib/scrollSmooth'
 import type { BaseBlock } from '@/components/Home/types'
@@ -48,7 +48,6 @@ const CoreIntro = ({ title, text, buttons, scroll }: BaseBlock & { scroll?: { ti
           </a>
         )}
       </Grid>
-      <Divider sx={{ marginBottom: '80px' }} />
     </Container>
   )
 }

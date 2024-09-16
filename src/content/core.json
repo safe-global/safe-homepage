@@ -120,7 +120,7 @@
     "variant": "text-image",
     "title": "<b>Build for the Future</b>, Escape Lock-In",
     "text": "Gone are the days of building for a specific standard only to have the landscape shift beneath you. Build your apps with the Safe{Core} future-proof approach standard.",
-    "component": "Wallet/ParallaxAppStore"
+    "component": "Core/ParallaxBuild"
   },
   {
     "variant": "image-text",
