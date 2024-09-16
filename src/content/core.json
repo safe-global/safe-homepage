@@ -193,5 +193,16 @@
       }
     ],
     "component": "Core/AASdk"
+  },
+  {
+    "title": "Build with <b><em>Safe</em></b>.</br>We've got your back.",
+    "buttons": [
+      {
+        "text": "View Documentation",
+        "href": "https://docs.safe.global",
+        "variant": "button"
+      }
+    ],
+    "component": "common/CenteredTextBlock"
   }
 ]
