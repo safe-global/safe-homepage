@@ -14,19 +14,19 @@
         "variant": "button"
       },
       {
-        "text": "Explore documentation",
+        "text": "Explore Documentation",
         "href": "https://docs.safe.global",
         "variant": "button"
       }
     ],
     "link": {
-      "title": "Explore documentation",
+      "title": "Explore Documentation",
       "href": "https://docs.safe.global"
     },
     "component": "Core/Intro"
   },
   {
-    "title": "Trusted by the best",
+    "title": "Trusted by the Best",
     "icons": [
       { "name": "Gnosis Pay", "src": "/images/projectsLogos/gnosis-pay.png" },
       { "name": "BasedApp", "src": "/images/projectsLogos/basedapp.png" },
@@ -176,16 +176,16 @@
     "component": "Core/ParallaxCaseStudies"
   },
   {
-    "title": "Get started with Safe <u>CORE</u>",
+    "title": "Get Started with Safe <u>CORE</u>",
     "link": {
-      "title": "View documentation",
+      "title": "View Documentation",
       "href": "https://docs.safe.global/safe-core-aa-sdk"
     },
     "caption": "What's in there",
     "items": [
       {
         "title": "Smart Contracts",
-        "text": "<ul><li>Multi-signature standard enforces security</li><li>Modular and flexible smart accounts</li><li>Transaction thresholds, delegate calls and more</li></ul>"
+        "text": "<ul><li>Multi-signature standard enforces security</li><li>Modular and flexible Smart Accounts</li><li>Transaction thresholds, delegate calls and more</li></ul>"
       },
       {
         "title": "SDK",
