@@ -41,7 +41,7 @@
       { "name": "Olas", "src": "/images/projectsLogos/olas.png" },
       { "name": "Drakula", "src": "/images/projectsLogos/drakula.png" }
     ],
-    "component": "Home/TitleSlidingIcons"
+    "component": "Core/TrustedBy"
   },
   {
     "variant": "3-columns",
