@@ -116,6 +116,26 @@
     "variant": "text-image",
     "title": "<b>Build for the Future</b>, Escape Lock-In",
     "text": "Gone are the days of building for a specific standard only to have the landscape shift beneath you. Build your apps with the Safe{Core} future-proof approach standard.",
+    "items": [
+      {
+        "title": "ERC 4337",
+        "link": {
+          "href": "https://docs.safe.global/sdk/relay-kit/reference/safe-4337-pack"
+        }
+      },
+      {
+        "title": "ERC 7579",
+        "link": {
+          "href": "https://docs.safe.global/advanced/erc-7579/7579-safe"
+        }
+      },
+      {
+        "title": "Supported Networks",
+        "link": {
+          "href": "https://docs.safe.global/advanced/smart-account-supported-networks/v1.3.0"
+        }
+      }
+    ],
     "component": "Core/ParallaxBuild"
   },
   {
