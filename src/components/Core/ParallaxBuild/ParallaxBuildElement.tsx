@@ -3,9 +3,8 @@ import BracketsImage from '@/public/images/Core/Parallaxes/Build/brackets.png'
 import FrameImage from '@/public/images/Core/Parallaxes/Build/background.svg'
 import ParallaxWrapper from '@/components/common/ParallaxWrapper'
 import type { BaseBlock } from '@/components/Home/types'
-import css from './styles.module.css'
-import LinkButton from '@/components/common/LinkButton'
 import ArrowIcon from '@/public/images/arrow-out-square-corner.svg'
+import css from './styles.module.css'
 
 const blockClassNames = ['stepZero', 'stepOne', 'stepTwo']
 const depths = [0, 1] as const
@@ -21,13 +20,14 @@ const ParallaxBuildElement = ({ items }: { items: BaseBlock['items'] }) => {
 
         return (
           <ParallaxWrapper translateX={0} translateY={0} depth={depth} direction={-1} key={index}>
-            <div className={`${css.movingElement} ${css[className]}`}>
-              <div className={css.title}>
-                {link ? <LinkButton href={link.href} fullSize underline={false} /> : undefined}
-                {title}
-                <ArrowIcon className={css.arrow} />
+            <a href={link?.href} target="_blank" rel="noreferrer">
+              <div className={`${css.movingElement} ${css[className]}`}>
+                <div className={css.title}>
+                  {title}
+                  <ArrowIcon className={css.arrow} />
+                </div>
               </div>
-            </div>
+            </a>
           </ParallaxWrapper>
         )
       })}
