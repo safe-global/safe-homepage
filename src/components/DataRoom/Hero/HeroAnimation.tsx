@@ -26,7 +26,7 @@ const HeroAnimation = ({ containerRef, title, text }: HeroAnimationProps) => {
   return (
     <motion.div style={{ opacity }}>
       <motion.div style={{ opacity, y: yTransform }} className={css.content}>
-        <Typography variant="h1">{title}</Typography>
+        <Typography variant="h2">{title}</Typography>
 
         <Typography className={css.text}>{text}</Typography>
 

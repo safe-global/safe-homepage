@@ -1,190 +1,229 @@
 [
   {
-    "pageTitle": "Safe{Core} — Modular Ethereum Smart Account Infrastructure | Safe",
-    "description": "Embrace limitless possibilities with Safe{Core}'s modular Smart Account infrastructure, tailored for all account abstraction use cases, including ERC-4337.",
+    "pageTitle": "Safe{Core} — The #1 Smart Account Infrastructure across EVM | Safe",
+    "description": "Discover the potential of Safe{Core}’s modular Smart Accounts, optimized for security, flexibility and enhanced user experiences through account abstraction.",
     "component": "common/MetaTags"
   },
   {
-    "title": "Safe <u>CORE</u><br/>Smart Wallet Infrastructure",
-    "text": "Full-stack. Battle-tested. Open-source.",
-    "link": {
-      "title": "View documentation",
-      "href": "https://docs.safe.global"
-    },
-    "component": "Core/Intro"
-  },
-  {
-    "title": "Our Account Abstraction stack",
-    "items": [
-      {
-        "title": "Safe <u>CORE</u> AA SDK",
-        "text": "Easily level up your application and empower your users with the most advanced account abstraction SDK.",
-        "link": {
-          "title": "",
-          "href": "https://docs.safe.global/safe-core-aa-sdk"
-        }
-      },
-      {
-        "title": "Safe <u>CORE</u> API",
-        "text": "Power your interface with all Safe account related information.",
-        "link": {
-          "title": "",
-          "href": "https://docs.safe.global/safe-core-api"
-        }
-      },
-      {
-        "title": "Safe <u>CORE</u> PROTOCOL",
-        "text": "Discover, integrate and build on Safe’s robust and battle-tested smart contract account standard and programmable modules.",
-        "link": {
-          "title": "",
-          "href": "https://github.com/5afe/safe-core-protocol"
-        }
-      }
-    ],
-    "component": "Core/LinkedCardGrid"
-  },
-  {
-    "caption": "Safe Core AA SDK",
-    "title": "Get started with Safe <u>CORE</u> Account Abstraction SDK",
-    "link": {
-      "title": "View documentation",
-      "href": "https://docs.safe.global/safe-core-aa-sdk"
-    },
-    "component": "Core/AASdk"
-  },
-  {
-    "title": "What's in there",
-    "items": [
-      {
-        "title": "Protocol Kit",
-        "text": "<ul><li>Modular and customizable smart contract accounts</li><li>Battle-tested security</li><li>Transaction Batching</li></ul>",
-        "link": {
-          "title": "Read more",
-          "href": "https://docs.safe.global/safe-core-aa-sdk/protocol-kit"
-        }
-      },
-      {
-        "title": "Auth Kit",
-        "text": "<ul><li>Easy on-boarding using Web3Auth</li><li>Social and wallet logins</li><li>Get users started without a wallet</li></ul>",
-        "link": {
-          "title": "Read more",
-          "href": "https://docs.safe.global/safe-core-aa-sdk/auth-kit"
-        }
-      },
-      {
-        "title": "Relay Kit",
-        "text": "<ul><li>Gas-less experiences using Gelato</li><li>Sponsored transaction</li><li>Pay fees in ERC-20 tokens</li></ul>",
-        "link": {
-          "title": "Read more",
-          "href": "https://docs.safe.global/safe-core-aa-sdk/relay-kit"
-        }
-      },
-      {
-        "title": "Onramp Kit",
-        "text": "<ul><li>Seamless Fiat on-ramping using Stripe</li><li>Pay using a credit card</li></ul>",
-        "link": {
-          "title": "Read more",
-          "href": "https://docs.safe.global/safe-core-aa-sdk/onramp-kit"
-        }
-      }
-    ],
-    "component": "common/ItemGrid"
-  },
-  {
-    "caption": "Safe Core API",
-    "title": "Immediate access to all account information to power your applications",
-    "link": {
-      "title": "Get started",
-      "href": "https://docs.safe.global/safe-core-api"
-    },
-    "grid": {
-      "title": "Benefits",
-      "items": [
-        {
-          "title": "Decode all actions of Safe accounts"
-        },
-        {
-          "title": "Monitor all interactions with the <i>Safe</i>"
-        },
-        {
-          "title": "Easy-to-use API with extensive information"
-        },
-        {
-          "title": "Available across 15+ networks"
-        }
-      ]
-    },
-    "component": "Core/TextGrid"
-  },
-  {
-    "caption": "Safe ecosystem builders",
-    "title": "See what web3’s best builders have to say",
-    "items": [
-      {
-        "image": {
-          "src": "/images/Core/tweets/onchainden.png",
-          "alt": "Tweet from OnchainDen"
-        },
-        "link": {
-          "href": "https://twitter.com/OnChainDen/status/1615363435059118080"
-        }
-      },
-      {
-        "image": {
-          "src": "/images/Core/tweets/tribes_xyz.png",
-          "alt": "Tweet from Tribes"
-        },
-        "link": {
-          "href": "https://twitter.com/tribes_xyz/status/1617555624962969603"
-        }
-      },
-      {
-        "image": {
-          "src": "/images/Core/tweets/tarungupta.png",
-          "alt": "Tweet from tarungupta.eth"
-        },
-        "link": {
-          "href": "https://twitter.com/tarungupta1475/status/1567088924224557062"
-        }
-      },
-      {
-        "image": {
-          "src": "/images/Core/tweets/aaveaave.png",
-          "alt": "Tweet from Aave"
-        },
-        "link": {
-          "href": "https://twitter.com/AaveAave/status/1278718273933246464"
-        }
-      },
-      {
-        "image": {
-          "src": "/images/Core/tweets/ittaisvidler.png",
-          "alt": "Tweet from ittai.eth"
-        },
-        "link": {
-          "href": "https://twitter.com/IttaiSvidler/status/1592541969137676288"
-        }
-      }
-    ],
-    "component": "Core/Tweets"
-  },
-  {
-    "title": "Hacking on<br />Safe <u>CORE</u>?",
-    "caption": "Hackathon",
+    "title": "Build the</br><b>Most Secure</b></br>Onchain Apps",
+    "text": "Leverage the world’s leading open-source stack for smart accounts, securing over $100B+ in assets.",
     "buttons": [
       {
-        "text": "Use our Hackathon Guide",
-        "href": "https://safe-global.notion.site/Safe-d6c6ed61389041e28f5c7c925f653701",
-        "variant": "button",
-        "color": "secondary"
+        "text": "Explore Documentation",
+        "href": "https://docs.safe.global",
+        "variant": "button"
       },
       {
-        "text": "March for AA Hackathon",
-        "href": "https://dorahacks.io/hackathon/safe",
+        "text": "Get in Touch",
+        "href": "https://noteforms.com/forms/get-in-touch-with-the-safe-ecosystem-foundation?notionforms=1",
         "variant": "link"
       }
     ],
-    "backgroundImage": "/images/robot.png",
-    "component": "common/BannerCta"
+    "component": "Core/Intro"
+  },
+  {
+    "title": "Trusted by the Best",
+    "icons": [
+      { "name": "Fluidkey", "src": "/images/projectsLogos/fluidkey.png" },
+      { "name": "Nest", "src": "/images/projectsLogos/nest.png" },
+      { "name": "Zeal", "src": "/images/projectsLogos/zeal.png" },
+      { "name": "Gnosis Pay", "src": "/images/projectsLogos/gnosis-pay.png" },
+      { "name": "BasedApp", "src": "/images/projectsLogos/basedapp.png" },
+      { "name": "Polymarket", "src": "/images/projectsLogos/polymarket.png" },
+      { "name": "Sygnum", "src": "/images/projectsLogos/sygnum.png" },
+      { "name": "Worldcoin", "src": "/images/projectsLogos/worldcoin.png" },
+      { "name": "Circles UBI", "src": "/images/projectsLogos/circles.png" },
+      { "name": "Coinshift", "src": "/images/projectsLogos/coinshift.png" },
+      { "name": "Den", "src": "/images/projectsLogos/den.png" },
+      { "name": "Cobo", "src": "/images/projectsLogos/cobo.png" },
+      { "name": "Brahma", "src": "/images/projectsLogos/brahma.png" },
+      { "name": "DefiSaver", "src": "/images/projectsLogos/defi-saver.svg" },
+      { "name": "Olas", "src": "/images/projectsLogos/olas.png" },
+      { "name": "Drakula", "src": "/images/projectsLogos/drakula.png" }
+    ],
+    "component": "Core/TrustedBy"
+  },
+  {
+    "variant": "3-columns",
+    "title": "Build with <b><em>Safe</em></b>.</br>Find Support. Get Incentives.",
+    "items": [
+      {
+        "image": {
+          "src": "/images/target-gradient.svg",
+          "alt": "Target with arrow"
+        },
+        "title": "Product and commercial expertise"
+      },
+      {
+        "image": {
+          "src": "/images/headset-gradient.svg",
+          "alt": "Headset"
+        },
+        "title": "Support during development phase"
+      },
+      {
+        "image": {
+          "src": "/images/coin-gradient.svg",
+          "alt": "Coin"
+        },
+        "title": "Built-in monetisation opportunities"
+      },
+      {
+        "image": {
+          "src": "/images/users-gradient.svg",
+          "alt": "Users"
+        },
+        "title": "Collaboration on new features"
+      },
+      {
+        "image": {
+          "src": "/images/antenna-gradient.svg",
+          "alt": "Antenna"
+        },
+        "title": "Co-marketing of product and partnership"
+      },
+      {
+        "image": {
+          "src": "/images/pump-gradient.svg",
+          "alt": "Gas pump"
+        },
+        "title": "Access to our</br><a href=\"/gas-station\">Gas Station program</a>"
+      }
+    ],
+    "component": "common/UspBlock"
+  },
+  {
+    "variant": "text-image",
+    "title": "Add <b>Multi-Factor Security</b> to Your Apps",
+    "text": "Safe{Core} lets you integrate robust onchain multi-factor authentication. Give your users the peace of mind they deserve with secure, customizable logins.",
+    "image": {
+      "src": "/images/Core/multi-factor.png",
+      "alt": "Multi-factor security"
+    },
+    "component": "Core/ParallaxMultiFactor"
+  },
+  {
+    "variant": "image-text",
+    "title": "Empower Your Users with Secure <b>Account Recovery</b>",
+    "text": "Don't let lost keys jeopardize user experience and trust. Safe{Core} provides seamless onchain recovery solutions that enhance security without compromising control.",
+    "image": {
+      "src": "/images/Core/account-recovery.png",
+      "alt": "Account recovery"
+    },
+    "component": "Core/TextRadialAnimation"
+  },
+  {
+    "variant": "text-image",
+    "title": "<b>Build for the Future</b>, Escape Lock-In",
+    "text": "Gone are the days of building for a specific standard only to have the landscape shift beneath you. Build your apps with the Safe{Core} future-proof approach standard.",
+    "items": [
+      {
+        "title": "ERC 4337",
+        "link": {
+          "href": "https://docs.safe.global/sdk/relay-kit/reference/safe-4337-pack"
+        }
+      },
+      {
+        "title": "ERC 7579",
+        "link": {
+          "href": "https://docs.safe.global/advanced/erc-7579/7579-safe"
+        }
+      },
+      {
+        "title": "Supported Networks",
+        "link": {
+          "href": "https://docs.safe.global/advanced/smart-account-supported-networks/v1.3.0"
+        }
+      }
+    ],
+    "component": "Core/ParallaxBuild"
+  },
+  {
+    "variant": "image-text",
+    "caption": "200+ projects",
+    "title": "<em>Safe</em> Smart Accounts power over <b>200 projects across 200+ networks</b>",
+    "buttons": [
+      {
+        "text": "Explore ecosystem",
+        "href": "https://safe.global/ecosystem",
+        "variant": "button"
+      },
+      {
+        "text": "Case studies",
+        "href": "https://safe.global/blog?category=Insights",
+        "variant": "link"
+      }
+    ],
+    "items": [
+      {
+        "title": "Payments",
+        "link": {
+          "href": "https://safe.global/blog/safe-case-2-digital-ownership-in-your-pocket"
+        }
+      },
+      {
+        "title": "DAOs"
+      },
+      {
+        "title": "Restaking",
+        "link": {
+          "href": "https://safe.global/blog/the-safe-case-staking-and-restaking"
+        }
+      },
+      {
+        "title": "AI",
+        "link": {
+          "href": "https://safe.global/blog/the-safe-case-ai-smart-accounts-crypto"
+        }
+      },
+      {
+        "title": "Social & ID",
+        "link": {
+          "href": "https://safe.global/blog/safe-case-decentralized-social-id"
+        }
+      },
+      {
+        "title": "Institution",
+        "link": {
+          "href": "https://safe.global/blog/the-safe-case-infrastructure-for-institutional-crypto-self-custody"
+        }
+      }
+    ],
+    "component": "Core/ParallaxCaseStudies"
+  },
+  {
+    "title": "Get Started with Safe <u>CORE</u>",
+    "caption": "What's in there",
+    "items": [
+      {
+        "title": "Smart Contracts",
+        "text": "<ul><li>Multi-signature standard enforces security</li><li>Modular and flexible Smart Accounts</li><li>Transaction thresholds, delegate calls and more</li></ul>"
+      },
+      {
+        "title": "SDK",
+        "text": "<ul><li>Unified interface for all Safe Smart Account functionalities</li><li>Create, configure, and manage Safe Smart Accounts</li><li>Enable ERC-4337 for flexible transaction fee payments</li></ul>"
+      },
+      {
+        "title": "Infrastructure",
+        "text": "<ul><li>Track and manage Safe Smart Account transactions</li><li>Index Safe events and deliver them via webhooks</li><li>Interact with Safe Transaction Service API and account data</li></ul>"
+      }
+    ],
+    "component": "Core/AASdk"
+  },
+  {
+    "title": "Build with <b><em>Safe</em></b>.</br>We've got your back.",
+    "buttons": [
+      {
+        "text": "View Documentation",
+        "href": "https://docs.safe.global",
+        "variant": "button"
+      },
+      {
+        "text": "Get in Touch",
+        "href": "https://noteforms.com/forms/get-in-touch-with-the-safe-ecosystem-foundation?notionforms=1",
+        "variant": "link"
+      }
+    ],
+    "component": "common/CenteredTextBlock"
   }
 ]
