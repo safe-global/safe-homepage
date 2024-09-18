@@ -43,7 +43,7 @@
   },
   {
     "component": "DataRoom/VolumeTransferred",
-    "title": "Big money moves on <b><em>Safe</em></b>",
+    "title": "Total Volume Processed via <b><em>Safe</em></b>",
     "link": {
       "title": "Dune dashboard",
       "href": "https://dune.com/safe/all"
@@ -51,7 +51,7 @@
   },
   {
     "component": "DataRoom/FeesEarned",
-    "title": "Annualized community aligned<br/><b>fees earned</b>:",
+    "title": "Annualized community aligned</br><b>fees earned</b>:",
     "fees": [
       {
         "label": "Native Swaps",

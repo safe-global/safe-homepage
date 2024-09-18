@@ -81,7 +81,7 @@
 
 @media (max-width: 900px) {
   .sectionContainer {
-    height: 300lvh;
+    height: 200lvh;
   }
 
   .stickyContainer {
@@ -97,7 +97,7 @@
 
   .feeContainer {
     justify-content: flex-start;
-    width: 300%;
+    width: 100%;
     overflow: hidden;
     gap: 32px;
     padding: 16px;
@@ -124,5 +124,9 @@
 
   .feeAmount {
     flex-grow: 0;
+  }
+
+  .hideOnMobile {
+    display: none;
   }
 }
