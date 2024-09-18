@@ -9,13 +9,13 @@
     "text": "Leverage the world’s leading open-source stack for smart accounts, securing over $100B+ in assets.",
     "buttons": [
       {
-        "text": "Get in Touch",
-        "href": "https://noteforms.com/forms/get-in-touch-with-the-safe-ecosystem-foundation?notionforms=1",
+        "text": "Explore Documentation",
+        "href": "https://docs.safe.global",
         "variant": "button"
       },
       {
-        "text": "Explore Documentation",
-        "href": "https://docs.safe.global",
+        "text": "Get in Touch",
+        "href": "https://noteforms.com/forms/get-in-touch-with-the-safe-ecosystem-foundation?notionforms=1",
         "variant": "link"
       }
     ],
@@ -24,6 +24,9 @@
   {
     "title": "Trusted by the Best",
     "icons": [
+      { "name": "Fluidkey", "src": "/images/projectsLogos/fluidkey.png" },
+      { "name": "Nest", "src": "/images/projectsLogos/nest.png" },
+      { "name": "Zeal", "src": "/images/projectsLogos/zeal.png" },
       { "name": "Gnosis Pay", "src": "/images/projectsLogos/gnosis-pay.png" },
       { "name": "BasedApp", "src": "/images/projectsLogos/basedapp.png" },
       { "name": "Polymarket", "src": "/images/projectsLogos/polymarket.png" },
@@ -36,16 +39,13 @@
       { "name": "Brahma", "src": "/images/projectsLogos/brahma.png" },
       { "name": "DefiSaver", "src": "/images/projectsLogos/defi-saver.svg" },
       { "name": "Olas", "src": "/images/projectsLogos/olas.png" },
-      { "name": "Drakula", "src": "/images/projectsLogos/drakula.png" },
-      { "name": "Fluidkey", "src": "/images/projectsLogos/fluidkey.png" },
-      { "name": "Nest", "src": "/images/projectsLogos/nest.png" },
-      { "name": "Zeal", "src": "/images/projectsLogos/zeal.png" }
+      { "name": "Drakula", "src": "/images/projectsLogos/drakula.png" }
     ],
-    "component": "Home/TitleSlidingIcons"
+    "component": "Core/TrustedBy"
   },
   {
     "variant": "3-columns",
-    "title": "Build with <b><em>Safe</em></b>. Find Support. Get Incentives.",
+    "title": "Build with <b><em>Safe</em></b>.</br>Find Support. Get Incentives.",
     "items": [
       {
         "image": {
@@ -87,7 +87,7 @@
           "src": "/images/pump-gradient.svg",
           "alt": "Gas pump"
         },
-        "title": "Access to our Gas Station program"
+        "title": "Access to our</br><a href=\"/gas-station\">Gas Station program</a>"
       }
     ],
     "component": "common/UspBlock"
@@ -116,6 +116,26 @@
     "variant": "text-image",
     "title": "<b>Build for the Future</b>, Escape Lock-In",
     "text": "Gone are the days of building for a specific standard only to have the landscape shift beneath you. Build your apps with the Safe{Core} future-proof approach standard.",
+    "items": [
+      {
+        "title": "ERC 4337",
+        "link": {
+          "href": "https://docs.safe.global/sdk/relay-kit/reference/safe-4337-pack"
+        }
+      },
+      {
+        "title": "ERC 7579",
+        "link": {
+          "href": "https://docs.safe.global/advanced/erc-7579/7579-safe"
+        }
+      },
+      {
+        "title": "Supported Networks",
+        "link": {
+          "href": "https://docs.safe.global/advanced/smart-account-supported-networks/v1.3.0"
+        }
+      }
+    ],
     "component": "Core/ParallaxBuild"
   },
   {
@@ -173,10 +193,6 @@
   },
   {
     "title": "Get Started with Safe <u>CORE</u>",
-    "link": {
-      "title": "View Documentation",
-      "href": "https://docs.safe.global"
-    },
     "caption": "What's in there",
     "items": [
       {
@@ -201,6 +217,11 @@
         "text": "View Documentation",
         "href": "https://docs.safe.global",
         "variant": "button"
+      },
+      {
+        "text": "Get in Touch",
+        "href": "https://noteforms.com/forms/get-in-touch-with-the-safe-ecosystem-foundation?notionforms=1",
+        "variant": "link"
       }
     ],
     "component": "common/CenteredTextBlock"

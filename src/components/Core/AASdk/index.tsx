@@ -23,7 +23,7 @@ const AASdk = ({ caption, title, text, link, items }: BaseBlock) => (
       <div className={css.videoWrapper}>
         <video autoPlay muted playsInline loop className={css.video}>
           <source src="/videos/Core/safe-core.mp4" type="video/mp4" />
-          <img src="/images/Core/aa-sdk.png" alt="AA SDK Overview" />
+          <img src="/images/Core/safe-core-org.png" alt="Safe Core Overview" />
         </video>
         <a
           className={clsx(css.videoLink, css.smartContractsLink)}
