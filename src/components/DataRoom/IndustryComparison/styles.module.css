@@ -33,7 +33,15 @@
 }
 
 @media (max-width: 900px) {
+  .sectionContainer {
+    height: 100lvh;
+  }
+
   .content {
     padding: 32px;
+  }
+
+  .stickyContainer {
+    height: 100lvh;
   }
 }

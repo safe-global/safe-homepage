@@ -80,6 +80,10 @@
 }
 
 @media (max-width: 900px) {
+  .sectionContainer {
+    height: 300lvh;
+  }
+
   .stickyContainer {
     padding-top: 80px;
     justify-content: center;
@@ -88,6 +92,7 @@
     overflow: hidden;
     padding-left: 16px;
     padding-right: 16px;
+    height: 100lvh;
   }
 
   .feeContainer {
@@ -100,5 +105,24 @@
 
   .fee {
     width: 100%;
+    justify-content: flex-start;
+  }
+
+  .bar {
+    height: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .lockedBar {
+    height: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .feeAmount {
+    flex-grow: 0;
   }
 }

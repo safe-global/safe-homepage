@@ -97,9 +97,10 @@ export default function SlidingContent({
           x: transformLTR,
           opacity: opacityLTR,
         }}
-        className={css.title}
       >
-        <Typography variant="h2">{title}</Typography>
+        <Typography className={css.title} variant="h2">
+          {title}
+        </Typography>
       </motion.div>
     </>
   )
