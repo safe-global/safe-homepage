@@ -7,13 +7,13 @@
   },
   {
     "component": "DataRoom/Hero",
-    "title": "Safe Data Room",
-    "text": "Explore Mind Bending Stats from Safe Universe"
+    "title": "Welcome to <b><em>Safe</em></b> Data Room",
+    "text": "Explore live tracking of key metrics associated with <em>Safe</em> adoption"
   },
   {
     "component": "DataRoom/WorldGDP",
     "title": "<b><em>Safe</em> TVL</b> is",
-    "text": "Secure, as a significant component of global crypto activity within the world’s GDP.",
+    "text": "Total value secured in <em>Safe</em> Smart Accounts can already be seen in comparison to world GDP.",
     "link": {
       "title": "Dune dashboard",
       "href": "https://dune.com/queries/3710102/6242478"
@@ -21,7 +21,7 @@
   },
   {
     "component": "DataRoom/USDCStorage",
-    "title": "We store...<br/>",
+    "title": "<b><em>Safe</em></b> accounts store...<br/>",
     "text": "<b>of all USDC</b>",
     "link": {
       "title": "Dune",
@@ -34,8 +34,8 @@
   },
   {
     "component": "DataRoom/CryptoPunks",
-    "title": "CryptoPunks",
-    "text": "Safe has proven to be one of the most reliable storage solutions for protecting and managing your NFTs.",
+    "title": "Cryptopunks currently owned in <em>Safe</em>",
+    "text": "Cryptopunks are vaulted up by their owners behind <em>Safe</em>’s multisig security",
     "link": {
       "title": "Dune dashboard",
       "href": "https://dune.com/safe/ethereum-nfts"
@@ -43,7 +43,7 @@
   },
   {
     "component": "DataRoom/VolumeTransferred",
-    "title": "All time asset <b>volume<br/>transferred</b>",
+    "title": "Big money moves on <b><em>Safe</em></b>",
     "link": {
       "title": "Dune dashboard",
       "href": "https://dune.com/safe/all"
@@ -51,25 +51,25 @@
   },
   {
     "component": "DataRoom/FeesEarned",
-    "title": "Safe{Wallet} annualized<br/><b>fees earned</b>",
+    "title": "Community aligned<br/><b>fees earned</b>",
     "fees": [
       {
-        "label": "SWAPS",
+        "label": "Native Swaps",
         "isLocked": false
       },
       {
-        "label": "STAKING",
+        "label": "Native Staking",
         "isLocked": true
       },
       {
-        "label": "FUTURE FEES",
+        "label": "Future Fees",
         "isLocked": true
       }
     ]
   },
   {
     "component": "DataRoom/TransactionsOnChain",
-    "text": "<b>transactions on chain</b> originate from a <b>Safe Account</b>",
+    "text": "<b>onchain transactions</b> originate from a <b>Safe Account</b>",
     "link": {
       "title": "Dune",
       "href": "https://dune.com/queries/3737066"
@@ -77,11 +77,11 @@
   },
   {
     "component": "DataRoom/IndustryComparison",
-    "title": "How we compare<br/>to others industry leaders"
+    "title": "How <em>Safe</em> compares<br/>to others"
   },
   {
     "component": "DataRoom/AssetsSecured",
-    "caption": "CEX",
+    "caption": "CEX vs Safe",
     "cexes": [
       {
         "name": "Robinhood CEX",
@@ -101,7 +101,7 @@
         "tvl": 100360813869.09479
       }
     ],
-    "title": "Safe has more <b>assets secured</b> <br/>than many Fintechs and CEXes"
+    "title": "<em>Safe</em> has significantly <b>more TVL</b> that some large CEXs and is all non-custodial"
   },
   {
     "component": "DataRoom/SeeMore",
