@@ -6,7 +6,7 @@ import { useRef } from 'react'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 import type { FeeType } from './SlidingContent'
 
-const SlidingContent = dynamic(() => import('./SlidingContent'))
+const SlidingContent = dynamic(() => import('./SlidingContent'), { ssr: false })
 
 const FeesEarned = ({ title, fees }: BaseBlock & { fees: FeeType[] }) => {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -19,7 +19,7 @@ const FeesEarned = ({ title, fees }: BaseBlock & { fees: FeeType[] }) => {
           {title}
         </Typography>
 
-        <SlidingContent fees={fees} containerRef={containerRef} />
+        <SlidingContent fees={fees} />
       </div>
     </div>
   )

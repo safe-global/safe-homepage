@@ -37,7 +37,7 @@ const Stack = ({ totalBars, value, isLocked, label }: StackProps) => {
   }
 
   return (
-    <div className={css.fee}>
+    <div className={`${css.fee} ${isLocked ? css.hideOnMobile : ''}`}>
       <div className={css.feeAmount}>
         {isLocked ? (
           <Typography variant="h5" color="text.disabled">

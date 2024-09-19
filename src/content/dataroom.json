@@ -43,7 +43,7 @@
   },
   {
     "component": "DataRoom/VolumeTransferred",
-    "title": "Big money moves on <b><em>Safe</em></b>",
+    "title": "Total Volume Processed via <b><em>Safe</em></b>",
     "link": {
       "title": "Dune dashboard",
       "href": "https://dune.com/safe/all"
@@ -51,7 +51,7 @@
   },
   {
     "component": "DataRoom/FeesEarned",
-    "title": "Community aligned<br/><b>fees earned</b>",
+    "title": "Annualized community aligned</br><b>fees earned</b>:",
     "fees": [
       {
         "label": "Native Swaps",
@@ -101,7 +101,7 @@
         "tvl": 100360813869.09479
       }
     ],
-    "title": "<em>Safe</em> has significantly <b>more TVL</b> that some large CEXs and is all non-custodial"
+    "title": "<em>Safe</em> TVL compares and surpasses major CEXs"
   },
   {
     "component": "DataRoom/SeeMore",
