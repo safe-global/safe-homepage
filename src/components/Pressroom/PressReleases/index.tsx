@@ -7,6 +7,7 @@ import SearchIcon from '@/public/images/search.svg'
 import CategoryFilter from '@/components/common/CategoryFilter'
 import { PressroomIds } from '@/components/Pressroom/ContentsNavigation'
 import { containsTag, isPressReleasePost } from '@/lib/containsTag'
+import { isDraft } from '@/lib/contentful/isDraft'
 import { getPage } from '@/lib/getPage'
 import { useAllPosts } from '@/hooks/useAllPosts'
 import type { PostEntryCollection } from '@/config/types'
@@ -23,7 +24,7 @@ const PressReleases = ({ allPosts }: { allPosts: PostEntryCollection }) => {
   const { localAllPosts } = useAllPosts(allPosts)
 
   const filteredPosts = useMemo(() => {
-    const pressPosts = localAllPosts.items.filter(isPressReleasePost)
+    const pressPosts = localAllPosts.items.filter((post) => isPressReleasePost(post) && !isDraft(post))
 
     return !selectedTag ? pressPosts : pressPosts.filter((post) => containsTag(post.fields.tags, selectedTag))
   }, [localAllPosts.items, selectedTag])

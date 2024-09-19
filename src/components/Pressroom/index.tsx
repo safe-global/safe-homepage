@@ -49,6 +49,7 @@ const PressRoom = ({ pressRoom, allPosts, totalAssets }: PressRoomProps) => {
   const videosList = videos.filter(isEntryTypeExternalURL)
 
   const latestPressRelease = allPosts.items.find((post) => isPressReleasePost(post) && !isDraft(post))
+  console.log('latest', latestPressRelease?.fields.title)
 
   return (
     <>
