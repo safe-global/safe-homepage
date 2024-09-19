@@ -6,7 +6,7 @@ import css from './styles.module.css'
 
 const PunksGrid = dynamic(() => import('./PunksGrid'), { ssr: false })
 const Content = dynamic(() => import('./Content'))
-const SlidingPanel = dynamic(() => import('@/components/common/SlidingPanel'))
+const SlidingPanel = dynamic(() => import('@/components/common/SlidingPanel'), { ssr: false })
 
 const CryptoPunks = ({ title, text, link }: BaseBlock) => {
   const containerRef = useRef<HTMLDivElement>(null)

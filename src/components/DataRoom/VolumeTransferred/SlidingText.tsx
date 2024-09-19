@@ -46,7 +46,7 @@ const SlidingText = ({ containerRef }: { containerRef: RefObject<HTMLDivElement>
             <b>{displayValue}</b>
           </Typography>
 
-          <Typography variant="h2">All time value moved in Safes</Typography>
+          <Typography variant="h2">and counting...</Typography>
         </div>
       </motion.div>
     </>
