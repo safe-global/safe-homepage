@@ -11,19 +11,7 @@
   display: flex;
 }
 
-.rightPanelContainer {
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  color: var(--mui-palette-text-dark);
-  overflow-x: hidden;
-  display: flex;
-  align-items: flex-end;
-  padding-top: 64px;
-}
-
-.rightPanelContent {
+.slidingPanelContent {
   z-index: 20;
   display: flex;
   flex-direction: column;
@@ -33,23 +21,16 @@
   gap: 30px;
 }
 
-.rightPanelBG {
-  position: absolute;
-  inset: 0;
-  background-color: var(--mui-palette-primary-main);
-  z-index: 10;
-  margin-top: 72px;
-}
-
 .percentage {
   font-size: 120px;
   line-height: 120px;
 }
 
 .text {
+  width: 265px;
   font-size: 16px;
   line-height: 24px;
-  align-self: flex-start;
+  align-self: flex-end;
   margin-bottom: auto;
 }
 
@@ -65,7 +46,7 @@
   align-items: baseline;
 }
 
-.leftPanelContainer {
+.punksGrid {
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -92,39 +73,26 @@
   }
   .stickyContainer {
     flex-direction: column-reverse;
+    height: 100lvh;
   }
 
-  .leftPanelContainer {
+  .punksGrid {
     padding-top: 72px;
     width: 100%;
     height: 100%;
+    overflow: hidden;
   }
 
-  .rightPanelContainer {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    bottom: 0;
-  }
-
-  .rightPanelContent {
+  .slidingPanelContent {
     justify-content: end;
     padding: 30px;
     gap: 30px;
-  }
-
-  .rightPanelBG {
-    margin-top: 64px;
   }
 
   .statsContainer {
     display: flex;
     flex-direction: column;
     gap: 30px;
-  }
-
-  .leftPanelContainer {
-    overflow: hidden;
   }
 
   .cryptopunk {

@@ -34,6 +34,10 @@ export const AUTH_KIT_LINK = 'https://docs.safe.global/safe-core-aa-sdk/auth-kit
 export const RELAY_KIT_LINK = 'https://docs.safe.global/safe-core-aa-sdk/relay-kit'
 export const ONRAMP_KIT_LINK = 'https://docs.safe.global/safe-core-aa-sdk/onramp-kit'
 
+export const DOCS_SDK = 'https://docs.safe.global/sdk/overview'
+export const DOCS_INFRASTRUCTURE = 'https://docs.safe.global/core-api/api-overview'
+export const DOCS_SMART_CONTRACTS = 'https://docs.safe.global/advanced/smart-account-overview'
+
 export const ECOSYSTEM_DATA_URL = IS_PRODUCTION
   ? 'https://ecosystem-database.safe.global'
   : 'https://ecosystem-database.staging.5afe.dev'

@@ -1,0 +1,125 @@
+.sectionContainer {
+  height: 200vh;
+  display: flex;
+}
+
+.stickyContainer {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  padding: 200px 128px 256px;
+  overflow: hidden;
+}
+
+.label {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-bottom: 60px;
+  color: var(--mui-palette-primary-light);
+}
+
+.title {
+  margin-top: 100px;
+  text-align: right;
+  width: 100%;
+}
+
+.cexesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.cexEntry {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 22px;
+}
+
+.squareGrid {
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+  align-items: center;
+}
+
+.gridItem {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  background-color: var(--mui-palette-primary-light);
+}
+
+.gridItemMain {
+  background-color: var(--mui-palette-primary-main);
+}
+
+.labelContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+}
+
+.labelCaption {
+  white-space: nowrap;
+  color: var(--mui-palette-primary-light);
+}
+
+@media (max-width: 1000px) {
+  .sectionContainer {
+    height: 200lvh;
+  }
+
+  .stickyContainer {
+    padding: 30px;
+    overflow: hidden;
+    padding-top: 72px;
+    height: 100lvh;
+    justify-content: center;
+  }
+
+  .cexesContainer {
+    gap: 24px;
+  }
+
+  .cexTitle {
+    font-size: 18px;
+  }
+
+  .label {
+    font-size: 18px;
+    padding-bottom: 12px;
+  }
+
+  .labelCaption {
+    font-size: 18px;
+  }
+
+  .labelContainer {
+    gap: 12px;
+  }
+
+  .cexEntry {
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+  }
+
+  .title {
+    margin-top: 40px;
+    text-align: left;
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .cexMessage {
+    font-size: 20px;
+  }
+}

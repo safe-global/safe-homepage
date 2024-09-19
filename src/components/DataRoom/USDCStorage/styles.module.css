@@ -41,6 +41,7 @@
     padding-top: 72px;
     justify-content: flex-start;
     flex-direction: column;
+    height: 100lvh;
   }
 
   .usdcPercentage {
@@ -54,6 +55,7 @@
   }
 
   .canvas {
+    height: 100lvh;
     width: 100%;
     position: absolute;
     top: 0;

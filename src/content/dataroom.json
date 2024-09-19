@@ -7,12 +7,21 @@
   },
   {
     "component": "DataRoom/Hero",
-    "title": "Welcome to Safe Data Room",
-    "text": "Explore Mind Bending Sats from Safe Universe"
+    "title": "Welcome to <b><em>Safe</em></b> Data Room",
+    "text": "Explore live tracking of key metrics associated with <em>Safe</em> adoption"
+  },
+  {
+    "component": "DataRoom/WorldGDP",
+    "title": "<b><em>Safe</em> TVL</b> is",
+    "text": "Total value secured in <em>Safe</em> Smart Accounts can already be seen in comparison to world GDP.",
+    "link": {
+      "title": "Dune dashboard",
+      "href": "https://dune.com/queries/3710102/6242478"
+    }
   },
   {
     "component": "DataRoom/USDCStorage",
-    "title": "We store...<br/>",
+    "title": "<b><em>Safe</em></b> accounts store...<br/>",
     "text": "<b>of all USDC</b>",
     "link": {
       "title": "Dune",
@@ -25,8 +34,8 @@
   },
   {
     "component": "DataRoom/CryptoPunks",
-    "title": "CryptoPunks",
-    "text": "Some text thats changing<br/>Confirming the sources of the data<br/>Any other info regarding the stats",
+    "title": "Cryptopunks currently owned in <em>Safe</em>",
+    "text": "Cryptopunks are vaulted up by their owners behind <em>Safe</em>’s multisig security",
     "link": {
       "title": "Dune dashboard",
       "href": "https://dune.com/safe/ethereum-nfts"
@@ -34,20 +43,69 @@
   },
   {
     "component": "DataRoom/VolumeTransferred",
-    "title": "with all time volume<br/>transferred",
-    "text": "and counting...",
+    "title": "Total Volume Processed via <b><em>Safe</em></b>",
     "link": {
       "title": "Dune dashboard",
       "href": "https://dune.com/safe/all"
     }
   },
   {
+    "component": "DataRoom/FeesEarned",
+    "title": "Annualized community aligned</br><b>fees earned</b>:",
+    "fees": [
+      {
+        "label": "Native Swaps",
+        "isLocked": false
+      },
+      {
+        "label": "Native Staking",
+        "isLocked": true
+      },
+      {
+        "label": "Future Fees",
+        "isLocked": true
+      }
+    ]
+  },
+  {
     "component": "DataRoom/TransactionsOnChain",
-    "text": "<b>transactions on chain</b> originate from a <b>Safe Account</b>",
+    "text": "<b>onchain transactions</b> originate from a <b>Safe Account</b>",
     "link": {
       "title": "Dune",
       "href": "https://dune.com/queries/3737066"
     }
+  },
+  {
+    "component": "DataRoom/IndustryComparison",
+    "title": "How <em>Safe</em> compares<br/>to others"
+  },
+  {
+    "component": "DataRoom/AssetsSecured",
+    "caption": "CEX vs Safe",
+    "cexes": [
+      {
+        "name": "Robinhood CEX",
+        "tvl": 11884403168.737804
+      },
+      {
+        "name": "OKX",
+        "tvl": 17505106456.55226
+      },
+      {
+        "name": "Safe",
+        "tvl": 62468973126.503235,
+        "boxColor": "main"
+      },
+      {
+        "name": "Binance",
+        "tvl": 100360813869.09479
+      }
+    ],
+    "title": "<em>Safe</em> TVL compares and surpasses major CEXs"
+  },
+  {
+    "component": "DataRoom/SeeMore",
+    "text": "Want to see <b>more</b>?"
   },
   {
     "component": "DataRoom/ExternalLinksGrid",

@@ -1,0 +1,47 @@
+.sectionContainer {
+  height: 150vh;
+  display: flex;
+}
+
+.stickyContainer {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+}
+
+.content {
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 64px;
+  height: 100%;
+  gap: 30px;
+  color: var(--mui-palette-text-dark);
+  background-color: var(--mui-palette-primary-main);
+}
+
+.canvasStyles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 900px) {
+  .sectionContainer {
+    height: 100lvh;
+  }
+
+  .content {
+    padding: 32px;
+  }
+
+  .stickyContainer {
+    height: 100lvh;
+  }
+}

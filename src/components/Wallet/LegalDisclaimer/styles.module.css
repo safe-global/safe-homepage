@@ -6,3 +6,9 @@
   color: var(--mui-palette-primary-main);
   text-decoration: underline;
 }
+
+.container .body {
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--mui-palette-primary-light);
+}
