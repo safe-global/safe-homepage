@@ -25,7 +25,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-bottom: 48px;
+  margin-bottom: 80px;
 }
 
 .text {
@@ -38,6 +38,7 @@
   text-align: center;
   font-size: 12px;
   color: var(--mui-palette-text-primary);
+  animation: bounce 3s infinite;
 }
 
 .scroll::after {
@@ -66,5 +67,20 @@
     width: 100%;
     max-width: calc(100dvw - 30px);
     height: 100svh;
+  }
+}
+
+@keyframes bounce {
+  from,
+  to {
+    transform: translateY(0);
+  }
+
+  10% {
+    transform: translateY(-10px);
+  }
+
+  30% {
+    transform: translateY(0);
   }
 }
