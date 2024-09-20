@@ -1,13 +1,13 @@
-import type { BaseBlock } from '@/components/Home/types'
-import LinksWrapper from '@/components/DataRoom/LinksWrapper'
-import css from './styles.module.css'
-import dynamic from 'next/dynamic'
 import { Typography } from '@mui/material'
+import dynamic from 'next/dynamic'
+import LinksWrapper from '@/components/DataRoom/LinksWrapper'
+import type { BaseBlock } from '@/components/Home/types'
+import css from './styles.module.css'
 
 const SlidingVideo = dynamic(() => import('./SlidingVideo'))
 const SlidingText = dynamic(() => import('./SlidingText'))
 
-const WorldGDP = ({ text, title, link }: BaseBlock) => {
+const WorldGDP = ({ title, text, link }: BaseBlock) => {
   return (
     <div className={css.sectionContainer}>
       <div className={css.stickyContainer}>
