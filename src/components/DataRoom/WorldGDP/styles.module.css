@@ -33,6 +33,8 @@
 }
 
 .textContainer {
+  position: absolute;
+  bottom: 60px;
   display: flex;
   flex-direction: column;
   margin-top: 64px;
