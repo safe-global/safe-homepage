@@ -37,7 +37,6 @@ export type PressRoomProps = {
 }
 
 const PressRoom = ({ pressRoom, allPosts, totalAssets }: PressRoomProps) => {
-  console.log('PressRoom non-drafts', allPosts.items.filter((post) => !isDraft(post)).length)
   const { data: localPressRoom } = useClientEntry<TypePressRoomSkeleton, PressRoomEntry>(pressRoom.sys.id, pressRoom)
   const { localAllPosts } = useAllPosts(allPosts)
 
@@ -50,8 +49,8 @@ const PressRoom = ({ pressRoom, allPosts, totalAssets }: PressRoomProps) => {
   const podcastsList = podcasts.filter(isEntryTypeExternalURL)
   const videosList = videos.filter(isEntryTypeExternalURL)
 
+  // Get the most recent press release that is not a draft
   const latestPressRelease = localAllPosts.items.find((post) => isPressReleasePost(post) && !isDraft(post))
-  console.log('latest', latestPressRelease?.fields.title)
 
   return (
     <>

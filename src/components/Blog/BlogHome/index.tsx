@@ -8,7 +8,6 @@ import type { Entry } from 'contentful'
 import { isEntryTypePost } from '@/lib/typeGuards'
 import { useClientEntry } from '@/hooks/useClientEntry'
 import type { PostEntryCollection } from '@/config/types'
-import { isDraft } from '@/lib/contentful/isDraft'
 
 const categories = ['Announcements', 'Ecosystem', 'Community', 'Insights', 'Build']
 
@@ -22,7 +21,6 @@ export type BlogHomeProps = {
 }
 
 const BlogHome = ({ blogHome, allPosts }: BlogHomeProps) => {
-  console.log('BlogHome', allPosts.items.filter((post) => !isDraft(post)).length)
   const { data: localBlogHome } = useClientEntry<TypeBlogHomeSkeleton, BlogHomeEntry>(blogHome.sys.id, blogHome)
 
   const { featured, metaTags, mostPopular } = localBlogHome.fields
