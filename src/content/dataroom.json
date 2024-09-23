@@ -2,7 +2,7 @@
   {
     "pageTitle": "Safe Data Room - Key Insights into the Safe Ecosystem",
     "description": "Uncover the impact of the Safe ecosystem in crypto. Explore detailed metrics on USDC storage, CryptoPunks holdings, and transaction volumes. Access comprehensive reports from Dune Analytics, Messari, Nansen, and more.",
-    "image": "/images/Home/meta-image-homepage.jpg",
+    "image": "/images/DataRoom/meta-image-dataroom.jpg",
     "component": "common/MetaTags"
   },
   {
@@ -138,7 +138,17 @@
     "title": "External Reports",
     "items": [
       {
-        "title": "Messari Q4 2023",
+        "title": "Messari Q2 2024",
+        "image": {
+          "src": "/images/messari-logo.svg",
+          "alt": "Messari logo"
+        },
+        "link": {
+          "href": "https://messari.io/report/state-of-safe-q2-2024"
+        }
+      },
+      {
+        "title": "Messari Q1 2024",
         "image": {
           "src": "/images/messari-logo.svg",
           "alt": "Messari logo"
@@ -148,7 +158,7 @@
         }
       },
       {
-        "title": "Messari Q1 2024",
+        "title": "Messari Q4 2023",
         "image": {
           "src": "/images/messari-logo.svg",
           "alt": "Messari logo"
