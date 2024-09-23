@@ -26,6 +26,7 @@ import { useClientEntry } from '@/hooks/useClientEntry'
 import type { PostEntryCollection } from '@/config/types'
 import { isPressReleasePost } from '@/lib/containsTag'
 import { isDraft } from '@/lib/contentful/isDraft'
+import { useAllPosts } from '@/hooks/useAllPosts'
 
 export type PressRoomEntry = Entry<TypePressRoomSkeleton, undefined, string>
 
@@ -36,9 +37,10 @@ export type PressRoomProps = {
 }
 
 const PressRoom = ({ pressRoom, allPosts, totalAssets }: PressRoomProps) => {
+  console.log('PressRoom non-drafts', allPosts.items.filter((post) => !isDraft(post)).length)
   const { data: localPressRoom } = useClientEntry<TypePressRoomSkeleton, PressRoomEntry>(pressRoom.sys.id, pressRoom)
+  const { localAllPosts } = useAllPosts(allPosts)
 
-  console.log(localPressRoom.fields)
   const { metaTags, numbers, investors, timeline, news, podcasts, videos } = localPressRoom.fields
 
   const numbersList = numbers.filter(isEntryTypeBaseBlock)
@@ -48,7 +50,7 @@ const PressRoom = ({ pressRoom, allPosts, totalAssets }: PressRoomProps) => {
   const podcastsList = podcasts.filter(isEntryTypeExternalURL)
   const videosList = videos.filter(isEntryTypeExternalURL)
 
-  const latestPressRelease = allPosts.items.find((post) => isPressReleasePost(post) && !isDraft(post))
+  const latestPressRelease = localAllPosts.items.find((post) => isPressReleasePost(post) && !isDraft(post))
   console.log('latest', latestPressRelease?.fields.title)
 
   return (
