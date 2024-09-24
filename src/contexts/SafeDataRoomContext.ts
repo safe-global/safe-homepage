@@ -1,10 +1,10 @@
 import { createContext } from 'react'
 
 type SafeDataRoomStats = {
-  tvlToGDPPercentage: number | null
+  tvpToGDPPercentage: number | null
   usdcPercentageStored: number | null
   cryptoPunksStoredPercentage: number | null
-  totalVolumeTransfered: number | null
+  totalVolumeTransferred: number | null
   onChainTransactionsPercentage: number | null
   tvlSafe: number | null
   tvlRobinhoodCEX: number | null
@@ -15,10 +15,10 @@ type SafeDataRoomStats = {
 }
 
 const SafeDataRoomContext = createContext<SafeDataRoomStats>({
-  tvlToGDPPercentage: null,
+  tvpToGDPPercentage: null,
   usdcPercentageStored: null,
   cryptoPunksStoredPercentage: null,
-  totalVolumeTransfered: null,
+  totalVolumeTransferred: null,
   onChainTransactionsPercentage: null,
   tvlSafe: null,
   tvlRobinhoodCEX: null,
