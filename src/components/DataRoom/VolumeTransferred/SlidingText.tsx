@@ -9,7 +9,7 @@ import css from './styles.module.css'
 const VOLUME_TRANSFERRED_FALLBACK = 611_127_712_666
 
 const SlidingText = ({ containerRef }: { containerRef: RefObject<HTMLDivElement> }) => {
-  const { totalVolumeTransfered } = useSafeDataRoomStats()
+  const { totalVolumeTransferred } = useSafeDataRoomStats()
   const { scrollYProgress } = useScrollProgress(containerRef)
 
   const transformLTR = useTransform(scrollYProgress, [0.25, 0.75], ['-100%', '120%'])
@@ -17,7 +17,7 @@ const SlidingText = ({ containerRef }: { containerRef: RefObject<HTMLDivElement>
   const opacityLTR = useTransform(scrollYProgress, [0.25, 0.3, 0.7, 0.75], [0, 1, 1, 0])
   const opacityRTL = useTransform(scrollYProgress, [0.25, 0.3, 0.7, 0.75], [0, 1, 1, 0])
 
-  const volumeTransferred = totalVolumeTransfered || VOLUME_TRANSFERRED_FALLBACK
+  const volumeTransferred = totalVolumeTransferred || VOLUME_TRANSFERRED_FALLBACK
   const displayValue = formatCurrency(volumeTransferred, 0)
 
   return (

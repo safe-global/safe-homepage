@@ -5,16 +5,16 @@ import { formatCurrency } from '@/lib/formatCurrency'
 import { type BaseBlock } from '@/components/Home/types'
 import css from './styles.module.css'
 
-const VALUE_LOCKED_FALLBACK = 68_583_703_689
-const PERCENTAGE_FALLBACK = 0.000679
+const VOLUME_TRANSFERRED_FALLBACK = 759_488_208_315 // 759.48 billion
+const PERCENTAGE_FALLBACK = 0.001576
 
 const SlidingText = ({ title }: { title: BaseBlock['title'] }) => {
-  const { tvlToGDPPercentage, totalValueLocked } = useSafeDataRoomStats()
+  const { tvpToGDPPercentage, totalVolumeTransferred } = useSafeDataRoomStats()
 
-  const valueLocked = totalValueLocked || VALUE_LOCKED_FALLBACK
-  const percentageValue = tvlToGDPPercentage || PERCENTAGE_FALLBACK
+  const valueProcessed = totalVolumeTransferred || VOLUME_TRANSFERRED_FALLBACK
+  const percentageValue = tvpToGDPPercentage || PERCENTAGE_FALLBACK
 
-  const displayTVLValue = formatCurrency(valueLocked, 0)
+  const displayTVPValue = formatCurrency(valueProcessed, 0)
   const percentageToDisplay = '~' + (percentageValue * 100).toFixed(2) + '%'
 
   return (
@@ -27,7 +27,7 @@ const SlidingText = ({ title }: { title: BaseBlock['title'] }) => {
 
       <MotionTypography animateYFrom={-30} customDelay={0.7}>
         <Typography variant="h1" color="primary.main" align="center">
-          {displayTVLValue}
+          {displayTVPValue}
         </Typography>
       </MotionTypography>
     </div>

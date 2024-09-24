@@ -12,11 +12,11 @@
   },
   {
     "component": "DataRoom/WorldGDP",
-    "title": "<b><em>Safe</em> TVL</b> is",
-    "text": "Total value secured in <em>Safe</em> Smart Accounts can already be seen in comparison to world GDP.",
+    "title": "<b><em>Safe</em> TVP</b> is",
+    "text": "Total Volume Processed in <em>Safe</em> Smart Accounts can already be seen in comparison to World GDP.",
     "link": {
       "title": "Dune dashboard",
-      "href": "https://dune.com/queries/3710102/6242478"
+      "href": "https://dune.com/safe/all"
     }
   },
   {
