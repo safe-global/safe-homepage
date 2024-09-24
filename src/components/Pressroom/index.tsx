@@ -24,8 +24,7 @@ import { Container } from '@mui/material'
 import type { Entry } from 'contentful'
 import { useClientEntry } from '@/hooks/useClientEntry'
 import type { PostEntryCollection } from '@/config/types'
-import { isPressReleasePost } from '@/lib/containsTag'
-import { isDraft } from '@/lib/contentful/isDraft'
+import { isPublishedPressRelease } from '@/lib/contentful/isPressRelease'
 import { useAllPosts } from '@/hooks/useAllPosts'
 
 export type PressRoomEntry = Entry<TypePressRoomSkeleton, undefined, string>
@@ -50,7 +49,7 @@ const PressRoom = ({ pressRoom, allPosts, totalAssets }: PressRoomProps) => {
   const videosList = videos.filter(isEntryTypeExternalURL)
 
   // Get the most recent press release that is not a draft
-  const latestPressRelease = localAllPosts.items.find((post) => isPressReleasePost(post) && !isDraft(post))
+  const latestPressRelease = localAllPosts.items.find(isPublishedPressRelease)
 
   return (
     <>
