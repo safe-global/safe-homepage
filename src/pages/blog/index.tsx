@@ -8,10 +8,11 @@ const Blog = (props: BlogHomeProps) => {
 }
 
 export const getStaticProps = async () => {
-  const postsEntries = await client.getEntries<TypePostSkeleton>({
+  const allPosts = await client.getEntries<TypePostSkeleton>({
     content_type: 'post',
     // order by date, most recent first
     order: ['-fields.date'],
+    limit: 150,
   })
 
   const blogHomeEntries = await client.getEntries<TypeBlogHomeSkeleton>({
@@ -21,7 +22,7 @@ export const getStaticProps = async () => {
 
   const blogHome = blogHomeEntries.items[0]
 
-  if (!blogHome || !postsEntries) {
+  if (!blogHome || !allPosts) {
     return {
       notFound: true,
     }
@@ -32,12 +33,12 @@ export const getStaticProps = async () => {
     delete blogHome.fields.featured.fields.relatedPosts
   }
   blogHome.fields.mostPopular.forEach((item: any) => delete item.fields.relatedPosts)
-  postsEntries.items.forEach((item: any) => delete item.fields.relatedPosts)
+  allPosts.items.forEach((item: any) => delete item.fields.relatedPosts)
 
   return {
     props: {
       blogHome,
-      allPosts: postsEntries,
+      allPosts,
     },
   }
 }
