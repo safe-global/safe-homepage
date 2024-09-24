@@ -12,7 +12,7 @@ export async function getStaticProps() {
   if (!dataRoomStats) return null
 
   const {
-    tvl_perc_world_gdp,
+    tvp_perc_world_gdp,
     total_usdc_share,
     crypto_punks_perc,
     total_transfer_volume,
@@ -28,11 +28,11 @@ export async function getStaticProps() {
   return {
     props: {
       safeDataRoomStats: {
-        tvlToGDPPercentage: tvl_perc_world_gdp,
+        tvpToGDPPercentage: tvp_perc_world_gdp,
         usdcPercentageStored: total_usdc_share,
         // This is a temp workaround. The received value should be a number.
         cryptoPunksStoredPercentage: Number(crypto_punks_perc),
-        totalVolumeTransfered: total_transfer_volume,
+        totalVolumeTransferred: total_transfer_volume,
         onChainTransactionsPercentage: transaction_share,
         tvlSafe: Number(safe_tvl),
         tvlRobinhoodCEX: Number(cex_tvl_robinhood),
