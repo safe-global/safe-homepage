@@ -6,7 +6,6 @@ import { formatBlogDate } from '@/components/Blog/utils/formatBlogDate'
 import { calculateReadingTimeInMin } from '@/components/Blog/utils/calculateReadingTime'
 import { type BlogPostEntry } from '@/components/Blog/Post'
 import { isAsset } from '@/lib/typeGuards'
-import CategoryIcon from '@/public/images/Blog/category-icon.svg'
 import { AppRoutes } from '@/config/routes'
 import { containsTag, PRESS_RELEASE_TAG } from '@/lib/containsTag'
 
@@ -40,16 +39,14 @@ const FeaturedPost = ({ post }: { post: BlogPostEntry }) => {
         <Grid item lg={5} className={css.body}>
           <div className={css.meta}>
             <div className={css.metaStart}>
-              <CategoryIcon />
-
-              <Typography variant="caption" color="text.primary">
+              <Typography variant="caption" className={css.category}>
                 {category}
               </Typography>
 
+              <Typography variant="caption">{formatBlogDate(date)}</Typography>
+
               <Typography variant="caption">{calculateReadingTimeInMin(content)}</Typography>
             </div>
-
-            <Typography variant="caption">{formatBlogDate(date)}</Typography>
           </div>
 
           <Typography variant="h3" className={css.title}>
