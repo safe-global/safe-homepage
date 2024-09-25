@@ -2,15 +2,14 @@ import Image from 'next/image'
 import Tags from '@/components/Blog/Tags'
 import { Box, Grid, Link, Typography } from '@mui/material'
 import css from './styles.module.css'
-import { formatBlogDate } from '@/components/Blog/utils/formatBlogDate'
-import { calculateReadingTimeInMin } from '@/components/Blog/utils/calculateReadingTime'
 import { type BlogPostEntry } from '@/components/Blog/Post'
 import { isAsset } from '@/lib/typeGuards'
 import { AppRoutes } from '@/config/routes'
 import { containsTag, PRESS_RELEASE_TAG } from '@/lib/containsTag'
+import Meta from '@/components/Blog/Meta'
 
 const FeaturedPost = ({ post }: { post: BlogPostEntry }) => {
-  const { slug, coverImage, category, date, title, excerpt, tags, content } = post.fields
+  const { slug, coverImage, title, excerpt, tags } = post.fields
 
   const isPressRelease = containsTag(tags, PRESS_RELEASE_TAG)
 
@@ -37,17 +36,7 @@ const FeaturedPost = ({ post }: { post: BlogPostEntry }) => {
         </Grid>
 
         <Grid item lg={5} className={css.body}>
-          <div className={css.meta}>
-            <div className={css.metaStart}>
-              <Typography variant="caption" className={css.category}>
-                {category}
-              </Typography>
-
-              <Typography variant="caption">{formatBlogDate(date)}</Typography>
-
-              <Typography variant="caption">{calculateReadingTimeInMin(content)}</Typography>
-            </div>
-          </div>
+          <Meta post={post} />
 
           <Typography variant="h3" className={css.title}>
             <Link href={`${AppRoutes.blog.index}/${slug}`}>{title}</Link>
