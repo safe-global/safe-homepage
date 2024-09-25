@@ -58,7 +58,7 @@ const FeaturedPost = ({ post }: { post: BlogPostEntry }) => {
 
           <Typography className={css.excerpt}>{excerpt}</Typography>
 
-          <Box mt={2}>
+          <Box mt="auto">
             <Tags tags={tags} />
           </Box>
         </Grid>

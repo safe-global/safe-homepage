@@ -19,7 +19,7 @@
 .body {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
 }
 
 .meta {
@@ -38,7 +38,6 @@
 
 .title,
 .excerpt {
-  margin-top: 16px;
   overflow: hidden;
   display: -webkit-box;
   line-clamp: 3;
@@ -60,8 +59,11 @@
   .image {
     height: 100%;
   }
+}
 
-  .title {
-    margin-top: 24px;
+@media (min-width: 1630px) {
+  .excerpt {
+    line-clamp: 5;
+    -webkit-line-clamp: 5;
   }
 }
