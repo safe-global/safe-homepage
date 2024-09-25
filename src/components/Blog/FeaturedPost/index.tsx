@@ -23,7 +23,7 @@ const FeaturedPost = ({ post }: { post: BlogPostEntry }) => {
         </Typography>
       ) : null}
       <Grid container columnSpacing="60px" rowGap={3}>
-        <Grid item md={7}>
+        <Grid item lg={7}>
           {isAsset(coverImage) && coverImage.fields.file?.url ? (
             <Link href={`/blog/${slug}`}>
               <Image
@@ -37,7 +37,7 @@ const FeaturedPost = ({ post }: { post: BlogPostEntry }) => {
           ) : undefined}
         </Grid>
 
-        <Grid item md={5} className={css.body}>
+        <Grid item lg={5} className={css.body}>
           <div className={css.meta}>
             <div className={css.metaStart}>
               <CategoryIcon />
