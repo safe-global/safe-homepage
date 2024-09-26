@@ -26,7 +26,7 @@ const SlidingText = ({ title }: { title: BaseBlock['title'] }) => {
       </MotionTypography>
 
       <MotionTypography animateYFrom={-30} customDelay={0.7}>
-        <Typography variant="h1" color="primary.main" align="center">
+        <Typography variant="h2" color="primary.main" align="center">
           {displayTVPValue}
         </Typography>
       </MotionTypography>
