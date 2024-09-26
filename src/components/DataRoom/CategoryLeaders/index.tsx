@@ -4,18 +4,18 @@ import { useRef } from 'react'
 import css from './styles.module.css'
 import type { ComparisonProps } from '@/components/common/ExternalComparison'
 
-const SlidingContent = dynamic(() => import('./SlidingContent'))
+const Content = dynamic(() => import('./Content'))
 
-const Cexes = ({ title, caption, cexes }: BaseBlock & { cexes: ComparisonProps[] }) => {
+const Leaders = ({ title, leaders }: BaseBlock & { leaders: ComparisonProps[] }) => {
   const backgroundRef = useRef<HTMLDivElement>(null)
 
   return (
     <div ref={backgroundRef} className={css.sectionContainer}>
       <div className={css.stickyContainer}>
-        <SlidingContent title={title} caption={caption} cexes={cexes} containerRef={backgroundRef} />
+        <Content title={title} leaders={leaders} containerRef={backgroundRef} />
       </div>
     </div>
   )
 }
 
-export default Cexes
+export default Leaders

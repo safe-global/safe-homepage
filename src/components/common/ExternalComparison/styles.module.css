@@ -1,0 +1,117 @@
+.label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 100px 128px;
+  color: var(--mui-palette-primary-light);
+}
+
+.leader {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  align-items: start;
+}
+
+.cex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 22px;
+}
+
+.cexGrid {
+  display: flex;
+  flex-direction: row;
+  column-gap: 8px;
+  align-items: center;
+}
+
+.leaderGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  max-width: 304px;
+  align-items: center;
+}
+
+.label {
+  font-size: 18px;
+  padding-bottom: 12px;
+}
+
+.labelCaption {
+  font-size: 18px;
+}
+
+.gridItem {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  background-color: var(--mui-palette-primary-light);
+}
+
+.gridItemMain {
+  background-color: var(--mui-palette-primary-main);
+}
+
+.leaderLabelContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.cexLabelContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+}
+
+.labelCaption {
+  white-space: nowrap;
+  color: var(--mui-palette-primary-light);
+}
+
+@media (max-width: 1000px) {
+  .leaderLabelContainer {
+    margin-top: 0px;
+  }
+
+  .cexLabelContainer {
+    gap: 12px;
+  }
+
+  .label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 80px 30px;
+    color: var(--mui-palette-primary-light);
+  }
+
+  .cex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .cexGrid {
+    max-width: none;
+  }
+
+  .leaderGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-width: none;
+    align-items: center;
+  }
+
+  .cexTitle {
+    font-size: 18px;
+  }
+}
