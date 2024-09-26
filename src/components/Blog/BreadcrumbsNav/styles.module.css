@@ -1,23 +1,25 @@
-.breadcrumbs,
+.breadcrumbs li {
+  display: flex;
+  align-items: center;
+}
+
 .breadcrumbs a {
-  color: var(--mui-palette-text-primary);
-  margin-bottom: 24px;
+  transition-duration: var(--transition-duration);
 }
 
 .breadcrumbs a:hover {
+  color: var(--mui-palette-text-primary);
   text-decoration: underline;
 }
 
 .breadcrumbs :global .MuiBreadcrumbs-separator {
-  margin: 0 4px;
+  width: 8px;
+  height: 8px;
 }
 
-.breadcrumbs :global .MuiTypography-root {
-  line-height: inherit;
-}
-
-.category {
-  display: flex;
-  gap: 4px;
-  align-items: center;
+.title {
+  width: 290px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
