@@ -53,7 +53,11 @@ const SlidingText = ({ containerRef, title, text, link }: SlidingTextProps) => {
           {text}
         </Typography>
 
-        {link && <LinksWrapper link={link} />}
+        {link && (
+          <div className={css.overlay}>
+            <LinksWrapper link={link} />
+          </div>
+        )}
       </MotionTypography>
     </motion.div>
   )
