@@ -26,4 +26,8 @@
     background-image: radial-gradient(at left, rgba(18, 255, 128, 0.4) 0%, rgba(246, 247, 248, 0) 80%);
     filter: blur(50px);
   }
+
+  .showInXs {
+    display: none;
+  }
 }
