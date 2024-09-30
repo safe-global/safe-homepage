@@ -2,16 +2,14 @@ import Image from 'next/image'
 import Tags from '@/components/Blog/Tags'
 import { Box, Grid, Link, Typography } from '@mui/material'
 import css from './styles.module.css'
-import { formatBlogDate } from '@/components/Blog/utils/formatBlogDate'
-import { calculateReadingTimeInMin } from '@/components/Blog/utils/calculateReadingTime'
 import { type BlogPostEntry } from '@/components/Blog/Post'
 import { isAsset } from '@/lib/typeGuards'
-import CategoryIcon from '@/public/images/Blog/category-icon.svg'
 import { AppRoutes } from '@/config/routes'
 import { containsTag, PRESS_RELEASE_TAG } from '@/lib/containsTag'
+import Meta from '@/components/Blog/Meta'
 
 const FeaturedPost = ({ post }: { post: BlogPostEntry }) => {
-  const { slug, coverImage, category, date, title, excerpt, tags, content } = post.fields
+  const { slug, coverImage, title, excerpt, tags } = post.fields
 
   const isPressRelease = containsTag(tags, PRESS_RELEASE_TAG)
 
@@ -23,7 +21,7 @@ const FeaturedPost = ({ post }: { post: BlogPostEntry }) => {
         </Typography>
       ) : null}
       <Grid container columnSpacing="60px" rowGap={3}>
-        <Grid item md={7}>
+        <Grid item lg={7}>
           {isAsset(coverImage) && coverImage.fields.file?.url ? (
             <Link href={`/blog/${slug}`}>
               <Image
@@ -37,20 +35,8 @@ const FeaturedPost = ({ post }: { post: BlogPostEntry }) => {
           ) : undefined}
         </Grid>
 
-        <Grid item md={5} className={css.body}>
-          <div className={css.meta}>
-            <div className={css.metaStart}>
-              <CategoryIcon />
-
-              <Typography variant="caption" color="text.primary">
-                {category}
-              </Typography>
-
-              <Typography variant="caption">{calculateReadingTimeInMin(content)}</Typography>
-            </div>
-
-            <Typography variant="caption">{formatBlogDate(date)}</Typography>
-          </div>
+        <Grid item lg={5} className={css.body}>
+          <Meta post={post} />
 
           <Typography variant="h3" className={css.title}>
             <Link href={`${AppRoutes.blog.index}/${slug}`}>{title}</Link>
@@ -58,7 +44,7 @@ const FeaturedPost = ({ post }: { post: BlogPostEntry }) => {
 
           <Typography className={css.excerpt}>{excerpt}</Typography>
 
-          <Box mt={2}>
+          <Box mt="auto">
             <Tags tags={tags} />
           </Box>
         </Grid>

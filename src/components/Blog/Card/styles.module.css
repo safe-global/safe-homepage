@@ -4,13 +4,26 @@
   display: flex;
   flex-direction: column;
   border-radius: 8px;
-  border: 1px solid var(--mui-palette-border-main);
-  overflow: hidden;
+  outline: 1px solid var(--mui-palette-border-main);
   transition-duration: var(--transition-duration);
 }
 
-.postCard:hover {
-  border: 1px solid var(--mui-palette-primary-main);
+.postCard::before {
+  content: '';
+  position: absolute;
+  border-radius: 11px;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  z-index: -1;
+  background: linear-gradient(to bottom left, #12ff80, #5fddff);
+  opacity: 0;
+}
+
+.postCard:hover::before {
+  opacity: 1;
+  box-shadow: 10px 10px 25px 0 rgba(18, 255, 128, 0.2);
 }
 
 .link {
@@ -27,6 +40,8 @@
   object-position: center left;
   border-bottom: 1px solid var(--mui-palette-border-main);
   transition-duration: var(--transition-duration);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .cardBody {
@@ -34,18 +49,16 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-}
-
-.meta {
-  display: flex;
-  gap: 8px;
-  align-items: center;
+  background-color: var(--mui-palette-background-default);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .title {
   margin-top: 16px;
   overflow: hidden;
   display: -webkit-box;
+  line-clamp: 3;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
