@@ -12,7 +12,7 @@ export const getStaticProps = async () => {
     content_type: 'post',
     // order by date, most recent first
     order: ['-fields.date'],
-    limit: 150,
+    limit: 500,
   })
 
   const blogHomeEntries = await client.getEntries<TypeBlogHomeSkeleton>({
