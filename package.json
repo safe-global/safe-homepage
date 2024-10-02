@@ -1,7 +1,7 @@
 {
   "name": "safe-homepage",
   "homepage": "https://github.com/safe-global/safe-homepage",
-  "version": "1.5.1",
+  "version": "1.5.3",
   "scripts": {
     "build": "next build && next export",
     "lint": "next lint",
