@@ -128,7 +128,7 @@
         "tvl": 12571571373.304926
       }
     ],
-    "title": "<b>Safe </b>TVL<br/>X<br/>TVL of <b>category leaders</b>"
+    "title": "<b>Safe </b>TVL<br/><b>x</><br/>TVL of <b>category leaders</b>"
   },
   {
     "component": "DataRoom/SeeMore",

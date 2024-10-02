@@ -4,18 +4,18 @@ import css from './styles.module.css'
 import type { RefObject } from 'react'
 import { motion } from 'framer-motion'
 import { Typography } from '@mui/material'
-import { type ComparisonProps } from '@/components/common/ExternalComparison'
+import { type TvlComparisonProps } from '@/components/DataRoom/TvlComparison'
 import { useSafeDataRoomStats } from '@/hooks/useSafeDataRoomStats'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 import { formatValue } from '@/lib/formatValue'
 import useScrollProgress from '@/hooks/useScrollProgress'
-import { ExternalComparison } from '@/components/common/ExternalComparison'
+import { TvlComparison } from '@/components/DataRoom/TvlComparison'
 
 export default function Content({
   title,
   leaders,
   containerRef,
-}: Omit<BaseBlock, 'text'> & { leaders: ComparisonProps[]; containerRef: RefObject<HTMLDivElement> }) {
+}: Omit<BaseBlock, 'text'> & { leaders: TvlComparisonProps[]; containerRef: RefObject<HTMLDivElement> }) {
   const { tvlLido, tvlEigenLayer, tvlUniswap, tvlAAVE, tvlSafe } = useSafeDataRoomStats()
 
   const isMobile = useIsMediumScreen()
@@ -61,7 +61,7 @@ export default function Content({
         {[[0, 1], [2], [3, 4]].map((column, columnIndex) => (
           <div key={columnIndex} className={css.leaderColumn}>
             {column.map((index) => (
-              <ExternalComparison
+              <TvlComparison
                 type="Leader"
                 key={index}
                 tvl={dynamicTvl.find((item) => item.name === leaders[index].name)?.tvl || leaders[index].tvl}

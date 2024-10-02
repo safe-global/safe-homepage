@@ -3,13 +3,18 @@ import { motion, type MotionProps } from 'framer-motion'
 import { Typography } from '@mui/material'
 import { formatValue } from '@/lib/formatValue'
 
-export type ComparisonProps = {
+export const enum ComparisonType {
+  CEX = 'CEX',
+  LEADER = 'Leader',
+}
+
+export type TvlComparisonProps = {
   name: string
   boxColor: string
   tvl: number
   normalizationFactor: number
   date?: string
-  type: 'CEX' | 'Leader'
+  type: ComparisonType
 }
 
 const textMotionProps: MotionProps = {
@@ -23,23 +28,24 @@ const textMotionProps: MotionProps = {
   },
 }
 
-const getGridMotionProps = (type: 'CEX' | 'Leader'): MotionProps => ({
+const getGridMotionProps = (type: ComparisonType): MotionProps => ({
   initial: { scale: 0, x: -10 },
   whileInView: { scale: 1, x: 0 },
   viewport: { once: true },
   transition: {
     type: 'spring',
-    ...(type === 'CEX' ? { stiffness: 260, damping: 20 } : { stiffness: 400, damping: 30, mass: 0.8 }),
+    ...(type === ComparisonType.CEX ? { stiffness: 260, damping: 20 } : { stiffness: 400, damping: 30, mass: 0.8 }),
   },
 })
 
-export const ExternalComparison = ({ boxColor, name, normalizationFactor, tvl, date, type }: ComparisonProps) => {
-  const boxes = type === 'CEX' ? Math.round(tvl / normalizationFactor) : Math.floor(tvl / normalizationFactor)
+export const TvlComparison = ({ boxColor, name, normalizationFactor, tvl, date, type }: TvlComparisonProps) => {
+  const boxes =
+    type === ComparisonType.CEX ? Math.round(tvl / normalizationFactor) : Math.floor(tvl / normalizationFactor)
   const gridMotionProps = getGridMotionProps(type)
 
   return (
-    <div className={type === 'CEX' ? css.cex : css.leader}>
-      <div className={type === 'CEX' ? css.cexGrid : css.leaderGrid}>
+    <div className={type === ComparisonType.CEX ? css.inlineLabel : css.blockLabel}>
+      <div className={type === ComparisonType.CEX ? css.linedItemsGrid : css.wrappedItemsGrid}>
         {Array.from({ length: boxes }).map((_, index) => (
           <motion.div
             key={index}
@@ -50,17 +56,17 @@ export const ExternalComparison = ({ boxColor, name, normalizationFactor, tvl, d
         ))}
       </div>
 
-      <div className={type === 'CEX' ? css.cexLabelContainer : css.leaderLabelContainer}>
+      <div className={css.labelContainer}>
         <motion.div {...textMotionProps} transition={{ ...textMotionProps.transition, delay: 0.2 }}>
-          <Typography className={type === 'CEX' ? css.cexTitle : css.labelCaption} variant="h4">
+          <Typography className={type === ComparisonType.CEX ? css.cexTitle : css.labelCaption} variant="h4">
             {name}
-            {type === 'Leader' && '\u00A0'}
+            {type === ComparisonType.LEADER && '\u00A0'}
           </Typography>
         </motion.div>
 
         <motion.div {...textMotionProps} transition={{ ...textMotionProps.transition, delay: 0.4 }}>
           <Typography className={css.labelCaption} variant="h4">
-            {type === 'CEX' ? '$' + formatValue(tvl) + ' as of ' + date : ' - $' + formatValue(tvl)}
+            {type === ComparisonType.CEX ? '$' + formatValue(tvl) + ' as of ' + date : ' - $' + formatValue(tvl)}
           </Typography>
         </motion.div>
       </div>

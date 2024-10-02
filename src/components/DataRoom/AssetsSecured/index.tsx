@@ -1,12 +1,12 @@
 import type { BaseBlock } from '@/components/Home/types'
 import dynamic from 'next/dynamic'
 import { useRef } from 'react'
+import type { TvlComparisonProps } from '@/components/DataRoom/TvlComparison'
 import css from './styles.module.css'
-import type { ComparisonProps } from '@/components/common/ExternalComparison'
 
 const SlidingContent = dynamic(() => import('./SlidingContent'))
 
-const Cexes = ({ title, caption, cexes }: BaseBlock & { cexes: ComparisonProps[] }) => {
+const Cexes = ({ title, caption, cexes }: BaseBlock & { cexes: TvlComparisonProps[] }) => {
   const backgroundRef = useRef<HTMLDivElement>(null)
 
   return (

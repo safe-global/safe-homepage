@@ -1,8 +1,6 @@
+import React, { type RefObject } from 'react'
 import type { BaseBlock } from '@/components/Home/types'
-import { useTransform } from 'framer-motion'
-import css from './styles.module.css'
-import type { RefObject } from 'react'
-import { motion } from 'framer-motion'
+import { motion, useTransform } from 'framer-motion'
 import { Typography } from '@mui/material'
 import { useSafeDataRoomStats } from '@/hooks/useSafeDataRoomStats'
 import { getNormalizationFactor } from './utils/getNormalizationFactor'
@@ -11,8 +9,8 @@ import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 import { formatValue } from '@/lib/formatValue'
 import useContainerSize from '@/hooks/useContainerSize'
 import useScrollProgress from '@/hooks/useScrollProgress'
-import type { ComparisonProps } from '@/components/common/ExternalComparison'
-import { ExternalComparison } from '@/components/common/ExternalComparison'
+import { ComparisonType, TvlComparison, type TvlComparisonProps } from '@/components/DataRoom/TvlComparison'
+import css from './styles.module.css'
 
 const LAST_UPDATED_FALLBACK = 1722946836.34
 const MOBILE_VIEWPORT_FRACTION = 0.8
@@ -23,7 +21,7 @@ export default function SlidingContent({
   caption,
   cexes,
   containerRef,
-}: Omit<BaseBlock, 'text'> & { cexes: ComparisonProps[]; containerRef: RefObject<HTMLDivElement> }) {
+}: Omit<BaseBlock, 'text'> & { cexes: TvlComparisonProps[]; containerRef: RefObject<HTMLDivElement> }) {
   const { tvlRobinhoodCEX, tvlOKX, tvlBinance, tvlSafe, lastUpdated } = useSafeDataRoomStats()
   const { width: viewportWidth } = useContainerSize(containerRef)
 
@@ -80,8 +78,8 @@ export default function SlidingContent({
           const tvl = dynamicTvl.find((item) => item.name === cex.name)?.tvl || cex.tvl
 
           return (
-            <ExternalComparison
-              type="CEX"
+            <TvlComparison
+              type={ComparisonType.CEX}
               key={index}
               tvl={tvl}
               boxColor={cex.boxColor}
