@@ -23,6 +23,7 @@ type DuneDataRoomStats = {
   usdc_in_safes: number
   last_updated: number
   annual_swap_fees: number
+  annualised_outgoing_tvp: number
 }
 
 const QUERY_ID_DATAROOM_STATS = 3864414

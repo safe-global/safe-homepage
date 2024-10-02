@@ -5,13 +5,13 @@ import { formatCurrency } from '@/lib/formatCurrency'
 import { type BaseBlock } from '@/components/Home/types'
 import css from './styles.module.css'
 
-const VOLUME_TRANSFERRED_FALLBACK = 759_488_208_315 // 759.48 billion
+const ANNUALISED_OUTGOING_TVP_FALLBACK = 158_987_104_644 // 158 billion
 const PERCENTAGE_FALLBACK = 0.001576
 
 const SlidingText = ({ title }: { title: BaseBlock['title'] }) => {
-  const { tvpToGDPPercentage, totalVolumeTransferred } = useSafeDataRoomStats()
+  const { tvpToGDPPercentage, annualisedOutgoingTVP } = useSafeDataRoomStats()
 
-  const valueProcessed = totalVolumeTransferred || VOLUME_TRANSFERRED_FALLBACK
+  const valueProcessed = annualisedOutgoingTVP || ANNUALISED_OUTGOING_TVP_FALLBACK
   const percentageValue = tvpToGDPPercentage || PERCENTAGE_FALLBACK
 
   const displayTVPValue = formatCurrency(valueProcessed, 0)
