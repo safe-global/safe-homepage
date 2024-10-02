@@ -104,6 +104,33 @@
     "title": "<em>Safe</em> TVL compares and surpasses major CEXs"
   },
   {
+    "component": "DataRoom/CategoryLeaders",
+    "leaders": [
+      {
+        "name": "Lido (Liquid Staking)",
+        "tvl": 25916636061.2
+      },
+      {
+        "name": "Uniswap (Liquidity Pool)",
+        "tvl": 4774854756.38199
+      },
+      {
+        "name": "Safe",
+        "tvl": 62468973126.503235,
+        "boxColor": "main"
+      },
+      {
+        "name": "EigenLayer (Re-Staking)",
+        "tvl": 12325835638.623302
+      },
+      {
+        "name": "AAVE",
+        "tvl": 12571571373.304926
+      }
+    ],
+    "title": "<b>Safe </b>TVL<br/><b>x</><br/>TVL of <b>category leaders</b>"
+  },
+  {
     "component": "DataRoom/SeeMore",
     "text": "Want to see <b>more</b>?"
   },
