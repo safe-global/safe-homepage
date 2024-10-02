@@ -4,7 +4,7 @@ import css from './styles.module.css'
 import type { RefObject } from 'react'
 import { motion } from 'framer-motion'
 import { Typography } from '@mui/material'
-import { type TvlComparisonProps } from '@/components/DataRoom/TvlComparison'
+import { ComparisonType, type TvlComparisonProps } from '@/components/DataRoom/TvlComparison'
 import { useSafeDataRoomStats } from '@/hooks/useSafeDataRoomStats'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 import { formatValue } from '@/lib/formatValue'
@@ -38,8 +38,7 @@ export default function Content({
     return { name, tvl: tvlMapping[dynamicTvlString] || tvlFallback }
   })
 
-  const normalizationFactor = 1000000000
-
+  const normalizationFactor = 1_000_000_000 // 1 billion
   const squareRatio = formatValue(normalizationFactor)
 
   const opacity = useTransform(scrollYProgress, isMobile ? [0, 0.35, 0.5, 1.0] : [0.1, 0.35, 0.5, 0.75], [0, 1, 1, 0])
@@ -54,15 +53,17 @@ export default function Content({
       <Typography className={css.title} variant="h1">
         {title}
       </Typography>
-      <Typography className={css.label} variant="h5">
+
+      <Typography className={css.label} color="primary.light">
         1 square - ${squareRatio}
       </Typography>
-      <div className={css.columnsContainer}>
+
+      <div className={css.columnsGrid}>
         {[[0, 1], [2], [3, 4]].map((column, columnIndex) => (
           <div key={columnIndex} className={css.leaderColumn}>
             {column.map((index) => (
               <TvlComparison
-                type="Leader"
+                type={ComparisonType.LEADER}
                 key={index}
                 tvl={dynamicTvl.find((item) => item.name === leaders[index].name)?.tvl || leaders[index].tvl}
                 boxColor={leaders[index].boxColor}

@@ -71,7 +71,9 @@ export default function SlidingContent({
       >
         <div className={css.label}>
           <Typography variant="h5">{caption}</Typography>
-          <Typography variant="h5">1 square - ${squareRatio}</Typography>
+          <Typography variant="h5" sx={{ fontSize: '18px' }}>
+            1 square - ${squareRatio}
+          </Typography>
         </div>
 
         {cexes.map((cex, index) => {

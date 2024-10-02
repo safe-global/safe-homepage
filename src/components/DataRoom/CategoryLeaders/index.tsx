@@ -1,8 +1,8 @@
-import type { BaseBlock } from '@/components/Home/types'
-import dynamic from 'next/dynamic'
 import { useRef } from 'react'
-import css from './styles.module.css'
+import dynamic from 'next/dynamic'
+import type { BaseBlock } from '@/components/Home/types'
 import type { TvlComparisonProps } from '@/components/DataRoom/TvlComparison'
+import css from './styles.module.css'
 
 const Content = dynamic(() => import('./Content'))
 
