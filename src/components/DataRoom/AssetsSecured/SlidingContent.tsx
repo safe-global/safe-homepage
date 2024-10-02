@@ -10,9 +10,9 @@ import { formatValue } from '@/lib/formatValue'
 import useContainerSize from '@/hooks/useContainerSize'
 import useScrollProgress from '@/hooks/useScrollProgress'
 import { ComparisonType, TvlComparison, type TvlComparisonProps } from '@/components/DataRoom/TvlComparison'
+import { LAST_UPDATED_FALLBACK } from '@/components/DataRoom/IndustryComparison'
 import css from './styles.module.css'
 
-const LAST_UPDATED_FALLBACK = 1722946836.34
 const MOBILE_VIEWPORT_FRACTION = 0.8
 const DESKTOP_VIEWPORT_FRACTION = 0.4
 

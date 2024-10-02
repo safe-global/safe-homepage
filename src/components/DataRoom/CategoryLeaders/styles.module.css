@@ -24,6 +24,9 @@
   right: 0;
   font-size: 18px;
   font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .columnsGrid {

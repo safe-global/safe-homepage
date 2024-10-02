@@ -1,6 +1,4 @@
-import type { BaseBlock } from '@/components/Home/types'
 import { useTransform } from 'framer-motion'
-import css from './styles.module.css'
 import type { RefObject } from 'react'
 import { motion } from 'framer-motion'
 import { Typography } from '@mui/material'
@@ -10,13 +8,17 @@ import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 import { formatValue } from '@/lib/formatValue'
 import useScrollProgress from '@/hooks/useScrollProgress'
 import { TvlComparison } from '@/components/DataRoom/TvlComparison'
+import { formatDate } from '@/lib/formatDate'
+import { LAST_UPDATED_FALLBACK } from '@/components/DataRoom/IndustryComparison'
+import type { BaseBlock } from '@/components/Home/types'
+import css from './styles.module.css'
 
 export default function Content({
   title,
   leaders,
   containerRef,
 }: Omit<BaseBlock, 'text'> & { leaders: TvlComparisonProps[]; containerRef: RefObject<HTMLDivElement> }) {
-  const { tvlLido, tvlEigenLayer, tvlUniswap, tvlAAVE, tvlSafe } = useSafeDataRoomStats()
+  const { tvlLido, tvlEigenLayer, tvlUniswap, tvlAAVE, tvlSafe, lastUpdated } = useSafeDataRoomStats()
 
   const isMobile = useIsMediumScreen()
   const { scrollYProgress } = useScrollProgress(containerRef)
@@ -38,6 +40,9 @@ export default function Content({
     return { name, tvl: tvlMapping[dynamicTvlString] || tvlFallback }
   })
 
+  const timestamp = lastUpdated || LAST_UPDATED_FALLBACK
+  const formattedDate = formatDate(timestamp)
+
   const normalizationFactor = 1_000_000_000 // 1 billion
   const squareRatio = formatValue(normalizationFactor)
 
@@ -56,6 +61,7 @@ export default function Content({
 
       <Typography className={css.label} color="primary.light">
         1 square - ${squareRatio}
+        <span>as of {formattedDate}</span>
       </Typography>
 
       <div className={css.columnsGrid}>
