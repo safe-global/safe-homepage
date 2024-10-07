@@ -34,44 +34,6 @@
   gap: 32px;
 }
 
-.cexEntry {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 22px;
-}
-
-.squareGrid {
-  display: flex;
-  flex-direction: row;
-  column-gap: 8px;
-  align-items: center;
-}
-
-.gridItem {
-  width: 16px;
-  height: 16px;
-  border-radius: 3px;
-  background-color: var(--mui-palette-primary-light);
-}
-
-.gridItemMain {
-  background-color: var(--mui-palette-primary-main);
-}
-
-.labelContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 22px;
-}
-
-.labelCaption {
-  white-space: nowrap;
-  color: var(--mui-palette-primary-light);
-}
-
 @media (max-width: 1000px) {
   .sectionContainer {
     height: 200lvh;
@@ -96,20 +58,6 @@
   .label {
     font-size: 18px;
     padding-bottom: 12px;
-  }
-
-  .labelCaption {
-    font-size: 18px;
-  }
-
-  .labelContainer {
-    gap: 12px;
-  }
-
-  .cexEntry {
-    flex-direction: column;
-    align-items: start;
-    gap: 8px;
   }
 
   .title {
