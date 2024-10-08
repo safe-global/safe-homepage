@@ -28,7 +28,7 @@
       { "name": "Nest", "src": "/images/projectsLogos/nest.png" },
       { "name": "Zeal", "src": "/images/projectsLogos/zeal.png" },
       { "name": "Gnosis Pay", "src": "/images/projectsLogos/gnosis-pay.png" },
-      { "name": "BasedApp", "src": "/images/projectsLogos/basedapp.png" },
+      { "name": "BasedApp", "src": "/images/projectsLogos/basedapp.svg" },
       { "name": "Polymarket", "src": "/images/projectsLogos/polymarket.png" },
       { "name": "Sygnum", "src": "/images/projectsLogos/sygnum.png" },
       { "name": "Worldcoin", "src": "/images/projectsLogos/worldcoin.png" },
