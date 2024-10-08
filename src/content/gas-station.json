@@ -116,7 +116,7 @@
     "mobileVariant": "text-image"
   },
   {
-    "component": "GasStation/TwitterCTA",
+    "component": "GasStation/CenteredCTA",
     "title": "Share and boost your chances to get gas",
     "text": "Users should not pay gas for using your app",
     "link": {

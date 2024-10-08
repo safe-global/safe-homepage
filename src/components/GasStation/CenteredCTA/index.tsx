@@ -5,7 +5,7 @@ import Slider from '@/components/GasStation/Slider'
 import clsx from 'clsx'
 import css from './styles.module.css'
 
-const TwitterCTA = ({ title, text, link }: BaseBlock) => (
+const CenteredCTA = ({ title, text, link }: BaseBlock) => (
   <>
     <Container className={`${layoutCss.containerShort} ${css.container}`}>
       <Typography variant="h2" className={css.title}>
@@ -29,4 +29,4 @@ const TwitterCTA = ({ title, text, link }: BaseBlock) => (
   </>
 )
 
-export default TwitterCTA
+export default CenteredCTA
