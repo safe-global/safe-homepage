@@ -2,7 +2,7 @@
   background-position-x: center;
   background-repeat: no-repeat;
   overflow: visible;
-  background-size: cover;
+  background-size: contain;
   position: relative;
 }
 
@@ -32,11 +32,7 @@
 .text {
   max-width: 1170px;
   text-align: center;
-}
-
-.title p,
-.text p {
-  margin: 0;
+  color: var(--mui-palette-primary-text);
 }
 
 .logosWrapper {

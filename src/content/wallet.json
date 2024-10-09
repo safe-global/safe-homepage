@@ -5,18 +5,57 @@
     "component": "common/MetaTags"
   },
   {
-    "image": {
-      "src": "/images/Wallet/clients.png",
-      "alt": "Web and mobile clients"
-    },
-    "title": "The most secure way to own assets",
+    "component": "Wallet/Hero",
+    "caption": "across 14+ networks",
+    "title": "Keep your assets <b>Safe</b>",
+    "text": "Use the multisig trusted by Vitalik Buterin and leading web3 projects to secure over $100 billion.",
     "buttons": [
       {
         "text": "Launch wallet",
-        "href": "https://app.safe.global"
+        "href": "https://app.safe.global",
+        "variant": "button"
       }
     ],
-    "component": "Wallet/Intro"
+    "image": {
+      "src": "/images/Wallet/laptop-safe-wallet.png",
+      "alt": "Safe wallet web view"
+    },
+    "items": [
+      {
+        "image": {
+          "src": "/images/1kx-logo.svg",
+          "alt": "1kx logo"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/chainlink.svg",
+          "alt": "Chainlink logo"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/aave-wordmark.png",
+          "alt": "1kx logo"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/starknet-logo.png",
+          "alt": "Starknet logo"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/ens.svg",
+          "alt": "ENS logo"
+        }
+      }
+    ],
+    "backgroundImage": {
+      "md": "/images/Wallet/hero-fg.png",
+      "alt": "Networks circled logos"
+    }
   },
   {
     "title": "Introducing<br>Native Swaps",
