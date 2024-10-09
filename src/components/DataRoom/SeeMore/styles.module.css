@@ -1,5 +1,9 @@
 .sectionContainer {
-  height: 200vh;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .stickyContainer {
@@ -53,5 +57,13 @@
 
   .wave {
     transform: translateY(-25%);
+  }
+
+  .sectionContainer {
+    height: 60lvh;
+  }
+
+  .text {
+    padding: 0px 28px;
   }
 }

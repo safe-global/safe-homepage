@@ -60,7 +60,7 @@ const Faq = (props: BaseBlockEntry) => {
                     !expanded
                   }}
                 >
-                  <Typography variant="h4">
+                  <Typography variant="h5">
                     <RichText {...title} />
                   </Typography>
                 </AccordionSummary>

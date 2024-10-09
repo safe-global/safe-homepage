@@ -1,4 +1,5 @@
 import { IS_PRODUCTION } from '@/config/constants'
+import { ContentSecurityPolicy } from '@/config/securityHeaders'
 import Head from 'next/head'
 
 const defaultMetaTags = {
@@ -30,6 +31,9 @@ const MetaTags = (props: Partial<typeof defaultMetaTags>) => {
       <meta name="twitter:image" content={seo.image} />
 
       {!IS_PRODUCTION && <meta name="robots" content="noindex" />}
+
+      {/* CSP */}
+      <meta httpEquiv="Content-Security-Policy" content={ContentSecurityPolicy} />
 
       {/* Mobile tags */}
       <meta name="apple-mobile-web-app-capable" content="yes" />
