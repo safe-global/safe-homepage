@@ -135,10 +135,6 @@
     "text": "Want to see <b>more</b>?"
   },
   {
-    "component": "DataRoom/SeeMore",
-    "text": "Want to see more?"
-  },
-  {
     "component": "DataRoom/ExternalLinksGrid",
     "title": "Dune Boards",
     "items": [
