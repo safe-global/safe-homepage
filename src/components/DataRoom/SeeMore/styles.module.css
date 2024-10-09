@@ -1,0 +1,17 @@
+.sectionContainer {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .sectionContainer {
+    height: 60lvh;
+  }
+
+  .text {
+    padding: 0px 28px;
+  }
+}
