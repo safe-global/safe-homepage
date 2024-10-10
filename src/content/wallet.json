@@ -58,6 +58,27 @@
     }
   },
   {
+    "title": "Available on 15+ networks",
+    "text": "including testnets",
+    "reverse": true,
+    "icons": [
+      { "name": "Scroll", "src": "/images/chainsLogos/ScrollLogo.svg" },
+      { "name": "Polygon zkEVM", "src": "/images/chainsLogos/PolygonZkEVMLogo.png" },
+      { "name": "Celo", "src": "/images/chainsLogos/CeloLogo.png" },
+      { "name": "Optimism", "src": "/images/chainsLogos/OptimismLogo.png" },
+      { "name": "Base", "src": "/images/chainsLogos/BaseLogo.png" },
+      { "name": "Arbitrum", "src": "/images/chainsLogos/ArbitrumLogo.png" },
+      { "name": "ZkSync Era Mainnet", "src": "/images/chainsLogos/ZkSyncEraLogo.png" },
+      { "name": "Avalanche", "src": "/images/chainsLogos/AvalancheLogo.png" },
+      { "name": "Gnosis Chain", "src": "/images/chainsLogos/GnosisChainLogo.png" },
+      { "name": "BNB", "src": "/images/chainsLogos/BNBLogo.png" },
+      { "name": "Ethereum Mainnet", "src": "/images/chainsLogos/EthereumLogo.png" },
+      { "name": "Polygon", "src": "/images/chainsLogos/PolygonLogo.png" },
+      { "name": "Aurora", "src": "/images/chainsLogos/AuroraLogo.png" }
+    ],
+    "component": "common/TitleSlidingIcons"
+  },
+  {
     "title": "Introducing<br>Native Swaps",
     "caption": "New feature",
     "buttons": [
