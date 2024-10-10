@@ -1,21 +1,22 @@
-import type { MotionValue } from 'framer-motion'
+import type { ReactNode, RefObject } from 'react'
 import { motion, useTransform } from 'framer-motion'
-import type { ReactNode } from 'react'
+import useScrollProgress from '@/hooks/useScrollProgress'
 import css from './styles.module.css'
 
 const SlidingPanel = ({
-  scrollYProgress,
+  containerRef,
   children,
   scrollParams,
   translateParams,
   panelWidth = '100%',
 }: {
-  scrollYProgress: MotionValue<number>
+  containerRef: RefObject<HTMLDivElement>
   children: ReactNode
   scrollParams: number[]
   translateParams: string[]
   panelWidth?: string
 }) => {
+  const { scrollYProgress } = useScrollProgress(containerRef)
   const bgTranslate = useTransform(scrollYProgress, scrollParams, translateParams)
 
   return (

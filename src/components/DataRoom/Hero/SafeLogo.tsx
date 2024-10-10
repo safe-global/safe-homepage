@@ -40,7 +40,7 @@ export function SafeLogo({ offset, yPosition }: SafeLogoProps) {
   })
 
   return (
-    <group ref={groupRef} rotation={[offset, 0, 0]} scale={[35, 35, 70]}>
+    <group ref={groupRef} rotation={[offset, 0, 0]} scale={[30, 30, 60]}>
       <mesh ref={meshRef} castShadow receiveShadow geometry={(gltf.scene.children[0] as Mesh).geometry}>
         <meshStandardMaterial color="#12FF80" roughness={1} metalness={0.5} />
       </mesh>

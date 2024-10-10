@@ -1,5 +1,5 @@
 .sectionContainer {
-  height: 300vh;
+  height: 150vh;
   display: flex;
 }
 
@@ -11,15 +11,17 @@
   display: flex;
 }
 
-.slidingPanelContent {
+.content {
   z-index: 20;
   display: flex;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
   width: 100%;
   padding: 64px;
   height: 100%;
   gap: 30px;
+  color: var(--mui-palette-text-dark);
+  background-color: var(--mui-palette-primary-main);
 }
 
 .canvasStyles {
@@ -28,16 +30,18 @@
   left: 0;
   width: 100%;
   height: 100%;
-  margin-top: 72px;
 }
 
 @media (max-width: 900px) {
-  .slidingPanelContent {
-    padding-left: 32px;
-    padding-right: 108px;
+  .sectionContainer {
+    height: 100lvh;
   }
 
-  .canvasStyles {
-    margin-top: 64px;
+  .content {
+    padding: 32px;
+  }
+
+  .stickyContainer {
+    height: 100lvh;
   }
 }

@@ -27,9 +27,7 @@
 }
 
 .volume {
-  color: var(--mui-palette-primary-main);
   font-size: 180px;
-  font-weight: 400;
 }
 
 .slidingModule {
@@ -51,6 +49,7 @@
   .stickyContainer {
     justify-content: end;
     padding-top: 72px;
+    height: 100lvh;
   }
 
   .linksContainer {
