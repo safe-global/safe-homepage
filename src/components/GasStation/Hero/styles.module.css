@@ -52,3 +52,10 @@
     margin-right: -104px;
   }
 }
+
+@media (min-width: 1630px) {
+  .videoWrapper {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}

@@ -1,11 +1,11 @@
 import type { BaseBlock } from '@/components/Home/types'
 import Slider from '@/components/GasStation/Slider'
-import { Button, Typography } from '@mui/material'
+import { Button, Container, Typography } from '@mui/material'
 import clsx from 'clsx'
 import css from './styles.module.css'
 
-const Hero = ({ title, text, link }: BaseBlock) => {
-  return (
+const Hero = ({ title, text, link }: BaseBlock) => (
+  <Container>
     <div className={css.videoWrapper}>
       <div className={css.gradientBase} />
       <video autoPlay muted playsInline loop poster="/images/GasStation/gas-station.png" className={css.video}>
@@ -31,7 +31,7 @@ const Hero = ({ title, text, link }: BaseBlock) => {
       </div>
       <div className={clsx(css.gradientBase, css.gradientFlipped)} />
     </div>
-  )
-}
+  </Container>
+)
 
 export default Hero

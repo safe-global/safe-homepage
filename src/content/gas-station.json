@@ -37,6 +37,24 @@
           "src": "/images/polygon.svg",
           "alt": "Polygon"
         }
+      },
+      {
+        "image": {
+          "src": "/images/linea-logo.svg",
+          "alt": "Linea"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/bob-logo.svg",
+          "alt": "Bob"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/world-chain-logo.svg",
+          "alt": "World"
+        }
       }
     ],
     "image": {
@@ -47,7 +65,7 @@
   },
   {
     "component": "GasStation/ImageTextTop",
-    "title": "Network credits<br/>available",
+    "title": "Network credits available",
     "backgroundImage": {
       "sm": "/images/GasStation/network-gas-pump-sm.png",
       "md": "/images/GasStation/network-gas-pump-md.png",
@@ -116,7 +134,7 @@
     "mobileVariant": "text-image"
   },
   {
-    "component": "GasStation/TwitterCTA",
+    "component": "GasStation/CenteredCTA",
     "title": "Share and boost your chances to get gas",
     "text": "Users should not pay gas for using your app",
     "link": {
