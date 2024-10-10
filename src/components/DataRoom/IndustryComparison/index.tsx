@@ -5,6 +5,8 @@ import css from './styles.module.css'
 
 const Content = dynamic(() => import('./Content'))
 
+export const LAST_UPDATED_FALLBACK = 1722946836.34
+
 const IndustryComparison = ({ title }: BaseBlock) => {
   const containerRef = useRef<HTMLDivElement>(null)
   const gridContainerRef = useRef<HTMLDivElement>(null)
