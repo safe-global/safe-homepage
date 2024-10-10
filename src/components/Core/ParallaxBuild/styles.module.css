@@ -1,0 +1,123 @@
+.parallaxWrapper {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  width: 342px;
+}
+
+.baseImage {
+  width: 80%;
+  height: auto;
+}
+
+.movingElement {
+  position: absolute;
+  box-shadow: inset 0 0 0 1px var(--mui-palette-border-main);
+  border-radius: 8px;
+  padding: 18px;
+  background-color: var(--mui-palette-background-default);
+}
+
+.movingElement:hover {
+  box-shadow: inset 0 0 0 1px var(--mui-palette-primary-main);
+  cursor: pointer;
+}
+
+.title {
+  background: linear-gradient(260.13deg, #12ff80 1.24%, #5fddff 102.14%);
+  background-clip: text;
+  color: transparent;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.stepZero {
+  bottom: 290px;
+  left: 72px;
+}
+
+.stepOne {
+  bottom: 164px;
+  left: 160px;
+}
+
+.stepTwo {
+  bottom: 56px;
+  left: 12px;
+}
+
+.brackets {
+  position: absolute;
+  width: 66px;
+  left: 0px;
+  bottom: 188px;
+}
+
+.arrow {
+  width: 24px;
+  height: 24px;
+  margin-left: 16px;
+}
+
+@media (min-width: 900px) {
+  .parallaxWrapper {
+    width: 570px;
+  }
+
+  .title {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .stepZero {
+    left: 72px;
+    bottom: 360px;
+  }
+
+  .stepOne {
+    bottom: 204px;
+    left: 280px;
+  }
+
+  .stepTwo {
+    bottom: 96px;
+    left: 60px;
+  }
+
+  .brackets {
+    width: 80px;
+    left: 0px;
+    bottom: 212px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .title {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 54px;
+  }
+
+  .stepZero {
+    left: 116px;
+    bottom: 468px;
+  }
+
+  .stepOne {
+    bottom: 251px;
+    left: 306px;
+  }
+
+  .stepTwo {
+    bottom: 116px;
+    left: 38px;
+  }
+
+  .brackets {
+    width: 120px;
+    left: 0px;
+    bottom: 292px;
+  }
+}

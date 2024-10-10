@@ -1,0 +1,73 @@
+.inlineLabel {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 22px;
+}
+
+.blockLabel {
+  display: flex;
+  flex-direction: column;
+  justify-items: flex-start;
+  align-items: flex-start;
+}
+
+.linedItemsGrid {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.wrappedItemsGrid {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  max-width: 304px;
+}
+
+.gridItem {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  background-color: var(--mui-palette-primary-light);
+}
+
+.gridItemMain {
+  background-color: var(--mui-palette-primary-main);
+}
+
+.labelContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.cexTitle {
+  margin-right: 22px;
+}
+
+.labelCaption {
+  font-size: 18px;
+  white-space: nowrap;
+  color: var(--mui-palette-primary-light);
+}
+
+@media (max-width: 1000px) {
+  .inlineLabel {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .wrappedItemsGrid {
+    gap: 8px;
+  }
+
+  .cexTitle {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,30 @@
+.parallaxWrapper {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  width: 342px;
+}
+
+.baseImage {
+  width: 100%;
+  height: auto;
+}
+
+.front {
+  position: absolute;
+  bottom: -5px;
+  left: 24px;
+  width: 88%;
+}
+
+@media (min-width: 600px) {
+  .parallaxWrapper {
+    width: 570px;
+  }
+
+  .front {
+    bottom: -20px;
+    left: 20px;
+    width: 90%;
+  }
+}

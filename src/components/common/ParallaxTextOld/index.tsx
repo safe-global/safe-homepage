@@ -43,6 +43,7 @@ const ParallaxText = ({
           {steps && <Stepper steps={steps} />}
           <ButtonsWrapper buttons={buttons} />
         </Grid>
+        <Grid item md={1} display={{ xs: 'none', md: 'block' }} />
         <Grid item xs={12} md={6} display="flex" alignItems="center">
           {children}
         </Grid>

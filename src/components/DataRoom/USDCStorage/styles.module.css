@@ -22,6 +22,14 @@
   margin-bottom: 70px;
 }
 
+.overlay {
+  background: rgba(255, 255, 255, 0.005);
+  backdrop-filter: blur(16px);
+  width: min-content;
+  padding-inline: 16px;
+  border-radius: 8px;
+}
+
 .content {
   width: 50%;
   display: flex;
@@ -34,6 +42,7 @@
 .canvas {
   width: 50%;
   height: 100%;
+  z-index: -1;
 }
 
 @media (max-width: 900px) {
@@ -41,6 +50,7 @@
     padding-top: 72px;
     justify-content: flex-start;
     flex-direction: column;
+    height: 100lvh;
   }
 
   .usdcPercentage {
@@ -54,6 +64,7 @@
   }
 
   .canvas {
+    height: 100lvh;
     width: 100%;
     position: absolute;
     top: 0;

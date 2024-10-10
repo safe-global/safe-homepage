@@ -75,7 +75,7 @@
 
 @media (min-width: 900px) {
   .sectionContainer {
-    height: 150vh;
+    height: 200lvh;
   }
 
   .content {
@@ -110,6 +110,7 @@
     justify-content: space-around;
     align-items: center;
     gap: 120px;
+    height: 100lvh;
   }
 
   .counterContainer {

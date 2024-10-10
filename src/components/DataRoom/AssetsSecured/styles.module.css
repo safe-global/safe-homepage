@@ -11,6 +11,7 @@
   display: flex;
   flex-direction: column;
   padding: 200px 128px 256px;
+  overflow: hidden;
 }
 
 .label {
@@ -33,77 +34,37 @@
   gap: 32px;
 }
 
-.cexEntry {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 22px;
-}
-
-.squareGrid {
-  display: flex;
-  flex-direction: row;
-  column-gap: 8px;
-  align-items: center;
-}
-
-.gridItem {
-  width: 16px;
-  height: 16px;
-  border-radius: 3px;
-  background-color: var(--mui-palette-primary-light);
-}
-
-.gridItemMain {
-  background-color: var(--mui-palette-primary-main);
-}
-
-.labelContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 22px;
-}
-
-.labelCaption {
-  white-space: nowrap;
-  color: var(--mui-palette-primary-light);
-}
-
 @media (max-width: 1000px) {
+  .sectionContainer {
+    height: 200lvh;
+  }
+
   .stickyContainer {
     padding: 30px;
     overflow: hidden;
     padding-top: 72px;
-    justify-content: space-between;
+    height: 100lvh;
+    justify-content: center;
+  }
+
+  .cexesContainer {
+    gap: 24px;
   }
 
   .cexTitle {
-    font-size: 24px;
+    font-size: 18px;
   }
 
   .label {
-    padding-bottom: 32px;
-  }
-
-  .labelCaption {
-    font-size: 22px;
-  }
-
-  .labelContainer {
-    gap: 12px;
-  }
-
-  .cexEntry {
-    flex-direction: column;
-    align-items: start;
-    gap: 8px;
+    font-size: 18px;
+    padding-bottom: 12px;
   }
 
   .title {
-    margin-top: 20px;
+    margin-top: 40px;
     text-align: left;
+    font-size: 40px;
+    line-height: 48px;
   }
 
   .cexMessage {

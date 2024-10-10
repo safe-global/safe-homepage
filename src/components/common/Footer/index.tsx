@@ -1,4 +1,4 @@
-import { Badge, ButtonBase, Container, Divider, Grid, Typography } from '@mui/material'
+import { Badge, ButtonBase, Container, Divider, Grid, SvgIcon, Typography } from '@mui/material'
 import type { ComponentType, SyntheticEvent } from 'react'
 
 import { AppRoutes } from '@/config/routes'
@@ -26,19 +26,28 @@ import {
 import { useCookieBannerContext } from '@/contexts/CookieBannerContext'
 import Logo from '@/public/images/logo.svg'
 import { useOpenPositions } from '@/hooks/useOpenPositions'
+import packageJson from 'package.json'
 
 const COOKIE_PREFERENCES = '#cookies'
 
-const safeProtocolItems = [
+const developersItems = [
   {
     label: 'Safe{Core}',
     href: AppRoutes.core,
   },
   {
-    label: 'Docs',
+    label: 'Documentation',
     href: DOCS_LINK,
     target: '_blank',
     rel: 'noreferrer',
+  },
+  {
+    label: 'Gas station',
+    href: AppRoutes.gasStation,
+  },
+  {
+    label: 'Safe{Foundry}',
+    href: AppRoutes.foundry,
   },
 ]
 
@@ -78,22 +87,22 @@ const communityItems = [
 
 const resourcesItems = [
   {
-    label: 'Help Center',
-    href: HELP_LINK,
-    target: '_blank',
-    rel: 'noreferrer',
+    label: 'Careers',
+    href: AppRoutes.careers,
   },
   {
     label: 'Press Room',
     href: AppRoutes.press,
   },
   {
-    label: 'Careers',
-    href: AppRoutes.careers,
-  },
-  {
     label: 'Brand Kit',
     href: PRESS_LINK,
+    target: '_blank',
+    rel: 'noreferrer',
+  },
+  {
+    label: 'Help Center',
+    href: HELP_LINK,
     target: '_blank',
     rel: 'noreferrer',
   },
@@ -174,7 +183,7 @@ const Footer = () => {
             Developers
           </Typography>
           <ul className={css.list}>
-            {safeProtocolItems.map((item) => (
+            {developersItems.map((item) => (
               <li className={css.listItem} key={item.href}>
                 <Link href={item.href} target="_blank" rel="noreferrer">
                   {item.label}
@@ -255,9 +264,9 @@ const Footer = () => {
         </Grid>
       </Grid>
 
-      <Divider sx={{ mt: 5, mb: { xs: 3, md: 0 } }} />
+      <Divider sx={{ mt: 5 }} />
 
-      <Grid container alignItems="center" justifyContent="space-between" gap="8px">
+      <Grid container alignItems="center" justifyContent="space-between">
         <Grid item>
           <ul className={css.subList}>
             {subFooterItems.map((item) => {
@@ -276,6 +285,15 @@ const Footer = () => {
                 </li>
               )
             })}
+
+            {/* Package version */}
+            <li className={css.subListItem}>
+              <a href={`${packageJson.homepage}/releases/tag/v${packageJson.version}`} target="_blank" rel="noreferrer">
+                <div className={css.subListItemContent}>
+                  <SvgIcon component={GithubIcon} inheritViewBox fontSize="inherit" />v{packageJson.version}
+                </div>
+              </a>
+            </li>
           </ul>
         </Grid>
 

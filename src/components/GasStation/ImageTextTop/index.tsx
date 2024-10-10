@@ -6,6 +6,7 @@ import css from './styles.module.css'
 
 export const ImageTextTop = ({
   title,
+  items,
   backgroundImage,
 }: BaseBlock & {
   backgroundImage: ImageObj
@@ -18,6 +19,11 @@ export const ImageTextTop = ({
       <div className={css.bg} style={{ backgroundImage: `url(${bgImage})` }}>
         <Typography variant="h2">{title}</Typography>
       </div>
+
+      {/* extra gas stations */}
+      {items?.map(({ image }) => {
+        return image ? <img src={image.src} alt={image.alt} key={image.alt} className={css.showInXs} /> : null
+      })}
     </Container>
   )
 }

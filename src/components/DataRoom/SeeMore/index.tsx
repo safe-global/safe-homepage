@@ -10,9 +10,7 @@ const SeeMore = ({ text }: BaseBlock) => {
 
   return (
     <div ref={backgroundRef} className={css.sectionContainer}>
-      <div className={css.stickyContainer}>
-        <SlidingContent text={text} containerRef={backgroundRef} />
-      </div>
+      <SlidingContent text={text} containerRef={backgroundRef} />
     </div>
   )
 }

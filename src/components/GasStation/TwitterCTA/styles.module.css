@@ -9,12 +9,6 @@
   gap: 40px;
 }
 
-.button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
 .sliderWrapper {
   margin-top: 96px;
   margin-bottom: -80px;

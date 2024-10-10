@@ -1,9 +1,9 @@
-import useScrollProgress from '@/hooks/useScrollProgress'
+import useReadProgress from '@/hooks/useReadProgress'
 import { LinearProgress } from '@mui/material'
 import css from '../styles.module.css'
 
 const ProgressBar = () => {
-  const readProgress = useScrollProgress()
+  const readProgress = useReadProgress()
 
   return (
     <div className={css.progressBar}>

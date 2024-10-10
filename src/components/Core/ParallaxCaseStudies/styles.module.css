@@ -1,0 +1,161 @@
+.parallaxWrapper {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  width: 342px;
+}
+
+.baseImage {
+  width: 100%;
+  height: 240px;
+}
+
+.movingElement {
+  position: absolute;
+  border: 1px solid var(--mui-palette-primary-main);
+  border-radius: 8px;
+  padding: 8px;
+  min-width: 100px;
+  width: auto;
+  background-color: var(--mui-palette-background-default);
+}
+
+.shadow {
+  border-radius: 8px;
+  width: calc(100% + 2px);
+  position: absolute;
+  left: -1px;
+  background-color: var(--mui-palette-background-default);
+  border: 1px solid;
+}
+
+.first {
+  height: 16px;
+  border-color: var(--mui-palette-border-main);
+  z-index: -1;
+}
+
+.second {
+  height: 24px;
+  border-color: var(--mui-palette-border-light);
+  z-index: -2;
+}
+
+.stepZero {
+  bottom: 168px;
+}
+
+.stepOne {
+  bottom: 146px;
+  left: 122px;
+}
+
+.stepTwo {
+  bottom: 235px;
+  left: 218px;
+}
+
+.stepThree {
+  bottom: 56px;
+}
+
+.stepFour {
+  bottom: 26px;
+  left: 146px;
+}
+
+.stepFive {
+  left: 236px;
+  bottom: 100px;
+}
+
+@media (min-width: 600px) {
+  .movingElement {
+    border-radius: 16px;
+    padding: 24px;
+    width: auto;
+    min-width: 158px;
+  }
+
+  .shadow {
+    border-radius: 16px;
+  }
+
+  .first {
+    height: 36px;
+  }
+
+  .second {
+    height: 48px;
+  }
+
+  .parallaxWrapper {
+    width: 570px;
+  }
+
+  .baseImage {
+    height: 404px;
+  }
+
+  .stepZero {
+    bottom: 298px;
+    left: -22px;
+  }
+
+  .stepOne {
+    bottom: 251px;
+    left: 177px;
+  }
+
+  .stepTwo {
+    bottom: 380px;
+    left: 274px;
+  }
+
+  .stepThree {
+    bottom: 128px;
+    left: 271px;
+  }
+
+  .stepFour {
+    bottom: 25px;
+    left: 197px;
+  }
+
+  .stepFive {
+    bottom: 143px;
+    left: 5px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .stepZero {
+    bottom: 298px;
+    left: 36px;
+  }
+
+  .stepOne {
+    bottom: 235px;
+    left: 235px;
+  }
+
+  .stepTwo {
+    bottom: 380px;
+    left: 370px;
+  }
+
+  .stepThree {
+    bottom: 128px;
+    left: 36px;
+  }
+
+  .stepFour {
+    bottom: 25px;
+    left: 255px;
+  }
+
+  .stepFive {
+    bottom: 175px;
+    left: 423px;
+  }
+}

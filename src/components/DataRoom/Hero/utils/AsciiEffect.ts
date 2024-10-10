@@ -62,11 +62,11 @@ void mainImage(const in vec4 inputColor, const in vec2 uv, out vec4 outputColor)
 // By extending it, we create a specialized effect for rendering ASCII art.
 export class ASCIIEffect extends Effect {
   constructor({
-    characters = ` .:,'-^=*+?!|0#X%WM@`,
+    characters = ` .:,'-^=*+?!|0#X%WM `,
     fontSize = 64,
     cellSize = 28,
     color = '#12FF80',
-    invert = true,
+    invert = false,
   }: ASCIIEffectOptions = {}) {
     const uniforms = new Map<string, Uniform<any>>([
       ['uCharacters', new Uniform(new Texture())],

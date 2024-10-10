@@ -14,6 +14,7 @@ export const AppRoutes = {
   foundry: '/foundry',
   ecosystem: '/ecosystem',
   disclaimer: '/disclaimer',
+  dataroom: '/dataroom',
   core: '/core',
   cookie: '/cookie',
   cla: '/cla',
