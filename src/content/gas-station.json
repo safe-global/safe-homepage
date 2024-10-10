@@ -47,7 +47,7 @@
   },
   {
     "component": "GasStation/ImageTextTop",
-    "title": "Network credits<br/>available",
+    "title": "Network credits available",
     "backgroundImage": {
       "sm": "/images/GasStation/network-gas-pump-sm.png",
       "md": "/images/GasStation/network-gas-pump-md.png",
