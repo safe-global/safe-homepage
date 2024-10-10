@@ -37,6 +37,24 @@
           "src": "/images/polygon.svg",
           "alt": "Polygon"
         }
+      },
+      {
+        "image": {
+          "src": "/images/linea-logo.svg",
+          "alt": "Linea"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/bob-logo.svg",
+          "alt": "Bob"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/world-chain-logo.svg",
+          "alt": "World"
+        }
       }
     ],
     "image": {
