@@ -12,6 +12,7 @@ const LegalDisclaimer = (props: BaseBlockEntry) => {
       <Typography variant="caption" component="div" className={css.caption}>
         {caption}
       </Typography>
+
       <Typography variant="body2" component="div" color="primary.light">
         <RichText {...title} />
       </Typography>

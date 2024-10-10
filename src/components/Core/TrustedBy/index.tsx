@@ -1,6 +1,6 @@
-import TitleSlidingIcons from '@/components/Home/TitleSlidingIcons'
+import TitleSlidingIcons from '@/components/common/TitleSlidingIcons'
 import type { BaseBlock } from '@/components/Home/types'
-import type { Carousel } from '@/components/Home/TitleSlidingIcons/IconCarouselElement'
+import type { Carousel } from '@/components/common/TitleSlidingIcons/IconCarouselElement'
 import layoutCss from '@/components/common/styles.module.css'
 
 const TrustedBy = (props: BaseBlock & Carousel) => (
