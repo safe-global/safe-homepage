@@ -18,11 +18,14 @@ export const GridItem = ({
     <Grid item xs={12} md={width} className={css.gridItems}>
       <div>
         {image ? <img {...image} /> : null}
+
         <Typography variant="h5" className={css.title}>
           {title}
         </Typography>
+
         <Typography color="primary.light">{text}</Typography>
       </div>
+
       {link && (
         <Link href={link.href} target="_blank" rel="noreferrer" passHref>
           <LinkButton>{link.title}</LinkButton>
@@ -36,10 +39,12 @@ export const GridItem = ({
 const UspBlock = ({ variant, title, text, items }: BaseBlock & { variant: '3-columns' | '4-columns' }) => (
   <Container>
     <Grid container className={layoutCss.containerShort} flexDirection="column" alignItems="center">
-      <Typography variant="h2" mb={3}>
+      <Typography variant="h2" mb={3} textAlign={{ md: 'center' }}>
         {title}
       </Typography>
+
       {text && <Typography>{text}</Typography>}
+
       <Grid container className={css.roundCorners} mt={{ xs: 3, md: 7 }}>
         {items?.map((item, index) => (
           <GridItem key={index} width={variant === '3-columns' ? 4 : 3} {...item} />

@@ -40,7 +40,7 @@ const BlogHome = ({ blogHome, allPosts }: BlogHomeProps) => {
           </Grid>
         </Grid>
 
-        {isEntryTypePost(featured) && <FeaturedPost {...featured} />}
+        {isEntryTypePost(featured) && <FeaturedPost post={featured} />}
 
         <Typography variant="h2" mt={{ xs: '60px', md: '100px' }}>
           Trending
