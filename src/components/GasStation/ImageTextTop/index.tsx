@@ -17,7 +17,9 @@ export const ImageTextTop = ({
     <Container className={`${layoutCss.containerShort} ${css.container}`}>
       <div className={css.spot1} />
       <div className={css.bg} style={{ backgroundImage: `url(${bgImage})` }}>
-        <Typography variant="h2">{title}</Typography>
+        <Typography variant="h2" className={css.title}>
+          {title}
+        </Typography>
       </div>
 
       {/* extra gas stations */}
