@@ -1,0 +1,18 @@
+.header {
+  width: 100%;
+  display: flex;
+}
+
+.telegramWrapper {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.telegramLink {
+  display: flex;
+  align-items: center;
+  color: var(--mui-palette-primary-main);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}

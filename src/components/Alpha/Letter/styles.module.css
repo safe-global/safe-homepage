@@ -1,0 +1,71 @@
+.letterContainer {
+  position: relative;
+  width: 786px;
+
+  /* ? */
+  height: 95vh;
+  margin: 24px auto;
+}
+
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--mui-palette-border-light);
+}
+
+.under {
+  transform: rotate(-5deg);
+  top: 10px;
+  left: 10px;
+}
+
+.letter {
+  font-family: 'Chivo Mono Regular', sans-serif;
+  background-color: var(--mui-palette-background-main);
+  padding: 32px;
+
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.logoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
+.logoWrapper svg {
+  height: 48px;
+  width: auto;
+}
+
+.logoWrapper img {
+  height: 100%;
+}
+
+.cta {
+  display: flex;
+  justify-content: flex-start;
+  gap: 128px;
+  margin-top: 32px;
+}
+
+.cta {
+  font-size: 22px;
+}
+
+.rsvp button {
+  width: 166px;
+  height: 56px;
+}
+
+.telegram button {
+  height: 56px;
+  border: 2px solid var(--mui-palette-primary-main);
+}
+
+.telegram button img {
+  margin-right: 4px;
+}
