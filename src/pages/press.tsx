@@ -2,12 +2,20 @@ import client from '@/lib/contentful'
 import PressRoom, { type PressRoomProps } from '@/components/Pressroom'
 import type { TypePressRoomSkeleton, TypePostSkeleton } from '@/contentful/types'
 import { fetchTotalAssets } from '@/hooks/useSafeStats'
+import type { ReactElement } from 'react'
+import PageLayout from '@/components/common/PageLayout'
+import type { NextPageWithLayout } from '@/pages/_app'
+import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 
-const PressroomPage = (props: PressRoomProps) => {
+const PressroomPage: NextPageWithLayout<InferGetStaticPropsType<typeof getStaticProps>> = (props) => {
   return <PressRoom {...props} />
 }
 
-export const getStaticProps = async () => {
+PressroomPage.getLayout = function getLayout(page: ReactElement) {
+  return <PageLayout>{page}</PageLayout>
+}
+
+export const getStaticProps: GetStaticProps<PressRoomProps> = async () => {
   const allPosts = await client.getEntries<TypePostSkeleton>({
     content_type: 'post',
     // order by date, most recent first

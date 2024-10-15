@@ -1,12 +1,19 @@
-import BlogPost, { type BlogPostEntry } from '@/components/Blog/Post'
+import type { ReactElement } from 'react'
+import type { NextPageWithLayout } from '@/pages/_app'
+import BlogPost from '@/components/Blog/Post'
+import PageLayout from '@/components/common/PageLayout'
 import { type TypePostSkeleton } from '@/contentful/types'
 import client from '@/lib/contentful'
-import type { GetStaticProps } from 'next'
+import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 
-const Page = (props: { blogPost: BlogPostEntry }) => {
+const Page: NextPageWithLayout<InferGetStaticPropsType<typeof getStaticProps>> = (props) => {
   if (!props.blogPost) return null
 
   return <BlogPost {...props} />
+}
+
+Page.getLayout = function getLayout(page: ReactElement) {
+  return <PageLayout>{page}</PageLayout>
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {

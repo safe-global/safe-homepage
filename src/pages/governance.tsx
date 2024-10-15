@@ -1,9 +1,16 @@
-import type { InferGetStaticPropsType, NextPage } from 'next'
+import type { InferGetStaticPropsType } from 'next'
 import { Governance } from '@/components/Governance'
 import { fetchTotalDelegates } from '@/hooks/useVotingDelegation'
+import type { NextPageWithLayout } from '@/pages/_app'
+import type { ReactElement } from 'react'
+import PageLayout from '@/components/common/PageLayout'
 
-const GovernancePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (props) => {
+const GovernancePage: NextPageWithLayout<InferGetStaticPropsType<typeof getStaticProps>> = (props) => {
   return <Governance {...props} />
+}
+
+GovernancePage.getLayout = function getLayout(page: ReactElement) {
+  return <PageLayout>{page}</PageLayout>
 }
 
 export async function getStaticProps() {

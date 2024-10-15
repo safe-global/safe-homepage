@@ -1,16 +1,23 @@
-import type { GetStaticPaths, GetStaticProps } from 'next'
+import type { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next'
 import client from '@/lib/contentful'
 import { type TypeLandingPageSkeleton } from '@/contentful/types'
 import Page from '@/components/common/Page'
 import { type LandingPageEntry } from '@/config/types'
+import PageLayout from '@/components/common/PageLayout'
+import type { ReactElement } from 'react'
+import type { NextPageWithLayout } from '@/pages/_app'
 
-const LandingPage = (props: { landingPage: LandingPageEntry }) => {
+const LandingPage: NextPageWithLayout<InferGetStaticPropsType<typeof getStaticProps>> = (props) => {
   if (!props.landingPage) return null
 
   return <Page {...props} />
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+LandingPage.getLayout = function getLayout(page: ReactElement) {
+  return <PageLayout>{page}</PageLayout>
+}
+
+export const getStaticProps: GetStaticProps<{ landingPage: LandingPageEntry }> = async ({ params }) => {
   const slug = params?.slug as string
 
   const landingPageEntries = await client.getEntries<TypeLandingPageSkeleton>({
