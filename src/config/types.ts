@@ -1,5 +1,6 @@
 import type {
   TypeBaseBlockSkeleton,
+  TypeBlogHomeSkeleton,
   TypeButtonSkeleton,
   TypeLandingPageSkeleton,
   TypePostSkeleton,
@@ -11,4 +12,5 @@ export type BaseBlockEntry = Entry<TypeBaseBlockSkeleton, undefined, string>
 export type ButtonEntry = Entry<TypeButtonSkeleton, undefined, string>
 export type LandingPageEntry = Entry<TypeLandingPageSkeleton, undefined, string>
 export type PressRoomEntry = Entry<TypePressRoomSkeleton, undefined, string>
+export type BlogHomeEntry = Entry<TypeBlogHomeSkeleton, undefined, string>
 export type PostEntryCollection = EntryCollection<TypePostSkeleton, undefined, string>
