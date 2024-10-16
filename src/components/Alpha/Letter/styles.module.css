@@ -1,23 +1,9 @@
 .letterContainer {
   position: relative;
-  width: 786px;
+  width: 380px;
 
-  /* ? */
   height: 95vh;
   margin: 24px auto;
-}
-
-.card {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border: 1px solid var(--mui-palette-border-light);
-}
-
-.under {
-  transform: rotate(-5deg);
-  top: 10px;
-  left: 10px;
 }
 
 .letter {
@@ -25,7 +11,7 @@
   background-color: var(--mui-palette-background-main);
   padding: 32px;
 
-  font-size: 18px;
+  font-size: 16px;
   line-height: 40px;
 }
 
@@ -45,15 +31,53 @@
   height: 100%;
 }
 
-.cta {
-  display: flex;
-  justify-content: flex-start;
-  gap: 128px;
-  margin-top: 32px;
+.intro {
+  margin-top: 80px;
+}
+
+.invitation {
+  margin-top: 60px;
 }
 
 .cta {
-  font-size: 22px;
+  display: inline;
+
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 60px;
+  margin-top: 32px;
+  font-size: 18px;
+}
+
+.cta.inViewport {
+  display: flex;
+}
+
+.cta button {
+  margin-top: 20px;
+}
+
+.rsvp {
+  border-top: 2px solid var(--mui-palette-primary-main);
+  background-color: var(--mui-palette-background-main);
+  padding: 16px;
+  margin-inline: -37px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  bottom: 0;
+
+  background-color: var(--mui-palette-background-main);
+  z-index: 1000;
+}
+
+.inViewport .rsvp {
+  border-top: none;
+  background-color: var(--mui-palette-background-main);
+  display: block;
+  margin: 0px;
+  padding: 0px;
 }
 
 .rsvp button {
@@ -68,4 +92,59 @@
 
 .telegram button img {
   margin-right: 4px;
+}
+
+.signature {
+  margin-top: 48px;
+}
+
+@media (min-width: 600px) {
+  .letterContainer {
+    width: 550px;
+  }
+
+  .under {
+    transform: rotate(-5deg);
+    top: 10px;
+    left: 10px;
+  }
+
+  .card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--mui-palette-border-light);
+  }
+
+  .intro,
+  .invitation {
+    margin-top: 60px;
+  }
+}
+
+@media (min-width: 900px) {
+  .letterContainer {
+    width: 786px;
+  }
+
+  .under {
+    transform: rotate(-5deg);
+    top: 10px;
+    left: 10px;
+  }
+
+  .letter {
+    font-size: 18px;
+  }
+
+  .cta {
+    display: flex;
+    flex-direction: row;
+    gap: 128px;
+    font-size: 22px;
+  }
+
+  .signature {
+    margin-top: 62px;
+  }
 }
