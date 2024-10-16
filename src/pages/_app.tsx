@@ -16,6 +16,7 @@ import { CookieBanner } from '@/components/common/CookieBanner'
 import { theme } from '@/styles/theme'
 
 import '@/styles/globals.css'
+import PageLayout from '@/components/common/PageLayout'
 import { useGa } from '@/hooks/useGa'
 import useHotjar from '@/hooks/useHotjar'
 import DOMPurify from 'isomorphic-dompurify'
@@ -54,8 +55,8 @@ const App = ({
   Component: NextPageWithLayout
   emotionCache?: EmotionCache
 }): ReactElement => {
-  // Use the layout defined at the page level, if available
-  const getLayout = Component.getLayout ?? ((page) => page)
+  // Use the layout defined at the page level, if available or the default layout
+  const getLayout = Component.getLayout ?? ((page) => <PageLayout>{page}</PageLayout>)
 
   return (
     <CacheProvider value={emotionCache}>

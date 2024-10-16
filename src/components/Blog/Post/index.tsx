@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { Box, Button, Container, Divider, Grid, Typography } from '@mui/material'
 import { type Entry } from 'contentful'
-import type { TypeAuthorSkeleton, TypePostSkeleton } from '@/contentful/types'
+import type { TypeAuthorSkeleton } from '@/contentful/types'
 import { formatBlogDate } from '@/components/Blog/utils/formatBlogDate'
 import { calculateReadingTimeInMin } from '@/components/Blog/utils/calculateReadingTime'
 import { isAsset, isEntryTypeAuthor, isEntryTypePost } from '@/lib/typeGuards'
@@ -20,12 +20,13 @@ import css from '../styles.module.css'
 import { PRESS_RELEASE_TAG, containsTag } from '@/lib/containsTag'
 import { COMMS_EMAIL } from '@/config/constants'
 import { useBlogPost } from '@/hooks/useBlogPost'
-import type { InferGetStaticPropsType } from 'next'
-import type { getStaticProps } from '@/pages/blog/[slug]'
+import type { BlogPostEntry } from '@/config/types'
 
-export type BlogPostEntry = Entry<TypePostSkeleton, undefined, string>
+export type BlogPostProps = {
+  blogPost: BlogPostEntry
+}
 
-const BlogPost = ({ blogPost }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const BlogPost = ({ blogPost }: BlogPostProps) => {
   const { data: post } = useBlogPost(blogPost.sys.id, blogPost)
 
   const { title, excerpt, content, coverImage, authors, tags, category, date, relatedPosts, metaTags } = post.fields

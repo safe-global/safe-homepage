@@ -1,5 +1,5 @@
 import { isPressReleasePost, isPublishedPressRelease } from '@/lib/contentful/isPressRelease'
-import type { BlogPostEntry } from '@/components/Blog/Post'
+import type { BlogPostEntry } from '@/config/types'
 import type { TypePostFields } from '@/contentful/types'
 
 describe('isPressReleasePost', () => {

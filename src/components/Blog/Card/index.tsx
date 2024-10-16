@@ -6,7 +6,7 @@ import { calculateReadingTimeInMin } from '@/components/Blog/utils/calculateRead
 import Tags from '@/components/Blog/Tags'
 import CategoryIcon from '@/public/images/Blog/category-icon.svg'
 import { isAsset } from '@/lib/typeGuards'
-import { type BlogPostEntry } from '@/components/Blog/Post'
+import type { BlogPostEntry } from '@/config/types'
 import { AppRoutes } from '@/config/routes'
 
 const Card = (props: BlogPostEntry) => {
