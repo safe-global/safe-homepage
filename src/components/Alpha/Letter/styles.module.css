@@ -1,8 +1,6 @@
 .letterContainer {
   position: relative;
   width: 380px;
-
-  height: 95vh;
   margin: 24px auto;
 }
 
@@ -101,6 +99,7 @@
 @media (min-width: 600px) {
   .letterContainer {
     width: 550px;
+    height: 105vh;
   }
 
   .under {
@@ -125,6 +124,7 @@
 @media (min-width: 900px) {
   .letterContainer {
     width: 786px;
+    height: 95vh;
   }
 
   .under {
