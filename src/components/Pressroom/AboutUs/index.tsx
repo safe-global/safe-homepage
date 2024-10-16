@@ -6,7 +6,7 @@ import { Box, Typography } from '@mui/material'
 // const TOTAL_ASSETS_STORED = 'https://dune.com/queries/2893829/4821383'
 const TOTAL_ASSETS_FALLBACK = '$100B+'
 
-const AboutUs = ({ totalAssets }: { totalAssets: number }) => {
+const AboutUs = ({ totalAssets }: { totalAssets: number | null }) => {
   const totalAssetsStr = totalAssets ? `~$${formatValue(totalAssets)}` : TOTAL_ASSETS_FALLBACK
   // const totalAssetsLink = (
   //   <a href={TOTAL_ASSETS_STORED} target="_blank" rel="noreferrer">

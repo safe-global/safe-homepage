@@ -4,16 +4,13 @@ import Card from '@/components/Blog/Card'
 import FeaturedPost from '@/components/Blog/FeaturedPost'
 import SearchFilterResults from '@/components/Blog/SearchFilterResults'
 import type { TypeBlogHomeSkeleton } from '@/contentful/types'
-import type { Entry } from 'contentful'
 import { isEntryTypePost } from '@/lib/typeGuards'
 import { useClientEntry } from '@/hooks/useClientEntry'
-import type { PostEntryCollection } from '@/config/types'
+import type { BlogHomeEntry, PostEntryCollection } from '@/config/types'
 
 const categories = ['Announcements', 'Ecosystem', 'Community', 'Insights', 'Build']
 
 const TRENDING_POSTS_COUNT = 3
-
-export type BlogHomeEntry = Entry<TypeBlogHomeSkeleton, undefined, string>
 
 export type BlogHomeProps = {
   blogHome: BlogHomeEntry
