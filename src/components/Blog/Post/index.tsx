@@ -20,10 +20,13 @@ import css from '../styles.module.css'
 import { PRESS_RELEASE_TAG, containsTag } from '@/lib/containsTag'
 import { COMMS_EMAIL } from '@/config/constants'
 import { useBlogPost } from '@/hooks/useBlogPost'
-import type { InferGetStaticPropsType } from 'next'
-import type { getStaticProps } from '@/pages/blog/[slug]'
+import type { BlogPostEntry } from '@/config/types'
 
-const BlogPost = ({ blogPost }: InferGetStaticPropsType<typeof getStaticProps>) => {
+export type BlogPostProps = {
+  blogPost: BlogPostEntry
+}
+
+const BlogPost = ({ blogPost }: BlogPostProps) => {
   const { data: post } = useBlogPost(blogPost.sys.id, blogPost)
 
   const { title, excerpt, content, coverImage, authors, tags, category, date, relatedPosts, metaTags } = post.fields

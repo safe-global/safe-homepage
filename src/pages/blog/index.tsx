@@ -2,12 +2,13 @@ import client from '@/lib/contentful'
 import BlogHome, { type BlogHomeProps } from '@/components/Blog/BlogHome'
 import type { TypeBlogHomeSkeleton, TypePostSkeleton } from '@/contentful/types'
 import { isEntryTypePost } from '@/lib/typeGuards'
+import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
 
-const Blog = (props: BlogHomeProps) => {
+const Blog: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (props) => {
   return <BlogHome {...props} />
 }
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps<BlogHomeProps> = async () => {
   const allPosts = await client.getEntries<TypePostSkeleton>({
     content_type: 'post',
     // order by date, most recent first
