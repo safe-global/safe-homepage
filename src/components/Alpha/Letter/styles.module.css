@@ -17,7 +17,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px;
+  height: 48px;
+  gap: 8px;
+  margin-bottom: 32px;
 }
 
 .logoWrapper svg {

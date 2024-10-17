@@ -9,6 +9,10 @@
   margin: 0 auto;
 }
 
+.telegramWrapper * {
+  font-weight: 400;
+}
+
 .telegramLink {
   display: flex;
   align-items: center;
