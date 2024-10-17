@@ -1,6 +1,6 @@
 .letterContainer {
   position: relative;
-  width: 380px;
+  width: 396px;
   margin: 24px auto;
 }
 
@@ -47,7 +47,7 @@
 
 .mask {
   position: absolute;
-  width: 97%;
+  top: 5px;
 }
 
 .visibilityIcon {
@@ -63,7 +63,7 @@
 }
 
 .invitation {
-  margin-top: 60px;
+  margin-top: 100px;
 }
 
 .cta {
@@ -71,8 +71,8 @@
 
   flex-direction: column;
   justify-content: flex-start;
-  gap: 60px;
-  margin-top: 32px;
+  gap: 100px;
+  margin-top: 40px;
   font-size: 18px;
 }
 
@@ -86,6 +86,7 @@
 
 .rsvp {
   border-top: 2px solid var(--mui-palette-primary-main);
+  background-color: var(--mui-palette-background-main);
   padding: 16px;
   margin-inline: -37px;
   display: flex;
@@ -94,10 +95,12 @@
   position: sticky;
   bottom: 0;
   z-index: 1000;
+  visibility: visible;
 }
 
 .inViewport .rsvp {
   border-top: none;
+  background-color: transparent;
   display: block;
   margin: 0px;
   padding: 0px;
@@ -138,6 +141,10 @@
     width: 100%;
     height: 100%;
     border: 1px solid var(--mui-palette-border-light);
+  }
+
+  .mask {
+    top: 0px;
   }
 
   .intro,
