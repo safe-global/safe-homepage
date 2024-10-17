@@ -1,14 +1,8 @@
+import type { NextPage } from 'next'
 import { Disclaimer } from '@/components/Disclaimer'
-import type { NextPageWithLayout } from '@/pages/_app'
-import type { ReactElement } from 'react'
-import PageLayout from '@/components/common/PageLayout'
 
-const DisclaimerPage: NextPageWithLayout = () => {
+const DisclaimerPage: NextPage = () => {
   return <Disclaimer />
-}
-
-DisclaimerPage.getLayout = function getLayout(page: ReactElement) {
-  return <PageLayout>{page}</PageLayout>
 }
 
 export default DisclaimerPage

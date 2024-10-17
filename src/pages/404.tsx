@@ -1,12 +1,10 @@
 import Head from 'next/head'
+import type { NextPage } from 'next'
 import NextLink from 'next/link'
 import { AppRoutes } from '@/config/routes'
 import { Box, Link } from '@mui/material'
-import type { ReactElement } from 'react'
-import PageLayout from '@/components/common/PageLayout'
-import type { NextPageWithLayout } from '@/pages/_app'
 
-const My404Page: NextPageWithLayout = () => (
+const My404Page: NextPage = () => (
   <>
     <Head>
       <title>Safe – Page not found</title>
@@ -23,9 +21,5 @@ const My404Page: NextPageWithLayout = () => (
     </Box>
   </>
 )
-
-My404Page.getLayout = function getLayout(page: ReactElement) {
-  return <PageLayout>{page}</PageLayout>
-}
 
 export default My404Page

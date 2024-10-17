@@ -1,16 +1,9 @@
-import type { InferGetStaticPropsType } from 'next'
+import type { InferGetStaticPropsType, NextPage } from 'next'
 import { DataRoom } from '@/components/DataRoom'
 import { fetchDataRoomStats } from '@/hooks/useSafeDataRoomStats'
-import type { NextPageWithLayout } from '@/pages/_app'
-import type { ReactElement } from 'react'
-import PageLayout from '@/components/common/PageLayout'
 
-const DataRoomPage: NextPageWithLayout<InferGetStaticPropsType<typeof getStaticProps>> = (props) => {
+const DataRoomPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (props) => {
   return <DataRoom {...props} />
-}
-
-DataRoomPage.getLayout = function getLayout(page: ReactElement) {
-  return <PageLayout>{page}</PageLayout>
 }
 
 export async function getStaticProps() {
