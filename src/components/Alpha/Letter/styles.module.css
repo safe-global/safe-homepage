@@ -31,6 +31,33 @@
   height: 100%;
 }
 
+.redactedContainer {
+  position: relative;
+  width: 100%;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.alwaysVisible {
+  visibility: visible;
+  margin-top: 5px;
+}
+
+.mask {
+  position: absolute;
+  width: 97%;
+}
+
+.visibilityIcon {
+  position: absolute;
+  top: 180px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
 .intro {
   margin-top: 80px;
 }
@@ -59,7 +86,6 @@
 
 .rsvp {
   border-top: 2px solid var(--mui-palette-primary-main);
-  background-color: var(--mui-palette-background-main);
   padding: 16px;
   margin-inline: -37px;
   display: flex;
@@ -67,14 +93,11 @@
   align-items: center;
   position: sticky;
   bottom: 0;
-
-  background-color: var(--mui-palette-background-main);
   z-index: 1000;
 }
 
 .inViewport .rsvp {
   border-top: none;
-  background-color: var(--mui-palette-background-main);
   display: block;
   margin: 0px;
   padding: 0px;
@@ -125,7 +148,7 @@
 
 @media (min-width: 900px) {
   .letterContainer {
-    width: 786px;
+    width: 853px;
     height: 95vh;
   }
 
@@ -137,6 +160,11 @@
 
   .letter {
     font-size: 18px;
+    padding: 48px;
+  }
+
+  .intro {
+    margin-top: 60px;
   }
 
   .cta {
@@ -144,6 +172,7 @@
     flex-direction: row;
     gap: 128px;
     font-size: 22px;
+    margin-top: 50px;
   }
 
   .signature {
