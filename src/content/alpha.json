@@ -1,0 +1,11 @@
+[
+  {
+    "pageTitle": "Safe Alpha - DO NOT SHARE",
+    "description": "Safe Alpha",
+    "component": "common/MetaTags"
+  },
+  {
+    "title": "Safe Alpha",
+    "component": "Alpha/Letter"
+  }
+]
