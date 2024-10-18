@@ -71,7 +71,7 @@
 
   flex-direction: column;
   justify-content: flex-start;
-  gap: 100px;
+  gap: 86px;
   margin-top: 40px;
   font-size: 18px;
 }
@@ -126,8 +126,8 @@
 
 @media (min-width: 600px) {
   .letterContainer {
-    width: 550px;
-    height: 105vh;
+    width: 613px;
+    height: 1540px;
   }
 
   .under {
@@ -144,19 +144,27 @@
   }
 
   .mask {
-    top: 0px;
+    top: 5px;
   }
 
-  .intro,
-  .invitation {
+  .intro {
     margin-top: 60px;
+  }
+
+  .invitation {
+    margin-top: 68px;
+  }
+
+  .cta {
+    margin-top: 142px;
+    gap: 100px;
   }
 }
 
 @media (min-width: 900px) {
   .letterContainer {
-    width: 853px;
-    height: 95vh;
+    width: 1250px;
+    height: 1218px;
   }
 
   .under {
@@ -167,7 +175,7 @@
 
   .letter {
     font-size: 18px;
-    padding: 48px;
+    padding: 48px 248px;
   }
 
   .intro {
