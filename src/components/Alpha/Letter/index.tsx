@@ -1,7 +1,7 @@
 import Logo from '@/public/images/logo.svg'
 import css from './styles.module.css'
 import { Box, Button, IconButton } from '@mui/material'
-import { useRef, useState } from 'react'
+import { forwardRef, useRef, useState } from 'react'
 import useScrollReveal from '@/hooks/useScrollReveal'
 import HiddenXs from '@/public/images/Alpha/hidden-xs.svg'
 import HiddenMd from '@/public/images/Alpha/hidden-md.svg'
@@ -10,11 +10,15 @@ import RedactedSm from '@/public/images/Alpha/redacted-sm.svg'
 import RedactedMd from '@/public/images/Alpha/redacted-md.svg'
 import VisibilityEye from '@/public/images/Alpha/visibility-eye.svg'
 import { useIsMediumScreen, useIsSmallScreen } from '@/hooks/useMaxWidth'
+import SafeLink from '@/components/common/SafeLink'
+
+const LUMA_LINK = 'https://safe.global'
+const TELEGRAM_LINK = 'https://safe.global'
 
 const Letter = () => {
   const [isVisible, setIsVisible] = useState(false)
   const elementRef = useRef<HTMLDivElement>(null)
-  const isButtonInViewport = useScrollReveal(elementRef, 100, false)
+  const isButtonInViewport = useScrollReveal(elementRef, 50, false)
 
   const isSmallScreen = useIsSmallScreen()
   const isMediumScreen = useIsMediumScreen()
@@ -71,26 +75,26 @@ const Letter = () => {
               <span className={css.alwaysVisible}>This is Alpha.</span> I look forward to sharing it with you.
             </div>
 
-            <div className={`${css.cta} ${isButtonInViewport && css.inViewport}`}>
-              <div ref={elementRef} className={css.rsvp}>
-                <div>
-                  <b>See you there!</b>
-                </div>
-
-                <Button variant="contained" size="large" className={css.alwaysVisible}>
-                  RSVP
-                </Button>
+            {!isButtonInViewport && (
+              <div className={css.stickyRsvp}>
+                <RsvpButton />
               </div>
+            )}
+
+            <div className={css.cta}>
+              <RsvpButton ref={elementRef} />
 
               <div className={css.telegram}>
                 <div>
                   Looking for <b>more Alpha</b>?
                 </div>
 
-                <Button variant="outlined" size="large" className={css.alwaysVisible}>
-                  <img src="/images/telegram-logo.svg" alt="Telegram logo" />
-                  Join telegram group
-                </Button>
+                <SafeLink href={TELEGRAM_LINK}>
+                  <Button variant="outlined" size="large" className={css.alwaysVisible}>
+                    <img src="/images/telegram-logo.svg" alt="Telegram logo" />
+                    Join telegram group
+                  </Button>
+                </SafeLink>
               </div>
             </div>
           </div>
@@ -109,5 +113,23 @@ const Letter = () => {
     </div>
   )
 }
+
+const RsvpButton = forwardRef<HTMLDivElement, {}>((_, ref) => {
+  return (
+    <div ref={ref} className={css.rsvp}>
+      <div>
+        <b>See you there!</b>
+      </div>
+
+      <SafeLink href={LUMA_LINK}>
+        <Button variant="contained" size="large" className={css.alwaysVisible}>
+          RSVP
+        </Button>
+      </SafeLink>
+    </div>
+  )
+})
+
+RsvpButton.displayName = 'RsvpButton'
 
 export default Letter

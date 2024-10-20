@@ -67,8 +67,7 @@
 }
 
 .cta {
-  display: inline;
-
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 86px;
@@ -76,34 +75,28 @@
   font-size: 18px;
 }
 
-.cta.inViewport {
-  display: flex;
-}
-
 .cta button {
   margin-top: 20px;
 }
 
-.rsvp {
+.stickyRsvp {
   border-top: 2px solid var(--mui-palette-primary-main);
   background-color: var(--mui-palette-background-main);
-  padding: 16px;
-  margin-inline: -37px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 24px;
   position: sticky;
-  bottom: 0;
+  bottom: 0px;
   z-index: 1000;
   visibility: visible;
+  margin-inline: -37px;
 }
 
-.inViewport .rsvp {
-  border-top: none;
-  background-color: transparent;
-  display: block;
-  margin: 0px;
-  padding: 0px;
+.rsvp {
+  display: flex;
+  flex-direction: column;
+}
+
+.stickyRsvp .rsvp {
+  align-items: center;
 }
 
 .rsvp button {
