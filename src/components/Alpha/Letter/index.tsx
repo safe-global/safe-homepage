@@ -15,7 +15,7 @@ import { ALPHA_LUMA_LINK, ALPHA_TELEGRAM_LINK } from '@/config/constants'
 const Letter = () => {
   const [isVisible, setIsVisible] = useState(false)
   const elementRef = useRef<HTMLDivElement>(null)
-  const isButtonInViewport = useScrollReveal(elementRef, 50, false)
+  const isButtonInViewport = useScrollReveal(elementRef, 50, false, true)
 
   const isSmallScreen = useIsSmallScreen()
   const isMediumScreen = useIsMediumScreen()
