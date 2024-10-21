@@ -51,8 +51,8 @@
 }
 
 .visibilityIcon {
-  position: absolute;
-  top: 180px;
+  position: fixed;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
