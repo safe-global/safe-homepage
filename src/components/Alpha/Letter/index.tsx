@@ -12,8 +12,8 @@ import VisibilityEye from '@/public/images/Alpha/visibility-eye.svg'
 import { useIsMediumScreen, useIsSmallScreen } from '@/hooks/useMaxWidth'
 import SafeLink from '@/components/common/SafeLink'
 
-const LUMA_LINK = 'https://safe.global'
-const TELEGRAM_LINK = 'https://safe.global'
+const LUMA_LINK = 'https://lu.ma/bh1ox3g9'
+const TELEGRAM_LINK = 'https://dub.sh/safealpha'
 
 const Letter = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -64,7 +64,7 @@ const Letter = () => {
               building beyond smart accounts and multi-sig. We will unveil the first look at{' '}
               <HiddenXs className={css.alwaysVisible} /> !
               <br />
-              We believe this can redefine Ethereum experience as we know it and unlock new potential for the whole
+              We believe this can redefine the Ethereum experience as we know it and unlock new potential for the whole
               industry. Your presence would make this milestone even more meaningful.
             </div>
 

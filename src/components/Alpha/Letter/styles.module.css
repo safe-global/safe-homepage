@@ -171,8 +171,17 @@
     padding: 48px 248px;
   }
 
+  .mask {
+    width: 97%;
+    top: -2px;
+  }
+
   .intro {
     margin-top: 60px;
+  }
+
+  .invitation {
+    margin-top: 55px;
   }
 
   .cta {
