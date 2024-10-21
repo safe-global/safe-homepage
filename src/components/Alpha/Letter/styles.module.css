@@ -75,8 +75,9 @@
   font-size: 18px;
 }
 
-.cta button {
+.cta a {
   margin-top: 20px;
+  width: fit-content;
 }
 
 .stickyRsvp {
@@ -99,17 +100,17 @@
   align-items: center;
 }
 
-.rsvp button {
+.rsvp a {
   width: 166px;
   height: 56px;
 }
 
-.telegram button {
+.telegram a {
   height: 56px;
   border: 2px solid var(--mui-palette-primary-main);
 }
 
-.telegram button img {
+.telegram a img {
   margin-right: 4px;
 }
 

@@ -10,10 +10,7 @@ import RedactedSm from '@/public/images/Alpha/redacted-sm.svg'
 import RedactedMd from '@/public/images/Alpha/redacted-md.svg'
 import VisibilityEye from '@/public/images/Alpha/visibility-eye.svg'
 import { useIsMediumScreen, useIsSmallScreen } from '@/hooks/useMaxWidth'
-import SafeLink from '@/components/common/SafeLink'
-
-const LUMA_LINK = 'https://lu.ma/bh1ox3g9'
-const TELEGRAM_LINK = 'https://dub.sh/safealpha'
+import { ALPHA_LUMA_LINK, ALPHA_TELEGRAM_LINK } from '@/config/constants'
 
 const Letter = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -89,12 +86,10 @@ const Letter = () => {
                   Looking for <b>more Alpha</b>?
                 </div>
 
-                <SafeLink href={TELEGRAM_LINK}>
-                  <Button variant="outlined" size="large" className={css.alwaysVisible}>
-                    <img src="/images/telegram-logo.svg" alt="Telegram logo" />
-                    Join telegram group
-                  </Button>
-                </SafeLink>
+                <Button variant="outlined" size="large" className={css.alwaysVisible} href={ALPHA_TELEGRAM_LINK}>
+                  <img src="/images/telegram-logo.svg" alt="Telegram logo" />
+                  Join telegram group
+                </Button>
               </div>
             </div>
           </div>
@@ -121,11 +116,9 @@ const RsvpButton = forwardRef<HTMLDivElement, {}>((_, ref) => {
         <b>See you there!</b>
       </div>
 
-      <SafeLink href={LUMA_LINK}>
-        <Button variant="contained" size="large" className={css.alwaysVisible}>
-          RSVP
-        </Button>
-      </SafeLink>
+      <Button variant="contained" size="large" className={css.alwaysVisible} href={ALPHA_LUMA_LINK}>
+        RSVP
+      </Button>
     </div>
   )
 })
