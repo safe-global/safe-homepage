@@ -3,14 +3,16 @@ import { useRef } from 'react'
 import dynamic from 'next/dynamic'
 import css from './styles.module.css'
 
-const SlidingContent = dynamic(() => import('./SlidingContent'))
+const SlidingWave = dynamic(() => import('./SlidingWave'))
 
 const SeeMore = ({ text }: BaseBlock) => {
   const backgroundRef = useRef<HTMLDivElement>(null)
 
   return (
     <div ref={backgroundRef} className={css.sectionContainer}>
-      <SlidingContent text={text} containerRef={backgroundRef} />
+      <div className={css.stickyContainer}>
+        <SlidingWave text={text} containerRef={backgroundRef} />
+      </div>
     </div>
   )
 }
