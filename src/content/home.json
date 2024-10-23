@@ -56,7 +56,7 @@
     "title": "Trusted by the best",
     "icons": [
       { "name": "1inch", "src": "/images/Home/TrustedIcons/1inch.svg" },
-      { "name": "Aave", "src": "/images/Home/TrustedIcons/aave.svg" },
+      { "name": "Aave", "src": "/images/aave.svg" },
       { "name": "Balancer", "src": "/images/Home/TrustedIcons/balancer.svg" },
       { "name": "Chainlink", "src": "/images/Home/TrustedIcons/chainlink.svg" },
       { "name": "Ethereum Name Service", "src": "/images/Home/TrustedIcons/ethereum-name-service.svg" },
@@ -70,15 +70,15 @@
     "text": "including testnets",
     "reverse": true,
     "icons": [
-      { "name": "Scroll", "new": true, "src": "/images/Home/NetworkIcons/scroll.svg" },
-      { "name": "Polygon zkEVM", "src": "/images/Home/NetworkIcons/polygon-zkevm.svg" },
-      { "name": "Celo", "src": "/images/Home/NetworkIcons/celo.svg" },
-      { "name": "Optimism", "src": "/images/Home/NetworkIcons/optimism.svg" },
-      { "name": "Base", "src": "/images/Home/NetworkIcons/base.png" },
-      { "name": "Arbitrum", "src": "/images/Home/NetworkIcons/arbitrum.svg" },
-      { "name": "ZkSync Era Mainnet", "src": "/images/Home/NetworkIcons/zksync-era-mainnet.svg" },
-      { "name": "Avalanche", "src": "/images/Home/NetworkIcons/avalanche.svg" },
-      { "name": "Gnosis Chain", "src": "/images/Home/NetworkIcons/gnosis-chain.svg" }
+      { "name": "Scroll", "src": "/images/chainsLogos/ScrollLogo.svg" },
+      { "name": "Polygon zkEVM", "src": "/images/chainsLogos/PolygonZkEVMLogo.png" },
+      { "name": "Celo", "src": "/images/chainsLogos/CeloLogo.png" },
+      { "name": "Optimism", "src": "/images/chainsLogos/OptimismLogo.png" },
+      { "name": "Base", "src": "/images/chainsLogos/BaseLogo.png" },
+      { "name": "Arbitrum", "src": "/images/chainsLogos/ArbitrumLogo.png" },
+      { "name": "ZkSync Era Mainnet", "src": "/images/chainsLogos/ZkSyncEraLogo.png" },
+      { "name": "Avalanche", "src": "/images/chainsLogos/AvalancheLogo.png" },
+      { "name": "Gnosis Chain", "src": "/images/chainsLogos/GnosisChainLogo.png" }
     ],
     "component": "Home/TitleSlidingIcons"
   },
