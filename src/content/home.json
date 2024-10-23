@@ -63,7 +63,7 @@
       { "name": "Maker DAO", "src": "/images/Home/TrustedIcons/maker-dao.svg" },
       { "name": "Polygon", "src": "/images/Home/TrustedIcons/polygon.svg" }
     ],
-    "component": "Home/TitleSlidingIcons"
+    "component": "common/TitleSlidingIcons"
   },
   {
     "title": "Available on 15+ networks",
@@ -80,7 +80,7 @@
       { "name": "Avalanche", "src": "/images/chainsLogos/AvalancheLogo.png" },
       { "name": "Gnosis Chain", "src": "/images/chainsLogos/GnosisChainLogo.png" }
     ],
-    "component": "Home/TitleSlidingIcons"
+    "component": "common/TitleSlidingIcons"
   },
   {
     "items": [

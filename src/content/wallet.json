@@ -5,18 +5,78 @@
     "component": "common/MetaTags"
   },
   {
-    "image": {
-      "src": "/images/Wallet/clients.png",
-      "alt": "Web and mobile clients"
-    },
-    "title": "The most secure way to own assets",
+    "component": "Wallet/Hero",
+    "caption": "across 14+ networks",
+    "title": "Keep your assets <b>Safe</b>",
+    "text": "Use the multisig trusted by Vitalik Buterin and leading web3 projects to secure over $100 billion.",
     "buttons": [
       {
         "text": "Launch wallet",
-        "href": "https://app.safe.global"
+        "href": "https://app.safe.global",
+        "variant": "button"
       }
     ],
-    "component": "Wallet/Intro"
+    "image": {
+      "src": "/images/Wallet/laptop-safe-wallet.png",
+      "alt": "Safe wallet web view"
+    },
+    "items": [
+      {
+        "image": {
+          "src": "/images/1kx-logo.svg",
+          "alt": "1kx logo"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/chainlink.svg",
+          "alt": "Chainlink logo"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/aave-logo-light.svg",
+          "alt": "Aave logo"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/starknet-logo.png",
+          "alt": "Starknet logo"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/ens.svg",
+          "alt": "ENS logo"
+        }
+      }
+    ],
+    "backgroundImage": {
+      "md": "/images/Wallet/hero-fg.png",
+      "alt": "Networks circled logos"
+    }
+  },
+  {
+    "title": "Available on 15+ networks",
+    "text": "including testnets",
+    "reverse": true,
+    "icons": [
+      { "name": "Scroll", "src": "/images/chainsLogos/ScrollLogo.svg" },
+      { "name": "Polygon zkEVM", "src": "/images/chainsLogos/PolygonZkEVMLogo.png" },
+      { "name": "Celo", "src": "/images/chainsLogos/CeloLogo.png" },
+      { "name": "Optimism", "src": "/images/chainsLogos/OptimismLogo.png" },
+      { "name": "Base", "src": "/images/chainsLogos/BaseLogo.png" },
+      { "name": "Arbitrum", "src": "/images/chainsLogos/ArbitrumLogo.png" },
+      { "name": "ZkSync Era Mainnet", "src": "/images/chainsLogos/ZkSyncEraLogo.png" },
+      { "name": "Avalanche", "src": "/images/chainsLogos/AvalancheLogo.png" },
+      { "name": "Gnosis Chain", "src": "/images/chainsLogos/GnosisChainLogo.png" },
+      { "name": "BNB", "src": "/images/chainsLogos/BNBLogo.png" },
+      { "name": "Ethereum Mainnet", "src": "/images/chainsLogos/EthereumLogo.png" },
+      { "name": "Polygon", "src": "/images/chainsLogos/PolygonLogo.png" },
+      { "name": "Aurora", "src": "/images/chainsLogos/AuroraLogo.png" }
+    ],
+    "component": "common/TitleSlidingIcons"
   },
   {
     "title": "Introducing<br>Native Swaps",
