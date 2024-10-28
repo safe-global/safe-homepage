@@ -18,26 +18,25 @@ import {
   isEntryType,
   isEntryTypeBaseBlock,
   isEntryTypeExternalURL,
-  isEntryTypePost,
   isEntryTypeSimpleBaseBlock,
 } from '@/lib/typeGuards'
 import { Container } from '@mui/material'
-import type { Entry } from 'contentful'
 import { useClientEntry } from '@/hooks/useClientEntry'
-import type { PostEntryCollection } from '@/config/types'
-
-export type PressRoomEntry = Entry<TypePressRoomSkeleton, undefined, string>
+import type { PostEntryCollection, PressRoomEntry } from '@/config/types'
+import { isPublishedPressRelease } from '@/lib/contentful/isPressRelease'
+import { useAllPosts } from '@/hooks/useAllPosts'
 
 export type PressRoomProps = {
   pressRoom: PressRoomEntry
   allPosts: PostEntryCollection
-  totalAssets: number
+  totalAssets: number | null
 }
 
 const PressRoom = ({ pressRoom, allPosts, totalAssets }: PressRoomProps) => {
   const { data: localPressRoom } = useClientEntry<TypePressRoomSkeleton, PressRoomEntry>(pressRoom.sys.id, pressRoom)
+  const { localAllPosts } = useAllPosts(allPosts)
 
-  const { metaTags, featured, numbers, investors, timeline, news, podcasts, videos } = localPressRoom.fields
+  const { metaTags, numbers, investors, timeline, news, podcasts, videos } = localPressRoom.fields
 
   const numbersList = numbers.filter(isEntryTypeBaseBlock)
   const investorsList = investors.filter(isAsset)
@@ -46,12 +45,15 @@ const PressRoom = ({ pressRoom, allPosts, totalAssets }: PressRoomProps) => {
   const podcastsList = podcasts.filter(isEntryTypeExternalURL)
   const videosList = videos.filter(isEntryTypeExternalURL)
 
+  // Get the most recent press release that is not a draft
+  const latestPressRelease = localAllPosts.items.find(isPublishedPressRelease)
+
   return (
     <>
       {isEntryType(metaTags) && <MetaTags {...metaTags} />}
       <Container>
         <Hero />
-        {isEntryTypePost(featured) && <FeaturedPost {...featured} />}
+        {latestPressRelease && <FeaturedPost post={latestPressRelease} />}
         <ContentsNavigation />
         <AboutUs totalAssets={totalAssets} />
         <Marquee items={numbersList} />

@@ -2,12 +2,13 @@
   background-position-x: center;
   background-repeat: no-repeat;
   overflow: visible;
-  background-size: cover;
+  background-size: contain;
   position: relative;
 }
 
 .container {
   margin-top: 70px;
+  margin-bottom: 210px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,11 +33,7 @@
 .text {
   max-width: 1170px;
   text-align: center;
-}
-
-.title p,
-.text p {
-  margin: 0;
+  color: var(--mui-palette-primary-text);
 }
 
 .logosWrapper {

@@ -1,6 +1,6 @@
 type Position = { x: number; y: number }
 
-const DOT_COLOR = '#121312'
+const DOT_COLOR = '#12312'
 
 export const drawDots = (ctx: CanvasRenderingContext2D, dots: Position[]) => {
   ctx.fillStyle = DOT_COLOR

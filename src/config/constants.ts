@@ -28,11 +28,17 @@ export const YOUTUBE_LINK = 'https://www.youtube.com/@safeglobal'
 export const MIRROR_LINK = 'https://safe.mirror.xyz'
 export const MIRROR_SUBSCRIBE_LINK = 'https://safe.mirror.xyz/subscribe/embed'
 export const GITHUB_LINK = 'https://github.com/safe-global'
+export const ALPHA_LUMA_LINK = 'https://lu.ma/bh1ox3g9'
+export const ALPHA_TELEGRAM_LINK = 'https://dub.sh/safealpha'
 
 export const PROTOCOL_KIT_LINK = 'https://docs.safe.global/safe-core-aa-sdk/protocol-kit'
 export const AUTH_KIT_LINK = 'https://docs.safe.global/safe-core-aa-sdk/auth-kit'
 export const RELAY_KIT_LINK = 'https://docs.safe.global/safe-core-aa-sdk/relay-kit'
 export const ONRAMP_KIT_LINK = 'https://docs.safe.global/safe-core-aa-sdk/onramp-kit'
+
+export const DOCS_SDK = 'https://docs.safe.global/sdk/overview'
+export const DOCS_INFRASTRUCTURE = 'https://docs.safe.global/core-api/api-overview'
+export const DOCS_SMART_CONTRACTS = 'https://docs.safe.global/advanced/smart-account-overview'
 
 export const ECOSYSTEM_DATA_URL = IS_PRODUCTION
   ? 'https://ecosystem-database.safe.global'

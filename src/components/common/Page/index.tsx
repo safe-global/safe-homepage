@@ -3,7 +3,11 @@ import { isEntryType, isEntryTypeBaseBlock } from '@/lib/typeGuards'
 import MetaTags from '@/components/common/MetaTagsContentful'
 import { type LandingPageEntry } from '@/config/types'
 
-const Page = ({ landingPage }: { landingPage: LandingPageEntry }) => {
+export type LandingPageProps = {
+  landingPage: LandingPageEntry
+}
+
+const Page = ({ landingPage }: LandingPageProps) => {
   const { metaTags, content } = landingPage.fields
 
   return (
