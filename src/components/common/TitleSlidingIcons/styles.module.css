@@ -1,0 +1,120 @@
+.carouselWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 8px 0;
+  margin: 48px auto;
+}
+
+.gradientBase {
+  position: absolute;
+  width: 94px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(270deg, rgba(18, 19, 18, 0) 0%, var(--mui-palette-background-default) 100%);
+  z-index: 1;
+}
+
+.gradientFlipped {
+  left: auto;
+  right: 0;
+  width: 138px;
+  transform: scaleX(-1.005); /* prevent 1px gap glitch */
+}
+
+.secondaryText {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.animation {
+  animation: slide 35s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+.animationReverse {
+  animation-direction: reverse;
+}
+
+.slider {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow: hidden;
+  font-size: 0;
+  user-select: none;
+  padding-bottom: 32px;
+}
+
+.wrapper {
+  padding: 8px 12px 8px 8px;
+  gap: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+  width: 200px;
+  text-align: center;
+}
+
+.icon {
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.icon img {
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.newBadge {
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+}
+
+.newBadge::before {
+  content: '';
+  display: inline-block;
+  width: 7.5px;
+  height: 7.5px;
+  clip-path: circle(40%);
+  background: var(--mui-palette-primary-main);
+  margin-right: 4px;
+}
+
+@keyframes slide {
+  to {
+    transform: translate(-50%);
+  }
+}
+
+@media (min-width: 600px) {
+  .carouselWrapper {
+    gap: 24px;
+  }
+
+  .gradientBase {
+    width: 337px;
+  }
+
+  .gradientFlipped {
+    width: 351px;
+  }
+
+  .animation {
+    animation-duration: 70s;
+  }
+}

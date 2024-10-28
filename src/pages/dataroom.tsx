@@ -12,7 +12,7 @@ export async function getStaticProps() {
   if (!dataRoomStats) return null
 
   const {
-    tvl_perc_world_gdp,
+    tvp_perc_world_gdp,
     total_usdc_share,
     crypto_punks_perc,
     total_transfer_volume,
@@ -21,23 +21,35 @@ export async function getStaticProps() {
     cex_tvl_robinhood,
     cex_tvl_okx,
     cex_tvl_binance,
+    defi_tvl_aave,
+    defi_tvl_eigenlayer,
+    defi_tvl_lido,
+    defi_tvl_uniswap,
     last_updated,
+    annual_swap_fees,
+    annualised_outgoing_tvp,
   } = dataRoomStats
 
   return {
     props: {
       safeDataRoomStats: {
-        tvlToGDPPercentage: tvl_perc_world_gdp,
+        tvpToGDPPercentage: tvp_perc_world_gdp,
         usdcPercentageStored: total_usdc_share,
         // This is a temp workaround. The received value should be a number.
         cryptoPunksStoredPercentage: Number(crypto_punks_perc),
-        totalVolumeTransfered: total_transfer_volume,
+        totalVolumeTransferred: total_transfer_volume,
         onChainTransactionsPercentage: transaction_share,
         tvlSafe: Number(safe_tvl),
         tvlRobinhoodCEX: Number(cex_tvl_robinhood),
         tvlOKX: Number(cex_tvl_okx),
         tvlBinance: Number(cex_tvl_binance),
+        tvlLido: Number(defi_tvl_lido),
+        tvlAAVE: Number(defi_tvl_aave),
+        tvlEigenLayer: Number(defi_tvl_eigenlayer),
+        tvlUniswap: Number(defi_tvl_uniswap),
         lastUpdated: Number(last_updated),
+        annualSwapFees: Number(annual_swap_fees),
+        annualisedOutgoingTVP: annualised_outgoing_tvp,
       },
     },
   }

@@ -4,14 +4,14 @@ import { Box, Grid, Link, Typography } from '@mui/material'
 import css from './styles.module.css'
 import { formatBlogDate } from '@/components/Blog/utils/formatBlogDate'
 import { calculateReadingTimeInMin } from '@/components/Blog/utils/calculateReadingTime'
-import { type BlogPostEntry } from '@/components/Blog/Post'
+import type { BlogPostEntry } from '@/config/types'
 import { isAsset } from '@/lib/typeGuards'
 import CategoryIcon from '@/public/images/Blog/category-icon.svg'
 import { AppRoutes } from '@/config/routes'
 import { containsTag, PRESS_RELEASE_TAG } from '@/lib/containsTag'
 
-const FeaturedPost = (props: BlogPostEntry) => {
-  const { slug, coverImage, category, date, title, excerpt, tags, content } = props.fields
+const FeaturedPost = ({ post }: { post: BlogPostEntry }) => {
+  const { slug, coverImage, category, date, title, excerpt, tags, content } = post.fields
 
   const isPressRelease = containsTag(tags, PRESS_RELEASE_TAG)
 
@@ -23,7 +23,7 @@ const FeaturedPost = (props: BlogPostEntry) => {
         </Typography>
       ) : null}
       <Grid container columnSpacing="60px" rowGap={3}>
-        <Grid item md={7}>
+        <Grid item lg={7}>
           {isAsset(coverImage) && coverImage.fields.file?.url ? (
             <Link href={`/blog/${slug}`}>
               <Image
@@ -37,7 +37,7 @@ const FeaturedPost = (props: BlogPostEntry) => {
           ) : undefined}
         </Grid>
 
-        <Grid item md={5} className={css.body}>
+        <Grid item lg={5} className={css.body}>
           <div className={css.meta}>
             <div className={css.metaStart}>
               <CategoryIcon />
@@ -58,7 +58,7 @@ const FeaturedPost = (props: BlogPostEntry) => {
 
           <Typography className={css.excerpt}>{excerpt}</Typography>
 
-          <Box mt={2}>
+          <Box mt="auto">
             <Tags tags={tags} />
           </Box>
         </Grid>

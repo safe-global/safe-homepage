@@ -1,6 +1,6 @@
 import useSWR from 'swr'
 import client from '@/lib/contentful'
-import { type BlogPostEntry } from '@/components/Blog/Post'
+import type { BlogPostEntry } from '@/config/types'
 import { type TypePostSkeleton } from '@/contentful/types'
 
 const postFetcher = (id: string) => client.getEntry<TypePostSkeleton>(id)
