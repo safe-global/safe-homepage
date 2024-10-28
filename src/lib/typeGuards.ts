@@ -3,9 +3,7 @@ import type {
   TypeBaseBlockSkeleton,
   TypeBlogHomeSkeleton,
   TypeButtonSkeleton,
-  TypeCardGridItemSkeleton,
   TypeExternalUrlSkeleton,
-  TypeFaqEntrySkeleton,
   TypePostSkeleton,
   TypeSimpleBaseBlockSkeleton,
   TypeTagSkeleton,
@@ -19,14 +17,6 @@ const getContentTypeSysId = (obj: any): string => {
 
 export const isEntryTypeButton = (obj: any): obj is Entry<TypeButtonSkeleton, undefined, string> => {
   return getContentTypeSysId(obj) === 'button'
-}
-
-export const isEntryTypeCardGridItem = (obj: any): obj is Entry<TypeCardGridItemSkeleton, undefined, string> => {
-  return getContentTypeSysId(obj) === 'cardGridItem'
-}
-
-export const isEntryTypeFaqEntry = (obj: any): obj is Entry<TypeFaqEntrySkeleton, undefined, string> => {
-  return getContentTypeSysId(obj) === 'faqEntry'
 }
 
 export const isEntryTypeTag = (obj: any): obj is Entry<TypeTagSkeleton, undefined, string> => {
