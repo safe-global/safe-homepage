@@ -21,18 +21,15 @@ import {
   isEntryTypeSimpleBaseBlock,
 } from '@/lib/typeGuards'
 import { Container } from '@mui/material'
-import type { Entry } from 'contentful'
 import { useClientEntry } from '@/hooks/useClientEntry'
-import type { PostEntryCollection } from '@/config/types'
+import type { PostEntryCollection, PressRoomEntry } from '@/config/types'
 import { isPublishedPressRelease } from '@/lib/contentful/isPressRelease'
 import { useAllPosts } from '@/hooks/useAllPosts'
-
-export type PressRoomEntry = Entry<TypePressRoomSkeleton, undefined, string>
 
 export type PressRoomProps = {
   pressRoom: PressRoomEntry
   allPosts: PostEntryCollection
-  totalAssets: number
+  totalAssets: number | null
 }
 
 const PressRoom = ({ pressRoom, allPosts, totalAssets }: PressRoomProps) => {

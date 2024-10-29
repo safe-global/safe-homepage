@@ -73,7 +73,7 @@
     z-index: 1;
     left: -300px;
     top: -200px;
-    width: 1000px;
+    width: 885px;
     height: 1000px;
     background-image: radial-gradient(at top left, rgba(18, 255, 128, 0.3) 0%, rgba(246, 247, 248, 0) 50%);
     filter: blur(70px);
@@ -82,7 +82,7 @@
   .spot2 {
     position: absolute;
     z-index: 1;
-    right: -50px;
+    right: 0px;
     top: -250px;
     width: 1000px;
     height: 1000px;
