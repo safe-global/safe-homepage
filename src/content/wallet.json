@@ -79,6 +79,31 @@
     "component": "common/TitleSlidingIcons"
   },
   {
+    "items": [
+      {
+        "caption": "Individual users",
+        "title": "Secure Your Savings Beyond a Seed Phrase",
+        "text": "Protect your assets with multi-signature security, giving you peace of mind without relying solely on a seed phrase.",
+        "image": {
+          "src": "/images/Home/safe-shield.png",
+          "alt": "Safe Smart Account shield"
+        },
+        "component": "Wallet/BigImageCard"
+      },
+      {
+        "caption": "Organizations",
+        "title": "Manage Assets Together, Securely",
+        "text": "Collaboratively manage your organization's assets with multi-signature approvals, ensuring security and transparency every step of the way.",
+        "image": {
+          "src": "/images/Home/safe-shield.png",
+          "alt": "Safe Smart Account shield"
+        },
+        "component": "Wallet/BigImageCard"
+      }
+    ],
+    "component": "Wallet/BigCardsGrid"
+  },
+  {
     "title": "Introducing<br>Native Swaps",
     "caption": "New feature",
     "buttons": [
