@@ -9,7 +9,7 @@ const BigCardsGrid = ({ items }: { items: Array<BaseBlock['items'] & { component
   return (
     <Container className={layoutCss.containerShort}>
       <Grid container spacing={{ xs: '30px', xl: '50px' }}>
-        {items?.map((item, index) => {
+        {items.map((item, index) => {
           const { component } = item
 
           const CardComponent = getComponentByName(component, () => <></>)
