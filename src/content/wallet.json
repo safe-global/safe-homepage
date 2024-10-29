@@ -79,6 +79,33 @@
     "component": "common/TitleSlidingIcons"
   },
   {
+    "title": "<i>Safe</i> accounts",
+    "items": [
+      {
+        "title": "4M+",
+        "text": "Gas saved in batch transactions",
+        "link": {
+          "href": "https://dune.com/queries/2093960/3449499"
+        }
+      },
+      {
+        "title": "$120B+",
+        "text": "Total value locked (TVL)",
+        "link": {
+          "href": ""
+        }
+      },
+      {
+        "title": "1.5M+",
+        "text": "Monthly active users (MAU)",
+        "link": {
+          "href": "https://dune.com/queries/2459401/4044167"
+        }
+      }
+    ],
+    "component": "Wallet/GradientNumbers"
+  },
+  {
     "title": "Introducing<br>Native Swaps",
     "caption": "New feature",
     "buttons": [
