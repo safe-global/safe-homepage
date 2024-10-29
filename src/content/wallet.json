@@ -58,6 +58,7 @@
     }
   },
   {
+    "component": "common/TitleSlidingIcons",
     "title": "Available on 15+ networks",
     "text": "including testnets",
     "reverse": true,
@@ -75,10 +76,35 @@
       { "name": "Ethereum Mainnet", "src": "/images/chainsLogos/EthereumLogo.png" },
       { "name": "Polygon", "src": "/images/chainsLogos/PolygonLogo.png" },
       { "name": "Aurora", "src": "/images/chainsLogos/AuroraLogo.png" }
-    ],
-    "component": "common/TitleSlidingIcons"
+    ]
   },
   {
+    "component": "Wallet/BigCardsGrid",
+    "items": [
+      {
+        "caption": "Individual users",
+        "title": "Secure Your Savings Beyond a Seed Phrase",
+        "text": "Protect your assets with multi-signature security, giving you peace of mind without relying solely on a seed phrase.",
+        "image": {
+          "src": "/images/Home/safe-shield.png",
+          "alt": "Safe Smart Account shield"
+        },
+        "component": "Wallet/BigImageCard"
+      },
+      {
+        "caption": "Organizations",
+        "title": "Manage Assets Together, Securely",
+        "text": "Collaboratively manage your organization's assets with multi-signature approvals, ensuring security and transparency every step of the way.",
+        "image": {
+          "src": "/images/Home/safe-shield.png",
+          "alt": "Safe Smart Account shield"
+        },
+        "component": "Wallet/BigImageCard"
+      }
+    ]
+  },
+  {
+    "component": "Wallet/GradientNumbers",
     "title": "<i>Safe</i> accounts",
     "items": [
       {
@@ -102,8 +128,7 @@
           "href": "https://dune.com/queries/2459401/4044167"
         }
       }
-    ],
-    "component": "Wallet/GradientNumbers"
+    ]
   },
   {
     "title": "Introducing<br>Native Swaps",
