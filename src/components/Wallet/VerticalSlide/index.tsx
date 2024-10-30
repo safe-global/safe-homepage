@@ -9,11 +9,13 @@ import BracketRight from '@/public/images/Wallet/VerticalSlide/bracket-right.svg
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 
+const icons = [<RecoveryIcon key="recovery" />, <ScanIcon key="scan" />, <MultipleKeysIcon key="multiple-keys" />]
+
 const VerticalSlide = ({ title, items = [] }: BaseBlock) => {
   const [selectedIndex, setSelectedIndex] = useState(0)
 
   const itemsImages = items.map((item) => item.image)
-  const icons = [<RecoveryIcon key="recovery" />, <ScanIcon key="scan" />, <MultipleKeysIcon key="multiple-keys" />]
+  const selectedImage = itemsImages[selectedIndex]
 
   const handleCardClick = (index: number) => {
     setSelectedIndex(index)
@@ -46,9 +48,7 @@ const VerticalSlide = ({ title, items = [] }: BaseBlock) => {
             <BracketRight />
           </div>
 
-          {itemsImages[selectedIndex] ? (
-            <img src={itemsImages[selectedIndex].src} alt={itemsImages[selectedIndex].alt} className={css.image} />
-          ) : null}
+          {selectedImage ? <img src={selectedImage.src} alt={selectedImage.alt} className={css.image} /> : null}
         </Grid>
 
         <Grid item xs={12} md={5}>
