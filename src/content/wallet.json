@@ -104,6 +104,31 @@
     ]
   },
   {
+    "items": [
+      {
+        "caption": "Individual users",
+        "title": "Secure Your Savings Beyond a Seed Phrase",
+        "text": "Protect your assets with multi-signature security, giving you peace of mind without relying solely on a seed phrase.",
+        "image": {
+          "src": "/images/Home/safe-shield.png",
+          "alt": "Safe Smart Account shield"
+        },
+        "component": "Wallet/BigImageCard"
+      },
+      {
+        "caption": "Organizations",
+        "title": "Manage Assets Together, Securely",
+        "text": "Collaboratively manage your organization's assets with multi-signature approvals, ensuring security and transparency every step of the way.",
+        "image": {
+          "src": "/images/Home/safe-shield.png",
+          "alt": "Safe Smart Account shield"
+        },
+        "component": "Wallet/BigImageCard"
+      }
+    ],
+    "component": "Wallet/BigCardsGrid"
+  },
+  {
     "component": "Wallet/VerticalSlide",
     "title": "Defend assets with <b>multi-signature</b> security",
     "items": [
@@ -156,6 +181,56 @@
         "text": "Monthly active users (MAU)",
         "link": {
           "href": "https://dune.com/queries/2459401/4044167"
+        }
+      }
+    ]
+  },
+  {
+    "component": "Wallet/FeatureCards",
+    "title": "<b>More features beyond</b> multisigs",
+    "text": "Safe is more than just secure asset storage. It's your entry point to onchain activities.",
+    "items": [
+      {
+        "isNew": true,
+        "caption": "Trade seamlessly",
+        "title": "Swap like a pro",
+        "text": "with MEV protection and security, ensuring your intent-based transactions will not fail.",
+        "image": {
+          "src": "/images/Wallet/Feature/trade.png",
+          "alt": "Token swap modal"
+        }
+      },
+      {
+        "caption": "Optimise",
+        "title": "Batch transactions",
+        "text": "To save gas and to avoid losing time gathering signatures from everyone.",
+        "image": {
+          "src": "/images/Wallet/Feature/trade.png",
+          "alt": "Token swap modal"
+        }
+      },
+      {
+        "isNew": true,
+        "caption": "Earn",
+        "title": "Stake ETH Securely",
+        "text": "Stake directly from your Safe{Wallet} with robust multisig security and contribute to a stronger, safer Ethereum.",
+        "image": {
+          "src": "/images/Wallet/Feature/trade.png",
+          "alt": "Token swap modal"
+        }
+      },
+      {
+        "caption": "All-in-one",
+        "title": "Explore Safe Apps",
+        "text": "Swapping, staking, NFTs, identity and more. Interact with 200+ apps integrated with Safe.",
+        "link": {
+          "title": "View ecosystem projects",
+          "href": "https://safe.global/ecosystem",
+          "variant": "link"
+        },
+        "image": {
+          "src": "/images/Wallet/Feature/trade.png",
+          "alt": "Token swap modal"
         }
       }
     ]
