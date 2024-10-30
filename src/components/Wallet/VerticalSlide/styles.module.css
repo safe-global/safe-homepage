@@ -1,10 +1,15 @@
 .title {
   text-align: center;
   max-width: 650px;
-  margin: 0 auto 80px;
+  margin-bottom: 48px;
 }
 
-.imageItem {
+.image {
+  height: 300px;
+  object-fit: contain;
+}
+
+.showInMd {
   display: none;
 }
 
@@ -39,16 +44,22 @@
 }
 
 @media (min-width: 900px) {
+  .title {
+    margin-bottom: 80px;
+  }
+
   .imageItem {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    gap: 40px;
   }
 
-  .imageWrapper {
-    display: flex;
-    align-items: center;
-    height: 100%;
+  .image {
+    height: 450px;
+  }
+
+  .showInMd {
+    display: block;
   }
 }

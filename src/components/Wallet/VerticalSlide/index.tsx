@@ -30,13 +30,13 @@ const VerticalSlide = ({ title, items = [] }: BaseBlock) => {
 
   return (
     <Container className={layoutCss.containerShort}>
-      <div className={css.title}>
-        <Typography variant="h2">{title}</Typography>
-      </div>
+      <Typography variant="h2" className={css.title}>
+        {title}
+      </Typography>
 
       <Grid container spacing="40px" justifyContent="flex-end">
         <Grid item md={7} className={css.imageItem}>
-          <div>
+          <div className={css.showInMd}>
             <BracketLeft />
             {icons.map((icon, index) => (
               <span key={index} className={index === selectedIndex ? css.selected : undefined}>
@@ -46,11 +46,9 @@ const VerticalSlide = ({ title, items = [] }: BaseBlock) => {
             <BracketRight />
           </div>
 
-          <div className={css.imageWrapper}>
-            {itemsImages[selectedIndex] ? (
-              <img src={itemsImages[selectedIndex].src} alt={itemsImages[selectedIndex].alt} />
-            ) : null}
-          </div>
+          {itemsImages[selectedIndex] ? (
+            <img src={itemsImages[selectedIndex].src} alt={itemsImages[selectedIndex].alt} className={css.image} />
+          ) : null}
         </Grid>
 
         <Grid item xs={12} md={5}>
