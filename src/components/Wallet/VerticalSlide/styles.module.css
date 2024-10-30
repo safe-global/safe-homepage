@@ -34,9 +34,16 @@
   background-color: var(--mui-palette-primary-main);
 }
 
+.selected {
+  color: var(--mui-palette-primary-main);
+}
+
 @media (min-width: 900px) {
   .imageItem {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
   }
 
   .imageWrapper {

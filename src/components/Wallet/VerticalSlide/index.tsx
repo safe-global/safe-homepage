@@ -1,19 +1,19 @@
 import { useEffect, useState } from 'react'
 import { ButtonBase, Container, Grid, Typography } from '@mui/material'
-import RichText from '@/components/common/RichText'
-import { isEntryTypeBaseBlock } from '@/lib/typeGuards'
-import type { BaseBlockEntry } from '@/config/types'
+import type { BaseBlock } from '@/components/Home/types'
+import BracketLeft from '@/public/images/Wallet/VerticalSlide/bracket-left.svg'
+import RecoveryIcon from '@/public/images/Wallet/VerticalSlide/recovery.svg'
+import ScanIcon from '@/public/images/Wallet/VerticalSlide/scan.svg'
+import MultipleKeysIcon from '@/public/images/Wallet/VerticalSlide/multiple-keys.svg'
+import BracketRight from '@/public/images/Wallet/VerticalSlide/bracket-right.svg'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
-import { extractContentfulImageProps } from '@/lib/contentful/extractContentfulImageProps'
 
-const VerticalSlide = (props: BaseBlockEntry) => {
+const VerticalSlide = ({ title, items = [] }: BaseBlock) => {
   const [selectedIndex, setSelectedIndex] = useState(0)
 
-  const { title, items } = props.fields
-
-  const itemsList = items?.filter(isEntryTypeBaseBlock) ?? []
-  const itemsImages = itemsList.map((item) => item.fields.image)
+  const itemsImages = items.map((item) => item.image)
+  const icons = [<RecoveryIcon key="recovery" />, <ScanIcon key="scan" />, <MultipleKeysIcon key="multiple-keys" />]
 
   const handleCardClick = (index: number) => {
     setSelectedIndex(index)
@@ -22,31 +22,41 @@ const VerticalSlide = (props: BaseBlockEntry) => {
   // Change index every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      setSelectedIndex((prevIndex) => (prevIndex + 1) % itemsList.length)
+      setSelectedIndex((prevIndex) => (prevIndex + 1) % items?.length)
     }, 5000)
 
     return () => clearInterval(interval) // Cleanup interval on component unmount
-  }, [itemsList.length])
-
-  const imageProps = extractContentfulImageProps(itemsImages[selectedIndex])
+  }, [items.length])
 
   return (
     <Container className={layoutCss.containerShort}>
       <div className={css.title}>
-        <RichText {...title} />
+        <Typography variant="h2">{title}</Typography>
       </div>
 
       <Grid container spacing="40px" justifyContent="flex-end">
         <Grid item md={7} className={css.imageItem}>
+          <div>
+            <BracketLeft />
+            {icons.map((icon, index) => (
+              <span key={index} className={index === selectedIndex ? css.selected : undefined}>
+                {icon}
+              </span>
+            ))}
+            <BracketRight />
+          </div>
+
           <div className={css.imageWrapper}>
-            {imageProps ? <img src={imageProps.src} alt={imageProps.alt} /> : null}
+            {itemsImages[selectedIndex] ? (
+              <img src={itemsImages[selectedIndex].src} alt={itemsImages[selectedIndex].alt} />
+            ) : null}
           </div>
         </Grid>
 
         <Grid item xs={12} md={5}>
           <div className={css.cardWrapper}>
-            {itemsList.map((item, index) => {
-              const { title, text } = item.fields
+            {items.map((item, index) => {
+              const { title, text } = item
 
               return (
                 <Grid item key={index} xs={12}>
@@ -55,13 +65,11 @@ const VerticalSlide = (props: BaseBlockEntry) => {
                     disableRipple
                     className={`${css.card} ${index === selectedIndex ? css.selected : ''}`}
                   >
-                    <Typography variant="h5">
-                      <RichText {...title} />
-                    </Typography>
+                    <Typography variant="h5">{title}</Typography>
 
                     {text && (
                       <Typography color="primary.light" component="div">
-                        <RichText {...text} />
+                        {text}
                       </Typography>
                     )}
                   </ButtonBase>
