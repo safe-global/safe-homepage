@@ -79,6 +79,36 @@
     "component": "common/TitleSlidingIcons"
   },
   {
+    "component": "Wallet/VerticalSlide",
+    "title": "Defend assets with <b>multi-signature</b> security",
+    "items": [
+      {
+        "title": "Eliminate single points of failure",
+        "text": "Distribute control across multiple owners and require for enhanced security.",
+        "image": {
+          "src": "/images/Wallet/VerticalSlide/eliminate-single-pof.png",
+          "alt": "Execute multisig"
+        }
+      },
+      {
+        "title": "Simulate and scan transactions",
+        "text": "Transact with confidence with risk scanning and transaction simulation before executing.",
+        "image": {
+          "src": "/images/Wallet/VerticalSlide/simulate-scan-tx.png",
+          "alt": "Simulate and scan transactions"
+        }
+      },
+      {
+        "title": "Restore access to your account",
+        "text": "Never lose access to your account. Restore account control easily with secure recovery mechanisms.",
+        "image": {
+          "src": "/images/Wallet/VerticalSlide/restore-access.png",
+          "alt": "Activate recovery"
+        }
+      }
+    ]
+  },
+  {
     "items": [
       {
         "caption": "Individual users",
