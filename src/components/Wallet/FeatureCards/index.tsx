@@ -31,7 +31,8 @@ type FeatureCardsProps = Omit<BaseBlock, 'items'> & {
 
 const FeatureCards = ({ title, text, items = [] }: FeatureCardsProps) => {
   // extract the last item from the array
-  const [lastItem, ...restItems] = [...items].reverse()
+  const lastItem = items[items.length - 1]
+  const restItems = items.slice(0, -1)
 
   return (
     <Container className={layoutCss.containerMedium}>
@@ -46,7 +47,7 @@ const FeatureCards = ({ title, text, items = [] }: FeatureCardsProps) => {
       </Grid>
 
       <Grid container mt={{ xs: '50px', md: '100px' }} columnSpacing="30px" rowGap="30px">
-        {restItems.reverse().map((item, index) => {
+        {restItems.map((item, index) => {
           if (item.fullWidth) {
             return (
               <Grid container item key={index} xs={12} width="100%">
