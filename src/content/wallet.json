@@ -177,7 +177,7 @@
         }
       },
       {
-        "caption": "Optimise",
+        "caption": "Optimize",
         "title": "Batch transactions",
         "text": "To save gas and to avoid losing time gathering signatures from everyone.",
         "image": {
@@ -206,7 +206,7 @@
         },
         "image": {
           "src": "/images/Wallet/Features/safe-apps.png",
-          "alt": "Safe apps logos"
+          "alt": "Safe Apps logos"
         }
       }
     ]
