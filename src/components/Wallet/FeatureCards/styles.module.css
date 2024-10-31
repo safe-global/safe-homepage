@@ -11,6 +11,22 @@
   transition: var(--transition-duration);
 }
 
+.newBadge {
+  font-size: 12px;
+  line-height: 14px;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  background-color: #b0ffc9;
+  color: var(--mui-palette-text-dark);
+  border-radius: 4px;
+  width: 45px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .lastCard {
   padding: 0;
 }
@@ -37,9 +53,41 @@
   color: transparent;
 }
 
+.stacked {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stacked .image {
+  height: 170px;
+  margin: 0 auto;
+}
+
 @media (min-width: 900px) {
   .card {
-    height: 300px;
+    height: 400px;
     flex-direction: row;
+  }
+
+  .stacked {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .fullWidth {
+    width: 100%;
+  }
+
+  .fullWidth .title {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .centerContent {
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
 }

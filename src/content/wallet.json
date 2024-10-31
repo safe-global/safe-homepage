@@ -167,6 +167,7 @@
     "items": [
       {
         "isNew": true,
+        "fullWidth": true,
         "caption": "Trade seamlessly",
         "title": "Swap like a pro",
         "text": "with MEV protection and security, ensuring your intent-based transactions will not fail.",
@@ -180,7 +181,7 @@
         "title": "Batch transactions",
         "text": "To save gas and to avoid losing time gathering signatures from everyone.",
         "image": {
-          "src": "/images/Wallet/Features/trade.png",
+          "src": "/images/Wallet/Features/optimise.png",
           "alt": "Token swap modal"
         }
       },
@@ -188,9 +189,9 @@
         "isNew": true,
         "caption": "Earn",
         "title": "Stake ETH Securely",
-        "text": "Stake directly from your Safe{Wallet} with robust multisig security and contribute to a stronger, safer Ethereum.",
+        "text": "Stake directly from your Safe{Wallet} with robust multisig security.",
         "image": {
-          "src": "/images/Wallet/Features/trade.png",
+          "src": "/images/Wallet/Features/earn.png",
           "alt": "Token swap modal"
         }
       },

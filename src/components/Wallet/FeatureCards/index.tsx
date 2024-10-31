@@ -11,7 +11,9 @@ const CardContent = ({ caption, title, text, link }: Partial<BaseBlock>) => {
         {caption}
       </Typography>
 
-      <Typography variant="h4">{title}</Typography>
+      <Typography variant="h4" className={css.title}>
+        {title}
+      </Typography>
 
       <Typography color="primary.light">{text}</Typography>
 
@@ -24,8 +26,13 @@ const CardContent = ({ caption, title, text, link }: Partial<BaseBlock>) => {
   )
 }
 
-const FeatureCards = ({ title, text, items = [] }: BaseBlock) => {
-  const lastItem = items[items.length - 1]
+type FeatureCardsProps = Omit<BaseBlock, 'items'> & {
+  items: Array<Partial<BaseBlock> & { isNew: boolean; fullWidth: boolean }>
+}
+
+const FeatureCards = ({ title, text, items = [] }: FeatureCardsProps) => {
+  // extract the last item from the array
+  const [lastItem, ...restItems] = [...items].reverse()
 
   return (
     <Container className={layoutCss.containerMedium}>
@@ -39,14 +46,50 @@ const FeatureCards = ({ title, text, items = [] }: BaseBlock) => {
         </Grid>
       </Grid>
 
-      <Grid container mt={{ xs: '50px', md: '100px' }}>
+      <Grid container mt={{ xs: '50px', md: '100px' }} columnSpacing="30px" rowGap="30px">
+        {restItems.reverse().map((item, index) => {
+          if (item.fullWidth) {
+            return (
+              <Grid container item key={index} xs={12} width="100%">
+                <div className={`${css.card} ${css.fullWidth}`}>
+                  {item.isNew && <div className={css.newBadge}>New</div>}
+
+                  <Grid item md={1} />
+                  <Grid item xs={12} md={4} display="contents">
+                    <img className={css.image} src={item.image?.src} alt={item.image?.alt} />
+                  </Grid>
+                  <Grid item md={1} />
+
+                  <Grid item xs={12} md={6} className={css.centerContent}>
+                    <CardContent {...item} />
+                  </Grid>
+                </div>
+              </Grid>
+            )
+          }
+
+          return (
+            <Grid item key={index} xs={12} md={6}>
+              <div className={`${css.card} ${css.stacked}`}>
+                {item.isNew && <div className={css.newBadge}>New</div>}
+
+                <img className={css.image} src={item.image?.src} alt={item.image?.alt} />
+
+                <CardContent {...item} />
+              </div>
+            </Grid>
+          )
+        })}
+
         {/* last item is part of the component */}
         {lastItem && (
           <Grid item xs={12}>
             <div className={`${css.card} ${css.lastCard}`}>
               <img className={css.image} src={lastItem.image?.src} alt={lastItem.image?.alt} />
 
-              <CardContent {...lastItem} />
+              <div className={css.centerContent}>
+                <CardContent {...lastItem} />
+              </div>
             </div>
           </Grid>
         )}
