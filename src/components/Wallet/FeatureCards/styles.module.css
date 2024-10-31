@@ -1,0 +1,101 @@
+.card {
+  background: var(--mui-palette-border-background);
+  box-shadow: inset 0 0 0 1px var(--mui-palette-border-light);
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  position: relative;
+  transition: var(--transition-duration);
+}
+
+.newBadge {
+  font-size: 12px;
+  line-height: 14px;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  background-color: #b0ffc9;
+  color: var(--mui-palette-text-dark);
+  border-radius: 4px;
+  width: 45px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lastCard {
+  padding: 0;
+}
+
+.lastCard .cardContent {
+  padding: 40px;
+  max-width: 516px;
+}
+
+.image {
+  height: 100%;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.caption {
+  background-image: linear-gradient(260.13deg, #12ff80 1.24%, #5fddff 102.14%);
+  background-clip: text;
+  color: transparent;
+}
+
+.stacked {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stacked .image {
+  height: 170px;
+  margin: 0 auto;
+}
+
+.cta {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+@media (min-width: 900px) {
+  .card {
+    height: 400px;
+    flex-direction: row;
+  }
+
+  .stacked {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .fullWidth {
+    width: 100%;
+  }
+
+  .fullWidth .title {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .centerContent {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}

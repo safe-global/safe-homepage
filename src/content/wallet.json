@@ -161,6 +161,57 @@
     ]
   },
   {
+    "component": "Wallet/FeatureCards",
+    "title": "<b>More features beyond</b> multisigs",
+    "text": "Safe is more than just secure asset storage. It's your entry point to onchain activities.",
+    "items": [
+      {
+        "isNew": true,
+        "fullWidth": true,
+        "caption": "Trade seamlessly",
+        "title": "Swap like a pro",
+        "text": "with MEV protection and security, ensuring your intent-based transactions will not fail.",
+        "image": {
+          "src": "/images/Wallet/Features/trade.png",
+          "alt": "Token swap modal"
+        }
+      },
+      {
+        "caption": "Optimize",
+        "title": "Batch transactions",
+        "text": "To save gas and to avoid losing time gathering signatures from everyone.",
+        "image": {
+          "src": "/images/Wallet/Features/optimise.png",
+          "alt": "Token swap modal"
+        }
+      },
+      {
+        "isNew": true,
+        "caption": "Earn",
+        "title": "Stake ETH Securely",
+        "text": "Stake directly from your Safe{Wallet} with robust multisig security.",
+        "image": {
+          "src": "/images/Wallet/Features/earn.png",
+          "alt": "Token swap modal"
+        }
+      },
+      {
+        "caption": "All-in-one",
+        "title": "Explore Safe Apps",
+        "text": "Swapping, staking, NFTs, identity and more. Interact with 200+ apps integrated with Safe.",
+        "link": {
+          "title": "View ecosystem projects",
+          "href": "https://safe.global/ecosystem",
+          "variant": "link"
+        },
+        "image": {
+          "src": "/images/Wallet/Features/safe-apps.png",
+          "alt": "Safe Apps logos"
+        }
+      }
+    ]
+  },
+  {
     "title": "Introducing<br>Native Swaps",
     "caption": "New feature",
     "buttons": [
