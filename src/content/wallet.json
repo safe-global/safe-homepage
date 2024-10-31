@@ -104,31 +104,6 @@
     ]
   },
   {
-    "items": [
-      {
-        "caption": "Individual users",
-        "title": "Secure Your Savings Beyond a Seed Phrase",
-        "text": "Protect your assets with multi-signature security, giving you peace of mind without relying solely on a seed phrase.",
-        "image": {
-          "src": "/images/Home/safe-shield.png",
-          "alt": "Safe Smart Account shield"
-        },
-        "component": "Wallet/BigImageCard"
-      },
-      {
-        "caption": "Organizations",
-        "title": "Manage Assets Together, Securely",
-        "text": "Collaboratively manage your organization's assets with multi-signature approvals, ensuring security and transparency every step of the way.",
-        "image": {
-          "src": "/images/Home/safe-shield.png",
-          "alt": "Safe Smart Account shield"
-        },
-        "component": "Wallet/BigImageCard"
-      }
-    ],
-    "component": "Wallet/BigCardsGrid"
-  },
-  {
     "component": "Wallet/VerticalSlide",
     "title": "Defend assets with <b>multi-signature</b> security",
     "items": [
@@ -196,7 +171,7 @@
         "title": "Swap like a pro",
         "text": "with MEV protection and security, ensuring your intent-based transactions will not fail.",
         "image": {
-          "src": "/images/Wallet/Feature/trade.png",
+          "src": "/images/Wallet/Features/trade.png",
           "alt": "Token swap modal"
         }
       },
@@ -205,7 +180,7 @@
         "title": "Batch transactions",
         "text": "To save gas and to avoid losing time gathering signatures from everyone.",
         "image": {
-          "src": "/images/Wallet/Feature/trade.png",
+          "src": "/images/Wallet/Features/trade.png",
           "alt": "Token swap modal"
         }
       },
@@ -215,7 +190,7 @@
         "title": "Stake ETH Securely",
         "text": "Stake directly from your Safe{Wallet} with robust multisig security and contribute to a stronger, safer Ethereum.",
         "image": {
-          "src": "/images/Wallet/Feature/trade.png",
+          "src": "/images/Wallet/Features/trade.png",
           "alt": "Token swap modal"
         }
       },
@@ -229,8 +204,8 @@
           "variant": "link"
         },
         "image": {
-          "src": "/images/Wallet/Feature/trade.png",
-          "alt": "Token swap modal"
+          "src": "/images/Wallet/Features/safe-apps.png",
+          "alt": "Safe apps logos"
         }
       }
     ]
