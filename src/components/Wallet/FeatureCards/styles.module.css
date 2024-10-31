@@ -64,6 +64,14 @@
   margin: 0 auto;
 }
 
+.cta {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
 @media (min-width: 900px) {
   .card {
     height: 400px;

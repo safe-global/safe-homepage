@@ -1,30 +1,29 @@
+import { Button, Container, Grid, Typography } from '@mui/material'
+import LinkButton from '@/components/common/LinkButton'
+import { WALLET_LINK } from '@/config/constants'
 import type { BaseBlock } from '@/components/Home/types'
-import { Container, Grid, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
-import LinkButton from '@/components/common/LinkButton'
 
-const CardContent = ({ caption, title, text, link }: Partial<BaseBlock>) => {
-  return (
-    <div className={css.cardContent}>
-      <Typography variant="caption" className={css.caption}>
-        {caption}
-      </Typography>
+const CardContent = ({ caption, title, text, link }: Partial<BaseBlock>) => (
+  <div className={css.cardContent}>
+    <Typography variant="caption" className={css.caption}>
+      {caption}
+    </Typography>
 
-      <Typography variant="h4" className={css.title}>
-        {title}
-      </Typography>
+    <Typography variant="h4" className={css.title}>
+      {title}
+    </Typography>
 
-      <Typography color="primary.light">{text}</Typography>
+    <Typography color="primary.light">{text}</Typography>
 
-      {link ? (
-        <LinkButton underline={false} href={link.href}>
-          {link.title}
-        </LinkButton>
-      ) : undefined}
-    </div>
-  )
-}
+    {link ? (
+      <LinkButton underline={false} href={link.href}>
+        {link.title}
+      </LinkButton>
+    ) : undefined}
+  </div>
+)
 
 type FeatureCardsProps = Omit<BaseBlock, 'items'> & {
   items: Array<Partial<BaseBlock> & { isNew: boolean; fullWidth: boolean }>
@@ -94,6 +93,15 @@ const FeatureCards = ({ title, text, items = [] }: FeatureCardsProps) => {
           </Grid>
         )}
       </Grid>
+
+      <div className={css.cta}>
+        <Typography variant="h5">
+          Read to have a <b>{`Safe{Wallet}`}</b>?
+        </Typography>
+        <Button variant="contained" size="large" href={WALLET_LINK}>
+          Get started
+        </Button>
+      </div>
     </Container>
   )
 }
