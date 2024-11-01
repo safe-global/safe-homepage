@@ -12,8 +12,8 @@
   },
   {
     "component": "DataRoom/WorldGDP",
-    "title": "<b><em>Safe</em> TVP</b> is",
-    "text": "Total Volume Processed in <em>Safe</em> Smart Accounts can already be seen in comparison to World GDP.",
+    "title": "<b><em>Safe</em> TVP per year</b> is",
+    "text": "Total Volume Processed per year in <em>Safe</em> Smart Accounts can already be seen in comparison to World GDP.",
     "link": {
       "title": "Dune dashboard",
       "href": "https://dune.com/safe/all"
@@ -77,7 +77,7 @@
   },
   {
     "component": "DataRoom/IndustryComparison",
-    "title": "How <em>Safe</em> compares<br/>to others"
+    "title": "How <em>Safe</em> compares<br/>to CEXs TVL"
   },
   {
     "component": "DataRoom/AssetsSecured",
