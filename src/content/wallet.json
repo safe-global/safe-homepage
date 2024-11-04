@@ -212,32 +212,6 @@
     ]
   },
   {
-    "title": "Introducing<br>Native Swaps",
-    "caption": "New feature",
-    "buttons": [
-      {
-        "text": "Enter Safe{Wallet}",
-        "href": "https://app.safe.global",
-        "variant": "button",
-        "color": "secondary"
-      }
-    ],
-    "image": {
-      "sm": "/images/Wallet/swap-card.png",
-      "md": "/images/Wallet/swap-card.png",
-      "alt": "Recovery buoy logo"
-    },
-    "footer": {
-      "logos": [
-        {
-          "src": "/images/Wallet/powered-by-cow.png",
-          "alt": "CoW Swap logo"
-        }
-      ]
-    },
-    "component": "common/Masthead"
-  },
-  {
     "variant": "3-columns",
     "title": "Your keys. Your coins",
     "items": [
