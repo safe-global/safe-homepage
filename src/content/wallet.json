@@ -212,15 +212,6 @@
     ]
   },
   {
-    "title": "<b>Co-manage</b> your assets",
-    "text": "With multiple private keys, the same account can be jointly managed by many users enabling decentralised co-ownership for DAOs, groups and enterprises",
-    "link": {
-      "title": "Get started",
-      "href": "https://app.safe.global"
-    },
-    "component": "Wallet/TextRadialAnimation"
-  },
-  {
     "variant": "image-text",
     "title": "<b>Control and change</b> account ownership",
     "text": "With the ability to add new signers, remove old signers and replace account ownership, the same account is flexible for any future needs and more secure",
