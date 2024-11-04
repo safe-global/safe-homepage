@@ -1,4 +1,4 @@
-import ParallaxText, { type ParallaxTextProps } from '@/components/common/ParallaxTextOld'
+import ParallaxText, { type ParallaxTextProps } from '@/components/common/ParallaxText'
 import ParallaxMultiFactorElement from '@/components/Core/ParallaxMultiFactor/ParallaxMultiFactorElement'
 
 const ParallaxMultiFactor = (props: ParallaxTextProps) => {

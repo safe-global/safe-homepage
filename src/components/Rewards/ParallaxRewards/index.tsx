@@ -1,5 +1,5 @@
 import ParallaxRewardsElement from '@/components/Rewards/ParallaxRewards/ParallaxRewardsElement'
-import ParallaxText, { type ParallaxTextProps } from '@/components/common/ParallaxText'
+import ParallaxText, { type ParallaxTextProps } from '@/components/commonCMS/ParallaxText'
 
 const ParallaxRewards = (props: ParallaxTextProps) => {
   return (

@@ -1,5 +1,5 @@
 import ParallaxUseCasesElement from '@/components/Token/ParallaxToken/ParallaxUseCasesElement'
-import ParallaxText, { type ParallaxTextProps } from '@/components/common/ParallaxText'
+import ParallaxText, { type ParallaxTextProps } from '@/components/commonCMS/ParallaxText'
 import { isEntryTypeBaseBlock } from '@/lib/typeGuards'
 
 const ParallaxToken = (props: ParallaxTextProps) => {
