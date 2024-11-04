@@ -212,37 +212,6 @@
     ]
   },
   {
-    "variant": "3-columns",
-    "title": "Your keys. Your coins",
-    "items": [
-      {
-        "image": {
-          "src": "/images/Wallet/shield.svg",
-          "alt": "Shield with a checkmark"
-        },
-        "title": "Battle-tested security",
-        "text": "Top notch security of multiple private keys (multi-sig) and rigorously audited contracts"
-      },
-      {
-        "image": {
-          "src": "/images/Wallet/people.svg",
-          "alt": "Group of owners"
-        },
-        "title": "Multi-signature access",
-        "text": "Access controlled by many private keys enabling co-ownership and stronger security for individuals"
-      },
-      {
-        "image": {
-          "src": "/images/Wallet/key.svg",
-          "alt": "Ownership key"
-        },
-        "title": "Self-custody",
-        "text": "We never own any of the assets stored in user accounts and never will"
-      }
-    ],
-    "component": "common/UspBlock"
-  },
-  {
     "title": "<b>Co-manage</b> your assets",
     "text": "With multiple private keys, the same account can be jointly managed by many users enabling decentralised co-ownership for DAOs, groups and enterprises",
     "link": {
