@@ -212,6 +212,32 @@
     ]
   },
   {
+    "component": "common/FAQ",
+    "title": "FAQ",
+    "items": [
+      {
+        "title": "What is a Safe smart account?",
+        "text": "A Safe Smart Account is a type of programmable account that does not require a seed phrase, unlike an externally owned account (EOA). It offers enhanced security and customization features, such as multiple owners and transaction guards, making it easier to manage your crypto assets."
+      },
+      {
+        "title": "Is Safe{Wallet} free to use?",
+        "text": "Safe{Wallet} is free to use; however, there might be network fees depending on the blockchain transactions you perform or when deploying your account, depending on the network."
+      },
+      {
+        "title": "Can I use Safe{Wallet} for personal funds?",
+        "text": "Yes, Safe{Wallet} can be used for personal funds. It provides a secure environment for managing your crypto assets, whether for personal or business use."
+      },
+      {
+        "title": "How do I create an account?",
+        "text": "To create an account with Safe{Wallet}, all you need is a wallet address. You'll use this address to create your Safe Smart Account, which is a multisig account. You'll then deploy a smart contract to manage your funds securely. The process is simple and guided within the Safe{Wallet} platform."
+      },
+      {
+        "title": "What networks are supported by Safe{Wallet}?",
+        "text": "Safe{Wallet} supports a wide range of blockchain networks, allowing you to manage your crypto assets across multiple platforms. The supported networks include Ethereum, Gnosis Chain, Polygon, Polygon zkEVM, BNB Chain, Arbitrum, Optimism, Base, Linea, zkSync Era, Scroll, X Layer, Celo, Avalanche, and Aurora. You can easily select the appropriate network when setting up your Safe Smart Account or when managing your funds within the Safe{Wallet} platform."
+      }
+    ]
+  },
+  {
     "title": "Introducing<br>Native Swaps",
     "caption": "New feature",
     "buttons": [
