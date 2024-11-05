@@ -215,6 +215,258 @@
     "component": "commonCMS/Faq"
   },
   {
+    "title": "Introducing<br>Native Swaps",
+    "caption": "New feature",
+    "buttons": [
+      {
+        "text": "Enter Safe{Wallet}",
+        "href": "https://app.safe.global",
+        "variant": "button",
+        "color": "secondary"
+      }
+    ],
+    "image": {
+      "sm": "/images/Wallet/swap-card.png",
+      "md": "/images/Wallet/swap-card.png",
+      "alt": "Recovery buoy logo"
+    },
+    "footer": {
+      "logos": [
+        {
+          "src": "/images/Wallet/powered-by-cow.png",
+          "alt": "CoW Swap logo"
+        }
+      ]
+    },
+    "component": "common/Masthead"
+  },
+  {
+    "variant": "3-columns",
+    "title": "Your keys. Your coins",
+    "items": [
+      {
+        "image": {
+          "src": "/images/Wallet/shield.svg",
+          "alt": "Shield with a checkmark"
+        },
+        "title": "Battle-tested security",
+        "text": "Top notch security of multiple private keys (multi-sig) and rigorously audited contracts"
+      },
+      {
+        "image": {
+          "src": "/images/Wallet/people.svg",
+          "alt": "Group of owners"
+        },
+        "title": "Multi-signature access",
+        "text": "Access controlled by many private keys enabling co-ownership and stronger security for individuals"
+      },
+      {
+        "image": {
+          "src": "/images/Wallet/key.svg",
+          "alt": "Ownership key"
+        },
+        "title": "Self-custody",
+        "text": "We never own any of the assets stored in user accounts and never will"
+      }
+    ],
+    "component": "common/UspBlock"
+  },
+  {
+    "title": "<b>Co-manage</b> your assets",
+    "text": "With multiple private keys, the same account can be jointly managed by many users enabling decentralised co-ownership for DAOs, groups and enterprises",
+    "link": {
+      "title": "Get started",
+      "href": "https://app.safe.global"
+    },
+    "component": "Wallet/TextRadialAnimation"
+  },
+  {
+    "variant": "image-text",
+    "title": "<b>Control and change</b> account ownership",
+    "text": "With the ability to add new signers, remove old signers and replace account ownership, the same account is flexible for any future needs and more secure",
+    "buttons": [
+      {
+        "text": "Get started",
+        "href": "https://app.safe.global/welcome",
+        "variant": "link"
+      }
+    ],
+    "component": "Wallet/OwnershipParallax"
+  },
+  {
+    "variant": "text-image",
+    "title": "<b>Use</b> built-in app store",
+    "text": "The best web3 apps are accessible right from inside the Safe Wallet interface",
+    "buttons": [
+      {
+        "text": "Get started",
+        "href": "https://app.safe.global/apps?safe=eth:0xfF501B324DC6d78dC9F983f140B9211c3EdB4dc7",
+        "variant": "link"
+      }
+    ],
+    "component": "Wallet/ParallaxAppStore"
+  },
+  {
+    "variant": "image-text",
+    "title": "Save on gas by batching <b>multiple transactions</b> in a few clicks",
+    "text": "Easily batch transactions together to save on fees",
+    "buttons": [
+      {
+        "text": "Get started",
+        "href": "https://app.safe.global/share/safe-app?appUrl=https%3A%2F%2Fapps-portal.safe.global%2Ftx-builder&chain=eth",
+        "variant": "link"
+      }
+    ],
+    "component": "Wallet/ParallaxBatching"
+  },
+  {
+    "variant": "text-image",
+    "title": "Use <b>any type of signer</b> to control your account",
+    "text": "Use Ledger, Trezor, Metamask or any other popular wallet as a signer on your Safe Wallet",
+    "buttons": [
+      {
+        "text": "Get started",
+        "href": "https://app.safe.global",
+        "variant": "link"
+      }
+    ],
+    "component": "Wallet/ParallaxSignerWallets"
+  },
+  {
+    "variant": "image-text",
+    "title": "<b>Simulate transactions</b> before they happen",
+    "text": "Simulate transactions before sending them through. Get instant prompts and full analysis of your transaction's success or failure with a simulation report via Tenderly",
+    "buttons": [
+      {
+        "text": "Get started",
+        "href": "https://app.safe.global",
+        "variant": "link"
+      }
+    ],
+    "component": "Wallet/ParallaxTxSimulation"
+  },
+  {
+    "title": "Available on 15+ networks",
+    "text": "including testnets",
+    "networks": [
+      {
+        "name": "Ethereum Mainnet",
+        "icon": {
+          "src": "/images/chainsLogos/EthereumLogo.png",
+          "alt": "Ethereum logo"
+        }
+      },
+      {
+        "name": "BNB Smart Chain",
+        "icon": {
+          "src": "/images/chainsLogos/BNBLogo.png",
+          "alt": "BNB Chain logo"
+        }
+      },
+      {
+        "name": "Optimism",
+        "icon": {
+          "src": "/images/chainsLogos/OptimismLogo.png",
+          "alt": "Optimism logo"
+        }
+      },
+      {
+        "name": "Arbitrum",
+        "icon": {
+          "src": "/images/chainsLogos/ArbitrumLogo.png",
+          "alt": "Arbitrum logo"
+        }
+      },
+      {
+        "name": "Scroll",
+        "icon": {
+          "src": "/images/chainsLogos/ScrollLogo.svg",
+          "alt": "Scroll logo"
+        },
+        "isNew": true
+      },
+      {
+        "name": "zkSync Era Mainnet",
+        "icon": {
+          "src": "/images/chainsLogos/ZkSyncEraLogo.png",
+          "alt": "zkSync Era logo"
+        },
+        "textColor": "#000000",
+        "backgroundColor": "#FFFFFF"
+      },
+      {
+        "name": "Polygon",
+        "icon": {
+          "src": "/images/chainsLogos/PolygonLogo.png",
+          "alt": "Polygon logo"
+        }
+      },
+      {
+        "name": "Avalanche",
+        "icon": {
+          "src": "/images/chainsLogos/AvalancheLogo.png",
+          "alt": "Avalanche logo"
+        }
+      },
+      {
+        "name": "Gnosis Chain",
+        "icon": {
+          "src": "/images/chainsLogos/GnosisChainLogo.png",
+          "alt": "Gnosis Chain logo"
+        }
+      },
+      {
+        "name": "Aurora",
+        "icon": {
+          "src": "/images/chainsLogos/AuroraLogo.png",
+          "alt": "Aurora logo"
+        }
+      },
+      {
+        "name": "Arbitrum",
+        "icon": {
+          "src": "/images/chainsLogos/ArbitrumLogo.png",
+          "alt": "Arbitrum logo"
+        }
+      },
+      {
+        "name": "Polygon zkEVM",
+        "icon": {
+          "src": "/images/chainsLogos/PolygonZkEVMLogo.png",
+          "alt": "Polygon zkEVM logo"
+        }
+      },
+      {
+        "name": "Celo",
+        "icon": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo logo"
+        }
+      }
+    ],
+    "component": "common/Networks"
+  },
+  {
+    "variant": "text-image",
+    "title": "Convenience of multi-sig in your pocket",
+    "text": "Track your assets and transactions on mobile. Stay informed and sign transactions on-the-go",
+    "steps": [
+      {
+        "label": "Create a new signer account",
+        "state": "completed"
+      },
+      {
+        "label": "Allow push notifications",
+        "description": ["Track movement of your assets and transactions", "Get alerts"],
+        "state": "active"
+      },
+      {
+        "label": "Sign multi-sig transactions on-the-go"
+      }
+    ],
+    "component": "Wallet/MobileAppParallax"
+  },
+  {
     "component": "Wallet/LegalDisclaimer",
     "caption": "Legal Disclaimer",
     "text": "<p>Safe{Wallet} stands as the leading wallet for Safe Smart Accounts and technology, provided as free open-source software under the GNU General Public License, Version 3.</p><p>For a comprehensive list of attribution notices for third-party software that may be contained in portions of the Safe{Wallet}, please visit <a href=\"https://app.safe.global/licenses\">Licenses</a>. The <a href=\"https://app.safe.global/\">website</a> is operated by Core Contributors GmbH, Berlin, Germany. Safe{Wallet} is a registered trademark owned by the Safe Ecosystem Foundation. The Safe Ecosystem Foundation does not operate any implementations of Safe{Wallet}. Third parties may hold licenses for the Safe trademark and operate implementations of Safe{Wallet} under the foundation's trademark policy available at <a href=\"https://safe.global/trademark\">Trademark</a> and/or other license agreements. Please note that the use of and access to the Safe{Wallet} is subject to terms and conditions provided by Core Contributors GmbH. The Safe Ecosystem Foundation makes no representations, warranties and/or covenants with respect to the Safe Technology (or any implementations of the Safe{Wallet} and/or Safe Smart Accounts) or any third party DeFi protocols, as to their technical properties and/or characteristics or performance, or their actual or potential usefulness or suitability for any particular purpose.</p>"
