@@ -212,6 +212,9 @@
     ]
   },
   {
+    "component": "commonCMS/Faq"
+  },
+  {
     "title": "Introducing<br>Native Swaps",
     "caption": "New feature",
     "buttons": [

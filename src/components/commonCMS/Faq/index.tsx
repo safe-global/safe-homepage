@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import {
   Accordion,
   AccordionDetails,
@@ -15,9 +15,12 @@ import RichText from '@/components/common/RichText'
 import { type BaseBlockEntry } from '@/config/types'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
+import FaqContentContext from '@/contexts/FaqContentContext'
 
 const Faq = (props: BaseBlockEntry) => {
-  const { title, items } = props.fields
+  const contextProps = useContext(FaqContentContext)
+
+  const { title, items } = contextProps?.faqContent?.fields || props.fields
 
   // Tracks which accordion is open
   const [openMap, setOpenMap] = useState<Record<number, boolean>>()
@@ -54,12 +57,7 @@ const Faq = (props: BaseBlockEntry) => {
                 disableGutters
                 square
               >
-                <AccordionSummary
-                  expandIcon={expanded ? <MinusIcon /> : <PlusIcon />}
-                  onClick={() => {
-                    !expanded
-                  }}
-                >
+                <AccordionSummary expandIcon={expanded ? <MinusIcon /> : <PlusIcon />}>
                   <Typography variant="h5">
                     <RichText {...title} />
                   </Typography>
