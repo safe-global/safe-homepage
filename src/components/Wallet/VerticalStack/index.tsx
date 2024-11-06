@@ -24,7 +24,7 @@ export const GridItem = ({ image, title, text }: Partial<BaseBlock>): ReactEleme
 
 const VerticalStack = ({ title, video, items = [] }: BaseBlock & { video: VideoEmbed }) => (
   <Container className={layoutCss.containerShort}>
-    <Grid container spacing="40px" justifyContent="flex-end">
+    <Grid container spacing="40px" justifyContent="space-between">
       <Grid item md={6} className={css.titleWrapper}>
         {video && (
           <video autoPlay muted playsInline loop className={css.video}>

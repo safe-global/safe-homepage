@@ -213,7 +213,7 @@
   },
   {
     "component": "Wallet/VerticalStack",
-    "title": "Security built on <b>open-source</b> principles",
+    "title": "Security built on<br/><b>open-source</b> principles",
     "video": {
       "sources": [
         { "src": "/videos/Home/safe-code-hevc.mov", "type": "video/quicktime; codecs=hvc1" },
