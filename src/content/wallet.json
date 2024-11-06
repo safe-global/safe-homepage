@@ -223,7 +223,7 @@
     "items": [
       {
         "title": "Trustless by design",
-        "text": "Your accounts are secured directly by the blockchain and not by a centralized entity. They do not depend on the Safe{Wallet}'s interface to exist.",
+        "text": "Your Accounts are secured directly by the blockchain and not by a centralized entity. They do not depend on the Safe{Wallet}'s interface to exist.",
         "image": {
           "src": "/images/Wallet/checkmark-gradient.svg",
           "alt": "Gradient checkmark"
@@ -239,7 +239,7 @@
       },
       {
         "title": "Use with many interfaces",
-        "text": "Portable across different front-ends. You can access your Safe Smart Account from other ecosystem apps like Coinshift, Den etc.",
+        "text": "Portable across different frontends. You can access your Safe Smart Account from other ecosystem apps like Coinshift, Den etc.",
         "image": {
           "src": "/images/Wallet/checkmark-gradient.svg",
           "alt": "Gradient checkmark"
