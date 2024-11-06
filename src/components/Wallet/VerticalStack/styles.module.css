@@ -1,0 +1,34 @@
+.cardWrapper {
+  border-radius: 6px;
+  border: 1px solid var(--mui-palette-border-light);
+  overflow: hidden;
+}
+
+.card {
+  border-bottom: 1px solid var(--mui-palette-border-light);
+  margin-bottom: -1px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 48px 40px;
+  text-align: left;
+}
+
+.video {
+  width: 144px;
+}
+
+@media (min-width: 900px) {
+  .titleWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .showInMd {
+    display: block;
+  }
+}
