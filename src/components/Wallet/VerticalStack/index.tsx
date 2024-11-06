@@ -9,7 +9,7 @@ type VideoEmbed = {
 }
 
 export const GridItem = ({ image, title, text }: Partial<BaseBlock>): ReactElement => (
-  <Grid item xs={12}>
+  <Grid item xs={12} className={css.card}>
     {image ? <img {...image} /> : null}
 
     <Typography variant="h5">{title}</Typography>
@@ -24,12 +24,8 @@ export const GridItem = ({ image, title, text }: Partial<BaseBlock>): ReactEleme
 
 const VerticalStack = ({ title, video, items = [] }: BaseBlock & { video: VideoEmbed }) => (
   <Container className={layoutCss.containerShort}>
-    <Typography variant="h2" className={css.title}>
-      {title}
-    </Typography>
-
     <Grid container spacing="40px" justifyContent="flex-end">
-      <Grid item md={6} className={css.imageItem}>
+      <Grid item md={6} className={css.titleWrapper}>
         {video && (
           <video autoPlay muted playsInline loop className={css.video}>
             {video.sources.map((s, i) => (
@@ -38,7 +34,7 @@ const VerticalStack = ({ title, video, items = [] }: BaseBlock & { video: VideoE
           </video>
         )}
 
-        <Typography variant="h1">{title}</Typography>
+        <Typography variant="h2">{title}</Typography>
       </Grid>
 
       <Grid item xs={12} md={5}>
