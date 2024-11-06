@@ -212,6 +212,18 @@
     ]
   },
   {
+    "title": "<b>Get the Latest</b> on Safe{Wallet}",
+    "text": "Sign up to our updates and be informed about new features, improvements, and special announcements.",
+    "buttons": [
+      {
+        "text": "Subscribe",
+        "href": "https://safe.global",
+        "variant": "button"
+      }
+    ],
+    "component": "common/CenteredTextBlock"
+  },
+  {
     "component": "commonCMS/Faq"
   },
   {
