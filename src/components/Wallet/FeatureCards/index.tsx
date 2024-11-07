@@ -97,7 +97,7 @@ const FeatureCards = ({ title, text, items = [] }: FeatureCardsProps) => {
 
       <div className={css.cta}>
         <Typography variant="h5">
-          Read to have a <b>{`Safe{Wallet}`}</b>?
+          Ready to have a <b>{`Safe{Wallet}`}</b>?
         </Typography>
         <Button variant="contained" size="large" href={WALLET_LINK}>
           Get started
