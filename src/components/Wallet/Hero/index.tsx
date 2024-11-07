@@ -66,7 +66,7 @@ const Hero = ({
         {!isPlaying && <div className={css.gradient} />}
       </div>
 
-      <Container className={css.container}>
+      <Container className={css.container} style={{ marginBottom: '210px' }}>
         <Typography variant="caption">They use Safe&#123;Wallet&#125;</Typography>
 
         {items ? (

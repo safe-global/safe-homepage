@@ -8,7 +8,7 @@
 
 .container {
   margin-top: 70px;
-  margin-bottom: 210px;
+  margin-bottom: 48px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,7 +107,7 @@
     right: 0px;
     top: -100px;
     width: 1000px;
-    height: 1200px;
+    height: 1000px;
     background-image: radial-gradient(at right, rgba(41, 182, 246, 0.3) 0%, rgba(246, 247, 248, 0) 80%);
     filter: blur(50px);
   }
