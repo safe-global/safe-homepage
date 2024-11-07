@@ -54,12 +54,10 @@
     "title": "Annualized community aligned</br><b>fees earned</b>:",
     "fees": [
       {
-        "label": "Native Swaps",
-        "isLocked": false
+        "label": "Native Swaps"
       },
       {
-        "label": "Native Staking",
-        "isLocked": true
+        "label": "Native Staking"
       },
       {
         "label": "Future Fees",
