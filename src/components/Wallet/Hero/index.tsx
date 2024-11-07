@@ -41,7 +41,9 @@ const Hero = ({
 
           <Typography className={css.text}>{text}</Typography>
 
-          <ButtonsWrapper buttons={buttons} />
+          <div className={css.buttonsWrapper}>
+            <ButtonsWrapper buttons={buttons} />
+          </div>
         </div>
       </Container>
 

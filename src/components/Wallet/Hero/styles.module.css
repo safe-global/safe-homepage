@@ -20,7 +20,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 48px;
 }
 
 .caption {
@@ -34,6 +33,14 @@
   max-width: 1170px;
   text-align: center;
   color: var(--mui-palette-primary-text);
+}
+
+.text {
+  margin-top: 24px;
+}
+
+.buttonsWrapper {
+  margin-top: 40px;
 }
 
 .logosWrapper {
