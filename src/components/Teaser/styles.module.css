@@ -1,0 +1,27 @@
+.video {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  object-fit: contain;
+  z-index: -1;
+}
+
+.video.ready {
+  transition: opacity 0.3s ease;
+  opacity: 1 !important;
+}
+
+@media (min-width: 600px) {
+  /* .video {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+  } */
+}
+
+@media (min-width: 1440px) {
+  /* .video {
+    padding: 0 15%;
+  } */
+}
