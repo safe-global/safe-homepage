@@ -1,9 +1,44 @@
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+}
+
+.imageWrapper {
+  background-image: url('/images/Teaser/poster.png');
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-size: contain;
+  width: 100%;
+  position: relative;
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .video {
   box-sizing: border-box;
   display: block;
   width: 100%;
   object-fit: contain;
-  z-index: -1;
 }
 
 .video.ready {
@@ -12,16 +47,22 @@
 }
 
 @media (min-width: 600px) {
-  /* .video {
+  .container,
+  .imageWrapper {
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
+  }
+
+  .video {
     position: absolute;
-    height: 100%;
     top: 0;
     left: 0;
-  } */
+  }
 }
 
 @media (min-width: 1440px) {
-  /* .video {
-    padding: 0 15%;
-  } */
+  .container,
+  .imageWrapper {
+    max-width: 1440px;
+  }
 }
