@@ -38,6 +38,7 @@ const Video = (): ReactElement => {
           onEnded={handleVideoEnd}
           className={`${css.video} ${ready ? css.ready : ''}`}
         >
+          <source src="/videos/Teaser/Teaser.webm" type="video/webm" />
           {/* TODO: Replace by Teaser_with_logo.mp4 */}
           <source src="/videos/Teaser/Teaser.mp4" type="video/mp4" />
         </video>
