@@ -11,8 +11,9 @@
   background-repeat: no-repeat;
   overflow: hidden;
   background-size: contain;
-  width: 100%;
+  width: 99.6%;
   position: relative;
+  left: 0.5px;
 }
 
 .button {
