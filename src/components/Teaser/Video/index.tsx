@@ -32,21 +32,28 @@ const Video = (): ReactElement => {
           poster="/images/Teaser/poster.png"
           autoPlay
           muted
-          // playsInline
+          playsInline
           ref={videoRef}
           style={{ opacity: 0 }}
           onEnded={handleVideoEnd}
           className={`${css.video} ${ready ? css.ready : ''}`}
         >
-          <source src="/videos/Teaser/Teaser.webm" type="video/webm" />
           {/* TODO: Replace by Teaser_with_logo.mp4 */}
           <source src="/videos/Teaser/Teaser.mp4" type="video/mp4" />
+          <source src="/videos/Teaser/Teaser.webm" type="video/webm" />
         </video>
       </div>
       <div className={`${css.imageWrapper} ${showButton ? css.visible : ''}`}>
-        <ButtonBase target="_blank" rel="noreferrer" href={ALPHA_TELEGRAM_LINK} className={css.button}>
-          <img src="/images/Teaser/telegram.svg" alt="Telegram" />
-        </ButtonBase>
+        {ready ? (
+          <ButtonBase
+            target="_blank"
+            rel="noreferrer"
+            href={ALPHA_TELEGRAM_LINK}
+            className={`${css.button} ${showButton ? css.visible : ''}`}
+          >
+            <img src="/images/Teaser/telegram.svg" alt="Telegram" />
+          </ButtonBase>
+        ) : null}
       </div>
     </div>
   )

@@ -3,6 +3,7 @@
   align-items: center;
   position: relative;
   width: 100%;
+  height: 100vh;
 }
 
 .videoWrapper,
@@ -29,7 +30,8 @@
   background-image: url('/images/Teaser/poster.png');
   background-repeat: no-repeat;
   overflow: hidden;
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
   width: 99.6%;
   position: relative;
   left: 0.5px;
@@ -40,7 +42,8 @@
   aspect-ratio: 16 / 9;
 }
 
-.imageWrapper.visible {
+.imageWrapper.visible,
+.button.visible {
   opacity: 1;
   visibility: visible;
 }
@@ -53,13 +56,19 @@
   font-size: 16px;
   cursor: pointer;
   z-index: 1;
+  width: 150%;
+
+  opacity: 0;
+  visibility: hidden;
 }
 
 .video {
   box-sizing: border-box;
   display: block;
   width: 100%;
-  object-fit: contain;
+
+  height: 100vh;
+  object-fit: cover;
 }
 
 .video.ready {
@@ -74,10 +83,19 @@
     margin: 0 auto;
   }
 
+  .imageWrapper {
+    background-size: contain;
+  }
+
+  .button {
+    width: 100%;
+  }
+
   .video {
     position: absolute;
     top: 0;
     left: 0;
+    object-fit: contain;
   }
 }
 
