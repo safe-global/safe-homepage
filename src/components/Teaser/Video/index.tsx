@@ -27,28 +27,26 @@ const Video = (): ReactElement => {
 
   return (
     <div className={css.container}>
-      {!showButton ? (
-        <div className={css.wrapper}>
-          <video
-            autoPlay
-            muted
-            playsInline
-            ref={videoRef}
-            style={{ opacity: 0 }}
-            onEnded={handleVideoEnd}
-            className={`${css.video} ${ready ? css.ready : ''}`}
-          >
-            {/* TODO: Replace by Teaser_with_logo.mp4 */}
-            <source src="/videos/Teaser/Teaser.mp4" type="video/mp4" />
-          </video>
-        </div>
-      ) : (
-        <div className={css.imageWrapper}>
-          <ButtonBase target="_blank" rel="noreferrer" href={ALPHA_TELEGRAM_LINK} className={css.button}>
-            <img src="/images/Teaser/telegram.svg" alt="Telegram" />
-          </ButtonBase>
-        </div>
-      )}
+      <div className={`${css.videoWrapper} ${showButton ? css.hidden : ''}`}>
+        <video
+          poster="/images/Teaser/poster.png"
+          autoPlay
+          muted
+          playsInline
+          ref={videoRef}
+          style={{ opacity: 0 }}
+          onEnded={handleVideoEnd}
+          className={`${css.video} ${ready ? css.ready : ''}`}
+        >
+          {/* TODO: Replace by Teaser_with_logo.mp4 */}
+          <source src="/videos/Teaser/Teaser.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div className={`${css.imageWrapper} ${showButton ? css.visible : ''}`}>
+        <ButtonBase target="_blank" rel="noreferrer" href={ALPHA_TELEGRAM_LINK} className={css.button}>
+          <img src="/images/Teaser/telegram.svg" alt="Telegram" />
+        </ButtonBase>
+      </div>
     </div>
   )
 }
