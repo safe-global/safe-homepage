@@ -3,7 +3,6 @@
   align-items: center;
   position: relative;
   width: 100%;
-  min-height: 300px;
 }
 
 .videoWrapper,
@@ -37,6 +36,8 @@
 
   opacity: 0;
   visibility: hidden;
+
+  aspect-ratio: 16 / 9;
 }
 
 .imageWrapper.visible {

@@ -32,7 +32,7 @@ const Video = (): ReactElement => {
           poster="/images/Teaser/poster.png"
           autoPlay
           muted
-          playsInline
+          // playsInline
           ref={videoRef}
           style={{ opacity: 0 }}
           onEnded={handleVideoEnd}
