@@ -56,28 +56,34 @@
   cursor: pointer;
   z-index: 1;
   width: 150%;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .logo {
   width: 80vw;
+  transition: opacity 1s ease-in-out;
+  transform: translateY(26px);
+}
+
+.imageWrapper.visible .logo.show {
   opacity: 1;
-  transition: opacity 0.5s ease-in-out;
 }
 
 .logo.hidden {
   opacity: 0;
 }
 
-/* TODO: (mobile) add logo */
 .image {
   opacity: 0;
   transition: opacity 3s ease-in-out;
 }
 
-/* For mobile */
-/* .button .image.slideUp {
+.logo.hidden + .image.slideUp {
+  opacity: 1;
   transform: translateY(-37px);
-} */
+}
 
 .video {
   box-sizing: border-box;
