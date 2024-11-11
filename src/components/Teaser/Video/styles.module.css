@@ -42,8 +42,7 @@
   aspect-ratio: 16 / 9;
 }
 
-.imageWrapper.visible,
-.button.visible {
+.imageWrapper.visible {
   opacity: 1;
   visibility: visible;
 }
@@ -57,10 +56,28 @@
   cursor: pointer;
   z-index: 1;
   width: 150%;
-
-  opacity: 0;
-  visibility: hidden;
 }
+
+.logo {
+  width: 80vw;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.logo.hidden {
+  opacity: 0;
+}
+
+/* TODO: (mobile) add logo */
+.image {
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+}
+
+/* For mobile */
+/* .button .image.slideUp {
+  transform: translateY(-37px);
+} */
 
 .video {
   box-sizing: border-box;
@@ -87,8 +104,16 @@
     background-size: contain;
   }
 
+  .imageWrapper.visible .image {
+    opacity: 1;
+  }
+
   .button {
     width: 100%;
+  }
+
+  .image {
+    max-width: 40%;
   }
 
   .video {

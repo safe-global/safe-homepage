@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState, type ReactElement } from 'react'
 import { ButtonBase } from '@mui/material'
-import css from './styles.module.css'
+// import Logo from '@/public/images/Teaser/logo_safenet.svg'
 import { ALPHA_TELEGRAM_LINK } from '@/config/constants'
+import css from './styles.module.css'
 
 const Video = (): ReactElement => {
   const [ready, setReady] = useState(false)
@@ -29,7 +30,6 @@ const Video = (): ReactElement => {
     <div className={css.container}>
       <div className={`${css.videoWrapper} ${showButton ? css.hidden : ''}`}>
         <video
-          poster="/images/Teaser/poster.png"
           autoPlay
           muted
           playsInline
@@ -38,23 +38,29 @@ const Video = (): ReactElement => {
           onEnded={handleVideoEnd}
           className={`${css.video} ${ready ? css.ready : ''}`}
         >
-          {/* TODO: Replace by Teaser_with_logo.mp4 */}
-          <source src="/videos/Teaser/Teaser.mp4" type="video/mp4" />
-          <source src="/videos/Teaser/Teaser.webm" type="video/webm" />
+          <source src="/videos/Teaser/Teaser_with_logo.mp4" type="video/mp4" />
+          <source src="/videos/Teaser/Teaser_with_logo.webm" type="video/webm" />
         </video>
       </div>
-      <div className={`${css.imageWrapper} ${showButton ? css.visible : ''}`}>
-        {ready ? (
+      {ready ? (
+        <div className={`${css.imageWrapper} ${showButton ? css.visible : ''}`}>
           <ButtonBase
             target="_blank"
             rel="noreferrer"
             href={ALPHA_TELEGRAM_LINK}
-            className={`${css.button} ${showButton ? css.visible : ''}`}
+            // className={`${css.button} ${showButton ? css.visible : ''}`}
+            className={css.button}
           >
-            <img src="/images/Teaser/telegram.svg" alt="Telegram" />
+            {/* <Logo className={`${css.logo} ${!showLogo ? css.hidden : ''}`} /> */}
+            <img
+              src="/images/Teaser/telegram.svg"
+              alt="Telegram"
+              // className={`${css.image} ${!showLogo ? css.slideUp : ''}`}
+              className={css.image}
+            />
           </ButtonBase>
-        ) : null}
-      </div>
+        </div>
+      ) : null}
     </div>
   )
 }
