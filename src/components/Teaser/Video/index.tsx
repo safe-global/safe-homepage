@@ -24,9 +24,7 @@ const Video = (): ReactElement => {
       setShowLogo(false)
 
       // Show the mobile button after 3 seconds
-      setTimeout(() => {
-        setShowMobileButton(true)
-      })
+      setShowMobileButton(true)
     }, 3000)
   }
 
@@ -72,6 +70,7 @@ const Video = (): ReactElement => {
           <source src="/videos/Teaser/Teaser_no_logo.webm" type="video/webm" />
         </video>
       </div>
+
       {ready ? (
         <div className={`${css.imageWrapper} ${showButton ? css.visible : ''}`}>
           <ButtonBase target="_blank" rel="noreferrer" href={ALPHA_TELEGRAM_LINK} className={css.button}>
