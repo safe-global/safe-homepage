@@ -99,6 +99,14 @@
   opacity: 1 !important;
 }
 
+.mobileVideo {
+  display: block;
+}
+
+.desktopVideo {
+  display: none;
+}
+
 @media (min-width: 600px) {
   .container,
   .imageWrapper {
@@ -127,6 +135,14 @@
     top: 0;
     left: 0;
     object-fit: contain;
+  }
+
+  .mobileVideo {
+    display: none;
+  }
+
+  .desktopVideo {
+    display: block;
   }
 }
 

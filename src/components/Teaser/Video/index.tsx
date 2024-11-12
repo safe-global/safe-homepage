@@ -45,6 +45,7 @@ const Video = (): ReactElement => {
   return (
     <div className={css.container}>
       <div className={`${css.videoWrapper} ${showButton ? css.hidden : ''}`}>
+        {/* Video desktop */}
         <video
           autoPlay
           muted
@@ -52,19 +53,23 @@ const Video = (): ReactElement => {
           ref={videoRef}
           style={{ opacity: 0 }}
           onEnded={handleVideoEnd}
-          className={`${css.video} ${ready ? css.ready : ''}`}
+          className={`${css.video} ${css.desktopVideo} ${ready ? css.ready : ''}`}
         >
-          {!isMobile ? (
-            <>
-              <source src="/videos/Teaser/Teaser_with_logo.mp4" type="video/mp4" />
-              <source src="/videos/Teaser/Teaser_with_logo.webm" type="video/webm" />
-            </>
-          ) : (
-            <>
-              <source src="/videos/Teaser/Teaser_no_logo.mp4" type="video/mp4" />
-              <source src="/videos/Teaser/Teaser_no_logo.webm" type="video/webm" />
-            </>
-          )}
+          <source src="/videos/Teaser/Teaser_with_logo.mp4" type="video/mp4" />
+          <source src="/videos/Teaser/Teaser_with_logo.webm" type="video/webm" />
+        </video>
+        {/* Video mobile */}
+        <video
+          autoPlay
+          muted
+          playsInline
+          ref={videoRef}
+          style={{ opacity: 0 }}
+          onEnded={handleVideoEnd}
+          className={`${css.video} ${css.mobileVideo} ${ready ? css.ready : ''}`}
+        >
+          <source src="/videos/Teaser/Teaser_no_logo.mp4" type="video/mp4" />
+          <source src="/videos/Teaser/Teaser_no_logo.webm" type="video/webm" />
         </video>
       </div>
       {ready ? (
