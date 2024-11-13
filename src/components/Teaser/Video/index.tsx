@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type ReactElement } from 'react'
 import { ButtonBase } from '@mui/material'
 import { ALPHA_TELEGRAM_LINK } from '@/config/constants'
+import LoadingLogo from '@/public/images/Teaser/loading.svg'
 import css from './styles.module.css'
 
 const Video = (): ReactElement => {
@@ -27,6 +28,9 @@ const Video = (): ReactElement => {
 
   return (
     <div className={css.container}>
+      {/* Loading state */}
+      {!ready && <LoadingLogo className={css.loadingIndicator} />}
+
       <div className={`${css.videoWrapper} ${showButton ? css.hidden : ''}`}>
         {/* Video desktop */}
         <video
@@ -34,7 +38,6 @@ const Video = (): ReactElement => {
           muted
           playsInline
           ref={videoRef}
-          style={{ opacity: 0 }}
           onEnded={handleVideoEnd}
           className={`${css.video} ${css.desktopVideo} ${ready ? css.ready : ''}`}
         >
