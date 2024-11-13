@@ -32,14 +32,10 @@
   overflow: hidden;
   background-size: cover;
   background-position: center;
-  width: 99.6%;
   position: relative;
-  left: 0.5px;
 
   opacity: 0;
   visibility: hidden;
-
-  aspect-ratio: 16 / 9;
 }
 
 .imageWrapper.visible {
@@ -61,28 +57,13 @@
   flex-direction: column;
 }
 
-.logo {
-  width: 80vw;
-  transition: opacity 1s ease-in-out;
-  transform: translateY(26px);
-}
-
-.imageWrapper.visible .logo.show {
-  opacity: 1;
-}
-
-.logo.hidden {
-  opacity: 0;
-}
-
 .image {
   opacity: 0;
-  transition: opacity 3s ease-in-out;
+  transition: opacity 2s ease-in-out;
 }
 
-.logo.hidden + .image.slideUp {
+.imageWrapper.visible .image {
   opacity: 1;
-  transform: translateY(-37px);
 }
 
 .video {
@@ -116,10 +97,6 @@
 
   .imageWrapper {
     background-size: contain;
-  }
-
-  .imageWrapper.visible .image {
-    opacity: 1;
   }
 
   .button {
