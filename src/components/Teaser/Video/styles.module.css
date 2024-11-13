@@ -1,6 +1,7 @@
 .container {
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -89,26 +90,21 @@
 }
 
 .loadingIndicator {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   filter: drop-shadow(0 0 3px #12ff80);
   animation: pulse 2s ease-in-out infinite;
-  transform-origin: center center;
 }
 
 @keyframes pulse {
   0% {
-    transform: translate(-50%, -50%) scale(1);
+    transform: scale(1);
     opacity: 1;
   }
   25% {
-    transform: translate(-50%, -50%) scale(1.1);
+    transform: scale(1.1);
     opacity: 0.7;
   }
   50% {
-    transform: translate(-50%, -50%) scale(1);
+    transform: scale(1);
     opacity: 1;
   }
 }
