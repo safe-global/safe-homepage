@@ -68,7 +68,7 @@ const App = ({
 
           <SearchParamsContextProvider>{getLayout(<Component {...pageProps} />)}</SearchParamsContextProvider>
 
-          <CookieBanner />
+          {Component.name !== 'TeaserPage' && <CookieBanner />}
         </CookieBannerContextProvider>
       </CssVarsProvider>
     </CacheProvider>
