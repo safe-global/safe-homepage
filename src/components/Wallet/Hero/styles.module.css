@@ -53,10 +53,6 @@
   flex-direction: column;
 }
 
-.logosWrapper img {
-  height: 42px;
-}
-
 .video {
   border-radius: 16px;
   width: 90%;
@@ -121,6 +117,7 @@
 
   .logosWrapper {
     flex-direction: row;
+    height: 42px;
   }
 
   .video {
