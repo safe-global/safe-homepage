@@ -27,6 +27,7 @@ export async function getStaticProps() {
     defi_tvl_uniswap,
     last_updated,
     annual_swap_fees,
+    annual_stake_fees,
     annualised_outgoing_tvp,
   } = dataRoomStats
 
@@ -49,6 +50,7 @@ export async function getStaticProps() {
         tvlUniswap: Number(defi_tvl_uniswap),
         lastUpdated: Number(last_updated),
         annualSwapFees: Number(annual_swap_fees),
+        annualStakeFees: Number(annual_stake_fees),
         annualisedOutgoingTVP: annualised_outgoing_tvp,
       },
     },

@@ -54,12 +54,10 @@
     "title": "Annualized community aligned</br><b>fees earned</b>:",
     "fees": [
       {
-        "label": "Native Swaps",
-        "isLocked": false
+        "label": "Native Swaps"
       },
       {
-        "label": "Native Staking",
-        "isLocked": true
+        "label": "Native Staking"
       },
       {
         "label": "Future Fees",
@@ -164,6 +162,16 @@
     "component": "DataRoom/ExternalLinksGrid",
     "title": "External Reports",
     "items": [
+      {
+        "title": "Messari Q3 2024",
+        "image": {
+          "src": "/images/messari-logo.svg",
+          "alt": "Messari logo"
+        },
+        "link": {
+          "href": "https://messari.io/report/state-of-safe-q3-2024"
+        }
+      },
       {
         "title": "Messari Q2 2024",
         "image": {

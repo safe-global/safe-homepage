@@ -10,9 +10,9 @@ export type StackProps = FeeType & {
 }
 
 // TODO: decide how to normalize the fee values to show growth potential
-const VALUE_PER_BAR = 1_000_000
+const VALUE_PER_BAR = 500_000
 
-const Stack = ({ totalBars, value, isLocked, label }: StackProps) => {
+const Stack = ({ totalBars, value, isLocked = false, label }: StackProps) => {
   const filledBars = value / VALUE_PER_BAR
 
   const containerVariants = {
