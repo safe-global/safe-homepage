@@ -11,7 +11,7 @@
     "text": "Use the multisig trusted by Vitalik Buterin and leading web3 projects to secure over $100 billion.",
     "buttons": [
       {
-        "text": "Launch wallet",
+        "text": "Launch Wallet",
         "href": "https://app.safe.global",
         "variant": "button"
       }
@@ -267,7 +267,7 @@
     "text": "Still have questions and want to know more about Safe{Wallet}? Watch our demo.",
     "buttons": [
       {
-        "text": "Launch Safe{Wallet}",
+        "text": "Launch Wallet",
         "href": "https://app.safe.global",
         "variant": "button"
       },
