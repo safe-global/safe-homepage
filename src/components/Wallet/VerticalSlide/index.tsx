@@ -31,7 +31,7 @@ const VerticalSlide = ({ title, items = [] }: BaseBlock) => {
   }, [items.length])
 
   return (
-    <Container className={layoutCss.containerShort}>
+    <Container className={layoutCss.containerMedium}>
       <Typography variant="h2" className={css.title}>
         {title}
       </Typography>
