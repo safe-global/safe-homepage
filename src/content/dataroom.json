@@ -163,6 +163,16 @@
     "title": "External Reports",
     "items": [
       {
+        "title": "Messari Q3 2024",
+        "image": {
+          "src": "/images/messari-logo.svg",
+          "alt": "Messari logo"
+        },
+        "link": {
+          "href": "https://messari.io/report/state-of-safe-q3-2024"
+        }
+      },
+      {
         "title": "Messari Q2 2024",
         "image": {
           "src": "/images/messari-logo.svg",
