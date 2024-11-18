@@ -59,7 +59,7 @@
 }
 
 .watchDemo {
-  margin-top: 50px;
+  margin-top: 85px;
   position: relative;
 }
 
@@ -118,6 +118,10 @@
   .logosWrapper {
     flex-direction: row;
     height: 42px;
+  }
+
+  .watchDemo {
+    margin-top: 100px;
   }
 
   .video {
