@@ -28,8 +28,6 @@ export const YOUTUBE_LINK = 'https://www.youtube.com/@safeglobal'
 export const MIRROR_LINK = 'https://safe.mirror.xyz'
 export const MIRROR_SUBSCRIBE_LINK = 'https://safe.mirror.xyz/subscribe/embed'
 export const GITHUB_LINK = 'https://github.com/safe-global'
-export const ALPHA_LUMA_LINK = 'https://lu.ma/bh1ox3g9'
-export const ALPHA_TELEGRAM_LINK = 'https://dub.sh/safealpha'
 
 export const PROTOCOL_KIT_LINK = 'https://docs.safe.global/safe-core-aa-sdk/protocol-kit'
 export const AUTH_KIT_LINK = 'https://docs.safe.global/safe-core-aa-sdk/auth-kit'
