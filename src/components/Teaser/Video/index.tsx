@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type ReactElement } from 'react'
 import { ButtonBase } from '@mui/material'
-import { ALPHA_TELEGRAM_LINK } from '@/config/constants'
+import { SAFENET_TELEGRAM_LINK } from '@/config/constants'
 import LoadingLogo from '@/public/images/Teaser/loading.svg'
 import css from './styles.module.css'
 
@@ -62,7 +62,7 @@ const Video = (): ReactElement => {
 
       {ready ? (
         <div className={`${css.imageWrapper} ${showButton ? css.visible : ''}`}>
-          <ButtonBase target="_blank" rel="noreferrer" href={ALPHA_TELEGRAM_LINK} className={css.button}>
+          <ButtonBase target="_blank" rel="noreferrer" href={SAFENET_TELEGRAM_LINK} className={css.button}>
             <img src="/images/Teaser/telegram.svg" alt="Telegram" className={css.image} />
           </ButtonBase>
         </div>
