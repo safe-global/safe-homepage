@@ -1,9 +1,9 @@
-import type { BaseBlock } from '@/components/Home/types'
 import { useEffect, useState, type ReactElement, type RefObject } from 'react'
-import css from './styles.module.css'
 import { Grid, Typography } from '@mui/material'
 import useScrollProgress from '@/hooks/useScrollProgress'
-import { selectIndex } from '@/components/Wallet/VerticalSlide/Table'
+import { selectIndex } from '@/lib/Wallet/selectIndex'
+import type { BaseBlock } from '@/components/Home/types'
+import css from './styles.module.css'
 
 export const GridItem = ({
   image,

@@ -8,17 +8,17 @@ import MultipleKeysIcon from '@/public/images/Wallet/VerticalSlide/multiple-keys
 import BracketRight from '@/public/images/Wallet/VerticalSlide/bracket-right.svg'
 import css from './styles.module.css'
 import useScrollProgress from '@/hooks/useScrollProgress'
+import { selectIndex } from '@/lib/Wallet/selectIndex'
 
 const icons = [<RecoveryIcon key="recovery" />, <ScanIcon key="scan" />, <MultipleKeysIcon key="multiple-keys" />]
 
-// TODO: move to utils
-export const selectIndex = (scrollYProgress: number) => {
-  if (scrollYProgress >= 0 && scrollYProgress <= 0.4) {
-    return 0
-  } else if (scrollYProgress > 0.4 && scrollYProgress <= 0.6) {
-    return 1
+const indexToScrollProgress = (index: number) => {
+  if (index === 0) {
+    return 0.1
+  } else if (index === 1) {
+    return 0.4
   } else {
-    return 2
+    return 0.5
   }
 }
 
@@ -28,6 +28,20 @@ const Table = ({ items = [], sectionRef }: { items: BaseBlock['items']; sectionR
 
   const itemsImages = items.map((item) => item.image)
   const selectedImage = itemsImages[selectedIndex]
+
+  const handleCardClick = (index: number) => {
+    setSelectedIndex(index)
+
+    // Move the scroll to the selected index according to indexToScrollProgress function
+    if (sectionRef.current) {
+      const sectionTop = sectionRef.current.getBoundingClientRect().top + window.scrollY
+      const sectionHeight = sectionRef.current.scrollHeight
+
+      const offset = indexToScrollProgress(index) * sectionHeight
+
+      window.scrollTo({ top: sectionTop + offset, behavior: 'instant' })
+    }
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,7 +79,11 @@ const Table = ({ items = [], sectionRef }: { items: BaseBlock['items']; sectionR
 
             return (
               <Grid item key={index} xs={12}>
-                <ButtonBase disableRipple className={`${css.card} ${index === selectedIndex ? css.selected : ''}`}>
+                <ButtonBase
+                  onClick={() => handleCardClick(index)}
+                  disableRipple
+                  className={`${css.card} ${index === selectedIndex ? css.selected : ''}`}
+                >
                   <Typography variant="h5">{title}</Typography>
 
                   {text && (
