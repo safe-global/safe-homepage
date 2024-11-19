@@ -86,8 +86,8 @@
         "title": "Secure Your Savings Beyond a Seed Phrase",
         "text": "Protect your assets with multi-signature security, giving you peace of mind without relying solely on a seed phrase.",
         "image": {
-          "src": "/images/Home/safe-shield.png",
-          "alt": "Safe Smart Account shield"
+          "src": "/images/Wallet/user.png",
+          "alt": "Individual user"
         },
         "component": "Wallet/BigImageCard"
       },
@@ -96,8 +96,8 @@
         "title": "Manage Assets Together, Securely",
         "text": "Collaboratively manage your organization's assets with multi-signature approvals, ensuring security and transparency every step of the way.",
         "image": {
-          "src": "/images/Home/safe-shield.png",
-          "alt": "Safe Smart Account shield"
+          "src": "/images/Wallet/group.png",
+          "alt": "user group"
         },
         "component": "Wallet/BigImageCard"
       }
