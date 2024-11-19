@@ -39,6 +39,7 @@ const Table = ({ items = [], sectionRef }: { items: BaseBlock['items']; sectionR
 
       const offset = indexToScrollProgress(index) * sectionHeight
 
+      // @ts-ignore
       window.scrollTo({ top: sectionTop + offset, behavior: 'instant' })
     }
   }
