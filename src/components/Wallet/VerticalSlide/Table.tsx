@@ -11,7 +11,8 @@ import useScrollProgress from '@/hooks/useScrollProgress'
 
 const icons = [<RecoveryIcon key="recovery" />, <ScanIcon key="scan" />, <MultipleKeysIcon key="multiple-keys" />]
 
-const selectIndex = (scrollYProgress: number) => {
+// TODO: move to utils
+export const selectIndex = (scrollYProgress: number) => {
   if (scrollYProgress >= 0 && scrollYProgress <= 0.4) {
     return 0
   } else if (scrollYProgress > 0.4 && scrollYProgress <= 0.6) {
