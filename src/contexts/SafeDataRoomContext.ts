@@ -20,7 +20,7 @@ type SafeDataRoomStats = {
   annualisedOutgoingTVP: number | null
 }
 
-const SafeDataRoomContext = createContext<SafeDataRoomStats>({
+const SafeDataRoomContext = createContext<Partial<SafeDataRoomStats>>({
   tvpToGDPPercentage: null,
   usdcPercentageStored: null,
   cryptoPunksStoredPercentage: null,
