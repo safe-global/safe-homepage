@@ -11,7 +11,7 @@
     "text": "Use the multisig trusted by Vitalik Buterin and leading web3 projects to secure over $100 billion.",
     "buttons": [
       {
-        "text": "Launch wallet",
+        "text": "Launch Wallet",
         "href": "https://app.safe.global",
         "variant": "button"
       }
@@ -41,7 +41,7 @@
       },
       {
         "image": {
-          "src": "/images/starknet-logo.png",
+          "src": "/images/starknet-logo.svg",
           "alt": "Starknet logo"
         }
       },
@@ -86,8 +86,8 @@
         "title": "Secure Your Savings Beyond a Seed Phrase",
         "text": "Protect your assets with multi-signature security, giving you peace of mind without relying solely on a seed phrase.",
         "image": {
-          "src": "/images/Home/safe-shield.png",
-          "alt": "Safe Smart Account shield"
+          "src": "/images/Wallet/user.png",
+          "alt": "Individual user"
         },
         "component": "Wallet/BigImageCard"
       },
@@ -96,8 +96,8 @@
         "title": "Manage Assets Together, Securely",
         "text": "Collaboratively manage your organization's assets with multi-signature approvals, ensuring security and transparency every step of the way.",
         "image": {
-          "src": "/images/Home/safe-shield.png",
-          "alt": "Safe Smart Account shield"
+          "src": "/images/Wallet/group.png",
+          "alt": "user group"
         },
         "component": "Wallet/BigImageCard"
       }
@@ -267,7 +267,7 @@
     "text": "Still have questions and want to know more about Safe{Wallet}? Watch our demo.",
     "buttons": [
       {
-        "text": "Launch Safe{Wallet}",
+        "text": "Launch Wallet",
         "href": "https://app.safe.global",
         "variant": "button"
       },

@@ -28,7 +28,7 @@ const Faq = (props: BaseBlockEntry) => {
   const itemsList = items?.filter(isEntryTypeBaseBlock) ?? []
 
   return (
-    <Container className={layoutCss.containerShort}>
+    <Container className={layoutCss.container}>
       <Grid container className={css.gridContainer}>
         <div className={css.spot} />
 

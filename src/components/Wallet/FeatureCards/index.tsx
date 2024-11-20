@@ -35,7 +35,7 @@ const FeatureCards = ({ title, text, items = [] }: FeatureCardsProps) => {
   const restItems = items.slice(0, -1)
 
   return (
-    <Container className={layoutCss.containerMedium}>
+    <Container className={layoutCss.container}>
       <Grid container justifyContent="space-between" columnSpacing="30px" rowGap="30px">
         <Grid item xs={12} md={7}>
           <Typography variant="h2">{title}</Typography>

@@ -5,7 +5,7 @@ import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 
 const Stats = ({ title, items }: BaseBlock): ReactElement => (
-  <Container className={layoutCss.containerShort}>
+  <Container className={layoutCss.container}>
     <Typography variant="h2" mb={3} textAlign="center">
       {title}
     </Typography>

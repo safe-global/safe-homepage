@@ -11,7 +11,7 @@ const VerticalSlide = ({ title, items = [] }: BaseBlock) => {
   const sectionRef = useRef<HTMLDivElement>(null)
 
   return (
-    <Container className={`${layoutCss.containerShort} ${css.sectionContainer}`} ref={sectionRef}>
+    <Container className={`${layoutCss.containerMedium} ${css.sectionContainer}`} ref={sectionRef}>
       <div className={css.stickyContainer}>
         <Typography variant="h2" className={css.title}>
           {title}
