@@ -45,3 +45,5 @@ export const ECOSYSTEM_DATA_URL = IS_PRODUCTION
   : 'https://ecosystem-database.staging.5afe.dev'
 
 export const COMMS_EMAIL = 'comms@safe.global'
+
+export const PUSHWOOSH_ENDPOINT = 'https://api.pushwoosh.com/json/1.3/registerEmail'
