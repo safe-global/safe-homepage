@@ -135,27 +135,27 @@
   },
   {
     "component": "Wallet/GradientNumbers",
-    "title": "<i>Safe</i> accounts",
+    "title": "<i>Safe</i> in numbers",
     "items": [
       {
-        "title": "4M+",
-        "text": "Gas saved in batch transactions",
+        "title": "$100B+",
+        "text": "Total Value Locked (TVL)",
         "link": {
-          "href": "https://dune.com/queries/2093960/3449499"
+          "href": "https://dune.com/safe/all"
         }
       },
       {
-        "title": "$120B+",
-        "text": "Total value locked (TVL)",
+        "title": "6.4M",
+        "text": "Monthly Active Users (MAU)",
         "link": {
-          "href": ""
+          "href": "https://dune.com/queries/3670603"
         }
       },
       {
-        "title": "1.5M+",
-        "text": "Monthly active users (MAU)",
+        "title": "$150B+",
+        "text": "Total Volume Processed (TVP)",
         "link": {
-          "href": "https://dune.com/queries/2459401/4044167"
+          "href": "https://dune.com/safe/all"
         }
       }
     ]
