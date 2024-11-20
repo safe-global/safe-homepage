@@ -1,10 +1,11 @@
-import RichText from '@/components/common/RichText'
 import { Button, Container, TextField } from '@mui/material'
-import { type BaseBlockEntry } from '@/config/types'
+import type { BaseBlock } from '@/components/Home/types'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 import { useState } from 'react'
 import { PUSHWOOSH_ENDPOINT } from '@/config/constants'
+import CenteredTextBlock from '@/components/common/CenteredTextBlock'
+import Link from 'next/link'
 
 const FIELD_NAME = 'email'
 
@@ -16,19 +17,15 @@ const registerEmail = (email: string) => {
     },
     body: JSON.stringify({
       email,
-      application: process.env.NEXT_PUBLIC_PUSHWOOSH_APPLICATION_CODE,
-      tags: {
-        marketing: 'true',
-      },
+      application: process.env.NEXT_PUBLIC_PUSHWOOSH_WALLET_APPLICATION_CODE,
     }),
   }).catch((error) => {
     console.error('Error:', error)
   })
 }
 
-const SignUpForm = (props: BaseBlockEntry) => {
+const SignUpForm = (props: BaseBlock) => {
   const [isSubmitted, setIsSubmitted] = useState(false)
-  const { title, text } = props.fields
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -41,10 +38,10 @@ const SignUpForm = (props: BaseBlockEntry) => {
   }
 
   return (
-    <Container className={layoutCss.containerMedium}>
-      <div className={`${layoutCss.centeredContent} ${css.container}`}>
-        <RichText {...title} />
+    <Container className={`${layoutCss.containerMedium} ${css.container}`}>
+      <CenteredTextBlock {...props} />
 
+      <div className={layoutCss.centeredContent}>
         <form onSubmit={handleSubmit} className={css.form}>
           <TextField
             id="outlined-basic"
@@ -59,11 +56,13 @@ const SignUpForm = (props: BaseBlockEntry) => {
           </Button>
         </form>
 
-        {text && (
-          <div className={css.secondaryText}>
-            <RichText {...text} />
-          </div>
-        )}
+        <div className={css.secondaryText}>
+          By signing up to the newsletter, I confirm that I read and agree to the{' '}
+          <Link href="https://safe.global/privacy" target="_blank" rel="noreferrer">
+            Privacy Policy
+          </Link>
+          .
+        </div>
       </div>
     </Container>
   )

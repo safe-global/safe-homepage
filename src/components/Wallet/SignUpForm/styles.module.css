@@ -1,0 +1,35 @@
+.container :global(.MuiContainer-root) {
+  margin: 0px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+}
+
+.secondaryText {
+  color: var(--mui-palette-primary-light);
+}
+
+.secondaryText a {
+  color: var(--mui-palette-primary-main);
+  text-decoration: underline;
+}
+
+.secondaryText {
+  margin-top: 16px;
+}
+
+@media (min-width: 600px) {
+  .form {
+    width: 570px;
+    flex-direction: row;
+  }
+
+  .form .textField {
+    flex-grow: 1;
+  }
+}
