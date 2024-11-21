@@ -1,0 +1,17 @@
+.container {
+  /* max-width: 1630px; */
+  /* margin: 0 auto; */
+
+  background: linear-gradient(182.48deg, #000609 0.22%, #003b4f 33.34%, #000609 62.45%, #003b4f 95.07%);
+}
+
+.transparentHeader {
+  background: none;
+  backdrop-filter: none;
+}
+
+@media (max-width: 1629px) {
+  .container {
+    /* max-width: 1440px; */
+  }
+}

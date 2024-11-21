@@ -15,7 +15,7 @@ import css from './styles.module.css'
 import NavigationButton from '@/components/common/Header/NavigationButton'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 
-const Header = () => {
+const Header = ({ customClass }: { customClass?: string }) => {
   const [isBurgerOpen, setIsBurgerOpen] = useState<boolean>(false)
   const [subMenuOpen, setSubMenuOpen] = useState<null | NavCategories>(null)
   const isMediumScreen = useIsMediumScreen()
@@ -32,7 +32,7 @@ const Header = () => {
   }
 
   return (
-    <div className={clsx(css.header, isBurgerOpen && css.visible)}>
+    <div className={clsx(css.header, isBurgerOpen && css.visible, customClass)}>
       <NextLink href={AppRoutes.index}>
         <div className={css.logo}>
           <Logo />
