@@ -31,8 +31,7 @@ const items: BaseBlock['items'] = [
     },
     title: (
       <>
-        Unified
-        <br />
+        Unified <br />
         Balance
       </>
     ),

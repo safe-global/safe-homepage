@@ -87,6 +87,7 @@
   text-align: center;
 
   height: 336px;
+  width: 336px;
   position: relative;
 }
 
@@ -121,7 +122,7 @@
   margin-top: 48px;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
   .title {
     font-size: 60px;
     line-height: 64px;
@@ -143,5 +144,25 @@
 
   .blockItem {
     height: 300px;
+  }
+}
+
+@media (min-width: 1630px) {
+  .blocksWrapper {
+    background-size: cover;
+    height: 392px;
+  }
+
+  .blockItem {
+    --line-height: 28px;
+    height: 392px;
+  }
+
+  .blockTitle br {
+    display: none;
+  }
+
+  .blockText {
+    height: calc(2 * var(--line-height));
   }
 }
