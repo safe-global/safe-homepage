@@ -1,11 +1,11 @@
-import walletContent from '@/content/wallet.json'
-import type { getStaticProps } from '@/pages/wallet'
 import type { InferGetStaticPropsType } from 'next'
-import ChainsContext from '@/contexts/ChainsContext'
 import PageContent from '../common/PageContent'
+import type { getStaticProps } from '@/pages/wallet'
+import walletContent from '@/content/wallet.json'
+import FaqContentContext from '@/contexts/FaqContentContext'
 
-export const Wallet = (props: InferGetStaticPropsType<typeof getStaticProps>) => (
-  <ChainsContext.Provider value={props.chainsData}>
+export const Wallet = ({ pageData }: InferGetStaticPropsType<typeof getStaticProps>) => (
+  <FaqContentContext.Provider value={pageData}>
     <PageContent content={walletContent} path="wallet.json" />
-  </ChainsContext.Provider>
+  </FaqContentContext.Provider>
 )

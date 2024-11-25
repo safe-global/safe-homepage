@@ -1,0 +1,29 @@
+.metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.metric span {
+  transition: color var(--transition-duration) ease;
+}
+
+.metric:hover span {
+  color: var(--mui-palette-primary-main);
+}
+
+.value {
+  margin: 0;
+  font-size: 64px;
+  line-height: 64px;
+  background: linear-gradient(270deg, rgba(18, 255, 128, 1) 0%, rgba(95, 221, 255, 1) 100%);
+  background-clip: text;
+  color: transparent;
+}
+
+@media (min-width: 600px) {
+  .value {
+    font-size: 80px;
+    line-height: 100px;
+  }
+}
