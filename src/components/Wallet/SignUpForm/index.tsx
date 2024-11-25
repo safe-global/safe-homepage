@@ -3,38 +3,30 @@ import type { BaseBlock } from '@/components/Home/types'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 import { useState } from 'react'
-import { PUSHWOOSH_ENDPOINT } from '@/config/constants'
 import CenteredTextBlock from '@/components/common/CenteredTextBlock'
 import Link from 'next/link'
+import { AppRoutes } from '@/config/routes'
+import { registerEmail } from '@/lib/resgisterEmailPushwoosh'
 
 const FIELD_NAME = 'email'
 
-const registerEmail = (email: string) => {
-  fetch(PUSHWOOSH_ENDPOINT, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      email,
-      application: process.env.NEXT_PUBLIC_PUSHWOOSH_WALLET_APPLICATION_CODE,
-    }),
-  }).catch((error) => {
-    console.error('Error:', error)
-  })
-}
-
 const SignUpForm = (props: BaseBlock) => {
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [error, setError] = useState('')
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setError('')
 
     const data = new FormData(e.target as HTMLFormElement)
     const email = data.get(FIELD_NAME)
 
-    registerEmail(email as string)
-    setIsSubmitted(true)
+    try {
+      await registerEmail(email as string, process.env.NEXT_PUBLIC_PUSHWOOSH_WALLET_APPLICATION_CODE as string)
+      setIsSubmitted(true)
+    } catch (error) {
+      setError('Failed to register email.')
+    }
   }
 
   return (
@@ -44,13 +36,16 @@ const SignUpForm = (props: BaseBlock) => {
       <div className={layoutCss.centeredContent}>
         <form onSubmit={handleSubmit} className={css.form}>
           <TextField
-            id="outlined-basic"
             label="Email:"
             variant="outlined"
             type="email"
-            name="email"
+            name={FIELD_NAME}
+            error={!!error}
+            helperText={error}
+            onChange={() => setError('')}
             className={css.textField}
           />
+
           <Button type="submit" variant="contained" size="large" disabled={isSubmitted}>
             {isSubmitted ? 'Submitted!' : 'Sign Up'}
           </Button>
@@ -58,7 +53,7 @@ const SignUpForm = (props: BaseBlock) => {
 
         <div className={css.secondaryText}>
           By signing up to the newsletter, I confirm that I read and agree to the{' '}
-          <Link href="https://safe.global/privacy" target="_blank" rel="noreferrer">
+          <Link href={AppRoutes.privacy} target="_blank" rel="noreferrer">
             Privacy Policy
           </Link>
           .

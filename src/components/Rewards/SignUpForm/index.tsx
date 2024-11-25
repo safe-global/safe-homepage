@@ -4,27 +4,9 @@ import { type BaseBlockEntry } from '@/config/types'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 import { useState } from 'react'
-import { PUSHWOOSH_ENDPOINT } from '@/config/constants'
+import { registerEmail } from '@/lib/resgisterEmailPushwoosh'
 
 const FIELD_NAME = 'email'
-
-const registerEmail = (email: string) => {
-  fetch(PUSHWOOSH_ENDPOINT, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      email,
-      application: process.env.NEXT_PUBLIC_PUSHWOOSH_APPLICATION_CODE,
-      tags: {
-        marketing: 'true',
-      },
-    }),
-  }).catch((error) => {
-    console.error('Error:', error)
-  })
-}
 
 const SignUpForm = (props: BaseBlockEntry) => {
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -36,7 +18,7 @@ const SignUpForm = (props: BaseBlockEntry) => {
     const data = new FormData(e.target as HTMLFormElement)
     const email = data.get(FIELD_NAME)
 
-    registerEmail(email as string)
+    registerEmail(email as string, process.env.NEXT_PUBLIC_PUSHWOOSH_APPLICATION_CODE as string, { marketing: 'true' })
     setIsSubmitted(true)
   }
 
