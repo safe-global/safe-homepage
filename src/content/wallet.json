@@ -109,7 +109,7 @@
     "items": [
       {
         "title": "Eliminate single points of failure",
-        "text": "Distribute control across multiple owners and require for enhanced security.",
+        "text": "Distribute control across multiple owners for enhanced security.",
         "image": {
           "src": "/images/Wallet/VerticalSlide/eliminate-single-pof.png",
           "alt": "Execute multisig"
