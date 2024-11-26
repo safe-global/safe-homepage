@@ -6,12 +6,12 @@
   },
   {
     "component": "Wallet/Hero",
-    "caption": "across 14+ networks",
+    "caption": "across 15+ networks",
     "title": "Keep your assets <b>Safe</b>",
     "text": "Use the multisig trusted by Vitalik Buterin and leading web3 projects to secure over $100 billion.",
     "buttons": [
       {
-        "text": "Launch wallet",
+        "text": "Launch Wallet",
         "href": "https://app.safe.global",
         "variant": "button"
       }
@@ -41,7 +41,7 @@
       },
       {
         "image": {
-          "src": "/images/starknet-logo.png",
+          "src": "/images/starknet-logo.svg",
           "alt": "Starknet logo"
         }
       },
@@ -86,8 +86,8 @@
         "title": "Secure Your Savings Beyond a Seed Phrase",
         "text": "Protect your assets with multi-signature security, giving you peace of mind without relying solely on a seed phrase.",
         "image": {
-          "src": "/images/Home/safe-shield.png",
-          "alt": "Safe Smart Account shield"
+          "src": "/images/Wallet/user.png",
+          "alt": "Individual user"
         },
         "component": "Wallet/BigImageCard"
       },
@@ -96,8 +96,8 @@
         "title": "Manage Assets Together, Securely",
         "text": "Collaboratively manage your organization's assets with multi-signature approvals, ensuring security and transparency every step of the way.",
         "image": {
-          "src": "/images/Home/safe-shield.png",
-          "alt": "Safe Smart Account shield"
+          "src": "/images/Wallet/group.png",
+          "alt": "user group"
         },
         "component": "Wallet/BigImageCard"
       }
@@ -135,27 +135,27 @@
   },
   {
     "component": "Wallet/GradientNumbers",
-    "title": "<i>Safe</i> accounts",
+    "title": "<i>Safe</i> in numbers",
     "items": [
       {
-        "title": "4M+",
-        "text": "Gas saved in batch transactions",
+        "title": "$100B+",
+        "text": "Total Value Locked (TVL)",
         "link": {
-          "href": "https://dune.com/queries/2093960/3449499"
+          "href": "https://dune.com/safe/all"
         }
       },
       {
-        "title": "$120B+",
-        "text": "Total value locked (TVL)",
+        "title": "6.4M",
+        "text": "Monthly Active Users (MAU)",
         "link": {
-          "href": ""
+          "href": "https://dune.com/queries/3670603"
         }
       },
       {
-        "title": "1.5M+",
-        "text": "Monthly active users (MAU)",
+        "title": "$150B+",
+        "text": "Total Volume Processed (TVP)",
         "link": {
-          "href": "https://dune.com/queries/2459401/4044167"
+          "href": "https://dune.com/safe/all"
         }
       }
     ]
@@ -210,6 +210,74 @@
         }
       }
     ]
+  },
+  {
+    "component": "Wallet/VerticalStack",
+    "title": "Security built on<br/><b>open-source</b> principles",
+    "video": {
+      "sources": [
+        { "src": "/videos/Home/safe-code-hevc.mov", "type": "video/quicktime; codecs=hvc1" },
+        { "src": "/videos/Home/safe-code-vp9.webm", "type": "video/webm" }
+      ]
+    },
+    "items": [
+      {
+        "title": "Trustless by design",
+        "text": "Your Accounts are secured directly by the blockchain and not by a centralized entity. They do not depend on the Safe{Wallet}'s interface to exist.",
+        "image": {
+          "src": "/images/Wallet/checkmark-gradient.svg",
+          "alt": "Gradient checkmark"
+        }
+      },
+      {
+        "title": "Safe command line interface",
+        "text": "You can interact with your Safe Smart Account directly with code.",
+        "image": {
+          "src": "/images/Wallet/checkmark-gradient.svg",
+          "alt": "Gradient checkmark"
+        }
+      },
+      {
+        "title": "Use with many interfaces",
+        "text": "Portable across different frontends. You can access your Safe Smart Account from other ecosystem apps like Coinshift, Den etc.",
+        "image": {
+          "src": "/images/Wallet/checkmark-gradient.svg",
+          "alt": "Gradient checkmark"
+        }
+      }
+    ]
+  },
+  {
+    "title": "<b>Get the Latest</b> on Safe{Wallet}",
+    "text": "Sign up to our updates and be informed about new features, improvements, and special announcements.",
+    "component": "Wallet/SignUpForm"
+  },
+  {
+    "component": "commonCMS/Faq"
+  },
+  {
+    "title": "Create your <b>Smart Account</b> now",
+    "text": "Still have questions and want to know more about Safe{Wallet}? Watch our demo.",
+    "buttons": [
+      {
+        "text": "Launch Wallet",
+        "href": "https://app.safe.global",
+        "variant": "button"
+      },
+      {
+        "text": "View demo",
+        "href": "https://safe.global",
+        "variant": "link"
+      }
+    ],
+    "component": "common/CenteredTextBlock"
+  },
+  {
+    "component": "Wallet/ImageGradient",
+    "image": {
+      "src": "/images/Wallet/laptop-half.png",
+      "alt": "Safe wallet on a laptop"
+    }
   },
   {
     "component": "Wallet/LegalDisclaimer",

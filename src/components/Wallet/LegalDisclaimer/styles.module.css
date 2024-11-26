@@ -1,3 +1,7 @@
+.container {
+  margin-top: 80px;
+}
+
 .container .caption {
   margin-bottom: 16px;
 }
@@ -11,4 +15,8 @@
   font-size: 15px;
   line-height: 24px;
   color: var(--mui-palette-primary-light);
+}
+
+.container :global .MuiDivider-root {
+  margin-top: 80px;
 }

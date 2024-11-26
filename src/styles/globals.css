@@ -41,14 +41,6 @@
   src: url('/fonts/Citerne-Italic.woff2') format('woff2');
 }
 
-@font-face {
-  font-family: 'Chivo Mono Regular';
-  src: url('/fonts/ChivoMono-VariableFont_wght.ttf') format('truetype');
-  font-display: swap;
-  font-weight: normal;
-  font-style: normal;
-}
-
 html,
 body {
   padding: 0;

@@ -29,15 +29,12 @@
 
 .lastCard {
   padding: 0;
+  gap: 0;
 }
 
 .lastCard .cardContent {
   padding: 40px;
   max-width: 516px;
-}
-
-.image {
-  height: 100%;
 }
 
 .cardContent {
@@ -97,5 +94,9 @@
     height: 100%;
     display: flex;
     align-items: center;
+  }
+
+  .image {
+    height: 100%;
   }
 }

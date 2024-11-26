@@ -41,7 +41,9 @@ const Hero = ({
 
           <Typography className={css.text}>{text}</Typography>
 
-          <ButtonsWrapper buttons={buttons} />
+          <div className={css.buttonsWrapper}>
+            <ButtonsWrapper buttons={buttons} />
+          </div>
         </div>
       </Container>
 
@@ -58,6 +60,7 @@ const Hero = ({
             </div>
 
             <video ref={videoRef} controls={isPlaying} poster={image?.src} className={css.video}>
+              <source src="/videos/Wallet/wallet-hero-video.webm" type="video/webm" />
               <source src="/videos/Wallet/wallet-hero-video.mp4" type="video/mp4" />
             </video>
           </div>
@@ -66,7 +69,7 @@ const Hero = ({
         {!isPlaying && <div className={css.gradient} />}
       </div>
 
-      <Container className={css.container}>
+      <Container className={css.container} style={{ marginBottom: '210px' }}>
         <Typography variant="caption">They use Safe&#123;Wallet&#125;</Typography>
 
         {items ? (
