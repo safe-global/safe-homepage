@@ -5,277 +5,283 @@
     "component": "common/MetaTags"
   },
   {
-    "image": {
-      "src": "/images/Wallet/clients.png",
-      "alt": "Web and mobile clients"
-    },
-    "title": "The most secure way to own assets",
+    "component": "Wallet/Hero",
+    "caption": "across 15+ networks",
+    "title": "Keep your assets <b>Safe</b>",
+    "text": "Use the multisig trusted by Vitalik Buterin and leading web3 projects to secure over $100 billion.",
     "buttons": [
       {
-        "text": "Launch wallet",
-        "href": "https://app.safe.global"
-      }
-    ],
-    "component": "Wallet/Intro"
-  },
-  {
-    "title": "Introducing<br>Native Swaps",
-    "caption": "New feature",
-    "buttons": [
-      {
-        "text": "Enter Safe{Wallet}",
+        "text": "Launch Wallet",
         "href": "https://app.safe.global",
-        "variant": "button",
-        "color": "secondary"
+        "variant": "button"
       }
     ],
     "image": {
-      "sm": "/images/Wallet/swap-card.png",
-      "md": "/images/Wallet/swap-card.png",
-      "alt": "Recovery buoy logo"
+      "src": "/images/Wallet/laptop-safe-wallet.png",
+      "alt": "Safe wallet web view"
     },
-    "footer": {
-      "logos": [
-        {
-          "src": "/images/Wallet/powered-by-cow.png",
-          "alt": "CoW Swap logo"
-        }
-      ]
-    },
-    "component": "common/Masthead"
-  },
-  {
-    "variant": "3-columns",
-    "title": "Your keys. Your coins",
     "items": [
       {
         "image": {
-          "src": "/images/Wallet/shield.svg",
-          "alt": "Shield with a checkmark"
-        },
-        "title": "Battle-tested security",
-        "text": "Top notch security of multiple private keys (multi-sig) and rigorously audited contracts"
+          "src": "/images/1kx-logo.svg",
+          "alt": "1kx logo"
+        }
       },
       {
         "image": {
-          "src": "/images/Wallet/people.svg",
-          "alt": "Group of owners"
-        },
-        "title": "Multi-signature access",
-        "text": "Access controlled by many private keys enabling co-ownership and stronger security for individuals"
+          "src": "/images/chainlink.svg",
+          "alt": "Chainlink logo"
+        }
       },
       {
         "image": {
-          "src": "/images/Wallet/key.svg",
-          "alt": "Ownership key"
-        },
-        "title": "Self-custody",
-        "text": "We never own any of the assets stored in user accounts and never will"
-      }
-    ],
-    "component": "common/UspBlock"
-  },
-  {
-    "title": "<b>Co-manage</b> your assets",
-    "text": "With multiple private keys, the same account can be jointly managed by many users enabling decentralised co-ownership for DAOs, groups and enterprises",
-    "link": {
-      "title": "Get started",
-      "href": "https://app.safe.global"
-    },
-    "component": "Wallet/TextRadialAnimation"
-  },
-  {
-    "variant": "image-text",
-    "title": "<b>Control and change</b> account ownership",
-    "text": "With the ability to add new signers, remove old signers and replace account ownership, the same account is flexible for any future needs and more secure",
-    "buttons": [
+          "src": "/images/aave-logo-light.svg",
+          "alt": "Aave logo"
+        }
+      },
       {
-        "text": "Get started",
-        "href": "https://app.safe.global/welcome",
-        "variant": "link"
-      }
-    ],
-    "component": "Wallet/OwnershipParallax"
-  },
-  {
-    "variant": "text-image",
-    "title": "<b>Use</b> built-in app store",
-    "text": "The best web3 apps are accessible right from inside the Safe Wallet interface",
-    "buttons": [
+        "image": {
+          "src": "/images/starknet-logo.svg",
+          "alt": "Starknet logo"
+        }
+      },
       {
-        "text": "Get started",
-        "href": "https://app.safe.global/apps?safe=eth:0xfF501B324DC6d78dC9F983f140B9211c3EdB4dc7",
-        "variant": "link"
+        "image": {
+          "src": "/images/ens.svg",
+          "alt": "ENS logo"
+        }
       }
     ],
-    "component": "Wallet/ParallaxAppStore"
+    "backgroundImage": {
+      "md": "/images/Wallet/hero-fg.png",
+      "alt": "Networks circled logos"
+    }
   },
   {
-    "variant": "image-text",
-    "title": "Save on gas by batching <b>multiple transactions</b> in a few clicks",
-    "text": "Easily batch transactions together to save on fees",
-    "buttons": [
-      {
-        "text": "Get started",
-        "href": "https://app.safe.global/share/safe-app?appUrl=https%3A%2F%2Fapps-portal.safe.global%2Ftx-builder&chain=eth",
-        "variant": "link"
-      }
-    ],
-    "component": "Wallet/ParallaxBatching"
-  },
-  {
-    "variant": "text-image",
-    "title": "Use <b>any type of signer</b> to control your account",
-    "text": "Use Ledger, Trezor, Metamask or any other popular wallet as a signer on your Safe Wallet",
-    "buttons": [
-      {
-        "text": "Get started",
-        "href": "https://app.safe.global",
-        "variant": "link"
-      }
-    ],
-    "component": "Wallet/ParallaxSignerWallets"
-  },
-  {
-    "variant": "image-text",
-    "title": "<b>Simulate transactions</b> before they happen",
-    "text": "Simulate transactions before sending them through. Get instant prompts and full analysis of your transaction's success or failure with a simulation report via Tenderly",
-    "buttons": [
-      {
-        "text": "Get started",
-        "href": "https://app.safe.global",
-        "variant": "link"
-      }
-    ],
-    "component": "Wallet/ParallaxTxSimulation"
-  },
-  {
+    "component": "common/TitleSlidingIcons",
     "title": "Available on 15+ networks",
     "text": "including testnets",
-    "networks": [
-      {
-        "name": "Ethereum Mainnet",
-        "icon": {
-          "src": "/images/chainsLogos/EthereumLogo.png",
-          "alt": "Ethereum logo"
-        }
-      },
-      {
-        "name": "BNB Smart Chain",
-        "icon": {
-          "src": "/images/chainsLogos/BNBLogo.png",
-          "alt": "BNB Chain logo"
-        }
-      },
-      {
-        "name": "Optimism",
-        "icon": {
-          "src": "/images/chainsLogos/OptimismLogo.png",
-          "alt": "Optimism logo"
-        }
-      },
-      {
-        "name": "Arbitrum",
-        "icon": {
-          "src": "/images/chainsLogos/ArbitrumLogo.png",
-          "alt": "Arbitrum logo"
-        }
-      },
-      {
-        "name": "Scroll",
-        "icon": {
-          "src": "/images/chainsLogos/ScrollLogo.svg",
-          "alt": "Scroll logo"
-        },
-        "isNew": true
-      },
-      {
-        "name": "zkSync Era Mainnet",
-        "icon": {
-          "src": "/images/chainsLogos/ZkSyncEraLogo.png",
-          "alt": "zkSync Era logo"
-        },
-        "textColor": "#000000",
-        "backgroundColor": "#FFFFFF"
-      },
-      {
-        "name": "Polygon",
-        "icon": {
-          "src": "/images/chainsLogos/PolygonLogo.png",
-          "alt": "Polygon logo"
-        }
-      },
-      {
-        "name": "Avalanche",
-        "icon": {
-          "src": "/images/chainsLogos/AvalancheLogo.png",
-          "alt": "Avalanche logo"
-        }
-      },
-      {
-        "name": "Gnosis Chain",
-        "icon": {
-          "src": "/images/chainsLogos/GnosisChainLogo.png",
-          "alt": "Gnosis Chain logo"
-        }
-      },
-      {
-        "name": "Aurora",
-        "icon": {
-          "src": "/images/chainsLogos/AuroraLogo.png",
-          "alt": "Aurora logo"
-        }
-      },
-      {
-        "name": "Arbitrum",
-        "icon": {
-          "src": "/images/chainsLogos/ArbitrumLogo.png",
-          "alt": "Arbitrum logo"
-        }
-      },
-      {
-        "name": "Polygon zkEVM",
-        "icon": {
-          "src": "/images/chainsLogos/PolygonZkEVMLogo.png",
-          "alt": "Polygon zkEVM logo"
-        }
-      },
-      {
-        "name": "Celo",
-        "icon": {
-          "src": "/images/chainsLogos/CeloLogo.png",
-          "alt": "Celo logo"
-        }
-      }
-    ],
-    "component": "common/Networks"
+    "reverse": true,
+    "icons": [
+      { "name": "Scroll", "src": "/images/chainsLogos/ScrollLogo.svg" },
+      { "name": "Polygon zkEVM", "src": "/images/chainsLogos/PolygonZkEVMLogo.png" },
+      { "name": "Celo", "src": "/images/chainsLogos/CeloLogo.png" },
+      { "name": "Optimism", "src": "/images/chainsLogos/OptimismLogo.png" },
+      { "name": "Base", "src": "/images/chainsLogos/BaseLogo.png" },
+      { "name": "Arbitrum", "src": "/images/chainsLogos/ArbitrumLogo.png" },
+      { "name": "ZkSync Era Mainnet", "src": "/images/chainsLogos/ZkSyncEraLogo.png" },
+      { "name": "Avalanche", "src": "/images/chainsLogos/AvalancheLogo.png" },
+      { "name": "Gnosis Chain", "src": "/images/chainsLogos/GnosisChainLogo.png" },
+      { "name": "BNB", "src": "/images/chainsLogos/BNBLogo.png" },
+      { "name": "Ethereum Mainnet", "src": "/images/chainsLogos/EthereumLogo.png" },
+      { "name": "Polygon", "src": "/images/chainsLogos/PolygonLogo.png" },
+      { "name": "Aurora", "src": "/images/chainsLogos/AuroraLogo.png" }
+    ]
   },
   {
-    "variant": "text-image",
-    "title": "Convenience of multi-sig in your pocket",
-    "text": "Track your assets and transactions on mobile. Stay informed and sign transactions on-the-go",
-    "steps": [
+    "component": "Wallet/BigCardsGrid",
+    "items": [
       {
-        "label": "Create a new signer account",
-        "state": "completed"
+        "caption": "Individual users",
+        "title": "Secure Your Savings Beyond a Seed Phrase",
+        "text": "Protect your assets with multi-signature security, giving you peace of mind without relying solely on a seed phrase.",
+        "image": {
+          "src": "/images/Wallet/user.png",
+          "alt": "Individual user"
+        },
+        "component": "Wallet/BigImageCard"
       },
       {
-        "label": "Allow push notifications",
-        "description": ["Track movement of your assets and transactions", "Get alerts"],
-        "state": "active"
+        "caption": "Organizations",
+        "title": "Manage Assets Together, Securely",
+        "text": "Collaboratively manage your organization's assets with multi-signature approvals, ensuring security and transparency every step of the way.",
+        "image": {
+          "src": "/images/Wallet/group.png",
+          "alt": "user group"
+        },
+        "component": "Wallet/BigImageCard"
+      }
+    ]
+  },
+  {
+    "component": "Wallet/VerticalSlide",
+    "title": "Defend assets with <b>multi-signature</b> security",
+    "items": [
+      {
+        "title": "Eliminate single points of failure",
+        "text": "Distribute control across multiple owners for enhanced security.",
+        "image": {
+          "src": "/images/Wallet/VerticalSlide/eliminate-single-pof.png",
+          "alt": "Execute multisig"
+        }
       },
       {
-        "label": "Sign multi-sig transactions on-the-go"
+        "title": "Simulate and scan transactions",
+        "text": "Transact with confidence with risk scanning and transaction simulation before executing.",
+        "image": {
+          "src": "/images/Wallet/VerticalSlide/simulate-scan-tx.png",
+          "alt": "Simulate and scan transactions"
+        }
+      },
+      {
+        "title": "Restore access to your account",
+        "text": "Never lose access to your account. Restore account control easily with secure recovery mechanisms.",
+        "image": {
+          "src": "/images/Wallet/VerticalSlide/restore-access.png",
+          "alt": "Activate recovery"
+        }
+      }
+    ]
+  },
+  {
+    "component": "Wallet/GradientNumbers",
+    "title": "<i>Safe</i> in numbers",
+    "items": [
+      {
+        "title": "$100B+",
+        "text": "Total Value Locked (TVL)",
+        "link": {
+          "href": "https://dune.com/safe/all"
+        }
+      },
+      {
+        "title": "6.4M",
+        "text": "Monthly Active Users (MAU)",
+        "link": {
+          "href": "https://dune.com/queries/3670603"
+        }
+      },
+      {
+        "title": "$150B+",
+        "text": "Total Volume Processed (TVP)",
+        "link": {
+          "href": "https://dune.com/safe/all"
+        }
+      }
+    ]
+  },
+  {
+    "component": "Wallet/FeatureCards",
+    "title": "<b>More features beyond</b> multisigs",
+    "text": "Safe is more than just secure asset storage. It's your entry point to onchain activities.",
+    "items": [
+      {
+        "isNew": true,
+        "fullWidth": true,
+        "caption": "Trade seamlessly",
+        "title": "Swap like a pro",
+        "text": "with MEV protection and security, ensuring your intent-based transactions will not fail.",
+        "image": {
+          "src": "/images/Wallet/Features/trade.png",
+          "alt": "Token swap modal"
+        }
+      },
+      {
+        "caption": "Optimize",
+        "title": "Batch transactions",
+        "text": "To save gas and to avoid losing time gathering signatures from everyone.",
+        "image": {
+          "src": "/images/Wallet/Features/optimise.png",
+          "alt": "Token swap modal"
+        }
+      },
+      {
+        "isNew": true,
+        "caption": "Earn",
+        "title": "Stake ETH Securely",
+        "text": "Stake directly from your Safe{Wallet} with robust multisig security.",
+        "image": {
+          "src": "/images/Wallet/Features/earn.png",
+          "alt": "Token swap modal"
+        }
+      },
+      {
+        "caption": "All-in-one",
+        "title": "Explore Safe Apps",
+        "text": "Swapping, staking, NFTs, identity and more. Interact with 200+ apps integrated with Safe.",
+        "link": {
+          "title": "View ecosystem projects",
+          "href": "https://safe.global/ecosystem",
+          "variant": "link"
+        },
+        "image": {
+          "src": "/images/Wallet/Features/safe-apps.png",
+          "alt": "Safe Apps logos"
+        }
+      }
+    ]
+  },
+  {
+    "component": "Wallet/VerticalStack",
+    "title": "Security built on<br/><b>open-source</b> principles",
+    "video": {
+      "sources": [
+        { "src": "/videos/Home/safe-code-hevc.mov", "type": "video/quicktime; codecs=hvc1" },
+        { "src": "/videos/Home/safe-code-vp9.webm", "type": "video/webm" }
+      ]
+    },
+    "items": [
+      {
+        "title": "Trustless by design",
+        "text": "Your Accounts are secured directly by the blockchain and not by a centralized entity. They do not depend on the Safe{Wallet}'s interface to exist.",
+        "image": {
+          "src": "/images/Wallet/checkmark-gradient.svg",
+          "alt": "Gradient checkmark"
+        }
+      },
+      {
+        "title": "Safe command line interface",
+        "text": "You can interact with your Safe Smart Account directly with code.",
+        "image": {
+          "src": "/images/Wallet/checkmark-gradient.svg",
+          "alt": "Gradient checkmark"
+        }
+      },
+      {
+        "title": "Use with many interfaces",
+        "text": "Portable across different frontends. You can access your Safe Smart Account from other ecosystem apps like Coinshift, Den etc.",
+        "image": {
+          "src": "/images/Wallet/checkmark-gradient.svg",
+          "alt": "Gradient checkmark"
+        }
+      }
+    ]
+  },
+  {
+    "title": "<b>Get the Latest</b> on Safe{Wallet}",
+    "text": "Sign up to our updates and be informed about new features, improvements, and special announcements.",
+    "component": "Wallet/SignUpForm"
+  },
+  {
+    "component": "commonCMS/Faq"
+  },
+  {
+    "title": "Create your <b>Smart Account</b> now",
+    "text": "Still have questions and want to know more about Safe{Wallet}? Watch our demo.",
+    "buttons": [
+      {
+        "text": "Launch Wallet",
+        "href": "https://app.safe.global",
+        "variant": "button"
+      },
+      {
+        "text": "View demo",
+        "href": "https://safe.global",
+        "variant": "link"
       }
     ],
-    "component": "Wallet/MobileAppParallax"
+    "component": "common/CenteredTextBlock"
+  },
+  {
+    "component": "Wallet/ImageGradient",
+    "image": {
+      "src": "/images/Wallet/laptop-half.png",
+      "alt": "Safe wallet on a laptop"
+    }
   },
   {
     "component": "Wallet/LegalDisclaimer",
     "caption": "Legal Disclaimer",
     "text": "<p>Safe{Wallet} stands as the leading wallet for Safe Smart Accounts and technology, provided as free open-source software under the GNU General Public License, Version 3.</p><p>For a comprehensive list of attribution notices for third-party software that may be contained in portions of the Safe{Wallet}, please visit <a href=\"https://app.safe.global/licenses\">Licenses</a>. The <a href=\"https://app.safe.global/\">website</a> is operated by Core Contributors GmbH, Berlin, Germany. Safe{Wallet} is a registered trademark owned by the Safe Ecosystem Foundation. The Safe Ecosystem Foundation does not operate any implementations of Safe{Wallet}. Third parties may hold licenses for the Safe trademark and operate implementations of Safe{Wallet} under the foundation's trademark policy available at <a href=\"https://safe.global/trademark\">Trademark</a> and/or other license agreements. Please note that the use of and access to the Safe{Wallet} is subject to terms and conditions provided by Core Contributors GmbH. The Safe Ecosystem Foundation makes no representations, warranties and/or covenants with respect to the Safe Technology (or any implementations of the Safe{Wallet} and/or Safe Smart Accounts) or any third party DeFi protocols, as to their technical properties and/or characteristics or performance, or their actual or potential usefulness or suitability for any particular purpose.</p>"
-  },
-  {
-    "component": "common/TextBlockBanner"
   }
 ]

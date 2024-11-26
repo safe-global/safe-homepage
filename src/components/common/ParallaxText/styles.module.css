@@ -1,16 +1,15 @@
-.textBlockWrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.textBlockWrapper p {
-  margin: 40px 0;
+.textBlock a {
+  text-decoration: underline;
+  color: var(--mui-palette-primary-main);
 }
 
 .textFirst,
 .imageFirst {
   flex-direction: column-reverse;
+}
+
+.textFirstMobile {
+  flex-direction: column;
 }
 
 @media (min-width: 600px) {

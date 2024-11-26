@@ -1,0 +1,140 @@
+.bg {
+  background-position-x: center;
+  background-repeat: no-repeat;
+  overflow: visible;
+  background-size: contain;
+  position: relative;
+}
+
+.container {
+  margin-top: 70px;
+  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: visible;
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.caption {
+  background: linear-gradient(260.13deg, #12ff80 1.24%, #5fddff 102.14%);
+  background-clip: text;
+  color: transparent;
+}
+
+.title,
+.text {
+  max-width: 1170px;
+  text-align: center;
+  color: var(--mui-palette-primary-text);
+}
+
+.text {
+  margin-top: 24px;
+}
+
+.buttonsWrapper {
+  margin-top: 40px;
+}
+
+.logosWrapper {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.video {
+  border-radius: 16px;
+  width: 90%;
+}
+
+.watchDemo {
+  margin-top: 85px;
+  position: relative;
+}
+
+.videoContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.playButton {
+  position: absolute;
+  z-index: 10;
+  top: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.playButton img {
+  width: 64px;
+}
+
+.playButton img:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.playButton.hidden {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .spot1 {
+    position: absolute;
+    left: -300px;
+    top: -150px;
+    z-index: -1;
+    width: 1000px;
+    height: 1000px;
+    background-image: radial-gradient(at top left, rgba(18, 255, 128, 0.4) 0%, rgba(246, 247, 248, 0) 80%);
+    filter: blur(70px);
+  }
+
+  .spot2 {
+    position: absolute;
+    z-index: -1;
+    right: 0px;
+    top: -100px;
+    width: 1000px;
+    height: 1000px;
+    background-image: radial-gradient(at right, rgba(41, 182, 246, 0.3) 0%, rgba(246, 247, 248, 0) 80%);
+    filter: blur(50px);
+  }
+
+  .logosWrapper {
+    flex-direction: row;
+    height: 42px;
+  }
+
+  .watchDemo {
+    margin-top: 100px;
+  }
+
+  .video {
+    width: 70%;
+  }
+
+  .gradient {
+    position: absolute;
+    height: 70%;
+    width: 70%;
+    bottom: 0;
+    left: 15%;
+    background: linear-gradient(180deg, rgba(18, 19, 18, 0) 0%, var(--mui-palette-background-default) 100%);
+    z-index: 1;
+  }
+}

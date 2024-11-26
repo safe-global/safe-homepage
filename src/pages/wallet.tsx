@@ -1,19 +1,16 @@
 import type { InferGetStaticPropsType, NextPage } from 'next'
+import client from '@/lib/contentful'
 import { Wallet } from '@/components/Wallet'
-import { loadChainsData } from '@/lib/loadChainsData'
+import type { TypeBaseBlockSkeleton } from '@/contentful/types'
 
-const WalletPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (props) => {
-  return <Wallet {...props} />
-}
+const FAQ_CONTENT_TYPE_ID = '1jCIVFDUzFO1okK8b6TTxS'
+
+const WalletPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (props) => <Wallet {...props} />
 
 export async function getStaticProps() {
-  const chainsData = await loadChainsData()
+  const faqContent = await client.getEntry<TypeBaseBlockSkeleton>(FAQ_CONTENT_TYPE_ID)
 
-  return {
-    props: {
-      chainsData,
-    },
-  }
+  return { props: { pageData: { faqContent } } }
 }
 
 export default WalletPage
