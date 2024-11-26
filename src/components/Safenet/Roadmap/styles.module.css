@@ -15,7 +15,7 @@
 }
 
 .title {
-  max-width: 1042px;
+  max-width: 382px;
   text-transform: uppercase;
   text-align: center;
 
@@ -47,6 +47,29 @@
   flex-direction: column;
   align-items: center;
   gap: 24px;
+}
+
+.mobileTag {
+  background: blue;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 12px 54px;
+  color: #033f54;
+}
+
+.mobileTag1 {
+  background: radial-gradient(2907.17% 504.86% at -250.57% 11.91%, #12ff80 0%, #ffd200 42%, #ff5f00 88.5%);
+}
+
+.mobileTag2 {
+  background: radial-gradient(129.11% 259.78% at 103.1% -21.2%, #ff5f00 0%, #ffd200 50%, #12ff80 100%);
+}
+
+.mobileTag3 {
+  background-image: linear-gradient(-45deg, rgba(15, 255, 128, 1) 0%, rgba(94, 221, 255, 1) 100%);
 }
 
 .blockTitle {
@@ -88,23 +111,32 @@
   .hook {
     display: block;
     position: absolute;
-    left: -260px;
+    left: -248px;
     top: 6px;
   }
 
   .title {
+    max-width: 1042px;
     font-size: 56px;
     line-height: 60px;
   }
 
+  .title br {
+    display: none;
+  }
+
   .timelineImage {
+    display: block;
     width: 100%;
     margin-top: 108px;
   }
 
   .gridContainer {
     margin-top: 40px;
-    justify-content: space-around;
+  }
+
+  .mobileTag {
+    display: none;
   }
 
   .buttonWrapper {
@@ -114,12 +146,18 @@
 
 @media (min-width: 1200px) {
   .hook {
-    left: -112px;
+    left: -96px;
+  }
+
+  .gridContainer {
+    padding-left: 30px;
+    padding-right: 30px;
+    justify-content: space-around;
   }
 }
 
 @media (min-width: 1630px) {
   .hook {
-    left: 104px;
+    left: 118px;
   }
 }
