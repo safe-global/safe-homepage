@@ -1,0 +1,33 @@
+.wrapper {
+  padding: 8px 12px 8px 8px;
+  gap: 8px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.icon img {
+  display: flex;
+  align-items: center;
+}
+
+.name {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.newBadge {
+  font-size: 12px;
+  font-weight: 500;
+  background: var(--mui-palette-primary-main);
+  color: var(--mui-palette-text-dark);
+  padding: 0 8px;
+  border-radius: 16px;
+  border: 2px solid var(--mui-palette-background-default);
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  line-height: 20px;
+}

@@ -1,5 +1,5 @@
-import type { NetworkChipProps } from '@/components/Wallet/NetworkChip'
-import NetworkChip from '@/components/Wallet/NetworkChip'
+import type { NetworkChipProps } from '@/components/common/NetworkChip'
+import NetworkChip from '@/components/common/NetworkChip'
 import { Typography } from '@mui/material'
 import clsx from 'clsx'
 import css from './styles.module.css'
