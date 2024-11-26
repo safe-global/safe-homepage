@@ -1,3 +1,4 @@
+import Architecture from '@/components/Safenet/Architecture'
 import ChainAbstraction from '@/components/Safenet/ChainAbstraction'
 import Hero from '@/components/Safenet/Hero'
 import Metadata from '@/components/Safenet/Metatags'
@@ -9,6 +10,7 @@ const Safenet = () => {
       <Metadata />
       <Hero />
       <ChainAbstraction />
+      <Architecture />
       <Roadmap />
     </div>
   )

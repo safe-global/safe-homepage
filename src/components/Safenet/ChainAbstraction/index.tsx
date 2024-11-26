@@ -13,7 +13,7 @@ const items: BaseBlock['items'] = [
       src: '/images/Safenet/ChainAbstraction/arrows.png',
       alt: 'Forward arrows',
     },
-    title: 'Instant Transaction',
+    title: 'Instant Transactions',
     text: 'Get your transactions executed within 500ms, without cross-chain latency',
   },
   {
@@ -32,7 +32,7 @@ const items: BaseBlock['items'] = [
     title: (
       <>
         Unified <br />
-        Balance
+        Balances
       </>
     ),
     text: 'Spend from a single balance across all chains and offchain',
@@ -49,7 +49,7 @@ const ChainAbstraction = () => (
 
         <Typography className={css.title}>
           <>
-            Use your assets <br />
+            Access your assets <br />
             <span className={css.titleGradient}>on any network</span>!
           </>
         </Typography>
