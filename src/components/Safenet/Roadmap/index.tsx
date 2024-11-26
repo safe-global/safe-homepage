@@ -1,6 +1,5 @@
 import { Button, Container, Grid, IconButton, Typography } from '@mui/material'
 import GradientChip from '@/components/Safenet/GradientChip'
-import { ALPHA_TELEGRAM_LINK } from '@/config/constants'
 import TelegramGradient from '@/public/images/Safenet/telegram-gradient.svg'
 import css from './styles.module.css'
 
@@ -56,7 +55,7 @@ const Roadmap = () => {
       </Grid>
 
       <div className={css.buttonWrapper}>
-        <IconButton href={ALPHA_TELEGRAM_LINK} target="_blank" rel="noreferrer">
+        <IconButton href="https://dub.sh/safealpha" target="_blank" rel="noreferrer">
           <TelegramGradient />
         </IconButton>
 
@@ -65,7 +64,7 @@ const Roadmap = () => {
         <Button
           variant="contained"
           size="large"
-          href={ALPHA_TELEGRAM_LINK}
+          href="https://dub.sh/safealpha"
           target="_blank"
           rel="noreferrer"
           className={css.gradientButton}
