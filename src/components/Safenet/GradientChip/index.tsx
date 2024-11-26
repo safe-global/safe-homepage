@@ -1,12 +1,9 @@
 import { Typography } from '@mui/material'
-import type { BaseBlock } from '@/components/Home/types'
 import css from './styles.module.css'
 
-const GradientChip = ({ caption }: { caption: BaseBlock['caption'] }) => (
+const GradientChip = ({ caption, isUppercase }: { caption: string; isUppercase?: boolean }) => (
   <div className={css.chip}>
-    <Typography variant="caption" className={css.caption}>
-      {caption}
-    </Typography>
+    <Typography className={`${css.caption} ${isUppercase ? css.uppercase : null}`}>{caption}</Typography>
   </div>
 )
 

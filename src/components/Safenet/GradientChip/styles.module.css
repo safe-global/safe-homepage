@@ -17,5 +17,11 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  font-size: 12px;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }

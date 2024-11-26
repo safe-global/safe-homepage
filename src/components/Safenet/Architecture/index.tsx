@@ -96,6 +96,14 @@ const Architecture = () => {
               <li>Provides Safenet Processors with liquidity to execute transaction intents</li>
               <li>Aggregates existing DeFi primitives</li>
             </ul>
+
+            <div className={css.chipsContainer}>
+              <GradientChip caption="Bridges" />
+              <GradientChip caption="Clearing Layer" />
+              <GradientChip caption="Proprietary Liquidity (Solver)" />
+              <GradientChip caption="AMM" />
+              <GradientChip caption="Lending Markets" />
+            </div>
           </Grid>
         </Grid>
 
