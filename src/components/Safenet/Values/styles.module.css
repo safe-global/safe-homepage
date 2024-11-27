@@ -124,10 +124,35 @@
 
 .buttonWrapper {
   margin-top: 48px;
+  display: flex;
+  gap: 32px;
 }
 
 .cross {
   display: none;
+}
+
+.statsContainer {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 92px;
+}
+
+.statsItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.value {
+  margin: 0;
+  font-size: 64px;
+  line-height: 64px;
+  background: radial-gradient(129.11% 259.78% at 103.1% -21.2%, #ff5f00 0%, #ffd200 50%, #12ff80 100%);
+  background-clip: text;
+  color: transparent;
 }
 
 @media (min-width: 900px) {
@@ -171,7 +196,7 @@
 
   .blocksContainer {
     padding-left: 40px;
-    gap: 16px;
+    gap: 12px;
   }
 
   .blockItem {
@@ -183,16 +208,24 @@
     align-items: flex-start;
     justify-content: space-between;
   }
+
+  .statsContainer {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .value {
+    font-size: 80px;
+    line-height: 100px;
+  }
 }
 
 @media (min-width: 1200px) {
   .title {
     font-size: 60px;
     line-height: 64px;
-  }
-
-  .blocksWrapper {
-    height: 366px;
   }
 
   .processor {
@@ -204,14 +237,14 @@
   .cross {
     display: block;
     position: absolute;
-    bottom: -56px;
-    left: 0;
+    bottom: -110px;
+    left: -18px;
     width: 164px;
   }
 
   .blocksContainer {
     padding-left: 66px;
-    gap: 22px;
+    gap: 20px;
   }
 
   .blockItem {

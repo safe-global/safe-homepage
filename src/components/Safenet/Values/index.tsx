@@ -1,6 +1,7 @@
 import { Container, Grid, Typography } from '@mui/material'
+import NextLink from 'next/link'
 import LinkButton from '@/components/common/LinkButton'
-import type { BaseBlock } from '@/components/Home/types'
+import { AppRoutes } from '@/config/routes'
 import css from './styles.module.css'
 
 type BlockProps = {
@@ -25,25 +26,16 @@ const items: Array<BlockProps> = [
 
 const stats = [
   {
-    title: '$100B+',
-    text: 'Total Value Locked (TVL)',
-    link: {
-      href: 'https://dune.com/safe/all',
-    },
+    title: '27M+',
+    text: 'Accounts',
   },
   {
-    title: '6.4M',
-    text: 'Monthly Active Users (MAU)',
-    link: {
-      href: 'https://dune.com/queries/3670603',
-    },
+    title: '$159B+',
+    text: 'Transfer Volume / Year',
   },
   {
-    title: '$150B+',
-    text: 'Total Volume Processed (TVP)',
-    link: {
-      href: 'https://dune.com/safe/all',
-    },
+    title: '200+',
+    text: 'Ecossytem Builders',
   },
 ]
 
@@ -94,21 +86,24 @@ const Values = () => (
         </Grid>
       </div>
 
-      <Grid container spacing={{ xs: '30px', xl: '50px' }} justifyContent="space-between">
+      <div className={css.statsContainer}>
         {stats?.map((item, index) => (
-          <Grid item xs={12} md={4} key={index}>
-            <a href="" target="_blank" rel="noreferrer" className={css.metric}>
-              {/* TODO: Fetch these values from a Dune query */}
-              <p className={css.value}>{item.title}</p>
+          <div className={css.statsItem} key={index}>
+            <p className={css.value}>{item.title}</p>
 
-              <Typography variant="caption">{item.text}</Typography>
-            </a>
-          </Grid>
+            <Typography variant="caption">{item.text}</Typography>
+          </div>
         ))}
-      </Grid>
+      </div>
 
       <div className={css.buttonWrapper}>
-        <LinkButton>Safenet Vision</LinkButton>
+        <NextLink href={AppRoutes.dataroom} target="_blank">
+          <LinkButton>Data Room</LinkButton>
+        </NextLink>
+
+        <NextLink href={AppRoutes.ecosystem} target="_blank">
+          <LinkButton>Ecosystem page</LinkButton>
+        </NextLink>
       </div>
     </Container>
   </div>
