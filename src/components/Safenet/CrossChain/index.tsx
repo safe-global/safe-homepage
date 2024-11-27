@@ -10,23 +10,36 @@ const text =
 const items: BaseBlock['items'] = [
   {
     image: {
-      src: '/images/Safenet/ChainAbstraction/arrows.png',
+      src: '/images/Safenet/CrossChain/arrows.png',
       alt: 'Forward arrows',
     },
-    title: 'Instant Transactions',
+    title: (
+      <>
+        Instant
+        <br />
+        Transactions
+      </>
+    ),
     text: 'Get your transactions executed within 500ms, without cross-chain latency',
+    caption: 'Speed',
   },
   {
     image: {
-      src: '/images/Safenet/ChainAbstraction/padlock.png',
+      src: '/images/Safenet/CrossChain/padlock.png',
       alt: 'Verifiyed padlock',
     },
-    title: 'Execution guarantees',
+    title: (
+      <>
+        Execution <br />
+        guarantees
+      </>
+    ),
     text: 'Set custom policies and security checks ',
+    caption: 'Security',
   },
   {
     image: {
-      src: '/images/Safenet/ChainAbstraction/blobs.png',
+      src: '/images/Safenet/CrossChain/blobs.png',
       alt: 'Unified blobs',
     },
     title: (
@@ -36,10 +49,11 @@ const items: BaseBlock['items'] = [
       </>
     ),
     text: 'Spend from a single balance across all chains and offchain',
+    caption: 'Scale',
   },
 ]
 
-const ChainAbstraction = () => (
+const CrossChain = () => (
   <div className={css.anchor}>
     <div className={css.upperArc} />
 
@@ -61,6 +75,7 @@ const ChainAbstraction = () => (
         {items.map((item, index) => (
           <div className={`${css[`block${index + 1}`]} ${css.blockItem}`} key={index}>
             {item.image ? <img src={item.image.src} alt={item.image.alt} className={css.blockImage} /> : null}
+            <Typography className={css.blockCaption}>{item.caption}</Typography>
             <Typography className={css.blockTitle}>{item.title}</Typography>
             <Typography className={css.blockText}>{item.text}</Typography>
           </div>
@@ -72,6 +87,7 @@ const ChainAbstraction = () => (
           {items.map((item, index) => (
             <Grid item md={4} className={css.blockItem} key={index}>
               {item.image ? <img src={item.image.src} alt={item.image.alt} className={css.blockImage} /> : null}
+              <Typography className={css.blockCaption}>{item.caption}</Typography>
               <Typography className={css.blockTitle}>{item.title}</Typography>
               <Typography className={css.blockText}>{item.text}</Typography>
             </Grid>
@@ -86,4 +102,4 @@ const ChainAbstraction = () => (
   </div>
 )
 
-export default ChainAbstraction
+export default CrossChain

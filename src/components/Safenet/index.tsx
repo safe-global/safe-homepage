@@ -1,5 +1,5 @@
 import Architecture from '@/components/Safenet/Architecture'
-import ChainAbstraction from '@/components/Safenet/ChainAbstraction'
+import CrossChain from '@/components/Safenet/CrossChain'
 import Hero from '@/components/Safenet/Hero'
 import Metadata from '@/components/Safenet/Metatags'
 import Roadmap from '@/components/Safenet/Roadmap'
@@ -9,7 +9,7 @@ const Safenet = () => {
     <div>
       <Metadata />
       <Hero />
-      <ChainAbstraction />
+      <CrossChain />
       <Architecture />
       <Roadmap />
     </div>
