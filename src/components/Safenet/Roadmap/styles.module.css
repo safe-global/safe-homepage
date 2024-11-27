@@ -52,6 +52,7 @@
 .mobileTag {
   background: blue;
   border-radius: 10px;
+  white-space: nowrap;
   text-align: center;
   font-size: 24px;
   line-height: 32px;
@@ -61,21 +62,22 @@
 }
 
 .mobileTag1 {
-  background: radial-gradient(2907.17% 504.86% at -250.57% 11.91%, #12ff80 0%, #ffd200 42%, #ff5f00 88.5%);
+  background-color: #12ff80;
 }
 
 .mobileTag2 {
-  background: radial-gradient(129.11% 259.78% at 103.1% -21.2%, #ff5f00 0%, #ffd200 50%, #12ff80 100%);
+  background-color: #ffd200;
 }
 
 .mobileTag3 {
-  background-image: linear-gradient(-45deg, rgba(15, 255, 128, 1) 0%, rgba(94, 221, 255, 1) 100%);
+  background-color: #fe9201;
 }
 
 .blockTitle {
   font-size: 32px;
   line-height: 36px;
   text-transform: uppercase;
+  white-space: nowrap;
 
   background: radial-gradient(129.11% 259.78% at 103.1% -21.2%, #ff5f00 0%, #ffd200 50%, #12ff80 100%);
   background-clip: text;
