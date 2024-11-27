@@ -1,0 +1,202 @@
+.anchor {
+  position: relative;
+  overflow: visible;
+}
+
+.container {
+  margin-top: 650px;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.upperArc {
+  background-image: url('/images/Safenet/CrossChain/upper-arc.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: auto;
+  background-size: contain;
+
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+
+  top: -400px;
+}
+
+.title {
+  max-width: 1042px;
+  text-transform: uppercase;
+  text-align: center;
+
+  font-size: 56px;
+  line-height: 60px;
+}
+
+.titleGradient {
+  background: radial-gradient(129.11% 259.78% at 103.1% -21.2%, #ff5f00 0%, #ffd200 50%, #12ff80 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+}
+
+.text {
+  max-width: 620px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.blocksWrapper {
+  display: none;
+}
+
+.blocksStack {
+  position: relative;
+  margin-top: 66px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.stack {
+  background-image: url('/images/Safenet/Values/stack.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.blockItem {
+  border-radius: 20px;
+  color: var(--mui-palette-text-dark);
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 16px;
+  text-align: center;
+
+  height: 224px;
+}
+
+.blockItem * {
+  font-weight: 400;
+}
+
+.blockCaption {
+  border: 2px solid var(--mui-palette-text-dark);
+  border-radius: 20px;
+  text-transform: uppercase;
+  height: 32px;
+  padding: 4px 14px;
+  display: flex;
+  align-items: center;
+}
+
+.blockTitle {
+  text-transform: uppercase;
+  font-size: 32px;
+  line-height: 36px;
+  text-align: left;
+  color: var(--mui-palette-primary-main);
+}
+
+.blockText {
+  color: white;
+}
+
+.buttonWrapper {
+  margin-top: 48px;
+}
+
+@media (min-width: 900px) {
+  .blocksStack {
+    display: none;
+  }
+
+  .blocksWrapper {
+    display: block;
+    margin-top: 100px;
+    width: 100%;
+
+    position: relative;
+    --image-offset: 30px;
+  }
+
+  .blocksContainer {
+    padding-left: 40px;
+    gap: 18px;
+  }
+
+  .blocks {
+    background-image: url('/images/Safenet/Values/blocks.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    position: absolute;
+    width: calc(100% + var(--image-offset));
+    left: calc(-1 * var(--image-offset));
+    height: 100%;
+  }
+
+  .blockItem {
+    height: 212px;
+    width: 264px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1200px) {
+  .title {
+    font-size: 60px;
+    line-height: 64px;
+  }
+
+  .blocksWrapper {
+    height: 366px;
+  }
+
+  .blocksContainer {
+    padding-left: 66px;
+    gap: 22px;
+  }
+
+  .blockItem {
+    height: 282px;
+    width: 350px;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1630px) {
+  .blocksWrapper {
+    background-size: cover;
+    height: 494px;
+  }
+
+  .blocksContainer {
+    padding-left: 100px;
+    gap: 34px;
+  }
+
+  .blockItem {
+    --line-height: 28px;
+    height: 378px;
+    width: 470px;
+
+    padding: 32px;
+  }
+}

@@ -62,10 +62,8 @@ const CrossChain = () => (
         <GradientChip caption="Chain Abstraction" />
 
         <Typography className={css.title}>
-          <>
-            Access your assets <br />
-            <span className={css.titleGradient}>on any network</span>!
-          </>
+          Access your assets <br />
+          <span className={css.titleGradient}>on any network</span>!
         </Typography>
 
         <Typography className={css.text}>{text}</Typography>

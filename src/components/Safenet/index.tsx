@@ -3,6 +3,7 @@ import CrossChain from '@/components/Safenet/CrossChain'
 import Hero from '@/components/Safenet/Hero'
 import Metadata from '@/components/Safenet/Metatags'
 import Roadmap from '@/components/Safenet/Roadmap'
+import Values from '@/components/Safenet/Values'
 
 const Safenet = () => {
   return (
@@ -12,6 +13,7 @@ const Safenet = () => {
       <CrossChain />
       <Architecture />
       <Roadmap />
+      <Values />
     </div>
   )
 }
