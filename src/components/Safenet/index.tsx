@@ -4,18 +4,18 @@ import Hero from '@/components/Safenet/Hero'
 import Metadata from '@/components/Safenet/Metatags'
 import Roadmap from '@/components/Safenet/Roadmap'
 import Values from '@/components/Safenet/Values'
+import Waitlist from '@/components/Safenet/Waitlist'
 
-const Safenet = () => {
-  return (
-    <div>
-      <Metadata />
-      <Hero />
-      <CrossChain />
-      <Architecture />
-      <Roadmap />
-      <Values />
-    </div>
-  )
-}
+const Safenet = () => (
+  <div>
+    <Metadata />
+    <Hero />
+    <CrossChain />
+    <Architecture />
+    <Roadmap />
+    <Values />
+    <Waitlist />
+  </div>
+)
 
 export default Safenet
