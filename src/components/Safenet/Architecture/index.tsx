@@ -6,6 +6,29 @@ import BackButton from '@/public/images/Safenet/Architecture/back-button.svg'
 import NextButton from '@/public/images/Safenet/Architecture/next-button.svg'
 import { useState } from 'react'
 
+const userSteps: Array<{ step: number; text: string; endAdorment?: any }> = [
+  {
+    step: 1,
+    text: 'Checks policies and issues resource-lock',
+  },
+  {
+    step: 2,
+    text: 'Gets liquidity',
+  },
+  {
+    step: 3,
+    text: 'Executes transaction intent',
+  },
+  {
+    step: 4,
+    text: 'Settles on user account with execution proof',
+  },
+  {
+    step: 5,
+    text: 'Returns liquidity',
+  },
+]
+
 const GradientStep = ({ stepNumber }: { stepNumber: number }) => {
   return <div className={css.stepCircle}>{stepNumber}</div>
 }
@@ -147,6 +170,7 @@ const Architecture = () => {
           <Grid item md={4} className={css.blockItem}>
             <img src="/images/Safenet/Architecture/processor.png" alt="Safe processor" className={css.blockImage} />
             <Typography className={css.blockTitle}>Processors</Typography>
+
             <ul>
               <li>Connect to user accounts and orchestrate optimal execution of transaction intents.</li>
               <li>Provide execution guarantees like security checks and custom policies.</li>
@@ -158,52 +182,20 @@ const Architecture = () => {
           </Grid>
 
           <Grid item md={4} className={css.midItem}>
-            <Typography className={css.midItemTitle}>USER</Typography>
+            <div className={css.midItemHeader}>
+              <Typography className={css.midItemTitle}>USER</Typography>
+              <Typography className={css.midItemText}>Initiates transaction intent</Typography>
+            </div>
 
             <Grid container className={css.midItemContainer}>
-              <Grid item md={12} className={css.step}>
-                <div className={css.stepContent}>
-                  <GradientStep stepNumber={1} />
-                  <Typography className={css.stepText}>User signs transaction intent</Typography>
-                </div>
-              </Grid>
-
-              <Grid item md={12} className={css.step}>
-                <div className={css.stepContent}>
-                  <GradientStep stepNumber={2} />
-                  <Typography className={css.stepText}>Checks policies and issues resource-lock</Typography>
-                </div>
-              </Grid>
-
-              <Grid item md={12} className={css.step}>
-                <div className={css.stepContent}>
-                  <GradientStep stepNumber={3} />
-                  <Typography className={css.stepText}>Provides liquidity</Typography>
-                </div>
-              </Grid>
-
-              <Grid item md={12} className={css.step}>
-                <div className={css.stepContent}>
-                  <GradientStep stepNumber={4} />
-                  <Typography className={css.stepText}>Executes transaction intent</Typography>
-                </div>
-              </Grid>
-
-              <Grid item md={12} className={css.step}>
-                <div className={css.stepContent}>
-                  <GradientStep stepNumber={5} />
-                  <Typography className={css.stepText}>
-                    Debits user by providing a validity proof of executed intent
-                  </Typography>
-                </div>
-              </Grid>
-
-              <Grid item md={12} className={css.step}>
-                <div className={css.stepContent}>
-                  <GradientStep stepNumber={6} />
-                  <Typography className={css.stepText}>Returns liquidity</Typography>
-                </div>
-              </Grid>
+              {userSteps.map(({ step, text }) => (
+                <Grid item md={12} className={css.step}>
+                  <div className={css.stepContent}>
+                    <GradientStep stepNumber={step} />
+                    <Typography className={css.stepText}>{text}</Typography>
+                  </div>
+                </Grid>
+              ))}
             </Grid>
           </Grid>
 
