@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { type ComponentType, useState } from 'react'
 import { Accordion, AccordionDetails, AccordionSummary, Button, ButtonBase } from '@mui/material'
 import NextLink from 'next/link'
 import clsx from 'clsx'
@@ -15,7 +15,7 @@ import css from './styles.module.css'
 import NavigationButton from '@/components/common/Header/NavigationButton'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 
-const Header = ({ customClass }: { customClass?: string }) => {
+const Header = ({ customClass, AlternativeLogo }: { customClass?: string; AlternativeLogo?: ComponentType }) => {
   const [isBurgerOpen, setIsBurgerOpen] = useState<boolean>(false)
   const [subMenuOpen, setSubMenuOpen] = useState<null | NavCategories>(null)
   const isMediumScreen = useIsMediumScreen()
@@ -34,9 +34,7 @@ const Header = ({ customClass }: { customClass?: string }) => {
   return (
     <div className={clsx(css.header, isBurgerOpen && css.visible, customClass)}>
       <NextLink href={AppRoutes.index}>
-        <div className={css.logo}>
-          <Logo />
-        </div>
+        <div className={css.logo}>{!!AlternativeLogo ? <AlternativeLogo /> : <Logo />}</div>
       </NextLink>
 
       <ButtonBase className={css.burger} onClick={toggleMobileNavigation} aria-label="Toggle navigation" disableRipple>

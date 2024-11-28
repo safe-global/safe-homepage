@@ -24,7 +24,6 @@ const Architecture = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1)
   }
 
-  console.log('activeStep', activeStep, (activeStep - 1) * 400)
   return (
     <div className={css.anchor}>
       <div className={css.arc} />
