@@ -41,6 +41,48 @@ const userSteps: Array<{ step: number; text: string; icon?: { src: string; alt: 
   },
 ]
 
+const ProcessorFeatures = () => (
+  <>
+    <img src="/images/Safenet/Architecture/processor.png" alt="Safe processor" className={css.blockImage} />
+    <Typography className={css.blockTitle}>Processors</Typography>
+    <ul>
+      <li>Connect to user accounts and orchestrate optimal execution of transaction intents.</li>
+      <li>Provide execution guarantees like security checks and custom policies.</li>
+      <li>
+        Execute transactions instantly by locking user assets (resource-lock) and providing liquidity optimistically.
+      </li>
+    </ul>
+  </>
+)
+
+const MidItemHeader = () => (
+  <div className={css.midItemHeader}>
+    <Typography className={css.midItemTitle}>USER</Typography>
+    <Typography className={css.midItemText}>Initiates transaction intent</Typography>
+  </div>
+)
+
+const NetworkFeatures = () => (
+  <>
+    <img src="/images/Safenet/Architecture/mesh.png" alt="Safe net" className={css.blockImage} />
+
+    <Typography className={css.blockTitle}>Liquid Network</Typography>
+
+    <ul>
+      <li>Provides Safenet Processors with liquidity to execute transaction intents</li>
+      <li>Aggregates existing DeFi primitives</li>
+    </ul>
+
+    <div className={css.chipsContainer}>
+      <GradientChip caption="Bridges" />
+      <GradientChip caption="Clearing Layer" />
+      <GradientChip caption="Proprietary Liquidity (Solver)" />
+      <GradientChip caption="AMM" />
+      <GradientChip caption="Lending Markets" />
+    </div>
+  </>
+)
+
 const GradientStep = ({ stepNumber }: { stepNumber: number }) => {
   return <div className={css.stepCircle}>{stepNumber}</div>
 }
@@ -78,23 +120,11 @@ const Architecture = () => {
         <div className={css.stepperWrapper}>
           <Stepper activeStep={activeStep} style={{ transform: `translateX(${TRANSLATION_VALUES[activeStep]}px)` }}>
             <Step className={css.borderedDescription}>
-              <img src="/images/Safenet/Architecture/processor.png" alt="Safe processor" className={css.blockImage} />
-              <Typography className={css.blockTitle}>Processors</Typography>
-              <ul>
-                <li>Connect to user accounts and orchestrate optimal execution of transaction intents.</li>
-                <li>Provide execution guarantees like security checks and custom policies.</li>
-                <li>
-                  Execute transactions instantly by locking user assets (resource-lock) and providing liquidity
-                  optimistically.
-                </li>
-              </ul>
+              <ProcessorFeatures />
             </Step>
 
             <Step sx={{ marginTop: '-208px' }}>
-              <div className={css.midItemHeader}>
-                <Typography className={css.midItemTitle}>USER</Typography>
-                <Typography className={css.midItemText}>Initiates transaction intent</Typography>
-              </div>
+              <MidItemHeader />
 
               <Grid container className={css.midItemContainer}>
                 {userSteps.map(({ step, text, icon }) => (
@@ -111,20 +141,7 @@ const Architecture = () => {
             </Step>
 
             <Step className={css.borderedDescription}>
-              <img src="/images/Safenet/Architecture/mesh.png" alt="Safe net" className={css.blockImage} />
-              <Typography className={css.blockTitle}>Liquid Network</Typography>
-              <ul>
-                <li>Provides Safenet Processors with liquidity to execute transaction intents</li>
-                <li>Aggregates existing DeFi primitives</li>
-              </ul>
-
-              <div className={css.chipsContainer}>
-                <GradientChip caption="Bridges" />
-                <GradientChip caption="Clearing Layer" />
-                <GradientChip caption="Proprietary Liquidity (Solver)" />
-                <GradientChip caption="AMM" />
-                <GradientChip caption="Lending Markets" />
-              </div>
+              <NetworkFeatures />
             </Step>
           </Stepper>
           <MobileStepper
@@ -150,24 +167,11 @@ const Architecture = () => {
           <img src="/images/Safenet/Architecture/shapes-md.png" alt="Block shapes" className={css.shapes} />
 
           <Grid item md={4} className={css.blockItem}>
-            <img src="/images/Safenet/Architecture/processor.png" alt="Safe processor" className={css.blockImage} />
-            <Typography className={css.blockTitle}>Processors</Typography>
-
-            <ul>
-              <li>Connect to user accounts and orchestrate optimal execution of transaction intents.</li>
-              <li>Provide execution guarantees like security checks and custom policies.</li>
-              <li>
-                Execute transactions instantly by locking user assets (resource-lock) and providing liquidity
-                optimistically.
-              </li>
-            </ul>
+            <ProcessorFeatures />
           </Grid>
 
           <Grid item md={4} className={css.midItem}>
-            <div className={css.midItemHeader}>
-              <Typography className={css.midItemTitle}>USER</Typography>
-              <Typography className={css.midItemText}>Initiates transaction intent</Typography>
-            </div>
+            <MidItemHeader />
 
             <Grid container className={css.midItemContainer}>
               {userSteps.map(({ step, text, icon }) => (
@@ -184,20 +188,7 @@ const Architecture = () => {
           </Grid>
 
           <Grid item md={4} className={css.blockItem}>
-            <img src="/images/Safenet/Architecture/mesh.png" alt="Safe net" className={css.blockImage} />
-            <Typography className={css.blockTitle}>Liquid Network</Typography>
-            <ul>
-              <li>Provides Safenet Processors with liquidity to execute transaction intents</li>
-              <li>Aggregates existing DeFi primitives</li>
-            </ul>
-
-            <div className={css.chipsContainer}>
-              <GradientChip caption="Bridges" />
-              <GradientChip caption="Clearing Layer" />
-              <GradientChip caption="Proprietary Liquidity (Solver)" />
-              <GradientChip caption="AMM" />
-              <GradientChip caption="Lending Markets" />
-            </div>
+            <NetworkFeatures />
           </Grid>
         </Grid>
 
