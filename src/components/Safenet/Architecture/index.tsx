@@ -1,12 +1,12 @@
+import { type ComponentType, useState } from 'react'
 import { Button, Container, Grid, MobileStepper, Step, Stepper, Typography } from '@mui/material'
-import css from './styles.module.css'
 import GradientChip from '@/components/Safenet/GradientChip'
 import LinkButton from '@/components/common/LinkButton'
 import BackButton from '@/public/images/Safenet/Architecture/back-button.svg'
 import NextButton from '@/public/images/Safenet/Architecture/next-button.svg'
-import { useState } from 'react'
+import css from './styles.module.css'
 
-const userSteps: Array<{ step: number; text: string; endAdorment?: any }> = [
+const userSteps: Array<{ step: number; text: string; icon?: { src: string; alt: string } }> = [
   {
     step: 1,
     text: 'Checks policies and issues resource-lock',
@@ -14,10 +14,18 @@ const userSteps: Array<{ step: number; text: string; endAdorment?: any }> = [
   {
     step: 2,
     text: 'Gets liquidity',
+    icon: {
+      src: '/images/Safenet/Architecture/arrow-next-gradient.svg',
+      alt: 'Arrow next gradient',
+    },
   },
   {
     step: 3,
     text: 'Executes transaction intent',
+    icon: {
+      src: '/images/Safenet/Architecture/check-gradient.svg',
+      alt: 'Checkmark gradient',
+    },
   },
   {
     step: 4,
@@ -26,6 +34,10 @@ const userSteps: Array<{ step: number; text: string; endAdorment?: any }> = [
   {
     step: 5,
     text: 'Returns liquidity',
+    icon: {
+      src: '/images/Safenet/Architecture/arrow-back-gradient.svg',
+      alt: 'Arrow back gradient',
+    },
   },
 ]
 
@@ -65,7 +77,7 @@ const Architecture = () => {
         {/* Mobile Stepper */}
         <div className={css.stepperWrapper}>
           <Stepper activeStep={activeStep} style={{ transform: `translateX(${TRANSLATION_VALUES[activeStep]}px)` }}>
-            <Step>
+            <Step className={css.borderedDescription}>
               <img src="/images/Safenet/Architecture/processor.png" alt="Safe processor" className={css.blockImage} />
               <Typography className={css.blockTitle}>Processors</Typography>
               <ul>
@@ -78,57 +90,27 @@ const Architecture = () => {
               </ul>
             </Step>
 
-            <Step>
-              <Typography className={css.midItemTitle}>USER</Typography>
+            <Step sx={{ marginTop: '-208px' }}>
+              <div className={css.midItemHeader}>
+                <Typography className={css.midItemTitle}>USER</Typography>
+                <Typography className={css.midItemText}>Initiates transaction intent</Typography>
+              </div>
 
               <Grid container className={css.midItemContainer}>
-                <Grid item md={12} className={css.step}>
-                  <div className={css.stepContent}>
-                    <GradientStep stepNumber={1} />
-                    <Typography className={css.stepText}>User signs transaction intent</Typography>
-                  </div>
-                </Grid>
+                {userSteps.map(({ step, text, icon }) => (
+                  <Grid item md={12} className={css.step} key={text}>
+                    <div className={css.stepContent}>
+                      <GradientStep stepNumber={step} />
+                      <Typography className={css.stepText}>{text}</Typography>
+                    </div>
 
-                <Grid item md={12} className={css.step}>
-                  <div className={css.stepContent}>
-                    <GradientStep stepNumber={2} />
-                    <Typography className={css.stepText}>Checks policies and issues resource-lock</Typography>
-                  </div>
-                </Grid>
-
-                <Grid item md={12} className={css.step}>
-                  <div className={css.stepContent}>
-                    <GradientStep stepNumber={3} />
-                    <Typography className={css.stepText}>Provides liquidity</Typography>
-                  </div>
-                </Grid>
-
-                <Grid item md={12} className={css.step}>
-                  <div className={css.stepContent}>
-                    <GradientStep stepNumber={4} />
-                    <Typography className={css.stepText}>Executes transaction intent</Typography>
-                  </div>
-                </Grid>
-
-                <Grid item md={12} className={css.step}>
-                  <div className={css.stepContent}>
-                    <GradientStep stepNumber={5} />
-                    <Typography className={css.stepText}>
-                      Debits user by providing a validity proof of executed intent
-                    </Typography>
-                  </div>
-                </Grid>
-
-                <Grid item md={12} className={css.step}>
-                  <div className={css.stepContent}>
-                    <GradientStep stepNumber={6} />
-                    <Typography className={css.stepText}>Returns liquidity</Typography>
-                  </div>
-                </Grid>
+                    {icon ? <img src={icon.src} alt={icon.alt} /> : null}
+                  </Grid>
+                ))}
               </Grid>
             </Step>
 
-            <Step>
+            <Step className={css.borderedDescription}>
               <img src="/images/Safenet/Architecture/mesh.png" alt="Safe net" className={css.blockImage} />
               <Typography className={css.blockTitle}>Liquid Network</Typography>
               <ul>
@@ -188,12 +170,14 @@ const Architecture = () => {
             </div>
 
             <Grid container className={css.midItemContainer}>
-              {userSteps.map(({ step, text }) => (
-                <Grid item md={12} className={css.step}>
+              {userSteps.map(({ step, text, icon }) => (
+                <Grid item md={12} className={css.step} key={text}>
                   <div className={css.stepContent}>
                     <GradientStep stepNumber={step} />
                     <Typography className={css.stepText}>{text}</Typography>
                   </div>
+
+                  {icon ? <img src={icon.src} alt={icon.alt} /> : null}
                 </Grid>
               ))}
             </Grid>
