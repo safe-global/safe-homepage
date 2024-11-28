@@ -1,4 +1,4 @@
-import { type ComponentType, useState } from 'react'
+import { useState } from 'react'
 import { Button, Container, Grid, MobileStepper, Step, Stepper, Typography } from '@mui/material'
 import GradientChip from '@/components/Safenet/GradientChip'
 import LinkButton from '@/components/common/LinkButton'

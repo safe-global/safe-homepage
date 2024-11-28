@@ -29,11 +29,6 @@
   font-style: italic;
 }
 
-.gradientButton {
-  border-radius: 12px;
-  background: radial-gradient(129.11% 259.78% at 103.1% -21.2%, #ff5f00 0%, #ffd200 50%, #12ff80 100%);
-}
-
 .buttonWrapper {
   margin-top: 100px;
   display: flex;

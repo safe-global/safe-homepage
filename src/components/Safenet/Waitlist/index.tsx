@@ -1,6 +1,9 @@
-import { Button, Container, IconButton, Typography } from '@mui/material'
+import { Container, IconButton, Typography } from '@mui/material'
+import NextLink from 'next/link'
+import LinkButton from '@/components/common/LinkButton'
 import XGradient from '@/public/images/Safenet/x-gradient.svg'
 import TelegramGradient from '@/public/images/Safenet/telegram-gradient.svg'
+import { SAFENET_TELEGRAM_LINK, SAFENET_WAITING_LIST_LINK, TWITTER_LINK } from '@/config/constants'
 import css from './styles.module.css'
 
 const Waitlist = () => (
@@ -17,24 +20,17 @@ const Waitlist = () => (
       </Typography>
 
       <div className={css.buttonWrapper}>
-        <IconButton href="https://x.com/safe" target="_blank" rel="noreferrer">
+        <IconButton href={TWITTER_LINK} target="_blank" rel="noreferrer">
           <XGradient />
         </IconButton>
 
-        <IconButton href="https://dub.sh/safealpha" target="_blank" rel="noreferrer">
+        <IconButton href={SAFENET_TELEGRAM_LINK} target="_blank" rel="noreferrer">
           <TelegramGradient />
         </IconButton>
 
-        <Button
-          variant="contained"
-          size="large"
-          href="https://dub.sh/safealpha"
-          target="_blank"
-          rel="noreferrer"
-          className={css.gradientButton}
-        >
-          Join Telegram group
-        </Button>
+        <NextLink href={SAFENET_WAITING_LIST_LINK} target="_blank">
+          <LinkButton>Join Waitlist</LinkButton>
+        </NextLink>
       </div>
     </Container>
   </div>
