@@ -1,11 +1,10 @@
 import { Button, Container, Typography } from '@mui/material'
 import LinkButton from '@/components/common/LinkButton'
-import SafenetLogo from '@/public/images/Safenet/Safenet-logo.svg'
+import SafenetLogoGradient from '@/public/images/Safenet/Safenet-logo-gradient.svg'
 import css from './styles.module.css'
 
 const title = "Moving the World's GDP onchain"
-const text =
-  'Powered by Safe, Processor and Liquidity Network enables DeFi users to transact anywhere, offering unprecedented speed, guaranteed execution and security.'
+const text = 'Single unified balance. Instant cross-chain transactions. Execution guarantees. On any network.'
 
 const Hero = () => (
   <div className={css.anchor}>
@@ -14,13 +13,13 @@ const Hero = () => (
 
     <Container className={css.container}>
       <video autoPlay muted playsInline loop className={css.video}>
-        <source src="/videos/Safenet/Logo.webm" type="video/webm" />
+        <source src="/videos/Safenet/Globe.webm" type="video/webm" />
       </video>
 
       <div className={css.contentWrapper}>
         <div className={css.captionWrapper}>
           Introducing
-          <SafenetLogo className={css.logo} />
+          <SafenetLogoGradient className={css.logo} />
         </div>
 
         <Typography variant="h2" className={css.title}>
@@ -32,11 +31,13 @@ const Hero = () => (
 
       <div className={css.buttonsWrapper}>
         <Button variant="contained" size="large" className={css.gradientButton}>
-          Join waitinglist
+          Get updates
         </Button>
 
-        <LinkButton>Our vision</LinkButton>
+        <LinkButton>Join Waitinglist</LinkButton>
       </div>
+
+      <div className={css.scroll} />
     </Container>
   </div>
 )

@@ -4,7 +4,7 @@
 }
 
 .container {
-  margin-top: 650px;
+  margin-top: 350px;
 
   position: relative;
   display: flex;
@@ -133,6 +133,10 @@
 }
 
 @media (min-width: 1200px) {
+  .container {
+    margin-top: 650px;
+  }
+
   .title {
     font-size: 60px;
     line-height: 64px;

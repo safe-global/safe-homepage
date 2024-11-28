@@ -59,7 +59,7 @@ const CrossChain = () => (
 
     <Container className={css.container}>
       <div className={css.contentWrapper}>
-        <GradientChip caption="Chain Abstraction" />
+        <GradientChip caption="Cross-chain accounts" />
 
         <Typography className={css.title}>
           Access your assets <br />

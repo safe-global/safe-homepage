@@ -13,6 +13,10 @@
   overflow: hidden;
 }
 
+.video {
+  margin-top: -126px;
+}
+
 .backgroundArc {
   background-repeat: no-repeat;
   overflow: auto;
@@ -28,14 +32,14 @@
 
 .upperArc {
   background-image: url('/images/Safenet/upper-arc.png');
-  background-position: center top 316px;
+  background-position: center top 176px;
 }
 
 .lowerArc {
   background-image: url('/images/Safenet/lower-arc.png');
   background-position: center;
 
-  bottom: -600px;
+  bottom: -350px;
 }
 
 .video {
@@ -47,6 +51,7 @@
   flex-direction: column;
   align-items: center;
   gap: 24px;
+  margin-top: -40px;
 }
 
 .captionWrapper {
@@ -54,6 +59,8 @@
   font-weight: 400;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   gap: 16px;
 }
 
@@ -88,6 +95,21 @@
   background: radial-gradient(129.11% 259.78% at 103.1% -21.2%, #ff5f00 0%, #ffd200 50%, #12ff80 100%);
 }
 
+.scroll {
+  margin-top: 48px;
+  animation: bounce 3s infinite;
+}
+
+.scroll::after {
+  content: '';
+  display: block;
+  background-image: url('/images/Safenet/double-arrow-down-gradient.svg');
+  background-repeat: repeat;
+  background-position: center;
+  width: 26px;
+  height: 26px;
+}
+
 @media (min-width: 600px) {
   .container {
     margin-top: -214px;
@@ -95,6 +117,15 @@
 
   .video {
     width: 791px;
+    margin-top: -230px;
+  }
+
+  .lowerArc {
+    bottom: -404px;
+  }
+
+  .contentWrapper {
+    margin-top: -60px;
   }
 
   .title {
@@ -105,5 +136,20 @@
   .buttonsWrapper {
     flex-direction: row;
     gap: 54px;
+  }
+}
+
+@keyframes bounce {
+  from,
+  to {
+    transform: translateY(0);
+  }
+
+  10% {
+    transform: translateY(-10px);
+  }
+
+  30% {
+    transform: translateY(0);
   }
 }
