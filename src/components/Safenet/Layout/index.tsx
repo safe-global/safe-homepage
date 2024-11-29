@@ -6,7 +6,7 @@ import css from './styles.module.css'
 
 const SafenetLayout = ({ children }: { children: ReactElement }): ReactElement => (
   <div className={css.container}>
-    <Header customClass={css.transparentHeader} AlternativeLogo={SafenetLogo} />
+    <Header AlternativeLogo={SafenetLogo} />
 
     {children}
 

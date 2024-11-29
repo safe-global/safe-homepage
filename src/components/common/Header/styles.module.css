@@ -177,7 +177,6 @@
 
   .navButton,
   .navLink {
-    color: var(--mui-palette-primary-light);
     padding: 24px 0;
     font-size: 16px;
     line-height: 24px;
