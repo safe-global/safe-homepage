@@ -22,6 +22,7 @@ const Hero = () => (
     <Container className={css.container}>
       <video autoPlay muted playsInline loop className={css.video}>
         <source src="/videos/Safenet/Globe.webm" type="video/webm" />
+        <source src="/videos/Safenet/Globe.mp4" type="video/mp4" />
       </video>
 
       <div className={css.contentWrapper}>
