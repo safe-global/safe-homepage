@@ -139,6 +139,12 @@
   }
 }
 
+@media (min-width: 1630px) {
+  .contentWrapper {
+    gap: 40px;
+  }
+}
+
 @keyframes bounce {
   from,
   to {

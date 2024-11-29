@@ -1,6 +1,7 @@
 import { Button, Container, Grid, IconButton, Typography } from '@mui/material'
 import GradientChip from '@/components/Safenet/GradientChip'
 import { SAFENET_TELEGRAM_LINK } from '@/config/constants'
+import TimelineIcon from '@/public/images/Safenet/timeline.svg'
 import TelegramGradient from '@/public/images/Safenet/telegram-gradient.svg'
 import css from './styles.module.css'
 
@@ -36,7 +37,7 @@ const Roadmap = () => (
       <Typography>Builder mode on.</Typography>
     </div>
 
-    <img src="/images/Safenet/timeline.png" alt="Safenet timeline" width="100%" className={css.timelineImage} />
+    <TimelineIcon className={css.timelineImage} />
 
     <Grid container className={css.gridContainer}>
       {items.map(({ title, features }, index) => (

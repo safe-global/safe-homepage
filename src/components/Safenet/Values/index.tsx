@@ -73,7 +73,7 @@ const Values = () => (
       </div>
 
       <div className={css.blocksWrapper}>
-        <div className={css.blocks} />
+        <img src="/images/Safenet/Values/blocks.png" alt="Blocks background" className={css.blocks} />
         <img src="/images/Safenet/Values/processor.png" alt="Processor image" className={css.processor} />
         <img src="/images/Safenet/Values/cross.png" alt="Cross image" className={css.cross} />
 

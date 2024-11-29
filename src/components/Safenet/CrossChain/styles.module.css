@@ -155,10 +155,6 @@
     width: 100%;
     height: 366px;
   }
-
-  .blockItem {
-    /* height: 300px; */
-  }
 }
 
 @media (min-width: 1630px) {

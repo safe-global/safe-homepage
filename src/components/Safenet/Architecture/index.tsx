@@ -15,8 +15,8 @@ const userSteps: Array<{ step: number; text: string; icon?: { src: string; alt: 
     step: 2,
     text: 'Gets liquidity',
     icon: {
-      src: '/images/Safenet/Architecture/arrow-next-gradient.svg',
-      alt: 'Arrow next gradient',
+      src: '/images/Safenet/Architecture/arrow-back-gradient.svg',
+      alt: 'Arrow back gradient',
     },
   },
   {
@@ -35,8 +35,8 @@ const userSteps: Array<{ step: number; text: string; icon?: { src: string; alt: 
     step: 5,
     text: 'Returns liquidity',
     icon: {
-      src: '/images/Safenet/Architecture/arrow-back-gradient.svg',
-      alt: 'Arrow back gradient',
+      src: '/images/Safenet/Architecture/arrow-next-gradient.svg',
+      alt: 'Arrow next gradient',
     },
   },
 ]
