@@ -17,8 +17,8 @@
 .title {
   text-align: center;
 
-  font-size: 40px;
-  line-height: 44px;
+  font-size: 56px;
+  line-height: 60px;
 }
 
 .titleGradient {
@@ -30,7 +30,7 @@
 }
 
 .buttonWrapper {
-  margin-top: 100px;
+  margin-top: 150px;
   display: flex;
   align-items: center;
   justify-content: center;

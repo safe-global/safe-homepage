@@ -39,7 +39,7 @@
   background-image: url('/images/Safenet/lower-arc.png');
   background-position: center;
 
-  bottom: -450px;
+  bottom: -420px;
 }
 
 .video {
@@ -86,7 +86,6 @@
 .buttonsWrapper {
   margin-top: 48px;
   display: flex;
-  flex-direction: column;
   gap: 24px;
 }
 
@@ -134,7 +133,6 @@
   }
 
   .buttonsWrapper {
-    flex-direction: row;
     gap: 54px;
   }
 }
