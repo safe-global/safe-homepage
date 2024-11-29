@@ -6,7 +6,13 @@ import SafenetLogoGradient from '@/public/images/Safenet/Safenet-logo-gradient.s
 import css from './styles.module.css'
 
 const title = "Moving the World's GDP onchain"
-const text = 'Single unified balance. Instant cross-chain transactions. Execution guarantees. On any network.'
+const text = (
+  <>
+    Single unified balance. Instant cross-chain transactions.
+    <br />
+    Execution guarantees. On any network.
+  </>
+)
 
 const Hero = () => (
   <div className={css.anchor}>

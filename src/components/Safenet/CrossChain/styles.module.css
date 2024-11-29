@@ -151,26 +151,19 @@
     margin-top: 180px;
     background-image: url('/images/Safenet/CrossChain/blocks.png');
     background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
+    background-size: contain;
+    max-width: 1170px;
     height: 366px;
-  }
-}
-
-@media (min-width: 1630px) {
-  .blocksWrapper {
-    background-size: cover;
-    height: 494px;
   }
 
   .blockItem {
-    --line-height: 28px;
-    height: 494px;
-    justify-content: center;
-    gap: 32px;
+    width: 366px;
   }
 
   .blockText {
+    font-size: 18px;
+    --line-height: 28px;
+    line-height: var(--line-height);
     height: calc(2 * var(--line-height));
   }
 }

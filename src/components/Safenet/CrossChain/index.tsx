@@ -81,7 +81,7 @@ const CrossChain = () => (
       </div>
 
       <div className={css.blocksWrapper}>
-        <Grid container justifyContent="space-between">
+        <Grid container className={css.gridContainer}>
           {items.map((item, index) => (
             <Grid item md={4} className={css.blockItem} key={index}>
               {item.image ? <img src={item.image.src} alt={item.image.alt} className={css.blockImage} /> : null}
