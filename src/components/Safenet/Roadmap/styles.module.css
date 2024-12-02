@@ -1,0 +1,165 @@
+.container {
+  margin-top: 300px;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.title {
+  max-width: 382px;
+  text-transform: uppercase;
+  text-align: center;
+
+  font-size: 40px;
+  line-height: 44px;
+}
+
+.titleGradient {
+  background: radial-gradient(129.11% 259.78% at 103.1% -21.2%, #ff5f00 0%, #ffd200 50%, #12ff80 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+}
+
+.gradientButton {
+  border-radius: 12px;
+  background: radial-gradient(129.11% 259.78% at 103.1% -21.2%, #ff5f00 0%, #ffd200 50%, #12ff80 100%);
+}
+
+.gridContainer {
+  margin-top: 80px;
+  justify-content: center;
+  gap: 80px;
+}
+
+.blockItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.mobileTag {
+  background: blue;
+  border-radius: 10px;
+  white-space: nowrap;
+  text-align: center;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  padding: 12px 54px;
+  color: #033f54;
+}
+
+.mobileTag1 {
+  background-color: #12ff80;
+}
+
+.mobileTag2 {
+  background-color: #ffd200;
+}
+
+.mobileTag3 {
+  background-color: #fe9201;
+}
+
+.blockTitle {
+  font-size: 32px;
+  line-height: 36px;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  background: radial-gradient(129.11% 259.78% at 103.1% -21.2%, #ff5f00 0%, #ffd200 50%, #12ff80 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.blockText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  align-items: center;
+  text-align: center;
+}
+
+.buttonWrapper {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 24px;
+  width: 214px;
+}
+
+.hook,
+.timelineImage {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .hook {
+    display: block;
+    position: absolute;
+    left: -248px;
+    top: 16px;
+  }
+
+  .title {
+    max-width: 1042px;
+    font-size: 56px;
+    line-height: 60px;
+  }
+
+  .title br {
+    display: none;
+  }
+
+  .timelineImage {
+    display: block;
+    width: 100%;
+    margin-top: 108px;
+  }
+
+  .gridContainer {
+    margin-top: 40px;
+  }
+
+  .mobileTag {
+    display: none;
+  }
+
+  .buttonWrapper {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hook {
+    left: -96px;
+  }
+
+  .gridContainer {
+    padding-left: 30px;
+    padding-right: 30px;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 1630px) {
+  .hook {
+    left: 118px;
+  }
+}

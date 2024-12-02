@@ -45,6 +45,7 @@ export enum NavCategories {
   Community = 'Community',
   Resources = 'Resources',
   SafePass = 'Safe <u><i>PASS</i></u>',
+  Safenet = 'Safenet',
 }
 
 export const navCategories: NavCategory[] = [
@@ -78,6 +79,10 @@ export const navCategories: NavCategory[] = [
   {
     category: NavCategories.Wallet,
     href: AppRoutes.wallet,
+  },
+  {
+    category: NavCategories.Safenet,
+    href: AppRoutes.safenet,
   },
   {
     category: NavCategories.Ecosystem,
@@ -155,9 +160,5 @@ export const navCategories: NavCategory[] = [
         icon: <HelpCenterIcon />,
       },
     ],
-  },
-  {
-    category: NavCategories.SafePass,
-    href: AppRoutes.pass,
   },
 ]
