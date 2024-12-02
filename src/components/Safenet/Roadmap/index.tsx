@@ -40,9 +40,9 @@ const Roadmap = () => (
     <TimelineIcon className={css.timelineImage} />
 
     <Grid container className={css.gridContainer}>
-      {items.map(({ title, features }, index) => (
+      {items.map(({ title, tag, features }, index) => (
         <Grid item xs={6} md={3} className={css.blockItem} key={index}>
-          <div className={`${css.mobileTag} ${css[`mobileTag${index + 1}`]}`}>Q1 2025</div>
+          <div className={`${css.mobileTag} ${css[`mobileTag${index + 1}`]}`}>{tag}</div>
 
           <Typography className={css.blockTitle}>{title}</Typography>
 
