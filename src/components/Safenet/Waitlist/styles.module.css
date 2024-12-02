@@ -27,6 +27,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-style: italic;
+  position: relative;
 }
 
 .buttonWrapper {
@@ -42,7 +43,12 @@
 }
 
 .hook {
-  display: none;
+  display: block;
+  position: absolute;
+  top: -14px;
+  height: 110px;
+  left: -18px;
+  max-width: none;
 }
 
 .chainImage {
@@ -55,9 +61,7 @@
   }
 
   .hook {
-    display: block;
-    position: absolute;
-    right: -488px;
+    height: auto;
     top: -40px;
   }
 
@@ -77,19 +81,9 @@
 }
 
 @media (min-width: 1200px) {
-  .hook {
-    right: -344px;
-  }
-
   .gridContainer {
     padding-left: 30px;
     padding-right: 30px;
     justify-content: space-around;
-  }
-}
-
-@media (min-width: 1630px) {
-  .hook {
-    right: -130px;
   }
 }
