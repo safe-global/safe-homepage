@@ -4,15 +4,6 @@ import { SAFENET_TELEGRAM_LINK, SAFENET_WAITING_LIST_LINK } from '@/config/const
 import SafenetLogoGradient from '@/public/images/Safenet/Safenet-logo-gradient.svg'
 import css from './styles.module.css'
 
-const title = "Moving the World's GDP onchain"
-const text = (
-  <>
-    Single unified balance. Instant cross-chain transactions.
-    <br />
-    Execution guarantees. On any network.
-  </>
-)
-
 const Hero = () => (
   <div className={css.anchor}>
     <div className={`${css.backgroundArc} ${css.upperArc}`} />
@@ -32,10 +23,14 @@ const Hero = () => (
         </div>
 
         <Typography variant="h2" className={css.title}>
-          <>{title}</>
+          Moving the World's GDP onchain
         </Typography>
 
-        <Typography className={css.text}>{text}</Typography>
+        <Typography className={css.text}>
+          Single unified balance. Instant cross-chain transactions.
+          <br />
+          Execution guarantees. On any network.
+        </Typography>
       </div>
 
       <div className={css.buttonsWrapper}>

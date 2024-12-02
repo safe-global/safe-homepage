@@ -87,7 +87,7 @@ const Values = () => (
       </div>
 
       <div className={css.statsContainer}>
-        {stats?.map((item, index) => (
+        {stats.map((item, index) => (
           <div className={css.statsItem} key={index}>
             <p className={css.value}>{item.title}</p>
 

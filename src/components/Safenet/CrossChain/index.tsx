@@ -6,9 +6,6 @@ import type { BaseBlock } from '@/components/Home/types'
 import { AppRoutes } from '@/config/routes'
 import css from './styles.module.css'
 
-const text =
-  'Cross-chain interactions are simplified. Say goodbye to gas free hassles and enjoy a seamless, stress-free experience.'
-
 const items: BaseBlock['items'] = [
   {
     image: {
@@ -70,7 +67,10 @@ const CrossChain = () => (
           <span className={css.titleGradient}>on any network</span>!
         </Typography>
 
-        <Typography className={css.text}>{text}</Typography>
+        <Typography className={css.text}>
+          Cross-chain interactions are simplified. Say goodbye to gas free hassles and enjoy a seamless, stress-free
+          experience.
+        </Typography>
       </div>
 
       <div className={css.blocksStack}>
