@@ -35,6 +35,7 @@ export const PROTOCOL_KIT_LINK = 'https://docs.safe.global/safe-core-aa-sdk/prot
 export const AUTH_KIT_LINK = 'https://docs.safe.global/safe-core-aa-sdk/auth-kit'
 export const RELAY_KIT_LINK = 'https://docs.safe.global/safe-core-aa-sdk/relay-kit'
 export const ONRAMP_KIT_LINK = 'https://docs.safe.global/safe-core-aa-sdk/onramp-kit'
+export const SAFENET_DOCS_LINK = 'https://docs.safe.global/safenet/overview'
 
 export const DOCS_SDK = 'https://docs.safe.global/sdk/overview'
 export const DOCS_INFRASTRUCTURE = 'https://docs.safe.global/core-api/api-overview'

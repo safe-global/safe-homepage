@@ -1,7 +1,9 @@
 import { Container, Grid, Typography } from '@mui/material'
+import NextLink from 'next/link'
 import GradientChip from '@/components/Safenet/GradientChip'
 import LinkButton from '@/components/common/LinkButton'
 import type { BaseBlock } from '@/components/Home/types'
+import { AppRoutes } from '@/config/routes'
 import css from './styles.module.css'
 
 const text =
@@ -53,6 +55,8 @@ const items: BaseBlock['items'] = [
   },
 ]
 
+const BLOG_LINK = `${AppRoutes.blog.index}/introducing-safenet`
+
 const CrossChain = () => (
   <div className={css.anchor}>
     <div className={css.upperArc} />
@@ -94,7 +98,9 @@ const CrossChain = () => (
       </div>
 
       <div className={css.buttonWrapper}>
-        <LinkButton>Safenet Vision</LinkButton>
+        <NextLink href={BLOG_LINK} target="_blank">
+          <LinkButton>Safenet Vision</LinkButton>
+        </NextLink>
       </div>
     </Container>
   </div>

@@ -5,6 +5,7 @@ import LinkButton from '@/components/common/LinkButton'
 import BackButton from '@/public/images/Safenet/Architecture/back-button.svg'
 import NextButton from '@/public/images/Safenet/Architecture/next-button.svg'
 import css from './styles.module.css'
+import { SAFENET_DOCS_LINK } from '@/config/constants'
 
 const userSteps: Array<{ step: number; text: string; icon?: { src: string; alt: string } }> = [
   {
@@ -29,7 +30,7 @@ const userSteps: Array<{ step: number; text: string; icon?: { src: string; alt: 
   },
   {
     step: 4,
-    text: 'Settles on user account with execution proof',
+    text: 'Settles on user Account with execution proof',
   },
   {
     step: 5,
@@ -46,7 +47,7 @@ const ProcessorFeatures = () => (
     <img src="/images/Safenet/Architecture/processor.png" alt="Safe processor" className={css.blockImage} />
     <Typography className={css.blockTitle}>Processors</Typography>
     <ul>
-      <li>Connect to user accounts and orchestrate optimal execution of transaction intents.</li>
+      <li>Connect to user Accounts and orchestrate optimal execution of transaction intents.</li>
       <li>Provide execution guarantees like security checks and custom policies.</li>
       <li>
         Execute transactions instantly by locking user assets (resource-lock) and providing liquidity optimistically.
@@ -110,9 +111,7 @@ const Architecture = () => {
           <GradientChip caption="Safenet Architecture" />
 
           <Typography className={css.title}>
-            <>
-              <span className={css.titleGradient}>Reimagining</span> onchain transactions
-            </>
+            <span className={css.titleGradient}>Reimagining</span> onchain transactions
           </Typography>
         </div>
 
@@ -193,7 +192,9 @@ const Architecture = () => {
         </Grid>
 
         <div className={css.buttonWrapper}>
-          <LinkButton>Read docs</LinkButton>
+          <a href={SAFENET_DOCS_LINK} target="_blank" rel="noreferrer">
+            <LinkButton>Read docs</LinkButton>
+          </a>
         </div>
       </Container>
     </div>

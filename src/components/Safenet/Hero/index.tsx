@@ -1,6 +1,5 @@
 import { Button, Container, Typography } from '@mui/material'
 import LinkButton from '@/components/common/LinkButton'
-import NextLink from 'next/link'
 import { SAFENET_TELEGRAM_LINK, SAFENET_WAITING_LIST_LINK } from '@/config/constants'
 import SafenetLogoGradient from '@/public/images/Safenet/Safenet-logo-gradient.svg'
 import css from './styles.module.css'
@@ -44,9 +43,9 @@ const Hero = () => (
           Get updates
         </Button>
 
-        <NextLink href={SAFENET_WAITING_LIST_LINK} target="_blank">
+        <a href={SAFENET_WAITING_LIST_LINK} target="_blank" rel="noreferrer">
           <LinkButton>Join Waitlist</LinkButton>
-        </NextLink>
+        </a>
       </div>
 
       <div className={css.scroll} />

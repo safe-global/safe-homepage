@@ -1,5 +1,4 @@
 import { Container, IconButton, Typography } from '@mui/material'
-import NextLink from 'next/link'
 import LinkButton from '@/components/common/LinkButton'
 import XGradient from '@/public/images/Safenet/x-gradient.svg'
 import TelegramGradient from '@/public/images/Safenet/telegram-gradient.svg'
@@ -28,9 +27,9 @@ const Waitlist = () => (
           <TelegramGradient />
         </IconButton>
 
-        <NextLink href={SAFENET_WAITING_LIST_LINK} target="_blank">
+        <a href={SAFENET_WAITING_LIST_LINK} target="_blank" rel="noreferrer">
           <LinkButton>Join Waitlist</LinkButton>
-        </NextLink>
+        </a>
       </div>
     </Container>
   </div>
