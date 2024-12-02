@@ -23,7 +23,7 @@ const Hero = () => (
         </div>
 
         <Typography variant="h2" className={css.title}>
-          Moving the World's GDP onchain
+          Moving the World&apos;s GDP onchain
         </Typography>
 
         <Typography className={css.text}>
