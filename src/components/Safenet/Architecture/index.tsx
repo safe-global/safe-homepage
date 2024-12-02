@@ -58,6 +58,8 @@ const ProcessorFeatures = () => (
 
 const MidItemHeader = () => (
   <div className={css.midItemHeader}>
+    <img src="/images/Safenet/Architecture/border-union.png" alt="Block border" className={css.border} />
+
     <Typography className={css.midItemTitle}>USER</Typography>
     <Typography className={css.midItemText}>Initiates transaction intent</Typography>
   </div>

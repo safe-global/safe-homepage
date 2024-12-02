@@ -35,12 +35,10 @@
 }
 
 .title {
-  max-width: 700px;
   text-transform: uppercase;
   text-align: center;
-
-  font-size: 56px;
-  line-height: 60px;
+  font-size: 40px;
+  line-height: 44px;
 }
 
 .titleGradient {
@@ -71,17 +69,25 @@
   margin-bottom: 0px;
 }
 
+.midItemHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+}
+
 .midItemTitle {
   font-size: 24px;
   line-height: 32px;
   font-weight: 400;
 }
 
-/* to remove after ahving the asset*/
-.stepperWrapper .midItemHeader {
-  border: 1px solid var(--mui-palette-primary-main);
-  padding: 24px 16px;
-  border-radius: 20px;
+.stepperWrapper .midItemTitle {
+  padding-top: 22px;
+}
+
+.border {
+  position: absolute;
 }
 
 .midItemContainer {
@@ -207,13 +213,6 @@
   background-color: transparent;
 }
 
-.midItemHeader {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 54px;
-}
-
 .borderedDescription {
   border: 1px solid var(--mui-palette-border-main);
   padding: 88px 16px 24px;
@@ -222,6 +221,12 @@
 }
 
 @media (min-width: 1200px) {
+  .title {
+    max-width: 700px;
+    font-size: 56px;
+    line-height: 60px;
+  }
+
   .stepperWrapper {
     display: none;
   }
@@ -246,6 +251,10 @@
 
   .midItemContainer {
     gap: 19px;
+  }
+
+  .border {
+    display: none;
   }
 
   .blockItem {
