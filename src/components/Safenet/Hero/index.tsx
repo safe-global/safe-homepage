@@ -34,7 +34,13 @@ const Hero = () => (
       </div>
 
       <div className={css.buttonsWrapper}>
-        <Button href={SAFENET_TELEGRAM_LINK} variant="contained" size="large" className={css.gradientButton}>
+        <Button
+          href={SAFENET_TELEGRAM_LINK}
+          target="_blank"
+          variant="contained"
+          size="large"
+          className={css.gradientButton}
+        >
           Get updates
         </Button>
 

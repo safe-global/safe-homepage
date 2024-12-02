@@ -87,7 +87,7 @@ const NetworkFeatures = () => (
 )
 
 const GradientStep = ({ stepNumber }: { stepNumber: number }) => {
-  return <div className={css.stepCircle}>{stepNumber}</div>
+  return <img src={`/images/Safenet/Architecture/step-${stepNumber}.svg`} alt={`Step ${stepNumber}`} />
 }
 
 const STEPS_NUMBER = 3
@@ -124,7 +124,7 @@ const Architecture = () => {
               <ProcessorFeatures />
             </Step>
 
-            <Step sx={{ marginTop: { xs: '-182px', lg: '-208px' } }}>
+            <Step className={css.midItem}>
               <MidItemHeader />
 
               <Grid container className={css.midItemContainer}>
@@ -135,7 +135,7 @@ const Architecture = () => {
                       <Typography className={css.stepText}>{text}</Typography>
                     </div>
 
-                    {icon ? <img src={icon.src} alt={icon.alt} /> : null}
+                    {icon ? <img src={icon.src} alt={icon.alt} className={css.stepIcon} /> : null}
                   </Grid>
                 ))}
               </Grid>

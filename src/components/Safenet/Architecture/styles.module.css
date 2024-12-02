@@ -59,6 +59,10 @@
   font-weight: 400;
 }
 
+.stepperWrapper .midItem {
+  margin-top: -182px;
+}
+
 .blockItem {
   padding: 116px 32px 0px;
 }
@@ -127,6 +131,10 @@
   margin: 0 8px;
 }
 
+.stepIcon {
+  margin-left: 4px;
+}
+
 .stepperWrapper .step {
   border: 1px solid var(--mui-palette-border-main);
 }
@@ -136,35 +144,6 @@
   align-items: center;
   justify-content: center;
   gap: 16px;
-}
-
-.stepCircle {
-  position: relative;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  display: flex;
-  flex-shrink: 0;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  line-height: 28px;
-  font-weight: 400;
-  background: #011d29;
-}
-
-.stepCircle::before {
-  background: radial-gradient(129.11% 259.78% at 103.1% -21.2%, #ff5f00 0%, #ffd200 50%, #12ff80 100%);
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  border-radius: 50%;
-  border: 1px solid transparent;
-
-  z-index: -1;
 }
 
 .chipsContainer {
