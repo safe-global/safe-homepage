@@ -130,6 +130,12 @@ const Architecture = () => {
               <Grid container className={css.midItemContainer}>
                 {userSteps.map(({ step, text, icon }) => (
                   <Grid item md={12} className={css.step} key={text}>
+                    <img
+                      src="/images/Safenet/Architecture/step-highlight-gradient.png"
+                      alt="Step gradient highlight"
+                      className={css.highlight}
+                    />
+
                     <div className={css.stepContent}>
                       <GradientStep stepNumber={step} />
                       <Typography className={css.stepText}>{text}</Typography>
@@ -177,6 +183,12 @@ const Architecture = () => {
             <Grid container className={css.midItemContainer}>
               {userSteps.map(({ step, text, icon }) => (
                 <Grid item md={12} className={css.step} key={text}>
+                  <img
+                    src="/images/Safenet/Architecture/step-highlight-gradient.png"
+                    alt="Step gradient highlight"
+                    className={css.highlight}
+                  />
+
                   <div className={css.stepContent}>
                     <GradientStep stepNumber={step} />
                     <Typography className={css.stepText}>{text}</Typography>

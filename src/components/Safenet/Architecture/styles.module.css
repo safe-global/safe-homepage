@@ -131,6 +131,23 @@
   margin: 0 8px;
 }
 
+.step .highlight {
+  display: none;
+}
+
+.step:nth-of-type(3) {
+  position: relative;
+}
+
+.step:nth-of-type(3) .highlight {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
 .stepIcon {
   margin-left: 4px;
 }
@@ -244,8 +261,9 @@
     margin-top: -157px;
   }
 
-  .step:nth-of-type(3) {
-    border: 2px solid var(--mui-palette-primary-main);
+  .step:nth-of-type(3) .highlight {
+    left: 2px;
+    top: -1px;
   }
 }
 
@@ -261,11 +279,5 @@
 
   .step:nth-of-type(2) {
     margin-top: 3px;
-  }
-
-  .step:nth-of-type(3) {
-    height: 82px;
-    border-radius: 22px;
-    margin: -1px 8px 2px 11px;
   }
 }
