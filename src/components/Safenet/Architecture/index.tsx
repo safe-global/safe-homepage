@@ -124,7 +124,7 @@ const Architecture = () => {
               <ProcessorFeatures />
             </Step>
 
-            <Step sx={{ marginTop: '-208px' }}>
+            <Step sx={{ marginTop: { xs: '-182px', lg: '-208px' } }}>
               <MidItemHeader />
 
               <Grid container className={css.midItemContainer}>
