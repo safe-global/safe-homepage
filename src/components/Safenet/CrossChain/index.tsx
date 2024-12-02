@@ -25,7 +25,7 @@ const items: BaseBlock['items'] = [
   {
     image: {
       src: '/images/Safenet/CrossChain/padlock.png',
-      alt: 'Verifiyed padlock',
+      alt: 'Verified padlock',
     },
     title: (
       <>
