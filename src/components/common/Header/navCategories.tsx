@@ -45,7 +45,7 @@ export enum NavCategories {
   Community = 'Community',
   Resources = 'Resources',
   SafePass = 'Safe <u><i>PASS</i></u>',
-  Safenet = 'Safenet',
+  Safenet = 'Safenet <span>New</span>',
 }
 
 export const navCategories: NavCategory[] = [

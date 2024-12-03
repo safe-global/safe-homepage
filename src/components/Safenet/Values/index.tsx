@@ -102,7 +102,7 @@ const Values = () => (
         </NextLink>
 
         <NextLink href={AppRoutes.ecosystem} target="_blank">
-          <LinkButton>Ecosystem page</LinkButton>
+          <LinkButton>Explore Ecosystem</LinkButton>
         </NextLink>
       </div>
     </Container>

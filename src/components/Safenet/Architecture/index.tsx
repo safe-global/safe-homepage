@@ -30,7 +30,7 @@ const userSteps: Array<{ step: number; text: string; icon?: { src: string; alt: 
   },
   {
     step: 4,
-    text: 'Settles on user Account with execution proof',
+    text: 'Settles on user account with execution proof',
   },
   {
     step: 5,
@@ -47,7 +47,7 @@ const ProcessorFeatures = () => (
     <img src="/images/Safenet/Architecture/processor.png" alt="Safe processor" className={css.blockImage} />
     <Typography className={css.blockTitle}>Processors</Typography>
     <ul>
-      <li>Connect to user Accounts and orchestrate optimal execution of transaction intents.</li>
+      <li>Connect to user accounts and orchestrate optimal execution of transaction intents.</li>
       <li>Provide execution guarantees like security checks and custom policies.</li>
       <li>
         Execute transactions instantly by locking user assets (resource-lock) and providing liquidity optimistically.
