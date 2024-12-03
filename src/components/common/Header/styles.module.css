@@ -87,7 +87,7 @@
   font-weight: 400;
   background-color: var(--mui-palette-primary-main);
   border-radius: 12px;
-  padding: 2px 6px;
+  padding: 2px 6px 0px;
 }
 
 @media (max-width: 899px) {
