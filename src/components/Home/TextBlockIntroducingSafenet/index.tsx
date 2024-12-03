@@ -5,8 +5,8 @@ const TextBlockIntroducingSafenet = (props: TextBlockImageProps) => (
   <Box mt={{ xs: '-30px', md: 'auto' }}>
     <TextBlockImage {...props}>
       <video autoPlay muted playsInline loop width="100%" poster="/images/Safenet/globe-poster.png">
-        <source src="/videos/Safenet/Globe.webm" type="video/webm" />
-        {/* <source src="/videos/Home/Globe.mp4" type="video/mp4" /> */}
+        {/* <source src="/videos/Safenet/Globe.webm" type="video/webm" /> */}
+        <source src="/videos/Home/Globe.mp4" type="video/mp4" />
         <img src="/images/Safenet/globe-poster.png" alt="Safenet globe" />
       </video>
     </TextBlockImage>
