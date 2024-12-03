@@ -11,18 +11,18 @@
     "text": "Own the Internet"
   },
   {
-    "caption": "Ethereum's transition to Smart Accounts",
+    "caption": "Introducing Safenet",
     "variant": "text-image",
-    "title": "<i>Safe</i> envisions a future where every onchain account is a <b>smart account</b>",
+    "title": "<i>Safenet is here to move the world’s GDP onchain</i>",
     "buttons": [
       {
-        "text": "Read our vision & roadmap",
-        "href": "https://safe.global/blog/future-of-safe-vision",
+        "text": "Read our vision",
+        "href": "https://safe.global/blog/introducing-safenet",
         "variant": "link"
       }
     ],
     "mobileVariant": "text-image",
-    "component": "Home/TextBlockImageManifesto"
+    "component": "Home/TextBlockIntroducingSafenet"
   },
   {
     "component": "Home/SafeAtScale",
