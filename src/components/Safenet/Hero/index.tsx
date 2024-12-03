@@ -10,8 +10,27 @@ const Hero = () => (
     <div className={`${css.backgroundArc} ${css.lowerArc}`} />
 
     <Container className={css.container}>
-      <video autoPlay muted playsInline loop className={css.video} poster="/images/Safenet/globe-poster.png">
-        {/* <source src="/videos/Safenet/Globe.webm" type="video/webm" /> */}
+      <video
+        autoPlay
+        muted
+        playsInline
+        loop
+        className={`${css.video} ${css.desktopVideo}`}
+        poster="/images/Safenet/globe-poster.png"
+      >
+        <source src="/videos/Safenet/Globe.webm" type="video/webm" />
+        <source src="/videos/Safenet/Globe.mp4" type="video/mp4" />
+        <img src="/images/Safenet/globe-poster.png" alt="Safenet globe" />
+      </video>
+
+      <video
+        autoPlay
+        muted
+        playsInline
+        loop
+        className={`${css.video} ${css.mobileVideo}`}
+        poster="/images/Safenet/globe-poster.png"
+      >
         <source src="/videos/Safenet/Globe.mp4" type="video/mp4" />
         <img src="/images/Safenet/globe-poster.png" alt="Safenet globe" />
       </video>

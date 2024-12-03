@@ -106,6 +106,14 @@
   height: 26px;
 }
 
+.mobileVideo {
+  display: block;
+}
+
+.desktopVideo {
+  display: none;
+}
+
 @media (min-width: 600px) {
   .container {
     margin-top: -214px;
@@ -114,6 +122,14 @@
   .video {
     width: 791px;
     margin-top: -230px;
+  }
+
+  .mobileVideo {
+    display: none;
+  }
+
+  .desktopVideo {
+    display: block;
   }
 
   .lowerArc {
