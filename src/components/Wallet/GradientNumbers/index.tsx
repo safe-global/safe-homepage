@@ -8,9 +8,9 @@ import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 
 const Stats = ({ title, items }: BaseBlock): ReactElement => {
-  const [, formattedTotalBalanceUsd, , formattedMonthlyActiveUsers] = useSafeStats()
-
+  const { formattedTotalBalanceUsd, formattedMonthlyActiveUsers } = useSafeStats()
   const { annualisedOutgoingTVP } = useSafeDataRoomStats()
+
   const formattedAnnualisedOutgoingTVP = annualisedOutgoingTVP ? '$' + formatValue(annualisedOutgoingTVP) : null
 
   const formattedSafeStats = [formattedTotalBalanceUsd, formattedMonthlyActiveUsers, formattedAnnualisedOutgoingTVP]

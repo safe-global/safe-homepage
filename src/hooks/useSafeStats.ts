@@ -59,7 +59,14 @@ export const fetchMonthlyActiveUsers = async (): Promise<number | null> => {
     .catch((err) => console.error(`Error fetching monthly active users: ${err.message}`))
 }
 
-export const useSafeStats = (): Array<string | null> => {
+type SafeStats = {
+  formattedTotalTransactions: string | null
+  formattedTotalBalanceUsd: string | null
+  formattedTotalSafesDeployed: string | null
+  formattedMonthlyActiveUsers: string | null
+}
+
+export const useSafeStats = (): SafeStats => {
   const { totalTransactions, totalBalanceUsd, totalSafesDeployed, monthlyActiveUsers } = useContext(SafeStatsContext)
 
   const formattedTotalTransactions = totalTransactions ? formatValue(totalTransactions) : null
@@ -67,10 +74,10 @@ export const useSafeStats = (): Array<string | null> => {
   const formattedTotalSafesDeployed = totalSafesDeployed ? formatValue(totalSafesDeployed) : null
   const formattedMonthlyActiveUsers = monthlyActiveUsers ? formatValue(monthlyActiveUsers) : null
 
-  return [
+  return {
     formattedTotalTransactions,
     formattedTotalBalanceUsd,
     formattedTotalSafesDeployed,
     formattedMonthlyActiveUsers,
-  ]
+  }
 }

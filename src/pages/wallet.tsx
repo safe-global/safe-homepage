@@ -10,10 +10,12 @@ const FAQ_CONTENT_TYPE_ID = '1jCIVFDUzFO1okK8b6TTxS'
 const WalletPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (props) => <Wallet {...props} />
 
 export async function getStaticProps() {
-  const faqContent = await client.getEntry<TypeBaseBlockSkeleton>(FAQ_CONTENT_TYPE_ID)
-  const dataRoomStats = await fetchDataRoomStats()
-  const totalBalanceUsd = await fetchTotalBalanceUsd()
-  const monthlyActiveUsers = await fetchMonthlyActiveUsers()
+  const [faqContent, dataRoomStats, totalBalanceUsd, monthlyActiveUsers] = await Promise.all([
+    client.getEntry<TypeBaseBlockSkeleton>(FAQ_CONTENT_TYPE_ID),
+    fetchDataRoomStats(),
+    fetchTotalBalanceUsd(),
+    fetchMonthlyActiveUsers(),
+  ])
 
   return {
     props: {
