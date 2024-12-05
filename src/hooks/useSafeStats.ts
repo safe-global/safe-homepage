@@ -11,9 +11,15 @@ const QUERY_ID_MONTHLY_ACTIVE_USERS = 4151164
 
 export const fetchTotalTransactions = async (): Promise<number | null> => {
   return fetch(duneQueryUrlBuilder(QUERY_ID_TOTAL_TRANSACTIONS, DUNE_API_KEY))
-    .then((res) => res.json())
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error(res.statusText)
+      }
+
+      return res.json()
+    })
     .then((data) => data.result.rows[0].num_txs)
-    .catch(() => null)
+    .catch((err) => console.error(`Error fetching total number of transactions: ${err.message}`))
 }
 
 export const fetchTotalBalanceUsd = async (): Promise<number | null> => {
@@ -29,16 +35,28 @@ export const fetchTotalBalanceUsd = async (): Promise<number | null> => {
 
 export const fetchTotalSafesDeployed = async (): Promise<number | null> => {
   return fetch(duneQueryUrlBuilder(QUERY_ID_TOTAL_SAFES_DEPLOYED, DUNE_API_KEY))
-    .then((res) => res.json())
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error(res.statusText)
+      }
+
+      return res.json()
+    })
     .then((data) => data.result.rows[0].num_safes)
-    .catch(() => null)
+    .catch((err) => console.error(`Error fetching total safes deployed: ${err.message}`))
 }
 
 export const fetchMonthlyActiveUsers = async (): Promise<number | null> => {
   return fetch(duneQueryUrlBuilder(QUERY_ID_MONTHLY_ACTIVE_USERS, DUNE_API_KEY))
-    .then((res) => res.json())
+    .then((res) => {
+      if (!res.ok) {
+        throw new Error(res.statusText)
+      }
+
+      return res.json()
+    })
     .then((data) => data.result.rows[data.result.rows.length - 1].active_users)
-    .catch(() => null)
+    .catch((err) => console.error(`Error fetching monthly active users: ${err.message}`))
 }
 
 export const useSafeStats = (): Array<string | null> => {
