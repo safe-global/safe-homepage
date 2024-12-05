@@ -1,8 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useState } from 'react'
 import type { ReactNode } from 'react'
 import { localItem } from '@/services/Storage/local'
-import { usePathname } from 'next/navigation'
-import { AppRoutes } from '@/config/routes'
 
 const ANALYTICS_PREFERENCE_KEY = 'analyticsPreference'
 const analyticsPreference = localItem<boolean>(ANALYTICS_PREFERENCE_KEY)
@@ -22,7 +20,6 @@ const CookieBannerContext = createContext<{
 })
 
 export const CookieBannerContextProvider = ({ children }: { children: ReactNode }) => {
-  const pathname = usePathname()
   const [isBannerOpen, setIsBannerOpen] = useState(false)
   const [isAnalyticsEnabled, setIsAnalyticsEnabled] = useState(false)
 
@@ -39,12 +36,12 @@ export const CookieBannerContextProvider = ({ children }: { children: ReactNode 
     const preference = analyticsPreference.get()
 
     // Open cookie banner if no preference is set
-    if (preference == null && pathname !== AppRoutes.teaser) {
+    if (preference == null) {
       openBanner()
     } else {
       setIsAnalyticsEnabled(Boolean(preference))
     }
-  }, [openBanner, pathname])
+  }, [openBanner])
 
   const storeIsAnalyticsEnabled = useCallback((preference: boolean) => {
     analyticsPreference.set(preference)
