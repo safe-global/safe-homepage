@@ -60,6 +60,7 @@ const Hero = ({
             </div>
 
             <video ref={videoRef} controls={isPlaying} poster={image?.src} className={css.video}>
+              <source src="/videos/Wallet/wallet-hero-video.webm" type="video/webm" />
               <source src="/videos/Wallet/wallet-hero-video.mp4" type="video/mp4" />
             </video>
           </div>

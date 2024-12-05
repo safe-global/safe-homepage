@@ -1,5 +1,5 @@
 import ParallaxUseCasesElement from '@/components/Core/ParallaxCaseStudies/ParallaxUseCasesElement'
-import ParallaxText, { type ParallaxTextProps } from '@/components/common/ParallaxTextOld'
+import ParallaxText, { type ParallaxTextProps } from '@/components/common/ParallaxText'
 
 const ParallaxCaseStudies = (props: ParallaxTextProps) => {
   return (

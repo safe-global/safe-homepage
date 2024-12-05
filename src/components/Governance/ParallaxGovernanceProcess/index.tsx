@@ -1,5 +1,5 @@
 import ParallaxGovernanceProcessElement from '@/components/Governance/ParallaxGovernanceProcess/ParallaxGovernanceProcessElement'
-import ParallaxText, { type ParallaxTextProps } from '@/components/common/ParallaxTextOld'
+import ParallaxText, { type ParallaxTextProps } from '@/components/common/ParallaxText'
 
 const ParallaxGovernanceProcess = (props: ParallaxTextProps) => {
   return (

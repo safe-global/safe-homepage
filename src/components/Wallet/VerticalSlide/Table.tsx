@@ -39,7 +39,8 @@ const Table = ({ items = [], sectionRef }: { items: BaseBlock['items']; sectionR
 
       const offset = indexToScrollProgress(index) * sectionHeight
 
-      // @ts-ignore
+      // TODO: Remove next line when updating TypeScript to v5.1 https://github.com/microsoft/TypeScript/issues/47441#issuecomment-1627850951
+      // @ts-expect-error
       window.scrollTo({ top: sectionTop + offset, behavior: 'instant' })
     }
   }

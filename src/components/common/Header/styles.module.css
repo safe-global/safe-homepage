@@ -82,6 +82,14 @@
   list-style: none;
 }
 
+.navLink span {
+  color: var(--mui-palette-text-dark);
+  font-weight: 400;
+  background-color: var(--mui-palette-primary-main);
+  border-radius: 12px;
+  padding: 2px 6px 4px;
+}
+
 @media (max-width: 899px) {
   .header {
     border-bottom: 1px solid var(--mui-palette-border-light);
@@ -177,7 +185,6 @@
 
   .navButton,
   .navLink {
-    color: var(--mui-palette-primary-light);
     padding: 24px 0;
     font-size: 16px;
     line-height: 24px;
