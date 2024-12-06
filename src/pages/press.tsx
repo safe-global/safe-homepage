@@ -1,7 +1,7 @@
 import client from '@/lib/contentful'
 import PressRoom, { type PressRoomProps } from '@/components/Pressroom'
 import type { TypePressRoomSkeleton, TypePostSkeleton } from '@/contentful/types'
-import { fetchTotalBalanceUsd } from '@/hooks/useSafeStats'
+import { fetchTotalBalanceUsd } from '@/lib/fetchTotalBalanceUsd'
 import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
 
 const PressroomPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (props) => {

@@ -1,7 +1,9 @@
 import type { InferGetStaticPropsType, NextPage } from 'next'
 import { loadChainsData } from '@/lib/loadChainsData'
 import { Home } from '@/components/Home'
-import { fetchTotalBalanceUsd, fetchTotalSafesDeployed, fetchTotalTransactions } from '@/hooks/useSafeStats'
+import { fetchTotalTransactions } from '@/lib/fetchTotalTransactions'
+import { fetchTotalBalanceUsd } from '@/lib/fetchTotalBalanceUsd'
+import { fetchTotalSafesDeployed } from '@/lib/fetchTotalSafesDeployed'
 
 const IndexPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (props) => {
   return <Home {...props} />

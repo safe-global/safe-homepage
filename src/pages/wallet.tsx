@@ -3,7 +3,8 @@ import client from '@/lib/contentful'
 import { Wallet } from '@/components/Wallet'
 import type { TypeBaseBlockSkeleton } from '@/contentful/types'
 import { fetchDataRoomStats } from '@/hooks/useSafeDataRoomStats'
-import { fetchMonthlyActiveUsers, fetchTotalBalanceUsd } from '@/hooks/useSafeStats'
+import { fetchTotalBalanceUsd } from '@/lib/fetchTotalBalanceUsd'
+import { fetchMonthlyActiveUsers } from '@/lib/fetchMonthlyActiveUsers'
 
 const FAQ_CONTENT_TYPE_ID = '1jCIVFDUzFO1okK8b6TTxS'
 
