@@ -12,7 +12,7 @@ jobs:
     name: Deploy release
     steps:
       - name: Cancel previous runs
-        uses: styfle/cancel-workflow-action@0.8.0
+        uses: styfle/cancel-workflow-action@0.12.1
         with:
           access_token: ${{ github.token }}
 
