@@ -25,7 +25,7 @@ const Content = ({ containerRef, title }: { containerRef: RefObject<HTMLDivEleme
       <Typography align="center" variant="h1">
         {title}
       </Typography>
-      <DotGrid containerRef={containerRef} />
+      <DotGrid containerRef={containerRef} scrollYProgress={scrollYProgress} />
     </motion.div>
   )
 }
