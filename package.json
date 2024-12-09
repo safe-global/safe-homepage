@@ -28,7 +28,7 @@
     "@react-three/fiber": "^8.16.8",
     "@react-three/postprocessing": "^2.16.2",
     "@safe-global/safe-gateway-typescript-sdk": "^3.7.0",
-    "contentful": "^10.6.1",
+    "contentful": "^11.3.0",
     "framer-motion": "^11.0.25",
     "fuse.js": "^6.6.2",
     "isomorphic-dompurify": "^1.0.0",
