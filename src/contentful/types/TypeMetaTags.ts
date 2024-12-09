@@ -7,7 +7,7 @@ export interface TypeMetaTagsFields {
 }
 
 export type TypeMetaTagsSkeleton = EntrySkeletonType<TypeMetaTagsFields, 'metaTags'>
-export type TypeMetaTags<Modifiers extends ChainModifiers, Locales extends LocaleCode> = Entry<
+export type TypeMetaTags<Modifiers extends ChainModifiers, Locales extends LocaleCode = LocaleCode> = Entry<
   TypeMetaTagsSkeleton,
   Modifiers,
   Locales
