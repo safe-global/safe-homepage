@@ -28,7 +28,7 @@
     "@react-three/fiber": "^8.16.8",
     "@react-three/postprocessing": "^2.16.2",
     "@safe-global/safe-gateway-typescript-sdk": "^3.7.0",
-    "contentful": "^10.6.1",
+    "contentful": "^11.3.1",
     "framer-motion": "^11.0.25",
     "fuse.js": "^6.6.2",
     "isomorphic-dompurify": "^1.0.0",
@@ -56,7 +56,7 @@
     "@types/react-dom": "18.0.10",
     "@types/three": "^0.166.0",
     "@typescript-eslint/eslint-plugin": "^5.49.0",
-    "cf-content-types-generator": "^2.12.9",
+    "cf-content-types-generator": "^2.15.5",
     "eslint": "8.32.0",
     "eslint-config-next": "13.1.5",
     "eslint-config-prettier": "^8.6.0",
@@ -66,5 +66,8 @@
     "jest-environment-jsdom": "^29.7.0",
     "prettier": "^2.8.8",
     "typescript": "4.9.4"
+  },
+  "resolutions": {
+    "contentful-resolve-response": "1.9.2"
   }
 }

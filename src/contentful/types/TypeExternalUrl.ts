@@ -7,7 +7,7 @@ export interface TypeExternalUrlFields {
 }
 
 export type TypeExternalUrlSkeleton = EntrySkeletonType<TypeExternalUrlFields, 'externalUrl'>
-export type TypeExternalUrl<Modifiers extends ChainModifiers, Locales extends LocaleCode> = Entry<
+export type TypeExternalUrl<Modifiers extends ChainModifiers, Locales extends LocaleCode = LocaleCode> = Entry<
   TypeExternalUrlSkeleton,
   Modifiers,
   Locales
