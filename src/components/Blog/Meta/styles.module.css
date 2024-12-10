@@ -1,0 +1,19 @@
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+.meta > *:not(:last-of-type)::after {
+  content: '•';
+  color: var(--mui-palette-primary-light);
+  margin-left: 8px;
+}
+
+.category {
+  background: linear-gradient(90deg, var(--mui-palette-info-main) 0%, var(--mui-palette-primary-main) 100%);
+  background-clip: text;
+  color: transparent;
+}
