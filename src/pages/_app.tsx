@@ -6,7 +6,8 @@ import { CssBaseline } from '@mui/material'
 import { CacheProvider } from '@emotion/react'
 import type { EmotionCache } from '@emotion/react'
 import type { AppProps } from 'next/app'
-import type { ReactElement } from 'react'
+import type { ReactElement, ReactNode } from 'react'
+import type { NextPage } from 'next'
 
 import { createEmotionCache } from '@/styles/emotion'
 import { CookieBannerContextProvider } from '@/contexts/CookieBannerContext'
@@ -42,13 +43,21 @@ const InitHooks = () => {
   return null
 }
 
+export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+  getLayout?: (page: ReactElement) => ReactNode
+}
+
 const App = ({
   Component,
   pageProps,
   emotionCache = clientSideEmotionCache,
 }: AppProps & {
+  Component: NextPageWithLayout
   emotionCache?: EmotionCache
 }): ReactElement => {
+  // Use the layout defined at the page level, if available or the default layout
+  const getLayout = Component.getLayout ?? ((page) => <PageLayout>{page}</PageLayout>)
+
   return (
     <CacheProvider value={emotionCache}>
       <CssVarsProvider theme={cssVarsTheme}>
@@ -57,11 +66,7 @@ const App = ({
         <CookieBannerContextProvider>
           <InitHooks />
 
-          <SearchParamsContextProvider>
-            <PageLayout>
-              <Component {...pageProps} />
-            </PageLayout>
-          </SearchParamsContextProvider>
+          <SearchParamsContextProvider>{getLayout(<Component {...pageProps} />)}</SearchParamsContextProvider>
 
           <CookieBanner />
         </CookieBannerContextProvider>

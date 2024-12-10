@@ -1,15 +1,15 @@
-import BlogPost, { type BlogPostEntry } from '@/components/Blog/Post'
+import BlogPost, { type BlogPostProps } from '@/components/Blog/Post'
 import { type TypePostSkeleton } from '@/contentful/types'
 import client from '@/lib/contentful'
-import type { GetStaticProps } from 'next'
+import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
 
-const Page = (props: { blogPost: BlogPostEntry }) => {
+const Page: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (props) => {
   if (!props.blogPost) return null
 
   return <BlogPost {...props} />
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps<BlogPostProps> = async ({ params }) => {
   const slug = params?.slug as string
 
   const content = await client.getEntries<TypePostSkeleton>({
@@ -39,7 +39,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 
 export const getStaticPaths = async () => {
-  const response = await client.getEntries<TypePostSkeleton>({ content_type: 'post' })
+  const response = await client.getEntries<TypePostSkeleton>({ content_type: 'post', limit: 500 })
   const paths = response.items.map((item) => ({
     params: { slug: item.fields.slug },
   }))

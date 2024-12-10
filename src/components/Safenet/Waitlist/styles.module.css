@@ -1,0 +1,89 @@
+.anchor {
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  margin-top: 200px;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: visible;
+}
+
+.title {
+  text-align: center;
+
+  font-size: 56px;
+  line-height: 60px;
+}
+
+.titleGradient {
+  background: radial-gradient(129.11% 259.78% at 103.1% -21.2%, #ff5f00 0%, #ffd200 50%, #12ff80 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+  position: relative;
+}
+
+.buttonWrapper {
+  margin-top: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.hook {
+  display: block;
+  position: absolute;
+  top: -14px;
+  height: 110px;
+  left: -18px;
+  max-width: none;
+}
+
+.chainImage {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .title br {
+    display: none;
+  }
+
+  .hook {
+    height: auto;
+    top: -40px;
+  }
+
+  .chainImage {
+    display: block;
+    position: absolute;
+    right: -56px;
+    bottom: 120px;
+    width: 380px;
+  }
+
+  .title {
+    text-transform: uppercase;
+    font-size: 80px;
+    line-height: 90px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gridContainer {
+    padding-left: 30px;
+    padding-right: 30px;
+    justify-content: space-around;
+  }
+}

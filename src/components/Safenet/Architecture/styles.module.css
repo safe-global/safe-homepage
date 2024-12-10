@@ -1,0 +1,283 @@
+.anchor {
+  position: relative;
+  overflow: visible;
+}
+
+.container {
+  margin-top: 350px;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.arc {
+  background-image: url('/images/Safenet/Architecture/arc-sm.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: auto;
+
+  position: absolute;
+  width: 100%;
+  height: 430px;
+
+  top: -106px;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.title {
+  max-width: 700px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 40px;
+  line-height: 44px;
+}
+
+.titleGradient {
+  background: radial-gradient(129.11% 259.78% at 103.1% -21.2%, #ff5f00 0%, #ffd200 50%, #12ff80 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+}
+
+.midItem,
+.blockItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-weight: 400;
+}
+
+.stepperWrapper .midItem {
+  margin-top: -182px;
+}
+
+.blockItem {
+  padding: 116px 32px 0px;
+}
+
+.blockItem ul {
+  font-size: 18px;
+  line-height: 28px;
+  padding-left: 26px;
+  margin-bottom: 0px;
+}
+
+.midItemHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+}
+
+.midItemTitle {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+.stepperWrapper .midItemTitle {
+  padding-top: 22px;
+}
+
+.border {
+  position: absolute;
+}
+
+.midItemContainer {
+  margin-top: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 27px;
+}
+
+.blockImage {
+  position: absolute;
+  top: -126px;
+}
+
+.blockTitle {
+  text-align: center;
+  font-size: 24px;
+  line-height: 32px;
+  text-transform: uppercase;
+
+  background: radial-gradient(129.11% 259.78% at 103.1% -21.2%, #ff5f00 0%, #ffd200 50%, #12ff80 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.step {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 78px;
+  border-radius: 20px;
+  padding: 0 24px;
+  margin: 0 8px;
+}
+
+.step .highlight {
+  display: none;
+}
+
+.step:nth-of-type(3) {
+  position: relative;
+}
+
+.step:nth-of-type(3) .highlight {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.stepIcon {
+  margin-left: 4px;
+}
+
+.stepperWrapper .step {
+  border: 1px solid var(--mui-palette-border-main);
+}
+
+.stepContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.chipsContainer {
+  padding-left: 24px;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.buttonWrapper {
+  margin-top: 48px;
+}
+
+.gridContainer {
+  display: none;
+}
+
+.stepperWrapper {
+  --stepWidth: 400px;
+  margin-top: 386px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stepperWrapper :global .MuiStepper-root {
+  transition: transform ease-in-out 1s;
+}
+
+.stepperWrapper :global .MuiStep-root {
+  width: var(--stepWidth);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stepperWrapper :global .MuiStepConnector-root .MuiStepConnector-line {
+  display: none;
+}
+
+.mobileStepper {
+  background-color: transparent;
+}
+
+.borderedDescription {
+  border: 1px solid var(--mui-palette-border-main);
+  padding: 88px 16px 24px;
+  border-radius: 20px;
+  height: 500px;
+}
+
+@media (min-width: 1200px) {
+  .title {
+    font-size: 56px;
+    line-height: 60px;
+  }
+
+  .stepperWrapper {
+    display: none;
+  }
+
+  .arc {
+    background-image: url('/images/Safenet/Architecture/arc.png');
+    height: 980px;
+    top: -276px;
+  }
+
+  .gridContainer {
+    display: flex;
+    margin-top: 370px;
+    position: relative;
+  }
+
+  .shapes {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .midItemContainer {
+    gap: 19px;
+  }
+
+  .border {
+    display: none;
+  }
+
+  .blockItem {
+    padding-top: 96px;
+  }
+
+  .midItemHeader {
+    margin-top: -157px;
+  }
+
+  .step:nth-of-type(3) .highlight {
+    left: 2px;
+    top: -1px;
+  }
+}
+
+@media (min-width: 1630px) {
+  .shapes {
+    width: 100%;
+    height: 490px;
+  }
+
+  .step {
+    height: 81px;
+  }
+
+  .step:nth-of-type(2) {
+    margin-top: 3px;
+  }
+}

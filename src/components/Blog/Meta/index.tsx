@@ -1,5 +1,5 @@
 import { Typography } from '@mui/material'
-import type { BlogPostEntry } from '@/components/Blog/Post'
+import type { BlogPostEntry } from '@/config/types'
 import css from './styles.module.css'
 import { formatBlogDate } from '@/components/Blog/utils/formatBlogDate'
 import { calculateReadingTimeInMin } from '@/components/Blog/utils/calculateReadingTime'

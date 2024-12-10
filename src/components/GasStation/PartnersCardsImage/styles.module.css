@@ -34,7 +34,7 @@
 
   .spot1 {
     position: absolute;
-    right: -50px;
+    right: 0px;
     top: -650px;
     z-index: -1;
     width: 1600px;

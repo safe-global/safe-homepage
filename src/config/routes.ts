@@ -4,6 +4,7 @@ export const AppRoutes = {
   trademark: '/trademark',
   token: '/token',
   terms: '/terms',
+  safenet: '/safenet',
   privacy: '/privacy',
   press: '/press',
   pass: '/pass',

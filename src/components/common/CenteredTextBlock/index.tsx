@@ -5,7 +5,7 @@ import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
 
 const CenteredTextBlock = ({ caption, title, text, buttons }: BaseBlock) => (
-  <Container className={`${layoutCss.containerShort} ${css.container}`}>
+  <Container className={`${layoutCss.container} ${css.container}`}>
     <Typography variant="caption">{caption}</Typography>
 
     <div className={css.title}>

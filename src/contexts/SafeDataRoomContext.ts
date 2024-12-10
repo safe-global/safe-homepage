@@ -10,11 +10,17 @@ type SafeDataRoomStats = {
   tvlRobinhoodCEX: number | null
   tvlOKX: number | null
   tvlBinance: number | null
+  tvlLido: number | null
+  tvlUniswap: number | null
+  tvlEigenLayer: number | null
+  tvlAAVE: number | null
   lastUpdated: number | null
   annualSwapFees: number | null
+  annualStakeFees: number | null
+  annualisedOutgoingTVP: number | null
 }
 
-const SafeDataRoomContext = createContext<SafeDataRoomStats>({
+const SafeDataRoomContext = createContext<Partial<SafeDataRoomStats>>({
   tvpToGDPPercentage: null,
   usdcPercentageStored: null,
   cryptoPunksStoredPercentage: null,
@@ -24,8 +30,14 @@ const SafeDataRoomContext = createContext<SafeDataRoomStats>({
   tvlRobinhoodCEX: null,
   tvlOKX: null,
   tvlBinance: null,
+  tvlLido: null,
+  tvlUniswap: null,
+  tvlEigenLayer: null,
+  tvlAAVE: null,
   lastUpdated: null,
   annualSwapFees: null,
+  annualStakeFees: null,
+  annualisedOutgoingTVP: null,
 })
 
 export default SafeDataRoomContext

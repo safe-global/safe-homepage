@@ -1,0 +1,290 @@
+.anchor {
+  position: relative;
+  overflow: visible;
+}
+
+.container {
+  margin-top: 350px;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow-x: hidden;
+}
+
+.upperArc {
+  background-image: url('/images/Safenet/CrossChain/upper-arc.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: auto;
+  background-size: contain;
+
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+
+  top: -400px;
+}
+
+.title {
+  max-width: 1042px;
+  text-transform: uppercase;
+  text-align: center;
+
+  font-size: 56px;
+  line-height: 60px;
+}
+
+.titleGradient {
+  background: radial-gradient(129.11% 259.78% at 103.1% -21.2%, #ff5f00 0%, #ffd200 50%, #12ff80 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+}
+
+.text {
+  max-width: 620px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.blocksWrapper {
+  display: none;
+}
+
+.blocksStack {
+  position: relative;
+  margin-top: 66px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.stack {
+  background-image: url('/images/Safenet/Values/stack.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.processor {
+  position: absolute;
+
+  top: -105px;
+  right: -142px;
+  width: 212px;
+}
+
+.blockItem {
+  border-radius: 20px;
+  color: var(--mui-palette-text-dark);
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 16px;
+  text-align: center;
+
+  height: 224px;
+}
+
+.blockItem * {
+  font-weight: 400;
+}
+
+.blockCaption {
+  border: 2px solid var(--mui-palette-text-dark);
+  border-radius: 20px;
+  text-transform: uppercase;
+  height: 32px;
+  padding: 4px 14px;
+  display: flex;
+  align-items: center;
+}
+
+.blockTitle {
+  text-transform: uppercase;
+  font-size: 32px;
+  line-height: 36px;
+  text-align: left;
+  color: var(--mui-palette-primary-main);
+}
+
+.blockText {
+  color: white;
+}
+
+.buttonWrapper {
+  margin-top: 48px;
+  display: flex;
+  gap: 32px;
+}
+
+.cross {
+  display: none;
+}
+
+.statsContainer {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 92px;
+}
+
+.statsItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.value {
+  margin: 0;
+  font-size: 64px;
+  line-height: 64px;
+  background: radial-gradient(129.11% 259.78% at 103.1% -21.2%, #ff5f00 0%, #ffd200 50%, #12ff80 100%);
+  background-clip: text;
+  color: transparent;
+}
+
+@media (min-width: 900px) {
+  .container {
+    margin-top: 650px;
+  }
+
+  .blocksStack {
+    display: none;
+  }
+
+  .blocksWrapper {
+    display: block;
+    position: relative;
+    margin-top: 100px;
+    width: 100%;
+  }
+
+  .blocks {
+    position: absolute;
+    right: 0;
+    max-width: none;
+    height: 214px;
+  }
+
+  .processor {
+    top: -105px;
+    right: -22px;
+    width: 212px;
+  }
+
+  .cross {
+    display: block;
+    position: absolute;
+    bottom: -125px;
+    left: -16px;
+    width: 150px;
+  }
+
+  .blocksContainer {
+    padding-left: 40px;
+    gap: 12px;
+  }
+
+  .blockItem {
+    height: 212px;
+    width: 264px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .statsContainer {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .value {
+    font-size: 80px;
+    line-height: 100px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .title {
+    font-size: 60px;
+    line-height: 64px;
+  }
+
+  .processor {
+    top: -132px;
+    right: -22px;
+    width: 300px;
+  }
+
+  .cross {
+    display: block;
+    position: absolute;
+    bottom: -110px;
+    left: -18px;
+    width: 164px;
+  }
+
+  .blocksContainer {
+    padding-left: 66px;
+    gap: 20px;
+  }
+
+  .blocks {
+    height: 284px;
+  }
+
+  .blockItem {
+    height: 282px;
+    width: 350px;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 1630px) {
+  .blocksWrapper {
+    background-size: cover;
+    height: 494px;
+  }
+
+  .processor {
+    right: -4px;
+    width: 378px;
+  }
+
+  .cross {
+    width: 212px;
+  }
+
+  .blocksContainer {
+    padding-left: 100px;
+    gap: 30px;
+  }
+
+  .blocks {
+    height: 384px;
+  }
+
+  .blockItem {
+    --line-height: 28px;
+    height: 378px;
+    width: 470px;
+
+    padding: 32px;
+  }
+}

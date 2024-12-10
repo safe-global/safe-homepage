@@ -1,0 +1,9 @@
+.container {
+  background: linear-gradient(182.48deg, #000609 0.22%, #003b4f 33.34%, #000609 62.45%, #003b4f 95.07%);
+}
+
+.transparentHeader {
+  background: none;
+  backdrop-filter: none;
+  border-bottom: none;
+}

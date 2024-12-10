@@ -8,7 +8,8 @@ import useScrollReveal from '@/hooks/useScrollReveal'
 import TickerElement from './TickerElement'
 
 const SafeAtScale = ({ caption, title, items }: BaseBlock) => {
-  const safeStats = useSafeStats()
+  const { formattedTotalTransactions, formattedTotalBalanceUsd, formattedTotalSafesDeployed } = useSafeStats()
+  const safeStats = [formattedTotalTransactions, formattedTotalBalanceUsd, formattedTotalSafesDeployed]
 
   const containerRef = useRef<HTMLDivElement>(null)
   const visibleInViewport = useScrollReveal(containerRef, 50, true)

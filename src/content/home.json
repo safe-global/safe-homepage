@@ -11,18 +11,18 @@
     "text": "Own the Internet"
   },
   {
-    "caption": "Ethereum's transition to Smart Accounts",
+    "caption": "Introducing Safenet",
     "variant": "text-image",
-    "title": "<i>Safe</i> envisions a future where every onchain account is a <b>smart account</b>",
+    "title": "<i>Safenet is here to move the world’s GDP onchain</i>",
     "buttons": [
       {
-        "text": "Read our vision & roadmap",
-        "href": "https://safe.global/blog/future-of-safe-vision",
+        "text": "Read our vision",
+        "href": "https://safe.global/blog/introducing-safenet",
         "variant": "link"
       }
     ],
     "mobileVariant": "text-image",
-    "component": "Home/TextBlockImageManifesto"
+    "component": "Home/TextBlockIntroducingSafenet"
   },
   {
     "component": "Home/SafeAtScale",
@@ -30,7 +30,7 @@
     "title": "<i>Safe</i> Smart Accounts are battle-tested<br/>and used more than any other",
     "items": [
       {
-        "title": "46M",
+        "title": "143M",
         "text": "Total transactions",
         "link": {
           "href": "https://dune.com/queries/2093960/3449499"
@@ -44,7 +44,7 @@
         }
       },
       {
-        "title": "8.2M",
+        "title": "30M",
         "text": "Total accounts deployed",
         "link": {
           "href": "https://dune.com/queries/2459401/4044167"
@@ -56,31 +56,31 @@
     "title": "Trusted by the best",
     "icons": [
       { "name": "1inch", "src": "/images/Home/TrustedIcons/1inch.svg" },
-      { "name": "Aave", "src": "/images/Home/TrustedIcons/aave.svg" },
+      { "name": "Aave", "src": "/images/aave.svg" },
       { "name": "Balancer", "src": "/images/Home/TrustedIcons/balancer.svg" },
       { "name": "Chainlink", "src": "/images/Home/TrustedIcons/chainlink.svg" },
       { "name": "Ethereum Name Service", "src": "/images/Home/TrustedIcons/ethereum-name-service.svg" },
       { "name": "Maker DAO", "src": "/images/Home/TrustedIcons/maker-dao.svg" },
       { "name": "Polygon", "src": "/images/Home/TrustedIcons/polygon.svg" }
     ],
-    "component": "Home/TitleSlidingIcons"
+    "component": "common/TitleSlidingIcons"
   },
   {
     "title": "Available on 15+ networks",
     "text": "including testnets",
     "reverse": true,
     "icons": [
-      { "name": "Scroll", "new": true, "src": "/images/Home/NetworkIcons/scroll.svg" },
-      { "name": "Polygon zkEVM", "src": "/images/Home/NetworkIcons/polygon-zkevm.svg" },
-      { "name": "Celo", "src": "/images/Home/NetworkIcons/celo.svg" },
-      { "name": "Optimism", "src": "/images/Home/NetworkIcons/optimism.svg" },
-      { "name": "Base", "src": "/images/Home/NetworkIcons/base.png" },
-      { "name": "Arbitrum", "src": "/images/Home/NetworkIcons/arbitrum.svg" },
-      { "name": "ZkSync Era Mainnet", "src": "/images/Home/NetworkIcons/zksync-era-mainnet.svg" },
-      { "name": "Avalanche", "src": "/images/Home/NetworkIcons/avalanche.svg" },
-      { "name": "Gnosis Chain", "src": "/images/Home/NetworkIcons/gnosis-chain.svg" }
+      { "name": "Scroll", "src": "/images/chainsLogos/ScrollLogo.svg" },
+      { "name": "Polygon zkEVM", "src": "/images/chainsLogos/PolygonZkEVMLogo.png" },
+      { "name": "Celo", "src": "/images/chainsLogos/CeloLogo.png" },
+      { "name": "Optimism", "src": "/images/chainsLogos/OptimismLogo.png" },
+      { "name": "Base", "src": "/images/chainsLogos/BaseLogo.png" },
+      { "name": "Arbitrum", "src": "/images/chainsLogos/ArbitrumLogo.png" },
+      { "name": "ZkSync Era Mainnet", "src": "/images/chainsLogos/ZkSyncEraLogo.png" },
+      { "name": "Avalanche", "src": "/images/chainsLogos/AvalancheLogo.png" },
+      { "name": "Gnosis Chain", "src": "/images/chainsLogos/GnosisChainLogo.png" }
     ],
-    "component": "Home/TitleSlidingIcons"
+    "component": "common/TitleSlidingIcons"
   },
   {
     "items": [

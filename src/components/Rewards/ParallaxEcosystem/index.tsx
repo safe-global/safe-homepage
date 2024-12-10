@@ -1,5 +1,5 @@
 import ParallaxEcosystemElement from '@/components/Rewards/ParallaxEcosystem/ParallaxEcosystemElement'
-import ParallaxText, { type ParallaxTextProps } from '@/components/common/ParallaxText'
+import ParallaxText, { type ParallaxTextProps } from '@/components/commonCMS/ParallaxText'
 
 const ParallaxEcosystem = (props: ParallaxTextProps) => {
   return (

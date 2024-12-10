@@ -26,6 +26,7 @@ const getSnapshot = async (variables: ShapshotProposalVars): Promise<SnapshotPro
   const query = `
         query ($space: String, $orderBy: String, $orderDirection: OrderDirection) {
             proposals(
+                first: 200,
                 orderBy: $orderBy,
                 orderDirection: $orderDirection
                 where: { space_in: [$space] },
