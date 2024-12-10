@@ -15,7 +15,7 @@ export interface TypePressRoomFields {
 }
 
 export type TypePressRoomSkeleton = EntrySkeletonType<TypePressRoomFields, 'pressRoom'>
-export type TypePressRoom<Modifiers extends ChainModifiers, Locales extends LocaleCode = LocaleCode> = Entry<
+export type TypePressRoom<Modifiers extends ChainModifiers, Locales extends LocaleCode> = Entry<
   TypePressRoomSkeleton,
   Modifiers,
   Locales

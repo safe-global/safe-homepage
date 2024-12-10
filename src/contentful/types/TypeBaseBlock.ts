@@ -15,7 +15,7 @@ export interface TypeBaseBlockFields {
 }
 
 export type TypeBaseBlockSkeleton = EntrySkeletonType<TypeBaseBlockFields, 'baseBlock'>
-export type TypeBaseBlock<Modifiers extends ChainModifiers, Locales extends LocaleCode = LocaleCode> = Entry<
+export type TypeBaseBlock<Modifiers extends ChainModifiers, Locales extends LocaleCode> = Entry<
   TypeBaseBlockSkeleton,
   Modifiers,
   Locales

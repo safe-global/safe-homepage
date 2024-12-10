@@ -9,7 +9,7 @@ export interface TypeBlogHomeFields {
 }
 
 export type TypeBlogHomeSkeleton = EntrySkeletonType<TypeBlogHomeFields, 'blogHome'>
-export type TypeBlogHome<Modifiers extends ChainModifiers, Locales extends LocaleCode = LocaleCode> = Entry<
+export type TypeBlogHome<Modifiers extends ChainModifiers, Locales extends LocaleCode> = Entry<
   TypeBlogHomeSkeleton,
   Modifiers,
   Locales

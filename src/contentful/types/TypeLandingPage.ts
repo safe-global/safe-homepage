@@ -9,7 +9,7 @@ export interface TypeLandingPageFields {
 }
 
 export type TypeLandingPageSkeleton = EntrySkeletonType<TypeLandingPageFields, 'landingPage'>
-export type TypeLandingPage<Modifiers extends ChainModifiers, Locales extends LocaleCode = LocaleCode> = Entry<
+export type TypeLandingPage<Modifiers extends ChainModifiers, Locales extends LocaleCode> = Entry<
   TypeLandingPageSkeleton,
   Modifiers,
   Locales

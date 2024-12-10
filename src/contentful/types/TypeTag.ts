@@ -25,7 +25,7 @@ export interface TypeTagFields {
 }
 
 export type TypeTagSkeleton = EntrySkeletonType<TypeTagFields, 'tag'>
-export type TypeTag<Modifiers extends ChainModifiers, Locales extends LocaleCode = LocaleCode> = Entry<
+export type TypeTag<Modifiers extends ChainModifiers, Locales extends LocaleCode> = Entry<
   TypeTagSkeleton,
   Modifiers,
   Locales
