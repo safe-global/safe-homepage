@@ -1,9 +1,6 @@
-import Image from 'next/image'
-import { Box, Button, Container, Divider, Grid, Typography } from '@mui/material'
+import { Box, Button, Container, Grid, Typography } from '@mui/material'
 import { type Entry } from 'contentful'
 import type { TypeAuthorSkeleton } from '@/contentful/types'
-import { formatBlogDate } from '@/components/Blog/utils/formatBlogDate'
-import { calculateReadingTimeInMin } from '@/components/Blog/utils/calculateReadingTime'
 import { isAsset, isEntryTypeAuthor, isEntryTypePost } from '@/lib/typeGuards'
 import BlogLayout from '@/components/Blog/Layout'
 import ProgressBar from '@/components/Blog/ProgressBar'
@@ -14,13 +11,13 @@ import RichText from '@/components/common/RichText'
 import ContentsTable from '@/components/Blog/ContentsTable'
 import Socials from '@/components/Blog/Socials'
 import RelatedPosts from '@/components/Blog/RelatedPosts'
-import CategoryIcon from '@/public/images/Blog/category-icon.svg'
 import { type Document as ContentfulDocument } from '@contentful/rich-text-types'
 import css from '../styles.module.css'
 import { PRESS_RELEASE_TAG, containsTag } from '@/lib/containsTag'
 import { COMMS_EMAIL } from '@/config/constants'
 import { useBlogPost } from '@/hooks/useBlogPost'
 import type { BlogPostEntry } from '@/config/types'
+import Meta from '@/components/Blog/Meta'
 
 export type BlogPostProps = {
   blogPost: BlogPostEntry
@@ -42,25 +39,8 @@ const BlogPost = ({ blogPost }: BlogPostProps) => {
       <Container>
         <BreadcrumbsNav category={category} title={title} />
 
-        <div className={css.meta}>
-          <div className={css.metaStart}>
-            <div className={css.category}>
-              <CategoryIcon />
-              <Typography variant="caption" color="text.primary">
-                {category}
-              </Typography>
-            </div>
-            <Typography variant="caption">{calculateReadingTimeInMin(content)}</Typography>
-          </div>
-          <Typography variant="caption">{formatBlogDate(date)}</Typography>
-        </div>
-
         <Typography variant="h1" className={css.title}>
           {title}
-        </Typography>
-
-        <Typography variant="h5" className={css.excerpt}>
-          {excerpt}
         </Typography>
 
         <Box mt={{ xs: 2, md: 3 }}>
@@ -69,24 +49,23 @@ const BlogPost = ({ blogPost }: BlogPostProps) => {
 
         <Authors authors={authorsList} />
 
-        <Divider className={css.divider} />
+        <Meta post={post} />
+
+        {isAsset(coverImage) && coverImage.fields.file?.url ? (
+          <img src={coverImage.fields.file.url} alt={coverImage.fields.title ?? ''} className={css.coverImage} />
+        ) : undefined}
 
         <Grid container className={css.content} columnSpacing={3}>
           <Sidebar content={content} title={title} authors={authorsList} isPressRelease={isPressRelease} />
 
           <Grid item xs={12} md={8}>
-            {isAsset(coverImage) && coverImage.fields.file?.url ? (
-              <Image
-                src={coverImage.fields.file.url}
-                alt={coverImage.fields.title ?? ''}
-                width={coverImage.fields.file.details.image?.width}
-                height={coverImage.fields.file.details.image?.height}
-              />
-            ) : undefined}
-
             <Sidebar content={content} title={title} authors={authorsList} isPressRelease={isPressRelease} showInXs />
 
             <div className={css.postBody}>
+              <Typography variant="h5" className={css.excerpt}>
+                {excerpt}
+              </Typography>
+
               <RichText {...content} />
             </div>
           </Grid>
@@ -117,6 +96,9 @@ const Sidebar = ({
     <aside className={css.sidebar}>
       <ContentsTable content={content} />
 
+      <Typography variant="caption" color="text.primary">
+        Share this
+      </Typography>
       <Socials title={title} authors={authors} />
 
       {isPressRelease ? (

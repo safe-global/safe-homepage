@@ -22,7 +22,7 @@ const createBreadcrumb = (key: string, text: ReactNode, linkProps: string | UrlO
 const BreadcrumbsNav = ({ category, title }: BreadcrumbsType) => {
   const breadcrumbs = [
     createBreadcrumb('1', 'Blog', { pathname: AppRoutes.blog.index }),
-    createBreadcrumb('2', <>{category}</>, {
+    createBreadcrumb('2', category, {
       pathname: AppRoutes.blog.index,
       query: { category },
     }),
