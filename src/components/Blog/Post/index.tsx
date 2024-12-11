@@ -104,7 +104,9 @@ const Sidebar = ({
     <aside className={css.sidebar}>
       <ContentsTable content={content} />
 
-      <SharingLinks title={title} authors={authors} />
+      <div className={css.sidebarLinks}>
+        <SharingLinks title={title} authors={authors} />
+      </div>
 
       {isPressRelease ? (
         <div className={css.questionBox}>
