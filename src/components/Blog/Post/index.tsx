@@ -1,4 +1,4 @@
-import { Box, Button, Container, Grid, Typography } from '@mui/material'
+import { Box, Button, Container, Divider, Grid, Typography } from '@mui/material'
 import { type Entry } from 'contentful'
 import type { TypeAuthorSkeleton } from '@/contentful/types'
 import { isAsset, isEntryTypeAuthor, isEntryTypePost } from '@/lib/typeGuards'
@@ -43,33 +43,41 @@ const BlogPost = ({ blogPost }: BlogPostProps) => {
           {title}
         </Typography>
 
-        <Box mt={{ xs: 2, md: 3 }}>
-          <Tags tags={tags} />
-        </Box>
+        <div className={css.meta}>
+          <Box mt={{ xs: 2, md: 3 }}>
+            <Tags tags={tags} />
+          </Box>
 
-        <Authors authors={authorsList} />
+          <Authors authors={authorsList} />
 
-        <Meta post={post} />
+          <Meta post={post} />
+        </div>
 
         {isAsset(coverImage) && coverImage.fields.file?.url ? (
           <img src={coverImage.fields.file.url} alt={coverImage.fields.title ?? ''} className={css.coverImage} />
         ) : undefined}
 
-        <Grid container className={css.content} columnSpacing={3}>
-          <Sidebar content={content} title={title} authors={authorsList} isPressRelease={isPressRelease} />
+        <div className={css.content}>
+          <Grid container columnSpacing={3} sx={{ flexDirection: ['row', , 'row-reverse'] }}>
+            <Sidebar content={content} title={title} authors={authorsList} isPressRelease={isPressRelease} />
 
-          <Grid item xs={12} md={8}>
-            <Sidebar content={content} title={title} authors={authorsList} isPressRelease={isPressRelease} showInXs />
+            <Grid item xs={12} md={8}>
+              <Sidebar content={content} title={title} authors={authorsList} isPressRelease={isPressRelease} showInXs />
 
-            <div className={css.postBody}>
-              <Typography variant="h5" className={css.excerpt}>
-                {excerpt}
-              </Typography>
+              <div className={css.postBody}>
+                <Typography variant="h5" className={css.excerpt}>
+                  {excerpt}
+                </Typography>
 
-              <RichText {...content} />
-            </div>
+                <RichText {...content} />
+
+                <Divider sx={{ mt: 7, mb: 7 }} />
+
+                <SharingLinks title={title} authors={authorsList} />
+              </div>
+            </Grid>
           </Grid>
-        </Grid>
+        </div>
 
         <RelatedPosts relatedPosts={relatedPostsList} />
       </Container>
@@ -96,10 +104,7 @@ const Sidebar = ({
     <aside className={css.sidebar}>
       <ContentsTable content={content} />
 
-      <Typography variant="caption" color="text.primary">
-        Share this
-      </Typography>
-      <Socials title={title} authors={authors} />
+      <SharingLinks title={title} authors={authors} />
 
       {isPressRelease ? (
         <div className={css.questionBox}>
@@ -111,4 +116,19 @@ const Sidebar = ({
       ) : null}
     </aside>
   </Grid>
+)
+
+const SharingLinks = ({
+  title,
+  authors,
+}: {
+  title: string
+  authors: Entry<TypeAuthorSkeleton, undefined, string>[]
+}) => (
+  <div className={css.sharingLinks}>
+    <Typography variant="caption" color="text.primary">
+      Share this
+    </Typography>
+    <Socials title={title} authors={authors} />
+  </div>
 )

@@ -114,6 +114,10 @@
   color: var(--mui-palette-text-dark);
 }
 
+.sharingLinks a {
+  color: var(--mui-palette-text-primary);
+}
+
 @media (min-width: 900px) {
   .title {
     margin-top: 24px;
@@ -125,7 +129,9 @@
   }
 
   .content {
-    flex-direction: row-reverse;
+    border: 1px solid red;
+    margin-top: 0px;
+    padding: 40px 50px;
   }
 
   .excerpt {
