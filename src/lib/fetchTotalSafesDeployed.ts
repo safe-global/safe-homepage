@@ -13,5 +13,8 @@ export const fetchTotalSafesDeployed = async (): Promise<number | null> => {
       return res.json()
     })
     .then((data) => data.result.rows[0].num_safes)
-    .catch((err) => console.error(`Error fetching total safes deployed: ${err.message}`))
+    .catch((err) => {
+      console.error(`Error fetching total safes deployed: ${err.message}`)
+      return null
+    })
 }

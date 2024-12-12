@@ -13,5 +13,8 @@ export const fetchTotalTransactions = async (): Promise<number | null> => {
       return res.json()
     })
     .then((data) => data.result.rows[0].num_txs)
-    .catch((err) => console.error(`Error fetching total number of transactions: ${err.message}`))
+    .catch((err) => {
+      console.error(`Error fetching total number of transactions: ${err.message}`)
+      return null
+    })
 }
