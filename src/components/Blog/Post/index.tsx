@@ -1,4 +1,4 @@
-import { Box, Button, Container, Divider, Grid, Typography } from '@mui/material'
+import { Button, Container, Divider, Grid, Typography } from '@mui/material'
 import { type Entry } from 'contentful'
 import type { TypeAuthorSkeleton } from '@/contentful/types'
 import { isAsset, isEntryTypeAuthor, isEntryTypePost } from '@/lib/typeGuards'
@@ -18,6 +18,7 @@ import { COMMS_EMAIL } from '@/config/constants'
 import { useBlogPost } from '@/hooks/useBlogPost'
 import type { BlogPostEntry } from '@/config/types'
 import Meta from '@/components/Blog/Meta'
+import { formatAuthorsList } from '@/components/Blog/utils/formatAuthorsList'
 
 export type BlogPostProps = {
   blogPost: BlogPostEntry
@@ -44,13 +45,17 @@ const BlogPost = ({ blogPost }: BlogPostProps) => {
         </Typography>
 
         <div className={css.meta}>
-          <Box mt={{ xs: 2, md: 3 }}>
-            <Tags tags={tags} />
-          </Box>
+          <div className={css.info}>
+            <Authors authors={authorsList} />
 
-          <Authors authors={authorsList} />
+            <div>
+              <Typography variant="body2">{formatAuthorsList(authorsList)}</Typography>
 
-          <Meta post={post} />
+              <Meta post={post} />
+            </div>
+          </div>
+
+          <Tags tags={tags} />
         </div>
 
         {isAsset(coverImage) && coverImage.fields.file?.url ? (
@@ -111,6 +116,7 @@ const Sidebar = ({
       {isPressRelease ? (
         <div className={css.questionBox}>
           <Typography>Do you have any questions?</Typography>
+
           <Button href={`mailto:${COMMS_EMAIL}`} target="_blank" variant="contained" className={css.button}>
             <Typography>Press inquiry</Typography>
           </Button>
@@ -131,6 +137,7 @@ const SharingLinks = ({
     <Typography variant="caption" color="text.primary">
       Share this
     </Typography>
+
     <Socials title={title} authors={authors} />
   </div>
 )

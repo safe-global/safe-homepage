@@ -25,6 +25,8 @@ const ContentsTable = ({ content }: { content: ContentfulDocument }) => {
     [content],
   )
 
+  if (!headings.length) return null
+
   return (
     <div className={css.contentsTable}>
       <Typography variant="caption" color="text.primary">
