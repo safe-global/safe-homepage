@@ -28,7 +28,7 @@
     "@react-three/postprocessing": "^2.16.2",
     "@safe-global/safe-gateway-typescript-sdk": "^3.7.0",
     "contentful": "^11.3.1",
-    "framer-motion": "^11.0.25",
+    "framer-motion": "^11.13.5",
     "fuse.js": "^6.6.2",
     "isomorphic-dompurify": "^1.0.0",
     "lodash": "^4.17.21",
