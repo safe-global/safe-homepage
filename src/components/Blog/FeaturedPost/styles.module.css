@@ -22,20 +22,6 @@
   gap: 16px;
 }
 
-.meta {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.metaStart {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  gap: 8px;
-}
-
 .title,
 .excerpt {
   overflow: hidden;

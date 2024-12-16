@@ -15,5 +15,5 @@ export function calculateReadingTimeInMin(content: Document) {
 
   const wordCount = words(allText).length
 
-  return `${Math.round(wordCount / averageWPM)}min`
+  return Math.round(wordCount / averageWPM)
 }

@@ -1,0 +1,30 @@
+.contentsTable {
+  margin: 0;
+  border: 1px solid var(--mui-palette-border-light);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.contentsTable ol {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.contentsTable li {
+  counter-increment: step-counter;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.contentsTable li::before {
+  content: counter(step-counter) ' ';
+  white-space: pre;
+  color: var(--mui-palette-primary-light);
+}
+
+.contentsTable a:hover {
+  text-decoration: underline;
+  color: var(--mui-palette-primary-main);
+}
