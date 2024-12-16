@@ -15,7 +15,9 @@ type BreadcrumbsType = {
 
 const createBreadcrumb = (key: string, text: ReactNode, linkProps: string | UrlObject) => (
   <Link key={key} href={linkProps}>
-    <Typography variant={TYPOGRAPHY_VARIANT}>{text}</Typography>
+    <Typography variant={TYPOGRAPHY_VARIANT} color="primary.light">
+      {text}
+    </Typography>
   </Link>
 )
 

@@ -8,7 +8,7 @@
 }
 
 .breadcrumbs a:hover {
-  color: var(--mui-palette-text-primary);
+  color: var(--mui-palette-primary-light);
   text-decoration: underline;
 }
 
@@ -22,4 +22,5 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  color: var(--mui-palette-primary-light);
 }
