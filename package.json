@@ -22,7 +22,7 @@
     "@contentful/rich-text-types": "^17.0.0",
     "@emotion/react": "^11.10.5",
     "@emotion/server": "^11.10.0",
-    "@emotion/styled": "^11.10.5",
+    "@emotion/styled": "^11.14.0",
     "@mui/material": "^5.11.6",
     "@react-three/fiber": "^8.16.8",
     "@react-three/postprocessing": "^2.16.2",
