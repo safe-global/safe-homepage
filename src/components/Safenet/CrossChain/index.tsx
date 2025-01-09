@@ -68,7 +68,7 @@ const CrossChain = () => (
         </Typography>
 
         <Typography className={css.text}>
-          Cross-chain interactions are simplified. Say goodbye to gas free hassles and enjoy a seamless, stress-free
+          Cross-chain interactions are simplified. Say goodbye to gas fee hassles and enjoy a seamless, stress-free
           experience.
         </Typography>
       </div>
