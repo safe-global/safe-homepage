@@ -56,5 +56,137 @@
         }
       }
     ]
+  },
+  {
+    "component": "Agentathon/Partners",
+    "caption": "Hackathon Partners",
+    "items": [
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Celo"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Celo"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Celo"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Celo"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Celo"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Celo"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Safe"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Celo"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Celo"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Celo"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Celo"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Celo"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Celo"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Celo"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Celo"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Celo"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Celo"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Celo"
+      }
+    ]
   }
 ]
