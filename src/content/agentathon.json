@@ -255,5 +255,24 @@
         "variant": "link"
       }
     ]
+  },
+  {
+    "component": "Agentathon/SafeAgents",
+    "image": {
+      "src": "/images/Agentathon/safe-glow-logo.png",
+      "alt": "Safe Logo"
+    },
+    "buttons": [
+      {
+        "text": "Go Hack",
+        "href": "https://docs.safe.global",
+        "variant": "button"
+      },
+      {
+        "text": "Learn to build",
+        "href": "https://docs.safe.global",
+        "variant": "link"
+      }
+    ]
   }
 ]
