@@ -1,0 +1,33 @@
+.sectionContainer {
+  width: 100%;
+  height: 100lvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.caption {
+  color: var(--mui-palette-primary-main);
+}
+
+.title {
+  text-align: center;
+}
+
+.text {
+  text-align: center;
+  max-width: 531px;
+  color: var(--mui-palette-text-secondary);
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}

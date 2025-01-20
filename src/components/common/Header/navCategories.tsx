@@ -74,6 +74,12 @@ export const navCategories: NavCategory[] = [
         href: AppRoutes.foundry,
         icon: <SafeFoundryIcon />,
       },
+      {
+        label: 'Agentathon',
+        href: AppRoutes.agentathon,
+        // TODO: Replace icon
+        icon: <SafeFoundryIcon />,
+      },
     ],
   },
   {

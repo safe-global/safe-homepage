@@ -1,0 +1,60 @@
+[
+  {
+    "pageTitle": "Safe Data Room - Key Insights into the Safe Ecosystem",
+    "description": "Uncover the impact of the Safe ecosystem in crypto. Explore detailed metrics on USDC storage, CryptoPunks holdings, and transaction volumes. Access comprehensive reports from Dune Analytics, Messari, Nansen, and more.",
+    "image": "/images/DataRoom/meta-image-dataroom.jpg",
+    "component": "common/MetaTags"
+  },
+  {
+    "component": "Agentathon/Hero",
+    "caption": "Feb 3rd - Feb 17th",
+    "title": "Safe <br /> Agentathon",
+    "text": "A new hackathon to build sovereign agents with the best AI x Crypto stacks out there",
+    "buttons": [
+      {
+        "text": "Register now",
+        "href": "https://docs.safe.global",
+        "variant": "button"
+      },
+      {
+        "text": "Learn to build",
+        "href": "https://docs.safe.global",
+        "variant": "link"
+      }
+    ]
+  },
+  {
+    "component": "Agentathon/Prizes",
+    "image": {
+      "src": "/images/Agentathon/prize-amount.png",
+      "alt": "Prize amount"
+    },
+    "title": "in rewards by top web3 ai projects",
+    "buttons": [
+      {
+        "text": "Register now",
+        "href": "https://docs.safe.global",
+        "variant": "button"
+      },
+      {
+        "text": "Learn to build",
+        "href": "https://docs.safe.global",
+        "variant": "link"
+      }
+    ],
+    "items": [
+      {
+        "image": {
+          "src": "/images/Agentathon/dots.svg",
+          "alt": "dots"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/dots.svg",
+          "alt": "dots"
+        }
+      }
+    ]
+  }
+]
