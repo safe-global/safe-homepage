@@ -188,5 +188,72 @@
         "title": "Celo"
       }
     ]
+  },
+  {
+    "component": "Agentathon/BestAgents",
+    "caption": "The best agents are built on safe",
+    "items": [
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Celo"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Celo"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Celo"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Celo"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Celo"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Celo"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Celo"
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Go to hackathon",
+        "href": "https://docs.safe.global",
+        "variant": "button"
+      },
+      {
+        "text": "Learn to build",
+        "href": "https://docs.safe.global",
+        "variant": "link"
+      }
+    ]
   }
 ]
