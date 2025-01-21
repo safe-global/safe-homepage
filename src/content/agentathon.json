@@ -296,6 +296,77 @@
     ]
   },
   {
+    "component": "Agentathon/Judges",
+    "caption": "Judges",
+    "title": "Amazing group of people will help you",
+    "items": [
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Name",
+        "text": "their role and company"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Name",
+        "text": "their role and company"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Name",
+        "text": "their role and company"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Name",
+        "text": "their role and company"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Name",
+        "text": "their role and company"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Name",
+        "text": "their role and company"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Name",
+        "text": "their role and company"
+      },
+      {
+        "image": {
+          "src": "/images/chainsLogos/CeloLogo.png",
+          "alt": "Celo"
+        },
+        "title": "Name",
+        "text": "their role and company"
+      }
+    ]
+  },
+  {
     "component": "Agentathon/SafeAgents",
     "image": {
       "src": "/images/Agentathon/safe-glow-logo.png",
