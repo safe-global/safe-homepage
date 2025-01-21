@@ -1,0 +1,33 @@
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 160px;
+}
+
+.image {
+  width: 186px;
+  height: 251px;
+}
+
+.caption {
+  color: var(--mui-palette-primary-main);
+}
+
+.title {
+  text-align: center;
+  max-width: 582px;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 600px) {
+  .cardsContainer {
+    flex-direction: row;
+  }
+}

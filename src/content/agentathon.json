@@ -257,6 +257,45 @@
     ]
   },
   {
+    "component": "Agentathon/LearnToUse",
+    "caption": "Start building with code snippets",
+    "title": "Learn to use Agents With Safe Accounts",
+    "image": {
+      "src": "/images/Agentathon/robot.png",
+      "alt": "robot"
+    },
+    "items": [
+      {
+        "title": "Setup your Agent with a Safe account",
+        "image": {
+          "src": "/images/Agentathon/multisig.png",
+          "alt": "multisig"
+        }
+      },
+      {
+        "title": "Human approval for Agent actions",
+        "image": {
+          "src": "/images/Agentathon/human-approval.png",
+          "alt": "human approval"
+        }
+      },
+      {
+        "title": "Agents managing DAO treasury",
+        "image": {
+          "src": "/images/Agentathon/treasury.png",
+          "alt": "treasury"
+        }
+      },
+      {
+        "title": "Agents trading tokens with Safe",
+        "image": {
+          "src": "/images/Agentathon/agent-trading.png",
+          "alt": "agent trading"
+        }
+      }
+    ]
+  },
+  {
     "component": "Agentathon/SafeAgents",
     "image": {
       "src": "/images/Agentathon/safe-glow-logo.png",
