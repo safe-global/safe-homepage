@@ -1,7 +1,7 @@
 import React from 'react'
 import type { BaseBlock } from '@/components/Home/types'
 import css from './style.module.css'
-import ButtonsWrapper from '@/components/common/ButtonsWrapper'
+import ButtonsWrapper from '../ButtonsWrapper'
 
 export default function SafeAgents({ image, buttons }: BaseBlock) {
   return (
@@ -13,7 +13,7 @@ export default function SafeAgents({ image, buttons }: BaseBlock) {
         {image && <img src={image.src} alt={image.alt} className={css.image} />}
       </div>
       <img src="/images/Agentathon/build-safe-agents.png" alt="Build Safe Agents" className={css.buildSafeAgents} />
-      <ButtonsWrapper buttons={buttons} />
+      <ButtonsWrapper buttons={buttons} mobileDirection="row" />
     </section>
   )
 }

@@ -6,7 +6,7 @@ import css from './style.module.css'
 export default function Judges({ caption, title, items }: BaseBlock) {
   return (
     <section className={css.sectionContainer}>
-      <Typography variant="caption" className={css.caption} pb={5}>
+      <Typography variant="caption" className={css.caption}>
         {caption}
       </Typography>
       <Typography variant="h3" className={css.title}>
@@ -21,12 +21,8 @@ export default function Judges({ caption, title, items }: BaseBlock) {
               </div>
               <img src={item.image?.src} className={css.itemImage} alt={item.image?.alt} />
               <div className={css.itemInfo}>
-                <Typography variant="body1" className={css.itemTitle}>
-                  {item.title}
-                </Typography>
-                <Typography variant="body2" className={css.itemDescription}>
-                  {item.text}
-                </Typography>
+                <Typography className={css.itemTitle}>{item.title}</Typography>
+                <Typography className={css.itemDescription}>{item.text}</Typography>
               </div>
             </div>
           ))}

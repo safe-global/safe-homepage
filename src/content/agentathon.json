@@ -323,64 +323,64 @@
     "items": [
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "Celo"
+          "src": "/images/Agentathon/judge.png",
+          "alt": "judge"
         },
         "title": "Name",
         "text": "their role and company"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "Celo"
+          "src": "/images/Agentathon/judge.png",
+          "alt": "judge"
         },
         "title": "Name",
         "text": "their role and company"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "Celo"
+          "src": "/images/Agentathon/judge.png",
+          "alt": "judge"
         },
         "title": "Name",
         "text": "their role and company"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "Celo"
+          "src": "/images/Agentathon/judge.png",
+          "alt": "judge"
         },
         "title": "Name",
         "text": "their role and company"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "Celo"
+          "src": "/images/Agentathon/judge.png",
+          "alt": "judge"
         },
         "title": "Name",
         "text": "their role and company"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "Celo"
+          "src": "/images/Agentathon/judge.png",
+          "alt": "judge"
         },
         "title": "Name",
         "text": "their role and company"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "Celo"
+          "src": "/images/Agentathon/judge.png",
+          "alt": "judge"
         },
         "title": "Name",
         "text": "their role and company"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "Celo"
+          "src": "/images/Agentathon/judge.png",
+          "alt": "judge"
         },
         "title": "Name",
         "text": "their role and company"
@@ -395,7 +395,7 @@
     },
     "buttons": [
       {
-        "text": "Go Hack",
+        "text": "Register Now",
         "href": "https://docs.safe.global",
         "variant": "button"
       },

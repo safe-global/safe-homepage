@@ -9,6 +9,11 @@
 .title {
   text-align: center;
   max-width: 582px;
+  padding-bottom: 40px;
+}
+
+.caption {
+  color: var(--mui-palette-primary-main);
   padding-bottom: 20px;
 }
 
@@ -17,34 +22,36 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 20px;
-  padding-bottom: 40px;
   justify-content: center;
   max-width: 1020px;
 }
 
 .itemWrapper {
   display: flex;
-  padding: 8px;
-  background-color: white;
-  border-radius: 8px;
+  border-radius: 14px;
   overflow: hidden;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
+  background-color: white;
+  height: 297px;
 }
 
 .itemImage {
   width: 220px;
   height: 220px;
+  z-index: 1;
+  padding: 8px 8px 0 8px;
+  mix-blend-mode: luminosity;
 }
 
 .itemInfo {
   display: flex;
+  padding: 8px 0 0 8px;
   flex-direction: column;
   width: 100%;
   align-items: flex-start;
-  color: black;
 }
 
 .foreground {
@@ -60,4 +67,15 @@
   width: 100%;
   height: 100%;
   mix-blend-mode: overlay;
+}
+
+.itemTitle {
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.itemDescription {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 14px;
 }
