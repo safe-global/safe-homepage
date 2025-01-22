@@ -2,7 +2,7 @@ import React from 'react'
 import type { BaseBlock } from '@/components/Home/types'
 import { Typography } from '@mui/material'
 import css from './style.module.css'
-import ButtonsWrapper from '@/components/common/ButtonsWrapper'
+import ButtonsWrapper from '../ButtonsWrapper'
 
 export default function BestAgents({ caption, items, buttons }: BaseBlock) {
   return (
@@ -21,7 +21,7 @@ export default function BestAgents({ caption, items, buttons }: BaseBlock) {
             </div>
           ))}
       </div>
-      <ButtonsWrapper buttons={buttons} />
+      <ButtonsWrapper buttons={buttons} mobileDirection="row" />
     </section>
   )
 }

@@ -217,56 +217,56 @@
       {
         "image": {
           "src": "/images/Agentathon/safe-logo.png",
-          "alt": "Celo"
+          "alt": "logo"
         },
-        "title": "Celo"
+        "title": "Solo"
       },
       {
         "image": {
           "src": "/images/Agentathon/safe-logo.png",
-          "alt": "Celo"
+          "alt": "logo"
         },
-        "title": "Celo"
+        "title": "Solo"
       },
       {
         "image": {
           "src": "/images/Agentathon/safe-logo.png",
-          "alt": "Celo"
+          "alt": "logo"
         },
-        "title": "Celo"
+        "title": "Solo"
       },
       {
         "image": {
           "src": "/images/Agentathon/safe-logo.png",
-          "alt": "Celo"
+          "alt": "logo"
         },
-        "title": "Celo"
+        "title": "Solo"
       },
       {
         "image": {
           "src": "/images/Agentathon/safe-logo.png",
-          "alt": "Celo"
+          "alt": "logo"
         },
-        "title": "Celo"
+        "title": "Solo"
       },
       {
         "image": {
           "src": "/images/Agentathon/safe-logo.png",
-          "alt": "Celo"
+          "alt": "logo"
         },
-        "title": "Celo"
+        "title": "Solo"
       },
       {
         "image": {
           "src": "/images/Agentathon/safe-logo.png",
-          "alt": "Celo"
+          "alt": "logo"
         },
-        "title": "Celo"
+        "title": "Solo"
       }
     ],
     "buttons": [
       {
-        "text": "Go to hackathon",
+        "text": "Register Now",
         "href": "https://docs.safe.global",
         "variant": "button"
       },

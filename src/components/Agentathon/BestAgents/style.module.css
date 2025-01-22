@@ -18,7 +18,7 @@
   gap: 20px;
   align-items: center;
   justify-content: center;
-  max-width: 1120px;
+  max-width: 1156px;
   width: 100%;
   padding-bottom: 40px;
 }
@@ -29,14 +29,16 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  border: 1px solid var(--mui-palette-border-main);
-  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #121312;
+  width: 148px;
+  height: 160px;
+  gap: 16px;
 }
 
 .itemImage {
   width: 80px;
-  height: 80px;
+  min-height: 80px;
   border-radius: 100%;
   overflow: hidden;
-  padding-bottom: 8px;
 }
