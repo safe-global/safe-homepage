@@ -15,37 +15,39 @@
   padding-bottom: 60px;
 }
 
-.image {
-  max-width: 100%;
+.prizeAmount {
+  max-width: 321px;
 }
 
 .buttonsWrapper {
   display: none;
 }
 
-.item:nth-child(1) {
+.dots:nth-child(1) {
   position: absolute;
-  top: -100px;
+  top: -30px;
   left: 0;
+  z-index: 1;
 }
 
-.item:nth-child(2) {
+.dots:nth-child(2) {
   display: none;
   position: absolute;
-  bottom: -180px;
+  bottom: -160px;
   right: 0;
+  z-index: 1;
 }
 
-@media (min-width: 700px) {
-  .image {
-    max-width: 670px;
+@media (min-width: 900px) {
+  .prizeAmount {
+    max-width: 480px;
   }
 
   .buttonsWrapper {
     display: block;
   }
 
-  .item:nth-child(2) {
+  .dots:nth-child(2) {
     display: block;
   }
 }

@@ -1,17 +1,17 @@
 import React from 'react'
 import type { BaseBlock } from '@/components/Home/types'
 import css from './style.module.css'
-import ButtonsWrapper from '@/components/common/ButtonsWrapper'
 import { Typography } from '@mui/material'
+import ButtonsWrapper from '../ButtonsWrapper'
 
 export default function Prizes({ image, title, buttons, items }: BaseBlock) {
   return (
     <section className={css.sectionContainer}>
       {items &&
         items.map((item, index) => (
-          <img src={item.image?.src} className={css.item} alt={item.image?.alt} key={index} />
+          <img src={item.image?.src} className={css.dots} alt={item.image?.alt} key={index} />
         ))}
-      {image && <img src={image.src} alt={image.alt} className={css.image} />}
+      {image && <img src={image.src} alt={image.alt} className={css.prizeAmount} />}
       <Typography variant="h2" className={css.title}>
         {title}
       </Typography>
