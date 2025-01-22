@@ -8,7 +8,7 @@
   {
     "component": "Agentathon/Hero",
     "caption": "Feb 3rd - Feb 17th",
-    "title": "Safe Agentathon",
+    "title": "Safe<br /> Agentathon",
     "text": "A new hackathon to build sovereign agents with the best AI x Crypto stacks out there",
     "buttons": [
       {
@@ -63,129 +63,150 @@
     "items": [
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
-          "alt": "Celo"
+          "src": "/images/Agentathon/safe-logo.png",
+          "alt": "logo"
         },
-        "title": "Celo"
+        "title": "Solo"
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
-          "alt": "Celo"
+          "src": "/images/Agentathon/safe-logo.png",
+          "alt": "logo"
         },
-        "title": "Celo"
+        "title": "Solo"
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
-          "alt": "Celo"
+          "src": "/images/Agentathon/safe-logo.png",
+          "alt": "logo"
         },
-        "title": "Celo"
+        "title": "Solo"
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
-          "alt": "Celo"
+          "src": "/images/Agentathon/safe-logo.png",
+          "alt": "logo"
         },
-        "title": "Celo"
+        "title": "Solo"
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
-          "alt": "Celo"
+          "src": "/images/Agentathon/safe-logo.png",
+          "alt": "logo"
         },
-        "title": "Celo"
+        "title": "Solo"
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
-          "alt": "Celo"
+          "src": "/images/Agentathon/safe-logo.png",
+          "alt": "logo"
         },
-        "title": "Celo"
+        "title": "Solo"
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
-          "alt": "Celo"
+          "src": "/images/Agentathon/safe-logo.png",
+          "alt": "logo"
         },
-        "title": "Safe"
+        "title": "Solo"
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
-          "alt": "Celo"
+          "src": "/images/Agentathon/safe-logo.png",
+          "alt": "logo"
         },
-        "title": "Celo"
+        "title": "Solo"
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
-          "alt": "Celo"
+          "src": "/images/Agentathon/safe-logo.png",
+          "alt": "logo"
         },
-        "title": "Celo"
+        "title": "Solo"
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
-          "alt": "Celo"
+          "src": "/images/Agentathon/safe-logo.png",
+          "alt": "logo"
         },
-        "title": "Celo"
+        "title": "Solo"
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
-          "alt": "Celo"
+          "src": "/images/Agentathon/safe-logo.png",
+          "alt": "logo"
         },
-        "title": "Celo"
+        "title": "Solo"
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
-          "alt": "Celo"
+          "src": "/images/Agentathon/safe-logo.png",
+          "alt": "logo"
         },
-        "title": "Celo"
+        "title": "Solo"
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
-          "alt": "Celo"
+          "src": "/images/Agentathon/safe-logo.png",
+          "alt": "logo"
         },
-        "title": "Celo"
+        "title": "Solo"
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
-          "alt": "Celo"
+          "src": "/images/Agentathon/safe-logo.png",
+          "alt": "logo"
         },
-        "title": "Celo"
+        "title": "Solo"
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
-          "alt": "Celo"
+          "src": "/images/Agentathon/safe-logo.png",
+          "alt": "logo"
         },
-        "title": "Celo"
+        "title": "Solo"
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
-          "alt": "Celo"
+          "src": "/images/Agentathon/safe-logo.png",
+          "alt": "logo"
         },
-        "title": "Celo"
+        "title": "Solo"
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
-          "alt": "Celo"
+          "src": "/images/Agentathon/safe-logo.png",
+          "alt": "logo"
         },
-        "title": "Celo"
+        "title": "Solo"
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
-          "alt": "Celo"
+          "src": "/images/Agentathon/safe-logo.png",
+          "alt": "logo"
         },
-        "title": "Celo"
+        "title": "Solo"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/safe-logo.png",
+          "alt": "logo"
+        },
+        "title": "Solo"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/safe-logo.png",
+          "alt": "logo"
+        },
+        "title": "Solo"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/safe-logo.png",
+          "alt": "logo"
+        },
+        "title": "Solo"
       }
     ]
   },
@@ -195,49 +216,49 @@
     "items": [
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
+          "src": "/images/Agentathon/safe-logo.png",
           "alt": "Celo"
         },
         "title": "Celo"
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
+          "src": "/images/Agentathon/safe-logo.png",
           "alt": "Celo"
         },
         "title": "Celo"
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
+          "src": "/images/Agentathon/safe-logo.png",
           "alt": "Celo"
         },
         "title": "Celo"
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
+          "src": "/images/Agentathon/safe-logo.png",
           "alt": "Celo"
         },
         "title": "Celo"
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
+          "src": "/images/Agentathon/safe-logo.png",
           "alt": "Celo"
         },
         "title": "Celo"
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
+          "src": "/images/Agentathon/safe-logo.png",
           "alt": "Celo"
         },
         "title": "Celo"
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
+          "src": "/images/Agentathon/safe-logo.png",
           "alt": "Celo"
         },
         "title": "Celo"
@@ -302,7 +323,7 @@
     "items": [
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
+          "src": "/images/Agentathon/safe-logo.png",
           "alt": "Celo"
         },
         "title": "Name",
@@ -310,7 +331,7 @@
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
+          "src": "/images/Agentathon/safe-logo.png",
           "alt": "Celo"
         },
         "title": "Name",
@@ -318,7 +339,7 @@
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
+          "src": "/images/Agentathon/safe-logo.png",
           "alt": "Celo"
         },
         "title": "Name",
@@ -326,7 +347,7 @@
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
+          "src": "/images/Agentathon/safe-logo.png",
           "alt": "Celo"
         },
         "title": "Name",
@@ -334,7 +355,7 @@
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
+          "src": "/images/Agentathon/safe-logo.png",
           "alt": "Celo"
         },
         "title": "Name",
@@ -342,7 +363,7 @@
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
+          "src": "/images/Agentathon/safe-logo.png",
           "alt": "Celo"
         },
         "title": "Name",
@@ -350,7 +371,7 @@
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
+          "src": "/images/Agentathon/safe-logo.png",
           "alt": "Celo"
         },
         "title": "Name",
@@ -358,7 +379,7 @@
       },
       {
         "image": {
-          "src": "/images/chainsLogos/CeloLogo.png",
+          "src": "/images/Agentathon/safe-logo.png",
           "alt": "Celo"
         },
         "title": "Name",

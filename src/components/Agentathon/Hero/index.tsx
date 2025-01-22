@@ -20,7 +20,7 @@ export default function Hero({ caption, title, text, buttons }: BaseBlock) {
       <Typography variant="body1" className={css.text}>
         {text}
       </Typography>
-      <ButtonsWrapper buttons={buttons} />
+      <ButtonsWrapper buttons={buttons} mobileDirection="row" />
     </section>
   )
 }
