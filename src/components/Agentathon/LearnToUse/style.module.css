@@ -13,6 +13,7 @@
 
 .caption {
   color: var(--mui-palette-primary-main);
+  padding-bottom: 20px;
 }
 
 .title {
@@ -21,13 +22,19 @@
 }
 
 .cardsContainer {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 20px;
 }
 
 @media (min-width: 600px) {
   .cardsContainer {
-    flex-direction: row;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .cardsContainer {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

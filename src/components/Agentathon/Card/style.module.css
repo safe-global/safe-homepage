@@ -4,17 +4,21 @@
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  padding: 30px 24px;
+  border: 1px solid #636669;
+  background: rgba(18, 19, 18, 0.75);
+  width: 277px;
+  height: 277px;
 }
 
 .cardContainer:hover {
   box-shadow: 10px 10px 30px 0px rgba(18, 255, 128, 0.2);
   border: 1px solid var(--mui-palette-primary-main);
+  cursor: pointer;
 }
 
 .image {
   width: 152px;
-  height: 152px;
+  min-height: 152px;
 }
 
 .title {
