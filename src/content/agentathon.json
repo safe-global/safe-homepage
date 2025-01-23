@@ -435,6 +435,18 @@
           }
         ]
       }
+    ],
+    "buttons": [
+      {
+        "text": "Register Now",
+        "href": "https://docs.safe.global",
+        "variant": "button"
+      },
+      {
+        "text": "Learn to build",
+        "href": "https://docs.safe.global",
+        "variant": "link"
+      }
     ]
   },
   {

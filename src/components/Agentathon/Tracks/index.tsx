@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import css from './style.module.css'
 import { Typography } from '@mui/material'
 import { AiAdvancement, DeFAI, PredictionMarket, SmartAccountTooling, Social, Treasury } from './icons'
+import ButtonsWrapper from '../ButtonsWrapper'
 
 const tracksData = [
   {
@@ -25,7 +26,7 @@ const tracksData = [
   },
 ]
 
-export default function Tracks({ caption, title, items }: BaseBlock) {
+export default function Tracks({ caption, title, items, buttons }: BaseBlock) {
   const [selectedTrack, setSelectedTrack] = useState(0)
   const selectedTrackData = items?.[selectedTrack]
   const SelectedTrackIcon = tracksData[selectedTrack].icon
@@ -79,6 +80,7 @@ export default function Tracks({ caption, title, items }: BaseBlock) {
           </div>
         </div>
       </div>
+      <ButtonsWrapper buttons={buttons} />
     </section>
   )
 }
