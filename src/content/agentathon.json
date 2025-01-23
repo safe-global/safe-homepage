@@ -317,6 +317,127 @@
     ]
   },
   {
+    "component": "Agentathon/Tracks",
+    "caption": "Tracks",
+    "title": "Build across 10+ tracks",
+    "items": [
+      {
+        "caption": "$67,500",
+        "title": "DeFAI",
+        "text": "Agents engaging in DeFi activities",
+        "items": [
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/sonic.png",
+              "alt": "sonic"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/bitte.png",
+              "alt": "bitte"
+            }
+          }
+        ]
+      },
+      {
+        "caption": "$13,000",
+        "title": "Treasury",
+        "text": "Agents managing treasuries through staking, lending, and borrowing",
+        "items": [
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/sonic.png",
+              "alt": "sonic"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/bitte.png",
+              "alt": "bitte"
+            }
+          }
+        ]
+      },
+      {
+        "caption": "$20,000",
+        "title": "Prediction Market",
+        "text": "Agents participating in prediction markets",
+        "items": [
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/sonic.png",
+              "alt": "sonic"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/bitte.png",
+              "alt": "bitte"
+            }
+          }
+        ]
+      },
+      {
+        "caption": "$39,000",
+        "title": "AI Advancement",
+        "text": "AI agents with increased autonomy in crypto operations",
+        "items": [
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/sonic.png",
+              "alt": "sonic"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/bitte.png",
+              "alt": "bitte"
+            }
+          }
+        ]
+      },
+      {
+        "caption": "$22,500",
+        "title": "Social",
+        "text": "Agents generating creative and memetic content",
+        "items": [
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/sonic.png",
+              "alt": "sonic"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/bitte.png",
+              "alt": "bitte"
+            }
+          }
+        ]
+      },
+      {
+        "caption": "$38,000",
+        "title": "Smart Account Tooling",
+        "text": "Enhancing and restricting agent transaction capabilities using Safe smart accounts and modular features",
+        "items": [
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/sonic.png",
+              "alt": "sonic"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/bitte.png",
+              "alt": "bitte"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
     "component": "Agentathon/Judges",
     "caption": "Judges",
     "title": "Amazing group of people will help you",
