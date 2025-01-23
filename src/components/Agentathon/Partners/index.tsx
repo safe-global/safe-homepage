@@ -11,7 +11,7 @@ export default function Partners({ caption, items }: BaseBlock) {
       <div className={css.itemsWrapper}>
         {items &&
           items.map((item, index) => (
-            <div className={clsx(css.itemWrapper, index === 0 && css.highlighted)} key={index}>
+            <div className={clsx(css.itemWrapper, index === 6 && css.highlighted)} key={index}>
               <img src={item.image?.src} className={css.itemImage} alt={item.image?.alt} />
               <Typography variant="body" className={css.itemTitle}>
                 {item.title}

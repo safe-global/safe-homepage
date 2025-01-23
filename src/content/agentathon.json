@@ -63,150 +63,199 @@
     "items": [
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "logo"
+          "src": "/images/Agentathon/partners/eliza.png",
+          "alt": "ElizaOS"
+        },
+        "title": "ElizaOS"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/virtuals.png",
+          "alt": "Virtuals"
+        },
+        "title": "Virtuals"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/optimism.png",
+          "alt": "Optimism"
+        },
+        "title": "Optimism"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/polymarket.png",
+          "alt": "Polymarket"
+        },
+        "title": "Polymarket"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/arbitrum.png",
+          "alt": "Arbitrum"
+        },
+        "title": "Arbitrum"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/sonic.png",
+          "alt": "Sonic"
+        },
+        "title": "Sonic"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/safe.png",
+          "alt": "Safe"
         },
         "title": "Safe"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "logo"
+          "src": "/images/Agentathon/partners/vader.png",
+          "alt": "VaderAI"
         },
-        "title": "Safe"
+        "title": "VaderAI"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "logo"
+          "src": "/images/Agentathon/partners/kiln.png",
+          "alt": "Kiln"
         },
-        "title": "Safe"
+        "title": "Kiln"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "logo"
+          "src": "/images/Agentathon/partners/story.png",
+          "alt": "Story"
         },
-        "title": "Safe"
+        "title": "Story"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "logo"
+          "src": "/images/Agentathon/partners/celo.png",
+          "alt": "Celo"
         },
-        "title": "Safe"
+        "title": "Celo"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "logo"
+          "src": "/images/Agentathon/partners/fileverse.png",
+          "alt": "Fileverse"
         },
-        "title": "Safe"
+        "title": "Fileverse"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "logo"
+          "src": "/images/Agentathon/partners/openzeppelin.png",
+          "alt": "OpenZeppelin"
         },
-        "title": "Safe"
+        "title": "OpenZeppelin"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "logo"
+          "src": "/images/Agentathon/partners/linea.png",
+          "alt": "Linea"
         },
-        "title": "Safe"
+        "title": "Linea"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "logo"
+          "src": "/images/Agentathon/partners/olas.png",
+          "alt": "Olas"
         },
-        "title": "Safe"
+        "title": "Olas"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "logo"
+          "src": "/images/Agentathon/partners/gnosis.png",
+          "alt": "Gnosis AI"
         },
-        "title": "Safe"
+        "title": "Gnosis AI"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "logo"
+          "src": "/images/Agentathon/partners/heyanon.png",
+          "alt": "HeyAnon"
         },
-        "title": "Safe"
+        "title": "HeyAnon"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "logo"
+          "src": "/images/Agentathon/partners/bittensor.png",
+          "alt": "Bitte"
         },
-        "title": "Safe"
+        "title": "Bitte"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "logo"
+          "src": "/images/Agentathon/partners/freysa.png",
+          "alt": "Freysa"
         },
-        "title": "Safe"
+        "title": "Freysa"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "logo"
+          "src": "/images/Agentathon/partners/gelato.png",
+          "alt": "Gelato"
         },
-        "title": "Safe"
+        "title": "Gelato"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "logo"
+          "src": "/images/Agentathon/partners/rhinestone.png",
+          "alt": "Rhinestone"
         },
-        "title": "Safe"
+        "title": "Rhinestone"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "logo"
+          "src": "/images/Agentathon/partners/creatorbid.png",
+          "alt": "Creator.bid"
         },
-        "title": "Safe"
+        "title": "Creator.bid"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "logo"
+          "src": "/images/Agentathon/partners/zerebro.png",
+          "alt": "Zerebro"
         },
-        "title": "Safe"
+        "title": "Zerebro"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "logo"
+          "src": "/images/Agentathon/partners/duckai.png",
+          "alt": "DuckAI"
         },
-        "title": "Safe"
+        "title": "DuckAI"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "logo"
+          "src": "/images/Agentathon/partners/kraken.png",
+          "alt": "Kraken"
         },
-        "title": "Safe"
+        "title": "Kraken"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "logo"
+          "src": "/images/Agentathon/partners/brahma.png",
+          "alt": "Brahma"
         },
-        "title": "Safe"
+        "title": "Brahma"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
-          "alt": "logo"
+          "src": "/images/Agentathon/partners/cowswap.png",
+          "alt": "Cowswap"
         },
-        "title": "Safe"
+        "title": "Cowswap"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/eigenlayer.png",
+          "alt": "EigenLayer"
+        },
+        "title": "EigenLayer"
       }
     ]
   },
@@ -216,49 +265,49 @@
     "items": [
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
+          "src": "/images/Agentathon/partners/safe.png",
           "alt": "logo"
         },
         "title": "Safe"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
+          "src": "/images/Agentathon/partners/safe.png",
           "alt": "logo"
         },
         "title": "Safe"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
+          "src": "/images/Agentathon/partners/safe.png",
           "alt": "logo"
         },
         "title": "Safe"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
+          "src": "/images/Agentathon/partners/safe.png",
           "alt": "logo"
         },
         "title": "Safe"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
+          "src": "/images/Agentathon/partners/safe.png",
           "alt": "logo"
         },
         "title": "Safe"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
+          "src": "/images/Agentathon/partners/safe.png",
           "alt": "logo"
         },
         "title": "Safe"
       },
       {
         "image": {
-          "src": "/images/Agentathon/safe-logo.png",
+          "src": "/images/Agentathon/partners/safe.png",
           "alt": "logo"
         },
         "title": "Safe"
