@@ -505,67 +505,179 @@
     "items": [
       {
         "image": {
-          "src": "/images/Agentathon/judge.png",
-          "alt": "judge"
+          "src": "/images/Agentathon/judges/freysa.png",
+          "alt": "Freysa"
         },
-        "title": "Name",
-        "text": "their role and company"
+        "title": "Freysa",
+        "text": "Sovereign AI Agent, Freysa"
       },
       {
         "image": {
-          "src": "/images/Agentathon/judge.png",
-          "alt": "judge"
+          "src": "/images/Agentathon/judges/nader.png",
+          "alt": "Nader Dabit"
         },
-        "title": "Name",
-        "text": "their role and company"
+        "title": "Nader Dabit",
+        "text": "Director of DevRel, Eigenlayer"
       },
       {
         "image": {
-          "src": "/images/Agentathon/judge.png",
-          "alt": "judge"
+          "src": "/images/Agentathon/judges/doug.png",
+          "alt": "Doug Millet"
         },
-        "title": "Name",
-        "text": "their role and company"
+        "title": "Doug Millet",
+        "text": "Product Manager, Eliza Labs"
       },
       {
         "image": {
-          "src": "/images/Agentathon/judge.png",
-          "alt": "judge"
+          "src": "/images/Agentathon/judges/celeste.png",
+          "alt": "Celeste"
         },
-        "title": "Name",
-        "text": "their role and company"
+        "title": "Celeste",
+        "text": "Head of DevRel, Virtuals"
       },
       {
         "image": {
-          "src": "/images/Agentathon/judge.png",
-          "alt": "judge"
+          "src": "/images/Agentathon/judges/valentin.png",
+          "alt": "Valentin"
         },
-        "title": "Name",
-        "text": "their role and company"
+        "title": "Valentin",
+        "text": "DevEe, Safe"
       },
       {
         "image": {
-          "src": "/images/Agentathon/judge.png",
-          "alt": "judge"
+          "src": "/images/Agentathon/judges/louis.png",
+          "alt": "Louis"
         },
-        "title": "Name",
-        "text": "their role and company"
+        "title": "Louis",
+        "text": "DevRel, Safe"
       },
       {
         "image": {
-          "src": "/images/Agentathon/judge.png",
-          "alt": "judge"
+          "src": "/images/Agentathon/judges/phil.png",
+          "alt": "Phil K"
         },
-        "title": "Name",
-        "text": "their role and company"
+        "title": "Phil K",
+        "text": "Founder, Creator.Bid"
       },
       {
         "image": {
-          "src": "/images/Agentathon/judge.png",
-          "alt": "judge"
+          "src": "/images/Agentathon/judges/fransesco.png",
+          "alt": "Fransesco Andreoli"
         },
-        "title": "Name",
-        "text": "their role and company"
+        "title": "Fransesco Andreoli",
+        "text": "Devrel, Linea"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/naiane.png",
+          "alt": "Naiane Rosa"
+        },
+        "title": "Naiane Rosa",
+        "text": "Senior Software Engineer, Olas"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/bapi.png",
+          "alt": "Bapi"
+        },
+        "title": "Bapi",
+        "text": "Co-Founder and CTO, Brahma"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/nate.png",
+          "alt": "Nate"
+        },
+        "title": "Nate",
+        "text": "Founder, Bitte.AI"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/jeffy.png",
+          "alt": "Jeffy Yu"
+        },
+        "title": "Jeffy Yu",
+        "text": "Founder, Zerebro"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/danielle.png",
+          "alt": "Danielle"
+        },
+        "title": "Danielle",
+        "text": "Founder, HeyAnon"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/parker.png",
+          "alt": "Parker"
+        },
+        "title": "Parker",
+        "text": "Head of Onchain AI, Kraken "
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/gabriel.png",
+          "alt": "Gabriel Fior"
+        },
+        "title": "Gabriel Fior",
+        "text": "LLM Engineer, Gnosis"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/mete.png",
+          "alt": "Mete Gultekin"
+        },
+        "title": "Mete Gultekin",
+        "text": "CEO, VaderAI"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/pierce.png",
+          "alt": "Pierce Hager"
+        },
+        "title": "Pierce Hager",
+        "text": "DevX Product Lead, Optimism"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/daniel.png",
+          "alt": "Daniel Olarte"
+        },
+        "title": "Daniel Olarte",
+        "text": "Head of AI, Celo"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/0xglu.png",
+          "alt": "0xglu"
+        },
+        "title": "0xglu",
+        "text": "Co-Founder, DuckAI"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/seg.png",
+          "alt": "Seg"
+        },
+        "title": "Seg",
+        "text": "Devrel, Sonic"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/konrad.png",
+          "alt": "Konrad Kopp"
+        },
+        "title": "Konrad Kopp",
+        "text": "Co-founder, Rhinestone"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/ernest.png",
+          "alt": "Ernest Oppetit"
+        },
+        "title": "Ernest Oppetit",
+        "text": "Co-founder, Kiln"
       }
     ]
   },
