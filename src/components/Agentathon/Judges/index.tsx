@@ -14,20 +14,19 @@ export default function Judges({ caption, title, items }: BaseBlock) {
         {title}
       </Typography>
       <div className={css.itemsWrapper}>
-        {items &&
-          items.map((item, index) => (
-            <div className={css.itemWrapper} key={index}>
-              <ArrowIcon className={css.arrowIcon} />
-              <div className={css.foreground}>
-                <img src="/images/agentathon/judge-card-shadow.png" className={css.foregroundImage} alt="foreground" />
-              </div>
-              <img src={item.image?.src} className={css.itemImage} alt={item.image?.alt} />
-              <div className={css.itemInfo}>
-                <Typography className={css.itemTitle}>{item.title}</Typography>
-                <Typography className={css.itemDescription}>{item.text}</Typography>
-              </div>
+        {items?.map((item, index) => (
+          <div className={css.itemWrapper} key={index}>
+            <ArrowIcon className={css.arrowIcon} />
+            <div className={css.foreground}>
+              <img src="/images/agentathon/judge-card-shadow.png" className={css.foregroundImage} alt="foreground" />
             </div>
-          ))}
+            {item.image?.src && <img src={item.image.src} className={css.itemImage} alt={item.image.alt} />}
+            <div className={css.itemInfo}>
+              <Typography className={css.itemTitle}>{item.title}</Typography>
+              <Typography className={css.itemDescription}>{item.text}</Typography>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   )
