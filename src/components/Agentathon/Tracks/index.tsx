@@ -80,7 +80,7 @@ export default function Tracks({ caption, title, items, buttons }: BaseBlock) {
           </div>
         </div>
       </div>
-      <ButtonsWrapper buttons={buttons} />
+      <ButtonsWrapper buttons={buttons} mobileDirection="row" />
     </section>
   )
 }
