@@ -3,13 +3,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 160px;
+  padding-top: 120px;
   width: 100%;
 }
 
 .videoWrapper {
   position: relative;
-  height: 864px;
+  height: 732px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,8 +37,8 @@
 }
 
 .image {
-  width: 242px;
-  height: 242px;
+  width: 205px;
+  height: 205px;
   z-index: 1;
 }
 
@@ -47,4 +47,19 @@
   max-width: 1000px;
   height: auto;
   padding-bottom: 20px;
+}
+
+@media (min-width: 900px) {
+  .sectionContainer {
+    padding-top: 160px;
+  }
+
+  .videoWrapper {
+    height: 864px;
+  }
+
+  .image {
+    width: 242px;
+    height: 242px;
+  }
 }
