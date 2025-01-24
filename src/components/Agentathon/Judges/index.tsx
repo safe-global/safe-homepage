@@ -2,6 +2,7 @@ import type { BaseBlock } from '@/components/Home/types'
 import React from 'react'
 import { Typography } from '@mui/material'
 import css from './style.module.css'
+import ArrowIcon from '@/public/images/arrow-out-square-corner.svg'
 
 export default function Judges({ caption, title, items }: BaseBlock) {
   return (
@@ -16,6 +17,7 @@ export default function Judges({ caption, title, items }: BaseBlock) {
         {items &&
           items.map((item, index) => (
             <div className={css.itemWrapper} key={index}>
+              <ArrowIcon className={css.arrowIcon} />
               <div className={css.foreground}>
                 <img src="/images/agentathon/judge-card-shadow.png" className={css.foregroundImage} alt="foreground" />
               </div>

@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 160px;
+  padding-top: 120px;
 }
 
 .title {
@@ -21,7 +21,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
   justify-content: center;
   max-width: 1020px;
 }
@@ -34,12 +34,26 @@
   align-items: center;
   position: relative;
   background-color: white;
-  height: 297px;
+  height: 217px;
+  cursor: pointer;
+}
+
+.arrowIcon {
+  z-index: 2;
+  bottom: 30px;
+  position: absolute;
+  right: 14px;
+  width: 10px;
+  height: 10px;
+}
+
+.arrowIcon path {
+  fill: black;
 }
 
 .itemImage {
-  width: 220px;
-  height: 220px;
+  width: 160px;
+  height: 160px;
   z-index: 1;
   mix-blend-mode: luminosity;
   padding: 8px 8px 0 8px;
@@ -70,11 +84,46 @@
 
 .itemTitle {
   color: black;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 500;
 }
 
 .itemDescription {
   color: rgba(0, 0, 0, 0.7);
-  font-size: 14px;
+  font-size: 10px;
+  margin-top: -12px;
+}
+
+@media (min-width: 900px) {
+  .sectionContainer {
+    padding-top: 160px;
+  }
+
+  .itemsWrapper {
+    gap: 20px;
+  }
+
+  .itemWrapper {
+    height: 288px;
+  }
+
+  .itemImage {
+    width: 220px;
+    height: 220px;
+  }
+
+  .itemTitle {
+    font-size: 16px;
+  }
+
+  .itemDescription {
+    font-size: 14px;
+    margin-top: -6px;
+  }
+
+  .arrowIcon {
+    bottom: 36px;
+    width: 14px;
+    height: 14px;
+  }
 }
