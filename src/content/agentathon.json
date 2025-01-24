@@ -29,7 +29,7 @@
       "src": "/images/Agentathon/prize-amount.png",
       "alt": "Prize amount"
     },
-    "title": "in rewards by top web3 ai projects",
+    "title": "in rewards by top crypto x AI projects",
     "buttons": [
       {
         "text": "Register now",
@@ -182,7 +182,7 @@
       },
       {
         "image": {
-          "src": "/images/Agentathon/partners/bittensor.png",
+          "src": "/images/Agentathon/partners/bitte.png",
           "alt": "Bitte"
         },
         "title": "Bitte"
@@ -265,52 +265,52 @@
     "items": [
       {
         "image": {
-          "src": "/images/Agentathon/partners/safe.png",
-          "alt": "logo"
+          "src": "/images/Agentathon/partners/freysa.png",
+          "alt": "Freysa"
         },
-        "title": "Safe"
+        "title": "Freysa"
       },
       {
         "image": {
-          "src": "/images/Agentathon/partners/safe.png",
-          "alt": "logo"
+          "src": "/images/Agentathon/partners/creatorbid.png",
+          "alt": "Creator.bid"
         },
-        "title": "Safe"
+        "title": "Creator.bid"
       },
       {
         "image": {
-          "src": "/images/Agentathon/partners/safe.png",
-          "alt": "logo"
+          "src": "/images/Agentathon/partners/olas.png",
+          "alt": "Olas"
         },
-        "title": "Safe"
+        "title": "Olas"
       },
       {
         "image": {
-          "src": "/images/Agentathon/partners/safe.png",
-          "alt": "logo"
+          "src": "/images/Agentathon/hatsfinance.png",
+          "alt": "Hats Finance"
         },
-        "title": "Safe"
+        "title": "Hats Finance"
       },
       {
         "image": {
-          "src": "/images/Agentathon/partners/safe.png",
-          "alt": "logo"
+          "src": "/images/Agentathon/partners/bitte.png",
+          "alt": "Bitte.ai"
         },
-        "title": "Safe"
+        "title": "Bitte.ai"
       },
       {
         "image": {
-          "src": "/images/Agentathon/partners/safe.png",
-          "alt": "logo"
+          "src": "/images/Agentathon/partners/vader.png",
+          "alt": "VaderAI"
         },
-        "title": "Safe"
+        "title": "VaderAI"
       },
       {
         "image": {
-          "src": "/images/Agentathon/partners/safe.png",
-          "alt": "logo"
+          "src": "/images/Agentathon/partners/heyanon.png",
+          "alt": "HeyAnon"
         },
-        "title": "Safe"
+        "title": "HeyAnon"
       }
     ],
     "buttons": [
@@ -368,12 +368,12 @@
   {
     "component": "Agentathon/Tracks",
     "caption": "Tracks",
-    "title": "Build across 10+ tracks",
+    "title": "Build across 6 tracks and over 100 prizes",
     "items": [
       {
         "caption": "$67,500",
         "title": "DeFAI",
-        "text": "Agents engaging in DeFi activities",
+        "text": "Agents engaging in advanced DeFi activities",
         "items": [
           {
             "image": {
@@ -385,6 +385,60 @@
             "image": {
               "src": "/images/Agentathon/tracks/bitte.png",
               "alt": "bitte"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/heyanon.png",
+              "alt": "heyanon"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/arbitrum.png",
+              "alt": "arbitrum"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/brahma.png",
+              "alt": "brahma"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/cowswap.png",
+              "alt": "cowswap"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/linea.png",
+              "alt": "linea"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/celo.png",
+              "alt": "celo"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/kraken.png",
+              "alt": "kraken"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/creatorbid.png",
+              "alt": "creatorbid"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/gelato.png",
+              "alt": "gelato"
             }
           }
         ]
@@ -392,18 +446,24 @@
       {
         "caption": "$13,000",
         "title": "Treasury",
-        "text": "Agents managing treasuries through staking, lending, and borrowing",
+        "text": "Agents that optimise treasury management operations",
         "items": [
           {
             "image": {
-              "src": "/images/Agentathon/tracks/sonic.png",
-              "alt": "sonic"
+              "src": "/images/Agentathon/tracks/eliza.png",
+              "alt": "eliza"
             }
           },
           {
             "image": {
-              "src": "/images/Agentathon/tracks/bitte.png",
-              "alt": "bitte"
+              "src": "/images/Agentathon/tracks/kiln.png",
+              "alt": "kiln"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/kraken.png",
+              "alt": "kraken"
             }
           }
         ]
@@ -415,14 +475,14 @@
         "items": [
           {
             "image": {
-              "src": "/images/Agentathon/tracks/sonic.png",
-              "alt": "sonic"
+              "src": "/images/Agentathon/tracks/gnosis.png",
+              "alt": "gnosis"
             }
           },
           {
             "image": {
-              "src": "/images/Agentathon/tracks/bitte.png",
-              "alt": "bitte"
+              "src": "/images/Agentathon/tracks/polymarket.png",
+              "alt": "polymarket"
             }
           }
         ]
@@ -430,18 +490,36 @@
       {
         "caption": "$39,000",
         "title": "AI Advancement",
-        "text": "AI agents with increased autonomy in crypto operations",
+        "text": "AI agent capability enhancements in crypto",
         "items": [
           {
             "image": {
-              "src": "/images/Agentathon/tracks/sonic.png",
-              "alt": "sonic"
+              "src": "/images/Agentathon/tracks/eliza.png",
+              "alt": "eliza"
             }
           },
           {
             "image": {
-              "src": "/images/Agentathon/tracks/bitte.png",
-              "alt": "bitte"
+              "src": "/images/Agentathon/tracks/arbitrum.png",
+              "alt": "arbitrum"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/optimism.png",
+              "alt": "optimism"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/fileverse.png",
+              "alt": "fileverse"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/rhinestone.png",
+              "alt": "rhinestone"
             }
           }
         ]
@@ -453,14 +531,26 @@
         "items": [
           {
             "image": {
-              "src": "/images/Agentathon/tracks/sonic.png",
-              "alt": "sonic"
+              "src": "/images/Agentathon/tracks/linea.png",
+              "alt": "linea"
             }
           },
           {
             "image": {
-              "src": "/images/Agentathon/tracks/bitte.png",
-              "alt": "bitte"
+              "src": "/images/Agentathon/tracks/virtual.png",
+              "alt": "virtual"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/zerebro.png",
+              "alt": "zerebro"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/story.png",
+              "alt": "story"
             }
           }
         ]
@@ -468,18 +558,48 @@
       {
         "caption": "$38,000",
         "title": "Smart Account Tooling",
-        "text": "Enhancing and restricting agent transaction capabilities using Safe smart accounts and modular features",
+        "text": "Enhancing and restricting agent transaction capabilities using Safe smart accounts and modules",
         "items": [
           {
             "image": {
-              "src": "/images/Agentathon/tracks/sonic.png",
-              "alt": "sonic"
+              "src": "/images/Agentathon/tracks/eliza.png",
+              "alt": "eliza"
             }
           },
           {
             "image": {
-              "src": "/images/Agentathon/tracks/bitte.png",
-              "alt": "bitte"
+              "src": "/images/Agentathon/tracks/olas.png",
+              "alt": "olas"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/virtual.png",
+              "alt": "virtual"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/eigen.png",
+              "alt": "eigen"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/duck.png",
+              "alt": "duck"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/rhinestone.png",
+              "alt": "rhinestone"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/openzeppelin.png",
+              "alt": "openzeppelin"
             }
           }
         ]
@@ -501,7 +621,7 @@
   {
     "component": "Agentathon/Judges",
     "caption": "Judges",
-    "title": "Amazing group of people will help you",
+    "title": "Connect with leading AI x Crypto innovators",
     "items": [
       {
         "image": {
@@ -509,7 +629,7 @@
           "alt": "Freysa"
         },
         "title": "Freysa",
-        "text": "Sovereign AI Agent, Freysa"
+        "text": "Sovereign Agent, Freysa"
       },
       {
         "image": {
@@ -521,11 +641,11 @@
       },
       {
         "image": {
-          "src": "/images/Agentathon/judges/doug.png",
-          "alt": "Doug Millet"
+          "src": "/images/Agentathon/judges/eric.png",
+          "alt": "Eric Conner"
         },
-        "title": "Doug Millet",
-        "text": "Product Manager, Eliza Labs"
+        "title": "Eric Conner",
+        "text": "Crypto Investor"
       },
       {
         "image": {
@@ -537,27 +657,27 @@
       },
       {
         "image": {
-          "src": "/images/Agentathon/judges/valentin.png",
-          "alt": "Valentin"
+          "src": "/images/Agentathon/judges/danielle.png",
+          "alt": "Danielle"
         },
-        "title": "Valentin",
-        "text": "DevEe, Safe"
+        "title": "Danielle",
+        "text": "Founder, HeyAnon"
       },
       {
         "image": {
-          "src": "/images/Agentathon/judges/louis.png",
-          "alt": "Louis"
+          "src": "/images/Agentathon/judges/doug.png",
+          "alt": "Doug Millet"
         },
-        "title": "Louis",
-        "text": "DevRel, Safe"
+        "title": "Doug Millet",
+        "text": "Product Manager, Eliza Labs"
       },
       {
         "image": {
-          "src": "/images/Agentathon/judges/phil.png",
-          "alt": "Phil K"
+          "src": "/images/Agentathon/judges/jeffy.png",
+          "alt": "Jeffy Yu"
         },
-        "title": "Phil K",
-        "text": "Founder, Creator.Bid"
+        "title": "Jeffy Yu",
+        "text": "Founder, Zerebro"
       },
       {
         "image": {
@@ -577,11 +697,11 @@
       },
       {
         "image": {
-          "src": "/images/Agentathon/judges/bapi.png",
-          "alt": "Bapi"
+          "src": "/images/Agentathon/judges/louis.png",
+          "alt": "Louis"
         },
-        "title": "Bapi",
-        "text": "Co-Founder and CTO, Brahma"
+        "title": "Louis",
+        "text": "DevEx, Safe"
       },
       {
         "image": {
@@ -593,19 +713,20 @@
       },
       {
         "image": {
-          "src": "/images/Agentathon/judges/jeffy.png",
-          "alt": "Jeffy Yu"
+          "src": "/images/Agentathon/judges/phil.png",
+          "alt": "Phil K"
         },
-        "title": "Jeffy Yu",
-        "text": "Founder, Zerebro"
+        "title": "Phil K",
+        "text": "Founder, Creator.Bid"
       },
+
       {
         "image": {
-          "src": "/images/Agentathon/judges/danielle.png",
-          "alt": "Danielle"
+          "src": "/images/Agentathon/judges/bapi.png",
+          "alt": "Bapi"
         },
-        "title": "Danielle",
-        "text": "Founder, HeyAnon"
+        "title": "Bapi",
+        "text": "Co-Founder and CTO, Brahma"
       },
       {
         "image": {
@@ -631,6 +752,7 @@
         "title": "Mete Gultekin",
         "text": "CEO, VaderAI"
       },
+
       {
         "image": {
           "src": "/images/Agentathon/judges/pierce.png",
@@ -678,6 +800,14 @@
         },
         "title": "Ernest Oppetit",
         "text": "Co-founder, Kiln"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/valentin.png",
+          "alt": "Valentin"
+        },
+        "title": "Valentin",
+        "text": "DevRel, Safe"
       }
     ]
   },
