@@ -1,11 +1,15 @@
 import { Typography } from '@mui/material'
 import css from './style.module.css'
-export default function Card({ title, image }: { title: string; image: { src: string; alt: string } }) {
+import type { BaseBlock } from '@/components/Home/types'
+import ArrowIcon from '@/public/images/arrow-out-square-corner.svg'
+
+export default function Card({ item }: { item: Partial<BaseBlock> }) {
   return (
     <div className={css.cardContainer}>
-      {image && <img src={image.src} alt={image.alt} className={css.image} />}
+      <ArrowIcon className={css.icon} />
+      {item.image?.src && <img src={item.image.src} alt={item.image.alt} className={css.image} />}
       <Typography variant="h5" className={css.title}>
-        {title}
+        {item.title}
       </Typography>
     </div>
   )

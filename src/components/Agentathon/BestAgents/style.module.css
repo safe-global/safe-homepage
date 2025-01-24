@@ -35,6 +35,7 @@
   width: 148px;
   height: 160px;
   gap: 16px;
+  cursor: pointer;
 }
 
 .itemImage {

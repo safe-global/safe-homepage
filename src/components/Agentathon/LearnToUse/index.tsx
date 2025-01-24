@@ -14,10 +14,9 @@ export default function LearnToUse({ title, caption, image, items }: BaseBlock) 
         {title}
       </Typography>
       <div className={css.cardsContainer}>
-        {items &&
-          items.map((item, index) => (
-            <Card key={index} title={item.title as string} image={item.image as { src: string; alt: string }} />
-          ))}
+        {items?.map((item, index) => (
+          <Card key={index} item={item} />
+        ))}
       </div>
     </section>
   )
