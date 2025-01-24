@@ -26,21 +26,28 @@
 .dots:nth-child(1) {
   position: absolute;
   top: -30px;
-  left: 0;
+  left: -70px;
   z-index: 1;
+  width: 140px;
 }
 
 .dots:nth-child(2) {
   display: none;
   position: absolute;
   bottom: -160px;
-  right: 0;
+  right: 0px;
   z-index: 1;
+  width: 209px;
 }
 
 @media (min-width: 900px) {
   .prizeAmount {
     max-width: 480px;
+  }
+
+  .dots:nth-child(1) {
+    width: 209px;
+    left: 0px;
   }
 
   .buttonsWrapper {
