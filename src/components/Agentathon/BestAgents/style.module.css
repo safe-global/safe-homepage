@@ -4,11 +4,12 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding-top: 160px;
+  padding-top: 120px;
 }
 
 .caption {
   color: var(--mui-palette-primary-main);
+  padding-bottom: 40px;
 }
 
 .itemsWrapper {
@@ -41,4 +42,10 @@
   min-height: 80px;
   border-radius: 100%;
   overflow: hidden;
+}
+
+@media (min-width: 900px) {
+  .sectionContainer {
+    padding-top: 160px;
+  }
 }

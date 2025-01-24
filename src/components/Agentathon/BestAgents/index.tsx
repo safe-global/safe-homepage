@@ -7,7 +7,7 @@ import ButtonsWrapper from '../ButtonsWrapper'
 export default function BestAgents({ caption, items, buttons }: BaseBlock) {
   return (
     <section className={css.sectionContainer}>
-      <Typography variant="caption" className={css.caption} pb={5}>
+      <Typography variant="caption" className={css.caption}>
         {caption}
       </Typography>
       <div className={css.itemsWrapper}>

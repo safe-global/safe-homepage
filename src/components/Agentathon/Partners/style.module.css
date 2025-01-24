@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 120px;
+  padding-top: 60px;
   width: 100%;
 }
 
@@ -11,7 +11,7 @@
   color: var(--mui-palette-primary-main);
   font-size: 24px;
   font-weight: 500;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 .itemsWrapper {
@@ -57,5 +57,9 @@
 
   .itemWrapper {
     width: 180px;
+  }
+
+  .caption {
+    padding-bottom: 40px;
   }
 }
