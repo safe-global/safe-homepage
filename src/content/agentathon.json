@@ -260,6 +260,68 @@
     ]
   },
   {
+    "component": "Agentathon/Possibilities",
+    "title": "Safe smart accounts unlock new possibilities for Agents",
+    "items": [
+      {
+        "image": {
+          "src": "/images/Agentathon/possibilities/roles.png",
+          "alt": "Roles"
+        },
+        "title": "Roles"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/possibilities/guards.png",
+          "alt": "Guards"
+        },
+        "title": "Guards"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/possibilities/subaccounts.png",
+          "alt": "Subaccounts"
+        },
+        "title": "Subaccounts"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/possibilities/spendinglimits.png",
+          "alt": "Spending Limits"
+        },
+        "title": "Spending Limits"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/possibilities/multisig.png",
+          "alt": "Multi-sig Setup"
+        },
+        "title": "Multi-sig Setup"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/possibilities/timelocking.png",
+          "alt": "Time Locking"
+        },
+        "title": "Time Locking"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/possibilities/whitelisting.png",
+          "alt": "Protocol Whitelisting"
+        },
+        "title": "Protocol Whitelisting"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/possibilities/automations.png",
+          "alt": "Advanced DeFi Automations"
+        },
+        "title": "Advanced DeFi Automations"
+      }
+    ]
+  },
+  {
     "component": "Agentathon/BestAgents",
     "caption": "The best agents are built on safe",
     "items": [

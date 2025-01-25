@@ -1,0 +1,24 @@
+.sectionContainer {
+  position: relative;
+  overflow: hidden;
+  padding-top: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  text-align: center;
+  max-width: 670px;
+  padding-bottom: 8px;
+}
+
+@media (min-width: 900px) {
+  .sectionContainer {
+    padding-top: 160px;
+  }
+
+  .title {
+    padding-top: 20px;
+  }
+}
