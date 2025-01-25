@@ -7,7 +7,6 @@ import { Typography } from '@mui/material'
 
 const LoopingImages = ({ items }: Partial<BaseBlock>) => {
   const [currentIndex, setCurrentIndex] = React.useState(0)
-  const timer = useRef<NodeJS.Timeout | null>(null)
   const [scope, animate] = useAnimate()
   const [scopeLeft, animateLeft] = useAnimate()
   const [scopeRight, animateRight] = useAnimate()
@@ -22,17 +21,26 @@ const LoopingImages = ({ items }: Partial<BaseBlock>) => {
     if (!items?.length) return
 
     const totalItems = items.length
+    let animationFrameId: number
 
     const animateItems = async () => {
       await Promise.all([
         animate(scope.current, { x: -IMAGE_WIDTH - IMAGE_GAP }, { duration: 0.4, ease: 'easeInOut' }),
-        animateLeft(scopeLeft.current, { rotate: 0, scale: 1, opacity: 1 }, { duration: 0.4, ease: 'easeOut' }),
-        animateRight(scopeRight.current, { rotate: 0, scale: 1, opacity: 1 }, { duration: 0.4, ease: 'easeOut' }),
+        animateLeft(
+          scopeLeft.current,
+          { rotate: 0, scale: 1, opacity: 1 },
+          { duration: 0.4, delay: 0.15, ease: 'easeOut' },
+        ),
+        animateRight(
+          scopeRight.current,
+          { rotate: 0, scale: 1, opacity: 1 },
+          { duration: 0.4, delay: 0.15, ease: 'easeOut' },
+        ),
       ])
 
       setCurrentIndex((prev) => (prev + 1) % totalItems)
 
-      animate(scope.current, { x: 0 }, { duration: 0 })
+      await animate(scope.current, { x: 0 }, { duration: 0 })
 
       await new Promise((resolve) => setTimeout(resolve, 2000))
 
@@ -44,14 +52,18 @@ const LoopingImages = ({ items }: Partial<BaseBlock>) => {
       animateLeft(scopeLeft.current, { rotate: -45 }, { duration: 0 })
       animateRight(scopeRight.current, { rotate: 45 }, { duration: 0 })
 
-      timer.current = setTimeout(animateItems, 700)
+      setTimeout(() => {
+        animationFrameId = requestAnimationFrame(animateItems)
+      }, 700)
     }
 
-    timer.current = setTimeout(animateItems, 2000)
+    setTimeout(() => {
+      animationFrameId = requestAnimationFrame(animateItems)
+    }, 2000)
 
     return () => {
-      if (timer.current) {
-        clearTimeout(timer.current)
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId)
       }
     }
   }, [IMAGE_GAP, IMAGE_WIDTH, animate, animateLeft, animateRight, items, scope, scopeLeft, scopeRight])
