@@ -38,6 +38,10 @@
   cursor: pointer;
 }
 
+.itemWrapper:hover .arrowIcon {
+  transform: rotate(45deg);
+}
+
 .arrowIcon {
   z-index: 2;
   bottom: 30px;
@@ -45,6 +49,7 @@
   right: 14px;
   width: 10px;
   height: 10px;
+  transition: all 0.2s ease-out;
 }
 
 .arrowIcon path {

@@ -18,7 +18,7 @@
       },
       {
         "text": "Learn to build",
-        "href": "https://docs.safe.global",
+        "href": "https://docs.safe.global/home/ai-overview",
         "variant": "link"
       }
     ]
@@ -38,7 +38,7 @@
       },
       {
         "text": "Learn to build",
-        "href": "https://docs.safe.global",
+        "href": "https://docs.safe.global/home/ai-overview",
         "variant": "link"
       }
     ],
@@ -66,196 +66,336 @@
           "src": "/images/Agentathon/partners/eliza.png",
           "alt": "ElizaOS"
         },
-        "title": "ElizaOS"
+        "title": "ElizaOS",
+        "buttons": [
+          {
+            "href": "https://elizaos.ai/"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/virtuals.png",
           "alt": "Virtuals"
         },
-        "title": "Virtuals"
+        "title": "Virtuals",
+        "buttons": [
+          {
+            "href": "https://virtuals.io/"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/optimism.png",
           "alt": "Optimism"
         },
-        "title": "Optimism"
+        "title": "Optimism",
+        "buttons": [
+          {
+            "href": "https://optimism.io/"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/polymarket.png",
           "alt": "Polymarket"
         },
-        "title": "Polymarket"
+        "title": "Polymarket",
+        "buttons": [
+          {
+            "href": "https://polymarket.com/"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/arbitrum.png",
           "alt": "Arbitrum"
         },
-        "title": "Arbitrum"
+        "title": "Arbitrum",
+        "buttons": [
+          {
+            "href": "https://arbitrum.foundation/"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/sonic.png",
           "alt": "Sonic"
         },
-        "title": "Sonic"
+        "title": "Sonic",
+        "buttons": [
+          {
+            "href": "https://soniclabs.com"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/safe.png",
           "alt": "Safe"
         },
-        "title": "Safe"
+        "title": "Safe",
+        "buttons": [
+          {
+            "href": "https://safe.global/"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/vader.png",
           "alt": "VaderAI"
         },
-        "title": "VaderAI"
+        "title": "VaderAI",
+        "buttons": [
+          {
+            "href": "https://vaderai.ai/"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/kiln.png",
           "alt": "Kiln"
         },
-        "title": "Kiln"
+        "title": "Kiln",
+        "buttons": [
+          {
+            "href": "https://www.kiln.fi/"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/story.png",
           "alt": "Story"
         },
-        "title": "Story"
+        "title": "Story",
+        "buttons": [
+          {
+            "href": "https://www.story.foundation/"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/celo.png",
           "alt": "Celo"
         },
-        "title": "Celo"
+        "title": "Celo",
+        "buttons": [
+          {
+            "href": "https://celo.org/"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/fileverse.png",
           "alt": "Fileverse"
         },
-        "title": "Fileverse"
+        "title": "Fileverse",
+        "buttons": [
+          {
+            "href": "https://fileverse.io/"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/openzeppelin.png",
           "alt": "OpenZeppelin"
         },
-        "title": "OpenZeppelin"
+        "title": "OpenZeppelin",
+        "buttons": [
+          {
+            "href": "https://www.openzeppelin.com/"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/linea.png",
           "alt": "Linea"
         },
-        "title": "Linea"
+        "title": "Linea",
+        "buttons": [
+          {
+            "href": "https://linea.build"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/olas.png",
           "alt": "Olas"
         },
-        "title": "Olas"
+        "title": "Olas",
+        "buttons": [
+          {
+            "href": "https://olas.network/"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/gnosis.png",
           "alt": "Gnosis AI"
         },
-        "title": "Gnosis AI"
+        "title": "Gnosis AI",
+        "buttons": [
+          {
+            "href": "https://www.gnosis.io"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/heyanon.png",
           "alt": "HeyAnon"
         },
-        "title": "HeyAnon"
+        "title": "HeyAnon",
+        "buttons": [
+          {
+            "href": "https://heyanon.ai/"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/bitte.png",
           "alt": "Bitte"
         },
-        "title": "Bitte"
+        "title": "Bitte",
+        "buttons": [
+          {
+            "href": "http://www.bitte.ai/"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/freysa.png",
           "alt": "Freysa"
         },
-        "title": "Freysa"
+        "title": "Freysa",
+        "buttons": [
+          {
+            "href": "https://www.freysa.ai/"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/gelato.png",
           "alt": "Gelato"
         },
-        "title": "Gelato"
+        "title": "Gelato",
+        "buttons": [
+          {
+            "href": "https://www.gelato.network/"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/rhinestone.png",
           "alt": "Rhinestone"
         },
-        "title": "Rhinestone"
+        "title": "Rhinestone",
+        "buttons": [
+          {
+            "href": "http://rhinestone.wtf"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/creatorbid.png",
           "alt": "Creator.bid"
         },
-        "title": "Creator.bid"
+        "title": "Creator.bid",
+        "buttons": [
+          {
+            "href": "https://creator.bid/agents"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/zerebro.png",
           "alt": "Zerebro"
         },
-        "title": "Zerebro"
+        "title": "Zerebro",
+        "buttons": [
+          {
+            "href": "https://zerebro.org"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/duckai.png",
           "alt": "DuckAI"
         },
-        "title": "DuckAI"
+        "title": "DuckAI",
+        "buttons": [
+          {
+            "href": "https://duckai.ai"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/kraken.png",
           "alt": "Kraken"
         },
-        "title": "Kraken"
+        "title": "Kraken",
+        "buttons": [
+          {
+            "href": "https://www.kraken.com/"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/brahma.png",
           "alt": "Brahma"
         },
-        "title": "Brahma"
+        "title": "Brahma",
+        "buttons": [
+          {
+            "href": "https://www.brahma.fi/"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/cowswap.png",
           "alt": "Cowswap"
         },
-        "title": "Cowswap"
+        "title": "Cowswap",
+        "buttons": [
+          {
+            "href": "https://cow.fi/"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/eigenlayer.png",
           "alt": "EigenLayer"
         },
-        "title": "EigenLayer"
+        "title": "EigenLayer",
+        "buttons": [
+          {
+            "href": "https://www.eigenlayer.xyz/"
+          }
+        ]
       }
     ]
   },
@@ -330,49 +470,84 @@
           "src": "/images/Agentathon/partners/freysa.png",
           "alt": "Freysa"
         },
-        "title": "Freysa"
+        "title": "Freysa",
+        "buttons": [
+          {
+            "href": "https://www.freysa.ai/"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/creatorbid.png",
           "alt": "Creator.bid"
         },
-        "title": "Creator.bid"
+        "title": "Creator.bid",
+        "buttons": [
+          {
+            "href": "https://creator.bid/agents"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/olas.png",
           "alt": "Olas"
         },
-        "title": "Olas"
+        "title": "Olas",
+        "buttons": [
+          {
+            "href": "https://olas.network/"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/hatsfinance.png",
           "alt": "Hats Finance"
         },
-        "title": "Hats Finance"
+        "title": "Hats Finance",
+        "buttons": [
+          {
+            "href": "https://hats.finance/"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/bitte.png",
           "alt": "Bitte.ai"
         },
-        "title": "Bitte.ai"
+        "title": "Bitte.ai",
+        "buttons": [
+          {
+            "href": "http://www.bitte.ai/"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/vader.png",
           "alt": "VaderAI"
         },
-        "title": "VaderAI"
+        "title": "VaderAI",
+        "buttons": [
+          {
+            "href": "https://vaderai.ai/"
+          }
+        ]
       },
       {
         "image": {
           "src": "/images/Agentathon/partners/heyanon.png",
           "alt": "HeyAnon"
         },
-        "title": "HeyAnon"
+        "title": "HeyAnon",
+        "buttons": [
+          {
+            "href": "https://heyanon.ai/"
+          }
+        ]
       }
     ],
     "buttons": [
@@ -383,7 +558,7 @@
       },
       {
         "text": "Learn to build",
-        "href": "https://docs.safe.global",
+        "href": "https://docs.safe.global/home/ai-overview",
         "variant": "link"
       }
     ]
@@ -402,28 +577,48 @@
         "image": {
           "src": "/images/Agentathon/multisig.png",
           "alt": "multisig"
-        }
+        },
+        "buttons": [
+          {
+            "href": "https://docs.safe.global/home/ai-agent-quickstarts/basic-agent-setup"
+          }
+        ]
       },
       {
         "title": "Human approval for Agent actions",
         "image": {
           "src": "/images/Agentathon/human-approval.png",
           "alt": "human approval"
-        }
+        },
+        "buttons": [
+          {
+            "href": "https://docs.safe.global/home/ai-agent-quickstarts/human-approval"
+          }
+        ]
       },
       {
         "title": "Agents managing DAO treasury",
         "image": {
           "src": "/images/Agentathon/treasury.png",
           "alt": "treasury"
-        }
+        },
+        "buttons": [
+          {
+            "href": "https://docs.safe.global/home/ai-agent-quickstarts/agent-with-spending-limit"
+          }
+        ]
       },
       {
         "title": "Agents trading tokens with Safe",
         "image": {
           "src": "/images/Agentathon/agent-trading.png",
           "alt": "agent trading"
-        }
+        },
+        "buttons": [
+          {
+            "href": "https://docs.safe.global/home/ai-agent-actions/introduction"
+          }
+        ]
       }
     ]
   },
@@ -675,7 +870,7 @@
       },
       {
         "text": "Learn to build",
-        "href": "https://docs.safe.global",
+        "href": "https://docs.safe.global/home/ai-overview",
         "variant": "link"
       }
     ]
@@ -691,7 +886,12 @@
           "alt": "Freysa"
         },
         "title": "Freysa",
-        "text": "Sovereign Agent, Freysa"
+        "text": "Sovereign Agent, Freysa",
+        "buttons": [
+          {
+            "href": "https://x.com/FreysaAI"
+          }
+        ]
       },
       {
         "image": {
@@ -699,7 +899,12 @@
           "alt": "Nader Dabit"
         },
         "title": "Nader Dabit",
-        "text": "Director of DevRel, Eigenlayer"
+        "text": "Director of DevRel, Eigenlayer",
+        "buttons": [
+          {
+            "href": "https://x.com/dabit3"
+          }
+        ]
       },
       {
         "image": {
@@ -707,7 +912,12 @@
           "alt": "Eric Conner"
         },
         "title": "Eric Conner",
-        "text": "Crypto Investor"
+        "text": "Crypto Investor",
+        "buttons": [
+          {
+            "href": ""
+          }
+        ]
       },
       {
         "image": {
@@ -715,7 +925,12 @@
           "alt": "Celeste"
         },
         "title": "Celeste",
-        "text": "Head of DevRel, Virtuals"
+        "text": "Head of DevRel, Virtuals",
+        "buttons": [
+          {
+            "href": "https://x.com/celesteanglm"
+          }
+        ]
       },
       {
         "image": {
@@ -723,7 +938,12 @@
           "alt": "Danielle"
         },
         "title": "Danielle",
-        "text": "Founder, HeyAnon"
+        "text": "Founder, HeyAnon",
+        "buttons": [
+          {
+            "href": "https://x.com/danielesesta"
+          }
+        ]
       },
       {
         "image": {
@@ -731,7 +951,12 @@
           "alt": "Doug Millet"
         },
         "title": "Doug Millet",
-        "text": "Product Manager, Eliza Labs"
+        "text": "Product Manager, Eliza Labs",
+        "buttons": [
+          {
+            "href": "https://x.com/dpmillett"
+          }
+        ]
       },
       {
         "image": {
@@ -739,7 +964,12 @@
           "alt": "Jeffy Yu"
         },
         "title": "Jeffy Yu",
-        "text": "Founder, Zerebro"
+        "text": "Founder, Zerebro",
+        "buttons": [
+          {
+            "href": "https://x.com/jyu_eth"
+          }
+        ]
       },
       {
         "image": {
@@ -747,7 +977,12 @@
           "alt": "Fransesco Andreoli"
         },
         "title": "Fransesco Andreoli",
-        "text": "Devrel, Linea"
+        "text": "Devrel, Linea",
+        "buttons": [
+          {
+            "href": "https://x.com/francescoswiss"
+          }
+        ]
       },
       {
         "image": {
@@ -755,7 +990,12 @@
           "alt": "Naiane Rosa"
         },
         "title": "Naiane Rosa",
-        "text": "Senior Software Engineer, Olas"
+        "text": "Senior Software Engineer, Olas",
+        "buttons": [
+          {
+            "href": "https://olas.network/"
+          }
+        ]
       },
       {
         "image": {
@@ -763,7 +1003,12 @@
           "alt": "Louis"
         },
         "title": "Louis",
-        "text": "DevEx, Safe"
+        "text": "DevEx, Safe",
+        "buttons": [
+          {
+            "href": "https://x.com/LMargotDuclot"
+          }
+        ]
       },
       {
         "image": {
@@ -771,7 +1016,12 @@
           "alt": "Nate"
         },
         "title": "Nate",
-        "text": "Founder, Bitte.AI"
+        "text": "Founder, Bitte.AI",
+        "buttons": [
+          {
+            "href": "https://x.com/NateGeier"
+          }
+        ]
       },
       {
         "image": {
@@ -779,7 +1029,12 @@
           "alt": "Phil K"
         },
         "title": "Phil K",
-        "text": "Founder, Creator.Bid"
+        "text": "Founder, Creator.Bid",
+        "buttons": [
+          {
+            "href": "https://x.com/philism_"
+          }
+        ]
       },
 
       {
@@ -788,7 +1043,12 @@
           "alt": "Bapi"
         },
         "title": "Bapi",
-        "text": "Co-Founder and CTO, Brahma"
+        "text": "Co-Founder and CTO, Brahma",
+        "buttons": [
+          {
+            "href": "https://x.com/BapireddyK"
+          }
+        ]
       },
       {
         "image": {
@@ -796,7 +1056,12 @@
           "alt": "Parker"
         },
         "title": "Parker",
-        "text": "Head of Onchain AI, Kraken "
+        "text": "Head of Onchain AI, Kraken ",
+        "buttons": [
+          {
+            "href": "https://x.com/TheOtherParker"
+          }
+        ]
       },
       {
         "image": {
@@ -804,7 +1069,12 @@
           "alt": "Gabriel Fior"
         },
         "title": "Gabriel Fior",
-        "text": "LLM Engineer, Gnosis"
+        "text": "LLM Engineer, Gnosis",
+        "buttons": [
+          {
+            "href": "https://x.com/TheGabrielFior"
+          }
+        ]
       },
       {
         "image": {
@@ -812,7 +1082,12 @@
           "alt": "Mete Gultekin"
         },
         "title": "Mete Gultekin",
-        "text": "CEO, VaderAI"
+        "text": "CEO, VaderAI",
+        "buttons": [
+          {
+            "href": "http://www.vaderai.ai/"
+          }
+        ]
       },
 
       {
@@ -821,7 +1096,12 @@
           "alt": "Pierce Hager"
         },
         "title": "Pierce Hager",
-        "text": "DevX Product Lead, Optimism"
+        "text": "DevX Product Lead, Optimism",
+        "buttons": [
+          {
+            "href": "https://x.com/piercemyear?lang=en"
+          }
+        ]
       },
       {
         "image": {
@@ -829,7 +1109,12 @@
           "alt": "Daniel Olarte"
         },
         "title": "Daniel Olarte",
-        "text": "Head of AI, Celo"
+        "text": "Head of AI, Celo",
+        "buttons": [
+          {
+            "href": "https://x.com/danolar5"
+          }
+        ]
       },
       {
         "image": {
@@ -837,7 +1122,12 @@
           "alt": "0xglu"
         },
         "title": "0xglu",
-        "text": "Co-Founder, DuckAI"
+        "text": "Co-Founder, DuckAI",
+        "buttons": [
+          {
+            "href": "https://x.com/0xglu"
+          }
+        ]
       },
       {
         "image": {
@@ -845,7 +1135,12 @@
           "alt": "Seg"
         },
         "title": "Seg",
-        "text": "Devrel, Sonic"
+        "text": "Devrel, Sonic",
+        "buttons": [
+          {
+            "href": "https://x.com/0xseg"
+          }
+        ]
       },
       {
         "image": {
@@ -853,7 +1148,12 @@
           "alt": "Konrad Kopp"
         },
         "title": "Konrad Kopp",
-        "text": "Co-founder, Rhinestone"
+        "text": "Co-founder, Rhinestone",
+        "buttons": [
+          {
+            "href": "https://x.com/abstractooor"
+          }
+        ]
       },
       {
         "image": {
@@ -861,7 +1161,12 @@
           "alt": "Ernest Oppetit"
         },
         "title": "Ernest Oppetit",
-        "text": "Co-founder, Kiln"
+        "text": "Co-founder, Kiln",
+        "buttons": [
+          {
+            "href": "https://x.com/ernopp"
+          }
+        ]
       },
       {
         "image": {
@@ -869,7 +1174,12 @@
           "alt": "Valentin"
         },
         "title": "Valentin",
-        "text": "DevRel, Safe"
+        "text": "DevRel, Safe",
+        "buttons": [
+          {
+            "href": "https://x.com/V_Seehausen"
+          }
+        ]
       }
     ]
   },
@@ -887,7 +1197,7 @@
       },
       {
         "text": "Learn to build",
-        "href": "https://docs.safe.global",
+        "href": "https://docs.safe.global/home/ai-overview",
         "variant": "link"
       }
     ]

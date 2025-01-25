@@ -5,12 +5,12 @@ import ArrowIcon from '@/public/images/arrow-out-square-corner.svg'
 
 export default function Card({ item }: { item: Partial<BaseBlock> }) {
   return (
-    <div className={css.cardContainer}>
+    <a href={item.buttons?.[0]?.href} target="_blank" rel="noreferrer noopener" className={css.cardContainer}>
       <ArrowIcon className={css.icon} />
       {item.image?.src && <img src={item.image.src} alt={item.image.alt} className={css.image} />}
       <Typography variant="h5" className={css.title}>
         {item.title}
       </Typography>
-    </div>
+    </a>
   )
 }

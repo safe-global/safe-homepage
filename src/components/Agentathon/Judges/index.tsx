@@ -15,7 +15,13 @@ export default function Judges({ caption, title, items }: BaseBlock) {
       </Typography>
       <div className={css.itemsWrapper}>
         {items?.map((item, index) => (
-          <div className={css.itemWrapper} key={index}>
+          <a
+            href={item.buttons?.[0]?.href}
+            target="_blank"
+            rel="noreferrer noopener"
+            className={css.itemWrapper}
+            key={index}
+          >
             <ArrowIcon className={css.arrowIcon} />
             <div className={css.foreground}>
               <img src="/images/agentathon/judge-card-shadow.png" className={css.foregroundImage} alt="foreground" />
@@ -25,7 +31,7 @@ export default function Judges({ caption, title, items }: BaseBlock) {
               <Typography className={css.itemTitle}>{item.title}</Typography>
               <Typography className={css.itemDescription}>{item.text}</Typography>
             </div>
-          </div>
+          </a>
         ))}
       </div>
     </section>

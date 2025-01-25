@@ -2,7 +2,6 @@ import React from 'react'
 import css from './style.module.css'
 import { Typography } from '@mui/material'
 import type { BaseBlock } from '@/components/Home/types'
-import clsx from 'clsx'
 
 export default function Partners({ caption, items }: BaseBlock) {
   return (
@@ -10,12 +9,18 @@ export default function Partners({ caption, items }: BaseBlock) {
       <Typography className={css.caption}>{caption}</Typography>
       <div className={css.itemsWrapper}>
         {items?.map((item, index) => (
-          <div className={clsx(css.itemWrapper, index === 6 && css.highlighted)} key={index}>
+          <a
+            href={item.buttons?.[0]?.href}
+            target="_blank"
+            rel="noreferrer noopener"
+            className={css.itemWrapper}
+            key={index}
+          >
             {item.image?.src && <img src={item.image.src} className={css.itemImage} alt={item.image.alt} />}
             <Typography variant="body" className={css.itemTitle}>
               {item.title}
             </Typography>
-          </div>
+          </a>
         ))}
       </div>
     </section>

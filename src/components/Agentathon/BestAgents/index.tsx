@@ -12,12 +12,18 @@ export default function BestAgents({ caption, items, buttons }: BaseBlock) {
       </Typography>
       <div className={css.itemsWrapper}>
         {items?.map((item, index) => (
-          <div className={css.itemWrapper} key={index}>
+          <a
+            href={item.buttons?.[0]?.href}
+            target="_blank"
+            rel="noreferrer noopener"
+            className={css.itemWrapper}
+            key={index}
+          >
             {item.image?.src && <img src={item.image.src} className={css.itemImage} alt={item.image.alt} />}
             <Typography variant="body1" className={css.itemTitle}>
               {item.title}
             </Typography>
-          </div>
+          </a>
         ))}
       </div>
       <ButtonsWrapper buttons={buttons} mobileDirection="row" />

@@ -27,6 +27,15 @@
   gap: 10px;
   overflow-x: auto;
   padding-bottom: 10px;
+  padding-right: 40px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.itemsWrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+  width: 0;
+  height: 0;
 }
 
 .gradientOverlay {
