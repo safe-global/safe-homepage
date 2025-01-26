@@ -55,6 +55,8 @@
   padding-bottom: 40px;
   max-width: 670px;
   text-align: center;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .itemWrapper {
@@ -145,5 +147,10 @@
   .scrollContainer {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .title {
+    padding-left: 0;
+    padding-right: 0;
   }
 }

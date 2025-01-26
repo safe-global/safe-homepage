@@ -22,6 +22,8 @@
   max-width: 1156px;
   width: 100%;
   padding-bottom: 40px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .itemWrapper {
@@ -54,5 +56,10 @@
 @media (min-width: 900px) {
   .sectionContainer {
     padding-top: 160px;
+  }
+
+  .itemsWrapper {
+    padding-left: 0;
+    padding-right: 0;
   }
 }

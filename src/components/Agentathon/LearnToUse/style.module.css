@@ -19,6 +19,8 @@
 .title {
   text-align: center;
   max-width: 582px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .cardsContainer {
@@ -34,6 +36,11 @@
     grid-template-columns: repeat(2, 1fr);
     padding: 0;
     width: fit-content;
+  }
+
+  .title {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

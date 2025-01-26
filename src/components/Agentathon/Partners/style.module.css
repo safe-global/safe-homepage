@@ -22,6 +22,8 @@
   align-items: center;
   justify-content: center;
   max-width: 1180px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .itemWrapper {
@@ -35,7 +37,7 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 20px;
   height: 150px;
-  width: 170px;
+  width: 160px;
   cursor: pointer;
   transition: all 0.2s ease-out;
 }
@@ -58,6 +60,11 @@
 
   .itemWrapper {
     width: 180px;
+  }
+
+  .itemsWrapper {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .caption {

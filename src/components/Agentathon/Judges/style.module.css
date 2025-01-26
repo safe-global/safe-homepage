@@ -10,6 +10,8 @@
   text-align: center;
   max-width: 582px;
   padding-bottom: 40px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .caption {
@@ -24,6 +26,8 @@
   gap: 10px;
   justify-content: center;
   max-width: 1020px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .itemWrapper {
@@ -100,12 +104,19 @@
 }
 
 @media (min-width: 900px) {
+  .title {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .sectionContainer {
     padding-top: 160px;
   }
 
   .itemsWrapper {
     gap: 20px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .itemWrapper {
