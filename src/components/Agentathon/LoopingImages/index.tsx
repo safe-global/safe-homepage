@@ -1,81 +1,110 @@
 import React, { useEffect, useRef } from 'react'
-import { motion, useAnimate } from 'framer-motion'
+import { motion, useAnimate, useInView } from 'framer-motion'
 import css from './style.module.css'
 import type { BaseBlock } from '@/components/Home/types'
 import { useIsMediumScreen } from '@/hooks/useMaxWidth'
 import { Typography } from '@mui/material'
 
 const LoopingImages = ({ items }: Partial<BaseBlock>) => {
-  const [currentIndex, setCurrentIndex] = React.useState(0)
-  const [scope, animate] = useAnimate()
-  const [scopeLeft, animateLeft] = useAnimate()
-  const [scopeRight, animateRight] = useAnimate()
-  const containerRef = useRef<HTMLDivElement>(null)
-  const animationFrameIdRef = useRef<number>()
+  const [currentItems, setCurrentItems] = React.useState(items ?? [])
+
+  const [scope] = useAnimate()
+  const [scopeLeftBracket, animateLeftBracket] = useAnimate()
+  const [scopeRightBracket, animateRightBracket] = useAnimate()
+
+  const inView = useInView(scope)
   const isMobile = useIsMediumScreen()
+
+  const containerRef = useRef<HTMLDivElement>(null)
+
   const IMAGE_WIDTH = isMobile ? 50 : 100
   const IMAGE_GAP = isMobile ? 60 : 100
   const MAX_WIDTH = isMobile ? 710 : 1300
-  const VISIBLE_COUNT = isMobile ? 7 : 7
 
-  const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
+  const animationTimeoutRef = useRef<NodeJS.Timeout>()
+  const sleepTimeoutRef = useRef<NodeJS.Timeout>()
+
+  const sleep = (ms: number) => {
+    return new Promise<void>((resolve) => {
+      sleepTimeoutRef.current = setTimeout(resolve, ms)
+    })
+  }
 
   useEffect(() => {
-    if (!items?.length) return
-
-    const totalItems = items.length
-
     const animateItems = async () => {
-      if (!scopeLeft.current || !scopeRight.current || !scope.current) {
+      if (!scopeLeftBracket.current || !scopeRightBracket.current || !inView) {
         return
       }
 
-      await Promise.all([
-        animate(scope.current, { x: -IMAGE_WIDTH - IMAGE_GAP }, { duration: 0.4, ease: 'easeInOut' }),
-        animateLeft(
-          scopeLeft.current,
-          { rotate: 0, scale: 1, opacity: 1 },
-          { duration: 0.4, delay: 0.15, ease: 'easeOut' },
-        ),
-        animateRight(
-          scopeRight.current,
-          { rotate: 0, scale: 1, opacity: 1 },
-          { duration: 0.4, delay: 0.15, ease: 'easeOut' },
-        ),
-      ])
+      let shiftedItem: Partial<BaseBlock> | undefined
 
-      setCurrentIndex((prev) => (prev + 1) % totalItems)
+      setCurrentItems((prev) => {
+        const newItems = [...prev]
+        shiftedItem = newItems.shift()
+        return newItems
+      })
 
-      if (scope.current) {
-        await animate(scope.current, { x: 0 }, { duration: 0 })
+      if (scopeLeftBracket.current) {
+        animateLeftBracket(
+          scopeLeftBracket.current,
+          { rotate: 0, scale: 1, opacity: 1 },
+          { duration: 0.3, delay: 0.15, ease: 'easeOut' },
+        )
       }
+
+      if (scopeRightBracket.current) {
+        animateRightBracket(
+          scopeRightBracket.current,
+          { rotate: 0, scale: 1, opacity: 1 },
+          { duration: 0.3, delay: 0.15, ease: 'easeOut' },
+        )
+      }
+
+      await sleep(100)
+
+      setCurrentItems((prev) => {
+        if (!shiftedItem) return prev
+        const newItems = [...prev]
+        newItems.push(shiftedItem)
+        return newItems
+      })
 
       await sleep(2000)
 
-      if (scopeLeft.current && scopeRight.current) {
+      if (scopeLeftBracket.current && scopeRightBracket.current) {
         await Promise.all([
-          animateLeft(scopeLeft.current, { scale: 0, opacity: 0 }, { duration: 0.2, ease: 'easeIn' }),
-          animateRight(scopeRight.current, { scale: 0, opacity: 0 }, { duration: 0.2, ease: 'easeIn' }),
+          animateLeftBracket(
+            scopeLeftBracket.current,
+            { scale: 0, opacity: 0 },
+            { duration: 0.2, delay: 0.7, ease: 'easeIn' },
+          ),
+          animateRightBracket(
+            scopeRightBracket.current,
+            { scale: 0, opacity: 0 },
+            { duration: 0.2, delay: 0.7, ease: 'easeIn' },
+          ),
         ])
-
-        animateLeft(scopeLeft.current, { rotate: -45 }, { duration: 0 })
-        animateRight(scopeRight.current, { rotate: 45 }, { duration: 0 })
+      }
+      if (scopeLeftBracket.current && scopeRightBracket.current) {
+        animateLeftBracket(scopeLeftBracket.current, { rotate: -45 }, { duration: 0 })
+        animateRightBracket(scopeRightBracket.current, { rotate: 45 }, { duration: 0 })
       }
 
-      await sleep(700)
-      animationFrameIdRef.current = requestAnimationFrame(animateItems)
+      await sleep(1000)
+      animateItems()
     }
 
-    setTimeout(() => {
-      animationFrameIdRef.current = requestAnimationFrame(animateItems)
-    }, 2000)
+    animationTimeoutRef.current = setTimeout(animateItems, 3000)
 
     return () => {
-      if (animationFrameIdRef.current) {
-        cancelAnimationFrame(animationFrameIdRef.current)
+      if (animationTimeoutRef.current) {
+        clearTimeout(animationTimeoutRef.current)
+      }
+      if (sleepTimeoutRef.current) {
+        clearTimeout(sleepTimeoutRef.current)
       }
     }
-  }, [IMAGE_GAP, IMAGE_WIDTH, animate, animateLeft, animateRight, items, scope, scopeLeft, scopeRight])
+  }, [animateLeftBracket, animateRightBracket, inView, scopeLeftBracket, scopeRightBracket])
 
   useEffect(() => {
     const handleResize = () => {
@@ -97,10 +126,6 @@ const LoopingImages = ({ items }: Partial<BaseBlock>) => {
     return () => window.removeEventListener('resize', handleResize)
   }, [IMAGE_GAP, IMAGE_WIDTH, MAX_WIDTH])
 
-  if (!items?.length) return null
-
-  const displayIndices = Array.from({ length: VISIBLE_COUNT + 1 }, (_, i) => (currentIndex + i) % items.length)
-
   return (
     <div
       ref={containerRef}
@@ -111,31 +136,32 @@ const LoopingImages = ({ items }: Partial<BaseBlock>) => {
     >
       <div className={css.titleContainer}>
         <Typography variant="caption" className={css.caption}>
-          {items[displayIndices[3]]?.title}
+          {currentItems[3].title}
         </Typography>
       </div>
 
       <motion.img
         src="/images/Agentathon/possibilities/bracket-left.png"
         initial={{ rotate: -45, scale: 0, opacity: 0 }}
-        ref={scopeLeft}
+        ref={scopeLeftBracket}
         className={css.bracketLeft}
       />
       <motion.img
         src="/images/Agentathon/possibilities/bracket-right.png"
         initial={{ rotate: 45, scale: 0, opacity: 0 }}
-        ref={scopeRight}
+        ref={scopeRightBracket}
         className={css.bracketRight}
       />
 
       <img src="/images/Agentathon/possibilities/glow.png" alt="glow" className={css.glowImage} />
 
       <motion.div ref={scope} className={css.imagesContainer} style={{ gap: IMAGE_GAP }}>
-        {displayIndices.map((itemIndex, i) => (
+        {currentItems.map((item, i) => (
           <motion.img
-            key={`img-${itemIndex}`}
-            src={items[itemIndex]?.image?.src}
-            alt={`img-${itemIndex}`}
+            key={item.image?.src}
+            layout
+            src={item.image?.src}
+            alt={item.title}
             className={css.image}
             style={{
               width: IMAGE_WIDTH,
