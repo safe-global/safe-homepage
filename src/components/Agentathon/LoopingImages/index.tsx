@@ -11,19 +11,25 @@ const LoopingImages = ({ items }: Partial<BaseBlock>) => {
   const [scopeLeft, animateLeft] = useAnimate()
   const [scopeRight, animateRight] = useAnimate()
   const containerRef = useRef<HTMLDivElement>(null)
+  const animationFrameIdRef = useRef<number>()
   const isMobile = useIsMediumScreen()
   const IMAGE_WIDTH = isMobile ? 50 : 100
   const IMAGE_GAP = isMobile ? 60 : 100
   const MAX_WIDTH = isMobile ? 710 : 1300
   const VISIBLE_COUNT = isMobile ? 7 : 7
 
+  const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
+
   useEffect(() => {
     if (!items?.length) return
 
     const totalItems = items.length
-    let animationFrameId: number
 
     const animateItems = async () => {
+      if (!scopeLeft.current || !scopeRight.current || !scope.current) {
+        return
+      }
+
       await Promise.all([
         animate(scope.current, { x: -IMAGE_WIDTH - IMAGE_GAP }, { duration: 0.4, ease: 'easeInOut' }),
         animateLeft(
@@ -40,30 +46,33 @@ const LoopingImages = ({ items }: Partial<BaseBlock>) => {
 
       setCurrentIndex((prev) => (prev + 1) % totalItems)
 
-      await animate(scope.current, { x: 0 }, { duration: 0 })
+      if (scope.current) {
+        await animate(scope.current, { x: 0 }, { duration: 0 })
+      }
 
-      await new Promise((resolve) => setTimeout(resolve, 2000))
+      await sleep(2000)
 
-      await Promise.all([
-        animateLeft(scopeLeft.current, { scale: 0, opacity: 0 }, { duration: 0.2, ease: 'easeIn' }),
-        animateRight(scopeRight.current, { scale: 0, opacity: 0 }, { duration: 0.2, ease: 'easeIn' }),
-      ])
+      if (scopeLeft.current && scopeRight.current) {
+        await Promise.all([
+          animateLeft(scopeLeft.current, { scale: 0, opacity: 0 }, { duration: 0.2, ease: 'easeIn' }),
+          animateRight(scopeRight.current, { scale: 0, opacity: 0 }, { duration: 0.2, ease: 'easeIn' }),
+        ])
 
-      animateLeft(scopeLeft.current, { rotate: -45 }, { duration: 0 })
-      animateRight(scopeRight.current, { rotate: 45 }, { duration: 0 })
+        animateLeft(scopeLeft.current, { rotate: -45 }, { duration: 0 })
+        animateRight(scopeRight.current, { rotate: 45 }, { duration: 0 })
+      }
 
-      setTimeout(() => {
-        animationFrameId = requestAnimationFrame(animateItems)
-      }, 700)
+      await sleep(700)
+      animationFrameIdRef.current = requestAnimationFrame(animateItems)
     }
 
     setTimeout(() => {
-      animationFrameId = requestAnimationFrame(animateItems)
+      animationFrameIdRef.current = requestAnimationFrame(animateItems)
     }, 2000)
 
     return () => {
-      if (animationFrameId) {
-        cancelAnimationFrame(animationFrameId)
+      if (animationFrameIdRef.current) {
+        cancelAnimationFrame(animationFrameIdRef.current)
       }
     }
   }, [IMAGE_GAP, IMAGE_WIDTH, animate, animateLeft, animateRight, items, scope, scopeLeft, scopeRight])
