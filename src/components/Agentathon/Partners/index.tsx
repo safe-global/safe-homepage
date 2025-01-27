@@ -17,7 +17,7 @@ export default function Partners({ caption, items }: BaseBlock) {
             key={index}
           >
             {item.image?.src && <img src={item.image.src} className={css.itemImage} alt={item.image.alt} />}
-            <Typography variant="body" className={css.itemTitle}>
+            <Typography variant="body1" className={css.itemTitle}>
               {item.title}
             </Typography>
           </a>
