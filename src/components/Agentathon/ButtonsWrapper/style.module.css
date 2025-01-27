@@ -1,0 +1,32 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 10;
+}
+
+.wrapper.mobileRow {
+  flex-direction: row;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon {
+  margin-top: 2px;
+  width: 18px;
+  height: 18px;
+}
+
+.icon path {
+  fill: black;
+}
+
+@media (min-width: 900px) {
+  .wrapper {
+    flex-direction: row;
+  }
+}

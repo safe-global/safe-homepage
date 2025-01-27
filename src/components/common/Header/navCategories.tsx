@@ -14,6 +14,7 @@ import HelpCenterIcon from '@/public/images/Header/help-center-icon.svg'
 import GasStationIcon from '@/public/images/Header/gas-station-icon.svg'
 import SafeFoundryIcon from '@/public/images/Header/safe-foundry-icon.svg'
 import DataRoomIcon from '@/public/images/Header/data-room-icon.svg'
+import AgentathonIcon from '@/public/images/Header/agentathon-icon.svg'
 
 export type NavItem = {
   label: string
@@ -73,6 +74,11 @@ export const navCategories: NavCategory[] = [
         label: 'Safe{Foundry}',
         href: AppRoutes.foundry,
         icon: <SafeFoundryIcon />,
+      },
+      {
+        label: 'Agentathon',
+        href: AppRoutes.agentathon,
+        icon: <AgentathonIcon />,
       },
     ],
   },

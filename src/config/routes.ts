@@ -13,6 +13,7 @@ export const AppRoutes = {
   governance: '/governance',
   gasStation: '/gas-station',
   foundry: '/foundry',
+  agentathon: '/ai',
   ecosystem: '/ecosystem',
   disclaimer: '/disclaimer',
   dataroom: '/dataroom',
