@@ -396,6 +396,30 @@
             "href": "https://www.eigenlayer.xyz/"
           }
         ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/avalabs.png",
+          "alt": "Avalabs"
+        },
+        "title": "Avalabs",
+        "buttons": [
+          {
+            "href": "https://www.eigenlayer.xyz/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/enso.png",
+          "alt": "Enso"
+        },
+        "title": "Enso",
+        "buttons": [
+          {
+            "href": "https://fileverse.io/"
+          }
+        ]
       }
     ]
   },
@@ -543,6 +567,18 @@
           "alt": "HeyAnon"
         },
         "title": "HeyAnon",
+        "buttons": [
+          {
+            "href": "https://heyanon.ai/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/heyanon.png",
+          "alt": "Gaib"
+        },
+        "title": "Gaib",
         "buttons": [
           {
             "href": "https://heyanon.ai/"
@@ -948,9 +984,9 @@
       {
         "image": {
           "src": "/images/Agentathon/judges/doug.png",
-          "alt": "Doug Millet"
+          "alt": "Doug Millett"
         },
-        "title": "Doug Millet",
+        "title": "Doug Millett",
         "text": "Product Manager, Eliza Labs",
         "buttons": [
           {
@@ -1178,6 +1214,45 @@
         "buttons": [
           {
             "href": "https://x.com/V_Seehausen"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/connor.png",
+          "alt": "Connor Howe"
+        },
+        "title": "Connor Howe",
+        "text": "CEO, Enso",
+        "buttons": [
+          {
+            "href": "https://x.com/jason_eth"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/sarp.png",
+          "alt": "Sarp"
+        },
+        "title": "Sarp",
+        "text": "Sr. Engineer, Avalabs",
+        "buttons": [
+          {
+            "href": "https://x.com/jason_eth"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/andreas.png",
+          "alt": "Andreas"
+        },
+        "title": "Andreas",
+        "text": "Co-Founder, Fileverse",
+        "buttons": [
+          {
+            "href": "https://x.com/jason_eth"
           }
         ]
       }

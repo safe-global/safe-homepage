@@ -74,7 +74,30 @@ export default function Tracks({ caption, title, items, buttons }: BaseBlock) {
             <div className={css.supportedByLogos}>
               {selectedTrackData?.items?.map((item, index) => {
                 if (!item?.image?.src) return null
-                return <img src={item.image.src} alt={item.image.alt} key={index} className={css.supportedByLogo} />
+                return (
+                  <img
+                    src={item.image.src}
+                    alt={item.image.alt}
+                    key={index}
+                    style={{
+                      height:
+                        item.image.alt === 'fileverse' ||
+                        item.image.alt === 'rhinestone' ||
+                        item.image.alt === 'virtual' ||
+                        item.image.alt === 'zerebro' ||
+                        item.image.alt === 'eigen' ||
+                        item.image.alt === 'duck' ||
+                        item.image.alt === 'olas'
+                          ? 32
+                          : item.image.alt === 'arbitrum' ||
+                            item.image.alt === 'brahma' ||
+                            item.image.alt === 'polymarket'
+                          ? 20
+                          : 16,
+                    }}
+                    className={css.supportedByLogo}
+                  />
+                )
               })}
             </div>
           </div>
