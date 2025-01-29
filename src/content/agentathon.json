@@ -396,6 +396,42 @@
             "href": "https://www.eigenlayer.xyz/"
           }
         ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/avalabs.png",
+          "alt": "Avalabs"
+        },
+        "title": "Avalabs",
+        "buttons": [
+          {
+            "href": "https://www.avalabs.org/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/enso.png",
+          "alt": "Enso"
+        },
+        "title": "Enso",
+        "buttons": [
+          {
+            "href": "https://www.enso.build/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/lit.png",
+          "alt": "Lit Protocol"
+        },
+        "title": "Lit Protocol",
+        "buttons": [
+          {
+            "href": "https://www.litprotocol.com/"
+          }
+        ]
       }
     ]
   },
@@ -548,6 +584,18 @@
             "href": "https://heyanon.ai/"
           }
         ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/gaib.png",
+          "alt": "Gaib"
+        },
+        "title": "Gaib",
+        "buttons": [
+          {
+            "href": "https://www.metalex.tech/"
+          }
+        ]
       }
     ],
     "buttons": [
@@ -635,67 +683,92 @@
           {
             "image": {
               "src": "/images/Agentathon/tracks/sonic.png",
-              "alt": "sonic"
+              "alt": "sonic",
+              "height": "16px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/bitte.png",
-              "alt": "bitte"
+              "alt": "bitte",
+              "height": "16px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/heyanon.png",
-              "alt": "heyanon"
+              "alt": "heyanon",
+              "height": "16px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/arbitrum.png",
-              "alt": "arbitrum"
+              "alt": "arbitrum",
+              "height": "20px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/brahma.png",
-              "alt": "brahma"
+              "alt": "brahma",
+              "height": "20px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/cowswap.png",
-              "alt": "cowswap"
+              "alt": "cowswap",
+              "height": "16px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/linea.png",
-              "alt": "linea"
+              "alt": "linea",
+              "height": "16px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/celo.png",
-              "alt": "celo"
+              "alt": "celo",
+              "height": "16px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/kraken.png",
-              "alt": "kraken"
+              "alt": "kraken",
+              "height": "16px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/creatorbid.png",
-              "alt": "creatorbid"
+              "alt": "creatorbid",
+              "height": "16px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/gelato.png",
-              "alt": "gelato"
+              "alt": "gelato",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/enso.png",
+              "alt": "enso",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/avalanche.png",
+              "alt": "avalanche",
+              "height": "16px"
             }
           }
         ]
@@ -708,19 +781,22 @@
           {
             "image": {
               "src": "/images/Agentathon/tracks/eliza.png",
-              "alt": "eliza"
+              "alt": "eliza",
+              "height": "16px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/kiln.png",
-              "alt": "kiln"
+              "alt": "kiln",
+              "height": "16px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/kraken.png",
-              "alt": "kraken"
+              "alt": "kraken",
+              "height": "16px"
             }
           }
         ]
@@ -733,13 +809,15 @@
           {
             "image": {
               "src": "/images/Agentathon/tracks/gnosis.png",
-              "alt": "gnosis"
+              "alt": "gnosis",
+              "height": "16px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/polymarket.png",
-              "alt": "polymarket"
+              "alt": "polymarket",
+              "height": "24px"
             }
           }
         ]
@@ -752,31 +830,36 @@
           {
             "image": {
               "src": "/images/Agentathon/tracks/eliza.png",
-              "alt": "eliza"
+              "alt": "eliza",
+              "height": "16px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/arbitrum.png",
-              "alt": "arbitrum"
+              "alt": "arbitrum",
+              "height": "26px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/optimism.png",
-              "alt": "optimism"
+              "alt": "optimism",
+              "height": "16px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/fileverse.png",
-              "alt": "fileverse"
+              "alt": "fileverse",
+              "height": "38px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/rhinestone.png",
-              "alt": "rhinestone"
+              "alt": "rhinestone",
+              "height": "32px"
             }
           }
         ]
@@ -789,25 +872,36 @@
           {
             "image": {
               "src": "/images/Agentathon/tracks/linea.png",
-              "alt": "linea"
+              "alt": "linea",
+              "height": "16px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/virtual.png",
-              "alt": "virtual"
+              "alt": "virtual",
+              "height": "32px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/zerebro.png",
-              "alt": "zerebro"
+              "alt": "zerebro",
+              "height": "32px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/story.png",
-              "alt": "story"
+              "alt": "story",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/avalanche.png",
+              "alt": "avalanche",
+              "height": "20px"
             }
           }
         ]
@@ -820,43 +914,57 @@
           {
             "image": {
               "src": "/images/Agentathon/tracks/eliza.png",
-              "alt": "eliza"
+              "alt": "eliza",
+              "height": "16px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/olas.png",
-              "alt": "olas"
+              "alt": "olas",
+              "height": "32px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/virtual.png",
-              "alt": "virtual"
+              "alt": "virtual",
+              "height": "32px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/eigen.png",
-              "alt": "eigen"
+              "alt": "eigen",
+              "height": "32px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/duck.png",
-              "alt": "duck"
+              "alt": "duck",
+              "height": "32px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/rhinestone.png",
-              "alt": "rhinestone"
+              "alt": "rhinestone",
+              "height": "32px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/openzeppelin.png",
-              "alt": "openzeppelin"
+              "alt": "openzeppelin",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/lit.png",
+              "alt": "lit",
+              "height": "16px"
             }
           }
         ]
@@ -948,9 +1056,9 @@
       {
         "image": {
           "src": "/images/Agentathon/judges/doug.png",
-          "alt": "Doug Millet"
+          "alt": "Doug Millett"
         },
-        "title": "Doug Millet",
+        "title": "Doug Millett",
         "text": "Product Manager, Eliza Labs",
         "buttons": [
           {
@@ -1178,6 +1286,58 @@
         "buttons": [
           {
             "href": "https://x.com/V_Seehausen"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/connor.png",
+          "alt": "Connor Howe"
+        },
+        "title": "Connor Howe",
+        "text": "CEO, Enso",
+        "buttons": [
+          {
+            "href": "https://x.com/connor_enso/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/sarp.png",
+          "alt": "Sarp"
+        },
+        "title": "Sarp",
+        "text": "Sr. Engineer, Avalabs",
+        "buttons": [
+          {
+            "href": "https://x.com/satatocom"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/andreas.png",
+          "alt": "Andreas"
+        },
+        "title": "Andreas",
+        "text": "Co-Founder, Fileverse",
+        "buttons": [
+          {
+            "href": "https://x.com/miroyato"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/david.png",
+          "alt": "David"
+        },
+        "title": "David Sneider",
+        "text": "Co-Founder, Lit Protocol",
+        "buttons": [
+          {
+            "href": "https://x.com/davidlsneider"
           }
         ]
       }

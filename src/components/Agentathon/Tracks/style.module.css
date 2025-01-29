@@ -75,7 +75,7 @@
 
 .selectedTrackContainer {
   height: 480px;
-  padding: 30px 30px 30px 30px;
+  padding: 20px 20px 20px 20px;
   border-radius: 8px;
   border: 1px solid var(--mui-palette-border-light);
   background: rgba(255, 255, 255, 0.01);
@@ -138,6 +138,7 @@
   .selectedTrackContainer {
     height: 352px;
     flex-direction: row;
+    padding: 30px 30px 30px 30px;
   }
 
   .supportedByLogos {
