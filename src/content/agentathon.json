@@ -587,7 +587,7 @@
       },
       {
         "image": {
-          "src": "/images/Agentathon/partners/heyanon.png",
+          "src": "/images/Agentathon/gaib.png",
           "alt": "Gaib"
         },
         "title": "Gaib",
@@ -745,6 +745,18 @@
               "src": "/images/Agentathon/tracks/gelato.png",
               "alt": "gelato"
             }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/enso.png",
+              "alt": "enso"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/avalanche.png",
+              "alt": "avalanche"
+            }
           }
         ]
       },
@@ -857,6 +869,12 @@
               "src": "/images/Agentathon/tracks/story.png",
               "alt": "story"
             }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/avalanche.png",
+              "alt": "avalanche"
+            }
           }
         ]
       },
@@ -905,6 +923,12 @@
             "image": {
               "src": "/images/Agentathon/tracks/openzeppelin.png",
               "alt": "openzeppelin"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/lit.png",
+              "alt": "lit"
             }
           }
         ]
