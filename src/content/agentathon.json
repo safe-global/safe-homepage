@@ -405,7 +405,7 @@
         "title": "Avalabs",
         "buttons": [
           {
-            "href": "https://www.eigenlayer.xyz/"
+            "href": "https://www.avalabs.org/"
           }
         ]
       },
@@ -417,7 +417,19 @@
         "title": "Enso",
         "buttons": [
           {
-            "href": "https://fileverse.io/"
+            "href": "https://www.enso.build/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/lit.png",
+          "alt": "Lit Protocol"
+        },
+        "title": "Lit Protocol",
+        "buttons": [
+          {
+            "href": "https://www.litprotocol.com/"
           }
         ]
       }
@@ -581,7 +593,7 @@
         "title": "Gaib",
         "buttons": [
           {
-            "href": "https://heyanon.ai/"
+            "href": "https://www.metalex.tech/"
           }
         ]
       }
@@ -1226,7 +1238,7 @@
         "text": "CEO, Enso",
         "buttons": [
           {
-            "href": "https://x.com/jason_eth"
+            "href": "https://x.com/connor_enso/"
           }
         ]
       },
@@ -1239,7 +1251,7 @@
         "text": "Sr. Engineer, Avalabs",
         "buttons": [
           {
-            "href": "https://x.com/jason_eth"
+            "href": "https://x.com/satatocom"
           }
         ]
       },
@@ -1252,7 +1264,20 @@
         "text": "Co-Founder, Fileverse",
         "buttons": [
           {
-            "href": "https://x.com/jason_eth"
+            "href": "https://x.com/miroyato"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/david.png",
+          "alt": "David"
+        },
+        "title": "David Sneider",
+        "text": "Co-Founder, Lit Protocol",
+        "buttons": [
+          {
+            "href": "https://x.com/davidlsneider"
           }
         ]
       }

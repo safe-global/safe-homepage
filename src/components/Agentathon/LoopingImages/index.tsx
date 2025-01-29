@@ -60,7 +60,7 @@ const LoopingImages = ({ items }: Partial<BaseBlock>) => {
         )
       }
 
-      await sleep(100)
+      await sleep(200)
 
       setCurrentItems((prev) => {
         if (!shiftedItem) return prev
@@ -94,7 +94,7 @@ const LoopingImages = ({ items }: Partial<BaseBlock>) => {
       animateItems()
     }
 
-    animationTimeoutRef.current = setTimeout(animateItems, 1500)
+    animationTimeoutRef.current = setTimeout(animateItems, 500)
 
     return () => {
       if (animationTimeoutRef.current) {
