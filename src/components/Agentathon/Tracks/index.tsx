@@ -26,16 +26,6 @@ const tracksData = [
   },
 ]
 
-const getLogoHeight = (alt: string): number => {
-  if (['fileverse', 'rhinestone', 'virtual', 'zerebro', 'eigen', 'duck', 'olas'].includes(alt)) {
-    return 32
-  }
-  if (['arbitrum', 'brahma', 'polymarket'].includes(alt)) {
-    return 20
-  }
-  return 16
-}
-
 export default function Tracks({ caption, title, items, buttons }: BaseBlock) {
   const [selectedTrack, setSelectedTrack] = useState(0)
   const selectedTrackData = items?.[selectedTrack]
@@ -90,7 +80,7 @@ export default function Tracks({ caption, title, items, buttons }: BaseBlock) {
                     alt={item.image.alt}
                     key={index}
                     style={{
-                      height: getLogoHeight(item.image.alt),
+                      height: item.image.height,
                     }}
                     className={css.supportedByLogo}
                   />
