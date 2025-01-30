@@ -104,7 +104,7 @@
 .selectedTrackText {
   color: rgba(255, 255, 255, 0.3);
   font-size: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 }
 
 .supportedByText {
@@ -132,7 +132,7 @@
   }
 
   .selectedTrackContentWrapper {
-    width: 536px;
+    width: 560px;
   }
 
   .selectedTrackContainer {
