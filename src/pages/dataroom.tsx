@@ -2,6 +2,27 @@ import type { InferGetStaticPropsType, NextPage } from 'next'
 import { DataRoom } from '@/components/DataRoom'
 import { fetchDataRoomStats } from '@/hooks/useSafeDataRoomStats'
 
+// Added due to broken Dune query 3864414 (values correct as of 29.01)
+const DEFAULT_DATA_ROOM_STATS = {
+  tvpToGDPPercentage: 0.16,
+  usdcPercentageStored: 6.8,
+  cryptoPunksStoredPercentage: 9.7,
+  totalVolumeTransferred: 758690000000,
+  onChainTransactionsPercentage: 2.74,
+  tvlSafe: 66000000000,
+  tvlRobinhoodCEX: 14000000000,
+  tvlOKX: 19000000000,
+  tvlBinance: 116000000000,
+  tvlLido: 25000000000,
+  tvlAAVE: 14000000000,
+  tvlEigenLayer: 11000000000,
+  tvlUniswap: 4800000000,
+  lastUpdated: null,
+  annualSwapFees: 15000000,
+  annualStakeFees: 106000,
+  annualisedOutgoingTVP: 2.74,
+}
+
 const DataRoomPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (props) => {
   return <DataRoom {...props} />
 }
@@ -9,7 +30,13 @@ const DataRoomPage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = (
 export async function getStaticProps() {
   const dataRoomStats = await fetchDataRoomStats()
 
-  if (!dataRoomStats) return null
+  if (!dataRoomStats) {
+    return {
+      props: {
+        safeDataRoomStats: DEFAULT_DATA_ROOM_STATS,
+      },
+    }
+  }
 
   const {
     tvp_perc_world_gdp,
