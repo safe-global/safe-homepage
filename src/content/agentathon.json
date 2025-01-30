@@ -135,18 +135,6 @@
       },
       {
         "image": {
-          "src": "/images/Agentathon/partners/safe.png",
-          "alt": "Safe"
-        },
-        "title": "Safe",
-        "buttons": [
-          {
-            "href": "https://safe.global/"
-          }
-        ]
-      },
-      {
-        "image": {
           "src": "/images/Agentathon/partners/vader.png",
           "alt": "VaderAI"
         },
@@ -399,13 +387,13 @@
       },
       {
         "image": {
-          "src": "/images/Agentathon/partners/avalabs.png",
-          "alt": "Avalabs"
+          "src": "/images/Agentathon/partners/avalanche.png",
+          "alt": "Avalanche"
         },
-        "title": "Avalabs",
+        "title": "Avalanche",
         "buttons": [
           {
-            "href": "https://www.avalabs.org/"
+            "href": "https://www.avax.network/"
           }
         ]
       },
@@ -705,7 +693,7 @@
             "image": {
               "src": "/images/Agentathon/tracks/arbitrum.png",
               "alt": "arbitrum",
-              "height": "20px"
+              "height": "28px"
             }
           },
           {
@@ -838,7 +826,7 @@
             "image": {
               "src": "/images/Agentathon/tracks/arbitrum.png",
               "alt": "arbitrum",
-              "height": "26px"
+              "height": "30px"
             }
           },
           {
