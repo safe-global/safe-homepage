@@ -118,7 +118,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  gap: 20px;
+  gap: 18px;
 }
 
 .supportedByLogo {
@@ -142,7 +142,7 @@
   }
 
   .supportedByLogos {
-    gap: 40px;
+    gap: 30px;
   }
 
   .scrollContainer {
