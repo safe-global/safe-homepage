@@ -1017,17 +1017,18 @@
       },
       {
         "image": {
-          "src": "/images/Agentathon/judges/celeste.png",
-          "alt": "Celeste"
+          "src": "/images/Agentathon/judges/erik.png",
+          "alt": "Erik Voorhees"
         },
-        "title": "Celeste",
-        "text": "Head of DevRel, Virtuals",
+        "title": "Erik Voorhees",
+        "text": "Founder, Venice.ai",
         "buttons": [
           {
-            "href": "https://x.com/celesteanglm"
+            "href": "https://x.com/ErikVoorhees"
           }
         ]
       },
+
       {
         "image": {
           "src": "/images/Agentathon/judges/danielle.png",
@@ -1177,7 +1178,7 @@
           "src": "/images/Agentathon/judges/mete.png",
           "alt": "Mete Gultekin"
         },
-        "title": "Mete Gultekin",
+        "title": "Vader",
         "text": "CEO, VaderAI",
         "buttons": [
           {
@@ -1326,6 +1327,110 @@
         "buttons": [
           {
             "href": "https://x.com/davidlsneider"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/everton.png",
+          "alt": "Everton Fraga"
+        },
+        "title": "Everton Fraga",
+        "text": "Sr. Web3 Specialist, AWS",
+        "buttons": [
+          {
+            "href": "https://x.com/evertonfraga"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/christoph.png",
+          "alt": "Christoph Niemann"
+        },
+        "title": "Christoph Niemann",
+        "text": "Sr. Blockchain Architect, AWS",
+        "buttons": [
+          {
+            "href": "https://www.linkedin.com/in/chrisdotn"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/ejaaz.png",
+          "alt": "Ejaaz - Punk7123"
+        },
+        "title": "Ejaaz - Punk7123",
+        "text": "Founder 26CC & Core Contributor AiccelerateDAO",
+        "buttons": [
+          {
+            "href": "https://x.com/cryptopunk7213"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/stepan.png",
+          "alt": "Stepan Gershuni"
+        },
+        "title": "Stepan Gershuni",
+        "text": "Principal, cyber•Fund",
+        "buttons": [
+          {
+            "href": "https://x.com/sgershuni"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/vikas.png",
+          "alt": "Vikas Pandey"
+        },
+        "title": "Vikas Pandey",
+        "text": "Senior Solutions Architect, Kite AI",
+        "buttons": [
+          {
+            "href": "https://x.com/buidloor"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/mike.png",
+          "alt": "Mike McCoy"
+        },
+        "title": "Mike McCoy",
+        "text": "Director of Infrastructure, SEI Foundation",
+        "buttons": [
+          {
+            "href": "https://x.com/emceecoy_"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/apurv.png",
+          "alt": "Apurv Mishra"
+        },
+        "title": "Apurv Mishra",
+        "text": "Co-Founder & CSPO, StakeKit",
+        "buttons": [
+          {
+            "href": "https://x.com/apurvmishra"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/celeste.png",
+          "alt": "Celeste"
+        },
+        "title": "Celeste",
+        "text": "Head of DevRel, Virtuals",
+        "buttons": [
+          {
+            "href": "https://x.com/celesteanglm"
           }
         ]
       }
