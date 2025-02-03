@@ -420,6 +420,79 @@
             "href": "https://www.litprotocol.com/"
           }
         ]
+      },
+
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/aws.png",
+          "alt": "AWS"
+        },
+        "title": "AWS",
+        "buttons": [
+          {
+            "href": "https://aws.amazon.com/web3/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/cyber-fund.png",
+          "alt": "Cyber.Fund"
+        },
+        "title": "Cyber.Fund",
+        "buttons": [
+          {
+            "href": "https://cyber.fund"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/kite-ai.png",
+          "alt": "Kite AI"
+        },
+        "title": "Kite AI",
+        "buttons": [
+          {
+            "href": "https://gokite.ai/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/sei.png",
+          "alt": "SEI"
+        },
+        "title": "SEI",
+        "buttons": [
+          {
+            "href": "https://sei.io"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/stakekit.png",
+          "alt": "Stakekit"
+        },
+        "title": "Stakekit",
+        "buttons": [
+          {
+            "href": "https://www.stakek.it/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/venice.png",
+          "alt": "Venice.ai"
+        },
+        "title": "Venice.ai",
+        "buttons": [
+          {
+            "href": "https://venice.ai/home"
+          }
+        ]
       }
     ]
   },
