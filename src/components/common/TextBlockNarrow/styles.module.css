@@ -1,0 +1,47 @@
+.block a {
+  text-decoration: underline;
+  color: var(--mui-palette-secondary-light);
+}
+
+.block section {
+  overflow-x: auto;
+}
+
+.block table {
+  width: 100%;
+}
+
+.block tr th {
+  text-align: left;
+}
+
+.block tr td {
+  overflow-wrap: break-word;
+}
+
+.block ul {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.block ul li + li {
+  margin-top: 24px;
+}
+
+/* lists inside the collapsible elements */
+.block details {
+  font-style: italic;
+}
+
+.block details > ul {
+  padding-left: revert;
+}
+
+.block details > ul li + li {
+  margin-top: 0;
+}
+
+.block {
+  max-width: 1045px;
+  margin-left: 0;
+}
