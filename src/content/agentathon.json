@@ -7,7 +7,7 @@
   },
   {
     "component": "Agentathon/Hero",
-    "caption": "Feb 3rd - Feb 17th",
+    "caption": "Feb 3rd - Feb 14th",
     "title": "Safe<br /> Agentathon",
     "text": "A new hackathon to build sovereign agents with the best AI x Crypto stacks out there",
     "buttons": [
@@ -1196,9 +1196,9 @@
       {
         "image": {
           "src": "/images/Agentathon/judges/danielle.png",
-          "alt": "Danielle"
+          "alt": "Daniele"
         },
-        "title": "Danielle",
+        "title": "Daniele",
         "text": "Founder, HeyAnon",
         "buttons": [
           {
@@ -1552,7 +1552,7 @@
           "alt": "Vikas Pandey"
         },
         "title": "Vikas Pandey",
-        "text": "Senior Solutions Architect, Kite AI",
+        "text": "Head of Protocol, Kite AI",
         "buttons": [
           {
             "href": "https://x.com/buidloor"
@@ -1595,6 +1595,45 @@
         "buttons": [
           {
             "href": "https://x.com/celesteanglm"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/suhail.png",
+          "alt": "Suhail"
+        },
+        "title": "Suhail Kakar",
+        "text": "Devrel Lead at TAC",
+        "buttons": [
+          {
+            "href": "https://x.com/SuhailKakar"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/javier.png",
+          "alt": "Javier"
+        },
+        "title": "Javier Donoso",
+        "text": "Head of DevRel, Gelato",
+        "buttons": [
+          {
+            "href": "https://x.com/danolar5"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/muttoni.png",
+          "alt": "Muttoni"
+        },
+        "title": "Andrea Muttoni",
+        "text": "Head of DevRel, Story",
+        "buttons": [
+          {
+            "href": "https://x.com/devrelius"
           }
         ]
       }
