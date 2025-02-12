@@ -209,6 +209,12 @@ const text = (
       &quot;<b>powered by SAFE{'{CORE}'}</b>&quot;.
     </p>
 
+    <p>
+      If you are promoting a strictly non-profit and free-entry event regarding Safe Technology, SAFE{'{CORE}'} and/or
+      SAFE
+      {'{WALLET}'}, you may use the Safe Trademarks as a primary brand for the event title.
+    </p>
+
     <h5>
       Rule #4:
       <br />
