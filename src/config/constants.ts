@@ -28,6 +28,7 @@ export const YOUTUBE_LINK = 'https://www.youtube.com/@safeglobal'
 export const MIRROR_LINK = 'https://safe.mirror.xyz'
 export const MIRROR_SUBSCRIBE_LINK = 'https://safe.mirror.xyz/subscribe/embed'
 export const GITHUB_LINK = 'https://github.com/safe-global'
+export const SAFE_MEDIA_KIT_LINK = 'https://safe-global.notion.site/Safe-Media-Kit-35ce7ffc829c4bedbbf828464a1b7c00'
 export const SAFENET_TELEGRAM_LINK = 'https://t.me/+jHGVUd8y1FQxMzJi'
 export const SAFENET_WAITING_LIST_LINK = 'https://wn2n6ocviur.typeform.com/to/I3GDiH2N'
 
