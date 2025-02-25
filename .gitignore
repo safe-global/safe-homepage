@@ -38,3 +38,10 @@ next-env.d.ts
 .idea
 
 .env
+*.vsidx
+.vs/safe-homepage/FileContentIndex/read.lock
+.vs/safe-homepage/v17/.wsuo
+.vs/ProjectSettings.json
+.vs/slnx.sqlite
+.vs/safe-homepage/FileContentIndex/write.lock
+/.vs

@@ -1,0 +1,461 @@
+[
+  {
+    "pageTitle": "Exploring Ethereum's Pectra Upgrade - Safe.global",
+    "description": "The next scheduled upgrade for Ethereum is the Pectra Upgrade - but what will this involve and what does it mean for the future? Read on to find out.",
+    "component": "common/MetaTags"
+  },
+  {
+    "title": "<b>A Milestone in Ethereum&#39;s Evolution</b> and Its Lasting Impact on Blockchain",
+    "text": "The Pectra Upgrade:",
+    "link": {
+      "href": "#intro-section",
+      "title": "Read more"
+    },
+    "component": "PectraUpgrade/Intro"
+  },
+  {
+    "text": "<p>Ethereum is a decentralised blockchain, home to the second most-popular cryptocurrency in the world: Ether (ETH). Ether is not the only <a href='https://cryptorank.io/blockchains/ethereum' target='_blank' rel='nofollow noopener'>cryptocurrency to run on Ethereum</a>, but it is the platform&#39;s native currency. Unlike its competitor Bitcoin, Ethereum is designed as a whole network, hosting other applications as well as financial services. In <a href='https://ethereum.org/en/what-is-ethereum/' target='_blank' rel='nofollow noopener'>their own words</a>, Ethereum users have gone from being companies, developers and investors to also including artists, musicians, writers and gamers.</p><p>First introduced in 2015, this technology has undergone multiple upgrades since its inception, with each aiming to improve the user experience, security or other significant features of the platform. The next scheduled update is the Pectra upgrade, consisting of the Prague (execution layer) and Electra (consensus layer) changes. There&#39;s no fixed date for this release, but experts suggest that Ethereum users can anticipate the changes in Q4 2024 or Q1 2025, which has increased industry talk about what we might expect to see in this rollout.</p><p>In this guide, we take you through historic changes to Ethereum, what we might be able to expect from the Pectra upgrade, and what blockchain could look like in the future.</p>",
+    "id": "intro-section",
+    "container": "containerTinier",
+    "component": "common/TextBlockNarrow"
+  },
+  {
+    "variant": "4-columns",
+    "items": [
+      {
+        "image": {
+          "src": "/images/PectraUpgrade/connection.svg",
+          "alt": "Chapter 1 icon"
+        },
+        "text": "Chapter 01",
+        "title": "A brief timeline of Ethereum upgrades",
+        "link": {
+          "href": "#chapter-one",
+          "title": "Read more"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/PectraUpgrade/settings.svg",
+          "alt": "Chapter 2 icon"
+        },
+        "text": "Chapter 02",
+        "title": "What will be included in the Pectra upgrade?",
+        "link": {
+          "href": "#chapter-two",
+          "title": "Read more"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/PectraUpgrade/chart.svg",
+          "alt": "Chapter 3 icon"
+        },
+        "text": "Chapter 03",
+        "title": "The overall impact the Pectra upgrade will have on Ethereum",
+        "link": {
+          "href": "#chapter-three",
+          "title": "Read more"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/PectraUpgrade/institute.svg",
+          "alt": "Chapter 4 icon"
+        },
+        "text": "Chapter 04",
+        "title": "What are the next steps after the Pectra upgrade?",
+        "link": {
+          "href": "#chapter-four",
+          "title": "Read more"
+        }
+      }
+    ],
+    "component": "PectraUpgrade/ChapterBlock"
+  },
+  {
+    "id": "chapter-one",
+    "caption": "Chapter 01",
+    "title": "A brief timeline of <b>Ethereum upgrades</b>",
+    "text": "<p>In order to understand why the Pectra upgrade is being implemented, it&#39;s first important to understand what has gone before it. Despite being a relatively new platform, Ethereum has experienced plenty of change as it&#39;s become established, with developers learning from user feedback and security advancements in order to stay competitive.</p>",
+    "image": {
+      "src": "/images/PectraUpgrade/ch1-hero.svg",
+      "alt": "Safe round block lines"
+    },
+    "gradient-colour": "dark",
+    "container": "containerShorter",
+    "component": "common/BannerDarkGradientImage"
+  },
+  {
+    "title": "Understanding the layers of Ethereum",
+    "text": "<p>Ethereum is <a href='https://unchainedcrypto.com/ethereum-layers/' target='_blank' rel='nofollow noopener'>split into several layers</a>; the data availability, consensus and execution layers. Having multiple layers rather than one combined allows Ethereum to be highly scalable &#45; an important feature as the platform grows in popularity and needs to be able to handle a larger number of daily actions. The data availability layer ensures that transactions that happen on the Ethereum blockchain are transparent and available to users. The execution layer deals with smart contracts and transactions, whilst the consensus layer handles the enforcement of network rules, such as which transactions should go to the next block.</p><p>The upgrades affect the execution and consensus layers, and follow a specific naming pattern. Execution upgrades since 2021 have been named after previous Devcon locations (a global Ethereum conference), whilst upgrades to the consensus layer have been named after celestial stars. The execution layer follows chronological order, whilst the consensus upgrades are alphabetical.</p>",
+    "component": "common/TextBlockNarrow"
+  },
+  {
+    "container": "containerTiny",
+    "colour": "grey",
+    "component": "PectraUpgrade/Divider"
+  },
+  {
+    "title": "What is an Ethereum Improvement Proposal (EIP)?",
+    "text": "<p><a href='http://Ethereum.org' target='_blank' rel='nofollow noopener'>According to Ethereum.org</a>, Ethereum Improvement Proposals (EIPs) are &#8220;standards specifying potential new features or processes for Ethereum&#8221;. They contain all the information needed for proposed changes, including technical specifications. This allows them to act as a &#8216;source of truth&#8217;; that is rules and framework that need to be followed in order to implement any amendments. Centrally accepted guidelines for writing an EIP ensure that any new EIP follows the same rules as the existing Ethereum network.</p><p>One of the key values of Ethereum is that everyone has the ability to be involved in the development of the platform; therefore, anyone can technically propose an EIP. However, they have to be approved before they can be pushed out. There is a panel of EIP editors who are responsible for this, although anyone from the Ethereum community is able to give their feedback along the way. The <a href='https://www.velvetshark.com/what-are-ethereum-standards-eip-erc-rip-caip' target='_blank' rel='nofollow noopener'>process of creating an EIP</a> is as follows:</p>",
+    "container": "none",
+    "component": "common/TextBlockNarrow"
+  },
+  {
+    "variant": "4-columns",
+    "items": [
+      {
+        "title": "<b>1.</b> Idea",
+        "text": "The unofficial stage, where the individual comes up with an idea for an EIP"
+      },
+      {
+        "title": "<b>2.</b> Draft",
+        "text": "The first written stage of an EIP."
+      },
+      {
+        "title": "<b>3.</b> Review",
+        "text": "The peer review stage."
+      },
+      {
+        "title": "<b>4.</b> Last call",
+        "text": "The final opportunity to review, lasting around 14 days."
+      },
+      {
+        "title": "<b>5.</b> Final",
+        "text": "At this stage, an EIP may only be updated if there is an error or if clarification is needed &#45; it&#39;s not a working idea."
+      },
+      {
+        "title": "<b>6.</b> Stagnant",
+        "text": "The status given if the EIP is inactive or stuck in the draft or review stages."
+      },
+      {
+        "title": "<b>7.</b> Withdrawn",
+        "text": "When an EIP is retracted."
+      },
+      {
+        "title": "<b>8.</b> Living",
+        "text": "When an EIP is continuously updated."
+      }
+    ],
+    "component": "PectraUpgrade/TextBoxGrid"
+  },
+  {
+    "theme": "green",
+    "title": "What are forks?",
+    "text": "<p>Forks are the name given to the <a href='https://ethereum.org/en/history/#:~:text=Forks%20are%20when%20major%20technical%20upgrades%20or%20changes%20need%20to%20be%20made%20to%20the%20network%20%E2%80%93%20they%20typically%20stem%20from%20Ethereum%20Improvement%20Proposals%20(EIPs)%20and%20change%20the%20%22rules%22%20of%20the%20protocol.' target='_blank' rel='nofollow noopener'>major technical upgrades</a> that happen on Ethereum. They usually happen as a result of EIPs, changing the rules that Ethereum users need to follow. Rather than traditional software development, where a new version of the software is rolled out across the platform, Ethereum users must go in and update their software to make sure it meets the new requirements themselves. This is because Ethereum is a decentralised platform, rather than being centrally controlled.</p><p>Forks are usually proposed and agreed well in advance, so that&#39;s no issue with some blocks being produced according to the old rules, whilst some are made to the new rules, at the same time. However, there&#39;s been one exception to this in the history of Ethereum &#45; in July 2016, the platform was hit by an attack, forcing the DAO update. Some people accepted the changes, whereas others didn&#8217;t. This created <a href='https://ethereumclassic.org/' target='_blank' rel='nofollow noopener'>Ethereum Classic</a> (the old/existing chain) and Ethereum (the new one).</p>",
+    "component": "common/TextBlockNarrowFullWidth"
+  },
+  {
+    "title": "Upgrades to the execution layer",
+    "text": "Hard fork <a href='https://ethereum.org/en/history/' target='_blank' rel='nofollow noopener'>upgrades to the execution layer</a> have been as follows:",
+    "timeline": [
+      {
+        "continues": "continues",
+        "items": [
+          {
+            "date": "July 2015",
+            "title": "Genesis/Frontier"
+          },
+          {
+            "date": "March 2016",
+            "title": "Homestead"
+          },
+          {
+            "date": "July 2016",
+            "title": "DAO Fork",
+            "text": "(in response to the <a href='https://www.coindesk.com/learn/understanding-the-dao-attack/' target='_blank' rel='nofollow noopener'>DAO attack</a>)"
+          },
+          {
+            "date": "October 2016",
+            "title": "Tangerine Whistle"
+          },
+          {
+            "date": "November 2016",
+            "title": "Spurious Dragon"
+          },
+          {
+            "date": "October 2017",
+            "title": "Byzantium"
+          }
+        ]
+      },
+      {
+        "continues": "continued",
+        "items": [
+          {
+            "date": "February 2019",
+            "title": "Constantinople"
+          },
+          {
+            "date": "April 2021",
+            "title": "Berlin"
+          },
+          {
+            "date": "August 2021",
+            "title": "London"
+          },
+          {
+            "date": "April 2023",
+            "title": "Shanghai",
+            "text": "(commonly called the Shapella upgrade, as the execution and consensus upgrades were released simultaneously)"
+          },
+          {
+            "date": "March 2024",
+            "title": "Cancun",
+            "text": "(commonly called the Dencun upgrade)",
+            "end": "ending"
+          },
+          {
+            "date": "Date to be confirmed",
+            "title": "Prague",
+            "text": "(now referred to as the Pectra upgrade)",
+            "end": "end"
+          }
+        ]
+      }
+    ],
+    "component": "PectraUpgrade/Timeline"
+  },
+  {
+    "container": "containerTinier",
+    "colour": "grey",
+    "component": "PectraUpgrade/Divider"
+  },
+  {
+    "title": "Upgrades to the consensus layer",
+    "text": "Hard fork <a href='https://ethereum.org/en/history/' target='_blank' rel='nofollow noopener'>upgrades to the consensus layer</a> have been as follows:",
+    "timeline": [
+      {
+        "items": [
+          {
+            "date": "October 2021",
+            "title": "Altair"
+          },
+          {
+            "date": "September 2022",
+            "title": "Bellatrix"
+          },
+          {
+            "date": "September 2022",
+            "title": "Paris",
+            "text": "(also known as The Merge)"
+          },
+          {
+            "date": "April 2023",
+            "title": "Capella",
+            "text": "(commonly called the Shapella upgrade)"
+          },
+          {
+            "date": "March 2024",
+            "title": "Deneb",
+            "text": "(commonly called the Dencun upgrade)",
+            "end": "ending"
+          },
+          {
+            "date": "Date to be confirmed",
+            "title": "Electra",
+            "text": "(now referred to as the Pectra upgrade)",
+            "end": "end"
+          }
+        ]
+      }
+    ],
+    "component": "PectraUpgrade/Timeline"
+  },
+  {
+    "component": "common/BannerDarkGradientImage",
+    "caption": "Chapter 02",
+    "id": "chapter-two",
+    "title": "What will be included in <b>the Pectra upgrade?</b>",
+    "text": "<p>Because the EIPs are discussed and agreed upon by a range of people in the Ethereum community, there&#39;s no concrete list of what will actually be included in the Pectra upgrade. However, there&#39;s a range of features that are likely to be included, with each subject to change if the community feels amends are necessary.</p>",
+    "image": {
+      "src": "/images/PectraUpgrade/ch2-hero.svg",
+      "alt": "Safe round block lines"
+    },
+    "container": "containerShorter",
+    "gradient-colour": "dark"
+  },
+  {
+    "text": "<p>The main focus of the Pectra upgrade seems to be improved security and increased overall efficiency and scalability, all of which will help maintain Ethereum&#39;s place at the forefront of the market. In the future, Ethereum states in its <a href='https://ethereum.org/en/roadmap/' target='_blank' rel='nofollow noopener'>roadmap</a> that it wants to decrease the cost of transactions, increase security, enhance user experience and work towards future proofing the platform &#45; so some changes in these areas are likely in Pectra.</p><p>Let&#39;s examine the properties of the <a href='https://eips.ethereum.org/EIPS/eip-7600' target='_blank' rel='nofollow noopener'>proposed changes.</a></p>",
+    "container": "containerTinier",
+    "component": "common/TextBlockNarrow"
+  },
+  {
+    "container": "containerTinier",
+    "colour": "grey",
+    "component": "PectraUpgrade/Divider"
+  },
+  {
+    "component": "PectraUpgrade/TextItemGridSpacedCards",
+    "title": "Examining the key features",
+    "columnWidth": 6,
+    "elements": [
+      {
+        "group": [
+          {
+            "title": "EEIP-2537: Precompile for BLS12-381 curve operations",
+            "text": "<p>A precompile can be <a href='https://0xhagen.medium.com/wtf-is-a-pre-compile-ddc3ac7442aa' target='_blank' rel='nofollow noopener'>defined as a built-in function</a> &#45; in this case which is used for the smart contracts required as part of Ethereum. By precompiling, Ethereum can improve efficiency and speed, as well as reducing computational overload. Ethereum uses a system called &#8216;gas fees&#8217; to <a href='https://ethereum.org/en/gas/' target='_blank' rel='nofollow noopener'>determine the cost of each transaction</a> &#45; think of it as an energy cost &#45; and having items already packaged up into precompiles reduces computing power and therefore the cost of the transaction.</p><p>This proposed <a href='https://eips.ethereum.org/EIPS/eip-2537' target='_blank' rel='nofollow noopener'>EIP-2537</a> precompile will deal specifically with the <a href='https://hackmd.io/@benjaminion/bls12-381' target='_blank' rel='nofollow noopener'>BLS12-381 curve operations</a> &#45; a pairing-friendly elliptic curve that enables short digital signatures. This will also enhance multi-party computation (MPC).</p>"
+          }
+        ]
+      },
+      {
+        "group": [
+          {
+            "title": "EIP-2935: Save historical block hashes in state",
+            "text": "<p>This EIP would mean that historical block hashes are saved directly in the blockchain&#39;s state, in special storage slots. A <a href='https://www.investopedia.com/terms/h/hash.asp' target='_blank' rel='nofollow noopener'>hash remains the same size</a>, regardless of the size of the input, and cannot be reverse-engineered, making them more secure. Retrieving historical block hashes is time-consuming, and uses a lot of resources. Storing them in state aims to improve Ethereum&#39;s efficiency. Additionally, it improves the security of Ethereum, as it&#39;s easier to verify and validate the blockchain.</p><p><a href='https://eips.ethereum.org/EIPS/eip-2935' target='_blank' rel='nofollow noopener'>EIP-2935</a> is a move towards statelessness in Ethereum.</p>"
+          }
+        ]
+      },
+      {
+        "group": [
+          {
+            "title": "EIP-6110: Supply validator deposits on chain",
+            "text": "<p>This EIP refers to Ethereum&#39;s proof-of-stake (PoS) mechanism, which was activated in 2022. Ethererum moved to this model rather than the previous proof-of-work architecture, because PoS is &#8220;<a href='https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/' target='_blank' rel='nofollow noopener'>more secure, less energy-intensive and better for implementing new scaling solutions</a>&#8221;.</p><p><a href='https://eips.ethereum.org/EIPS/eip-6110' target='_blank' rel='nofollow noopener'>EIP-6110</a> would require validators to place an amount of ETH as a deposit in order to participate in the consensus process, which would be handled natively on the blockchain. As a result, these transactions would gain the same transparency and validity that Ethereum is known for. It can also simply provide a better user experience, as everything is handled in one place.</p>"
+          }
+        ]
+      },
+      {
+        "group": [
+          {
+            "title": "EIP-7002: Execution layer triggerable exits",
+            "text": "<p>A change that impacts the way that validators manage their staked ETH, <a href='https://eips.ethereum.org/EIPS/eip-7002' target='_blank' rel='nofollow noopener'>EIP-7002</a> will allow for automated exits when certain conditions are met, on the execution layer. Currently, validators have two keys, one of which is &#8216;active&#8217; and the other which is &#8216;cold&#8217; (the difference being the level of access and action available). This means that in situations without the active key &#45; whether that&#39;s because of the relationship setup or because the active key is lost &#45; there can be issues with withdrawing funds.</p><p>EIP-7002 will change this, triggering withdrawals based on execution layer credentials, removing the need for manual intervention. As well as making life easier for validators thanks to reduced manual tasks, it can potentially improve flexibility and efficiency.</p>"
+          }
+        ]
+      },
+      {
+        "group": [
+          {
+            "title": "EIP-7251: Increase the MAX_EFFECTIVE_BALANCE",
+            "text": "<p>Currently, the maximum balance per validator on Ethereum is 32 ETH. The <a href='https://eips.ethereum.org/EIPS/eip-7251' target='_blank' rel='nofollow noopener'>EIP-7251</a> proposal would raise this to 2,048 ETH, whilst keeping the minimum balance at 32 ETH. The current setup means that multiple validators are required for large amounts of ETH, promoting decentralisation.</p><p>However, the changes are slated for inclusion in the Pectra upgrade in an attempt to improve efficiency and reduce the overall number of validators needed (saving both time and energy). It can also help validators consolidate their ETH, increasing their rewards as a result of a larger balance, rather than lots of small pots.</p>"
+          }
+        ]
+      },
+      {
+        "group": [
+          {
+            "title": "EIP-7549: Move committee index outside Attestation",
+            "text": "<p><a href='https://eips.ethereum.org/EIPS/eip-7549' target='_blank' rel='nofollow noopener'>EIP-7549</a> proposes separating the committee index field from the attestation process. This change would improve efficiency, as well as making it easier to make changes and upgrades in the future, thanks to a more modular approach.</p>"
+          },
+          {
+            "title": "EIP-7594: PeerDAS &#45; Peer Data Availability Sampling",
+            "text": "<p>This EIP introduces a new feature to Ethereum, called PeerDAS (Data Availability Sampling). This allows the system to verify that data is available without having to download it all, and is a key part of Ethereum&#39;s scaling plans. Additionally, by running regular checks, <a href='https://eips.ethereum.org/EIPS/eip-7594' target='_blank' rel='nofollow noopener'>EIP-7594</a> means that issues can be identified early on, potentially before they cause difficulties in the integrity of the blockchain.</p>"
+          }
+        ]
+      },
+      {
+        "group": [
+          {
+            "title": "EIP-7685: General purpose execution layer requests",
+            "text": "<p>This change discusses the relationship between the execution layer and the consensus layer, with <a href='https://eips.ethereum.org/EIPS/eip-7685' target='_blank' rel='nofollow noopener'>EIP-7685</a> providing a framework for storing contact-triggered requests. The purpose of this is to create a more secure system and remove the amount of manual intervention.</p>"
+          },
+          {
+            "title": "EIP-7702: Set EOA accounts code for one transaction",
+            "text": "<p>This feature allows EOA (externally owned accounts) to have a code associated with them for a single transaction. This means that regular wallets will be able to become smart contract wallets on a temporary basis, improving the experience for the user. <a href='https://eips.ethereum.org/EIPS/eip-7702' target='_blank' rel='nofollow noopener'>EIP-7702</a> will also allow transactions to be batched together, rather than all having to be completed individually, as well as some other <a ref='https://blog.web3auth.io/eip-7702-explained-how-it-works-and-everything-you-need-to-know/' target='_blank' rel='nofollow noopener'>sponsorship and privilege de-escalation benefits</a>.</p>"
+          }
+        ]
+      },
+      {
+        "group": [
+          {
+            "title": "EIP-7692 (Meta EIP bundle)",
+            "text": "<p><a href='https://eips.ethereum.org/EIPS/eip-7692' target='_blank' rel='nofollow noopener'>EIP-7692</a> is a mega bundle of 11 smaller EIPs:</p><ul><li><a href='https://eips.ethereum.org/EIPS/eip-663' target='_blank' rel='nofollow noopener'>EIP-663</a>: SWAPN, DUPN and EXCHANGE instructions</li><li><a href='https://eips.ethereum.org/EIPS/eip-3540' target='_blank' rel='nofollow noopener'>EIP-3540</a>: EOF &#45; EVM Object Format v1</li><li><a href='https://eips.ethereum.org/EIPS/eip-3670' target='_blank' rel='nofollow noopener'>EIP-3670</a>: EOF &#45; Code validation</li><li><a href='https://eips.ethereum.org/EIPS/eip-4200' target='_blank' rel='nofollow noopener'>EIP-4200</a>: EOF &#45; Static relative jumps</li><li><a href='https://eips.ethereum.org/EIPS/eip-4750' target='_blank' rel='nofollow noopener'>EIP-4750</a>: EOF &#45; Functions</li><li><a href='https://eips.ethereum.org/EIPS/eip-5450' target='_blank' rel='nofollow noopener'>EIP-5450</a>: EOF &#45; Stack validation</li><li><a href='https://eips.ethereum.org/EIPS/eip-6206' target='_blank' rel='nofollow noopener'>EIP-6206</a>: EOF &#45; JUMPF and non-returning functions</li><li><a href='https://eips.ethereum.org/EIPS/eip-7069' target='_blank' rel='nofollow noopener'>EIP-7069</a>: Revamped CALL instructions</li><li><a href='https://eips.ethereum.org/EIPS/eip-7480' target='_blank' rel='nofollow noopener'>EIP-7480</a>: EOF &#45; Data section access instructions</li><li><a href='https://eips.ethereum.org/EIPS/eip-7620' target='_blank' rel='nofollow noopener'>EIP-7620</a>: EOF Contract creation</li><li><a href='https://eips.ethereum.org/EIPS/eip-7698' target='_blank' rel='nofollow noopener'>EIP-7698</a>: EOF &#45; Creation transaction</li></ul><p>Collectively, these features are focused on the EVM (Ethereum Virtual Machine) Object Format (EOF). The <a href='https://ethereum.org/en/developers/docs/evm/' target='_blank' rel='nofollow noopener'>EVM is defined as</a> &#8220;a decentralised virtual environment that executes code consistently and securely across all Ethereum nodes&#8221;. These features all aim to improve the overall experience of the EVM, boosting efficiency and security of smart contracts.</p>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "container": "containerTinier",
+    "colour": "grey",
+    "component": "PectraUpgrade/Divider"
+  },
+  {
+    "component": "PectraUpgrade/TextItemGridSpacedCards",
+    "title": "Features that may be included",
+    "text": "As well as the changes that are likely to make it into the Pectra upgrade, there are some other EIPs that are being considered for inclusion, but haven&#8217;t yet made the cut into the core list.",
+    "columnWidth": 6,
+    "elements": [
+      {
+        "group": [
+          {
+            "title": "RIP-7212: Precompile for secp256r1 Curve support",
+            "text": "<p>Previously called EIP-7212, this improvement has now become a RIP &#45; a <a href='https://github.com/ethereum/RIPs' target='_blank' rel='nofollow noopener'>Rollup Improvement Proposal</a>. RIPs are optional. The focus of RIP-7212 is creating a precompiled contract for the secp256r1 curve, increasing efficiency and reducing computational costs in the same way that EIP-2537 does, just for a different area.</p>"
+          },
+          {
+            "title": "EIP-7623: Increase calldata cost",
+            "text": "<p>Calldata is the data sent along with a smart contract transaction in Ethereum, which is measured in a number of bytes, variable in length. Currently, Ethereum allows for large blocks up to 2.8 MB &#45; but the average size is 125 KB. <a href='https://eips.ethereum.org/EIPS/eip-7623' target='_blank' rel='nofollow noopener'>EIP-7623</a> proposes to reduce the maximum calldata block size, so that the network is less congested and more efficient use of resources is encouraged. This won&#8217;t affect the average user, as their activities will still fall well within even the reduced limit. </p>"
+          }
+        ]
+      },
+      {
+        "group": [
+          {
+            "title": "EIP-7547: Inclusion lists",
+            "text": "<p>One of the key values of blockchain technology is transparency. However, in the current situation, around <a href='https://eips.ethereum.org/EIPS/eip-7547' target='_blank' rel='nofollow noopener'>95% of blocks aren&#8217;t actually built by the proposer</a> &#45; rather they&#8217;re outsourced to specialist builders in order to boost maximal extractable value (MEV). This means that the proposer isn&#8217;t able to decide which transactions are included in their blocks. Currently, the way to combat this is for the proposer to build the block themselves.</p><p>EIP-7547 aims to create a way to ensure that transactions are included, using an inclusion list mechanism so that the proposer can specify what they want. This increases transparency, but also security, reducing the risk of censorship or manipulation.</p>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "component": "common/BannerDarkGradientImage",
+    "caption": "Chapter 03",
+    "id": "chapter-three",
+    "title": "<b>The overall impact</b> the Pectra upgrade will have on Ethereum",
+    "text": "<p>The Pectra upgrade aims to push Ethereum forward, building on what is already an incredibly popular platform, with over <b>279 million unique ETH wallets worldwide</b>. Whilst some people only use the platform as a way to store ETH, others are diving into the full potential of Ethereum, creating apps and collecting NFTs (non-fungible tokens).</p>",
+    "image": {
+      "src": "/images/PectraUpgrade/ch3-hero.svg",
+      "alt": "Safe round block lines"
+    },
+    "container": "containerShorter",
+    "gradient-colour": "dark"
+  },
+  {
+    "text": "<p>This highly anticipated upgrade will look to please both developers and users, increasing the scalability, security and user experience of Ethereum. These changes will lay the groundwork for further development in the future, showing just what the platform might be capable of in years to come. Whilst not every EIP will impact every person, or every action, Pectra is a significant set of changes.</p>",
+    "container": "containerTinier",
+    "component": "common/TextBlockNarrow"
+  },
+  {
+    "container": "containerTinier",
+    "colour": "grey",
+    "component": "PectraUpgrade/Divider"
+  },
+  {
+    "title": "What effect will Pectra have on the value of Ethereum?",
+    "text": "<p>There&#39;s no guarantee on what impact the Pectra upgrade will have on ETH prices &#45; it all depends on whether the consensus is that the changes have actually made improvements or not.</p><p>Looking long-term, Pectra will give an indication of whether investors can be confident in Ethereum as it grows, as many of the changes are focused on improving efficiency and scalability. In summary, it&#39;s impossible to predict the impact the upgrades will have on ETH price &#45; but if the changes are well-received, it could certainly be a vote of confidence.</p>",
+    "container": "containerTinier",
+    "component": "common/TextBlockNarrow"
+  },
+  {
+    "component": "common/BannerDarkGradientImage",
+    "caption": "Chapter 04",
+    "id": "chapter-four",
+    "title": "<b>What are the next steps</b> after the Pectra upgrade?",
+    "text": "<p>Because technology is always evolving, the next upgrade after Pectra has already been planned. It will bring together the Osaka changes on the execution layer and the Fulu updates on the consensus layer, creating the Fusaka upgrade, expected to release towards the end of 2025.</p>",
+    "image": {
+      "src": "/images/PectraUpgrade/ch4-hero.svg",
+      "alt": "Safe round block lines"
+    },
+    "container": "containerShorter",
+    "gradient-colour": "dark"
+  },
+  {
+    "text": "<p>Whilst the contents of this next upgrade are yet to be finalised, some Ethereum enthusiasts suggest that it will include work on &#8216;verkle trees&#8217; (the word for vector commitment and merkle trees combined), a critical <a href='https://ethereum.org/en/roadmap/verkle-trees/' target='_blank' rel='nofollow noopener'>step towards statelessness</a>. This suggestion was reinforced by Vitalik Buterin, the co-founder of Ethereum, who <a href='https://x.com/VitalikButerin/status/1759365739671412841?ref=bankless.ghost.io' target='_blank' rel='nofollow noopener'>posted on X</a> on 18th February 2024, saying:</p><div><p>&#8220;I&#8217;m really looking forward to Verkle trees. They will enable statelessness validator clients, which can allow staking nodes to run with near-zero hard disk space and sync nearly instantly &#45; far better solo staking UX. Also good for user-facing light clients.&#8221;</p></div><p>However, until Pectra is confirmed and released, the exact contents of Fusaka are likely to remain as speculation.</p>",
+    "container": "containerTinier",
+    "component": "common/TextBlockNarrow"
+  },
+  {
+    "component": "common/BannerDarkGradientImage",
+    "caption": "Chapter 05",
+    "id": "chapter-five",
+    "title": "<b>Useful Links</b>",
+    "container": "containerShorter",
+    "text": "<p>With the contents of Pectra still up for discussion, any Ethereum enthusiast will want to keep up-to-date with the latest changes. Some useful links for doing so are:</p><br><p><a href='https://eips.ethereum.org/EIPS/eip-7600' target='_blank' rel='nofollow noopener'>Meta EIP information for Pectra <svg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M16.2889 13.3916C16.2889 13.6361 16.4889 13.8361 16.7333 13.8361H24.7867C25.66 13.8361 26.1689 14.345 26.1689 15.1828V23.2716C26.1689 23.5161 26.3689 23.7161 26.6133 23.7161H28.56C28.8044 23.7161 29.0044 23.5161 29.0044 23.2716V13.825C29.0022 13.5694 28.9289 13.3894 28.7467 13.2072L26.8267 11.2872C26.6444 11.105 26.4267 10.9961 26.1711 10.9961H16.7311C16.4867 10.9983 16.2867 11.1983 16.2867 11.4428V13.3916H16.2889Z' fill='white'/><path d='M11.1282 27.4987L12.5047 28.8752C12.6783 29.0487 12.9597 29.0487 13.1333 28.8752L26.6516 15.3569C26.8252 15.1833 26.8252 14.9019 26.6516 14.7283L25.2751 13.3518C25.1015 13.1783 24.8201 13.1783 24.6465 13.3518L11.1282 26.8701C10.9547 27.0437 10.9547 27.3251 11.1282 27.4987Z' fill='white'/></svg></a></p><p><a href='https://ethereum.org/en/roadmap/' target='_blank' rel='nofollow noopener'>Ethereum roadmap <svg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M16.2889 13.3916C16.2889 13.6361 16.4889 13.8361 16.7333 13.8361H24.7867C25.66 13.8361 26.1689 14.345 26.1689 15.1828V23.2716C26.1689 23.5161 26.3689 23.7161 26.6133 23.7161H28.56C28.8044 23.7161 29.0044 23.5161 29.0044 23.2716V13.825C29.0022 13.5694 28.9289 13.3894 28.7467 13.2072L26.8267 11.2872C26.6444 11.105 26.4267 10.9961 26.1711 10.9961H16.7311C16.4867 10.9983 16.2867 11.1983 16.2867 11.4428V13.3916H16.2889Z' fill='white'/><path d='M11.1282 27.4987L12.5047 28.8752C12.6783 29.0487 12.9597 29.0487 13.1333 28.8752L26.6516 15.3569C26.8252 15.1833 26.8252 14.9019 26.6516 14.7283L25.2751 13.3518C25.1015 13.1783 24.8201 13.1783 24.6465 13.3518L11.1282 26.8701C10.9547 27.0437 10.9547 27.3251 11.1282 27.4987Z' fill='white'/></svg></a></p><p><a href='https://ethereum.org/en/history/' target='_blank' rel='nofollow noopener'>History of Ethereum <svg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M16.2889 13.3916C16.2889 13.6361 16.4889 13.8361 16.7333 13.8361H24.7867C25.66 13.8361 26.1689 14.345 26.1689 15.1828V23.2716C26.1689 23.5161 26.3689 23.7161 26.6133 23.7161H28.56C28.8044 23.7161 29.0044 23.5161 29.0044 23.2716V13.825C29.0022 13.5694 28.9289 13.3894 28.7467 13.2072L26.8267 11.2872C26.6444 11.105 26.4267 10.9961 26.1711 10.9961H16.7311C16.4867 10.9983 16.2867 11.1983 16.2867 11.4428V13.3916H16.2889Z' fill='white'/><path d='M11.1282 27.4987L12.5047 28.8752C12.6783 29.0487 12.9597 29.0487 13.1333 28.8752L26.6516 15.3569C26.8252 15.1833 26.8252 14.9019 26.6516 14.7283L25.2751 13.3518C25.1015 13.1783 24.8201 13.1783 24.6465 13.3518L11.1282 26.8701C10.9547 27.0437 10.9547 27.3251 11.1282 27.4987Z' fill='white'/></svg></a></p><p><a href='https://verkle.info/?ref=bankless.ghost.io' target='_blank' rel='nofollow noopener'>Information on Verkle Trees <svg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M16.2889 13.3916C16.2889 13.6361 16.4889 13.8361 16.7333 13.8361H24.7867C25.66 13.8361 26.1689 14.345 26.1689 15.1828V23.2716C26.1689 23.5161 26.3689 23.7161 26.6133 23.7161H28.56C28.8044 23.7161 29.0044 23.5161 29.0044 23.2716V13.825C29.0022 13.5694 28.9289 13.3894 28.7467 13.2072L26.8267 11.2872C26.6444 11.105 26.4267 10.9961 26.1711 10.9961H16.7311C16.4867 10.9983 16.2867 11.1983 16.2867 11.4428V13.3916H16.2889Z' fill='white'/><path d='M11.1282 27.4987L12.5047 28.8752C12.6783 29.0487 12.9597 29.0487 13.1333 28.8752L26.6516 15.3569C26.8252 15.1833 26.8252 14.9019 26.6516 14.7283L25.2751 13.3518C25.1015 13.1783 24.8201 13.1783 24.6465 13.3518L11.1282 26.8701C10.9547 27.0437 10.9547 27.3251 11.1282 27.4987Z' fill='white'/></svg></a></p>",
+    "image": {
+      "src": "/images/PectraUpgrade/ch5-hero.svg",
+      "alt": "Safe round block lines"
+    },
+    "gradient-colour": "dark"
+  }
+]

@@ -1,0 +1,114 @@
+.container {
+    margin-top: 0;
+    margin-bottom: 150px;
+}
+
+.scroll {
+    margin: 0 auto;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+    position: relative;
+    bottom: -40px;
+    cursor: pointer;
+}
+
+    .scroll span {
+        color: var(--mui-palette-primary-main);
+    }
+
+.container:hover .scroll {
+    opacity: 1;
+    animation: bounce 1s;
+}
+
+.scroll::after {
+    content: '';
+    display: block;
+    background-image: url('/images/angle-down-primary.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+}
+
+.video {
+    max-width: 90%;
+    height: auto;
+}
+
+.coreImage {
+    width: 450px;
+    height: auto;
+}
+
+.hero {   
+    position: relative;
+}
+
+.hero svg {
+    position: absolute;
+    top: calc(50% + 40px);
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.greenRadial {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(18, 255, 128, 0.50) 0%, rgba(18, 146, 77, 0.50) 40.5%, rgba(18, 19, 18, 0.00) 100%);
+    z-index: -2;
+}
+
+@media (min-width: 600px) {
+    .container {
+        padding-top: 30px;
+        margin-bottom: 300px;
+    }
+
+    .container h1 {
+        font-size: 69px;
+        line-height: 74px;
+    }
+
+    .container h3 {
+        font-size: 48px;
+        line-height: 56px;
+    }
+}
+
+@keyframes bounce {
+    from, to {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .hero img {
+        padding-right: 20px;
+    }
+
+    .hero svg {
+        width: 100%;
+        padding-right: 50px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .hero {
+        margin: auto
+    }
+ 
+    .hero img {
+        padding-right: 0px;
+    }
+
+    .hero svg {
+        padding-right: 0px;
+    }
+}
