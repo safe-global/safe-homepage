@@ -123,7 +123,7 @@
       },
       {
         "title": "<b>5.</b> Final",
-        "text": "At this stage, an EIP may only be updated if there is an error or if clarification is needed &#45; it&#39;s not a working idea."
+        "text": "At this stage, an EIP may only be updated if there is an error or if clarification is needed - it's not a working idea."
       },
       {
         "title": "<b>6.</b> Stagnant",
@@ -338,7 +338,7 @@
             "text": "<p><a href='https://eips.ethereum.org/EIPS/eip-7549' target='_blank' rel='nofollow noopener'>EIP-7549</a> proposes separating the committee index field from the attestation process. This change would improve efficiency, as well as making it easier to make changes and upgrades in the future, thanks to a more modular approach.</p>"
           },
           {
-            "title": "EIP-7594: PeerDAS &#45; Peer Data Availability Sampling",
+            "title": "EIP-7594: PeerDAS - Peer Data Availability Sampling",
             "text": "<p>This EIP introduces a new feature to Ethereum, called PeerDAS (Data Availability Sampling). This allows the system to verify that data is available without having to download it all, and is a key part of Ethereum&#39;s scaling plans. Additionally, by running regular checks, <a href='https://eips.ethereum.org/EIPS/eip-7594' target='_blank' rel='nofollow noopener'>EIP-7594</a> means that issues can be identified early on, potentially before they cause difficulties in the integrity of the blockchain.</p>"
           }
         ]
@@ -373,7 +373,7 @@
   {
     "component": "PectraUpgrade/TextItemGridSpacedCards",
     "title": "Features that may be included",
-    "text": "As well as the changes that are likely to make it into the Pectra upgrade, there are some other EIPs that are being considered for inclusion, but haven&#8217;t yet made the cut into the core list.",
+    "text": "As well as the changes that are likely to make it into the Pectra upgrade, there are some other EIPs that are being considered for inclusion, but haven't yet made the cut into the core list.",
     "columnWidth": 6,
     "elements": [
       {
