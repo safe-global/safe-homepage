@@ -7,7 +7,7 @@
   },
   {
     "component": "Agentathon/Hero",
-    "caption": "Feb 3rd - Feb 17th",
+    "caption": "Feb 3rd - Feb 14th",
     "title": "Safe<br /> Agentathon",
     "text": "A new hackathon to build sovereign agents with the best AI x Crypto stacks out there",
     "buttons": [
@@ -130,18 +130,6 @@
         "buttons": [
           {
             "href": "https://soniclabs.com"
-          }
-        ]
-      },
-      {
-        "image": {
-          "src": "/images/Agentathon/partners/safe.png",
-          "alt": "Safe"
-        },
-        "title": "Safe",
-        "buttons": [
-          {
-            "href": "https://safe.global/"
           }
         ]
       },
@@ -396,6 +384,115 @@
             "href": "https://www.eigenlayer.xyz/"
           }
         ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/avalanche.png",
+          "alt": "Avalanche"
+        },
+        "title": "Avalanche",
+        "buttons": [
+          {
+            "href": "https://www.avax.network/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/enso.png",
+          "alt": "Enso"
+        },
+        "title": "Enso",
+        "buttons": [
+          {
+            "href": "https://www.enso.build/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/lit.png",
+          "alt": "Lit Protocol"
+        },
+        "title": "Lit Protocol",
+        "buttons": [
+          {
+            "href": "https://www.litprotocol.com/"
+          }
+        ]
+      },
+
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/aws.png",
+          "alt": "AWS"
+        },
+        "title": "AWS",
+        "buttons": [
+          {
+            "href": "https://aws.amazon.com/web3/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/cyber-fund.png",
+          "alt": "Cyber.Fund"
+        },
+        "title": "Cyber.Fund",
+        "buttons": [
+          {
+            "href": "https://cyber.fund"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/kite-ai.png",
+          "alt": "Kite AI"
+        },
+        "title": "Kite AI",
+        "buttons": [
+          {
+            "href": "https://gokite.ai/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/sei.png",
+          "alt": "SEI"
+        },
+        "title": "SEI",
+        "buttons": [
+          {
+            "href": "https://sei.io"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/stakekit.png",
+          "alt": "Stakekit"
+        },
+        "title": "Stakekit",
+        "buttons": [
+          {
+            "href": "https://www.stakek.it/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/venice.png",
+          "alt": "Venice.ai"
+        },
+        "title": "Venice.ai",
+        "buttons": [
+          {
+            "href": "https://venice.ai/home"
+          }
+        ]
       }
     ]
   },
@@ -548,6 +645,18 @@
             "href": "https://heyanon.ai/"
           }
         ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/gaib.png",
+          "alt": "Gaib"
+        },
+        "title": "Gaib",
+        "buttons": [
+          {
+            "href": "https://www.metalex.tech/"
+          }
+        ]
       }
     ],
     "buttons": [
@@ -635,67 +744,113 @@
           {
             "image": {
               "src": "/images/Agentathon/tracks/sonic.png",
-              "alt": "sonic"
+              "alt": "sonic",
+              "height": "16px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/bitte.png",
-              "alt": "bitte"
+              "alt": "bitte",
+              "height": "16px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/heyanon.png",
-              "alt": "heyanon"
+              "alt": "heyanon",
+              "height": "16px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/arbitrum.png",
-              "alt": "arbitrum"
+              "alt": "arbitrum",
+              "height": "28px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/brahma.png",
-              "alt": "brahma"
+              "alt": "brahma",
+              "height": "20px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/cowswap.png",
-              "alt": "cowswap"
-            }
-          },
-          {
-            "image": {
-              "src": "/images/Agentathon/tracks/linea.png",
-              "alt": "linea"
+              "alt": "cowswap",
+              "height": "16px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/celo.png",
-              "alt": "celo"
+              "alt": "celo",
+              "height": "16px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/kraken.png",
-              "alt": "kraken"
+              "alt": "kraken",
+              "height": "16px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/creatorbid.png",
-              "alt": "creatorbid"
+              "alt": "creatorbid",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/linea.png",
+              "alt": "linea",
+              "height": "16px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/gelato.png",
-              "alt": "gelato"
+              "alt": "gelato",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/enso.png",
+              "alt": "enso",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/avalanche.png",
+              "alt": "avalanche",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/aws.png",
+              "alt": "aws",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/cyber-fund.png",
+              "alt": "cyber",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/kite-ai.png",
+              "alt": "kite",
+              "height": "18px"
             }
           }
         ]
@@ -708,19 +863,36 @@
           {
             "image": {
               "src": "/images/Agentathon/tracks/eliza.png",
-              "alt": "eliza"
+              "alt": "eliza",
+              "height": "16px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/kiln.png",
-              "alt": "kiln"
+              "alt": "kiln",
+              "height": "16px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/kraken.png",
-              "alt": "kraken"
+              "alt": "kraken",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/aws.png",
+              "alt": "aws",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/stakekit.png",
+              "alt": "stakekit",
+              "height": "26px"
             }
           }
         ]
@@ -733,13 +905,22 @@
           {
             "image": {
               "src": "/images/Agentathon/tracks/gnosis.png",
-              "alt": "gnosis"
+              "alt": "gnosis",
+              "height": "16px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/polymarket.png",
-              "alt": "polymarket"
+              "alt": "polymarket",
+              "height": "24px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/aws.png",
+              "alt": "aws",
+              "height": "16px"
             }
           }
         ]
@@ -751,32 +932,65 @@
         "items": [
           {
             "image": {
-              "src": "/images/Agentathon/tracks/eliza.png",
-              "alt": "eliza"
+              "src": "/images/Agentathon/tracks/rhinestone.png",
+              "alt": "rhinestone",
+              "height": "32px"
             }
           },
           {
             "image": {
-              "src": "/images/Agentathon/tracks/arbitrum.png",
-              "alt": "arbitrum"
+              "src": "/images/Agentathon/tracks/stack.png",
+              "alt": "logo",
+              "height": "32px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/optimism.png",
-              "alt": "optimism"
+              "alt": "optimism",
+              "height": "12px"
             }
           },
           {
             "image": {
-              "src": "/images/Agentathon/tracks/fileverse.png",
-              "alt": "fileverse"
+              "src": "/images/Agentathon/tracks/arbitrum.png",
+              "alt": "arbitrum",
+              "height": "30px"
             }
           },
           {
             "image": {
-              "src": "/images/Agentathon/tracks/rhinestone.png",
-              "alt": "rhinestone"
+              "src": "/images/Agentathon/tracks/eliza.png",
+              "alt": "eliza",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/aws.png",
+              "alt": "aws",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/cyber-fund.png",
+              "alt": "cyber",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/sei.png",
+              "alt": "sei",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/venice.png",
+              "alt": "venice",
+              "height": "32px"
             }
           }
         ]
@@ -788,26 +1002,51 @@
         "items": [
           {
             "image": {
-              "src": "/images/Agentathon/tracks/linea.png",
-              "alt": "linea"
-            }
-          },
-          {
-            "image": {
-              "src": "/images/Agentathon/tracks/virtual.png",
-              "alt": "virtual"
-            }
-          },
-          {
-            "image": {
-              "src": "/images/Agentathon/tracks/zerebro.png",
-              "alt": "zerebro"
+              "src": "/images/Agentathon/tracks/avalanche.png",
+              "alt": "avalanche",
+              "height": "20px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/story.png",
-              "alt": "story"
+              "alt": "story",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/zerebro.png",
+              "alt": "zerebro",
+              "height": "32px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/virtual.png",
+              "alt": "virtual",
+              "height": "32px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/linea.png",
+              "alt": "linea",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/aws.png",
+              "alt": "aws",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/venice.png",
+              "alt": "venice",
+              "height": "32px"
             }
           }
         ]
@@ -819,44 +1058,65 @@
         "items": [
           {
             "image": {
-              "src": "/images/Agentathon/tracks/eliza.png",
-              "alt": "eliza"
-            }
-          },
-          {
-            "image": {
-              "src": "/images/Agentathon/tracks/olas.png",
-              "alt": "olas"
-            }
-          },
-          {
-            "image": {
-              "src": "/images/Agentathon/tracks/virtual.png",
-              "alt": "virtual"
-            }
-          },
-          {
-            "image": {
-              "src": "/images/Agentathon/tracks/eigen.png",
-              "alt": "eigen"
-            }
-          },
-          {
-            "image": {
-              "src": "/images/Agentathon/tracks/duck.png",
-              "alt": "duck"
-            }
-          },
-          {
-            "image": {
-              "src": "/images/Agentathon/tracks/rhinestone.png",
-              "alt": "rhinestone"
+              "src": "/images/Agentathon/tracks/lit.png",
+              "alt": "lit",
+              "height": "16px"
             }
           },
           {
             "image": {
               "src": "/images/Agentathon/tracks/openzeppelin.png",
-              "alt": "openzeppelin"
+              "alt": "openzeppelin",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/rhinestone.png",
+              "alt": "rhinestone",
+              "height": "32px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/duck.png",
+              "alt": "duck",
+              "height": "32px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/eigen.png",
+              "alt": "eigen",
+              "height": "32px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/virtual.png",
+              "alt": "virtual",
+              "height": "32px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/olas.png",
+              "alt": "olas",
+              "height": "32px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/eliza.png",
+              "alt": "eliza",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/aws.png",
+              "alt": "aws",
+              "height": "16px"
             }
           }
         ]
@@ -921,23 +1181,24 @@
       },
       {
         "image": {
-          "src": "/images/Agentathon/judges/celeste.png",
-          "alt": "Celeste"
+          "src": "/images/Agentathon/judges/erik.png",
+          "alt": "Erik Voorhees"
         },
-        "title": "Celeste",
-        "text": "Head of DevRel, Virtuals",
+        "title": "Erik Voorhees",
+        "text": "Founder, Venice.ai",
         "buttons": [
           {
-            "href": "https://x.com/celesteanglm"
+            "href": "https://x.com/ErikVoorhees"
           }
         ]
       },
+
       {
         "image": {
           "src": "/images/Agentathon/judges/danielle.png",
-          "alt": "Danielle"
+          "alt": "Daniele"
         },
-        "title": "Danielle",
+        "title": "Daniele",
         "text": "Founder, HeyAnon",
         "buttons": [
           {
@@ -948,9 +1209,9 @@
       {
         "image": {
           "src": "/images/Agentathon/judges/doug.png",
-          "alt": "Doug Millet"
+          "alt": "Doug Millett"
         },
-        "title": "Doug Millet",
+        "title": "Doug Millett",
         "text": "Product Manager, Eliza Labs",
         "buttons": [
           {
@@ -1081,7 +1342,7 @@
           "src": "/images/Agentathon/judges/mete.png",
           "alt": "Mete Gultekin"
         },
-        "title": "Mete Gultekin",
+        "title": "Vader",
         "text": "CEO, VaderAI",
         "buttons": [
           {
@@ -1178,6 +1439,201 @@
         "buttons": [
           {
             "href": "https://x.com/V_Seehausen"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/connor.png",
+          "alt": "Connor Howe"
+        },
+        "title": "Connor Howe",
+        "text": "CEO, Enso",
+        "buttons": [
+          {
+            "href": "https://x.com/connor_enso/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/sarp.png",
+          "alt": "Sarp"
+        },
+        "title": "Sarp",
+        "text": "Sr. Engineer, Avalabs",
+        "buttons": [
+          {
+            "href": "https://x.com/satatocom"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/andreas.png",
+          "alt": "Andreas"
+        },
+        "title": "Andreas",
+        "text": "Co-Founder, Fileverse",
+        "buttons": [
+          {
+            "href": "https://x.com/miroyato"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/david.png",
+          "alt": "David"
+        },
+        "title": "David Sneider",
+        "text": "Co-Founder, Lit Protocol",
+        "buttons": [
+          {
+            "href": "https://x.com/davidlsneider"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/everton.png",
+          "alt": "Everton Fraga"
+        },
+        "title": "Everton Fraga",
+        "text": "Sr. Web3 Specialist, AWS",
+        "buttons": [
+          {
+            "href": "https://x.com/evertonfraga"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/christoph.png",
+          "alt": "Christoph Niemann"
+        },
+        "title": "Christoph Niemann",
+        "text": "Sr. Blockchain Architect, AWS",
+        "buttons": [
+          {
+            "href": "https://www.linkedin.com/in/chrisdotn"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/ejaaz.png",
+          "alt": "Ejaaz - Punk7123"
+        },
+        "title": "Ejaaz - Punk7123",
+        "text": "Founder 26CC & Core Contributor AiccelerateDAO",
+        "buttons": [
+          {
+            "href": "https://x.com/cryptopunk7213"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/stepan.png",
+          "alt": "Stepan Gershuni"
+        },
+        "title": "Stepan Gershuni",
+        "text": "Principal, cyber•Fund",
+        "buttons": [
+          {
+            "href": "https://x.com/sgershuni"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/vikas.png",
+          "alt": "Vikas Pandey"
+        },
+        "title": "Vikas Pandey",
+        "text": "Head of Protocol, Kite AI",
+        "buttons": [
+          {
+            "href": "https://x.com/buidloor"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/mike.png",
+          "alt": "Mike McCoy"
+        },
+        "title": "Mike McCoy",
+        "text": "Director of Infrastructure, SEI Foundation",
+        "buttons": [
+          {
+            "href": "https://x.com/emceecoy_"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/apurv.png",
+          "alt": "Apurv Mishra"
+        },
+        "title": "Apurv Mishra",
+        "text": "Co-Founder & CSPO, StakeKit",
+        "buttons": [
+          {
+            "href": "https://x.com/apurvmishra"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/celeste.png",
+          "alt": "Celeste"
+        },
+        "title": "Celeste",
+        "text": "Head of DevRel, Virtuals",
+        "buttons": [
+          {
+            "href": "https://x.com/celesteanglm"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/suhail.png",
+          "alt": "Suhail"
+        },
+        "title": "Suhail Kakar",
+        "text": "Devrel Lead at TAC",
+        "buttons": [
+          {
+            "href": "https://x.com/SuhailKakar"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/javier.png",
+          "alt": "Javier"
+        },
+        "title": "Javier Donoso",
+        "text": "Head of DevRel, Gelato",
+        "buttons": [
+          {
+            "href": "https://x.com/danolar5"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/muttoni.png",
+          "alt": "Muttoni"
+        },
+        "title": "Andrea Muttoni",
+        "text": "Head of DevRel, Story",
+        "buttons": [
+          {
+            "href": "https://x.com/devrelius"
           }
         ]
       }

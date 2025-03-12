@@ -25,7 +25,7 @@
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
-  max-width: 1020px;
+  max-width: 1220px;
   padding-left: 16px;
   padding-right: 16px;
 }
@@ -35,7 +35,6 @@
   border-radius: 14px;
   overflow: hidden;
   flex-direction: column;
-  align-items: center;
   position: relative;
   background-color: white;
   height: 217px;
@@ -48,7 +47,7 @@
 
 .arrowIcon {
   z-index: 2;
-  bottom: 30px;
+  bottom: 34px;
   position: absolute;
   right: 14px;
   width: 10px;
@@ -70,10 +69,11 @@
 
 .itemInfo {
   display: flex;
-  padding: 8px 0 0 8px;
+  padding: 2px 0 0 8px;
   flex-direction: column;
   width: 100%;
   align-items: flex-start;
+  max-width: 140px;
 }
 
 .foreground {
@@ -100,7 +100,8 @@
 .itemDescription {
   color: rgba(0, 0, 0, 0.7);
   font-size: 10px;
-  margin-top: -12px;
+  margin-top: -6px;
+  line-height: 112%;
 }
 
 @media (min-width: 900px) {
@@ -120,7 +121,7 @@
   }
 
   .itemWrapper {
-    height: 288px;
+    height: 292px;
   }
 
   .itemImage {
@@ -128,13 +129,18 @@
     height: 220px;
   }
 
+  .itemInfo {
+    padding: 6px 0 0 8px;
+    max-width: 180px;
+  }
+
   .itemTitle {
     font-size: 16px;
   }
 
   .itemDescription {
-    font-size: 14px;
-    margin-top: -6px;
+    font-size: 13px;
+    margin-top: -2px;
   }
 
   .arrowIcon {

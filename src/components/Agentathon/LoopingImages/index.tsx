@@ -60,7 +60,7 @@ const LoopingImages = ({ items }: Partial<BaseBlock>) => {
         )
       }
 
-      await sleep(100)
+      await sleep(200)
 
       setCurrentItems((prev) => {
         if (!shiftedItem) return prev
@@ -69,7 +69,7 @@ const LoopingImages = ({ items }: Partial<BaseBlock>) => {
         return newItems
       })
 
-      await sleep(2000)
+      await sleep(1000)
 
       if (scopeLeftBracket.current && scopeRightBracket.current) {
         await Promise.all([
@@ -90,11 +90,11 @@ const LoopingImages = ({ items }: Partial<BaseBlock>) => {
         animateRightBracket(scopeRightBracket.current, { rotate: 45 }, { duration: 0 })
       }
 
-      await sleep(1000)
+      await sleep(500)
       animateItems()
     }
 
-    animationTimeoutRef.current = setTimeout(animateItems, 3000)
+    animationTimeoutRef.current = setTimeout(animateItems, 500)
 
     return () => {
       if (animationTimeoutRef.current) {
