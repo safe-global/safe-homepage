@@ -7,7 +7,7 @@ import css from './styles.module.css'
 
 const CounterContainer = dynamic(() => import('./CounterContainer'))
 
-const TRANSACTIONS_ON_CHAIN_PERCENTAGE_FALLBACK = 1.75
+const TRANSACTIONS_ON_CHAIN_PERCENTAGE_FALLBACK = 0.0265
 
 const TransactionsOnChain = ({ text, link }: BaseBlock) => {
   const { onChainTransactionsPercentage } = useSafeDataRoomStats()
