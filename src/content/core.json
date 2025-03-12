@@ -81,13 +81,6 @@
           "alt": "Antenna"
         },
         "title": "Co-marketing of product and partnership"
-      },
-      {
-        "image": {
-          "src": "/images/pump-gradient.svg",
-          "alt": "Gas pump"
-        },
-        "title": "Access to our</br><a href=\"/gas-station\">Gas Station program</a>"
       }
     ],
     "component": "common/UspBlock"
