@@ -2,7 +2,7 @@ import type { InferGetStaticPropsType, NextPage } from 'next'
 import client from '@/lib/contentful'
 import { Wallet } from '@/components/Wallet'
 import type { TypeBaseBlockSkeleton } from '@/contentful/types'
-import { fetchDataRoomStats } from '@/hooks/useSafeDataRoomStats'
+import { fetchDataRoomStats } from '@/lib/fetchDataRoomStats'
 import { fetchTotalBalanceUsd } from '@/lib/fetchTotalBalanceUsd'
 import { fetchMonthlyActiveUsers } from '@/lib/fetchMonthlyActiveUsers'
 
