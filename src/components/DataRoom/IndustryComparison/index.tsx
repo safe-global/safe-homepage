@@ -5,7 +5,7 @@ import css from './styles.module.css'
 
 const Content = dynamic(() => import('./Content'))
 
-export const LAST_UPDATED_FALLBACK = 1722946836.34
+export const LAST_UPDATED_FALLBACK = 1740577705.913 // 26.02.2025
 
 const IndustryComparison = ({ title }: BaseBlock) => {
   const containerRef = useRef<HTMLDivElement>(null)

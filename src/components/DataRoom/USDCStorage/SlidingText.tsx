@@ -9,7 +9,7 @@ import useScrollProgress from '@/hooks/useScrollProgress'
 import { type BaseBlock } from '@/components/Home/types'
 import css from './styles.module.css'
 
-const USDC_PERCENTAGE_STORED_FALLBACK = 0.0867
+const USDC_PERCENTAGE_STORED_FALLBACK = 0.0448
 
 type SlidingTextProps = {
   containerRef: RefObject<HTMLDivElement>

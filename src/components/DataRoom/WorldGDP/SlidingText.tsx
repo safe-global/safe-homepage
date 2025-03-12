@@ -5,8 +5,8 @@ import { formatCurrency } from '@/lib/formatCurrency'
 import { type BaseBlock } from '@/components/Home/types'
 import css from './styles.module.css'
 
-const ANNUALISED_OUTGOING_TVP_FALLBACK = 158_987_104_644 // 158 billion
-const PERCENTAGE_FALLBACK = 0.001576
+const ANNUALISED_OUTGOING_TVP_FALLBACK = 214_654_624_913 // 214 billion
+const PERCENTAGE_FALLBACK = 0.002127
 
 const SlidingText = ({ title }: { title: BaseBlock['title'] }) => {
   const { tvpToGDPPercentage, annualisedOutgoingTVP } = useSafeDataRoomStats()

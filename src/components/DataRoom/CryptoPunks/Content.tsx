@@ -9,7 +9,7 @@ import type { BaseBlock } from '@/components/Home/types'
 import css from './styles.module.css'
 
 const CRYPTOPUNKS_TOTAL = 10000
-const CRYPTOPUNKS_PERCENTAGE_STORED_FALLBACK = 0.092
+const CRYPTOPUNKS_PERCENTAGE_STORED_FALLBACK = 0.097
 
 const Content = ({ containerRef, title, text, link }: BaseBlock & { containerRef: RefObject<HTMLDivElement> }) => {
   const { cryptoPunksStoredPercentage } = useSafeDataRoomStats()
