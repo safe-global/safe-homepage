@@ -25,7 +25,7 @@ const HoldingCryptoSafelyIntro = ({ text, title, link, scroll }: BaseBlock & { s
         alignItems="center"
       >
         <Grid item md={6} display="flex" justifyContent="center">
-            <img src="/images/HoldingCryptoSafely/hero.png" alt="Padlock illustration" />
+            <img src="/images/HoldingCryptoSafely/hero-padlock.png" alt="Padlock illustration" />
         </Grid>
 
         <Grid item md={6}>
