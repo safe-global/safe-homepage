@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material'
+import { Grid, Typography } from '@mui/material'
 import dynamic from 'next/dynamic'
 import type { BaseBlock } from '@/components/Home/types'
 import LinksWrapper from '../LinksWrapper'
@@ -19,13 +19,21 @@ const TransactionsOnChain = ({ text, link }: BaseBlock) => {
   return (
     <div className={css.sectionContainer}>
       <div className={css.stickyContainer}>
-        <CounterContainer percentage={percentageValue} />
+        <Grid container spacing={2}>
+          <Grid item xs={12} md={6}>
+            <CounterContainer percentage={percentageValue} />
+          </Grid>
 
-        <div className={css.content}>
-          <Typography variant="h1">{text}</Typography>
+          <Grid item xs={12} md={6}>
+            <div className={css.content}>
+              <Typography variant="h1" className={css.contentCopy}>
+                {text}
+              </Typography>
 
-          <div className={css.linkContainer}>{link && <LinksWrapper link={link} />}</div>
-        </div>
+              <div className={css.linkContainer}>{link && <LinksWrapper link={link} />}</div>
+            </div>
+          </Grid>
+        </Grid>
       </div>
     </div>
   )
