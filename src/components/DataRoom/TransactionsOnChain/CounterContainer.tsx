@@ -35,9 +35,7 @@ const CounterContainer = ({ percentage }: { percentage: number }) => {
         <Counter value={value} />
       </div>
 
-      <div>
-        <Counter value={value} />
-      </div>
+      <Counter value={value} />
     </motion.div>
   )
 }
