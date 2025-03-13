@@ -23,7 +23,7 @@
     "items": [
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/contents-01.svg",
+          "src": "/images/HoldingCryptoSafely/padlock-single-large.svg",
           "alt": "Padlock with key icon"
         },
         "text": "Chapter 01",
@@ -35,7 +35,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/contents-02.svg",
+          "src": "/images/HoldingCryptoSafely/padlock-large.svg",
           "alt": "Padlock with keys icon"
         },
         "text": "Chapter 02",
@@ -47,7 +47,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/contents-03.svg",
+          "src": "/images/HoldingCryptoSafely/cross-box-large.svg",
           "alt": "Cross icon"
         },
         "text": "Chapter 03",
@@ -59,7 +59,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/contents-04.svg",
+          "src": "/images/HoldingCryptoSafely/new-link-large.svg",
           "alt": "New link icon"
         },
         "text": "Chapter 04",
@@ -79,7 +79,7 @@
     "title": "An introduction to <b>crypto storage</b>",
     "text": "<p>Crypto storage isn’t a one-size-fits-all approach. There are varying ways to safely and securely store your cryptocurrency in order to protect it. Understanding the options available to you is half the battle when it comes to picking a solution which is both safe and effective.</p>",
     "image": {
-      "src": "/images/HoldingCryptoSafely/ch1-hero.svg",
+      "src": "/images/HoldingCryptoSafely/safe-background-lines.svg",
       "alt": "Safe round block lines"
     },
     "gradient-colour": "dark"
@@ -92,7 +92,7 @@
   {
     "component": "common/ImageFull",
     "image": {
-      "src": "/images/HoldingCryptoSafely/ch1-graph.svg",
+      "src": "/images/HoldingCryptoSafely/annual-wallet-downloads-graph.svg",
       "alt": "Annual wallet downloads graph"
     },
     "link": {
@@ -117,7 +117,7 @@
     "items": [
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch1-icon-01.svg",
+          "src": "/images/HoldingCryptoSafely/group-users.svg",
           "alt": "Users icon"
         },
         "title": "Custodial wallets",
@@ -125,7 +125,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch1-icon-02.svg",
+          "src": "/images/HoldingCryptoSafely/single-user.svg",
           "alt": "Single user icon"
         },
         "title": "Non-custodial wallets",
@@ -140,7 +140,7 @@
     "items": [
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch1-icon-03.svg",
+          "src": "/images/HoldingCryptoSafely/cold-wallet.svg",
           "alt": "Cold wallet icon"
         },
         "title": "Cold wallets",
@@ -148,7 +148,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch1-icon-04.svg",
+          "src": "/images/HoldingCryptoSafely/hot-wallet.svg",
           "alt": "hot wallet icon"
         },
         "title": "Hot wallets",
@@ -164,7 +164,7 @@
     "items": [
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch1-icon-05.svg",
+          "src": "/images/HoldingCryptoSafely/padlock.svg",
           "alt": "Multisig wallet icon"
         },
         "title": "Multisig wallets",
@@ -172,7 +172,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch1-icon-06.svg",
+          "src": "/images/HoldingCryptoSafely/paper-list.svg",
           "alt": "Paper wallet icon"
         },
         "title": "Paper wallets",
@@ -180,7 +180,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch1-icon-07.svg",
+          "src": "/images/HoldingCryptoSafely/computer-chip.svg",
           "alt": "Hardware wallets icon"
         },
         "title": "Hardware wallets",
@@ -188,7 +188,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch1-icon-08.svg",
+          "src": "/images/HoldingCryptoSafely/arrows-exchange.svg",
           "alt": "Cryptocurrency exchanges icon"
         },
         "title": "Cryptocurrency exchanges",
@@ -204,7 +204,7 @@
     "items": [
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch1-icon-09.svg",
+          "src": "/images/HoldingCryptoSafely/copy-icon.svg",
           "alt": "Copy icon"
         },
         "title": "Amount of crypto",
@@ -212,7 +212,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch1-icon-10.svg",
+          "src": "/images/HoldingCryptoSafely/new-link.svg",
           "alt": "new link icon"
         },
         "title": "How regularly you want to move the crypto.",
@@ -220,7 +220,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch1-icon-11.svg",
+          "src": "/images/HoldingCryptoSafely/padlock-single.svg",
           "alt": "padlock icon"
         },
         "title": "The security of the platform",
@@ -228,7 +228,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch1-icon-12.svg",
+          "src": "/images/HoldingCryptoSafely/duplicate.svg",
           "alt": "Copy cost icon"
         },
         "title": "The cost of using the storage solution",
@@ -236,7 +236,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch1-icon-13.svg",
+          "src": "/images/HoldingCryptoSafely/chat-bubble.svg",
           "alt": "Chat icon"
         },
         "title": "The ease of use",
@@ -244,7 +244,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch1-icon-14.svg",
+          "src": "/images/HoldingCryptoSafely/shield.svg",
           "alt": "Shield icon"
         },
         "title": "Recovery insurance",
@@ -259,7 +259,7 @@
     "title": "<b>How to safely store</b> your crypto assets",
     "text": "<p>Now that we have a better understanding of how crypto is stored, it’s time to start looking at the safest ways to do so. In order to do this effectively, it’s vital to have a rounded picture of what a safe storage solution looks like, as well as threats it might face.</p>",
     "image": {
-      "src": "/images/HoldingCryptoSafely/ch2-hero.svg",
+      "src": "/images/HoldingCryptoSafely/safe-round-background-lines.svg",
       "alt": "Safe round block lines"
     },
     "gradient-colour": "dark"
@@ -273,7 +273,7 @@
     "items": [
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch2-icons-01.svg",
+          "src": "/images/HoldingCryptoSafely/chat-cross-red.svg",
           "alt": "Phishing attacks icon"
         },
         "title": "Phishing attacks",
@@ -281,7 +281,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch2-icons-02.svg",
+          "src": "/images/HoldingCryptoSafely/wallet-fade-red.svg",
           "alt": "Malware attacks icon"
         },
         "title": "Malware attacks",
@@ -289,7 +289,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch2-icons-03.svg",
+          "src": "/images/HoldingCryptoSafely/wallet-cross-red.svg",
           "alt": "Fake and modified wallets icon"
         },
         "title": "Fake and modified wallets",
@@ -297,7 +297,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch2-icons-04.svg",
+          "src": "/images/HoldingCryptoSafely/computer-chip-red.svg",
           "alt": "Hacking with memory analysis icon"
         },
         "title": "Hacking with memory analysis",
@@ -315,7 +315,7 @@
     "items": [
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch2-icons-05.svg",
+          "src": "/images/HoldingCryptoSafely/shield-tick.svg",
           "alt": "Multi-factor authentication icon"
         },
         "title": "Multi-factor authentication",
@@ -323,7 +323,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch2-icons-06.svg",
+          "src": "/images/HoldingCryptoSafely/download.svg",
           "alt": "Keeping software updated icon"
         },
         "title": "Keeping software updated",
@@ -331,7 +331,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch2-icons-07.svg",
+          "src": "/images/HoldingCryptoSafely/wallet-fade.svg",
           "alt": "Encrypt your wallet and regularly back it up icon"
         },
         "title": "Encrypt your wallet and regularly back it up",
@@ -339,7 +339,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch2-icons-08.svg",
+          "src": "/images/HoldingCryptoSafely/arrow-exchange-boxed.svg",
           "alt": "Transaction simulation icon"
         },
         "title": "Transaction simulation",
@@ -347,7 +347,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch2-icons-09.svg",
+          "src": "/images/HoldingCryptoSafely/angle-brackets.svg",
           "alt": "Decoding icon"
         },
         "title": "Decoding",
@@ -355,7 +355,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch2-icons-10.svg",
+          "src": "/images/HoldingCryptoSafely/diamond.svg",
           "alt": "Strong and secure passwords icon"
         },
         "title": "Strong and secure passwords",
@@ -363,7 +363,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch2-icons-11.svg",
+          "src": "/images/HoldingCryptoSafely/shield-lines.svg",
           "alt": "Use a VPN icon"
         },
         "title": "Use a VPN",
@@ -371,7 +371,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch2-icons-12.svg",
+          "src": "/images/HoldingCryptoSafely/building.svg",
           "alt": "Choose a reliable wallet provider icon"
         },
         "title": "Choose a reliable wallet provider",
@@ -379,7 +379,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch2-icons-13.svg",
+          "src": "/images/HoldingCryptoSafely/line-chart.svg",
           "alt": "Regularly monitor your account icon"
         },
         "title": "Regularly monitor your account",
@@ -396,7 +396,7 @@
     "items": [
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch2-icons-14.svg",
+          "src": "/images/HoldingCryptoSafely/speaker-red.svg",
           "alt": "Login notifications at odd times icon"
         },
         "title": "Login notifications at odd times",
@@ -404,7 +404,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch2-icons-15.svg",
+          "src": "/images/HoldingCryptoSafely/line-chart-down-red.svg",
           "alt": "Unexplained transactions and discrepancies to your balance icon"
         },
         "title": "Unexplained transactions and discrepancies to your balance",
@@ -412,7 +412,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch2-icons-16.svg",
+          "src": "/images/HoldingCryptoSafely/settings.svg",
           "alt": "Settings changes icon"
         },
         "title": "Settings changes",
@@ -429,7 +429,7 @@
     "items": [
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch2-icons-17.svg",
+          "src": "/images/HoldingCryptoSafely/tick-box.svg",
           "alt": "Work out how it was hacked icon"
         },
         "title": "Work out how it was hacked",
@@ -437,7 +437,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch2-icons-17.svg",
+          "src": "/images/HoldingCryptoSafely/tick-box.svg",
           "alt": "Make a new wallet icon"
         },
         "title": "Make a new wallet",
@@ -445,7 +445,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch2-icons-17.svg",
+          "src": "/images/HoldingCryptoSafely/tick-box.svg",
           "alt": "Change passwords and settings icon"
         },
         "title": "Change passwords and settings",
@@ -453,7 +453,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch2-icons-17.svg",
+          "src": "/images/HoldingCryptoSafely/tick-box.svg",
           "alt": "Report the crime icon"
         },
         "title": "Report the crime",
@@ -468,7 +468,7 @@
     "title": "Crypto asset <b>storage mistakes</b>",
     "text": "<p>Placing your crypto in a storage solution is great. But, in order for it to remain safe, you’ll want to ensure that you’ve set your wallet up properly and implemented all the protective measures needed to keep it secure. Furthermore, crypto security extends beyond just your wallet. There are a series of other general security mistakes which digital coin owners need to keep in mind in order to keep all of their assets safe.</p>",
     "image": {
-      "src": "/images/HoldingCryptoSafely/ch3-hero.svg",
+      "src": "/images/HoldingCryptoSafely/safe-round-lines-simple.svg",
       "alt": "Safe round block lines"
     },
     "gradient-colour": "dark"
@@ -482,7 +482,7 @@
     "items": [
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch3-icon-01.svg",
+          "src": "/images/HoldingCryptoSafely/cross-box-red.svg",
           "alt": "Wallets with in-built cloud drive backups icon"
         },
         "title": "Wallets with in-built cloud drive backups",
@@ -490,7 +490,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch3-icon-01.svg",
+          "src": "/images/HoldingCryptoSafely/cross-box-red.svg",
           "alt": "Inefficient random number generator (RNG) mechanisms icon"
         },
         "title": "Inefficient random number generator (RNG) mechanisms",
@@ -498,7 +498,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch3-icon-01.svg",
+          "src": "/images/HoldingCryptoSafely/cross-box-red.svg",
           "alt": "Weak seed phrase backups icon"
         },
         "title": "Weak seed phrase backups",
@@ -506,7 +506,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch3-icon-01.svg",
+          "src": "/images/HoldingCryptoSafely/cross-box-red.svg",
           "alt": "Using a custodial wallet icon"
         },
         "title": "Using a custodial wallet",
@@ -514,7 +514,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch3-icon-01.svg",
+          "src": "/images/HoldingCryptoSafely/cross-box-red.svg",
           "alt": "Exposing a wallet to online connections icon"
         },
         "title": "Exposing a wallet to online connections",
@@ -529,7 +529,7 @@
     "items": [
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch3-icon-01.svg",
+          "src": "/images/HoldingCryptoSafely/cross-box-red.svg",
           "alt": "Padlock with key icon"
         },
         "title": "Sharing private information publicly",
@@ -537,7 +537,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch3-icon-01.svg",
+          "src": "/images/HoldingCryptoSafely/cross-box-red.svg",
           "alt": "Padlock with key icon"
         },
         "title": "Downloading unverified software",
@@ -545,7 +545,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch3-icon-01.svg",
+          "src": "/images/HoldingCryptoSafely/cross-box-red.svg",
           "alt": "Padlock with key icon"
         },
         "title": "Having a fear of missing out",
@@ -553,7 +553,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch3-icon-01.svg",
+          "src": "/images/HoldingCryptoSafely/cross-box-red.svg",
           "alt": "Padlock with key icon"
         },
         "title": "Ignoring online reviews and community sentiment",
@@ -561,7 +561,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch3-icon-01.svg",
+          "src": "/images/HoldingCryptoSafely/cross-box-red.svg",
           "alt": "Padlock with key icon"
         },
         "title": "Clicking on questionable links",
@@ -569,7 +569,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch3-icon-01.svg",
+          "src": "/images/HoldingCryptoSafely/cross-box-red.svg",
           "alt": "Padlock with key icon"
         },
         "title": "Being frugal when it comes to storage solutions",
@@ -577,7 +577,7 @@
       },
       {
         "image": {
-          "src": "/images/HoldingCryptoSafely/ch3-icon-01.svg",
+          "src": "/images/HoldingCryptoSafely/cross-box-red.svg",
           "alt": "Padlock with key icon"
         },
         "title": "Not verifying someone’s public key",
@@ -593,7 +593,7 @@
     "title": "<b>Useful links</b>",
     "text": "<p>We’ve discussed a lot in this guide, but there might still be more you want to discover about the safe storage of your crypto assets. If that’s the case, make sure to browse these handy secondary resources for further info.</p><br><p><a href='https://cryptomaniaks.com/guides/best-crypto-tools-checklist' target='_blank' rel='nofollow noopener'>Cryptomaniaks discuss some of the best crypto tools for users in 2024 <svg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M16.2889 13.3916C16.2889 13.6361 16.4889 13.8361 16.7333 13.8361H24.7867C25.66 13.8361 26.1689 14.345 26.1689 15.1828V23.2716C26.1689 23.5161 26.3689 23.7161 26.6133 23.7161H28.56C28.8044 23.7161 29.0044 23.5161 29.0044 23.2716V13.825C29.0022 13.5694 28.9289 13.3894 28.7467 13.2072L26.8267 11.2872C26.6444 11.105 26.4267 10.9961 26.1711 10.9961H16.7311C16.4867 10.9983 16.2867 11.1983 16.2867 11.4428V13.3916H16.2889Z' fill='white'/><path d='M11.1282 27.4987L12.5047 28.8752C12.6783 29.0487 12.9597 29.0487 13.1333 28.8752L26.6516 15.3569C26.8252 15.1833 26.8252 14.9019 26.6516 14.7283L25.2751 13.3518C25.1015 13.1783 24.8201 13.1783 24.6465 13.3518L11.1282 26.8701C10.9547 27.0437 10.9547 27.3251 11.1282 27.4987Z' fill='white'/></svg></a></p><p><a href='https://www.etoro.com/crypto/wallet-guide/' target='_blank' rel='nofollow noopener'>Etoro provide users with a beginner’s guide to crypto wallets <svg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M16.2889 13.3916C16.2889 13.6361 16.4889 13.8361 16.7333 13.8361H24.7867C25.66 13.8361 26.1689 14.345 26.1689 15.1828V23.2716C26.1689 23.5161 26.3689 23.7161 26.6133 23.7161H28.56C28.8044 23.7161 29.0044 23.5161 29.0044 23.2716V13.825C29.0022 13.5694 28.9289 13.3894 28.7467 13.2072L26.8267 11.2872C26.6444 11.105 26.4267 10.9961 26.1711 10.9961H16.7311C16.4867 10.9983 16.2867 11.1983 16.2867 11.4428V13.3916H16.2889Z' fill='white'/><path d='M11.1282 27.4987L12.5047 28.8752C12.6783 29.0487 12.9597 29.0487 13.1333 28.8752L26.6516 15.3569C26.8252 15.1833 26.8252 14.9019 26.6516 14.7283L25.2751 13.3518C25.1015 13.1783 24.8201 13.1783 24.6465 13.3518L11.1282 26.8701C10.9547 27.0437 10.9547 27.3251 11.1282 27.4987Z' fill='white'/></svg></a></p><p><a href='https://www.fca.org.uk/investsmart/crypto-basics' target='_blank' rel='nofollow noopener'>The Financial Conduct Authority take a wider look at crypto and what users should know <svg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M16.2889 13.3916C16.2889 13.6361 16.4889 13.8361 16.7333 13.8361H24.7867C25.66 13.8361 26.1689 14.345 26.1689 15.1828V23.2716C26.1689 23.5161 26.3689 23.7161 26.6133 23.7161H28.56C28.8044 23.7161 29.0044 23.5161 29.0044 23.2716V13.825C29.0022 13.5694 28.9289 13.3894 28.7467 13.2072L26.8267 11.2872C26.6444 11.105 26.4267 10.9961 26.1711 10.9961H16.7311C16.4867 10.9983 16.2867 11.1983 16.2867 11.4428V13.3916H16.2889Z' fill='white'/><path d='M11.1282 27.4987L12.5047 28.8752C12.6783 29.0487 12.9597 29.0487 13.1333 28.8752L26.6516 15.3569C26.8252 15.1833 26.8252 14.9019 26.6516 14.7283L25.2751 13.3518C25.1015 13.1783 24.8201 13.1783 24.6465 13.3518L11.1282 26.8701C10.9547 27.0437 10.9547 27.3251 11.1282 27.4987Z' fill='white'/></svg></a></p><p><a href='https://www.kaspersky.com/resource-center/preemptive-safety/guide-to-cryptocurrency-safety' target='_blank' rel='nofollow noopener'>Kaspersky discuss some top level cryptocurrency safety tips <svg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M16.2889 13.3916C16.2889 13.6361 16.4889 13.8361 16.7333 13.8361H24.7867C25.66 13.8361 26.1689 14.345 26.1689 15.1828V23.2716C26.1689 23.5161 26.3689 23.7161 26.6133 23.7161H28.56C28.8044 23.7161 29.0044 23.5161 29.0044 23.2716V13.825C29.0022 13.5694 28.9289 13.3894 28.7467 13.2072L26.8267 11.2872C26.6444 11.105 26.4267 10.9961 26.1711 10.9961H16.7311C16.4867 10.9983 16.2867 11.1983 16.2867 11.4428V13.3916H16.2889Z' fill='white'/><path d='M11.1282 27.4987L12.5047 28.8752C12.6783 29.0487 12.9597 29.0487 13.1333 28.8752L26.6516 15.3569C26.8252 15.1833 26.8252 14.9019 26.6516 14.7283L25.2751 13.3518C25.1015 13.1783 24.8201 13.1783 24.6465 13.3518L11.1282 26.8701C10.9547 27.0437 10.9547 27.3251 11.1282 27.4987Z' fill='white'/></svg></a></p><p><a href='https://docs.safe.global/resource-hub' target='_blank'>Our dedicated resource hub explores several different aspects of safe crypto wallet storage solutions <svg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M16.2889 13.3916C16.2889 13.6361 16.4889 13.8361 16.7333 13.8361H24.7867C25.66 13.8361 26.1689 14.345 26.1689 15.1828V23.2716C26.1689 23.5161 26.3689 23.7161 26.6133 23.7161H28.56C28.8044 23.7161 29.0044 23.5161 29.0044 23.2716V13.825C29.0022 13.5694 28.9289 13.3894 28.7467 13.2072L26.8267 11.2872C26.6444 11.105 26.4267 10.9961 26.1711 10.9961H16.7311C16.4867 10.9983 16.2867 11.1983 16.2867 11.4428V13.3916H16.2889Z' fill='white'/><path d='M11.1282 27.4987L12.5047 28.8752C12.6783 29.0487 12.9597 29.0487 13.1333 28.8752L26.6516 15.3569C26.8252 15.1833 26.8252 14.9019 26.6516 14.7283L25.2751 13.3518C25.1015 13.1783 24.8201 13.1783 24.6465 13.3518L11.1282 26.8701C10.9547 27.0437 10.9547 27.3251 11.1282 27.4987Z' fill='white'/></svg></a>.</p>",
     "image": {
-      "src": "/images/HoldingCryptoSafely/ch4-hero.svg",
+      "src": "/images/HoldingCryptoSafely/safe-rounded-lines-box.svg",
       "alt": "Safe round block lines"
     },
     "gradient-colour": "dark"
