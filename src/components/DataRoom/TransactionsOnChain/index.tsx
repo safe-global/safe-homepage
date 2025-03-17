@@ -30,7 +30,11 @@ const TransactionsOnChain = ({ text, link }: BaseBlock) => {
                 {text}
               </Typography>
 
-              <div className={css.linkContainer}>{link && <LinksWrapper link={link} />}</div>
+              {link && (
+                <div className={css.linkContainer}>
+                  <LinksWrapper link={link} />
+                </div>
+              )}
             </div>
           </Grid>
         </Grid>
