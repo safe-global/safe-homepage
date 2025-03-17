@@ -84,10 +84,10 @@
       },
       {
         "image": {
-          "src": "/images/pump-gradient.svg",
-          "alt": "Gas pump"
+          "src": "/images/speech-bubble-gradient.svg",
+          "alt": "Talk"
         },
-        "title": "Access to our</br><a href=\"/gas-station\">Gas Station program</a>"
+        "title": "Access to the invite only Safe Builders Telegram"
       }
     ],
     "component": "common/UspBlock"
