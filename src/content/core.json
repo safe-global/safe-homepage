@@ -81,6 +81,13 @@
           "alt": "Antenna"
         },
         "title": "Co-marketing of product and partnership"
+      },
+      {
+        "image": {
+          "src": "/images/speech-bubble-gradient.svg",
+          "alt": "Talk"
+        },
+        "title": "Access to the invite only Safe Builders Telegram"
       }
     ],
     "component": "common/UspBlock"
