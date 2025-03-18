@@ -1,0 +1,69 @@
+.block > div {
+    width: 100%;
+    max-width: 1045px;
+}
+
+.block a {
+    text-decoration: underline;
+    color: var(--mui-palette-secondary-light);
+}
+
+.block section {
+    overflow-x: auto;
+}
+
+.block table {
+    width: 100%;
+}
+
+.block tr th {
+    text-align: left;
+}
+
+.block tr td {
+    overflow-wrap: break-word;
+}
+
+.block ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+    .block ul li + li {
+        margin-top: 24px;
+    }
+
+/* lists inside the collapsible elements */
+.block details {
+    font-style: italic;
+}
+
+.block details > ul {
+    padding-left: revert;
+}
+
+.block details > ul li + li {
+    margin-top: 0;
+}
+
+._default {
+}
+
+._green {
+}
+
+#intro-section {
+}
+
+.block div:not(.outer) {
+    border: 1px solid var(--mui-palette-primary-main);
+    border-radius: 16px;
+    margin: 27px 0px 33px 0px
+}
+
+.block div:not(.outer) p {
+    padding: 32px 30px 26px 30px;
+    margin: 0;
+    font-size: 24px;
+    line-height: 32px;
+}

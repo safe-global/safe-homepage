@@ -27,4 +27,5 @@ export const AppRoutes = {
   campaigns: {
     slug: '/campaigns/[slug]',
   },
+  pectra: '/exploring-the-pectra-upgrade',
 }
