@@ -9,6 +9,11 @@
   background-image: linear-gradient(-45deg, rgba(15, 255, 128, 1) 0%, rgba(94, 221, 255, 1) 100%);
 }
 
+.textCont {
+  position: relative;
+  z-index: 2;
+}
+
 .image {
   display: none;
 }
@@ -24,6 +29,41 @@
   color: var(--mui-palette-text-dark);
 }
 
+/* Dark gradient */
+.container.darkBackground {
+  background: #001f26; /* fallback */
+  background: linear-gradient(47deg, #001f26 25.65%, #00b460 100%);
+  overflow: hidden;
+}
+
+.container.darkBackground .chip {
+  border-color: var(--mui-palette-text-white);
+}
+
+.container.darkBackground .chip span {
+  color: var(--mui-palette-text-white);
+}
+
+.container.darkBackground p,
+.container.darkBackground h2 {
+  color: #fff;
+}
+
+.container.darkBackground p a {
+  font-weight: 500;
+  transition: opacity 0.2s ease 0s;
+}
+
+.container.darkBackground p a svg {
+  width: 30px;
+  height: 30px;
+  transform: translateY(7px);
+}
+
+.container.darkBackground p a:hover {
+  opacity: 0.6;
+}
+
 @media (min-width: 900px) {
   .container {
     text-align: left;
@@ -35,6 +75,10 @@
     position: absolute;
     top: 0;
     right: -150px;
+  }
+
+  .container.darkBackground .image {
+    height: 100%;
   }
 }
 

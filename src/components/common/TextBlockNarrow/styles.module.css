@@ -1,0 +1,8 @@
+.block a {
+  text-decoration: underline;
+  color: var(--mui-palette-secondary-light);
+}
+
+.block {
+  max-width: 1045px;
+}
