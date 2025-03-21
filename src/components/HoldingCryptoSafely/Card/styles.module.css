@@ -20,11 +20,6 @@
   opacity: 0;
 }
 
-.outline:hover::before {
-  opacity: 1;
-  box-shadow: 10px 10px 25px 0 rgba(18, 255, 128, 0.2);
-}
-
 .card {
   box-shadow: inset 0 0 0 1px var(--mui-palette-border-light);
   position: relative;
@@ -48,13 +43,22 @@
   width: auto;
 }
 
+.cardIcon[fillColor='red'] {
+  filter: brightness(0) saturate(100%) invert(58%) sepia(87%) saturate(3188%) hue-rotate(318deg) brightness(103%)
+    contrast(104%);
+}
+
+.cardIcon[fillColor='green'] {
+  filter: brightness(0) saturate(100%) invert(75%) sepia(73%) saturate(551%) hue-rotate(81deg) brightness(102%)
+    contrast(101%);
+}
+
 .cardBody {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   flex-grow: 1;
 }
-
 
 .title {
   overflow: hidden;
@@ -82,5 +86,3 @@
 .cardBody p a {
   color: var(--mui-palette-primary-main);
 }
-
-

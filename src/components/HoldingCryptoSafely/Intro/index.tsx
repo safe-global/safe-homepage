@@ -1,12 +1,10 @@
-import {Button, Container, Grid, Typography} from '@mui/material'
-import ButtonsWrapper from '@/components/common/ButtonsWrapper'
+import { Button, Container, Grid, Typography } from '@mui/material'
 import { scrollToElement } from '@/lib/scrollSmooth'
 import type { BaseBlock } from '@/components/Home/types'
 import css from './styles.module.css'
-import Link from "next/link";
-import LinkButton from "@/components/common/LinkButton";
+import Link from 'next/link'
 
-const HoldingCryptoSafelyIntro = ({ text, title, link, scroll }: BaseBlock & { scroll?: { title: string; target: string } }) => {
+const Intro = ({ text, title, link, scroll }: BaseBlock & { scroll?: { title: string; target: string } }) => {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, target: string) => {
     e.preventDefault()
 
@@ -16,21 +14,13 @@ const HoldingCryptoSafelyIntro = ({ text, title, link, scroll }: BaseBlock & { s
 
   return (
     <Container>
-      <Grid
-        container
-        className={css.container}
-        rowSpacing={{ xs: 6 }}
-        columnSpacing={{ md: '30px', xl: '50px' }}
-        justifyContent="space-between"
-        alignItems="center"
-      >
+      <Grid container className={css.container} rowSpacing={{ xs: 6 }} columnSpacing={{ md: '30px', xl: '50px' }}>
         <Grid item md={6} display="flex" justifyContent="center">
-            <img src="/images/HoldingCryptoSafely/hero-padlock.png" alt="Padlock illustration" />
+          <img src="/images/HoldingCryptoSafely/hero-padlock.png" alt="Padlock illustration" />
         </Grid>
 
         <Grid item md={6}>
-
-          <Typography variant="h3" component="div" mb={2}>
+          <Typography variant="h3" mb={2}>
             {text}
           </Typography>
 
@@ -38,23 +28,17 @@ const HoldingCryptoSafelyIntro = ({ text, title, link, scroll }: BaseBlock & { s
             {title}
           </Typography>
 
-            {link && (
-                <Link href={link.href}>
-                    <Button variant="contained" size="large" color='primary'>
-                        {link.title}
-                    </Button>
-                </Link>
-            )}
+          {link && (
+            <Link href={link.href}>
+              <Button variant="contained" size="large" color="primary">
+                {link.title}
+              </Button>
+            </Link>
+          )}
         </Grid>
-
-        {scroll && (
-          <a onClick={(e) => handleClick(e, scroll.target)} className={css.scroll}>
-            <Typography variant="caption">{scroll.title}</Typography>
-          </a>
-        )}
       </Grid>
     </Container>
   )
 }
 
-export default HoldingCryptoSafelyIntro
+export default Intro

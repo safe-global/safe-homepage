@@ -3,25 +3,21 @@ import { Container } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
 import clsx from 'clsx'
 import css from './styles.module.css'
-import Link from 'next/link'
 import LinkButton from '@/components/common/LinkButton'
 
-
-export const ImageTextTop = ({ image, link }: BaseBlock) => {
-
+export const ImageFull = ({ image, link }: BaseBlock) => {
   return (
-    <Container className={clsx(layoutCss.containerTiny, css.block)}>
-      {image ? <img src={image.src} alt={image.alt} className={css.image} /> : null}
-      {link && (
-          <Link href={link.href} target={'_blank'} rel={'nofollow noopener'}>
+    <Container className={clsx(layoutCss.containerTiny, css.container)}>
+      <div className={css.imageCont}>{image ? <img src={image.src} alt={image.alt} /> : null}</div>
+      <div className={css.block}>
+        {link && (
+          <a href={link.href} target="_blank">
             <LinkButton>{link.title}</LinkButton>
-          </Link>
-      )}
-
-
+          </a>
+        )}
+      </div>
     </Container>
-
   )
 }
 
-export default ImageTextTop
+export default ImageFull

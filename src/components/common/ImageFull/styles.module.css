@@ -2,6 +2,35 @@
   position: relative;
 }
 .block {
-  max-width: 100%;
+  max-width: 1045px;
 }
 
+.imageCont {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+@media (min-width: 1200px) {
+  .imageCont {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1330px) {
+  .imageCont {
+    max-width: 1328px;
+  }
+}
+
+@media (min-width: 1630px) {
+  .imageCont {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1823px) {
+  .imageCont {
+    margin-left: -94px;
+    margin-right: -94px;
+  }
+}

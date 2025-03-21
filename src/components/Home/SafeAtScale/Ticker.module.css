@@ -58,7 +58,7 @@
   background: linear-gradient(
     90deg,
     var(--mui-palette-primary-main) calc(var(--left-idx) * -140%),
-    var(--mui-palette-info-main)    calc(var(--right-idx) * 140%)
+    var(--mui-palette-info-main) calc(var(--right-idx) * 140%)
   );
   background-clip: text;
 }

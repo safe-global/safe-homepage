@@ -19,13 +19,13 @@ export const GridItem = ({
       <div>
         {image ? <img {...image} /> : null}
 
-        <Typography color="primary.light" mt={2}>{text}</Typography>
+        <Typography color="primary.light" mt={2} className={css.chapterTitle}>
+          {text}
+        </Typography>
 
         <Typography variant="h5" className={css.title}>
           {title}
         </Typography>
-
-
       </div>
 
       {link && (
@@ -38,7 +38,7 @@ export const GridItem = ({
 }
 
 // TODO: unify the ItemGrid and accept a GridItem component
-const UspBlock = ({ variant, title, text, items }: BaseBlock & { variant: '3-columns' | '4-columns' }) => (
+const ChapterBlock = ({ variant, title, text, items }: BaseBlock & { variant: '3-columns' | '4-columns' }) => (
   <Container>
     <Grid container className={layoutCss.containerShort} flexDirection="column" alignItems="center">
       <Typography variant="h2" mb={3} textAlign={{ md: 'center' }}>
@@ -56,4 +56,4 @@ const UspBlock = ({ variant, title, text, items }: BaseBlock & { variant: '3-col
   </Container>
 )
 
-export default UspBlock
+export default ChapterBlock

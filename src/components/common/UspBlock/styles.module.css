@@ -17,6 +17,12 @@
   align-items: flex-start;
 }
 
+@media (min-width: 900px) {
+  .gridItems:nth-child(7):last-child {
+    border-right: 1px solid var(--mui-palette-border-light);
+  }
+}
+
 .roundCorners {
   border: 1px solid var(--mui-palette-border-light);
   border-radius: 12px;
