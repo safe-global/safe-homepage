@@ -11,7 +11,7 @@ export const ImageFull = ({ image, link }: BaseBlock) => {
       <div className={css.imageCont}>{image ? <img src={image.src} alt={image.alt} /> : null}</div>
       <div className={css.block}>
         {link && (
-          <a href={link.href} target="_blank">
+          <a href={link.href} target="_blank" rel="noreferrer">
             <LinkButton>{link.title}</LinkButton>
           </a>
         )}

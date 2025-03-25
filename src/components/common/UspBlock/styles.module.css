@@ -37,3 +37,12 @@
 .title a {
   text-decoration: underline;
 }
+
+.chapterTitle {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 1.4px;
+  color: #fff;
+}

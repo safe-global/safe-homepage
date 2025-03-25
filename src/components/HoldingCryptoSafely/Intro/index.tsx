@@ -1,17 +1,9 @@
 import { Button, Container, Grid, Typography } from '@mui/material'
-import { scrollToElement } from '@/lib/scrollSmooth'
 import type { BaseBlock } from '@/components/Home/types'
 import css from './styles.module.css'
 import Link from 'next/link'
 
-const Intro = ({ text, title, link, scroll }: BaseBlock & { scroll?: { title: string; target: string } }) => {
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, target: string) => {
-    e.preventDefault()
-
-    // TODO: move offset to CSS
-    scrollToElement(target, 200)
-  }
-
+const Intro = ({ text, title, link }: BaseBlock) => {
   return (
     <Container>
       <Grid container className={css.container} rowSpacing={{ xs: 6 }} columnSpacing={{ md: '30px', xl: '50px' }}>

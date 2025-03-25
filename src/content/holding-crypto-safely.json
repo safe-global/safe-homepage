@@ -20,6 +20,7 @@
   },
   {
     "variant": "4-columns",
+    "containerClass": "chapter-cont",
     "items": [
       {
         "image": {
@@ -70,7 +71,7 @@
         }
       }
     ],
-    "component": "common/ChapterBlock"
+    "component": "common/UspBlock"
   },
   {
     "component": "common/BannerGradientImage",
