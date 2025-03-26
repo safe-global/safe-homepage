@@ -15,7 +15,7 @@
   },
   {
     "id": "intro-section",
-    "text": "<p>Understanding the ins and outs of cryptocurrency requires a meticulous understanding of complex financial and economic factors. While the digestion of market data and the making of shrewd tactical decisions are paramount to success in the world of crypto, many overlook one of the “basics” of owning a digital currency.</p><p>Protecting your assets in a safe storage solution might not seem like a priority when compared to something like trading – but failing to do so can see all your hard-earned gains lost. In an age where so much of what we do is online, a robust cybersecurity approach needs to be adopted to safeguard your crypto storage.</p><p>So, what does that look like? And what should investors be aware of when implementing a storage solution of their own? In this detailed guide, we’ll discuss exactly that. Read on to discover the safest way to store your crypto, as well as common mistakes to watch out for and avoid.</p>",
+    "text": "Understanding the ins and outs of cryptocurrency requires a meticulous understanding of complex financial and economic factors. While the digestion of market data and the making of shrewd tactical decisions are paramount to success in the world of crypto, many overlook one of the “basics” of owning a digital currency.<br/><br/>Protecting your assets in a safe storage solution might not seem like a priority when compared to something like trading – but failing to do so can see all your hard-earned gains lost. In an age where so much of what we do is online, a robust cybersecurity approach needs to be adopted to safeguard your crypto storage.<br/><br/>So, what does that look like? And what should investors be aware of when implementing a storage solution of their own? In this detailed guide, we’ll discuss exactly that. Read on to discover the safest way to store your crypto, as well as common mistakes to watch out for and avoid.",
     "component": "common/TextBlockNarrow"
   },
   {
@@ -77,14 +77,13 @@
     "id": "chapter-one",
     "caption": "Chapter 01",
     "title": "An introduction to <b>crypto storage</b>",
-    "text": "<p>Crypto storage isn’t a one-size-fits-all approach. There are varying ways to safely and securely store your cryptocurrency in order to protect it. Understanding the options available to you is half the battle when it comes to picking a solution which is both safe and effective.</p>",
+    "text": "Crypto storage isn’t a one-size-fits-all approach. There are varying ways to safely and securely store your cryptocurrency in order to protect it. Understanding the options available to you is half the battle when it comes to picking a solution which is both safe and effective.",
     "image": {
       "src": "/images/HoldingCryptoSafely/safe-background-lines.svg",
       "alt": "Safe round block lines"
     },
-    "gradientColour": "dark"
+    "gradientColor": "dark"
   },
-
   {
     "title": "Understanding the current landscape of cryptocurrency and crypto wallets",
     "text": "<p>The crypto market is continuing to grow, as more investors dip their toes in this exciting new financial world. The global crypto market capitalisation is now <a href='https://www.forbes.com/advisor/in/investing/cryptocurrency/cryptocurrency-statistics/#:~:text=Globally%2C%20the%20crypto%20market%20capitalization%20has%20surpassed%20%242.5%20trillion' target='_blank' rel='nofollow noopener'>believed to be worth as much as $2.5 trillion</a>, with the market valued at $6.6 billion as a whole.</p><p>107.3 million investors are projected to trade in some form of crypto by the end of 2025. All in all, <a href='https://www.fortunebusinessinsights.com/industry-reports/cryptocurrency-market-100149' target='_blank' rel='nofollow noopener'>a compound annual growth (CAGR) of 11.1%</a> is expected to reshape the entirety of the market between 2021 and 2028.</p><p>At the forefront of this momentous wave are crypto wallets. Across the first five months of 2024 alone, as many as <a href='https://altindex.com/news/crypto-wallets-downloads-increase' target='_blank' rel='nofollow noopener'>91.4 million wallets were downloaded by users worldwide</a>. This eye-catching number represented just 8% less than the entirety of 2023, and would put the market on course to see 219.36 million downloads throughout 2024 as a whole.</p><p>This figure would represent the strongest on record for crypto wallets – surpassing the 185.9 million which users downloaded in 2021. Since their inception in 2015, the annual numbers look as follows:</p>",
@@ -183,7 +182,7 @@
         "image": {
           "src": "/images/HoldingCryptoSafely/computer-chip.svg",
           "alt": "Hardware wallets icon",
-          "fillColor": "green"
+          "fillcolor": "green"
         },
         "title": "Hardware wallets",
         "text": "<p>These allow you to store your private keys on something resembling a USB stick, which can be removed from your device. You simply need to insert the storage system back into your computer when you want to make or receive a transaction. They’re generally used as cold wallets, because they’ll lack an internet connection before being plugged in.</p>"
@@ -259,12 +258,12 @@
     "caption": "Chapter 02",
     "id": "chapter-two",
     "title": "<b>How to safely store</b> your crypto assets",
-    "text": "<p>Now that we have a better understanding of how crypto is stored, it’s time to start looking at the safest ways to do so. In order to do this effectively, it’s vital to have a rounded picture of what a safe storage solution looks like, as well as threats it might face.</p>",
+    "text": "Now that we have a better understanding of how crypto is stored, it’s time to start looking at the safest ways to do so. In order to do this effectively, it’s vital to have a rounded picture of what a safe storage solution looks like, as well as threats it might face.",
     "image": {
       "src": "/images/HoldingCryptoSafely/safe-round-background-lines.svg",
       "alt": "Safe round block lines"
     },
-    "gradientColour": "dark"
+    "gradientColor": "dark"
   },
   {
     "component": "HoldingCryptoSafely/TextItemGridSpacedCards",
@@ -277,7 +276,7 @@
         "image": {
           "src": "/images/HoldingCryptoSafely/chat-cross.svg",
           "alt": "Phishing attacks icon",
-          "fillColor": "red"
+          "fillcolor": "red"
         },
         "title": "Phishing attacks",
         "text": "<p>This elaborate scam will see fraudsters create entirely fake exchanges and wallet software, encouraging users to part with their cash for what is in reality fake cryptocurrencies. Some attacks might even see a “crypto wallet technical support specialist” ask you to reveal critical personal info, which they’ll use to get access to your personal wallet.</p>"
@@ -286,7 +285,7 @@
         "image": {
           "src": "/images/HoldingCryptoSafely/wallet-fade.svg",
           "alt": "Malware attacks icon",
-          "fillColor": "red"
+          "fillcolor": "red"
         },
         "title": "Malware attacks",
         "text": "<p>If a virus infects a computer or tablet, any information stored there can be stolen by hackers. This in turn can be used to empty hot wallets of any crypto which is being stored there. Even cold wallets can sometimes fall victim to a malware attack. In these instances malware substitutes the destination wallet of any online transfer from or to the cold wallet with their own. They do this by using malware to monitor the clipboard where a wallet address is copy and pasted. As soon as this happens, the virus will replace the end address with that of the scammer’s. If they don’t spot this change, a user will transfer crypto to the wrong account.</p>"
@@ -295,7 +294,7 @@
         "image": {
           "src": "/images/HoldingCryptoSafely/wallet-cross.svg",
           "alt": "Fake and modified wallets icon",
-          "fillColor": "red"
+          "fillcolor": "red"
         },
         "title": "Fake and modified wallets",
         "text": "<p>While any new wallets you purchase directly from a vendor’s store should be legitimate, secondhand wallets or those bought from a third party always run the risk of being corrupted. Units can sometimes be modified with firmware, or trojan payloads. These viruses allow the person who sold the wallet to access and transfer all crypto stored in them to their own accounts.</p>"
@@ -304,7 +303,7 @@
         "image": {
           "src": "/images/HoldingCryptoSafely/computer-chip.svg",
           "alt": "Hacking with memory analysis icon",
-          "fillColor": "red"
+          "fillcolor": "red"
         },
         "title": "Hacking with memory analysis",
         "text": "<p>While far less likely to occur, physical hacking of a crypto wallet is still a possibility. If a hacker is able to get their hands on your device, they can deconstruct it and connect its circuitry to special equipment in order to manipulate its firmware. The wallet can be replaced or resold, where it’s then used to remotely steal any large sums made from crypto trading.</p>"
@@ -339,10 +338,10 @@
         "image": {
           "src": "/images/HoldingCryptoSafely/wallet-fade.svg",
           "alt": "Encrypt your wallet and regularly back it up icon",
-          "fillColor": "green"
+          "fillcolor": "green"
         },
         "title": "Encrypt your wallet and regularly back it up",
-        "text": "<p>Encrypting a wallet means that nobody will be able to get access to it without a unique passphrase. This is a good failsafe technique for hot wallets – which can naturally be more susceptible to attacks. It’s also smart to create regular backups of these. These backups should ideally be stored offline, on a device like a USB.</p>"
+        "text": "Encrypting a wallet means that nobody will be able to get access to it without a unique passphrase. This is a good failsafe technique for hot wallets – which can naturally be more susceptible to attacks. It’s also smart to create regular backups of these. These backups should ideally be stored offline, on a device like a USB."
       },
       {
         "image": {
@@ -350,7 +349,7 @@
           "alt": "Transaction simulation icon"
         },
         "title": "Transaction simulation",
-        "text": "<p>This process sees someone emulate the execution of a transaction in a blockchain, within a totally simulated environment. The transactions are never broadcast, and serve as a means of testing code within a virtual environment. This developer sandbox makes it possible to understand important safety features of new tools and applications before they’re deployed for wider use.</p>"
+        "text": "This process sees someone emulate the execution of a transaction in a blockchain, within a totally simulated environment. The transactions are never broadcast, and serve as a means of testing code within a virtual environment. This developer sandbox makes it possible to understand important safety features of new tools and applications before they’re deployed for wider use."
       },
       {
         "image": {
@@ -358,7 +357,7 @@
           "alt": "Decoding icon"
         },
         "title": "Decoding",
-        "text": "<p>By breaking software down into its base code, it’s possible to identify where online threats are most likely to target. This pre-emptive measure can help to highlight any weaknesses in a system, or highlight patterns of vulnerability in cybersecurity systems that weren’t previously apparent.</p>"
+        "text": "By breaking software down into its base code, it’s possible to identify where online threats are most likely to target. This pre-emptive measure can help to highlight any weaknesses in a system, or highlight patterns of vulnerability in cybersecurity systems that weren’t previously apparent."
       },
       {
         "image": {
@@ -366,7 +365,7 @@
           "alt": "Strong and secure passwords icon"
         },
         "title": "Strong and secure passwords",
-        "text": "<p>A tried and tested method of keeping yourself safe online, having strong passwords is a must when dealing with cryptocurrency. A password manager tool is a good option here. These allow you to generate complex, long passwords without the need to remember them or even write them down. The manager system will automatically input any saved passwords for you on your trusted devices.</p>"
+        "text": "A tried and tested method of keeping yourself safe online, having strong passwords is a must when dealing with cryptocurrency. A password manager tool is a good option here. These allow you to generate complex, long passwords without the need to remember them or even write them down. The manager system will automatically input any saved passwords for you on your trusted devices."
       },
       {
         "image": {
@@ -374,7 +373,7 @@
           "alt": "Use a VPN icon"
         },
         "title": "Use a VPN",
-        "text": "<p>A Virtual Private Network can cloak where you’re accessing the internet from. This will automatically encrypt any data which is transferred from you to your wallet, while also providing an additional layer of privacy. It’s always advised to use a VPN when logging into any crypto accounts on a public Wi-Fi network.</p>"
+        "text": "A Virtual Private Network can cloak where you’re accessing the internet from. This will automatically encrypt any data which is transferred from you to your wallet, while also providing an additional layer of privacy. It’s always advised to use a VPN when logging into any crypto accounts on a public Wi-Fi network."
       },
       {
         "image": {
@@ -382,7 +381,7 @@
           "alt": "Choose a reliable wallet provider icon"
         },
         "title": "Choose a reliable wallet provider",
-        "text": "<p>Just as with banking, choosing an industry-recognised name which thousands, if not millions, of traders have already utilised is also a smart approach. Purchasing or storing your wallet with trusted names greatly reduces the risk of suspicious activity on your account.</p>"
+        "text": "Just as with banking, choosing an industry-recognised name which thousands, if not millions, of traders have already utilised is also a smart approach. Purchasing or storing your wallet with trusted names greatly reduces the risk of suspicious activity on your account."
       },
       {
         "image": {
@@ -390,14 +389,14 @@
           "alt": "Regularly monitor your account icon"
         },
         "title": "Regularly monitor your account",
-        "text": "<p>Preparedness is one of the most effective ways to prevent an attack. But it can also be a powerful tool in the event of needing to recover lost assets. Regularly checking your account means you’ll be able to spot any odd behaviour faster. In turn, this increases the chances of being able to salvage anything you’ve lost.</p>"
+        "text": "Preparedness is one of the most effective ways to prevent an attack. But it can also be a powerful tool in the event of needing to recover lost assets. Regularly checking your account means you’ll be able to spot any odd behaviour faster. In turn, this increases the chances of being able to salvage anything you’ve lost."
       }
     ]
   },
   {
     "component": "HoldingCryptoSafely/TextItemGridSpacedCards",
     "title": "Signs your crypto wallet has been hacked",
-    "text": "<p>With cyber crime becoming more nuanced, it can sometimes be tough to immediately spot when you’ve become a victim. Fortunately, there are telltale signs that an attack might have taken place on your account. Here are some of the most prominent red flags:</p>",
+    "text": "With cyber crime becoming more nuanced, it can sometimes be tough to immediately spot when you’ve become a victim. Fortunately, there are telltale signs that an attack might have taken place on your account. Here are some of the most prominent red flags:",
     "columnWidth": 4,
     "last": true,
     "items": [
@@ -405,7 +404,7 @@
         "image": {
           "src": "/images/HoldingCryptoSafely/speaker.svg",
           "alt": "Login notifications at odd times icon",
-          "fillColor": "red"
+          "fillcolor": "red"
         },
         "title": "Login notifications at odd times",
         "text": "<p>Sudden or unexplained notifications at times when you’re not dealing with your crypto assets are an immediate warning sign. Even if someone isn’t able to gain access to your account, receiving a message like this indicates someone is attempting to. You should immediately log in yourself and change your passwords if you notice this.</p>"
@@ -414,7 +413,7 @@
         "image": {
           "src": "/images/HoldingCryptoSafely/line-chart-down.svg",
           "alt": "Unexplained transactions and discrepancies to your balance icon",
-          "fillColor": "red"
+          "fillcolor": "red"
         },
         "title": "Unexplained transactions and discrepancies to your balance",
         "text": "<p>Similarly, spotting any transactions which you know you didn’t make also shows you’ve been hacked. In this instance, a cyber criminal has been able to fully access your funds. In order to react to this properly, read our section on <a href='#what-to-do'>how to recover from a crypto wallet hack</a>.</p>"
@@ -423,7 +422,7 @@
         "image": {
           "src": "/images/HoldingCryptoSafely/settings.svg",
           "alt": "Settings changes icon",
-          "fillColor": "red"
+          "fillcolor": "red"
         },
         "title": "Settings changes",
         "text": "<p>If you log in and notice your core settings have changed, this could be another sign that someone has gained unauthorised access to your account. You can check your settings on your profile page.</p>"
@@ -476,12 +475,12 @@
     "caption": "Chapter 03",
     "id": "chapter-three",
     "title": "Crypto asset <b>storage mistakes</b>",
-    "text": "<p>Placing your crypto in a storage solution is great. But, in order for it to remain safe, you’ll want to ensure that you’ve set your wallet up properly and implemented all the protective measures needed to keep it secure. Furthermore, crypto security extends beyond just your wallet. There are a series of other general security mistakes which digital coin owners need to keep in mind in order to keep all of their assets safe.</p>",
+    "text": "Placing your crypto in a storage solution is great. But, in order for it to remain safe, you’ll want to ensure that you’ve set your wallet up properly and implemented all the protective measures needed to keep it secure. Furthermore, crypto security extends beyond just your wallet. There are a series of other general security mistakes which digital coin owners need to keep in mind in order to keep all of their assets safe.",
     "image": {
       "src": "/images/HoldingCryptoSafely/safe-round-lines-simple.svg",
       "alt": "Safe round block lines"
     },
-    "gradientColour": "dark"
+    "gradientColor": "dark"
   },
   {
     "component": "HoldingCryptoSafely/TextItemGridSpacedCards",
@@ -601,11 +600,43 @@
     "id": "chapter-four",
     "caption": "Chapter 04",
     "title": "<b>Useful links</b>",
-    "text": "<p>We’ve discussed a lot in this guide, but there might still be more you want to discover about the safe storage of your crypto assets. If that’s the case, make sure to browse these handy secondary resources for further info.</p><br><p><a href='https://cryptomaniaks.com/guides/best-crypto-tools-checklist' target='_blank' rel='nofollow noopener'>Cryptomaniaks discuss some of the best crypto tools for users in 2024 <svg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M16.2889 13.3916C16.2889 13.6361 16.4889 13.8361 16.7333 13.8361H24.7867C25.66 13.8361 26.1689 14.345 26.1689 15.1828V23.2716C26.1689 23.5161 26.3689 23.7161 26.6133 23.7161H28.56C28.8044 23.7161 29.0044 23.5161 29.0044 23.2716V13.825C29.0022 13.5694 28.9289 13.3894 28.7467 13.2072L26.8267 11.2872C26.6444 11.105 26.4267 10.9961 26.1711 10.9961H16.7311C16.4867 10.9983 16.2867 11.1983 16.2867 11.4428V13.3916H16.2889Z' fill='white'/><path d='M11.1282 27.4987L12.5047 28.8752C12.6783 29.0487 12.9597 29.0487 13.1333 28.8752L26.6516 15.3569C26.8252 15.1833 26.8252 14.9019 26.6516 14.7283L25.2751 13.3518C25.1015 13.1783 24.8201 13.1783 24.6465 13.3518L11.1282 26.8701C10.9547 27.0437 10.9547 27.3251 11.1282 27.4987Z' fill='white'/></svg></a></p><p><a href='https://www.etoro.com/crypto/wallet-guide/' target='_blank' rel='nofollow noopener'>Etoro provide users with a beginner’s guide to crypto wallets <svg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M16.2889 13.3916C16.2889 13.6361 16.4889 13.8361 16.7333 13.8361H24.7867C25.66 13.8361 26.1689 14.345 26.1689 15.1828V23.2716C26.1689 23.5161 26.3689 23.7161 26.6133 23.7161H28.56C28.8044 23.7161 29.0044 23.5161 29.0044 23.2716V13.825C29.0022 13.5694 28.9289 13.3894 28.7467 13.2072L26.8267 11.2872C26.6444 11.105 26.4267 10.9961 26.1711 10.9961H16.7311C16.4867 10.9983 16.2867 11.1983 16.2867 11.4428V13.3916H16.2889Z' fill='white'/><path d='M11.1282 27.4987L12.5047 28.8752C12.6783 29.0487 12.9597 29.0487 13.1333 28.8752L26.6516 15.3569C26.8252 15.1833 26.8252 14.9019 26.6516 14.7283L25.2751 13.3518C25.1015 13.1783 24.8201 13.1783 24.6465 13.3518L11.1282 26.8701C10.9547 27.0437 10.9547 27.3251 11.1282 27.4987Z' fill='white'/></svg></a></p><p><a href='https://www.fca.org.uk/investsmart/crypto-basics' target='_blank' rel='nofollow noopener'>The Financial Conduct Authority take a wider look at crypto and what users should know <svg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M16.2889 13.3916C16.2889 13.6361 16.4889 13.8361 16.7333 13.8361H24.7867C25.66 13.8361 26.1689 14.345 26.1689 15.1828V23.2716C26.1689 23.5161 26.3689 23.7161 26.6133 23.7161H28.56C28.8044 23.7161 29.0044 23.5161 29.0044 23.2716V13.825C29.0022 13.5694 28.9289 13.3894 28.7467 13.2072L26.8267 11.2872C26.6444 11.105 26.4267 10.9961 26.1711 10.9961H16.7311C16.4867 10.9983 16.2867 11.1983 16.2867 11.4428V13.3916H16.2889Z' fill='white'/><path d='M11.1282 27.4987L12.5047 28.8752C12.6783 29.0487 12.9597 29.0487 13.1333 28.8752L26.6516 15.3569C26.8252 15.1833 26.8252 14.9019 26.6516 14.7283L25.2751 13.3518C25.1015 13.1783 24.8201 13.1783 24.6465 13.3518L11.1282 26.8701C10.9547 27.0437 10.9547 27.3251 11.1282 27.4987Z' fill='white'/></svg></a></p><p><a href='https://www.kaspersky.com/resource-center/preemptive-safety/guide-to-cryptocurrency-safety' target='_blank' rel='nofollow noopener'>Kaspersky discuss some top level cryptocurrency safety tips <svg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M16.2889 13.3916C16.2889 13.6361 16.4889 13.8361 16.7333 13.8361H24.7867C25.66 13.8361 26.1689 14.345 26.1689 15.1828V23.2716C26.1689 23.5161 26.3689 23.7161 26.6133 23.7161H28.56C28.8044 23.7161 29.0044 23.5161 29.0044 23.2716V13.825C29.0022 13.5694 28.9289 13.3894 28.7467 13.2072L26.8267 11.2872C26.6444 11.105 26.4267 10.9961 26.1711 10.9961H16.7311C16.4867 10.9983 16.2867 11.1983 16.2867 11.4428V13.3916H16.2889Z' fill='white'/><path d='M11.1282 27.4987L12.5047 28.8752C12.6783 29.0487 12.9597 29.0487 13.1333 28.8752L26.6516 15.3569C26.8252 15.1833 26.8252 14.9019 26.6516 14.7283L25.2751 13.3518C25.1015 13.1783 24.8201 13.1783 24.6465 13.3518L11.1282 26.8701C10.9547 27.0437 10.9547 27.3251 11.1282 27.4987Z' fill='white'/></svg></a></p><p><a href='https://docs.safe.global/resource-hub' target='_blank'>Our dedicated resource hub explores several different aspects of safe crypto wallet storage solutions <svg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M16.2889 13.3916C16.2889 13.6361 16.4889 13.8361 16.7333 13.8361H24.7867C25.66 13.8361 26.1689 14.345 26.1689 15.1828V23.2716C26.1689 23.5161 26.3689 23.7161 26.6133 23.7161H28.56C28.8044 23.7161 29.0044 23.5161 29.0044 23.2716V13.825C29.0022 13.5694 28.9289 13.3894 28.7467 13.2072L26.8267 11.2872C26.6444 11.105 26.4267 10.9961 26.1711 10.9961H16.7311C16.4867 10.9983 16.2867 11.1983 16.2867 11.4428V13.3916H16.2889Z' fill='white'/><path d='M11.1282 27.4987L12.5047 28.8752C12.6783 29.0487 12.9597 29.0487 13.1333 28.8752L26.6516 15.3569C26.8252 15.1833 26.8252 14.9019 26.6516 14.7283L25.2751 13.3518C25.1015 13.1783 24.8201 13.1783 24.6465 13.3518L11.1282 26.8701C10.9547 27.0437 10.9547 27.3251 11.1282 27.4987Z' fill='white'/></svg></a>.</p>",
+    "text": "We’ve discussed a lot in this guide, but there might still be more you want to discover about the safe storage of your crypto assets. If that’s the case, make sure to browse these handy secondary resources for further info.",
+    "items": [
+      {
+        "title": "Cryptomaniaks discuss some of the best crypto tools for users in 2024",
+        "link": {
+          "href": "https://cryptomaniaks.com/guides/best-crypto-tools-checklist"
+        }
+      },
+      {
+        "title": "Etoro provide users with a beginner’s guide to crypto wallets",
+        "link": {
+          "href": "https://www.etoro.com/crypto/wallet-guide/"
+        }
+      },
+      {
+        "title": "The Financial Conduct Authority take a wider look at crypto and what users should know",
+        "link": {
+          "href": "https://www.fca.org.uk/investsmart/crypto-basics"
+        }
+      },
+      {
+        "title": "Kaspersky discuss some top level cryptocurrency safety tips",
+        "link": {
+          "href": "https://www.kaspersky.com/resource-center/preemptive-safety/guide-to-cryptocurrency-safety"
+        }
+      },
+      {
+        "title": "Our dedicated resource hub explores several different aspects of safe crypto wallet storage solutions",
+        "link": {
+          "href": "https://docs.safe.global/resource-hub"
+        }
+      }
+    ],
     "image": {
       "src": "/images/HoldingCryptoSafely/safe-rounded-lines-box.svg",
       "alt": "Safe round block lines"
     },
-    "gradientColour": "dark"
+    "gradientColor": "dark"
   }
 ]
