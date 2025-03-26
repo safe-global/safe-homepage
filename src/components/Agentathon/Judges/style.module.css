@@ -1,0 +1,151 @@
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 120px;
+}
+
+.title {
+  text-align: center;
+  max-width: 582px;
+  padding-bottom: 40px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.caption {
+  color: var(--mui-palette-primary-main);
+  padding-bottom: 20px;
+}
+
+.itemsWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  max-width: 1220px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.itemWrapper {
+  display: flex;
+  border-radius: 14px;
+  overflow: hidden;
+  flex-direction: column;
+  position: relative;
+  background-color: white;
+  height: 217px;
+  cursor: pointer;
+}
+
+.itemWrapper:hover .arrowIcon {
+  transform: rotate(45deg);
+}
+
+.arrowIcon {
+  z-index: 2;
+  bottom: 34px;
+  position: absolute;
+  right: 14px;
+  width: 10px;
+  height: 10px;
+  transition: all 0.2s ease-out;
+}
+
+.arrowIcon path {
+  fill: black;
+}
+
+.itemImage {
+  width: 160px;
+  height: 160px;
+  z-index: 1;
+  mix-blend-mode: luminosity;
+  padding: 8px 8px 0 8px;
+}
+
+.itemInfo {
+  display: flex;
+  padding: 2px 0 0 8px;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  max-width: 140px;
+}
+
+.foreground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #03984880;
+}
+
+.foregroundImage {
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: overlay;
+}
+
+.itemTitle {
+  color: black;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.itemDescription {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 10px;
+  margin-top: -6px;
+  line-height: 112%;
+}
+
+@media (min-width: 900px) {
+  .title {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .sectionContainer {
+    padding-top: 160px;
+  }
+
+  .itemsWrapper {
+    gap: 20px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .itemWrapper {
+    height: 292px;
+  }
+
+  .itemImage {
+    width: 220px;
+    height: 220px;
+  }
+
+  .itemInfo {
+    padding: 6px 0 0 8px;
+    max-width: 180px;
+  }
+
+  .itemTitle {
+    font-size: 16px;
+  }
+
+  .itemDescription {
+    font-size: 13px;
+    margin-top: -2px;
+  }
+
+  .arrowIcon {
+    bottom: 36px;
+    width: 14px;
+    height: 14px;
+  }
+}

@@ -83,20 +83,20 @@
     "cexes": [
       {
         "name": "Robinhood CEX",
-        "tvl": 11884403168.737804
+        "tvl": 17012090928.34492
       },
       {
         "name": "OKX",
-        "tvl": 17505106456.55226
+        "tvl": 24070217201.141243
       },
       {
         "name": "Safe",
-        "tvl": 62468973126.503235,
+        "tvl": 71441479840.45575,
         "boxColor": "main"
       },
       {
         "name": "Binance",
-        "tvl": 100360813869.09479
+        "tvl": 138294085853.49887
       }
     ],
     "title": "<em>Safe</em> TVL compares and surpasses major CEXs"
@@ -106,24 +106,24 @@
     "leaders": [
       {
         "name": "Lido (Liquid Staking)",
-        "tvl": 25916636061.2
+        "tvl": 23090840136.379456
       },
       {
         "name": "Uniswap (Liquidity Pool)",
-        "tvl": 4774854756.38199
+        "tvl": 4473126543.502114
       },
       {
         "name": "Safe",
-        "tvl": 62468973126.503235,
+        "tvl": 71441479840.45575,
         "boxColor": "main"
       },
       {
         "name": "EigenLayer (Re-Staking)",
-        "tvl": 12325835638.623302
+        "tvl": 10710215713.14545
       },
       {
         "name": "AAVE",
-        "tvl": 12571571373.304926
+        "tvl": 19023309395.7664
       }
     ],
     "title": "<b>Safe </b>TVL<br/><b>x</b><br/>TVL of <b>category leaders</b>"

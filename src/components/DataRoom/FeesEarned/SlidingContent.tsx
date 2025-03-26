@@ -9,8 +9,8 @@ export type FeeType = {
   isLocked?: boolean
 }
 
-const ANNUAL_SWAP_FEES_FALLBACK = 1822878.426773334
-const ANNUAL_STAKE_FEES_FALLBACK = 106221.187296
+const ANNUAL_SWAP_FEES_FALLBACK = 2_110_635 // 2.11M
+const ANNUAL_STAKE_FEES_FALLBACK = 107_155 // 107k
 const TOTAL_BARS = 10
 
 const SlidingContent = ({ fees }: { fees: FeeType[] }) => {

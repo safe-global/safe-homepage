@@ -1,0 +1,157 @@
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 120px;
+}
+
+.caption {
+  color: var(--mui-palette-primary-main);
+  font-size: 14px;
+  font-weight: 500;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.scrollContainer {
+  position: relative;
+  max-width: 909px;
+  width: 100%;
+  padding-bottom: 40px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.itemsWrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  padding-right: 40px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.itemsWrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+  width: 0;
+  height: 0;
+}
+
+.gradientOverlay {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+  height: 48px;
+  background: linear-gradient(to right, transparent, var(--mui-palette-background-default));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.title {
+  padding-bottom: 40px;
+  max-width: 670px;
+  text-align: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.itemWrapper {
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid currentColor;
+  gap: 8px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.selectedTrackContainer {
+  height: 480px;
+  padding: 20px 20px 20px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--mui-palette-border-light);
+  background: rgba(255, 255, 255, 0.01);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.selectedTrackAmount {
+  color: var(--mui-palette-primary-main);
+}
+
+.selectedTrackContentWrapper {
+  width: 100%;
+}
+
+.selectedTrackTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+
+.selectedTrackText {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 20px;
+  padding-bottom: 30px;
+}
+
+.supportedByText {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  padding-bottom: 12px;
+}
+
+.supportedByLogos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+}
+
+.supportedByLogo {
+  height: 16px;
+  width: auto;
+}
+
+@media (min-width: 900px) {
+  .sectionContainer {
+    padding-top: 160px;
+  }
+
+  .selectedTrackContentWrapper {
+    width: 560px;
+  }
+
+  .selectedTrackContainer {
+    height: 352px;
+    flex-direction: row;
+    padding: 30px 30px 30px 30px;
+  }
+
+  .supportedByLogos {
+    gap: 30px;
+  }
+
+  .scrollContainer {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .title {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

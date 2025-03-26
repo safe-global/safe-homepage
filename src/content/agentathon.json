@@ -1,0 +1,1661 @@
+[
+  {
+    "pageTitle": "Safe Agentathon 2025 -  Smart accounts for agents AI Crypto DeFAI hackathon",
+    "description": "Build AI Agents with the Safe smart accounts. Give agents crypto accounts with advanced features like trading, treasury management and control their actions.",
+    "image": "/images/Agentathon/meta-image-agentathon.jpg",
+    "component": "common/MetaTags"
+  },
+  {
+    "component": "Agentathon/Hero",
+    "caption": "Feb 3rd - Feb 14th",
+    "title": "Safe<br /> Agentathon",
+    "text": "A new hackathon to build sovereign agents with the best AI x Crypto stacks out there",
+    "buttons": [
+      {
+        "text": "Register now",
+        "href": "https://safe-agents.devfolio.co/",
+        "variant": "button"
+      },
+      {
+        "text": "Learn to build",
+        "href": "https://docs.safe.global/home/ai-overview",
+        "variant": "link"
+      }
+    ]
+  },
+  {
+    "component": "Agentathon/Prizes",
+    "image": {
+      "src": "/images/Agentathon/prize-amount.png",
+      "alt": "Prize amount"
+    },
+    "title": "in rewards by top crypto x AI projects",
+    "buttons": [
+      {
+        "text": "Register now",
+        "href": "https://safe-agents.devfolio.co/",
+        "variant": "button"
+      },
+      {
+        "text": "Learn to build",
+        "href": "https://docs.safe.global/home/ai-overview",
+        "variant": "link"
+      }
+    ],
+    "items": [
+      {
+        "image": {
+          "src": "/images/Agentathon/dots.svg",
+          "alt": "dots"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/dots.svg",
+          "alt": "dots"
+        }
+      }
+    ]
+  },
+  {
+    "component": "Agentathon/Partners",
+    "caption": "Hackathon Partners",
+    "items": [
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/eliza.png",
+          "alt": "ElizaOS"
+        },
+        "title": "ElizaOS",
+        "buttons": [
+          {
+            "href": "https://elizaos.ai/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/virtuals.png",
+          "alt": "Virtuals"
+        },
+        "title": "Virtuals",
+        "buttons": [
+          {
+            "href": "https://virtuals.io/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/optimism.png",
+          "alt": "Optimism"
+        },
+        "title": "Optimism",
+        "buttons": [
+          {
+            "href": "https://optimism.io/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/polymarket.png",
+          "alt": "Polymarket"
+        },
+        "title": "Polymarket",
+        "buttons": [
+          {
+            "href": "https://polymarket.com/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/arbitrum.png",
+          "alt": "Arbitrum"
+        },
+        "title": "Arbitrum",
+        "buttons": [
+          {
+            "href": "https://arbitrum.foundation/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/sonic.png",
+          "alt": "Sonic"
+        },
+        "title": "Sonic",
+        "buttons": [
+          {
+            "href": "https://soniclabs.com"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/vader.png",
+          "alt": "VaderAI"
+        },
+        "title": "VaderAI",
+        "buttons": [
+          {
+            "href": "https://vaderai.ai/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/kiln.png",
+          "alt": "Kiln"
+        },
+        "title": "Kiln",
+        "buttons": [
+          {
+            "href": "https://www.kiln.fi/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/story.png",
+          "alt": "Story"
+        },
+        "title": "Story",
+        "buttons": [
+          {
+            "href": "https://www.story.foundation/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/celo.png",
+          "alt": "Celo"
+        },
+        "title": "Celo",
+        "buttons": [
+          {
+            "href": "https://celo.org/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/fileverse.png",
+          "alt": "Fileverse"
+        },
+        "title": "Fileverse",
+        "buttons": [
+          {
+            "href": "https://fileverse.io/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/openzeppelin.png",
+          "alt": "OpenZeppelin"
+        },
+        "title": "OpenZeppelin",
+        "buttons": [
+          {
+            "href": "https://www.openzeppelin.com/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/linea.png",
+          "alt": "Linea"
+        },
+        "title": "Linea",
+        "buttons": [
+          {
+            "href": "https://linea.build"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/olas.png",
+          "alt": "Olas"
+        },
+        "title": "Olas",
+        "buttons": [
+          {
+            "href": "https://olas.network/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/gnosis.png",
+          "alt": "Gnosis AI"
+        },
+        "title": "Gnosis AI",
+        "buttons": [
+          {
+            "href": "https://www.gnosis.io"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/heyanon.png",
+          "alt": "HeyAnon"
+        },
+        "title": "HeyAnon",
+        "buttons": [
+          {
+            "href": "https://heyanon.ai/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/bitte.png",
+          "alt": "Bitte"
+        },
+        "title": "Bitte",
+        "buttons": [
+          {
+            "href": "http://www.bitte.ai/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/freysa.png",
+          "alt": "Freysa"
+        },
+        "title": "Freysa",
+        "buttons": [
+          {
+            "href": "https://www.freysa.ai/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/gelato.png",
+          "alt": "Gelato"
+        },
+        "title": "Gelato",
+        "buttons": [
+          {
+            "href": "https://www.gelato.network/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/rhinestone.png",
+          "alt": "Rhinestone"
+        },
+        "title": "Rhinestone",
+        "buttons": [
+          {
+            "href": "http://rhinestone.wtf"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/creatorbid.png",
+          "alt": "Creator.bid"
+        },
+        "title": "Creator.bid",
+        "buttons": [
+          {
+            "href": "https://creator.bid/agents"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/zerebro.png",
+          "alt": "Zerebro"
+        },
+        "title": "Zerebro",
+        "buttons": [
+          {
+            "href": "https://zerebro.org"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/duckai.png",
+          "alt": "DuckAI"
+        },
+        "title": "DuckAI",
+        "buttons": [
+          {
+            "href": "https://duckai.ai"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/kraken.png",
+          "alt": "Kraken"
+        },
+        "title": "Kraken",
+        "buttons": [
+          {
+            "href": "https://www.kraken.com/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/brahma.png",
+          "alt": "Brahma"
+        },
+        "title": "Brahma",
+        "buttons": [
+          {
+            "href": "https://www.brahma.fi/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/cowswap.png",
+          "alt": "Cowswap"
+        },
+        "title": "Cowswap",
+        "buttons": [
+          {
+            "href": "https://cow.fi/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/eigenlayer.png",
+          "alt": "EigenLayer"
+        },
+        "title": "EigenLayer",
+        "buttons": [
+          {
+            "href": "https://www.eigenlayer.xyz/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/avalanche.png",
+          "alt": "Avalanche"
+        },
+        "title": "Avalanche",
+        "buttons": [
+          {
+            "href": "https://www.avax.network/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/enso.png",
+          "alt": "Enso"
+        },
+        "title": "Enso",
+        "buttons": [
+          {
+            "href": "https://www.enso.build/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/lit.png",
+          "alt": "Lit Protocol"
+        },
+        "title": "Lit Protocol",
+        "buttons": [
+          {
+            "href": "https://www.litprotocol.com/"
+          }
+        ]
+      },
+
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/aws.png",
+          "alt": "AWS"
+        },
+        "title": "AWS",
+        "buttons": [
+          {
+            "href": "https://aws.amazon.com/web3/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/cyber-fund.png",
+          "alt": "Cyber.Fund"
+        },
+        "title": "Cyber.Fund",
+        "buttons": [
+          {
+            "href": "https://cyber.fund"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/kite-ai.png",
+          "alt": "Kite AI"
+        },
+        "title": "Kite AI",
+        "buttons": [
+          {
+            "href": "https://gokite.ai/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/sei.png",
+          "alt": "SEI"
+        },
+        "title": "SEI",
+        "buttons": [
+          {
+            "href": "https://sei.io"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/stakekit.png",
+          "alt": "Stakekit"
+        },
+        "title": "Stakekit",
+        "buttons": [
+          {
+            "href": "https://www.stakek.it/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/venice.png",
+          "alt": "Venice.ai"
+        },
+        "title": "Venice.ai",
+        "buttons": [
+          {
+            "href": "https://venice.ai/home"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "component": "Agentathon/Possibilities",
+    "title": "Safe smart accounts unlock new possibilities for Agents",
+    "items": [
+      {
+        "image": {
+          "src": "/images/Agentathon/possibilities/roles.png",
+          "alt": "Roles"
+        },
+        "title": "Roles"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/possibilities/guards.png",
+          "alt": "Guards"
+        },
+        "title": "Guards"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/possibilities/subaccounts.png",
+          "alt": "Subaccounts"
+        },
+        "title": "Subaccounts"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/possibilities/spendinglimits.png",
+          "alt": "Spending Limits"
+        },
+        "title": "Spending Limits"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/possibilities/multisig.png",
+          "alt": "Multi-sig Setup"
+        },
+        "title": "Multi-sig Setup"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/possibilities/timelocking.png",
+          "alt": "Time Locking"
+        },
+        "title": "Time Locking"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/possibilities/whitelisting.png",
+          "alt": "Protocol Whitelisting"
+        },
+        "title": "Protocol Whitelisting"
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/possibilities/automations.png",
+          "alt": "Advanced DeFi Automations"
+        },
+        "title": "Advanced DeFi Automations"
+      }
+    ]
+  },
+  {
+    "component": "Agentathon/BestAgents",
+    "caption": "The best agents are built on safe",
+    "items": [
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/freysa.png",
+          "alt": "Freysa"
+        },
+        "title": "Freysa",
+        "buttons": [
+          {
+            "href": "https://www.freysa.ai/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/creatorbid.png",
+          "alt": "Creator.bid"
+        },
+        "title": "Creator.bid",
+        "buttons": [
+          {
+            "href": "https://creator.bid/agents"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/olas.png",
+          "alt": "Olas"
+        },
+        "title": "Olas",
+        "buttons": [
+          {
+            "href": "https://olas.network/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/hatsfinance.png",
+          "alt": "Hats Finance"
+        },
+        "title": "Hats Finance",
+        "buttons": [
+          {
+            "href": "https://hats.finance/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/bitte.png",
+          "alt": "Bitte.ai"
+        },
+        "title": "Bitte.ai",
+        "buttons": [
+          {
+            "href": "http://www.bitte.ai/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/vader.png",
+          "alt": "VaderAI"
+        },
+        "title": "VaderAI",
+        "buttons": [
+          {
+            "href": "https://vaderai.ai/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/partners/heyanon.png",
+          "alt": "HeyAnon"
+        },
+        "title": "HeyAnon",
+        "buttons": [
+          {
+            "href": "https://heyanon.ai/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/gaib.png",
+          "alt": "Gaib"
+        },
+        "title": "Gaib",
+        "buttons": [
+          {
+            "href": "https://www.metalex.tech/"
+          }
+        ]
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Register Now",
+        "href": "https://safe-agents.devfolio.co/",
+        "variant": "button"
+      },
+      {
+        "text": "Learn to build",
+        "href": "https://docs.safe.global/home/ai-overview",
+        "variant": "link"
+      }
+    ]
+  },
+  {
+    "component": "Agentathon/LearnToUse",
+    "caption": "Start building with code snippets",
+    "title": "Learn to use Agents With Safe Accounts",
+    "image": {
+      "src": "/images/Agentathon/robot.png",
+      "alt": "robot"
+    },
+    "items": [
+      {
+        "title": "Setup your Agent with a Safe account",
+        "image": {
+          "src": "/images/Agentathon/multisig.png",
+          "alt": "multisig"
+        },
+        "buttons": [
+          {
+            "href": "https://docs.safe.global/home/ai-agent-quickstarts/basic-agent-setup"
+          }
+        ]
+      },
+      {
+        "title": "Human approval for Agent actions",
+        "image": {
+          "src": "/images/Agentathon/human-approval.png",
+          "alt": "human approval"
+        },
+        "buttons": [
+          {
+            "href": "https://docs.safe.global/home/ai-agent-quickstarts/human-approval"
+          }
+        ]
+      },
+      {
+        "title": "Agents managing DAO treasury",
+        "image": {
+          "src": "/images/Agentathon/treasury.png",
+          "alt": "treasury"
+        },
+        "buttons": [
+          {
+            "href": "https://docs.safe.global/home/ai-agent-quickstarts/agent-with-spending-limit"
+          }
+        ]
+      },
+      {
+        "title": "Agents trading tokens with Safe",
+        "image": {
+          "src": "/images/Agentathon/agent-trading.png",
+          "alt": "agent trading"
+        },
+        "buttons": [
+          {
+            "href": "https://docs.safe.global/home/ai-agent-actions/introduction"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "component": "Agentathon/Tracks",
+    "caption": "Tracks",
+    "title": "Build across 6 tracks and over 100 prizes",
+    "items": [
+      {
+        "caption": "$67,500",
+        "title": "DeFAI",
+        "text": "Agents engaging in advanced DeFi activities",
+        "items": [
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/sonic.png",
+              "alt": "sonic",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/bitte.png",
+              "alt": "bitte",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/heyanon.png",
+              "alt": "heyanon",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/arbitrum.png",
+              "alt": "arbitrum",
+              "height": "28px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/brahma.png",
+              "alt": "brahma",
+              "height": "20px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/cowswap.png",
+              "alt": "cowswap",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/celo.png",
+              "alt": "celo",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/kraken.png",
+              "alt": "kraken",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/creatorbid.png",
+              "alt": "creatorbid",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/linea.png",
+              "alt": "linea",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/gelato.png",
+              "alt": "gelato",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/enso.png",
+              "alt": "enso",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/avalanche.png",
+              "alt": "avalanche",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/aws.png",
+              "alt": "aws",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/cyber-fund.png",
+              "alt": "cyber",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/kite-ai.png",
+              "alt": "kite",
+              "height": "18px"
+            }
+          }
+        ]
+      },
+      {
+        "caption": "$13,000",
+        "title": "Treasury",
+        "text": "Agents that optimise treasury management operations",
+        "items": [
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/eliza.png",
+              "alt": "eliza",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/kiln.png",
+              "alt": "kiln",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/kraken.png",
+              "alt": "kraken",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/aws.png",
+              "alt": "aws",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/stakekit.png",
+              "alt": "stakekit",
+              "height": "26px"
+            }
+          }
+        ]
+      },
+      {
+        "caption": "$20,000",
+        "title": "Prediction Market",
+        "text": "Agents participating in prediction markets",
+        "items": [
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/gnosis.png",
+              "alt": "gnosis",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/polymarket.png",
+              "alt": "polymarket",
+              "height": "24px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/aws.png",
+              "alt": "aws",
+              "height": "16px"
+            }
+          }
+        ]
+      },
+      {
+        "caption": "$39,000",
+        "title": "AI Advancement",
+        "text": "AI agent capability enhancements in crypto",
+        "items": [
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/rhinestone.png",
+              "alt": "rhinestone",
+              "height": "32px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/stack.png",
+              "alt": "logo",
+              "height": "32px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/optimism.png",
+              "alt": "optimism",
+              "height": "12px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/arbitrum.png",
+              "alt": "arbitrum",
+              "height": "30px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/eliza.png",
+              "alt": "eliza",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/aws.png",
+              "alt": "aws",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/cyber-fund.png",
+              "alt": "cyber",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/sei.png",
+              "alt": "sei",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/venice.png",
+              "alt": "venice",
+              "height": "32px"
+            }
+          }
+        ]
+      },
+      {
+        "caption": "$22,500",
+        "title": "Social",
+        "text": "Agents generating creative and memetic content",
+        "items": [
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/avalanche.png",
+              "alt": "avalanche",
+              "height": "20px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/story.png",
+              "alt": "story",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/zerebro.png",
+              "alt": "zerebro",
+              "height": "32px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/virtual.png",
+              "alt": "virtual",
+              "height": "32px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/linea.png",
+              "alt": "linea",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/aws.png",
+              "alt": "aws",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/venice.png",
+              "alt": "venice",
+              "height": "32px"
+            }
+          }
+        ]
+      },
+      {
+        "caption": "$38,000",
+        "title": "Smart Account Tooling",
+        "text": "Enhancing and restricting agent transaction capabilities using Safe smart accounts and modules",
+        "items": [
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/lit.png",
+              "alt": "lit",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/openzeppelin.png",
+              "alt": "openzeppelin",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/rhinestone.png",
+              "alt": "rhinestone",
+              "height": "32px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/duck.png",
+              "alt": "duck",
+              "height": "32px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/eigen.png",
+              "alt": "eigen",
+              "height": "32px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/virtual.png",
+              "alt": "virtual",
+              "height": "32px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/olas.png",
+              "alt": "olas",
+              "height": "32px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/eliza.png",
+              "alt": "eliza",
+              "height": "16px"
+            }
+          },
+          {
+            "image": {
+              "src": "/images/Agentathon/tracks/aws.png",
+              "alt": "aws",
+              "height": "16px"
+            }
+          }
+        ]
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Register Now",
+        "href": "https://safe-agents.devfolio.co/",
+        "variant": "button"
+      },
+      {
+        "text": "Learn to build",
+        "href": "https://docs.safe.global/home/ai-overview",
+        "variant": "link"
+      }
+    ]
+  },
+  {
+    "component": "Agentathon/Judges",
+    "caption": "Judges",
+    "title": "Connect with leading AI x Crypto innovators",
+    "items": [
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/freysa.png",
+          "alt": "Freysa"
+        },
+        "title": "Freysa",
+        "text": "Sovereign Agent, Freysa",
+        "buttons": [
+          {
+            "href": "https://x.com/freysa_ai"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/nader.png",
+          "alt": "Nader Dabit"
+        },
+        "title": "Nader Dabit",
+        "text": "Director of DevRel, Eigenlayer",
+        "buttons": [
+          {
+            "href": "https://x.com/dabit3"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/eric.png",
+          "alt": "Eric Conner"
+        },
+        "title": "Eric Conner",
+        "text": "Crypto Investor",
+        "buttons": [
+          {
+            "href": "https://x.com/econoar"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/erik.png",
+          "alt": "Erik Voorhees"
+        },
+        "title": "Erik Voorhees",
+        "text": "Founder, Venice.ai",
+        "buttons": [
+          {
+            "href": "https://x.com/ErikVoorhees"
+          }
+        ]
+      },
+
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/danielle.png",
+          "alt": "Daniele"
+        },
+        "title": "Daniele",
+        "text": "Founder, HeyAnon",
+        "buttons": [
+          {
+            "href": "https://x.com/danielesesta"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/doug.png",
+          "alt": "Doug Millett"
+        },
+        "title": "Doug Millett",
+        "text": "Product Manager, Eliza Labs",
+        "buttons": [
+          {
+            "href": "https://x.com/dpmillett"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/jeffy.png",
+          "alt": "Jeffy Yu"
+        },
+        "title": "Jeffy Yu",
+        "text": "Founder, Zerebro",
+        "buttons": [
+          {
+            "href": "https://x.com/jyu_eth"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/fransesco.png",
+          "alt": "Fransesco Andreoli"
+        },
+        "title": "Fransesco Andreoli",
+        "text": "Devrel, Linea",
+        "buttons": [
+          {
+            "href": "https://x.com/francescoswiss"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/naiane.png",
+          "alt": "Naiane Rosa"
+        },
+        "title": "Naiane Rosa",
+        "text": "Senior Software Engineer, Olas",
+        "buttons": [
+          {
+            "href": "https://olas.network/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/louis.png",
+          "alt": "Louis"
+        },
+        "title": "Louis",
+        "text": "DevEx, Safe",
+        "buttons": [
+          {
+            "href": "https://x.com/LMargotDuclot"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/nate.png",
+          "alt": "Nate"
+        },
+        "title": "Nate",
+        "text": "Founder, Bitte.AI",
+        "buttons": [
+          {
+            "href": "https://x.com/NateGeier"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/phil.png",
+          "alt": "Phil K"
+        },
+        "title": "Phil K",
+        "text": "Founder, Creator.Bid",
+        "buttons": [
+          {
+            "href": "https://x.com/philism_"
+          }
+        ]
+      },
+
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/bapi.png",
+          "alt": "Bapi"
+        },
+        "title": "Bapi",
+        "text": "Co-Founder and CTO, Brahma",
+        "buttons": [
+          {
+            "href": "https://x.com/BapireddyK"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/parker.png",
+          "alt": "Parker"
+        },
+        "title": "Parker",
+        "text": "Head of Onchain AI, Kraken ",
+        "buttons": [
+          {
+            "href": "https://x.com/TheOtherParker"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/gabriel.png",
+          "alt": "Gabriel Fior"
+        },
+        "title": "Gabriel Fior",
+        "text": "LLM Engineer, Gnosis",
+        "buttons": [
+          {
+            "href": "https://x.com/TheGabrielFior"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/mete.png",
+          "alt": "Mete Gultekin"
+        },
+        "title": "Vader",
+        "text": "CEO, VaderAI",
+        "buttons": [
+          {
+            "href": "http://www.vaderai.ai/"
+          }
+        ]
+      },
+
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/pierce.png",
+          "alt": "Pierce Hager"
+        },
+        "title": "Pierce Hager",
+        "text": "DevX Product Lead, Optimism",
+        "buttons": [
+          {
+            "href": "https://x.com/piercemyear?lang=en"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/daniel.png",
+          "alt": "Daniel Olarte"
+        },
+        "title": "Daniel Olarte",
+        "text": "Head of AI, Celo",
+        "buttons": [
+          {
+            "href": "https://x.com/danolar5"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/0xglu.png",
+          "alt": "0xglu"
+        },
+        "title": "0xglu",
+        "text": "Co-Founder, DuckAI",
+        "buttons": [
+          {
+            "href": "https://x.com/0xglu"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/seg.png",
+          "alt": "Seg"
+        },
+        "title": "Seg",
+        "text": "Devrel, Sonic",
+        "buttons": [
+          {
+            "href": "https://x.com/0xseg"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/konrad.png",
+          "alt": "Konrad Kopp"
+        },
+        "title": "Konrad Kopp",
+        "text": "Co-founder, Rhinestone",
+        "buttons": [
+          {
+            "href": "https://x.com/abstractooor"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/ernest.png",
+          "alt": "Ernest Oppetit"
+        },
+        "title": "Ernest Oppetit",
+        "text": "Co-founder, Kiln",
+        "buttons": [
+          {
+            "href": "https://x.com/ernopp"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/valentin.png",
+          "alt": "Valentin"
+        },
+        "title": "Valentin",
+        "text": "DevRel, Safe",
+        "buttons": [
+          {
+            "href": "https://x.com/V_Seehausen"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/connor.png",
+          "alt": "Connor Howe"
+        },
+        "title": "Connor Howe",
+        "text": "CEO, Enso",
+        "buttons": [
+          {
+            "href": "https://x.com/connor_enso/"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/sarp.png",
+          "alt": "Sarp"
+        },
+        "title": "Sarp",
+        "text": "Sr. Engineer, Avalabs",
+        "buttons": [
+          {
+            "href": "https://x.com/satatocom"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/andreas.png",
+          "alt": "Andreas"
+        },
+        "title": "Andreas",
+        "text": "Co-Founder, Fileverse",
+        "buttons": [
+          {
+            "href": "https://x.com/miroyato"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/david.png",
+          "alt": "David"
+        },
+        "title": "David Sneider",
+        "text": "Co-Founder, Lit Protocol",
+        "buttons": [
+          {
+            "href": "https://x.com/davidlsneider"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/everton.png",
+          "alt": "Everton Fraga"
+        },
+        "title": "Everton Fraga",
+        "text": "Sr. Web3 Specialist, AWS",
+        "buttons": [
+          {
+            "href": "https://x.com/evertonfraga"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/christoph.png",
+          "alt": "Christoph Niemann"
+        },
+        "title": "Christoph Niemann",
+        "text": "Sr. Blockchain Architect, AWS",
+        "buttons": [
+          {
+            "href": "https://www.linkedin.com/in/chrisdotn"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/ejaaz.png",
+          "alt": "Ejaaz - Punk7123"
+        },
+        "title": "Ejaaz - Punk7123",
+        "text": "Founder 26CC & Core Contributor AiccelerateDAO",
+        "buttons": [
+          {
+            "href": "https://x.com/cryptopunk7213"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/stepan.png",
+          "alt": "Stepan Gershuni"
+        },
+        "title": "Stepan Gershuni",
+        "text": "Principal, cyber•Fund",
+        "buttons": [
+          {
+            "href": "https://x.com/sgershuni"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/vikas.png",
+          "alt": "Vikas Pandey"
+        },
+        "title": "Vikas Pandey",
+        "text": "Head of Protocol, Kite AI",
+        "buttons": [
+          {
+            "href": "https://x.com/buidloor"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/mike.png",
+          "alt": "Mike McCoy"
+        },
+        "title": "Mike McCoy",
+        "text": "Director of Infrastructure, SEI Foundation",
+        "buttons": [
+          {
+            "href": "https://x.com/emceecoy_"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/apurv.png",
+          "alt": "Apurv Mishra"
+        },
+        "title": "Apurv Mishra",
+        "text": "Co-Founder & CSPO, StakeKit",
+        "buttons": [
+          {
+            "href": "https://x.com/apurvmishra"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/celeste.png",
+          "alt": "Celeste"
+        },
+        "title": "Celeste",
+        "text": "Head of DevRel, Virtuals",
+        "buttons": [
+          {
+            "href": "https://x.com/celesteanglm"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/suhail.png",
+          "alt": "Suhail"
+        },
+        "title": "Suhail Kakar",
+        "text": "Devrel Lead at TAC",
+        "buttons": [
+          {
+            "href": "https://x.com/SuhailKakar"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/javier.png",
+          "alt": "Javier"
+        },
+        "title": "Javier Donoso",
+        "text": "Head of DevRel, Gelato",
+        "buttons": [
+          {
+            "href": "https://x.com/danolar5"
+          }
+        ]
+      },
+      {
+        "image": {
+          "src": "/images/Agentathon/judges/muttoni.png",
+          "alt": "Muttoni"
+        },
+        "title": "Andrea Muttoni",
+        "text": "Head of DevRel, Story",
+        "buttons": [
+          {
+            "href": "https://x.com/devrelius"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "component": "Agentathon/SafeAgents",
+    "image": {
+      "src": "/images/Agentathon/safe-glow-logo.png",
+      "alt": "Safe Logo"
+    },
+    "buttons": [
+      {
+        "text": "Register Now",
+        "href": "https://safe-agents.devfolio.co/",
+        "variant": "button"
+      },
+      {
+        "text": "Learn to build",
+        "href": "https://docs.safe.global/home/ai-overview",
+        "variant": "link"
+      }
+    ]
+  }
+]

@@ -1,4 +1,4 @@
-import { DOCS_LINK, GRANTS_LINK, HELP_LINK, SAFECON_LINK } from '@/config/constants'
+import { DOCS_LINK, GRANTS_LINK, HELP_LINK, SAFECON_LINK, SAFE_NETWORK_SUPPORT } from '@/config/constants'
 import { AppRoutes } from '@/config/routes'
 import PaperIcon from '@/public/images/Header/paper-icon.svg'
 import SafeCoreIcon from '@/public/images/Header/safe-core-icon.svg'
@@ -11,9 +11,10 @@ import SafeConIcon from '@/public/images/Header/safe-con-icon.svg'
 import CareersIcon from '@/public/images/Header/careers-icon.svg'
 import PressRoomIcon from '@/public/images/Header/press-room-icon.svg'
 import HelpCenterIcon from '@/public/images/Header/help-center-icon.svg'
-import GasStationIcon from '@/public/images/Header/gas-station-icon.svg'
 import SafeFoundryIcon from '@/public/images/Header/safe-foundry-icon.svg'
 import DataRoomIcon from '@/public/images/Header/data-room-icon.svg'
+import AgentathonIcon from '@/public/images/Header/agentathon-icon.svg'
+import SafeNetworkSupportIcon from '@/public/images/Header/safe-network-support.svg'
 
 export type NavItem = {
   label: string
@@ -65,14 +66,21 @@ export const navCategories: NavCategory[] = [
         icon: <PaperIcon />,
       },
       {
-        label: 'Gas Station',
-        href: AppRoutes.gasStation,
-        icon: <GasStationIcon />,
-      },
-      {
         label: 'Safe{Foundry}',
         href: AppRoutes.foundry,
         icon: <SafeFoundryIcon />,
+      },
+      {
+        label: 'Agentathon',
+        href: AppRoutes.agentathon,
+        icon: <AgentathonIcon />,
+      },
+      {
+        label: 'Safe Network Support',
+        href: SAFE_NETWORK_SUPPORT,
+        target: '_blank',
+        rel: 'noreferrer',
+        icon: <SafeNetworkSupportIcon />,
       },
     ],
   },

@@ -42,10 +42,6 @@ const developersItems = [
     rel: 'noreferrer',
   },
   {
-    label: 'Gas station',
-    href: AppRoutes.gasStation,
-  },
-  {
     label: 'Safe{Foundry}',
     href: AppRoutes.foundry,
   },

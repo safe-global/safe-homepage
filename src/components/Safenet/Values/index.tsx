@@ -35,7 +35,7 @@ const stats = [
   },
   {
     title: '200+',
-    text: 'Ecossytem Builders',
+    text: 'Ecosystem Builders',
   },
 ]
 

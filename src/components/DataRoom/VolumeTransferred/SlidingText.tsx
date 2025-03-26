@@ -6,7 +6,7 @@ import useScrollProgress from '@/hooks/useScrollProgress'
 import { formatCurrency } from '@/lib/formatCurrency'
 import css from './styles.module.css'
 
-const VOLUME_TRANSFERRED_FALLBACK = 611_127_712_666
+const VOLUME_TRANSFERRED_FALLBACK = 953_223_119_484 // 953 billion
 
 const SlidingText = ({ containerRef }: { containerRef: RefObject<HTMLDivElement> }) => {
   const { totalVolumeTransferred } = useSafeDataRoomStats()
