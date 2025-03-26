@@ -20,14 +20,13 @@
   },
   {
     "variant": "4-columns",
-    "containerClass": "chapter-cont",
     "items": [
       {
         "image": {
           "src": "/images/HoldingCryptoSafely/padlock-single-large.svg",
           "alt": "Padlock with key icon"
         },
-        "text": "Chapter 01",
+        "caption": "Chapter 01",
         "title": "An introduction to crypto storage",
         "link": {
           "href": "#chapter-one",
@@ -39,7 +38,7 @@
           "src": "/images/HoldingCryptoSafely/padlock-large.svg",
           "alt": "Padlock with keys icon"
         },
-        "text": "Chapter 02",
+        "caption": "Chapter 02",
         "title": "How to safely store your crypto assets",
         "link": {
           "href": "#chapter-two",
@@ -51,7 +50,7 @@
           "src": "/images/HoldingCryptoSafely/cross-box-large.svg",
           "alt": "Cross icon"
         },
-        "text": "Chapter 03",
+        "caption": "Chapter 03",
         "title": "Crypto asset storage mistakes",
         "link": {
           "href": "#chapter-three",
@@ -63,7 +62,7 @@
           "src": "/images/HoldingCryptoSafely/new-link-large.svg",
           "alt": "New link icon"
         },
-        "text": "Chapter 04",
+        "caption": "Chapter 04",
         "title": "Useful links",
         "link": {
           "href": "#chapter-four",
@@ -85,7 +84,6 @@
     },
     "gradientColour": "dark"
   },
-
 
   {
     "title": "Understanding the current landscape of cryptocurrency and crypto wallets",

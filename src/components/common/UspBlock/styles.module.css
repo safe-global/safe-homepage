@@ -17,12 +17,6 @@
   align-items: flex-start;
 }
 
-@media (min-width: 900px) {
-  .gridItems:nth-child(7):last-child {
-    border-right: 1px solid var(--mui-palette-border-light);
-  }
-}
-
 .roundCorners {
   border: 1px solid var(--mui-palette-border-light);
   border-radius: 12px;
@@ -36,13 +30,4 @@
 
 .title a {
   text-decoration: underline;
-}
-
-.chapterTitle {
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 28px;
-  letter-spacing: 1.4px;
-  color: #fff;
 }
