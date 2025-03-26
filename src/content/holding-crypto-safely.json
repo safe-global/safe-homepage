@@ -1,0 +1,613 @@
+[
+  {
+    "pageTitle": "Mistakes to Avoid When Storing Crypto Assets | Safe.Global",
+    "description": "As an increasingly valuable commodity, it's important to store crypto in a way that's safe and secure. Find out how to do that in our latest guide.",
+    "component": "common/MetaTags"
+  },
+  {
+    "title": "<b>Mistakes to Avoid</b> When Storing Your Crypto Assets",
+    "text": "How to Safely Hold Crypto",
+    "link": {
+      "href": "#intro-section",
+      "title": "Read more"
+    },
+    "component": "HoldingCryptoSafely/Intro"
+  },
+  {
+    "id": "intro-section",
+    "text": "<p>Understanding the ins and outs of cryptocurrency requires a meticulous understanding of complex financial and economic factors. While the digestion of market data and the making of shrewd tactical decisions are paramount to success in the world of crypto, many overlook one of the “basics” of owning a digital currency.</p><p>Protecting your assets in a safe storage solution might not seem like a priority when compared to something like trading – but failing to do so can see all your hard-earned gains lost. In an age where so much of what we do is online, a robust cybersecurity approach needs to be adopted to safeguard your crypto storage.</p><p>So, what does that look like? And what should investors be aware of when implementing a storage solution of their own? In this detailed guide, we’ll discuss exactly that. Read on to discover the safest way to store your crypto, as well as common mistakes to watch out for and avoid.</p>",
+    "component": "common/TextBlockNarrow"
+  },
+  {
+    "variant": "4-columns",
+    "containerClass": "chapter-cont",
+    "items": [
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/padlock-single-large.svg",
+          "alt": "Padlock with key icon"
+        },
+        "text": "Chapter 01",
+        "title": "An introduction to crypto storage",
+        "link": {
+          "href": "#chapter-one",
+          "title": "Read more"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/padlock-large.svg",
+          "alt": "Padlock with keys icon"
+        },
+        "text": "Chapter 02",
+        "title": "How to safely store your crypto assets",
+        "link": {
+          "href": "#chapter-two",
+          "title": "Read more"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/cross-box-large.svg",
+          "alt": "Cross icon"
+        },
+        "text": "Chapter 03",
+        "title": "Crypto asset storage mistakes",
+        "link": {
+          "href": "#chapter-three",
+          "title": "Read more"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/new-link-large.svg",
+          "alt": "New link icon"
+        },
+        "text": "Chapter 04",
+        "title": "Useful links",
+        "link": {
+          "href": "#chapter-four",
+          "title": "Read more"
+        }
+      }
+    ],
+    "component": "common/UspBlock"
+  },
+  {
+    "component": "common/BannerGradientImage",
+    "id": "chapter-one",
+    "caption": "Chapter 01",
+    "title": "An introduction to <b>crypto storage</b>",
+    "text": "<p>Crypto storage isn’t a one-size-fits-all approach. There are varying ways to safely and securely store your cryptocurrency in order to protect it. Understanding the options available to you is half the battle when it comes to picking a solution which is both safe and effective.</p>",
+    "image": {
+      "src": "/images/HoldingCryptoSafely/safe-background-lines.svg",
+      "alt": "Safe round block lines"
+    },
+    "gradientColour": "dark"
+  },
+
+
+  {
+    "title": "Understanding the current landscape of cryptocurrency and crypto wallets",
+    "text": "<p>The crypto market is continuing to grow, as more investors dip their toes in this exciting new financial world. The global crypto market capitalisation is now <a href='https://www.forbes.com/advisor/in/investing/cryptocurrency/cryptocurrency-statistics/#:~:text=Globally%2C%20the%20crypto%20market%20capitalization%20has%20surpassed%20%242.5%20trillion' target='_blank' rel='nofollow noopener'>believed to be worth as much as $2.5 trillion</a>, with the market valued at $6.6 billion as a whole.</p><p>107.3 million investors are projected to trade in some form of crypto by the end of 2025. All in all, <a href='https://www.fortunebusinessinsights.com/industry-reports/cryptocurrency-market-100149' target='_blank' rel='nofollow noopener'>a compound annual growth (CAGR) of 11.1%</a> is expected to reshape the entirety of the market between 2021 and 2028.</p><p>At the forefront of this momentous wave are crypto wallets. Across the first five months of 2024 alone, as many as <a href='https://altindex.com/news/crypto-wallets-downloads-increase' target='_blank' rel='nofollow noopener'>91.4 million wallets were downloaded by users worldwide</a>. This eye-catching number represented just 8% less than the entirety of 2023, and would put the market on course to see 219.36 million downloads throughout 2024 as a whole.</p><p>This figure would represent the strongest on record for crypto wallets – surpassing the 185.9 million which users downloaded in 2021. Since their inception in 2015, the annual numbers look as follows:</p>",
+    "component": "common/TextBlockNarrow"
+  },
+  {
+    "component": "common/ImageFull",
+    "image": {
+      "src": "/images/HoldingCryptoSafely/annual-wallet-downloads-graph.svg",
+      "alt": "Annual wallet downloads graph"
+    },
+    "link": {
+      "href": "https://altindex.com/news/crypto-wallets-downloads-increase",
+      "title": "Source: Altindex"
+    }
+  },
+  {
+    "text": "<p>The continued growth of the crypto market is great news for many. But, as anyone working in other financial sectors knows all too well, more users and more money also means more people trying to cultivate ill-gotten gains.</p><p>Cyber criminals are turning their attention to the world of cryptocurrency. In 2023, as much as <a href='https://www.chainalysis.com/blog/2024-crypto-crime-report-introduction/' target='_blank' rel='nofollow noopener'>$24.2 billion worth of crypto was lost to fraudsters</a> using illicit addresses. That represented 0.34% of all transactions made across the year. And while that number is scary, it is at least a step down on the $39.6 billion lost to scammers in 2022 (0.42% of all transfers).</p><p>At the forefront of this crime wave is cryptojacking. This aggressive hacking technique sees criminals infiltrate your personal devices with malware, before mining your computer for valuable information such as seed phrases and passkeys.</p><p>This practice <a href='https://excellence-it.co.uk/insights/cryptojacking/#:~:text=Whilst%20Cryptojacking%20rose%20659%25%20between%202022%20and%202023' target='_blank' rel='nofollow noopener'>rose by 659% between 2022 and 2023</a>, making it the fastest-growing crime utilised in the world of crypto. In November and December of 2023 combined, more cryptojacking took place than the entirety of 2022 combined. In Europe, this form of cyber attack increased by 1,045% in one calendar year.</p><p>With criminals now able to actively strip private information from your devices, it’s more important than ever to ensure you understand how to safely store crypto in secure wallets.</p>",
+    "component": "common/TextBlockNarrow"
+  },
+  {
+    "title": "How crypto is stored",
+    "text": "Cryptocurrency is stored in wallets. These are either physical devices or online software which allow you to keep all your crypto assets in one centralised location. This can include the passkeys needed to sign for any cryptocurrency transactions, as well as the interface which lets you directly access your coins.<br><br>Wallets enable the smooth and simple accessing and transaction of all kinds of blockchain – something which was notoriously difficult when cryptocurrency was first becoming popular. These programs can sit on any kind of computer or mobile device, and are designed to be as streamlined and user-friendly as possible.",
+    "component": "common/TextFull"
+  },
+  {
+    "component": "HoldingCryptoSafely/TextItemGridSpacedCards",
+    "title": "Different ways crypto is stored in wallets",
+    "text": "<p>The versatile nature of crypto storage means there are a handful of wallet options for owners. However, within that, all wallets will either be custodial or non-custodial:</p>",
+    "columnWidth": 6,
+    "items": [
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/group-users.svg",
+          "alt": "Users icon"
+        },
+        "title": "Custodial wallets",
+        "text": "<p>These wallets see a third-party host and store your keys for you. Managing private keys can be a challenging task, which is why a lot of users rely on these trusted third-party sites to do it for them. If you lose your access keys, you won’t ever be able to retrieve your funds.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/single-user.svg",
+          "alt": "Single user icon"
+        },
+        "title": "Non-custodial wallets",
+        "text": "<p>By contrast, a non-custodial wallet is one where you independently manage your keys. This offers a greater level of freedom to access funds, but does require extreme care and caution. If you lose non-custodial pass keys, you are very unlikely to ever access your assets again.</p>"
+      }
+    ]
+  },
+  {
+    "component": "HoldingCryptoSafely/TextItemGridSpacedCards",
+    "text": "<p>Beyond this, there are further subcategories of wallet. The first layer of these are “hot” and “cold” wallets:</p>",
+    "columnWidth": 6,
+    "items": [
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/cold-wallet.svg",
+          "alt": "Cold wallet icon"
+        },
+        "title": "Cold wallets",
+        "text": "<p>These wallets are not connected to the internet and are hardware devices. Private keys are used to access crypto stored in these kinds of wallets, which are housed on offline devices. This ensures they’re not vulnerable to the same kinds of cyber attacks which devices with an internet connection are – heightening safety. While this can make trading and transactions slightly more complex, many opt for this over the potential risk of losing their cryptocurrency to scammers or hackers.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/hot-wallet.svg",
+          "alt": "hot wallet icon"
+        },
+        "title": "Hot wallets",
+        "text": "<p>As the name suggests, a hot wallet is the opposite of a cold one. That means they’re stored on a device which is connected to the internet. This streamlines the process of accessing and transferring any crypto you own, but does also make it slightly easier for hackers to get access to your assets. Hot wallets usually require a more comprehensive cybersecurity approach for that reason.</p>"
+      }
+    ]
+  },
+  {
+    "component": "HoldingCryptoSafely/TextItemGridSpacedCards",
+    "text": "<p>A wallet can pair any of these different storage types. For example, you can have a hot custodial wallet, as well as a cold custodial wallet. This categorisation can be expanded even further, with different types of wallet dispersed across the core types. Some of the most common you might find are:</p>",
+    "columnWidth": 6,
+    "last": true,
+    "items": [
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/padlock.svg",
+          "alt": "Multisig wallet icon"
+        },
+        "title": "Multisig wallets",
+        "text": "<p>One of the safest types of crypto storage methods available, multisig wallets use additional security settings that require two or more people to authorise transactions. This heightened safety sees two signatures required to validate a transaction, compared to the solo signature needed for most other wallets. They are complex to set up, which is why it’s best to use them when paired with a custodial wallet that’s operated by a reliable third-party.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/paper-list.svg",
+          "alt": "Paper wallet icon"
+        },
+        "title": "Paper wallets",
+        "text": "<p>Paper wallets are just that – pieces of paper with your private and public access keys on them. This can be in the form of a barcode, or even something as rudimentary as the full key written out in digits and characters. These are becoming less popular as cryptocurrency becomes more mainstream, but are still seen on occasion.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/computer-chip.svg",
+          "alt": "Hardware wallets icon",
+          "fillColor": "green"
+        },
+        "title": "Hardware wallets",
+        "text": "<p>These allow you to store your private keys on something resembling a USB stick, which can be removed from your device. You simply need to insert the storage system back into your computer when you want to make or receive a transaction. They’re generally used as cold wallets, because they’ll lack an internet connection before being plugged in.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/arrows-exchange.svg",
+          "alt": "Cryptocurrency exchanges icon"
+        },
+        "title": "Cryptocurrency exchanges",
+        "text": "<p>While technically not a wallet, crypto exchanges serve as a viable alternative. These online applications can be downloaded, and allow a user to carry out crypto-related transactions which facilitate the sending or selling of cryptocurrency. <br> <br>Some feel like exchanges offer less freedom when managing their money, while there have also been issues raised around fees that these services can sometimes charge for withdrawals. The third-party nature of exchanges also means that if they’re attacked, you could lose all your crypto even if your personal details weren’t acquired.</p>"
+      }
+    ]
+  },
+  {
+    "component": "HoldingCryptoSafely/TextItemGridSpacedCards",
+    "title": "How to compare different types of crypto storage",
+    "text": "<p>This variety in storage options is fantastic – but it does inherently provide you with a new hurdle: understanding which is best for you. When considering this, there are several factors which can help you determine your storage solution requirements.</p>",
+    "columnWidth": 4,
+    "items": [
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/copy-icon.svg",
+          "alt": "Copy icon"
+        },
+        "title": "Amount of crypto",
+        "text": "<p>How much you’re intending to store will naturally play a part in any decision. Generally speaking, the more you have to lose, the safer you’ll want to make your assets. Those with a small amount invested could feel comfortable using exchanges or hot wallets. By contrast, investors with more crypto might want the additional safeguarding that a cold wallet provides.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/new-link.svg",
+          "alt": "new link icon"
+        },
+        "title": "How regularly you want to move the crypto.",
+        "text": "<p>Short-term or quick trades need to be made relatively seamlessly. That means having instant access to them through hot wallets. If you’re thinking about storing and sitting on your crypto for a longer period of time, a cold wallet storage solution might be best.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/padlock-single.svg",
+          "alt": "padlock icon"
+        },
+        "title": "The security of the platform",
+        "text": "<p>Regardless of the type of wallet you’re using, security should always be a priority. Assess what kind of features any platforms use to keep your assets safe, and think about reading up on any examples of past breaches. If you’re not sure what safety factors to look for, <a href='#how-to-protect' target='_self'>jump to this section</a>.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/duplicate.svg",
+          "alt": "Copy cost icon"
+        },
+        "title": "The cost of using the storage solution",
+        "text": "<p>Different wallet types will charge varying amounts. An exchange usually has a set fee which is applied to every transaction. Cold wallets may ask for a one-off payment to get access to passkeys. By contrast, hot wallets tend to be free. How much you’re willing to spend on storage should definitely be something you consider – but don’t let this entirely define your decision.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/chat-bubble.svg",
+          "alt": "Chat icon"
+        },
+        "title": "The ease of use",
+        "text": "<p>A user-friendly interface can make navigating and trading on any platform significantly easier. This can be a transformative feature when ensuring you’re managing your money properly.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/shield.svg",
+          "alt": "Shield icon"
+        },
+        "title": "Recovery insurance",
+        "text": "<p>An increasing number of exchanges and wallets are introducing an insurance system which helps users recover at least a portion of any assets lost to hackers or scammers. The amount you’ll receive will usually be laid out clearly in any terms of service. This is not always a given with storage systems, so make sure to check if a platform you’re considering has an insurance policy in place.</p>"
+      }
+    ]
+  },
+  {
+    "component": "common/BannerGradientImage",
+    "caption": "Chapter 02",
+    "id": "chapter-two",
+    "title": "<b>How to safely store</b> your crypto assets",
+    "text": "<p>Now that we have a better understanding of how crypto is stored, it’s time to start looking at the safest ways to do so. In order to do this effectively, it’s vital to have a rounded picture of what a safe storage solution looks like, as well as threats it might face.</p>",
+    "image": {
+      "src": "/images/HoldingCryptoSafely/safe-round-background-lines.svg",
+      "alt": "Safe round block lines"
+    },
+    "gradientColour": "dark"
+  },
+  {
+    "component": "HoldingCryptoSafely/TextItemGridSpacedCards",
+    "title": "Common threats to crypto wallets",
+    "text": "<p>In the world of crypto, knowledge is power. Knowing what threats you need to protect your wallet from will have a transformative impact on how effective your storage safeguarding solutions are. Some of the most common attacks to watch out for include:</p>",
+    "columnWidth": 6,
+    "last": true,
+    "items": [
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/chat-cross.svg",
+          "alt": "Phishing attacks icon",
+          "fillColor": "red"
+        },
+        "title": "Phishing attacks",
+        "text": "<p>This elaborate scam will see fraudsters create entirely fake exchanges and wallet software, encouraging users to part with their cash for what is in reality fake cryptocurrencies. Some attacks might even see a “crypto wallet technical support specialist” ask you to reveal critical personal info, which they’ll use to get access to your personal wallet.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/wallet-fade.svg",
+          "alt": "Malware attacks icon",
+          "fillColor": "red"
+        },
+        "title": "Malware attacks",
+        "text": "<p>If a virus infects a computer or tablet, any information stored there can be stolen by hackers. This in turn can be used to empty hot wallets of any crypto which is being stored there. Even cold wallets can sometimes fall victim to a malware attack. In these instances malware substitutes the destination wallet of any online transfer from or to the cold wallet with their own. They do this by using malware to monitor the clipboard where a wallet address is copy and pasted. As soon as this happens, the virus will replace the end address with that of the scammer’s. If they don’t spot this change, a user will transfer crypto to the wrong account.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/wallet-cross.svg",
+          "alt": "Fake and modified wallets icon",
+          "fillColor": "red"
+        },
+        "title": "Fake and modified wallets",
+        "text": "<p>While any new wallets you purchase directly from a vendor’s store should be legitimate, secondhand wallets or those bought from a third party always run the risk of being corrupted. Units can sometimes be modified with firmware, or trojan payloads. These viruses allow the person who sold the wallet to access and transfer all crypto stored in them to their own accounts.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/computer-chip.svg",
+          "alt": "Hacking with memory analysis icon",
+          "fillColor": "red"
+        },
+        "title": "Hacking with memory analysis",
+        "text": "<p>While far less likely to occur, physical hacking of a crypto wallet is still a possibility. If a hacker is able to get their hands on your device, they can deconstruct it and connect its circuitry to special equipment in order to manipulate its firmware. The wallet can be replaced or resold, where it’s then used to remotely steal any large sums made from crypto trading.</p>"
+      }
+    ]
+  },
+  {
+    "component": "HoldingCryptoSafely/TextItemGridSpacedCards",
+    "id": "how-to-protect",
+    "title": "How to protect the crypto assets you’re storing",
+    "text": "<p>Owing to the ever-growing and inventive ways cyber criminals are able to target your assets, there are a myriad of ways that a crypto owner can safeguard their wallets. Here are some of the most effective.</p>",
+    "columnWidth": 4,
+    "last": true,
+    "items": [
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/shield-tick.svg",
+          "alt": "Multi-factor authentication icon"
+        },
+        "title": "Multi-factor authentication",
+        "text": "<p>While it can feel like an unnecessary extra hurdle when nothing is “going wrong”, it’s the very nature of two-factor authentication (2FA) which keeps most accounts that use this system safe. Asking for log-in confirmation from two different devices greatly reduces the chance of fraudulent activity, as they would need access to both in order to successfully get into your account. 2FA will generate a code to your secondary device, which can then be used to confirm it’s you logging in. Multisig wallets are also a perfect way to achieve this, as by their very nature they will always ask for two signatures to approve any transaction.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/download.svg",
+          "alt": "Keeping software updated icon"
+        },
+        "title": "Keeping software updated",
+        "text": "<p>Patches and bug fixes are a normal part of using online software. Failing to keep updated with these could make your device or program susceptible to an attack. Security measures are often a common part of any update. Without these being kept fresh, a hacker might be able to exploit a vulnerability in your wallet.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/wallet-fade.svg",
+          "alt": "Encrypt your wallet and regularly back it up icon",
+          "fillColor": "green"
+        },
+        "title": "Encrypt your wallet and regularly back it up",
+        "text": "<p>Encrypting a wallet means that nobody will be able to get access to it without a unique passphrase. This is a good failsafe technique for hot wallets – which can naturally be more susceptible to attacks. It’s also smart to create regular backups of these. These backups should ideally be stored offline, on a device like a USB.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/arrow-exchange-boxed.svg",
+          "alt": "Transaction simulation icon"
+        },
+        "title": "Transaction simulation",
+        "text": "<p>This process sees someone emulate the execution of a transaction in a blockchain, within a totally simulated environment. The transactions are never broadcast, and serve as a means of testing code within a virtual environment. This developer sandbox makes it possible to understand important safety features of new tools and applications before they’re deployed for wider use.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/angle-brackets.svg",
+          "alt": "Decoding icon"
+        },
+        "title": "Decoding",
+        "text": "<p>By breaking software down into its base code, it’s possible to identify where online threats are most likely to target. This pre-emptive measure can help to highlight any weaknesses in a system, or highlight patterns of vulnerability in cybersecurity systems that weren’t previously apparent.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/diamond.svg",
+          "alt": "Strong and secure passwords icon"
+        },
+        "title": "Strong and secure passwords",
+        "text": "<p>A tried and tested method of keeping yourself safe online, having strong passwords is a must when dealing with cryptocurrency. A password manager tool is a good option here. These allow you to generate complex, long passwords without the need to remember them or even write them down. The manager system will automatically input any saved passwords for you on your trusted devices.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/shield-lines.svg",
+          "alt": "Use a VPN icon"
+        },
+        "title": "Use a VPN",
+        "text": "<p>A Virtual Private Network can cloak where you’re accessing the internet from. This will automatically encrypt any data which is transferred from you to your wallet, while also providing an additional layer of privacy. It’s always advised to use a VPN when logging into any crypto accounts on a public Wi-Fi network.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/building.svg",
+          "alt": "Choose a reliable wallet provider icon"
+        },
+        "title": "Choose a reliable wallet provider",
+        "text": "<p>Just as with banking, choosing an industry-recognised name which thousands, if not millions, of traders have already utilised is also a smart approach. Purchasing or storing your wallet with trusted names greatly reduces the risk of suspicious activity on your account.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/line-chart.svg",
+          "alt": "Regularly monitor your account icon"
+        },
+        "title": "Regularly monitor your account",
+        "text": "<p>Preparedness is one of the most effective ways to prevent an attack. But it can also be a powerful tool in the event of needing to recover lost assets. Regularly checking your account means you’ll be able to spot any odd behaviour faster. In turn, this increases the chances of being able to salvage anything you’ve lost.</p>"
+      }
+    ]
+  },
+  {
+    "component": "HoldingCryptoSafely/TextItemGridSpacedCards",
+    "title": "Signs your crypto wallet has been hacked",
+    "text": "<p>With cyber crime becoming more nuanced, it can sometimes be tough to immediately spot when you’ve become a victim. Fortunately, there are telltale signs that an attack might have taken place on your account. Here are some of the most prominent red flags:</p>",
+    "columnWidth": 4,
+    "last": true,
+    "items": [
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/speaker.svg",
+          "alt": "Login notifications at odd times icon",
+          "fillColor": "red"
+        },
+        "title": "Login notifications at odd times",
+        "text": "<p>Sudden or unexplained notifications at times when you’re not dealing with your crypto assets are an immediate warning sign. Even if someone isn’t able to gain access to your account, receiving a message like this indicates someone is attempting to. You should immediately log in yourself and change your passwords if you notice this.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/line-chart-down.svg",
+          "alt": "Unexplained transactions and discrepancies to your balance icon",
+          "fillColor": "red"
+        },
+        "title": "Unexplained transactions and discrepancies to your balance",
+        "text": "<p>Similarly, spotting any transactions which you know you didn’t make also shows you’ve been hacked. In this instance, a cyber criminal has been able to fully access your funds. In order to react to this properly, read our section on <a href='#what-to-do'>how to recover from a crypto wallet hack</a>.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/settings.svg",
+          "alt": "Settings changes icon",
+          "fillColor": "red"
+        },
+        "title": "Settings changes",
+        "text": "<p>If you log in and notice your core settings have changed, this could be another sign that someone has gained unauthorised access to your account. You can check your settings on your profile page.</p>"
+      }
+    ]
+  },
+  {
+    "component": "HoldingCryptoSafely/TextItemGridSpacedCards",
+    "id": "what-to-do",
+    "title": "What to do if your crypto wallet has been hacked",
+    "text": "<p>Spotting that you’ve been hacked is just half the battle. Taking appropriate action after realising you’ve fallen victim to this kind of attack will go a long way to salvaging your assets. After noticing that your account has been compromised, consider the following steps:</p>",
+    "columnWidth": 8,
+    "items": [
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/tick-box.svg",
+          "alt": "Work out how it was hacked icon"
+        },
+        "title": "Work out how it was hacked",
+        "text": "<p>As we’ve seen, there could be any number of ways that an account fell victim to a hacker. In order to know how to best avoid it happening to you again in the future, you can employ different techniques to isolate the source of the breach:</p> <ul><li>Look at your history – Clicking on untrustworthy or even fake websites could have seen your account exposed.</li><li>Check your passkey storage – Is the passkey you use to access your wallet stored on a computer or in an email? If it’s connected to the internet, this could be how a cyber criminal was able to access your assets.</li><li>Run a malware scan – These scans should be able to detect if any suspicious virus software was installed on your device.</li></ul>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/tick-box.svg",
+          "alt": "Make a new wallet icon"
+        },
+        "title": "Make a new wallet",
+        "text": "<p>The wallet which has been exposed is effectively lost forever. As such, one of the first things you should do is create a new one and transfer all remaining crypto assets into it. If tokens are left in your account, you need to be careful – as hackers could have left an additional virus which will immediately target you again. <a href='https://safe.global/' target='_blank'>Speak to a professional provider</a> before moving any suspicious assets into your new wallet.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/tick-box.svg",
+          "alt": "Change passwords and settings icon"
+        },
+        "title": "Change passwords and settings",
+        "text": "<p>If a compromised password was how a hacker managed to access your account, make sure to change it. This needs to be done across all accounts on the internet where you use this password. Also be sure to check the settings of your account to see if any need to be changed back.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/tick-box.svg",
+          "alt": "Report the crime icon"
+        },
+        "title": "Report the crime",
+        "text": "<p>Any crime which takes place online needs to be reported to the cyber crime unit of your local or national police force. Also be sure to let the wallet providers know what happened. They might not be able to get your assets back, but it could help them spot a gap in their own cybersecurity practices.</p>"
+      }
+    ]
+  },
+  {
+    "component": "common/BannerGradientImage",
+    "caption": "Chapter 03",
+    "id": "chapter-three",
+    "title": "Crypto asset <b>storage mistakes</b>",
+    "text": "<p>Placing your crypto in a storage solution is great. But, in order for it to remain safe, you’ll want to ensure that you’ve set your wallet up properly and implemented all the protective measures needed to keep it secure. Furthermore, crypto security extends beyond just your wallet. There are a series of other general security mistakes which digital coin owners need to keep in mind in order to keep all of their assets safe.</p>",
+    "image": {
+      "src": "/images/HoldingCryptoSafely/safe-round-lines-simple.svg",
+      "alt": "Safe round block lines"
+    },
+    "gradientColour": "dark"
+  },
+  {
+    "component": "HoldingCryptoSafely/TextItemGridSpacedCards",
+    "title": "Common crypto wallet storage mistakes",
+    "text": "<p>Compromising the security of your crypto holdings can have a huge impact on your finances. Avoid putting yourself in a position of vulnerability by brushing up on some of the most common mistakes which owners make.</p>",
+    "last": true,
+    "columnWidth": 8,
+    "items": [
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/cross-box.svg",
+          "alt": "Wallets with in-built cloud drive backups icon"
+        },
+        "title": "Wallets with in-built cloud drive backups",
+        "text": "<p>It’s important to backup your crypto wallets. But when doing so, it’s best not to store these backups in cloud drives. These static files of data are prime targets for hackers, while outages from cloud providers could also see your passkeys and wallet backups temporarily lost during down periods.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/cross-box.svg",
+          "alt": "Inefficient random number generator (RNG) mechanisms icon"
+        },
+        "title": "Inefficient random number generator (RNG) mechanisms",
+        "text": "<p>A passkey or seed phrase is what’s used to access your wallet. This will normally be a 12-to-24 digit numerical code which must be kept private. It’s common for users and even wallet providers to use a RNG to come up with this code. However, not all RNGs are created equal. Some use repeated patterns that greatly reduce the “random” element of the generator tool. This makes seed phrases easier to hack, or even guess.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/cross-box.svg",
+          "alt": "Weak seed phrase backups icon"
+        },
+        "title": "Weak seed phrase backups",
+        "text": "<p>In order to restore a wallet using a backup, you might need to use your seed phrase to begin the process. This is something which needs to be stored in a safe place. Despite that, a lot of people make similar mistakes when it comes to where they house these codes:</p><ul><li><strong>In screenshots</strong> – Anyone who gets access to your device or any cloud based storage you have could steal this.</li><li><strong>In clipboards</strong> – Hackers commonly exploit clipboard weaknesses with malware to steal data from users.</li><li><strong>On note apps</strong> – Most note apps don’t have robust security protocols in place. This makes them much easier to hack than other apps.</li></ul><p>The key here is to make sure your seed phrase is physically stored somewhere, on a material which is not likely to be easily lost or destroyed. A good example is engraved into metal.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/cross-box.svg",
+          "alt": "Using a custodial wallet icon"
+        },
+        "title": "Using a custodial wallet",
+        "text": "<p>These kinds of wallets are owned by third parties, which means that all private information is held by them. While convenient in one sense, these custodial wallets take a lot of the power out of your hands. It also means if they experience any kind of security breach, your personal data is harder to protect.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/cross-box.svg",
+          "alt": "Exposing a wallet to online connections icon"
+        },
+        "title": "Exposing a wallet to online connections",
+        "text": "<p>Hot wallets which are connected to the internet are more likely to be targeted than those which are offline. While this shouldn’t dissuade you from using one, it’s an important factor to consider deciding on the kind that you want to use.</p>"
+      }
+    ]
+  },
+  {
+    "title": "Other crypto security mistakes to avoid",
+    "text": "Aside from leaving a wallet exposed, crypto assets can become vulnerable in a handful of other ways. Here are some of the most common crypto security mistakes which investors make, as well as how to avoid them.",
+    "variant": "4-columns",
+    "items": [
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/cross-box.svg",
+          "alt": "Padlock with key icon"
+        },
+        "title": "Sharing private information publicly",
+        "text": "Giving out any kind of sensitive information, such as private keys or seed phrases, will result in a much higher likelihood of your wallet being attacked. Don’t store anything like this online, and tell no-one what your private codes are."
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/cross-box.svg",
+          "alt": "Padlock with key icon"
+        },
+        "title": "Downloading unverified software",
+        "text": "Avoid downloading anything from apps, links, or websites which are unfamiliar to you. Try to stick to software which you can immediately verify as coming from a trusted and respectable source."
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/cross-box.svg",
+          "alt": "Padlock with key icon"
+        },
+        "title": "Having a fear of missing out",
+        "text": "Success in the world of cryptocurrency doesn’t come from rash decisions. If you make a snap call on crypto based on social media hype, you could regret it. Always take the time to make a careful and measured decision about any investments or trades you make."
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/cross-box.svg",
+          "alt": "Padlock with key icon"
+        },
+        "title": "Ignoring online reviews and community sentiment",
+        "text": "Your fellow crypto investors are one of the most reliable sources to turn to when assessing exchanges or other online projects. Read reviews, and look for any common themes which might be red flags regarding the legitimacy of the platform."
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/cross-box.svg",
+          "alt": "Padlock with key icon"
+        },
+        "title": "Clicking on questionable links",
+        "text": "Perhaps the most consistent piece of advice for anyone online throughout the years; don’t click on links sent from strangers. That extends to any links you see on websites which you aren’t totally confident are legitimate."
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/cross-box.svg",
+          "alt": "Padlock with key icon"
+        },
+        "title": "Being frugal when it comes to storage solutions",
+        "text": "While paying to keep your crypto safe might sound like an unnecessary expense, it can be crucial in your attempts to keep your assets safe. Save your conservative financial decisions for your investments, and commit to storage options which cost a little upfront to save you a lot in the long run."
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/cross-box.svg",
+          "alt": "Padlock with key icon"
+        },
+        "title": "Not verifying someone’s public key",
+        "text": "When you send or receive crypto, always verify the other party’s public key to ensure assets are moving from or going to the wallet address that you’re intending to connect with. Accidentally sending funds to the wrong wallet could cost you thousands, as it’s not always possible to reverse transfers – especially if you willingly sent it."
+      }
+    ],
+    "component": "common/UspBlock"
+  },
+  {
+    "component": "common/BannerGradientImage",
+    "id": "chapter-four",
+    "caption": "Chapter 04",
+    "title": "<b>Useful links</b>",
+    "text": "<p>We’ve discussed a lot in this guide, but there might still be more you want to discover about the safe storage of your crypto assets. If that’s the case, make sure to browse these handy secondary resources for further info.</p><br><p><a href='https://cryptomaniaks.com/guides/best-crypto-tools-checklist' target='_blank' rel='nofollow noopener'>Cryptomaniaks discuss some of the best crypto tools for users in 2024 <svg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M16.2889 13.3916C16.2889 13.6361 16.4889 13.8361 16.7333 13.8361H24.7867C25.66 13.8361 26.1689 14.345 26.1689 15.1828V23.2716C26.1689 23.5161 26.3689 23.7161 26.6133 23.7161H28.56C28.8044 23.7161 29.0044 23.5161 29.0044 23.2716V13.825C29.0022 13.5694 28.9289 13.3894 28.7467 13.2072L26.8267 11.2872C26.6444 11.105 26.4267 10.9961 26.1711 10.9961H16.7311C16.4867 10.9983 16.2867 11.1983 16.2867 11.4428V13.3916H16.2889Z' fill='white'/><path d='M11.1282 27.4987L12.5047 28.8752C12.6783 29.0487 12.9597 29.0487 13.1333 28.8752L26.6516 15.3569C26.8252 15.1833 26.8252 14.9019 26.6516 14.7283L25.2751 13.3518C25.1015 13.1783 24.8201 13.1783 24.6465 13.3518L11.1282 26.8701C10.9547 27.0437 10.9547 27.3251 11.1282 27.4987Z' fill='white'/></svg></a></p><p><a href='https://www.etoro.com/crypto/wallet-guide/' target='_blank' rel='nofollow noopener'>Etoro provide users with a beginner’s guide to crypto wallets <svg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M16.2889 13.3916C16.2889 13.6361 16.4889 13.8361 16.7333 13.8361H24.7867C25.66 13.8361 26.1689 14.345 26.1689 15.1828V23.2716C26.1689 23.5161 26.3689 23.7161 26.6133 23.7161H28.56C28.8044 23.7161 29.0044 23.5161 29.0044 23.2716V13.825C29.0022 13.5694 28.9289 13.3894 28.7467 13.2072L26.8267 11.2872C26.6444 11.105 26.4267 10.9961 26.1711 10.9961H16.7311C16.4867 10.9983 16.2867 11.1983 16.2867 11.4428V13.3916H16.2889Z' fill='white'/><path d='M11.1282 27.4987L12.5047 28.8752C12.6783 29.0487 12.9597 29.0487 13.1333 28.8752L26.6516 15.3569C26.8252 15.1833 26.8252 14.9019 26.6516 14.7283L25.2751 13.3518C25.1015 13.1783 24.8201 13.1783 24.6465 13.3518L11.1282 26.8701C10.9547 27.0437 10.9547 27.3251 11.1282 27.4987Z' fill='white'/></svg></a></p><p><a href='https://www.fca.org.uk/investsmart/crypto-basics' target='_blank' rel='nofollow noopener'>The Financial Conduct Authority take a wider look at crypto and what users should know <svg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M16.2889 13.3916C16.2889 13.6361 16.4889 13.8361 16.7333 13.8361H24.7867C25.66 13.8361 26.1689 14.345 26.1689 15.1828V23.2716C26.1689 23.5161 26.3689 23.7161 26.6133 23.7161H28.56C28.8044 23.7161 29.0044 23.5161 29.0044 23.2716V13.825C29.0022 13.5694 28.9289 13.3894 28.7467 13.2072L26.8267 11.2872C26.6444 11.105 26.4267 10.9961 26.1711 10.9961H16.7311C16.4867 10.9983 16.2867 11.1983 16.2867 11.4428V13.3916H16.2889Z' fill='white'/><path d='M11.1282 27.4987L12.5047 28.8752C12.6783 29.0487 12.9597 29.0487 13.1333 28.8752L26.6516 15.3569C26.8252 15.1833 26.8252 14.9019 26.6516 14.7283L25.2751 13.3518C25.1015 13.1783 24.8201 13.1783 24.6465 13.3518L11.1282 26.8701C10.9547 27.0437 10.9547 27.3251 11.1282 27.4987Z' fill='white'/></svg></a></p><p><a href='https://www.kaspersky.com/resource-center/preemptive-safety/guide-to-cryptocurrency-safety' target='_blank' rel='nofollow noopener'>Kaspersky discuss some top level cryptocurrency safety tips <svg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M16.2889 13.3916C16.2889 13.6361 16.4889 13.8361 16.7333 13.8361H24.7867C25.66 13.8361 26.1689 14.345 26.1689 15.1828V23.2716C26.1689 23.5161 26.3689 23.7161 26.6133 23.7161H28.56C28.8044 23.7161 29.0044 23.5161 29.0044 23.2716V13.825C29.0022 13.5694 28.9289 13.3894 28.7467 13.2072L26.8267 11.2872C26.6444 11.105 26.4267 10.9961 26.1711 10.9961H16.7311C16.4867 10.9983 16.2867 11.1983 16.2867 11.4428V13.3916H16.2889Z' fill='white'/><path d='M11.1282 27.4987L12.5047 28.8752C12.6783 29.0487 12.9597 29.0487 13.1333 28.8752L26.6516 15.3569C26.8252 15.1833 26.8252 14.9019 26.6516 14.7283L25.2751 13.3518C25.1015 13.1783 24.8201 13.1783 24.6465 13.3518L11.1282 26.8701C10.9547 27.0437 10.9547 27.3251 11.1282 27.4987Z' fill='white'/></svg></a></p><p><a href='https://docs.safe.global/resource-hub' target='_blank'>Our dedicated resource hub explores several different aspects of safe crypto wallet storage solutions <svg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M16.2889 13.3916C16.2889 13.6361 16.4889 13.8361 16.7333 13.8361H24.7867C25.66 13.8361 26.1689 14.345 26.1689 15.1828V23.2716C26.1689 23.5161 26.3689 23.7161 26.6133 23.7161H28.56C28.8044 23.7161 29.0044 23.5161 29.0044 23.2716V13.825C29.0022 13.5694 28.9289 13.3894 28.7467 13.2072L26.8267 11.2872C26.6444 11.105 26.4267 10.9961 26.1711 10.9961H16.7311C16.4867 10.9983 16.2867 11.1983 16.2867 11.4428V13.3916H16.2889Z' fill='white'/><path d='M11.1282 27.4987L12.5047 28.8752C12.6783 29.0487 12.9597 29.0487 13.1333 28.8752L26.6516 15.3569C26.8252 15.1833 26.8252 14.9019 26.6516 14.7283L25.2751 13.3518C25.1015 13.1783 24.8201 13.1783 24.6465 13.3518L11.1282 26.8701C10.9547 27.0437 10.9547 27.3251 11.1282 27.4987Z' fill='white'/></svg></a>.</p>",
+    "image": {
+      "src": "/images/HoldingCryptoSafely/safe-rounded-lines-box.svg",
+      "alt": "Safe round block lines"
+    },
+    "gradientColour": "dark"
+  }
+]

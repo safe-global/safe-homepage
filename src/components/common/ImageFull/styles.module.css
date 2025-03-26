@@ -1,0 +1,19 @@
+.container {
+  position: relative;
+}
+.block {
+  max-width: 1045px;
+}
+
+.imageCont {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+
+@media (min-width: 1823px) {
+  .imageCont {
+    margin-left: -94px;
+    margin-right: -94px;
+  }
+}

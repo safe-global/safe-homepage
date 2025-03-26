@@ -1,0 +1,13 @@
+.container {
+  margin-top: 0;
+  margin-bottom: 150px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: 600px) {
+  .container {
+    padding-top: 30px;
+    margin-bottom: 120px;
+  }
+}

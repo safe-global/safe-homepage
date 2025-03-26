@@ -4,13 +4,27 @@ import ButtonsWrapper from '@/components/common/ButtonsWrapper'
 import type { BaseBlock } from '@/components/Home/types'
 import layoutCss from '@/components/common/styles.module.css'
 import css from './styles.module.css'
+import clsx from 'clsx'
 
-export const BannerGradientImage = ({ title, buttons, caption, text, image }: BaseBlock) => {
+type BannerGradientImageProps = BaseBlock & {
+  id?: string
+  gradientColour?: string
+}
+
+export const BannerGradientImage = ({
+  title,
+  buttons,
+  caption,
+  text,
+  image,
+  id,
+  gradientColour,
+}: BannerGradientImageProps) => {
   return (
-    <Container className={layoutCss.containerMedium}>
-      <div className={css.container}>
+    <Container className={layoutCss.containerMedium} id={id}>
+      <div className={clsx(css.container, { [css.darkBackground]: gradientColour === 'dark' })}>
         <Grid container>
-          <Grid item xs={12} md={8}>
+          <Grid item xs={12} md={8} className={css.textCont}>
             <Chip
               label={<Typography variant="caption">{caption}</Typography>}
               className={css.chip}
