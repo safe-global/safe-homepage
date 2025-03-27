@@ -295,7 +295,7 @@ const Footer = () => {
 
         <Grid item my={2}>
           <Typography color="primary.light" fontSize="16px">
-            &copy;2023–{new Date().getFullYear()} Safe Ecosystem Foundation
+            &copy;2023–{new Date().getFullYear()} Core Contributors GmbH
           </Typography>
         </Grid>
       </Grid>
