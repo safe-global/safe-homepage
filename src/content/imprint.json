@@ -5,7 +5,7 @@
   },
   {
     "title": "Imprint",
-    "text": "<p>Safe Ecosystem Foundation<br>Bahnhofstrasse 16\n        <br>6300 Zug, Switzerland<br>CHE-295.207.842<br>Email: <a href=\"mailto:legal@safe.global\">legal@safe.global</a></p>\n      <p>Members of the Foundation Council: Lukas Schor, Christoph Simmchen, Stefan George<br>Swiss foundation with registered office in Zug, Switzerland.<br></p>",
+    "text": "<p>Core Contributors GmbH<br>c/o WeWork<br>Dircksenstr. 3<br>10179 Berlin, Germany<br><br>Managing director: Richard Meißner<br>Contact: <a href=\"mailto:info@cc0x.dev\">info@cc0x.dev</a><br>District Court: Berlin Charlottenburg<br>Register Number: HRB 240421 B</p>",
     "component": "common/TextBlock"
   }
 ]
