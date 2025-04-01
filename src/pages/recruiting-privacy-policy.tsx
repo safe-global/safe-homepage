@@ -1,12 +1,14 @@
+import clsx from 'clsx'
 import type { NextPage } from 'next'
 import { Container, Typography } from '@mui/material'
 import layoutCss from '@/components/common/styles.module.css'
+import css from '@/components/common/TextBlock/styles.module.css'
 import MetaTags from '@/components/common/MetaTags'
 
 const RecruitingPrivacyPolicyPage: NextPage = () => (
   <>
     <MetaTags pageTitle="Safe – Recruiting Privacy Policy" />
-    <Container className={layoutCss.containerTiny}>
+    <Container className={clsx(layoutCss.containerTiny, css.block)}>
       <Typography variant="h1" style={{ textAlign: 'center' }}>
         Processing of (personal) data by the entity in charge of the online application process
       </Typography>
