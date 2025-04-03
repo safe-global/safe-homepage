@@ -1,0 +1,16 @@
+.container {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 1px;
+  padding-top: 1px;
+  margin-top: 80px;
+}
+
+.gridItem {
+  width: 100%;
+  height: 1px;
+}
+
+.grey {
+  background-color: var(--mui-palette-border-light);
+}

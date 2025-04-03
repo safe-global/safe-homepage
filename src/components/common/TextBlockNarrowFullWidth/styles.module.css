@@ -1,0 +1,107 @@
+.block a {
+  color: var(--mui-palette-secondary-light);
+}
+
+.block section {
+  overflow-x: auto;
+}
+
+.block table {
+  width: 100%;
+}
+
+.block tr th {
+  text-align: left;
+}
+
+.block tr td {
+  overflow-wrap: break-word;
+}
+
+.block ul {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+.block ul li + li {
+  margin-top: 24px;
+}
+
+/* lists inside the collapsible elements */
+.block details {
+  font-style: italic;
+}
+
+.block details > ul {
+  padding-left: revert;
+}
+
+.block details > ul li + li {
+  margin-top: 0;
+}
+
+.block {
+  max-width: 1045px;
+  margin-left: 0;
+}
+
+.background {
+  height: 100%;
+  display: block;
+  box-sizing: unset;
+  position: absolute;
+  width: 100vw;
+  left: calc((100vw - 1630px) / -2);
+  z-index: -1;
+}
+
+.backgroundContainer {
+  position: relative;
+}
+
+.default .background {
+}
+
+.green .background {
+  background-color: var(--mui-palette-success-main);
+}
+
+.green a {
+  color: #b0ffc9;
+}
+
+.green > div:nth-child(2) {
+  padding-top: 125px;
+  padding-bottom: 125px;
+}
+
+.green p,
+.green h2,
+.green h3,
+.green h4 {
+  color: var(--mui-palette-text-dark);
+}
+
+@media screen and (max-width: 1630px) {
+  .background {
+    left: calc((100vw - 1200px) / -2);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .background {
+    left: calc((100vw - 900px) / -2);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .background {
+    left: calc((100vw - 600px) / -2);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .background {
+    left: 0;
+  }
+}
