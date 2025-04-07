@@ -3,45 +3,6 @@
   margin-bottom: 150px;
 }
 
-.scroll {
-  margin: 0 auto;
-  opacity: 0;
-  transition: opacity 0.5s ease-in;
-  position: relative;
-  bottom: -40px;
-  cursor: pointer;
-}
-
-.scroll span {
-  color: var(--mui-palette-primary-main);
-}
-
-.container:hover .scroll {
-  opacity: 1;
-  animation: bounce 1s;
-}
-
-.scroll::after {
-  content: '';
-  display: block;
-  background-image: url('/images/angle-down-primary.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 20px;
-  height: 20px;
-  margin: auto;
-}
-
-.video {
-  max-width: 90%;
-  height: auto;
-}
-
-.coreImage {
-  width: 450px;
-  height: auto;
-}
-
 .hero {
   position: relative;
 }
@@ -80,17 +41,6 @@
   .container h3 {
     font-size: 48px;
     line-height: 56px;
-  }
-}
-
-@keyframes bounce {
-  from,
-  to {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-10px);
   }
 }
 

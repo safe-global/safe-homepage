@@ -8,9 +8,24 @@ type TextItemGridSpacedCardsProps = BaseBlock & {
   id: string
   columnWidth?: number
   last?: boolean
+  divider?: boolean
+  items: {
+    items: {
+      title: string
+      text: string
+    }[]
+  }[]
 }
 
-const TextItemGridSpacedCards = ({ id, title, text, elements, columnWidth, last }: TextItemGridSpacedCardsProps) => {
+const TextItemGridSpacedCards = ({
+  id,
+  title,
+  text,
+  items,
+  columnWidth,
+  last,
+  divider,
+}: TextItemGridSpacedCardsProps) => {
   return (
     <Container className={layoutCss.containerMedium} style={{ marginTop: '80px' }} id={id}>
       <div style={{ maxWidth: '1045px', margin: '0' }}>
@@ -20,9 +35,9 @@ const TextItemGridSpacedCards = ({ id, title, text, elements, columnWidth, last 
         {text}
       </div>
       <Grid container columnSpacing={2} rowGap="30px" mt={{ xs: '40px', md: '20px' }} className={css.newGridContainer}>
-        {elements?.map((item, cindex) => (
-          <Grid container className="" mt={{ xs: 3, md: 7 }}>
-            {item.group?.map((subitem, index) => (
+        {items?.map((item, outerIndex) => (
+          <Grid key={outerIndex} container mt={{ xs: 3, md: 7 }}>
+            {item.items?.map((subitem, index) => (
               <Grid key={index} item xs={12} md={columnWidth}>
                 <Card title={subitem.title} text={subitem.text} />
               </Grid>
@@ -31,7 +46,7 @@ const TextItemGridSpacedCards = ({ id, title, text, elements, columnWidth, last 
         ))}
       </Grid>
 
-      {last && <Divider sx={{ mt: 10 }} />}
+      {(last || divider) && <Divider sx={{ mt: 10 }} />}
     </Container>
   )
 }

@@ -1,4 +1,4 @@
-import { Container, Grid, Typography } from '@mui/material'
+import { Container, Divider, Grid, Typography } from '@mui/material'
 import type { GridProps } from '@mui/material'
 import type { ReactElement } from 'react'
 import type { BaseBlock } from '@/components/Home/types'
@@ -8,17 +8,13 @@ import Link from 'next/link'
 import LinkButton from '@/components/common/LinkButton'
 import clsx from 'clsx'
 
-export const TimelineItem = ({
-  image,
-  date,
-  text,
-  title,
-  link,
-  end,
-  width = 4,
-}: Partial<BaseBlock> & { width: GridProps['md'] }): ReactElement => {
+type TimelineItemProps = TimelineItemType & {
+  width?: GridProps['md']
+}
+
+export const TimelineItem = ({ image, date, text, title, link, end, width = 4 }: TimelineItemProps): ReactElement => {
   return (
-    <Grid item xs={12} md={width} className={clsx(css.gridItems, css[end])}>
+    <Grid item xs={12} md={width} className={clsx(css.gridItems, end && css[end])}>
       <div>
         {image ? <img {...image} /> : null}
 
@@ -42,28 +38,57 @@ export const TimelineItem = ({
   )
 }
 
-const TimelineBlock = ({ title, text, timeline }: BaseBlock) => (
+type TimelineItemType = {
+  date?: string
+  title?: string
+  text?: string
+  image?: React.ImgHTMLAttributes<HTMLImageElement>
+  link?: {
+    href: string
+    title: string
+  }
+  end?: string
+}
+
+type TimelineGroup = {
+  continues?: string
+  continued?: string
+  items: TimelineItemType[]
+}
+
+type TimelineProps = BaseBlock & {
+  timeline?: TimelineGroup[]
+  divider?: boolean
+}
+
+const Timeline = ({ title, text, timeline, divider }: TimelineProps) => (
   <Container>
     <Grid container className={clsx(css.container, layoutCss.containerTiny)} flexDirection="column" alignItems="left">
-      <Typography variant="h2" mb={3} textAlign={{ md: 'left' }}>
+      <Typography variant="h2" mb={3}>
         {title}
       </Typography>
 
-      {text && <Typography textAlign={{ md: 'left' }}>{text}</Typography>}
+      {text && <Typography>{text}</Typography>}
 
       {timeline?.map((item, cindex) => (
         <Grid
           container
-          className={clsx(css.roundCorners, css[item.continues], css[item.continued])}
+          key={cindex}
+          className={clsx(
+            css.roundCorners,
+            item.continues && css[item.continues],
+            item.continued && css[item.continued],
+          )}
           mt={{ xs: 3, md: 7 }}
         >
           {item.items?.map((subitem, index) => (
-            <TimelineItem key={index} width="2" {...subitem} />
+            <TimelineItem key={index} width={2} {...subitem} />
           ))}
         </Grid>
       ))}
     </Grid>
+    {divider && <Divider sx={{ mt: 10 }} />}
   </Container>
 )
 
-export default TimelineBlock
+export default Timeline

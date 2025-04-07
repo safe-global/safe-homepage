@@ -79,7 +79,7 @@
     "title": "An introduction to <b>crypto storage</b>",
     "text": "Crypto storage isn’t a one-size-fits-all approach. There are varying ways to safely and securely store your cryptocurrency in order to protect it. Understanding the options available to you is half the battle when it comes to picking a solution which is both safe and effective.",
     "image": {
-      "src": "/images/HoldingCryptoSafely/safe-background-lines.svg",
+      "src": "/images/banners/background-image-1.svg",
       "alt": "Safe round block lines"
     },
     "gradientColor": "dark"
@@ -260,7 +260,7 @@
     "title": "<b>How to safely store</b> your crypto assets",
     "text": "Now that we have a better understanding of how crypto is stored, it’s time to start looking at the safest ways to do so. In order to do this effectively, it’s vital to have a rounded picture of what a safe storage solution looks like, as well as threats it might face.",
     "image": {
-      "src": "/images/HoldingCryptoSafely/safe-round-background-lines.svg",
+      "src": "/images/banners/background-image-6.svg",
       "alt": "Safe round block lines"
     },
     "gradientColor": "dark"
@@ -477,7 +477,7 @@
     "title": "Crypto asset <b>storage mistakes</b>",
     "text": "Placing your crypto in a storage solution is great. But, in order for it to remain safe, you’ll want to ensure that you’ve set your wallet up properly and implemented all the protective measures needed to keep it secure. Furthermore, crypto security extends beyond just your wallet. There are a series of other general security mistakes which digital coin owners need to keep in mind in order to keep all of their assets safe.",
     "image": {
-      "src": "/images/HoldingCryptoSafely/safe-round-lines-simple.svg",
+      "src": "/images/banners/background-image-7.svg",
       "alt": "Safe round block lines"
     },
     "gradientColor": "dark"
@@ -634,7 +634,7 @@
       }
     ],
     "image": {
-      "src": "/images/HoldingCryptoSafely/safe-rounded-lines-box.svg",
+      "src": "/images/banners/background-image-5.svg",
       "alt": "Safe round block lines"
     },
     "gradientColor": "dark"
