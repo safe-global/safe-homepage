@@ -9,12 +9,6 @@ type TextItemGridSpacedCardsProps = BaseBlock & {
   columnWidth?: number
   last?: boolean
   divider?: boolean
-  items: {
-    items: {
-      title: string
-      text: string
-    }[]
-  }[]
 }
 
 const TextItemGridSpacedCards = ({

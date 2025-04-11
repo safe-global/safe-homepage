@@ -3,6 +3,7 @@ import type { BaseBlock } from '@/components/Home/types'
 import css from './styles.module.css'
 import Link from 'next/link'
 import HeroShape from '@/public/images/PectraUpgrade/hero-shape.svg'
+
 const Intro = ({ text, title, link }: BaseBlock) => {
   return (
     <Container>
