@@ -1,0 +1,160 @@
+.container a {
+  color: var(--mui-palette-primary-main);
+}
+
+.continued,
+.continues {
+}
+
+.continued:before {
+  content: '';
+  background-color: var(--mui-palette-primary-main);
+  height: 1px;
+  width: 50%;
+  display: block;
+  position: absolute;
+  transform: translateY(6px);
+  left: 0;
+  z-index: -1;
+}
+
+.continues:after {
+  content: '';
+  background-color: var(--mui-palette-primary-main);
+  height: 1px;
+  width: 50%;
+  display: block;
+  position: absolute;
+  transform: translateY(6px);
+  right: 0;
+  z-index: -1;
+}
+
+.gridItems {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.gridItems:before {
+  content: '';
+  height: 14px;
+  width: 14px;
+  background-color: black;
+  border: 2px solid var(--mui-palette-primary-main);
+  border-radius: 100%;
+  display: block;
+}
+
+.gridItems:after {
+  content: '';
+  background-color: var(--mui-palette-primary-main);
+  height: 1px;
+  width: calc(100% - 14px);
+  display: block;
+  position: absolute;
+  top: 6px;
+  left: 14px;
+}
+
+.title {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.title a {
+  text-decoration: underline;
+}
+
+.end:before {
+  content: '';
+  height: 14px;
+  width: 14px;
+  background-color: black;
+  border: 2px solid var(--mui-palette-primary-light);
+  border-radius: 100%;
+  display: block;
+}
+
+.end:after {
+  content: none;
+}
+
+.ending:after {
+  content: '';
+  background-color: transparent;
+  /*border: 1px dashed var(--mui-palette-primary-light);*/
+  background-image: url(/images/PectraUpgrade/dashes.svg);
+  height: 2px;
+  width: calc(100% - 14px);
+  display: block;
+  position: absolute;
+  top: 6px;
+  left: 14px;
+}
+
+.timelineItemText {
+  font-size: 14px;
+  margin-top: 2px;
+  padding-right: 10%;
+}
+.timelineItemText a {
+  color: var(--mui-palette-primary-main);
+}
+.timelineItemTitle {
+  color: var(--mui-palette-text-primary);
+  font-size: 30px;
+  line-height: 28px;
+  margin-top: 6px;
+}
+.timelineItemDate {
+  color: var(--mui-palette-text-primary);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+
+@media screen and (max-width: 1600px) {
+  .timelineItemTitle {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .continued {
+    position: relative;
+  }
+
+  .continued:before {
+    height: 25%;
+    width: 1px;
+    left: 6px;
+  }
+
+  .continues:after {
+    display: none;
+  }
+
+  .gridItems {
+    padding-left: 40px;
+  }
+
+  .gridItems:before {
+    left: -40px;
+    position: relative;
+    top: 66px;
+  }
+
+  .gridItems:after {
+    left: 6px;
+    top: 72px;
+    width: 1px;
+    height: calc(100% + 30px);
+    z-index: -1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+}

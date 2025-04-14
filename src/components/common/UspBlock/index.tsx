@@ -9,6 +9,7 @@ import LinkButton from '@/components/common/LinkButton'
 
 export const GridItem = ({
   image,
+  caption,
   title,
   text,
   link,
@@ -19,6 +20,10 @@ export const GridItem = ({
       <div>
         {image ? <img {...image} /> : null}
 
+        <Typography variant="caption" mt={2} color="text.primary" component="div">
+          {caption}
+        </Typography>
+
         <Typography variant="h5" className={css.title}>
           {title}
         </Typography>
@@ -27,7 +32,7 @@ export const GridItem = ({
       </div>
 
       {link && (
-        <Link href={link.href} target="_blank" rel="noreferrer" passHref>
+        <Link href={link.href}>
           <LinkButton>{link.title}</LinkButton>
         </Link>
       )}

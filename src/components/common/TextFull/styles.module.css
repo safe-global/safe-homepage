@@ -1,0 +1,34 @@
+.container {
+  position: relative;
+  background-color: var(--mui-palette-primary-dark);
+  padding: 40px;
+}
+.block {
+  margin: auto;
+  max-width: 100%;
+  color: var(--mui-palette-text-dark);
+}
+
+.block p:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+
+.block a {
+  color: var(--mui-palette-primary-main);
+}
+
+.block a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    margin-left: -104px;
+    margin-right: -104px;
+    padding: 125px 104px;
+  }
+  .block {
+    max-width: 1045px;
+    margin-left: 0;
+  }
+}
