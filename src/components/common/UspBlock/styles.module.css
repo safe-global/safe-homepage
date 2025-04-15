@@ -31,3 +31,8 @@
 .title a {
   text-decoration: underline;
 }
+
+.text a,
+.gridItems a {
+  color: var(--mui-palette-primary-main);
+}
