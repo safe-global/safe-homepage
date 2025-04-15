@@ -54,7 +54,6 @@ type TimelineGroup = {
   continues?: string
   continued?: string
   items: TimelineItemType[]
-  width?: number
 }
 
 type TimelineProps = BaseBlock & {
@@ -83,7 +82,7 @@ const Timeline = ({ title, text, timeline, divider }: TimelineProps) => (
           mt={{ xs: 3, md: 7 }}
         >
           {item.items?.map((subitem, index) => (
-            <TimelineItem key={index} width={item.width ?? 2} {...subitem} />
+            <TimelineItem key={index} width={2} {...subitem} />
           ))}
         </Grid>
       ))}

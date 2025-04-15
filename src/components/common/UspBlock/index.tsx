@@ -41,18 +41,27 @@ export const GridItem = ({
 }
 
 // TODO: unify the ItemGrid and accept a GridItem component
-const UspBlock = ({ variant, title, text, items }: BaseBlock & { variant: '3-columns' | '4-columns' }) => (
+const UspBlock = ({
+  variant,
+  title,
+  text,
+  items,
+}: BaseBlock & { variant: '2-columns' | '3-columns' | '4-columns' }) => (
   <Container>
     <Grid container className={layoutCss.containerShort} flexDirection="column" alignItems="center">
       <Typography variant="h2" mb={3} textAlign={{ md: 'center' }}>
         {title}
       </Typography>
 
-      {text && <Typography>{text}</Typography>}
+      {text && (
+        <Typography textAlign={{ md: 'center' }} className={css.text}>
+          {text}
+        </Typography>
+      )}
 
       <Grid container className={css.roundCorners} mt={{ xs: 3, md: 7 }}>
         {items?.map((item, index) => (
-          <GridItem key={index} width={variant === '3-columns' ? 4 : 3} {...item} />
+          <GridItem key={index} width={variant === '2-columns' ? 6 : variant === '3-columns' ? 4 : 3} {...item} />
         ))}
       </Grid>
     </Grid>

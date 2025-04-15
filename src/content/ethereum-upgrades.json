@@ -1,0 +1,522 @@
+[
+  {
+    "pageTitle": "The Full Timeline of Ethereum Upgrades - Safe.Global",
+    "description": "Ethereum has changed the way we think about blockchain technology. Learn all about the platform's journey in our guide to its many upgrades and forks.",
+    "component": "common/MetaTags"
+  },
+  {
+    "title": "<b>Charting the history</b> of the blockchain",
+    "text": "The full timeline of Ethereum upgrades:",
+    "link": {
+      "href": "#intro-section",
+      "title": "Read more"
+    },
+    "component": "EthereumUpgrades/Intro"
+  },
+  {
+    "text": "Ethereum is a decentralised global software platform which is powered by blockchain. While most people associate the name with its native cryptocurrency, ether (ETH), it also plays a pivotal role for developers looking to create technologies which expand beyond traditional transactional payment methods.<br/><br/>The digital ledgers which can be created using Ethereum have been transformative in a number of ways. And while that has mainly been in the world of crypto, the platform has also helped to secure items within virtual reality games, as well as making it possible to buy, sell and trade non-fungible tokens (NFT).<br/><br/>In order for Ethereum to continue having this positive impact on the digital landscape, it needs to stay cutting edge. That means implementing regular updates and upgrades to patch up holes and improve on the systems which already exist.<br/><br/>In this informative guide, we’re going to discuss the importance of those upgrades, while also charting the history of them on the platform.",
+    "id": "intro-section",
+    "component": "common/TextBlockNarrow"
+  },
+  {
+    "variant": "4-columns",
+    "items": [
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/paper-list.svg",
+          "alt": "Chapter 1 icon"
+        },
+        "caption": "Chapter 01",
+        "title": "An introduction to blockchain upgrades",
+        "link": {
+          "href": "#chapter-one",
+          "title": "Read more"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/line-chart.svg",
+          "alt": "Chapter 2 icon"
+        },
+        "caption": "Chapter 02",
+        "title": "The history of Ethereum upgrades",
+        "link": {
+          "href": "#chapter-two",
+          "title": "Read more"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/padlock-large.svg",
+          "alt": "Chapter 3 icon"
+        },
+        "caption": "Chapter 03",
+        "title": "Understanding the importance of the Merge (Ethereum 2.0)",
+        "link": {
+          "href": "#chapter-three",
+          "title": "Read more"
+        }
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/new-link-large.svg",
+          "alt": "Chapter 4 icon"
+        },
+        "caption": "Chapter 04",
+        "title": "Useful links",
+        "link": {
+          "href": "#chapter-four",
+          "title": "Read more"
+        }
+      }
+    ],
+    "component": "common/UspBlock"
+  },
+  {
+    "id": "chapter-one",
+    "caption": "Chapter 01",
+    "title": "An introduction to <b>blockchain upgrades</b>",
+    "text": "First, it’s important to understand exactly what a blockchain upgrade is, and how they can have such a big impact on their respective platforms. Let’s take a closer look at how they’re implemented, as well as what they do to keep the blockchain operating smoothly.",
+    "image": {
+      "src": "/images/banners/background-image-1.svg",
+      "alt": "Safe round block lines"
+    },
+    "gradientColor": "dark",
+    "component": "common/BannerGradientImage"
+  },
+  {
+    "title": "Understanding blockchain upgrades",
+    "text": "When a change in the protocol of a blockchain happens, it doesn’t automatically change the entire system. If decentralised application developers were to modify a blockchain, the entire chain would need to be updated repeatedly in order for it to remain consistent across time. This would be a very challenging thing to maintain. As such, blockchain upgrades are carried out using “forks”.<br/><br/>The result of a fork is two (or more) forms of the same chain existing – one which hasn’t been upgraded, and one which has. The fork gets its name because it’s the point at which the blockchain splits off into two different paths.<br/><br/>These forks allow for changes to be made to the existing chain (such as by creating a new token or updating rules and protocols), but with a second version of the original chain continuing completely untouched. While they share a history, the older fork still operates under the outdated protocols, and cannot hold any newly mined blocks as valid.<br/><br/>Forks will be separated into two distinct types, “hard” and “soft”. As the names suggest, soft forks tend to be a little less extreme, while hard forks can make large scale changes to a platform.<br/><br/>Here’s a clear way to understand the two types of forks:",
+    "component": "common/TextBlockNarrow"
+  },
+  {
+    "component": "HoldingCryptoSafely/TextItemGridSpacedCards",
+    "columnWidth": 6,
+    "items": [
+      {
+        "image": {
+          "src": "/images/EthereumUpgrades/soft-fork.svg",
+          "alt": "Soft fork icon"
+        },
+        "title": "Soft forks",
+        "text": "<p>When a backwards compatible upgrade is added to the blockchain, it can be considered a soft fork. This means that any changes to protocols or newly mined blocks are recognised by the old system, but still see the platform adapt and move forwards. While the path doesn’t remain straight, this fork also doesn’t mean branching off and leaving an older system behind.</p>"
+      },
+      {
+        "image": {
+          "src": "/images/EthereumUpgrades/hard-fork.svg",
+          "alt": "hard fork icon"
+        },
+        "title": "Hard forks",
+        "text": "<p>By contrast, hard forks introduce changes which are rigid and do not work in tandem with older systems. That means a node would have to fully upgrade their software in order to remain compatible with this new direction the blockchain is headed. If they don’t, they fork off from the main path of the chain, remaining behind. This means they won’t operate under new protocols, or view any new blocks as valid.</p>"
+      }
+    ]
+  },
+  {
+    "text": "Most of the core updates which a blockchain experiences will be hard forks. That’s because they’re creating a wholesale change to the way the chain operates, and usually although not always) introduce a new form of token in the process.",
+    "divider": true,
+    "component": "common/TextBlockNarrow"
+  },
+  {
+    "variant": "3-columns",
+    "title": "Why are blockchain upgrades needed?",
+    "text": "Just like any piece of software, regular changes and upgrades are an important part of ensuring peak operation capabilities.<br /> In the case of a blockchain, that might look like any of the following fixes:",
+    "items": [
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/padlock-single.svg",
+          "alt": "padlock icon"
+        },
+        "title": "Strengthening security",
+        "text": "One of the most important aspects of any software upgrade is security patches. With cybercriminals constantly evolving the intricacy and methods of their attacks, it’s a necessity for blockchain platforms to keep up with them. Patches, bug fixes, and the introduction of totally new algorithms all help in the fight against hacks and leaks."
+      },
+      {
+        "image": {
+          "src": "/images/EthereumUpgrades/settings.svg",
+          "alt": "Settings changes icon"
+        },
+        "title": "New features and functions",
+        "text": "It’s the users themselves who make a blockchain a success. Upgrades help to provide them with new ways to interact with and use a chain, such as streamlining processes, allowing them to use smart contracts, or even offering interoperability between different networks."
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/line-chart.svg",
+          "alt": "Graph icon"
+        },
+        "title": "Enhancing a network’s scalability",
+        "text": "The need to scale is at the forefront of any kind of business. That’s just as true with a blockchain as a brick and mortar store. The more popular a network becomes, the greater the need to be able to handle large amounts of transactions. An upgrade, such as the instruction of sharding, has the potential to do this."
+      }
+    ],
+    "component": "common/UspBlock"
+  },
+  {
+    "caption": "Chapter 02",
+    "id": "chapter-two",
+    "title": "The history of  <b>Ethereum upgrades</b>",
+    "text": "Now that we know more about what upgrades are and why they happen, let’s explore the history of these changes to the Ethereum platform since its creation. Here are some of the most important Ethereum upgrades, as well as future planned changes, and the fluctuation of the platform's native coin ETH’s value over time.",
+    "image": {
+      "src": "/images/banners/background-image-2.svg",
+      "alt": "Safe round block lines"
+    },
+    "gradientColor": "dark",
+    "component": "common/BannerGradientImage"
+  },
+
+  {
+    "title": "A timeline of Ethereum upgrades",
+    "text": "The Ethereum blockchain network has come a long way since its early inception. <br/>Here are the most important upgrades which the network has introduced throughout its current lifecycle.",
+    "divider": true,
+    "timeline": [
+      {
+        "continues": "continues",
+        "width": 4,
+        "items": [
+          {
+            "date": "July 22nd 2014",
+            "title": "Ether is put up for sale",
+            "text": "As a precursor to the platform itself, ETH goes live on the market. At this point in time it was only possible for people to buy it through Bitcoin. This initial sale of ETH lasted for 42 days."
+          },
+          {
+            "date": "July 30th 2015",
+            "title": "Frontier",
+            "text": "The blockchain began to take shape in earnest with the release of Frontier. This barebones version of the finished platform gave developers and other technical users the chance to start operations and begin installing clients on the network. This soft launch allowed these users to get themselves set up on Ethereum, to avoid having to rush to do so during the official launch of the platform."
+          },
+          {
+            "date": "September 7th 2015",
+            "title": "Frontier thawed",
+            "text": "With the thawing of Frontier the Ethereum network made it possible to make transactions for the first time. This saw the total gas limit (the fee paid to make a transaction) per block raised significantly. With 21,000 gas needed for every transaction, this removed the restrictions needed to begin trading in earnest. \n\nThe difficulty bomb was also introduced. This was a planned attempt to make the proof-of-work (PoW) system harder over time, which would eventually pave the way for the platform’s transition to a proof-of-stake (PoS) model in later years. This process, known as the Merge (or Ethereum 2.0) would reshape the network."
+          }
+        ]
+      },
+      {
+        "continues": "both",
+        "width": 4,
+        "items": [
+          {
+            "date": "March 14th 2016",
+            "title": "Homestead",
+            "text": "This fork had a focus on the future, laying the groundwork for the introduction of several protocol changes later down the line. This included edits to the contract creation process and the introduction of forward compatibility requirements for devp2p – which helps to enable peer-to-peer sharing on the network."
+          },
+          {
+            "date": "July 20th 2016",
+            "title": "DAO Fork",
+            "text": "A decentralised autonomous organisation (DAO) is a governance system which is used to distribute decision-making, entity ownership, and management within a blockchain. In 2016, one DAO was the target of <a href='https://www.coindesk.com/learn/understanding-the-dao-attack' target='_blank'>an attack which saw a total loss of 3.6 million ETH</a>. The DAO fork was a response to this.<br/><br/>It saw funds moved from the faulty contract to a totally new one, with anyone who lost money in the hack able to withdraw 1 ETH for every 100 DAO tokens in their wallet. This action was considered a soft fork, as DAO attack wasn’t something which was the result of a defect in the protocol of the blockchain."
+          },
+          {
+            "date": "October 18th 2016",
+            "title": "Tangerine Whistle",
+            "text": "This fork was introduced to address several denial of service (DoS) attacks which the network was a target of. It helped to tackle health issues related to underpriced operation codes, while safeguarding the platform against future assaults."
+          }
+        ]
+      },
+      {
+        "continues": "both",
+        "width": 4,
+        "items": [
+          {
+            "date": "November 22nd 2016",
+            "title": "Spurious Dragon",
+            "text": "Serving as “part two” of the Tangerine Whistle upgrade, Spurious Dragon was created to pave over the remaining cracks addressed in the DoS attacks. This included tuning opcode pricing to prevent future attacks, enabling a debloat of the blockchain, and adding replay attack protection to prevent the retransferring of valid cryptographic data for nefarious purposes."
+          },
+          {
+            "date": "October 16th 2017",
+            "title": "Byzantium",
+            "text": "The sole upgrade of 2017 looked to make wholesale changes to some of the core ways that the platform operated. One of the biggest of these was changing mining rewards from 5 ETH to 3, for every block mined. This was in part due to the rapid upsurge in the value of ETH between 2016 and 2017. Other changes included adding the ability to make non-state-changing calls to contracts, as well as improving cryptography methods to allow for two-layer protection. The difficulty bomb was also delayed for a year."
+          },
+          {
+            "date": "February 28th 2019",
+            "title": "Constantinople",
+            "text": "More than a year later, the Constantinople fork saw block mining rewards lowered further – this time dropping down to 2 ETH. The cost of gas was also optimised for certain procedures, as well as adding the ability to interact with addresses that hadn’t yet been created. This upgrade also ensured that the blockchain wouldn’t freeze when proof-of-stake was eventually introduced."
+          }
+        ]
+      },
+      {
+        "continues": "both",
+        "width": 4,
+        "items": [
+          {
+            "date": "December 8th 2019",
+            "title": "Istanbul",
+            "text": "Gas costs were optimised even further with Istanbul. Denial-of-service attacks were also given more robust resilience measures, with 2-layer solutions becoming more performant. This was also the fork which allowed Ethereum and Zcash (another crypto coin) to become interoperable for the first time."
+          },
+          {
+            "date": "January 2nd 2020",
+            "title": "Muir Glacier",
+            "text": "In a move which threatened to make Ethereum less user-friendly, the difficulty bomb was delayed again. This made the PoW consensus mechanism harder than ever to use, increasing wait times and forcing transactions to be sent via decentralised applications across more than one device."
+          },
+          {
+            "date": "October 14th 2020",
+            "title": "Staking deposit contract deployed",
+            "text": "The first steps in shifting towards a PoS system came in earnest with the introduction of the staking deposit contract. This was preemptively implemented prior to Beacon Chain, in order for that update to be more effective from day one."
+          }
+        ]
+      },
+      {
+        "continues": "both",
+        "width": 4,
+        "items": [
+          {
+            "date": "December 1st 2020",
+            "title": "Beacon Chain genesis",
+            "text": "While not the official introduction of PoS as the priority consensus method to the wider Ethereum ecosystem, Beacon Chain was in essence a proof of concept. After 16,384 stakes of 32 ETH were made, Beacon Chain began producing blocks. The update would work quietly in the background until the Paris (Merge) update of September 2022."
+          },
+          {
+            "date": "April 15th 2021",
+            "title": "Berlin",
+            "text": "This update optimised gas costs further, while also providing support for a handful of different transaction types. ModExp gas costs were lowered, while the price went up for state access opcodes. Easier support for multiple transaction types was also added."
+          },
+          {
+            "date": "August 5th 2021",
+            "title": "London",
+            "text": "The London update had huge connotations for user friendliness. It removed the fixed block sizes which saw users stuck in queues during periods of high demand, and allowed variable sizes to be introduced to accommodate more users at once. There was also a change in the way transaction fees were calculated. Users could now set a “maxFeePerGas”, which allowed them to more accurately control what they’d be charged for every transaction executed."
+          }
+        ]
+      },
+      {
+        "continues": "both",
+        "width": 4,
+        "items": [
+          {
+            "date": "October 27th 2021",
+            "title": "Altair",
+            "text": "Altair was the first upgrade to fully support the Beacon Chain. It added support for “sync committees”, which helped to enable the use of light clients on the platform. It also increased the penalties for validator inactivity and slashing, as the move towards the Merge continued."
+          },
+          {
+            "date": "December 9th 2021",
+            "title": "Arrow Glacier",
+            "text": "The only change of the Arrow Glacier upgrade was to push back the difficulty bomb by several months. This was done to give Ethereum more time to prepare for the Merge."
+          },
+          {
+            "date": "June 30th 2022",
+            "title": "Gray Glacier",
+            "text": "Similarly, Gray Glacier would serve the same purpose. This delayed the bomb by three further months as the Paris fork crept closer."
+          }
+        ]
+      },
+      {
+        "continues": "both",
+        "width": 4,
+        "items": [
+          {
+            "date": "September 6th 2022",
+            "title": "Bellatrix",
+            "text": "The second upgrade to the Beacon Chain, Bellatrix set the protocols in place for a fully PoS consensus mechanism on the platform. That meant bringing validator and slashing penalties to their full value, as well as ensuring that all blocks moved from PoW to PoS."
+          },
+          {
+            "date": "September 15th 2022",
+            "title": "Paris or \"The Merge\"",
+            "text": "The largest and most important update to date in the history of Ethereum, the Merge changed how the platform operated forever. When block 15,537,393 was generated as a result of PoW, the Merge ensured the next block would be created via PoS. In order for this to happen successfully a number of execution clients had to be upgraded. These were fixed to take new instructions from their connected consensus clients. This involved the introduction of a totally new set of Application Programming Interface (API) methods."
+          },
+          {
+            "date": "April 12th 2023",
+            "title": "Shanghai-Capella or \"Shapella\"",
+            "text": "The third upgrade to the Beacon Chain saw a pair of upgrades working in tandem to make it easier to withdraw stakes from the platform. Shanghai would bring staking withdrawal requests to the execution layer, before Capella allowed those who hadn’t previously provided withdrawal credentials with their initial deposit to do so. Capella also brought in automatic account sweeping, which works in the background to process to identify if anyone is eligible for rewards payments."
+          }
+        ]
+      },
+      {
+        "continues": "continued",
+        "width": 4,
+        "items": [
+          {
+            "date": "March 13th 2024",
+            "title": "Cancun-Deneb or \"Dencun\"",
+            "text": "Another dual-update, Dencun looked to help with the future scalability of Ethereum. Cancun achieved this with the use of Proto-Danksharding, which decreased the cost of data storage for layer 2 rollups. Deneb allowed stakers to delegate node operations and withdraw their funds safely at any time without needing the permission of other members of a node pool. Decentralisation and churn rate was also addressed. This rate was capped to eight validators per epoch (6.4 minutes), lowering the growth rate of newly issued ETH."
+          }
+        ]
+      }
+    ],
+    "component": "PectraUpgrade/Timeline"
+  },
+  {
+    "variant": "3-columns",
+    "title": "Future Ethereum changes and upgrades",
+    "text": "There’s been a host of upgrades which have changed the Ethereum blockchain. But these are far from the end of the story. <a href='https://ethereum.org/en/roadmap/' target='_blank'>The Ethereum Roadmap</a> exists for this very reason. This list of future upgrades exists to ensure that the platform never becomes stale – continuing to deliver changes which enhance its effectiveness, safety, and usability.<br/><br/><strong>Changes which the Ethereum Roadmap will need to address</strong>",
+    "items": [
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/line-chart.svg",
+          "alt": "chart icon"
+        },
+        "title": "Scalability",
+        "text": "In order for the Ethereum network to continue growing, it needs to scale at a manageable level. Some of the ways that the Roadmap plans to address this is:<br/><br/><strong>Danksharding.</strong> Revolving around layer 2 solutions, this plan will allow for the Ethereum network to process bundled transactions without having to store all of their data permanently. This is cheaper and faster for the blockchain. <br/><br/><strong>Single-Slot Finality.</strong> Finalising a block on Ethereum currently takes around 15 minutes. Single-slot finality will halve that time, with blocks able to be proposed and finalised in the same slot.<br/><br/><strong>Verkle Trees.</strong> These data structures exist to help upgrade nodes. They make it possible for Ethereum to use stateless clients, reducing the amount of storage space needed to verify new blocks."
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/padlock-single.svg",
+          "alt": "padlock icon"
+        },
+        "title": "Security",
+        "text": "The safety of the platform’s users’ private information and tokens should be at the forefront of any blockchain. Some of the updates planned for the future will look to address:<br/><br/><strong>Proposer-Builder Separation (PBS).</strong> This system splits block-building and block-proposal tasks across different validators. Builders create blocks, then propose them to the block proposer. They’ll then choose the one they think is most profitable, before paying a fee to the builder. This process prevents transaction censorship, guarantees a fairer consensus mechanism, and helps to support Danksharding.<br/><br/><strong>Clever Cryptography.</strong> This addition would look to protect the IP addresses of block proposers. These can become vulnerable because of the open nature of consensus mechanisms. Cryptography hides these IPs."
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/single-user.svg",
+          "alt": "Single user icon"
+        },
+        "title": "User experience",
+        "text": "Streamlining the way users interact with the platform increases engagement and keeps people actively trading on Ethereum. The Roadmap will look to do this by targeting:<br/><br/><strong>Smart contracts.</strong> At the moment, these can only happen through externally owned accounts. Updates will look to make them ownable by private users, supported natively on the Ethereum platform.<br/><br/><strong>Account abstraction.</strong> This will bring a variety of new features to the network, such as batching transactions together, account recovery without the use of your keys, and having someone else paying your gas."
+      }
+    ],
+    "component": "common/UspBlock"
+  },
+  {
+    "title": "The Pectra/Prague Upgrade",
+    "text": "The next big upgrade coming from Ethereum is “Pectra” – the combination of “Prague” (the execution layer)  and “Electrca” (the consensus layer). Now set to drop in early 2025, this upgrade will make the network faster, more scalable, and easier to use than ever before.<br/.<br/>Just some of the core features from the Ethereum Roadmap that are going to be addressed are:<br/><br/><ul><li>Allowing users to pay gas fees with different tokens</li><li>Speeding up smart contracts</li><li>Improving staking rewards for validators</li><li>The introduction of Verkle Trees</li></ul> <br/>If you want to learn more about the Pectra upgrade, make sure to check out our extensive guide on this transformative fork.",
+    "divider": true,
+    "component": "common/TextBlockNarrow"
+  },
+  {
+    "title": "The price of Ethereum (ETH) across time",
+    "text": "The upgrades carried out on the Ethereum blockchain have helped to keep the ETH coin itself relatively strong throughout its lifetime. While there’s been natural peaks and troughs, this has seen ETH grow substantially since it first landed on the open market. Here’s a breakdown of its value at the end of each year:",
+    "component": "common/TextBlockNarrow"
+  },
+  {
+    "component": "common/ImageFull",
+    "image": {
+      "src": "/images/EthereumUpgrades/eth-price-growth.svg",
+      "alt": "Ethereum (ETH) price growth"
+    },
+    "link": {
+      "href": "https://uk.investing.com/crypto/ethereum/historical-data",
+      "title": "Source: Investing.com"
+    }
+  },
+  {
+    "text": "While the value of the coin has fluctuated across the years, it’s without question that it’s now found a relatively stable place on the market. The coin hasn’t dropped below a value of $1,000 since November of 2020, even peaking at as high as $4,628.90 in October of 2021.<br/><br/>This speaks volumes about the continued success of the Ethereum blockchain as a whole. As more upgrades are introduced to keep the platform operating at peak performance, the value of ETH may become even stronger.",
+    "component": "common/TextBlockNarrow"
+  },
+  {
+    "caption": "Chapter 03",
+    "id": "chapter-three",
+    "title": "Understanding the importance of <b>the Merge (Ethereum 2.0)</b>",
+    "text": "Ethereum 2.0, now commonly referred to as the Merge, was the most important upgrade in the platform’s history. It changed the way that users interacted with the blockchain, and helped to reshape Ethereum in a number of key areas.",
+    "image": {
+      "src": "/images/banners/background-image-3.svg",
+      "alt": "Safe round block lines"
+    },
+    "gradientColor": "dark",
+    "component": "common/BannerGradientImage"
+  },
+  {
+    "text": "This highly anticipated upgrade will look to please both developers and users, increasing the scalability, security and user experience of Ethereum. These changes will lay the groundwork for further development in the future, showing just what the platform might be capable of in years to come. Whilst not every EIP will impact every person, or every action, Pectra is a significant set of changes.",
+    "component": "common/TextBlockNarrow"
+  },
+  {
+    "title": "What was the Merge?",
+    "text": "The Merge was a changing of the guard of sorts, with the Ethereum network shifting from a proof-of-work (PoW) to a proof-of-stake (PoS) system. This meant changing from a method where processing power was needed to solve cryptographic puzzles to validate blocks and earn rewards, to one where node operators could stake 32 ETH in order to become network validators and earn rewards that way.<br/><br/>The ultimate driving factors for this change were:<ul><li>Lowering hardware requirements for node operators (in an attempt to decentralise the network more)</li><li>Faster transaction confirmation time</li><li>A 99% dip in energy consumption by node validators</li><li>The ability to add more scaling solutions in the future</li><li>Heightened security thanks to client diversity</li><li>Making ETH a more deflationary asset</li></ul><br/>While concerns about the Merge were raised over the potential centralization of the Ethereum blockchain, these have yet to become realised. As of October 2024, <a href='https://beaconscan.com/stat/validator' target='_blank'>more than 1.6 million validators existed on the network</a>. While these numbers persist, there’s very little risk of a centralised network of fewer validators becoming a reality.",
+    "divider": true,
+    "component": "common/TextBlockNarrow"
+  },
+  {
+    "variant": "2-columns",
+    "title": "What was the impact of the Merge?",
+    "text": "Given the importance of the Merge on the wider Ethereum platform, it’s not surprising that a number of key areas were impacted by the upgrade. Here are some of the ways that the Merge changed day-to-day operations on the network:",
+    "divider": true,
+    "items": [
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/padlock-single.svg",
+          "alt": "padlock icon"
+        },
+        "title": "Impact on security",
+        "text": "Slashing penalties were introduced to ensure that all validation during the staking process was legitimate. These penalties could see a validator fined up to 18 ETH (the equivalent of $46,154.34 at the time of writing), as well as being banned from the Ethereum blockchain altogether."
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/line-chart.svg",
+          "alt": "Graph icon"
+        },
+        "title": "Impact on scalability",
+        "text": "The Merge resulted in an huge increase in the number of transactions processed per second. Previously, the network could only handle 20-30 of these a second. This changed to anywhere from 20,000 to 100,000 – representing a shift of more than 999,000%."
+      },
+      {
+        "image": {
+          "src": "/images/HoldingCryptoSafely/diamond.svg",
+          "alt": "diamond icon"
+        },
+        "title": "Impact on sustainability",
+        "text": "While not something which immediately springs to mind when thinking about cryptocurrency, sustainability was also improved thanks to the Merge. The energy required as part of a PoS system compared to a PoW was <a href='https://consensys.io/blog/ethereum-blockchain-eliminates-99-99-of-its-carbon-footprint-overnight-after-a-successful-merge-according-to-new-report' target='_blank'>found to be 99.99% less</a>."
+      },
+      {
+        "image": {
+          "src": "/images/EthereumUpgrades/gas.svg",
+          "alt": "gas pump icon"
+        },
+        "title": "Impact on transaction fees",
+        "text": "It’s not all good news for Ethereum users, though. With more transactions happening than ever before, gas fees are becoming inflated. These fees are just another name for the cost of a transaction. They indicate the price paid to miners for validating a block. That means during periods of congestion, the blocks with higher fees tend to get picked first. The more congested the network, the longer it takes for blocks with lower transaction fees to be validated. As such, this continues to drive up the cost of the fees."
+      }
+    ],
+    "component": "common/UspBlock"
+  },
+  {
+    "variant": "3-columns",
+    "title": "The Merge’s impact on other upgrades",
+    "text": "As well as changing how Ethereum operated on a day-to-day basis, the Merge also played a part in enhancing or slightly altering the impact of previous upgrades and patches. Here are some of the ways those forks were affected:",
+    "items": [
+      {
+        "title": "Beacon Chain",
+        "text": "As the forerunner to the Merge itself, Ethereum 2.0 formerly saw the adoption of this precursor upgrade as the de facto consensus layer on the platform. This will help with the future scalability of the platform."
+      },
+      {
+        "title": "Shanghai",
+        "text": "The ability to withdraw staked ETH was not included as part of the Merge. This was instead introduced with the Shanghai fork of 2023. This was done to simplify the initial Merge upgrade, and ensure all focus was placed on the successful transition from PoW to PoS."
+      },
+      {
+        "title": "Sharding",
+        "text": "Originally planned to be a priority for the network, sharding took a backseat in favour of the Merge. This shift to PoS has opened new avenues for this process, with it now possible to distribute the storage of compressed calldata from rollup contracts. This helps to grow network capacity."
+      }
+    ],
+    "component": "common/UspBlock"
+  },
+  {
+    "caption": "Chapter 04",
+    "id": "chapter-four",
+    "title": "<b>Useful Links</b>",
+    "container": "containerShorter",
+    "text": "Upgrades are an intrinsic part of any successful blockchain platform. If you’d like to learn more about Ethereum’s, or just want to understand more about forks, blockchains, or cryptocurrency in general, make sure to check out these handy secondary sources:",
+    "items": [
+      {
+        "title": "Ethereum price today, ETH to USD live price, marketcap and chart | CoinMarketCap",
+        "link": {
+          "href": "https://coinmarketcap.com/currencies/ethereum/"
+        }
+      },
+      {
+        "title": "Ethereum roadmap",
+        "link": {
+          "href": "https://ethereum.org/en/roadmap/"
+        }
+      },
+      {
+        "title": "What is Ethereum?",
+        "link": {
+          "href": "https://ethereum.org/en/what-is-ethereum/"
+        }
+      },
+      {
+        "title": "Start Investing In Cryptocurrency: A Guide for Newcomers & Beginners",
+        "link": {
+          "href": "https://www.forbes.com/advisor/investing/cryptocurrency/cryptocurrency-for-newcomers-beginners-guide/"
+        }
+      },
+      {
+        "title": "Cryptocurrency Safety Tips | Kaspersky",
+        "link": {
+          "href": "https://www.kaspersky.com/resource-center/preemptive-safety/guide-to-cryptocurrency-safety"
+        }
+      },
+      {
+        "title": "Hard Fork: What It Is in Blockchain, How It Works, and Why It Happens",
+        "link": {
+          "href": "https://www.investopedia.com/terms/h/hard-fork.asp"
+        }
+      }
+    ],
+    "image": {
+      "src": "/images/banners/background-image-5.svg",
+      "alt": "Safe round block lines"
+    },
+    "gradientColor": "dark",
+    "component": "common/BannerGradientImage"
+  }
+]

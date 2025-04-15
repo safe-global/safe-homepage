@@ -6,12 +6,11 @@
 .continues {
 }
 
-.continued:before,
-.both:before {
+.continued:before {
   content: '';
   background-color: var(--mui-palette-primary-main);
   height: 1px;
-  width: 20%;
+  width: 50%;
   display: block;
   position: absolute;
   transform: translateY(6px);
@@ -19,12 +18,11 @@
   z-index: -1;
 }
 
-.continues:after,
-.both:after {
+.continues:after {
   content: '';
   background-color: var(--mui-palette-primary-main);
   height: 1px;
-  width: 20%;
+  width: 50%;
   display: block;
   position: absolute;
   transform: translateY(6px);
@@ -129,18 +127,13 @@
     position: relative;
   }
 
-  .continued:before,
-  .both:before {
+  .continued:before {
     height: 25%;
     width: 1px;
     left: 6px;
   }
 
-  .both:before {
-    display: none;
-  }
-  .continues:after,
-  .both:after {
+  .continues:after {
     display: none;
   }
 
