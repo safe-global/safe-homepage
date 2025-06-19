@@ -13,7 +13,7 @@ export const ProjectCard = (item: EcosystemProjectWithCategories) => {
 
   const CardContent = (
     <div className={clsx(css.card, { [css.outline]: item.project_website })}>
-      <Avatar className={css.image} src={ECOSYSTEM_DATA_URL + item.logo}>
+      <Avatar className={css.image} src={ECOSYSTEM_DATA_URL + item.logo_path}>
         &nbsp;
       </Avatar>
 
