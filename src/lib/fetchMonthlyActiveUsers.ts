@@ -13,5 +13,8 @@ export const fetchMonthlyActiveUsers = async (): Promise<number | null> => {
       return res.json()
     })
     .then((data) => data.result.rows[data.result.rows.length - 1].active_users)
-    .catch((err) => console.error(`Error fetching monthly active users: ${err.message}`))
+    .catch((err) => {
+      console.error(`Error fetching monthly active users: ${err.message}`)
+      return null
+    })
 }
