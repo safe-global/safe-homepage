@@ -8,7 +8,7 @@ import { isEntryTypePost } from '@/lib/typeGuards'
 import { useClientEntry } from '@/hooks/useClientEntry'
 import type { BlogHomeEntry, PostEntryCollection } from '@/config/types'
 
-const categories = ['Announcements', 'Ecosystem', 'Community', 'Insights', 'Build']
+const categories = ['Announcements', 'Ecosystem', 'Community', 'Insights', 'Safe Research']
 
 const TRENDING_POSTS_COUNT = 3
 
