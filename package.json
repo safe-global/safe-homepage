@@ -46,7 +46,7 @@
     "@testing-library/dom": "^10.2.0",
     "@testing-library/jest-dom": "^6.4.6",
     "@testing-library/react": "^16.0.0",
-    "@types/dompurify": "^2.4.0",
+    "@types/dompurify": "^3.0.5",
     "@types/jest": "^29.5.12",
     "@types/lodash": "^4.14.191",
     "@types/matter-js": "^0.19.6",
