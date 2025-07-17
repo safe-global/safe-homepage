@@ -1,29 +1,38 @@
 import { useCookieBannerContext } from '@/contexts/CookieBannerContext'
 import { GOOGLE_ANALYTICS_DOMAIN, GOOGLE_ANALYTICS_TRACKING_ID, IS_PRODUCTION } from '@/config/constants'
-import { useEffect } from 'react'
-import ReactGA from 'react-ga4'
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
+import { gtmDisableCookies, gtmEnableCookies, gtmTrackPageview } from '@/services/analytics/gtm'
+import { AppRoutes } from '@/config/routes'
 
 let isAnalyticsInitialized = false
 
 export const useGa = () => {
   const { isAnalyticsEnabled } = useCookieBannerContext()
+  const [, setPrevAnalytics] = useState(isAnalyticsEnabled)
+  const router = useRouter()
 
-  // Enable/disable tracking
+  // Enable GA cookies if consent was given
   useEffect(() => {
-    if (IS_PRODUCTION && isAnalyticsEnabled) {
-      ReactGA.initialize(GOOGLE_ANALYTICS_TRACKING_ID, {
-        gaOptions: {
-          cookieFlags: `SameSite=Strict;Secure`,
-          cookieDomain: GOOGLE_ANALYTICS_DOMAIN,
-        },
-      })
-      isAnalyticsInitialized = true
-      return
-    }
+    setPrevAnalytics((prev) => {
+      if (isAnalyticsEnabled === prev) return prev
 
-    if (!isAnalyticsEnabled && isAnalyticsInitialized) {
-      // Injected script will otherwise remain in memory until new session
-      location.reload()
-    }
+      if (isAnalyticsEnabled) {
+        gtmEnableCookies()
+      } else {
+        gtmDisableCookies()
+      }
+
+      return isAnalyticsEnabled
+    })
   }, [isAnalyticsEnabled])
+
+  // Track page views – anonymized by default.
+  useEffect(() => {
+    // Don't track 404 because it's not a real page, it immediately does a client-side redirect
+    if (router.pathname === AppRoutes['404']) return
+    
+    gtmTrackPageview(router.pathname, router.asPath)
+  }, [router.asPath, router.pathname])
+
 }
