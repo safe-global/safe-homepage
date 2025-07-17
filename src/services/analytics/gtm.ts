@@ -39,7 +39,7 @@ export const gtmDisableCookies = () => {
 }
 
 type PageviewGtmEvent = {
-  event: "pageview"
+  event: 'pageview'
   page_location: string
   page_path: string
   send_to: string
@@ -47,7 +47,7 @@ type PageviewGtmEvent = {
 
 export const gtmTrackPageview = (pagePath: string, pathWithQuery: string): void => {
   const gtmEvent: PageviewGtmEvent = {
-    event: "pageview",
+    event:'pageview',
     page_location: `${location.origin}${pathWithQuery}`,
     page_path: pagePath,
     send_to: GOOGLE_ANALYTICS_TRACKING_ID,
