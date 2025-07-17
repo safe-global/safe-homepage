@@ -41,7 +41,7 @@
     "react-dom": "18.2.0",
     "react-twitter-embed": "^4.0.4",
     "swr": "^2.0.3",
-    "three": "^0.166.1"
+    "three": "^0.178.0"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.3.1",
