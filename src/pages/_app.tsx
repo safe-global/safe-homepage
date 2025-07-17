@@ -18,9 +18,9 @@ import { theme } from '@/styles/theme'
 import '@/styles/globals.css'
 import PageLayout from '@/components/common/PageLayout'
 import { useGa } from '@/hooks/useGa'
-import useHotjar from '@/hooks/useHotjar'
 import DOMPurify from 'isomorphic-dompurify'
 import { SearchParamsContextProvider } from '@/contexts/SearchParamsContext'
+import Analytics from '@/services/analytics/Analytics'
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache()
@@ -38,7 +38,6 @@ DOMPurify.addHook('afterSanitizeAttributes', function (node) {
 
 const InitHooks = () => {
   useGa()
-  useHotjar()
 
   return null
 }
@@ -69,6 +68,7 @@ const App = ({
           <SearchParamsContextProvider>{getLayout(<Component {...pageProps} />)}</SearchParamsContextProvider>
 
           <CookieBanner />
+          <Analytics />
         </CookieBannerContextProvider>
       </CssVarsProvider>
     </CacheProvider>

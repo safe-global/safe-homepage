@@ -19,8 +19,6 @@ runs:
       env:
         NEXT_PUBLIC_IS_PRODUCTION: ${{ inputs.is-production }}
         NEXT_PUBLIC_GOOGLE_ANALYTICS_TRACKING_ID: ${{ fromJSON(inputs.secrets).NEXT_PUBLIC_GOOGLE_ANALYTICS_TRACKING_ID }}
-        NEXT_PUBLIC_HOTJAR_ID: ${{ fromJSON(inputs.secrets).NEXT_PUBLIC_HOTJAR_ID }}
-        NEXT_PUBLIC_HOTJAR_ID_STAGING: ${{ fromJSON(inputs.secrets).NEXT_PUBLIC_HOTJAR_ID_STAGING }}
         DUNE_API_KEY: ${{ fromJSON(inputs.secrets).DUNE_API_KEY }}
         NEXT_PUBLIC_CONTENTFUL_SPACE_ID: ${{ fromJSON(inputs.secrets).NEXT_PUBLIC_CONTENTFUL_SPACE_ID }}
         NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN: ${{ fromJSON(inputs.secrets).NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN }}
