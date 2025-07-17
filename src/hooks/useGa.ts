@@ -1,5 +1,4 @@
 import { useCookieBannerContext } from '@/contexts/CookieBannerContext'
-import { GOOGLE_ANALYTICS_DOMAIN, GOOGLE_ANALYTICS_TRACKING_ID, IS_PRODUCTION } from '@/config/constants'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { gtmDisableCookies, gtmEnableCookies, gtmTrackPageview } from '@/services/analytics/gtm'
@@ -31,8 +30,7 @@ export const useGa = () => {
   useEffect(() => {
     // Don't track 404 because it's not a real page, it immediately does a client-side redirect
     if (router.pathname === AppRoutes['404']) return
-    
+
     gtmTrackPageview(router.pathname, router.asPath)
   }, [router.asPath, router.pathname])
-
 }

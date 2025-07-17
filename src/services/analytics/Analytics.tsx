@@ -3,7 +3,6 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 import { useEffect } from 'react'
 
 const Analytics = () => {
-    
   useEffect(() => {
     window.gtag?.('consent', 'default', {
       ad_storage: 'denied',
