@@ -3,6 +3,7 @@ name: Scheduled deployment
 on:
   schedule:
     - cron: '38 7,11 * * 1-5' # 9:38 AM and 1:38 PM UTC time, Monday to Friday
+  workflow_dispatch: # Allows manual triggering
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
