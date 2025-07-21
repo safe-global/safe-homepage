@@ -4,7 +4,6 @@ const nextConfig = () => {
   return {
     output: isStaticExportBuild ? 'export' : undefined,
     reactStrictMode: false,
-    swcMinify: true,
     // `Image` not supported in static export
     images: {
       unoptimized: true,
