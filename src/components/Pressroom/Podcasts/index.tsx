@@ -7,7 +7,7 @@ import HeadphoneIcon from '@/public/images/headphone.svg'
 type PodcastsProps = { podcasts: Entry<TypeExternalUrlSkeleton, undefined, string>[] }
 
 export const Podcasts = ({ podcasts }: PodcastsProps) => (
-  <Box mt={{ xs: '80px', md: '250px' }}>
+  <Box component="div" mt={{ xs: '80px', md: '250px' }}>
     <Typography variant="h2" textAlign="center">
       Podcast appearances
     </Typography>

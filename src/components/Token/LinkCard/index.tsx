@@ -17,7 +17,7 @@ const LinkCard = (props: BaseBlockEntry) => {
       </div>
 
       <div className={css.cardBody}>
-        <Box mt="auto">
+        <Box component="div" mt="auto">
           <RichText {...title} />
         </Box>
 

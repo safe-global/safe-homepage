@@ -42,12 +42,12 @@ const Timeline = ({ items }: TimelineProps) => {
   }
 
   return (
-    <Box mt="140px">
+    <Box component="div" mt="140px">
       <Typography variant="h2" textAlign="center">
         Key milestones
       </Typography>
 
-      <Box className={css.stepperWrapper}>
+      <Box component="div" className={css.stepperWrapper}>
         <Stepper activeStep={activeStep} alternativeLabel style={{ transform: `translate(-${activeStep * 75}vw)` }}>
           {timelineItems.map(({ title, text }, idx) => (
             <Step key={`${title}-${idx}`}>

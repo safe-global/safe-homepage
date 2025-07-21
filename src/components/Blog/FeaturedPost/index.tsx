@@ -14,7 +14,7 @@ const FeaturedPost = ({ post }: { post: BlogPostEntry }) => {
   const isPressRelease = containsTag(tags, PRESS_RELEASE_TAG)
 
   return (
-    <Box mt={10}>
+    <Box component="div" mt={10}>
       {isPressRelease ? (
         <Typography variant="caption" className={css.tagline}>
           Latest Press Release
@@ -44,7 +44,7 @@ const FeaturedPost = ({ post }: { post: BlogPostEntry }) => {
 
           <Typography className={css.excerpt}>{excerpt}</Typography>
 
-          <Box mt="auto">
+          <Box component="div" mt="auto">
             <Tags tags={tags} />
           </Box>
         </Grid>

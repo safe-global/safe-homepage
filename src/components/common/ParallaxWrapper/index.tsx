@@ -11,7 +11,11 @@ const ParallaxWrapper = ({
 }: ParallaxProps & { children: ReactNode }) => {
   const boxRef = useScrollParallax({ translateX, translateY, depth, direction })
 
-  return <Box ref={boxRef}>{children}</Box>
+  return (
+    <Box component="div" ref={boxRef}>
+      {children}
+    </Box>
+  )
 }
 
 export default ParallaxWrapper

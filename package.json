@@ -3,7 +3,7 @@
   "homepage": "https://github.com/safe-global/safe-homepage",
   "version": "1.6.15",
   "scripts": {
-    "build": "next build && next export",
+    "build": "NEXT_BUILD_MODE=static next build",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "prettier": "prettier -w \"{src,pages,scripts}/**/*.{ts,tsx,css,js}\"",
@@ -36,7 +36,7 @@
     "js-cookie": "^3.0.5",
     "lodash": "^4.17.21",
     "matter-js": "^0.20.0",
-    "next": "13.1.5",
+    "next": "^15.4.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-twitter-embed": "^4.0.4",

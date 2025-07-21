@@ -70,7 +70,7 @@ const SearchFilterResults = ({ allPosts, categories }: { allPosts: PostEntryColl
         <Grid item xs={12} md={8}>
           <SearchBar query={searchQuery} setQuery={setSearchQuery} />
 
-          <Box mt={2}>
+          <Box component="div" mt={2}>
             <Typography component="span" color="primary.light">
               Example:{' '}
             </Typography>
@@ -86,7 +86,7 @@ const SearchFilterResults = ({ allPosts, categories }: { allPosts: PostEntryColl
         </Grid>
       </Grid>
 
-      <Box mt="40px">
+      <Box component="div" mt="40px">
         <CategoryFilter categories={categories} />
       </Box>
 
@@ -112,7 +112,7 @@ const SearchFilterResults = ({ allPosts, categories }: { allPosts: PostEntryColl
 export default SearchFilterResults
 
 const NoResults = ({ query }: { query: string }) => (
-  <Box mt="60px" textAlign="center">
+  <Box component="div" mt="60px" textAlign="center">
     <SearchIcon />
     <Typography variant="h4" my={2}>
       No results found for {query || 'selected filter'}

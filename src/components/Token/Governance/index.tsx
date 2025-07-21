@@ -23,7 +23,7 @@ const Governance = (props: BaseBlockEntry) => {
           </Grid>
           <Grid item xs={12} md={6} display="flex" alignItems="center">
             {text && (
-              <Box mb={3}>
+              <Box component="div" mb={3}>
                 <RichText {...text} />
               </Box>
             )}

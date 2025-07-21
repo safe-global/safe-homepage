@@ -26,7 +26,7 @@ const sections: NavItemType[] = [
 ]
 
 const ContentsNavigation = () => (
-  <Box mt="140px">
+  <Box component="div" mt="140px">
     <Typography variant="h3">What are you looking for?</Typography>
     <Grid container columnSpacing="32px" rowGap="36px" mt="36px">
       {sections.map((item) => (

@@ -19,7 +19,7 @@ const VideoCard = ({ title, url }: { title?: string; url: string }) => (
 )
 
 const FeaturedVideos = ({ videos }: { videos: Entry<TypeExternalUrlSkeleton, undefined, string>[] }) => (
-  <Box mt={{ xs: '80px', md: '250px' }}>
+  <Box component="div" mt={{ xs: '80px', md: '250px' }}>
     <Typography variant="h2" textAlign="center">
       Featured videos
     </Typography>

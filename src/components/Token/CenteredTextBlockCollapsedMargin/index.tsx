@@ -3,7 +3,7 @@ import CenteredTextBlock from '@/components/commonCMS/CenteredTextBlock'
 import { type BaseBlockEntry } from '@/config/types'
 
 const CenteredTextBlockCollapsedMargin = (props: BaseBlockEntry) => (
-  <Box mt="-250px">
+  <Box component="div" mt="-250px">
     <CenteredTextBlock {...props} />
   </Box>
 )
