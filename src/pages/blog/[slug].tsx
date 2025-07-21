@@ -46,7 +46,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: true,
+    fallback: process.env.NEXT_BUILD_MODE !== 'static',
   }
 }
 

@@ -21,7 +21,7 @@ export async function getStaticProps() {
   return {
     props: {
       pageData: { faqContent },
-      safeDataRoomStats: { annualisedOutgoingTVP: dataRoomStats?.annualised_outgoing_tvp },
+      safeDataRoomStats: { annualisedOutgoingTVP: dataRoomStats?.annualised_outgoing_tvp ?? null },
       safeStatsData: { totalBalanceUsd, monthlyActiveUsers },
     },
   }
