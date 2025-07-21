@@ -8,7 +8,7 @@ import { PressroomIds } from '@/components/Pressroom/ContentsNavigation'
 type NewsProps = { news: Entry<TypeExternalUrlSkeleton, undefined, string>[] }
 
 export const News = ({ news }: NewsProps) => (
-  <Box id={PressroomIds.SAFE_IN_THE_NEWS} mt={{ xs: '80px', md: '140px' }}>
+  <Box component="div" id={PressroomIds.SAFE_IN_THE_NEWS} mt={{ xs: '80px', md: '140px' }}>
     <Typography variant="h2" textAlign="center">
       <em>Safe</em> in the news
     </Typography>

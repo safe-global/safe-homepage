@@ -12,7 +12,7 @@ const CardEntry = (props: BaseBlockEntry) => {
 
   return (
     <div>
-      <Box color="primary.light">
+      <Box component="div" color="primary.light">
         <RichText {...title} />
       </Box>
       {text && (

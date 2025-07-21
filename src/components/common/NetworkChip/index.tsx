@@ -12,7 +12,7 @@ export type NetworkChipProps = {
 } & Pick<ChainProps, 'textColor' | 'backgroundColor'>
 
 const NetworkChip = ({ name, icon, textColor, backgroundColor, isNew }: NetworkChipProps) => (
-  <Box className={css.wrapper} sx={{ backgroundColor }}>
+  <Box component="div" className={css.wrapper} sx={{ backgroundColor }}>
     <div className={css.icon}>
       <img {...icon} width={40} height={40} />
     </div>

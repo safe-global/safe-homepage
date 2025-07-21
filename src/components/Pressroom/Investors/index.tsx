@@ -5,7 +5,7 @@ import { isAsset } from '@/lib/typeGuards'
 
 const Investors = ({ investors }: { investors: Asset<undefined, string>[] }) => {
   return (
-    <Box mt="140px">
+    <Box component="div" mt="140px">
       <Typography variant="h2">Backed by</Typography>
       <div className={css.logos}>
         {investors.map((logo, index) => {

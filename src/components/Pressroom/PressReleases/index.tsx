@@ -33,7 +33,7 @@ const PressReleases = ({ allPosts }: { allPosts: PostEntryCollection }) => {
   const shouldShowMoreButton = visibleResults.length < filteredPosts.length
 
   return (
-    <Box id={PressroomIds.PRESS_RELEASES} mt={{ xs: '80px', md: '250px' }}>
+    <Box component="div" id={PressroomIds.PRESS_RELEASES} mt={{ xs: '80px', md: '250px' }}>
       <Divider sx={{ mb: '140px' }} />
       <Typography variant="h2">Press releases</Typography>
 
@@ -58,7 +58,7 @@ const PressReleases = ({ allPosts }: { allPosts: PostEntryCollection }) => {
               {shouldShowMoreButton && <ShowMoreButton page={page} />}
             </>
           ) : (
-            <Box mt="60px" textAlign="center">
+            <Box component="div" mt="60px" textAlign="center">
               <SearchIcon />
               <Typography variant="h4" my={2}>
                 No results found for selected filter

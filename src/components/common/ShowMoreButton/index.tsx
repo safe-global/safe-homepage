@@ -3,7 +3,7 @@ import { Box, Button } from '@mui/material'
 import NextLink from 'next/link'
 
 const ShowMoreButton = ({ page }: { page: number }) => (
-  <Box display="flex" justifyContent="center" mt="60px">
+  <Box component="div" display="flex" justifyContent="center" mt="60px">
     <NextLink
       href={{ query: { [PAGE_QUERY_PARAM]: page + 1 } }}
       shallow

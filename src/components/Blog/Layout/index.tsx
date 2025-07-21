@@ -12,7 +12,7 @@ const BlogLayout = ({ children, metaTags }: { children: ReactNode; metaTags: Met
   return (
     <>
       {isEntryType(metaTags) ? <MetaTags {...metaTags} /> : undefined}
-      <Box mt={{ xs: '24px', md: '120px' }}>
+      <Box component="div" mt={{ xs: '24px', md: '120px' }}>
         {children}
         <BannerForm
           title="Get the Alpha"

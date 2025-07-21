@@ -354,7 +354,9 @@ export const Projects = ({ items }: BaseBlock): ReactElement => {
               <ArrowBackIcon />
             </IconButton>
             <Divider orientation="vertical" />
-            <Box p={2}>Filter</Box>
+            <Box component="div" p={2}>
+              Filter
+            </Box>
           </Toolbar>
         </AppBar>
 

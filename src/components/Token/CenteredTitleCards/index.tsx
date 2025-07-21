@@ -21,7 +21,7 @@ const CardIconLink = (props: BaseBlockEntry) => {
           <RichText {...title} />
 
           {text && (
-            <Box color="primary.light">
+            <Box component="div" color="primary.light">
               <RichText {...text} />
             </Box>
           )}

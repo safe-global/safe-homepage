@@ -10,7 +10,14 @@ const My404Page: NextPage = () => (
       <title>Safe – Page not found</title>
     </Head>
 
-    <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center" height="55vh">
+    <Box
+      component="div"
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      justifyContent="center"
+      height="55vh"
+    >
       <h1>Page not found</h1>
 
       <p>

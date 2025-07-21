@@ -34,7 +34,7 @@ const Card = (props: BlogPostEntry) => {
 
         <span style={{ flexGrow: 1 }} />
 
-        <Box mt={2}>
+        <Box component="div" mt={2}>
           <Tags tags={tags} />
         </Box>
       </div>
