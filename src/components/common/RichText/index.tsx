@@ -36,7 +36,6 @@ const generateTextContent = (node: Heading1 | Heading2 | Heading3 | Heading5) =>
 const options: Options = {
   renderMark: {
     [MARKS.CODE]: (text: string) => {
-      console.log('render code')
       return <code className={css.code}>{text}</code>
     },
   },
