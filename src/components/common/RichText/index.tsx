@@ -4,6 +4,7 @@ import {
   type Document as ContentfulDocument,
   type Hyperlink,
   BLOCKS,
+  MARKS,
   type Node,
   type Heading1,
   type Heading2,
@@ -33,6 +34,12 @@ const generateTextContent = (node: Heading1 | Heading2 | Heading3 | Heading5) =>
 }
 
 const options: Options = {
+  renderMark: {
+    [MARKS.CODE]: (text: string) => {
+      console.log('render code')
+      return <code className={css.code}>{text}</code>
+    },
+  },
   renderNode: {
     [INLINES.HYPERLINK]: (node: Hyperlink) => {
       const text = node.content.find(isText)?.value
@@ -54,7 +61,7 @@ const options: Options = {
       const content = generateTextContent(node)
 
       return (
-        <Typography variant="h3" id={kebabCase(node.content.find(isText)?.value)}>
+        <Typography variant="h3" className={css.section} id={kebabCase(node.content.find(isText)?.value)}>
           {content}
         </Typography>
       )
@@ -66,6 +73,10 @@ const options: Options = {
     [BLOCKS.EMBEDDED_ASSET]: (node: Node) => {
       const { title, description, file } = node.data.target.fields
 
+      // Map the contentful tags to custom classes
+      const classNames: string[] = (node.data.target.metadata.tags as { sys: { id: string } }[])
+        .map(({ sys }) => css[sys.id])
+        .filter((val) => val !== undefined)
       const mimeType = file.contentType
       const mimeGroup = mimeType.split('/')[0]
 
@@ -73,7 +84,7 @@ const options: Options = {
         <>
           {mimeGroup === 'image' && (
             <div className={css.imageContainer}>
-              <img title={title} alt={description} src={file.url} />
+              <img title={title} alt={description} src={file.url} className={classNames.join(',')} />
               {description && <span className={css.caption}>{description}</span>}
             </div>
           )}
