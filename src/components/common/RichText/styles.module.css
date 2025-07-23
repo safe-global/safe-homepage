@@ -10,7 +10,28 @@
   margin: 32px 0px;
 }
 
+.section {
+  font-size: 40px;
+}
+
 .caption {
   margin-top: 8px;
   font-style: italic;
+}
+
+.code {
+    line-height: 18px;
+    padding: 2px 6px;
+    font-size: 12px;
+    color: darkorange;
+    border: 1px solid white;
+    border-radius: 6px;
+}
+
+.smallImage {
+    width: 50%
+}
+
+.mediumImage {
+    width: 75%
 }

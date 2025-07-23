@@ -15,7 +15,12 @@
   counter-increment: step-counter;
   display: flex;
   align-items: flex-start;
+  font-size: 18px;
   gap: 8px;
+}
+
+.contentsTable li p {
+  font-size: 18px;
 }
 
 .contentsTable li::before {
