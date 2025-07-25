@@ -6,14 +6,11 @@ import ProjectsIcon from '@/public/images/Header/projects-icon.svg'
 import GrantsIcon from '@/public/images/Header/grants-icon.svg'
 import GovernanceIcon from '@/public/images/Header/governance-icon.svg'
 import SafeTokenIcon from '@/public/images/Header/safe-token-icon.svg'
-import SafePassIcon from '@/public/images/Header/safe-pass-icon.svg'
 import SafeConIcon from '@/public/images/Header/safe-con-icon.svg'
 import CareersIcon from '@/public/images/Header/careers-icon.svg'
 import PressRoomIcon from '@/public/images/Header/press-room-icon.svg'
 import HelpCenterIcon from '@/public/images/Header/help-center-icon.svg'
-import SafeFoundryIcon from '@/public/images/Header/safe-foundry-icon.svg'
 import DataRoomIcon from '@/public/images/Header/data-room-icon.svg'
-import AgentathonIcon from '@/public/images/Header/agentathon-icon.svg'
 import SafeNetworkSupportIcon from '@/public/images/Header/safe-network-support.svg'
 
 export type NavItem = {
@@ -45,8 +42,7 @@ export enum NavCategories {
   Ecosystem = 'Ecosystem',
   Community = 'Community',
   Resources = 'Resources',
-  SafePass = 'Safe <u><i>PASS</i></u>',
-  Safenet = 'Safenet <span>New</span>',
+  Research = 'Research',
 }
 
 export const navCategories: NavCategory[] = [
@@ -66,16 +62,6 @@ export const navCategories: NavCategory[] = [
         icon: <PaperIcon />,
       },
       {
-        label: 'Safe{Foundry}',
-        href: AppRoutes.foundry,
-        icon: <SafeFoundryIcon />,
-      },
-      {
-        label: 'Agentathon',
-        href: AppRoutes.agentathon,
-        icon: <AgentathonIcon />,
-      },
-      {
         label: 'Safe Network Support',
         href: SAFE_NETWORK_SUPPORT,
         target: '_blank',
@@ -89,8 +75,8 @@ export const navCategories: NavCategory[] = [
     href: AppRoutes.wallet,
   },
   {
-    category: NavCategories.Safenet,
-    href: AppRoutes.safenet,
+    category: NavCategories.Research,
+    href: AppRoutes.blog.index + '?category=Safe+Research',
   },
   {
     category: NavCategories.Ecosystem,
@@ -121,11 +107,6 @@ export const navCategories: NavCategory[] = [
         label: 'SAFE Token',
         href: AppRoutes.token,
         icon: <SafeTokenIcon />,
-      },
-      {
-        label: 'Safe{Pass}',
-        href: AppRoutes.pass,
-        icon: <SafePassIcon />,
       },
       {
         label: 'Safe{Con}',
