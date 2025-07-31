@@ -7,7 +7,8 @@ export type EcosystemProject = {
   project_scope: string
   primary_category: string
   secondary_categories: string
-  logo: string
+  logo_url: string
+  logo_path: string
   value_prop: string
   project_website: string
   github_dev_docs: string
