@@ -55,6 +55,19 @@ To get a complete bundle use:
 yarn build
 ```
 
+### Updating Tags, Categories and other Properties
+
+The properties of the blog are defined in the contentful "content model". To adjust this model login to your contentful space and select the "Content model" button in the top navigation.
+
+*Tags*
+
+To add a new tag select the "Tag" section in the content model. There are two field in a tag: Name and Description. To allow a new tag, edit the "Name" property and add in the validation section the new value that should be accepted as a tag.
+
+
+*Categories*
+
+To add a new tag select the "Post" section in the content model and then edit the "Category" property. In the Validation section add the new category as an accepted value.
+
 ### Contentful Type Generation
 
 1. Create a Perstonal Access Token in your contentful account
