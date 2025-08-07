@@ -55,6 +55,30 @@ To get a complete bundle use:
 yarn build
 ```
 
+### Updating Tags, Categories and other Properties
+
+The properties of the blog are defined in the contentful "content model". To adjust this model login to your contentful space and select the "Content model" button in the top navigation.
+
+*Tags*
+
+To add a new tag select the "Tag" section in the content model. There are two fields in a tag: Name and Description. To allow a new tag, edit the "Name" property and add in the validation section the new value that should be accepted as a tag.
+
+
+*Categories*
+
+To add a new tag select the "Post" section in the content model and then edit the "Category" property. In the Validation section add the new category as an accepted value.
+
+After making changes to the content model it is recommended to generate the contentful types again.
+
+### Contentful Type Generation
+
+1. Create a Personal Access Token in your contentful account
+  - [Account Settings > CMA tokens](https://app.contentful.com/account/profile/cma_tokens)
+2. Set the PAT in the env file as `CONTENTFUL_MANAGEMENT_TOKEN`
+3. Set the space id in the env file as `CONTENTFUL_SPACE_ID`
+  - Should be the same as `NEXT_PUBLIC_CONTENTFUL_SPACE_ID`
+4. Run `yarn types:contentful`
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
