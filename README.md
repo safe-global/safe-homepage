@@ -61,7 +61,7 @@ The properties of the blog are defined in the contentful "content model". To adj
 
 *Tags*
 
-To add a new tag select the "Tag" section in the content model. There are two field in a tag: Name and Description. To allow a new tag, edit the "Name" property and add in the validation section the new value that should be accepted as a tag.
+To add a new tag select the "Tag" section in the content model. There are two fields in a tag: Name and Description. To allow a new tag, edit the "Name" property and add in the validation section the new value that should be accepted as a tag.
 
 
 *Categories*
