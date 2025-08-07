@@ -75,7 +75,7 @@ After making changes to the content model it is recommended to generate the cont
 1. Create a Personal Access Token in your contentful account
   - [Account Settings > CMA tokens](https://app.contentful.com/account/profile/cma_tokens)
 2. Set the PAT in the env file as `CONTENTFUL_MANAGEMENT_TOKEN`
-3. Set the space it in the env file as `CONTENTFUL_SPACE_ID`
+3. Set the space id in the env file as `CONTENTFUL_SPACE_ID`
   - Should be the same as `NEXT_PUBLIC_CONTENTFUL_SPACE_ID`
 4. Run `yarn types:contentful`
 
