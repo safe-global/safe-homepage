@@ -55,6 +55,15 @@ To get a complete bundle use:
 yarn build
 ```
 
+### Contentful Type Generation
+
+1. Create a Perstonal Access Token in your contentful account
+  - [Account Settings > CMA tokens](https://app.contentful.com/account/profile/cma_tokens)
+2. Set the PAT in the env file as `CONTENTFUL_MANAGEMENT_TOKEN`
+3. Set the space it in the env file as `CONTENTFUL_SPACE_ID`
+  - Should be the same as `NEXT_PUBLIC_CONTENTFUL_SPACE_ID`
+4. Run `yarn types:contentful`
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.

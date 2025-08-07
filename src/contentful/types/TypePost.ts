@@ -13,7 +13,7 @@ export interface TypePostFields {
   excerpt: EntryFieldTypes.Text
   coverImage: EntryFieldTypes.AssetLink
   content: EntryFieldTypes.RichText
-  category: EntryFieldTypes.Symbol<'Announcements' | 'Build' | 'Community' | 'Ecosystem' | 'Insights'>
+  category: EntryFieldTypes.Symbol<'Announcements' | 'Build' | 'Community' | 'Ecosystem' | 'Insights' | 'Safe Research'>
   tags?: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypeTagSkeleton>>
   relatedPosts?: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<TypePostSkeleton>>
 }
