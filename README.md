@@ -68,6 +68,8 @@ To add a new tag select the "Tag" section in the content model. There are two fi
 
 To add a new tag select the "Post" section in the content model and then edit the "Category" property. In the Validation section add the new category as an accepted value.
 
+After making changes to the content model it is recommended to generate the contentful types again.
+
 ### Contentful Type Generation
 
 1. Create a Perstonal Access Token in your contentful account
