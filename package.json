@@ -32,7 +32,7 @@
     "contentful": "^11.3.1",
     "framer-motion": "^11.13.5",
     "fuse.js": "^6.6.2",
-    "isomorphic-dompurify": "^1.0.0",
+    "isomorphic-dompurify": "^2.26.0",
     "js-cookie": "^3.0.5",
     "lodash": "^4.17.21",
     "matter-js": "^0.20.0",
